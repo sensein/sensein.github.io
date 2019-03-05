@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 50%;
-        }
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-    </style>
+caption {
+  display: table-caption;
+  text-align: center;
+  padding: 8px;
+  font-size: 20px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
 </head>
 <body>
 <table>
-    <tr>
-        <td>Processes: (Run on each project)</td>
-        <td>Location</td>
-    </tr>
-    <tr>
-        <td>Denoised</td>
-        <td><a href="">location</a></td>
-    </tr>
-    <tr>
-        <td>fmriprep</td>
-        <td><a href="">location</a></td>
-    </tr>
-    <tr>
-        <td>mindboggle</td>
-        <td><a href="">location</a></td>
-    </tr>
-    <tr>
-        <td>simple workflow</td>
-        <td><a href="">location</a></td>
-    </tr>
-    <tr>
-        <td>mriqc</td>
-        <td><a href="">location</a></td>
-    </tr>
+  <caption><a href="https://healthybrainnetwork.org/" target="_blank">Healthy Brain Network (HBN)</a></caption>
+  <tr>
+    <td>Processes</td>
+    <td>S3 Location</td>
+  </tr>
+  <tr>
+    <td>Denoised</td>
+    <td>s3://fcp-indi/data/Projects/HBN/Outputs/denoise/</td>
+  </tr>
+  <tr>
+    <td>fmriprep</td>
+    <td>s3://fcp-indi/data/Projects/HBN/Outputs/fmriprep/</td>
+  </tr>
+  <tr>
+    <td>mindboggle</td>
+    <td>s3://fcp-indi/data/Projects/HBN/Outputs/mindboggle_swf/mindboggle</td>
+  </tr>
+  <tr>
+    <td>simple workflow</td>
+    <td>s3://fcp-indi/data/Projects/HBN/Outputs/mindboggle_swf/simple_workflow</td>
+  </tr>
+  <tr>
+    <td>mriqc</td>
+    <td>s3://fcp-indi/data/Projects/HBN/Outputs/mriqc/</td>
+  </tr>
 </table>
 
 </body>
