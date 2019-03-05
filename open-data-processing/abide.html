@@ -5,7 +5,14 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
+}
+
+caption {
+  display: table-caption;
+  text-align: center;
+  padding: 8px;
+  font-size: 20px;
 }
 
 td, th {
@@ -17,29 +24,30 @@ td, th {
 </head>
 <body>
 <table>
+  <caption><a href="http://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html" target="_blank">Autism Brain Imaging Data Exhange (ABIDE) I</a></caption>
   <tr>
-    <td>Processes: (Run on each project)</td>
-    <td>Location</td>
+    <td>Processes</td>
+    <td>S3 Location</td>
   </tr>
   <tr>
     <td>Denoised</td>
-    <td><a href="">location</a></td>
+    <td>s3://fcp-indi/data/Projects/ABIDE/Outputs/denoise/</td>
   </tr>
   <tr>
     <td>fmriprep</td>
-    <td><a href="">location</a></td>
+    <td>s3://fcp-indi/data/Projects/ABIDE/Outputs/fmriprep/</td>
   </tr>
   <tr>
     <td>mindboggle</td>
-    <td><a href="">location</a></td>
+    <td>s3://fcp-indi/data/Projects/ABIDE/Outputs/mindboggle_swf/mindboggle</td>
   </tr>
   <tr>
     <td>simple workflow</td>
-    <td><a href="">location</a></td>
+    <td>s3://fcp-indi/data/Projects/ABIDE/Outputs/mindboggle_swf/simple_workflow</td>
   </tr>
   <tr>
     <td>mriqc</td>
-    <td><a href="">location</a></td>
+    <td>s3://fcp-indi/data/Projects/ABIDE/Outputs/mriqc/</td>
   </tr>
 </table>
 
