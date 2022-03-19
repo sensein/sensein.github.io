@@ -21,9 +21,9 @@ reproducible/generalizable.
 
 # Collaborators
 
-<em>** This list may not always be accurate. We apologize if we missed your name, 
-listed incorrect information or did not ask you before listing you. Please let us 
-know so we can rectify the situation.</em>
+<em>** This list may not always be accurate, but tries to reflect our current active
+collaborations. We apologize if we missed your name, listed incorrect information, or 
+did not ask you before listing you. Please let us know so we can rectify the situation.</em>
 
 {% for site in site.data.collaborators %}
 
