@@ -3,6 +3,10 @@
     - name: Lydia Ng
     - name: Jerome Lecoq
 
+- home: Caltech, Los Angeles
+  persons:
+    - name: Ralph Adolphs
+
 - home: CAMH, Toronto
   persons:
     - name: Abhishek Pratap
@@ -17,6 +21,10 @@
 - home: Dartmouth College, Hannover
   persons:
     - name: Yaroslav Halchenko
+
+- home: EPFL, Lausanne
+  persons:
+    - name: Oscar Esteban
 
 - home: Florida International University, Miami
   persons:
@@ -50,11 +58,8 @@
 
 - home: Massachusetts General Hospital, Boston/Charlestown
   persons:
-    - name: Xavier Guell
     - name: Karl Helmer
     - name: Bruce Fischl
-    - name: Andre Vander Kouwe
-    - name: Anastasia Yendiki
 
 - home: Massachusetts Eye and Ear, Boston
   persons:
@@ -77,6 +82,7 @@
 
 - home: Northeastern University, Boston
   persons:
+    - name: Clemens Bauer
     - name: Valur Olaffson
     - name: Susan Whitfield-Gabrieli
 
@@ -86,8 +92,6 @@
 
 - home: Stanford University, Stanford
   persons:
-    - name: Oscar Esteban
-    - name: Chris Gorgolewski (now at Google)
     - name: Russell Poldrack
 
 - home: University of Pittsburg, Pittsburg
@@ -97,6 +101,7 @@
 - home: University of Californa, Irvine
   persons:
     - name: David Keator
+    - name: Theo Van Erp
 
 - home: University of Californa, San Diego
   persons:
