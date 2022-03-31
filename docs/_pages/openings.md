@@ -40,3 +40,6 @@ UROP projects. We work through the Quest Initiative for such projects.
 - experience working with high-performance computing clusters and schedulers; and
 - experience with phonetic transcription.
 
+### Research Assistant: [Apply here](https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25240&siteid=5341#jobDetails=1946900_5341)
+
+This position is at Harvard Graduate School of Education, and will work closely with researchers at MIT (John Gabrieli, Stefanie Shattuck-Hufnagel, and our group) and FSU (Yaacov Petscher) focused on speech signal processing in children and its application to prediction of reading outcomes.
