@@ -1,3 +1,12 @@
+- name: Aakanksha Rana
+  photo: //team.inria.fr/ayin/files/2013/08/aak.jpg
+  info: Postdoctoral Associate, MIT
+  duration: 2020 - 2022
+  email: aakrana@mit.edu
+  number_educ: 2
+  education1: M.S, Signal Processing, Telecom Paris(ENST)
+  education2: Ph.D., Computer Vision & Machine Learning, Telecom Paris(ENST)
+
 - name: Mathias Goncalves
   photo: //avatars3.githubusercontent.com/u/14110164?s=460&v=4
   info: Research Affiliate/Technical Assistant, worked on Nipype, BANDA, ReproNim
