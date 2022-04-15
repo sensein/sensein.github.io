@@ -27,18 +27,14 @@ UROP projects. We work through the Quest Initiative for such projects.
 #### Job Requirements
 
 **REQUIRED:**
-- a bachelor's degree in computer science, engineering, or related technical
-  field that involves computing; two years of relevant experience;
-- experience with Linux operating systems and shell scripting (e.g., bash, csh).
+- A bachelor's degree in computer science, engineering, or related technical field that involves computing; two years of relevant experience;
+- Experience with Linux operating systems and shell scripting (e.g., bash, csh).  
 
 **PREFERRED:**
-- software development experience (especially with Python and/or JavaScript);
-- experience with app development, iOS programing, and Swift;
-- experience handling digital audio or music files;
-- experience with processing speech;
-- familiarity or willingness to work with backend technology and database management;
-- experience working with high-performance computing clusters and schedulers; and
-- experience with phonetic transcription.
+- Software development experience (especially with Python and/or JavaScript); 
+- Experience with neurophysiology and neuroimaging; 
+- Familiarity or willingness to work with computer infrastructure; and 
+- Experience working with high-performance computing clusters and schedulers. 
 
 ### Research Assistant: [Apply here](https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25240&siteid=5341#jobDetails=1946900_5341)
 
