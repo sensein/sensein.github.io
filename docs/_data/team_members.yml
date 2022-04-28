@@ -8,7 +8,7 @@
   education3: <a href="http://satra.cogitatum.org/assets/CV_Latest.pdf">Full CV</a>
 
 - name: Dorota Jarecka
-  photo: http://gablab.mit.edu/wp-content/uploads/bfi_thumb/dorata-jarecka-nm70tl9ny3k30jco6p80294a9zcc8mf7rx0ep2q8m0.jpg
+  photo: //gablab.mit.edu/wp-content/uploads/bfi_thumb/dorata-jarecka-nm70tl9ny3k30jco6p80294a9zcc8mf7rx0ep2q8m0.jpg
   info: Research Scientist, started 2016, working on Nipype, ReproNim
   email: djarecka@mit.edu
   number_educ: 1
@@ -44,22 +44,15 @@
   education1: BS Chemistry, Duke University
 
 - name: Jeff Mentch
-  photo: https://scholar.harvard.edu/files/mentch/files/y3xdh4wb_400x400.jpg
+  photo: //scholar.harvard.edu/files/mentch/files/y3xdh4wb_400x400.jpg
   info: PhD Student
   email: jsmentch@mit.edu
   number_educ: 2
   education1: BS Biology, Penn State
   education2: AM Digital Musics, Dartmouth College
   
-- name: Rahul Brito
-  photo: https://static.projects.iq.harvard.edu/files/styles/profile_full/public/shbtphd/files/brito_rahul.jpg?m=1606794791&itok=7EVxwkUu
-  info: PhD Student
-  email: rfbrito@mit.edu
-  number_educ: 1
-  education1: BS Bioengineering, University of Washington
-
 - name: Rebecca Kleinberger
-  photo: http://web.media.mit.edu/~rebklein/RKHS.jpg
+  photo: //web.media.mit.edu/~rebklein/RKHS.jpg
   info: Research Affiliate, MIT; Formerly postdoctoral associate; working on Mumble Melody
   email: rebklein@mit.edu
   number_educ: 3
@@ -83,7 +76,14 @@
   number_educ: 2
   education1: B.S., Neurobiology & Physiology, Purdue University
   education2: M.Ed., Harvard Graduate School of Education
-  
+
+- name: Rahul Brito
+  photo: //static.projects.iq.harvard.edu/files/styles/profile_full/public/shbtphd/files/brito_rahul.jpg?m=1606794791&itok=7EVxwkUu
+  info: PhD Student
+  email: rfbrito@mit.edu
+  number_educ: 1
+  education1: BS Bioengineering, University of Washington
+
 - name: YingXing Feng
   photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=BIqRR9wAAAAJ&citpid=5
   info: PhD Student (Visiting Spring 2022) - Using fNIRS and physiological signals to study the interaction of workload stress and affective states.
@@ -95,7 +95,7 @@
   education4: <a href="https://www.linkedin.com/in/yxfeng/">Connect here</a>
 
 - name: Gasser Elbanna
-  photo: https://scholar.googleusercontent.com/citations?view_op=view_photo&user=cwcd3BIAAAAJ&citpid=2
+  photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=cwcd3BIAAAAJ&citpid=2
   info: Visiting MSc. Student from EPFL - Studying vocal identities in self-supervised speech models and voice perception.
   email: gelbanna@mit.edu
   number_educ: 1
