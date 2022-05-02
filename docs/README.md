@@ -12,6 +12,12 @@ framework.
 ### For local development:
 
 ```
+cd docs
+```
+
+and then
+
+```
 docker run --rm -it --volume="$PWD:/srv/jekyll" \
   --volume="$PWD/vendor/bundle:/usr/local/bundle"  \
   --env JEKYLL_ENV=development -p 4000:4000 \
