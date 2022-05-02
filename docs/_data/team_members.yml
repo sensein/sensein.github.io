@@ -108,3 +108,11 @@
   number_educ: 1
   education1: B.S. and M.S.E., Biomedical Engineering, Johns Hopkins University
 
+- name: Fabio Catania
+  photo: ../images/fabio_catania_photo.jpg
+  info: Postdoctoral research fellow, MIT
+  email: fabiocat@mit.edu
+  number_educ: 3
+  education1: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
+  education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
+  education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
