@@ -20,12 +20,15 @@ improve efficiency of analyses and reproducibility in science.
         <li data-target="#carousel" data-slide-to="3"></li>
         <li data-target="#carousel" data-slide-to="4"></li>
         <li data-target="#carousel" data-slide-to="5"></li>
+        <li data-target="#carousel" data-slide-to="6"></li>
     </ol>
 
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
-
         <div class="item active">
+            <img src="images/220505-group-lunch.jpg" alt="Slide 0" />
+        </div>
+        <div class="item">
             <img src="//iiif.elifesciences.org/lax:36652%2Felife-36652-fig1-v1.tif/full/1500,/0/default.jpg" alt="Slide 1" />
         </div>
         <div class="item">
