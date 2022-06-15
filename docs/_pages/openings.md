@@ -23,7 +23,8 @@ https://github.com/sensein/science4all
 
 ## UROPs
 If you are an undergraduate at MIT, we have several projects that are suited for 
-UROP projects. We work through the Quest Initiative for such projects.
+UROP projects. We work through the Quest Initiative or with other faculty for 
+such projects. Feel free to get in touch with us.
 
 ## Current open positions
 
