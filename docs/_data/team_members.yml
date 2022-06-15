@@ -116,3 +116,10 @@
   education1: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
   education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
   education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
+  
+- name: Megha Vemuri
+  photo: ../images/megha_vemuri_photo.jpeg
+  info: Undergraduate Research Assistant - working on Mumble Melody
+  email: mvemuri@mit.edu
+  number_educ: 1
+  education1: Currently Pursuing B.S. in Computation and Cognition, MIT
