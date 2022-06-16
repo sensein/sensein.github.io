@@ -28,6 +28,25 @@ such projects. Feel free to get in touch with us.
 
 ## Current open positions
 
+### Research Scientist/Engineer: [Apply here](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=24587&localeCode=en-us)
+
+#### Job requirements
+REQUIRED: 
+- Terminal degree (Ph.D.) in computer science, computational neuroscience, or related area; 
+- Experience developing and implementing large-scale software architectures; 
+- Experience with high-performance cluster computing and/or cloud computing at scale; 
+- Experience with software engineering and publishing and building user-friendly interfaces 
+- Willingness to work with domain scientists
+- Commitment to and experience with open science practices; and 
+- Experience with data management tools that facilitate reproducible science.  
+
+PREFERRED: 
+- Background in neuroscience and cognitive science 
+- Experience with deep learning toolkits
+- Experience with neuroimaging and/or neurophysiology
+- Experience analyzing big data and high-speed I/O programming
+- Experience with ontologies and vocabulary development
+
 ### Postdoctoral openings
 
 We are looking for postdocs who embrace open science practices and are interested 
