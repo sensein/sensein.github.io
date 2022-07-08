@@ -26,18 +26,18 @@ The Mumble Melody app is a work-in-progress based on our research that aims to g
 
 Stuttering affects 1% of adults and 8% of children, and there are 70 million PWS worldwide. Stuttering-like-disfluencies include blocks, repetitions, and prolongations. While there is no cure for stuttering, the Mumble Melody team is investigating audio-based approaches that may help increase fluency for people who stutter.
 
-**About this study:**
+**About This Study:**
 
 We are currently running a feedback study to get input on our app from PWS. If you are eligible, all you need to do is download the app, try using the app in your own time, and answer built-in feedback questions. We won’t be collecting any personal data or voice data.
 Below is more information on the study, eligibility criteria, and instructions to download the app:
 
 <img src="{{ "/images/Mumble_Melody_flyer.jpg" | prepend: site.baseurl | prepend: site.url}}" class="img-responsive" width="25%" style="float: center; margin: 0%; min-width: 700px" />
 
-**Study Video**
+**Study Video:**
 
 If you are interested in learning more about this study, watch [this video](https://youtu.be/_74DMatudKQ).
 
-**Using the Mumble Melody app:**
+**Using the Mumble Melody App:**
 
 To use the app, you will need wired headphones/earbuds with an embedded microphone. Bluetooth headphones or speakers will not work as they may create a feedback effect.
 
