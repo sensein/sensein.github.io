@@ -45,7 +45,7 @@ You can use the app by yourself for speech training or during discussion. You ca
 
 **Disclaimer:**
 
-The approach provided in our study does not intend to cure or fix stuttering. Stuttering is a very complex condition, still not completely understood by the research community, and it comes with influential social and identity-forging elements. Our goal through distributing this app is to gather feedback from potential users to help improve the science and research on stuttering. Please be aware that the research is ongoing, and Musically Modulated Auditory Feedback might not work for all users.The Mumble Melody application will automatically deactivate in about a month. Our tool is designed for adults (18+) only.
+The approach provided in our study does not intend to cure or fix stuttering. Stuttering is a very complex condition, still not completely understood by the research community, and it comes with influential social and identity-forging elements. Our goal through distributing this app is to gather feedback from potential users to help improve the science and research on stuttering. Please be aware that the research is ongoing, and Musically Modulated Auditory Feedback might not work for all users. The Mumble Melody application will automatically deactivate in about a month. Our tool is designed for adults (18+) only.
 
 **Contact Us:**
 If you have any questions or concerns, do not hesitate to contact us at [mumblemelody@mit.edu](mailto:mumblemelody@mit.edu)
