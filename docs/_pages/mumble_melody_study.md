@@ -33,9 +33,9 @@ Below is more information on the study, eligibility criteria, and instructions t
 
 <img src="{{ "/images/Mumble_Melody_flyer.jpg" | prepend: site.baseurl | prepend: site.url}}" class="img-responsive" width="25%" style="float: center; margin: 0%; min-width: 700px" />
 
-**Learn More:**
+**Study Video**
 
-If you are interested in learning more about this study, watch this video:
+If you are interested in learning more about this study, watch [this video](https://youtu.be/_74DMatudKQ).
 
 **Using the Mumble Melody app:**
 
@@ -53,5 +53,5 @@ If you have any questions or concerns, do not hesitate to contact us at [mumblem
 **Stuttering Study Mailing List:**
 We are regularly launching new studies to support research on stuttering. If you are interested in being contacted to participate in such studies please fill out [this form](https://forms.gle/KbGgLA5xjbnkr46A8).
 
-
-
+**Learn More About Our Reseach:**
+[Click here to learn more](https://sensein.group/mumble_melody_project/).
