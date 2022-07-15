@@ -186,3 +186,14 @@
     display:  Project details
   highlight: 1
   news2:
+  
+- title: "Mumble Melody: Musically Modulated Auditory Feedback to Increase Fluency for People Who Stutter"
+  image: ../images/Mumble_Melody_logo.jpg
+  description: >
+    The aim of this project is to explore assistive technologies to help increase fluency for people who stutter. Our studies investigate the use of Altered Auditory Feedback (AAF), a stuttering intervention in which an individual’s speech is played back to them in an altered manner. Below are further details about this project as well as a page about our study.
+  authors: R Kleinberger, A Kodibagkar, M Vemuri
+  link:
+    url: ../mumble_melody_project
+    display:  Project details
+  highlight:   1
+  news2: <a href="../mumble_melody_study">Study page</a>
