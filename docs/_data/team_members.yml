@@ -131,3 +131,10 @@
   number_educ: 2
   education1: Currently Pursuing B.S. in Biological Sciences, Nanyang Technological University, Singapore
   education2: <a href="https://www.linkedin.com/in/claudialiauw/">LinkedIn</a>
+  
+- name: Maedbh King
+  photo: ../images/maedbhking.jpg
+  info: ICoN Postdoctoral Fellow
+  email: maedbh@mit.edu
+  number_educ: 1
+  education1: Ph.D. in Cognitive Neuroscience, UC Berkeley
