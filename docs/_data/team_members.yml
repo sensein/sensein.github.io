@@ -51,24 +51,6 @@
   education1: BS Biology, Penn State
   education2: AM Digital Musics, Dartmouth College
   
-- name: Rebecca Kleinberger
-  photo: //web.media.mit.edu/~rebklein/RKHS.jpg
-  info: Research Affiliate, MIT; Formerly postdoctoral associate; working on Mumble Melody
-  email: rebklein@mit.edu
-  number_educ: 3
-  education1: Meng Mechanical Engineering, ENSAM
-  education2: MRes Computer Graphics, UCL
-  education3: PhD, MIT Media Lab
-
-- name: Dhritiman Das
-  photo: //scholar.googleusercontent.com/citations?view_op=medium_photo&user=mpptTvcAAAAJ&citpid=2
-  info: Postdoctoral Researcher, MIT; working on Nobrainer
-  email: dasd@mit.edu
-  number_educ: 2
-  education1: M.S, Biomedical Engineering, Arizona State University
-  education2: Ph.D. Computer Science, Technical University of Munich (TUM)
-  education3: Visiting Scientist at the <a href="http://campar.in.tum.de/Chair/ResearchIBBM">Image-Based Biomedical Modeling</a> group at TUM
-
 - name: Kenny Nguyen
   photo: ../images/Kenny Nguyen - Photo.jpg
   info: Technical Associate I, started 2020, working on Vocallect; MD student, Larner College of Medicine, University of Vermont
@@ -83,16 +65,6 @@
   email: rfbrito@mit.edu
   number_educ: 1
   education1: BS Bioengineering, University of Washington
-
-- name: YingXing Feng
-  photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=BIqRR9wAAAAJ&citpid=5
-  info: PhD Student (Visiting Spring 2022) - Using fNIRS and physiological signals to study the interaction of workload stress and affective states.
-  email: fengyx@mit.edu
-  number_educ: 4
-  education1: Diploma in Microelectronic Engineering, INTI International College Penang
-  education2: BEng(Hons.) E&E Engineering, University of Bradford
-  education3: MSc. E&E Engineering, Universiti Teknologi PETRONAS
-  education4: <a href="https://www.linkedin.com/in/yxfeng/">Connect here</a>
 
 - name: Gasser Elbanna
   photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=cwcd3BIAAAAJ&citpid=2
