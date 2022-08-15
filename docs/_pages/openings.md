@@ -72,7 +72,7 @@ of research and development.
 - Experience with data management tools that facilitate reproducible science
 - Experience with neuroimaging and/or neurophysiology
 
-
+<!--
 ### Technical Associate: [Apply here](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=21653&localeCode=en-us)
 
 #### Job Requirements
@@ -86,6 +86,8 @@ of research and development.
 - Experience with neurophysiology and neuroimaging; 
 - Familiarity or willingness to work with computer infrastructure; and 
 - Experience working with high-performance computing clusters and schedulers. 
+
+-->
 
 ### Research Assistant: [Apply here](https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25240&siteid=5341#jobDetails=1946900_5341)
 
