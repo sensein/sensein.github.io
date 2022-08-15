@@ -58,6 +58,8 @@ record (publishing and software dissemination) in scientific domains relevant
 to computation. The candidates are expected to help drive current and new directions 
 of research and development.
 
+For these directly contact: satra@mit.edu
+
 **REQUIRED:**
 - Terminal Degree (Ph.D.) in computer science, computational neuroscience or equivalent
 - Experience with software engineering
