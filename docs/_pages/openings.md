@@ -91,6 +91,6 @@ For these directly contact: satra@mit.edu
 
 -->
 
-### Research Assistant: [Apply here](https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=25240&siteid=5341#jobDetails=1946900_5341)
+### Research Assistant:
 
-This position is at Harvard Graduate School of Education, and will work closely with researchers at MIT (John Gabrieli, Stefanie Shattuck-Hufnagel, and our group) and FSU (Yaacov Petscher) focused on speech signal processing in children and its application to prediction of reading outcomes.
+This position is at Harvard Graduate School of Education, and will work closely with researchers at MIT (John Gabrieli, Stefanie Shattuck-Hufnagel, and our group) and FSU (Yaacov Petscher) focused on speech signal processing in children and its application to prediction of reading outcomes. Feel free to reach out to me if you are interested.
