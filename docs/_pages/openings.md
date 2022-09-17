@@ -30,6 +30,8 @@ such projects. Feel free to get in touch with us.
 
 ### Research Scientist/Engineer: [Apply here](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=24587&localeCode=en-us)
 
+Currently this job requires people with existing work authorization in the US (citzenship, residency, EAD, etc.,.).
+
 #### Job requirements
 REQUIRED: 
 - Terminal degree (Ph.D.) in computer science, computational neuroscience, or related area; 
@@ -92,5 +94,7 @@ For these directly contact: satra@mit.edu
 -->
 
 ### Research Assistant:
+
+[Job application link](https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=25240&siteid=5341&PageType=JobDetails&jobid=1969564)
 
 This position is at Harvard Graduate School of Education, and will work closely with researchers at MIT (John Gabrieli, Stefanie Shattuck-Hufnagel, and our group) and FSU (Yaacov Petscher) focused on speech signal processing in children and its application to prediction of reading outcomes. Feel free to reach out to us if you are interested.

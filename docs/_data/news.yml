@@ -1,3 +1,18 @@
+- date: 2022 09 15
+  headline: >
+    A paper published on meningioma detection in contrast enhanced T1 images
+    using deep learning and the <a href="https://github.com/neuronets">Nobrainer<a/>
+    framework. <a href="https://doi.org/10.1038/s41598-022-19356-5">Paper link</a>
+
+- date: 2022 09 01
+  headline: >
+    New projects: 1) Creating a knowledgebase of the brain together 
+    with the Allen Institute for Brain Science as part of the Brain Initiative
+    Cell Atlas Network. 2) Collecting voice data across disorders in ethical, 
+    privacy preserving manner to improve the ability for machine learning algorithms
+    to learn from and derive insights and applications around communication, pediatric, 
+    respiratory, neurological, and mental health and wellbeing.
+
 - date: 2022 08 01
   headline: Welcome Maedbh King
 
