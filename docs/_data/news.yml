@@ -7,11 +7,15 @@
 - date: 2022 09 01
   headline: >
     New projects: 1) Creating a knowledgebase of the brain together 
-    with the Allen Institute for Brain Science as part of the Brain Initiative
-    Cell Atlas Network. 2) Collecting voice data across disorders in ethical, 
+    with the Allen Institute for Brain Science as part of the 
+    <a href="https://www.nimh.nih.gov/news/science-news/2022/nih-brain-initiative-launches-projects-to-develop-cell-atlases-and-molecular-tools-for-cell-access">
+    Brain InitiativeCell Atlas Network </a>. 2)
+    <a href="https://news.weill.cornell.edu/news/2022/09/usf-health-weill-cornell-medicine-earn-inaugural-funding-in-nih%E2%80%99s-newly-launched">
+    Collecting voice data across disorders</a> in ethical, 
     privacy preserving manner to improve the ability for machine learning algorithms
     to learn from and derive insights and applications around communication, pediatric, 
-    respiratory, neurological, and mental health and wellbeing.
+    respiratory, neurological, and mental health and wellbeing. This is part of the 
+    <a href="https://www.nih.gov/news-events/news-releases/nih-launches-bridge2ai-program-expand-use-artificial-intelligence-biomedical-behavioral-research">Bridge 2 AI program</a>.
 
 - date: 2022 08 01
   headline: Welcome Maedbh King
