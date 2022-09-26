@@ -23,8 +23,7 @@ One rationale behind building AI systems is to mimic human intelligence and beha
 <!-- Disparities in AI  -->
 Many questions about racial and gender disparities have been raised recently given the ample empirical evidence highlighting them in AI models. Discrepancies in the performance of deep learning (DL) models due to race and gender have been a trending topic. Despite the inflation in the number of neural networks published to solve demanding tasks using diverse modalities (e.g. image, text, audio, and graphs), it has been occasionally noted that these models are molded with racial and gender biases. For instance, previous studies pointed out discrepancies in [facial biometric](https://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf) systems, showing that classifiers performed best on male subjects with lighter skin and worst on female subjects with darker skin. In the case of predictive algorithms, a software called [COMPAS](https://en.wikipedia.org/wiki/COMPAS_(software)) is widely used as a risk assessment tool for criminals. It was reported that this [software](https://mit-serc.pubpub.org/pub/risk-prediction-in-cj/release/1), favored white defendants over black defendants when deciding whether the defendant will commit the same crime again or not. This software generated significantly more false positives for black defendants compared to white ones, as illustrated in Figure 1.
 
-
-| ![compas.png](https://i.imgur.com/59PosVm.png) |
+| <img src="https://i.imgur.com/59PosVm.png" height="500"> |
 |:--:|
 | <b>Fig.1 - COMPAS predictions reported in Dressel and Farid, 2018</b>|
 
@@ -32,7 +31,7 @@ Similarly, in healthcare, racial disparities have been addressed which might yie
 
 Inevitably, it is foreseeable that we will find gender and racial disparities in voice-based deep learning models. For instance, automatic speech recognition (ASR) systems have shown discrepancies in word error rate (WER) across [race](https://www.pnas.org/doi/pdf/10.1073/pnas.1915768117) and [gender](http://www.ethicsinnlp.org/workshop/pdf/EthNLP06.pdf). WER results for race and gender are shown in Figures 2 and 3, respectively.
 
-| ![race.png](https://i.imgur.com/zenkHY3.png) |
+| <img src="https://i.imgur.com/zenkHY3.png" width="700"/> |
 |:--:|
 | <b>Fig.2 - WER reported in Koenecke et al., 2020</b>|
 
@@ -58,11 +57,11 @@ A recent study was published discussing racial and gender disparities in [voice 
 
 In the second part of their study, they evaluated speaker identification performance of different voice biometric models (e.g. MS Azure, 1D CNN, TDNN, ResNet18, ResNet34, and AutoSpeech). The authors found that the top 3 models (ResNet18, ResNet34, and AutoSpeech) yielded significant differences across racial and gender subgroups that are worse for Latin subjects and males in general, as shown in Figures 5 and 6, leading them to hypothesize that the main causal factor for gender disparities is inherent vocal characteristics, as illustrated above, in addition to the models' bias. Whereas, the main causal factor for racial disparities is the features extracted from DL models.
 
-| ![race_chen.png](https://i.imgur.com/XQrq0x6.png) |
+| <img src="https://i.imgur.com/XQrq0x6.png" width="700"/> |
 |:--:|
 | <b>Fig.5 - Reported performance from Chen et al., 2022</b>|
 
-| ![gender_chen.png](https://i.imgur.com/x1PpPGC.png) |
+| <img src="https://i.imgur.com/x1PpPGC.png" width="700"/> |
 |:--:|
 | <b>Fig.6 - Reported performance from Chen et al., 2022</b>|
 
@@ -128,7 +127,7 @@ With this in mind, the yielded performance could then be justified by saying tha
 
 *Why would models feature disparities with varying levels of significance?*
 
-|                                   ![racial_f0/1.png](https://i.imgur.com/mFp0EY9.png)                                   |
+|                                   <img src="https://i.imgur.com/mFp0EY9.png" height="500"/>                              |
 |:-----------------------------------------------------------------------------------------------------------------------:|
 | <b>Fig.8 - Reported F0 and F1 values across races *(W: White, B: Black, A: Asian, L: Latinx)* from Chen et al. 2022</b> |
 
