@@ -1,3 +1,9 @@
+---
+title: Discrimination in Artificial Intelligence for Voice Applications
+layout: post
+author: Gasser Elbanna
+---
+
 # Discrimination in Artificial Intelligence for Voice Applications
 
 
