@@ -35,7 +35,7 @@ Inevitably, it is foreseeable that we will find gender and racial disparities in
 |:--:|
 | <b>Fig.2 - WER reported in Koenecke et al., 2020</b>|
 
-| ![gender.png](https://i.imgur.com/31xNcKd.png) |
+| <img src="https://i.imgur.com/31xNcKd.png" height="700"/> |
 |:--:|
 | <b>Fig.3 - WER reported in Tatman, 2017</b>|
 
@@ -57,11 +57,11 @@ A recent study was published discussing racial and gender disparities in [voice 
 
 In the second part of their study, they evaluated speaker identification performance of different voice biometric models (e.g. MS Azure, 1D CNN, TDNN, ResNet18, ResNet34, and AutoSpeech). The authors found that the top 3 models (ResNet18, ResNet34, and AutoSpeech) yielded significant differences across racial and gender subgroups that are worse for Latin subjects and males in general, as shown in Figures 5 and 6, leading them to hypothesize that the main causal factor for gender disparities is inherent vocal characteristics, as illustrated above, in addition to the models' bias. Whereas, the main causal factor for racial disparities is the features extracted from DL models.
 
-| <img src="https://i.imgur.com/XQrq0x6.png" width="700"/> |
+| <img src="https://i.imgur.com/XQrq0x6.png" width="900"/> |
 |:--:|
 | <b>Fig.5 - Reported performance from Chen et al., 2022</b>|
 
-| <img src="https://i.imgur.com/x1PpPGC.png" width="700"/> |
+| <img src="https://i.imgur.com/x1PpPGC.png" width="900"/> |
 |:--:|
 | <b>Fig.6 - Reported performance from Chen et al., 2022</b>|
 
