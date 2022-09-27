@@ -4,9 +4,6 @@ layout: post
 author: Gasser Elbanna
 ---
 
-# Discrimination in Artificial Intelligence for Voice Applications
-
-
 <!-- History/Rationale of AI  -->
 ### AI History
 The notion of Artificial Intelligence (AI) has been scrutinized throughout history. For instance, classical philosophers [attempted](https://medium.com/@cstegman/what-plato-has-taught-me-about-artificial-intelligence-3a17f31a5805) to represent human knowledge and intelligence using symbolic abstractions. Indeed, the first official spark of understanding whether machines could think was ignited by Vannevar Bush’s seminal article [*'As We May Think'*](http://worrydream.com/refs/Bush%20-%20As%20We%20May%20Think%20(Life%20Magazine%209-10-1945).pdf) in 1945, in which he had foreseen how the future could benefit from amplifying human knowledge using man-made machines. Subsequently, in 1950, Alan Turing proposed a [logical framework](https://www.csee.umbc.edu/courses/471/papers/turing.pdf) to build and test intelligent machines, paving the road for John McCarthy to coin the term *Artificial Intelligence* in the [first conference](https://www.aaai.org/ojs/index.php/aimagazine/article/view/1904/1802) concerning this subject in 1956.
