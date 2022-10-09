@@ -28,28 +28,17 @@ such projects. Feel free to get in touch with us.
 
 ## Current open positions
 
-### Research Scientist/Engineer: [Apply here](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=24587&localeCode=en-us)
+### Two Research Scientist/Engineer positions: 
+
+[Position 1](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=24587&localeCode=en-us)
+
+[Position 2](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=25708&localeCode=en-us)
 
 Currently this job requires people with existing work authorization in the US (citzenship, residency, EAD, etc.,.).
 
-#### Job requirements
-REQUIRED: 
-- Terminal degree (Ph.D.) in computer science, computational neuroscience, or related area; 
-- Experience developing and implementing large-scale software architectures; 
-- Experience with high-performance cluster computing and/or cloud computing at scale; 
-- Experience with software engineering and publishing and building user-friendly interfaces 
-- Willingness to work with domain scientists
-- Commitment to and experience with open science practices; and 
-- Experience with data management tools that facilitate reproducible science.  
-
-PREFERRED: 
-- Background in neuroscience and cognitive science 
-- Experience with deep learning toolkits
-- Experience with neuroimaging and/or neurophysiology
-- Experience analyzing big data and high-speed I/O programming
-- Experience with ontologies and vocabulary development
-
 ### Postdoctoral openings
+
+For these directly contact: satra@mit.edu
 
 We are looking for postdocs who embrace open science practices and are interested 
 in working on consortial projects to create novel approaches for knowledge 
@@ -59,8 +48,6 @@ develop infrastructure for science. The candidates should have demonstrable trac
 record (publishing and software dissemination) in scientific domains relevant 
 to computation. The candidates are expected to help drive current and new directions 
 of research and development.
-
-For these directly contact: satra@mit.edu
 
 **REQUIRED:**
 - Terminal Degree (Ph.D.) in computer science, computational neuroscience or equivalent
@@ -75,26 +62,3 @@ For these directly contact: satra@mit.edu
 - Experience with high-performance cluster computing and/or cloud computing at scale
 - Experience with data management tools that facilitate reproducible science
 - Experience with neuroimaging and/or neurophysiology
-
-<!--
-### Technical Associate: [Apply here](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=21653&localeCode=en-us)
-
-#### Job Requirements
-
-**REQUIRED:**
-- A bachelor's degree in computer science, engineering, or related technical field that involves computing; two years of relevant experience;
-- Experience with Linux operating systems and shell scripting (e.g., bash, csh).  
-
-**PREFERRED:**
-- Software development experience (especially with Python and/or JavaScript); 
-- Experience with neurophysiology and neuroimaging; 
-- Familiarity or willingness to work with computer infrastructure; and 
-- Experience working with high-performance computing clusters and schedulers. 
-
--->
-
-### Research Assistant:
-
-[Job application link](https://sjobs.brassring.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=25240&siteid=5341&PageType=JobDetails&jobid=1969564)
-
-This position is at Harvard Graduate School of Education, and will work closely with researchers at MIT (John Gabrieli, Stefanie Shattuck-Hufnagel, and our group) and FSU (Yaacov Petscher) focused on speech signal processing in children and its application to prediction of reading outcomes. Feel free to reach out to us if you are interested.

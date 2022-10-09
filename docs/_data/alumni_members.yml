@@ -1,3 +1,19 @@
+- name: Hoda Rajaei
+  photo: //scholar.google.com/citations?view_op=medium_photo&user=t4LK88UAAAAJ&citpid=2
+  info: Research Staff, worked on Nobrainer
+  email: hodaraja@mit.edu
+  duration: 2019 - 2022
+  number_educ: 1
+  education1: PhD Florida International University
+
+- name: Megha Vemuri
+  photo: ../images/megha_vemuri_photo.jpeg
+  info: Undergraduate Research Assistant - working on Mumble Melody
+  email: mvemuri@mit.edu
+  duration: 2021 - 2022
+  number_educ: 1
+  education1: Currently Pursuing B.S. in Computation and Cognition, MIT
+
 - name: Rebecca Kleinberger
   photo: //web.media.mit.edu/~rebklein/RKHS.jpg
   info: Research Affiliate and Postdoc at MIT; working on Mumble Melody; Faculty at Northeastern University

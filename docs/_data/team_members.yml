@@ -14,13 +14,6 @@
   number_educ: 1
   education1: PhD Atmospheric Physics, University of Warsaw
 
-- name: Hoda Rajaei
-  photo: //scholar.google.com/citations?view_op=medium_photo&user=t4LK88UAAAAJ&citpid=2
-  info: Research Staff, started July 2019
-  email: hodaraja@mit.edu
-  number_educ: 1
-  education1: PhD Florida International University
-
 - name: Christopher J Markiewicz
   photo: //avatars2.githubusercontent.com/u/83442?s=460&v=4
   info: Research Affiliate, started 2017, working on Nipype, Neuroscout
@@ -89,13 +82,6 @@
   education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
   education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
   
-- name: Megha Vemuri
-  photo: ../images/megha_vemuri_photo.jpeg
-  info: Undergraduate Research Assistant - working on Mumble Melody
-  email: mvemuri@mit.edu
-  number_educ: 1
-  education1: Currently Pursuing B.S. in Computation and Cognition, MIT
-
 - name: Claudia Liauw
   photo: ../images/claudia.jpg
   info: Visiting Student
