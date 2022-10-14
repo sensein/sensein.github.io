@@ -28,7 +28,7 @@ Stuttering affects 1% of adults and 8% of children, and there are 70 million PWS
 
 **About This Study:**
 
-We are currently running a feedback study to get input on our app from PWS. If you are eligible, all you need to do is download the app on your iPhone, iPad, or Mac computer, try using the app in your own time, and answer built-in feedback questions. We won’t be collecting any personal data or voice data.
+We are currently running a feedback study to get input on our app from PWS. If you are eligible, all you need to do is download the app on your iPhone, iPad, or Mac computer, try using the app in your own time, and answer built-in feedback questions. We won’t be collecting any personal data or voice data. [Here](https://tinyurl.com/mumblemelodyapp) is a link to download this app.
 Below is more information on the study, eligibility criteria, and instructions to download the app:
 
 <img src="{{ "/images/Mumble_Melody_flyer.jpg" | prepend: site.baseurl | prepend: site.url}}" class="img-responsive" width="25%" style="float: center; margin: 0%; min-width: 700px" />
