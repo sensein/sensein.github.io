@@ -28,14 +28,6 @@ such projects. Feel free to get in touch with us.
 
 ## Current open positions
 
-### Two Research Scientist/Engineer positions: 
-
-[Position 1](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=24587&localeCode=en-us)
-
-[Position 2](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=25708&localeCode=en-us)
-
-Currently this job requires people with existing work authorization in the US (citzenship, residency, EAD, etc.,.).
-
 ### Postdoctoral openings
 
 For these directly contact: satra@mit.edu
