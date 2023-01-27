@@ -6,14 +6,6 @@
   education1: PhD Cognitive and Neural Systems, Boston University
   education2: BS(Honors) Information Systems and Computer Science, National University of Singapore
   education3: <a href="http://satra.cogitatum.org/assets/CV_Latest.pdf">Full CV</a>
-
-- name: Nima Dehghani
-  photo: ../images/nima.jpg
-  info: Research Scientist 
-  email: nima.dehghani@mit.edu
-  number_educ: 2
-  education1: PhD Computational Neuroscience,Complex Systems, Sorbonne Université (Pierre et Marie Curie, Paris VI) & Unité de Neurosciences Information et Complexité (UNIC), CNRS
-  education2: MD.
   
 - name: Dorota Jarecka
   photo: //gablab.mit.edu/wp-content/uploads/bfi_thumb/dorata-jarecka-nm70tl9ny3k30jco6p80294a9zcc8mf7rx0ep2q8m0.jpg
@@ -118,3 +110,11 @@
   email: meral@mit.edu
   number_educ: 1
   education1: B.S. in Molecular & Cellular Biology, Vanderbilt University 
+
+- name: Nima Dehghani
+  photo: ../images/nima.jpg
+  info: Research Scientist 
+  email: nima.dehghani@mit.edu
+  number_educ: 2
+  education1: PhD Computational Neuroscience,Complex Systems, Sorbonne Université (Pierre et Marie Curie, Paris VI) & Unité de Neurosciences Information et Complexité (UNIC), CNRS
+  education2: MD.
