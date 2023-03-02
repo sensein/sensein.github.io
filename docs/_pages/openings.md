@@ -28,6 +28,12 @@ such projects. Feel free to get in touch with us.
 
 ## Current open positions
 
+### Software engineering positions
+
+We have up to 2 positions open for software engineers to help with several 
+projects in our group. For requirements and to apply open [this link](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=26775&localeCode=en-us).
+
+
 ### Postdoctoral openings
 
 For these directly contact: satra@mit.edu
