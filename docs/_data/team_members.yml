@@ -118,3 +118,12 @@
   number_educ: 2
   education1: PhD Computational Neuroscience,Complex Systems, Sorbonne Université (Pierre et Marie Curie, Paris VI) & Unité de Neurosciences Information et Complexité (UNIC), CNRS
   education2: MD.
+  
+- name: Matthias Steiner
+  photo: ../images/nima.jpg
+  info: Visiting MSc. Student from ETH
+  email: matth406@mit.edu
+  number_educ: 2
+  education1: MSc in Statistics, ETH Zurich
+  education2: B.A. in Economics, University of St. Gallen
+  
