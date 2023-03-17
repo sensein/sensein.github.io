@@ -125,3 +125,11 @@
   email: zwang7@mit.edu
   number_educ: 1
   education1: B.S. in Computer Science, Artificial Intelligience and Decision Making, MIT
+
+- name: Matthias Steiner
+  photo: ../images/matthias.jpg
+  info: Visiting MSc. Student from ETH Zurich
+  email: matth406@mit.edu
+  number_educ: 2
+  education1: MSc. in Statistics, ETH Zurich
+  education2: B.A. in Economics, University of St. Gallen
