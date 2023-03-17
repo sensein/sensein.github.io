@@ -118,6 +118,13 @@
   number_educ: 2
   education1: PhD Computational Neuroscience,Complex Systems, Sorbonne Université (Pierre et Marie Curie, Paris VI) & Unité de Neurosciences Information et Complexité (UNIC), CNRS
   education2: MD.
+  
+- name: Zihao Wang
+  photo: ../images/Zihao_Wang.jpg
+  info: Undergraduate Researcher
+  email: zwang7@mit.edu
+  number_educ: 1
+  education1: B.S. in Computer Science, Artificial Intelligience and Decision Making, MIT
 
 - name: Matthias Steiner
   photo: ../images/matthias.jpg
