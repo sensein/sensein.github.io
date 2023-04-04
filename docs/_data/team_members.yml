@@ -142,3 +142,10 @@
   email: jenneyk@mit.edu
   number_educ: 1
   education1: B.S. in Neuroscience, Emmanuel College
+  
+- name: Sabeen Lohawala
+  photo: ../images/sabeen.png
+  info: Undergraduate Researcher
+  email: sabeen@mit.edu
+  number_educ: 1
+  education1: B.S. in Computer Science
