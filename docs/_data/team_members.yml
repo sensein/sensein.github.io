@@ -149,3 +149,11 @@
   email: sabeen@mit.edu
   number_educ: 1
   education1: B.S. in Computer Science
+  
+- name: Kapish Potula
+  photo: ../images/Kapish.png
+  info: Undergraduate Researcher
+  email: kpotula7@gatech.edu
+  number_educ: 1
+  education1: B.S. in Neuroscience, Georgia Institute of Technology
+
