@@ -24,7 +24,10 @@ The Mumble Melody app is a work-in-progress based on our research that aims to g
 - Have a SEPARATE browser-supporting device with a microphone
 - Be 18-years-old or older
 - Live in the United States. 
-If you are eligible and are interested in participating, please fill out this form: recap.link/mumblemelodystudy.
+
+<br />
+
+If you are eligible and are interested in participating, please fill out this form: [redcap.link/mumblemelodystudy](https://redcap.link/mumblemelodystudy).
 
 
 <img src="{{ "/images/Mumble_Melody_2.jpg" | prepend: site.baseurl | prepend: site.url}}" class="img-responsive" width="25%" style="float: right; margin: 0.8%; min-width: 90px" />
