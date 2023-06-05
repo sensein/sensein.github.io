@@ -164,4 +164,8 @@
   number_educ: 0
   
 - name: Kai McClennen
-  photo: 
+  photo: ../images/kaimcclennen.jpg
+  info: Undergraduate Researcher
+  email: kmcclenn@mit.edu
+  number_educ: 1
+  education1: B.S. in Computer Science and Engineering, MIT
