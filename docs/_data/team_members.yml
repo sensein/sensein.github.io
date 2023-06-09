@@ -153,3 +153,11 @@
   email: kmcclenn@mit.edu
   number_educ: 1
   education1: B.S. in Computer Science and Engineering, MIT
+
+  - name: Puja Trivedi
+  photo: ../images/puja.png
+  info: Software Engineer
+  email: ptrivedi@mit.edu
+  number_educ: 2
+  education1: M.S. in Computer Science, University of California - Los Angeles
+  education2: B.S. in Computer Science with Specialization in Bioinformatics, University of California - San Diego
