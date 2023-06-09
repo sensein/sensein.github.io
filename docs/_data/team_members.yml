@@ -46,14 +46,6 @@
   education1: BS Biology, Penn State
   education2: AM Digital Musics, Dartmouth College
   
-- name: Kenny Nguyen
-  photo: ../images/Kenny Nguyen - Photo.jpg
-  info: Technical Associate I, started 2020, working on Vocallect; MD student, Larner College of Medicine, University of Vermont
-  email: kennyngu@mit.edu
-  number_educ: 2
-  education1: B.S., Neurobiology & Physiology, Purdue University
-  education2: M.Ed., Harvard Graduate School of Education
-
 - name: Rahul Brito
   photo: //static.projects.iq.harvard.edu/files/styles/profile_full/public/shbtphd/files/brito_rahul.jpg?m=1606794791&itok=7EVxwkUu
   info: PhD Student
@@ -83,14 +75,6 @@
   education1: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
   education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
   education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
-  
-- name: Claudia Liauw
-  photo: ../images/claudia.jpg
-  info: Visiting Student
-  email: cliauw@mit.edu
-  number_educ: 2
-  education1: Currently Pursuing B.S. in Biological Sciences, Nanyang Technological University, Singapore
-  education2: <a href="https://www.linkedin.com/in/claudialiauw/">LinkedIn</a>
   
 - name: Maedbh King
   photo: ../images/maedbhking.jpg
