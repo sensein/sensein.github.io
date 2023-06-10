@@ -154,7 +154,7 @@
   number_educ: 1
   education1: B.S. in Computer Science and Engineering, MIT
 
-  - name: Puja Trivedi
+- name: Puja Trivedi
   photo: ../images/puja.png
   info: Software Engineer
   email: ptrivedi@mit.edu
