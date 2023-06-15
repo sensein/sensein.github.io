@@ -1,6 +1,6 @@
 - name: Satrajit S Ghosh
   photo: //satra.cogitatum.org/assets/satra.png
-  info: > 
+  info: >
     Director of Open Data in Neuroscience Initiative and Principal Research Scientist at MIT; Assistant 
     Professor of Otolaryngology at Harvard Medical School
   email: satra@mit.edu
@@ -8,7 +8,7 @@
   education1: PhD Cognitive and Neural Systems, Boston University
   education2: BS(Honors) Information Systems and Computer Science, National University of Singapore
   education3: <a href="http://satra.cogitatum.org/assets/CV_Latest.pdf">Full CV</a>
-  
+
 - name: Dorota Jarecka
   photo: //gablab.mit.edu/wp-content/uploads/bfi_thumb/dorata-jarecka-nm70tl9ny3k30jco6p80294a9zcc8mf7rx0ep2q8m0.jpg
   info: Research Scientist, started 2016, working on Nipype, ReproNim
@@ -45,7 +45,7 @@
   number_educ: 2
   education1: BS Biology, Penn State
   education2: AM Digital Musics, Dartmouth College
-  
+
 - name: Rahul Brito
   photo: //static.projects.iq.harvard.edu/files/styles/profile_full/public/shbtphd/files/brito_rahul.jpg?m=1606794791&itok=7EVxwkUu
   info: PhD Student
@@ -75,7 +75,7 @@
   education1: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
   education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
   education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
-  
+
 - name: Maedbh King
   photo: ../images/maedbhking.jpg
   info: ICoN Postdoctoral Fellow
@@ -89,22 +89,22 @@
   email: sooyoung@mit.edu
   number_educ: 1
   education1: B.S. in Electrical & Computer Engineering, Carnegie Mellon University
-  
+
 - name: Meral Hacikamiloglu
   photo: ../images/meral.jpg
   info: Research Affiliate
   email: meral@mit.edu
   number_educ: 1
-  education1: B.S. in Molecular & Cellular Biology, Vanderbilt University 
+  education1: B.S. in Molecular & Cellular Biology, Vanderbilt University
 
 - name: Nima Dehghani
   photo: ../images/nima.jpg
-  info: Research Scientist 
+  info: Research Scientist
   email: nima.dehghani@mit.edu
   number_educ: 2
   education1: PhD Computational Neuroscience, Complex Systems, Sorbonne Université (Pierre et Marie Curie, Paris VI) & Unité de Neurosciences Information et Complexité (UNIC), CNRS
   education2: MD.
-  
+
 - name: Zihao Wang
   photo: ../images/Zihao_Wang.jpg
   info: Undergraduate Researcher
@@ -119,21 +119,21 @@
   number_educ: 2
   education1: MSc. in Statistics, ETH Zurich
   education2: B.A. in Economics, University of St. Gallen
-  
+
 - name: Kaley Jenney
   photo: ../images/kaley.jpeg
   info: Technical Associate I
   email: jenneyk@mit.edu
   number_educ: 1
   education1: B.S. in Neuroscience, Emmanuel College
-  
+
 - name: Sabeen Lohawala
   photo: ../images/sabeen.png
   info: Undergraduate Researcher
   email: sabeen@mit.edu
   number_educ: 1
   education1: B.S. in Computer Science
-  
+
 - name: Kapish Potula
   photo: ../images/Kapish.png
   info: Undergraduate Researcher
@@ -146,7 +146,7 @@
   info: Research Scientist
   email: hgazula@mit.edu
   number_educ: 0
-  
+
 - name: Kai McClennen
   photo: ../images/kaimcclennen.jpg
   info: Undergraduate Researcher
@@ -161,3 +161,10 @@
   number_educ: 2
   education1: M.S. in Computer Science, University of California - Los Angeles
   education2: B.S. in Computer Science with Specialization in Bioinformatics, University of California - San Diego
+
+- name: Amber Lien
+  photo: ../images/non_descript_photo.png
+  info: Undergraduate Researcher
+  email: amber03@mit.edu
+  number_educ: 1
+  education1: B.S. in Electrical Engineering and Computer Science, MIT
