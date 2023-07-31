@@ -146,13 +146,6 @@
   info: Research Scientist
   email: hgazula@mit.edu
   number_educ: 0
-
-- name: Yibei Chen
-  photo: https://avatars.githubusercontent.com/u/20402800?v=4
-  info: Postdoctoral Associate
-  email: yibei@mit.edu
-  number_educ: 1
-  education1: Ph.D. in Communication, UC Santa Barbara
   
 - name: Kai McClennen
   photo: ../images/kaimcclennen.jpg
@@ -189,3 +182,10 @@
   email: f20201337@hyderabad.bits-pilani.ac.in
   number_educ: 1
   education1: B. E. in Electrical and Electronics Engineering, BITS Pilani
+  
+- name: Yibei Chen
+  photo: https://avatars.githubusercontent.com/u/20402800?v=4
+  info: Postdoctoral Associate
+  email: yibei@mit.edu
+  number_educ: 1
+  education1: Ph.D. in Communication, UC Santa Barbara
