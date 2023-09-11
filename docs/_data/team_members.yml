@@ -196,3 +196,10 @@
   email: jonghlee@mit.edu
   number_educ: 1
   education1: Ph.D. in Electrical Engineering and Computer Science, KAIST, Korea
+
+- name: Ahmed Zain
+  photo: ../images/ahmedzain.jpeg
+  info: Undergraduate Researcher
+  email: azain@mit.edu
+  number_educ: 1
+  education1: B.S. in Computer Science and Engineering, MIT
