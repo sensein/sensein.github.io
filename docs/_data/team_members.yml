@@ -129,10 +129,11 @@
 
 - name: Sabeen Lohawala
   photo: ../images/sabeen.png
-  info: Undergraduate Researcher
+  info: MEng Student, MIT
   email: sabeen@mit.edu
-  number_educ: 1
-  education1: B.S. in Computer Science
+  number_educ: 2
+  education1: MEng in Computer Science, MIT
+  education2: B.S. in Computer Science, MIT
 
 - name: Kapish Potula
   photo: ../images/Kapish.png
