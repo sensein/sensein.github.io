@@ -211,3 +211,10 @@
   email: agathe01@mit.edu
   number_educ: 1
   education1: B.S. in Physics, EPFL
+
+- name: Jai Amin
+  photo: ../images/jai_amin.png
+  info: Technical Intern
+  email: jamin30@mit.edu
+  number_educ: 1
+  education1: B.S. in Computer Science and Artificial Intelligence, Northeastern University
