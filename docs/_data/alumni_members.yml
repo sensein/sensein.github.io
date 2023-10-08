@@ -1,3 +1,44 @@
+- name: Matthias Steiner
+  photo: ../images/matthias.jpg
+  info: Visiting MSc. Student from ETH Zurich
+  email: matth406@mit.edu
+  duration: 2023 - 2023
+  number_educ: 2
+  education1: MSc. in Statistics, ETH Zurich
+  education2: B.A. in Economics, University of St. Gallen
+
+- name: Anurag Gade
+  photo: ../images/anurag.jpeg
+  info: Undergraduate Researcher
+  email: f20201337@hyderabad.bits-pilani.ac.in
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B. E. in Electrical and Electronics Engineering, BITS Pilani
+  
+- name: Alisha Kodibagkar
+  photo: ../images/alisha_kodibagkar_photo.jpeg
+  info: Technical Associate I - working on Mumble Melody
+  email: akodiba1@mit.edu
+  duration: 2022 - 2023
+  number_educ: 1
+  education1: B.S. and M.S.E., Biomedical Engineering, Johns Hopkins University
+
+- name: Zihao Wang
+  photo: ../images/Zihao_Wang.jpg
+  info: Undergraduate Researcher
+  email: zwang7@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Computer Science, Artificial Intelligence and Decision Making, MIT
+
+- name: Kai McClennen
+  photo: ../images/kaimcclennen.jpg
+  info: Undergraduate Researcher
+  email: kmcclenn@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Computer Science and Engineering, MIT
+
 - name: Claudia Liauw
   photo: ../images/claudia.jpg
   info: Visiting Student
