@@ -26,37 +26,8 @@ If you are an undergraduate at MIT, we have several projects that are suited for
 UROP projects. We work through the Quest Initiative or with other faculty for 
 such projects. Feel free to get in touch with us.
 
-## Current open positions
 
-### Software engineering positions
+## Staff/Postdoc positions
 
-We have up to 2 positions open for software engineers to help with several 
-projects in our group. For requirements and to apply open [this link](https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId=26775&localeCode=en-us).
-
-
-### Postdoctoral openings
-
-For these directly contact: satra@mit.edu
-
-We are looking for postdocs who embrace open science practices and are interested 
-in working on consortial projects to create novel approaches for knowledge 
-representation, to develop new ways of conducting collaborative and reproducible 
-neuroscience research, to design algorithms to solve learning problems, and to 
-develop infrastructure for science. The candidates should have demonstrable track
-record (publishing and software dissemination) in scientific domains relevant 
-to computation. The candidates are expected to help drive current and new directions 
-of research and development.
-
-**REQUIRED:**
-- Terminal Degree (Ph.D.) in computer science, computational neuroscience or equivalent
-- Experience with software engineering
-- Commitment to and experience with open science practices
-- Experience with deep learning toolkits
-
-**PREFERRED (One or more of these):**
-- Background in neuroscience
-- Experience with ontologies and vocabulary development.
-- Experience developing and implementing large scale software architectures
-- Experience with high-performance cluster computing and/or cloud computing at scale
-- Experience with data management tools that facilitate reproducible science
-- Experience with neuroimaging and/or neurophysiology
+There are no open positions at the moment. Check back here for any future 
+announcements.
