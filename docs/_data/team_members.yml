@@ -182,3 +182,11 @@
   email: jamin30@mit.edu
   number_educ: 1
   education1: B.S. in Computer Science and Artificial Intelligence, Northeastern University
+
+- name: Aaron Kanzer
+  photo: ../images/Aaron_Kanzer.png
+  info: Software Engineer
+  email: akanzer@mit.edu
+  number_educ: 2
+  education1: M.S in Computer Science, Northeastern University
+  education2: B.S. in Economics & Political Science, Northeastern University
