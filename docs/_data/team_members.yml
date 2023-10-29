@@ -190,3 +190,10 @@
   number_educ: 2
   education1: M.S in Computer Science, Northeastern University
   education2: B.S. in Economics & Political Science, Northeastern University
+
+- name: Alicia Zhang
+  photo: ../images/alicia_zhang_photo.jpg
+  info: Undergraduate Researcher
+  email: aliciaz@mit.edu
+  number_educ: 1
+  education1: B.S. in Mathematics, Artificial Intelligence and Decision Making, MIT
