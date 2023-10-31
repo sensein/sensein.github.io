@@ -205,3 +205,10 @@
   number_educ: 1
   education1: B.S. in Computer Science, Artificial Intelligence and Decision Making, MIT
 
+- name: Alina Weinberger
+  photo: ../images/AlinaWeinberger.png
+  info: Visiting M.S. student from Technical University of Munich
+  email: alina991@mit.edu
+  number_educ: 1
+  education1: M.S. Neuroengineering, Technichal University of Munich
+
