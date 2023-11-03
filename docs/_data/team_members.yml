@@ -212,3 +212,10 @@
   number_educ: 1
   education1: M.S. Neuroengineering, Technichal University of Munich
 
+- name: Kabilar Gunalan
+  photo: ../images/kabilar-gunalan.jpg
+  info: Research Scientist
+  email: kabi@mit.edu
+  number_educ: 2
+  education1: PhD Biomedical Engineering, Case Western Reserve University  
+  education2: MD, Case Western Reserve University
