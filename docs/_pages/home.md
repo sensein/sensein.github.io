@@ -38,7 +38,7 @@ improve efficiency of analyses and reproducibility in science.
             <img src="//iiif.elifesciences.org/lax:36652%2Felife-36652-fig3-v1.tif/full/1500,/0/default.jpg" alt="Slide 3" />
         </div>
         <div class="item">
-            <img src="//www.pnas.org/content/pnas/113/44/12574/F1.large.jpg" alt="Slide 4" />
+            <img src="//pnas.org/cms/10.1073/pnas.1608282113/asset/5ecf6af1-f59a-40ed-9d24-5d1dbff6dac6/assets/graphic/pnas.1608282113fig01.jpeg" alt="Slide 4" />
         </div>
         <div class="item">
             <img src="//jamanetwork.com/data/journals/psych/926165/yoa120057f4.png" alt="Slide 5" />
