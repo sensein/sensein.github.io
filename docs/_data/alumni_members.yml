@@ -1,3 +1,59 @@
+- name: Alicia Zhang
+  photo: ../images/alicia_zhang_photo.jpg
+  info: Undergraduate Researcher
+  email: aliciaz@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Mathematics, Artificial Intelligence and Decision Making, MIT
+
+- name: Olivia Han
+  photo: ../images/non_descript_photo.png
+  info: Undergraduate Researcher
+  email: olivia02@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Computer Science, Artificial Intelligence and Decision Making, MIT
+
+- name: Jai Amin
+  photo: ../images/jai_amin.png
+  info: Technical Intern
+  email: jamin30@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Computer Science and Artificial Intelligence, Northeastern University
+
+- name: Amber Lien
+  photo: ../images/non_descript_photo.png
+  info: Undergraduate Researcher
+  email: amber03@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Electrical Engineering and Computer Science, MIT
+
+- name: Edward Gaibor
+  photo: ../images/edwardgaibor.png
+  info: Technical Intern
+  email: egaibor@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B. S in Computer Science @ UMass Boston
+
+- name: Kapish Potula
+  photo: ../images/Kapish.png
+  info: Undergraduate Researcher
+  email: kpotula7@gatech.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Neuroscience, Georgia Institute of Technology
+
+- name: Sooyoung Ahn
+  photo: ../images/sooyoung.jpg
+  info: Technical Associate I
+  email: sooyoung@mit.edu
+  duration: 2022 - 2023
+  number_educ: 1
+  education1: B.S. in Electrical & Computer Engineering, Carnegie Mellon University
+
 - name: Matthias Steiner
   photo: ../images/matthias.jpg
   info: Visiting MSc. Student from ETH Zurich

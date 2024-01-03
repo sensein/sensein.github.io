@@ -76,13 +76,6 @@
   number_educ: 1
   education1: Ph.D. in Cognitive Neuroscience, UC Berkeley
 
-- name: Sooyoung Ahn
-  photo: ../images/sooyoung.jpg
-  info: Technical Associate I
-  email: sooyoung@mit.edu
-  number_educ: 1
-  education1: B.S. in Electrical & Computer Engineering, Carnegie Mellon University
-
 - name: Meral Hacikamiloglu
   photo: ../images/meral.jpg
   info: Research Affiliate
@@ -113,13 +106,6 @@
   education1: MEng in Computer Science, MIT
   education2: B.S. in Computer Science, MIT
 
-- name: Kapish Potula
-  photo: ../images/Kapish.png
-  info: Undergraduate Researcher
-  email: kpotula7@gatech.edu
-  number_educ: 1
-  education1: B.S. in Neuroscience, Georgia Institute of Technology
-
 - name: Harsha Gazula
   photo: ../images/non_descript_photo.png
   info: Research Scientist
@@ -133,20 +119,6 @@
   number_educ: 2
   education1: M.S. in Computer Science, University of California - Los Angeles
   education2: B.S. in Computer Science with Specialization in Bioinformatics, University of California - San Diego
-
-- name: Amber Lien
-  photo: ../images/non_descript_photo.png
-  info: Undergraduate Researcher
-  email: amber03@mit.edu
-  number_educ: 1
-  education1: B.S. in Electrical Engineering and Computer Science, MIT
-
-- name: Edward Gaibor
-  photo: ../images/edwardgaibor.png
-  info: Technical Intern
-  email: egaibor@mit.edu
-  number_educ: 1
-  education1: B. S in Computer Science @ UMass Boston
 
 - name: Yibei Chen
   photo: https://avatars.githubusercontent.com/u/20402800?v=4
@@ -176,13 +148,6 @@
   number_educ: 1
   education1: B.S. in Physics, EPFL
 
-- name: Jai Amin
-  photo: ../images/jai_amin.png
-  info: Technical Intern
-  email: jamin30@mit.edu
-  number_educ: 1
-  education1: B.S. in Computer Science and Artificial Intelligence, Northeastern University
-
 - name: Aaron Kanzer
   photo: ../images/Aaron_Kanzer.png
   info: Software Engineer
@@ -190,20 +155,6 @@
   number_educ: 2
   education1: M.S in Computer Science, Northeastern University
   education2: B.S. in Economics & Political Science, Northeastern University
-
-- name: Alicia Zhang
-  photo: ../images/alicia_zhang_photo.jpg
-  info: Undergraduate Researcher
-  email: aliciaz@mit.edu
-  number_educ: 1
-  education1: B.S. in Mathematics, Artificial Intelligence and Decision Making, MIT
-
-- name: Olivia Han
-  photo: ../images/non_descript_photo.png
-  info: Undergraduate Researcher
-  email: olivia02@mit.edu
-  number_educ: 1
-  education1: B.S. in Computer Science, Artificial Intelligence and Decision Making, MIT
 
 - name: Alina Weinberger
   photo: ../images/AlinaWeinberger.png
