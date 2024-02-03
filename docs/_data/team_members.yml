@@ -54,11 +54,12 @@
   education1: BS Bioengineering, University of Washington
 
 - name: Gasser Elbanna
-  photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=cwcd3BIAAAAJ&citpid=2
-  info: Visiting MSc. Student from EPFL - Studying vocal identities in self-supervised speech models and voice perception.
+  photo: ../images/Gasser.png
+  info: PhD Student
   email: gelbanna@mit.edu
-  number_educ: 1
-  education1: B.S. in Systems and Biomedical Engineering, Cairo University
+  number_educ: 2
+  education1: M.Sc. in Neuroscience and Neuroengineering, EPFL
+  education2: B.Sc. in Systems and Biomedical Engineering, Cairo University
 
 - name: Fabio Catania
   photo: ../images/fabio_catania_photo.jpg
