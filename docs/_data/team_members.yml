@@ -186,3 +186,11 @@
   number_educ: 2
   education1: MEng in Computation and Cognition, MIT
   education2: B.S. in Computation and Cognition, MIT
+
+- name: Tek Raj Chhetri
+  photo: ../images/tekraj.jpeg
+  info: Postdoctoral Associate
+  email: tekraj@mit.edu
+  number_educ: 2
+  education1: Ph.D. in Computer Science, University of Innsbruck
+  education2: M.Sc. in Computer Science, University of Tartu 
