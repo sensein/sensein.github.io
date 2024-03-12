@@ -128,14 +128,6 @@
   number_educ: 1
   education1: Ph.D. in Communication, UC Santa Barbara
 
-- name: Tek Raj Chhetri
-  photo: ../images/tekraj.jpeg
-  info: Postdoctoral Associate
-  email: tekraj@mit.edu
-  number_educ: 2
-  education1: Ph.D. in Computer Science, University of Innsbruck
-  education2: M.Sc. in Computer Science, University of Tartu 
-
 - name: Jong-Hwan Lee
   photo: ../images/JHLee_22jul21.jpg
   info: Visiting Scientist
@@ -194,3 +186,11 @@
   number_educ: 2
   education1: MEng in Computation and Cognition, MIT
   education2: B.S. in Computation and Cognition, MIT
+
+- name: Tek Raj Chhetri
+  photo: ../images/tekraj.jpeg
+  info: Postdoctoral Associate
+  email: tekraj@mit.edu
+  number_educ: 2
+  education1: Ph.D. in Computer Science, University of Innsbruck
+  education2: M.Sc. in Computer Science, University of Tartu 
