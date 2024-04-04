@@ -194,3 +194,10 @@
   number_educ: 2
   education1: Ph.D. in Computer Science, University of Innsbruck
   education2: M.Sc. in Computer Science, University of Tartu 
+
+- name: Isaac Bevers
+  photo: ../images/isaac_bevers.jpeg
+  info: Technical Associate I
+  email: isaacb@mit.edu
+  number_educ: 1
+  education1: B.S. in Symbolic Systems, Stanford University
