@@ -201,3 +201,10 @@
   email: isaacb@mit.edu
   number_educ: 1
   education1: B.S. in Symbolic Systems, Stanford University
+
+- name: Jordan Wilke
+  photo: ../images/jordan_wilke.jpeg
+  info: MEng Student, MIT
+  number_educ: 2
+  education1: MEng in Computer Science and Engineering, MIT
+  education2: B.S. in Computer Science and Engineering and Brain and Cognitive Science, MIT
