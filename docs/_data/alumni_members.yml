@@ -1,3 +1,46 @@
+- name: Daniel M. Low
+  photo: ../images/daniel_low_lo_fi.png
+  info: PhD Student
+  email: dlow@mit.edu
+  duration: 2019 - 2024
+  number_educ: 2
+  education1: MA Language & Communication Technologies, University of Groningen
+  education2: MS Cognitive Science, CIMeC, University of Trento
+
+- name: Gasser Elbanna
+  photo: ../images/Gasser.png
+  info: PhD Student
+  email: gelbanna@mit.edu
+  duration: 2022 - 2024
+  number_educ: 2
+  education1: M.Sc. in Neuroscience and Neuroengineering, EPFL
+  education2: B.Sc. in Systems and Biomedical Engineering, Cairo University
+
+- name: Sabeen Lohawala
+  photo: ../images/sabeen.png
+  info: MEng Student, MIT
+  email: sabeen@mit.edu
+  duration: 2023 - 2024
+  number_educ: 2
+  education1: MEng in Computer Science, MIT
+  education2: B.S. in Computer Science, MIT
+
+- name: Ahmed Zain
+  photo: ../images/ahmed_zain.jpeg
+  info: Undergraduate Researcher
+  email: azain@mit.edu
+  duration: 2023 - 2024
+  number_educ: 1
+  education1: B.S. in Computer Science and Engineering, MIT
+
+- name: Agathe Tournant
+  photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=cwcd3BIAAAAJ&citpid=2
+  info: Visiting M.S. student from ETH Zurich
+  email: agathe01@mit.edu
+  duration: 2023 - 2024
+  number_educ: 1
+  education1: B.S. in Physics, EPFL
+
 - name: Alicia Zhang
   photo: ../images/alicia_zhang_photo.jpg
   info: Undergraduate Researcher

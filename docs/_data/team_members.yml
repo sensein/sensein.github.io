@@ -23,14 +23,6 @@
   number_educ: 1
   education1: PhD Cognitive and Neural Systems, Boston University
 
-- name: Daniel M. Low
-  photo: ../images/daniel_low_lo_fi.png
-  info: PhD Student
-  email: dlow@mit.edu
-  number_educ: 2
-  education1: MA Language & Communication Technologies, University of Groningen
-  education2: MS Cognitive Science, CIMeC, University of Trento
-
 - name: Debbie Burdinski
   photo: ../images/debbie.jpeg
   info: MD-PhD Student, Harvard Medical School and MIT
@@ -52,14 +44,6 @@
   email: rfbrito@mit.edu
   number_educ: 1
   education1: BS Bioengineering, University of Washington
-
-- name: Gasser Elbanna
-  photo: ../images/Gasser.png
-  info: PhD Student
-  email: gelbanna@mit.edu
-  number_educ: 2
-  education1: M.Sc. in Neuroscience and Neuroengineering, EPFL
-  education2: B.Sc. in Systems and Biomedical Engineering, Cairo University
 
 - name: Fabio Catania
   photo: ../images/fabio_catania_photo.jpg
@@ -99,14 +83,6 @@
   number_educ: 1
   education1: B.S. in Neuroscience, Emmanuel College
 
-- name: Sabeen Lohawala
-  photo: ../images/sabeen.png
-  info: MEng Student, MIT
-  email: sabeen@mit.edu
-  number_educ: 2
-  education1: MEng in Computer Science, MIT
-  education2: B.S. in Computer Science, MIT
-
 - name: Harsha Gazula
   photo: ../images/non_descript_photo.png
   info: Research Scientist
@@ -134,20 +110,6 @@
   email: jonghlee@mit.edu
   number_educ: 1
   education1: Ph.D. in Electrical Engineering and Computer Science, KAIST, Korea
-
-- name: Ahmed Zain
-  photo: ../images/ahmed_zain.jpeg
-  info: Undergraduate Researcher
-  email: azain@mit.edu
-  number_educ: 1
-  education1: B.S. in Computer Science and Engineering, MIT
-
-- name: Agathe Tournant
-  photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=cwcd3BIAAAAJ&citpid=2
-  info: Visiting M.S. student from ETH Zurich
-  email: agathe01@mit.edu
-  number_educ: 1
-  education1: B.S. in Physics, EPFL
 
 - name: Aaron Kanzer
   photo: ../images/Aaron_Kanzer.png

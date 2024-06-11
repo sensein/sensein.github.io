@@ -1,20 +1,32 @@
 ---
-title: "Voice and Language Biomarkers for Mental Health"
+title: "Voice and Language Biomarkers for Health"
 layout: textlay
 excerpt: "Speech biomarkers"
 sitemap: false
 permalink: /speech_biomarkers/
 ---
 
-# Voice and Language Biomarkers for Mental Health
+# Voice and Language Biomarkers for Health
 
 <img src="{{ "/images/reddit_figure1_covid19_boolean.png" | prepend: site.baseurl | prepend: site.url}}" class="img-responsive" width="25%" style="float: right; margin: 0.8%; min-width: 350px" />
 
 <br />
 
-**Overall Aim:** To detect mental health symptoms from voice and language data
+**Overall Aim:** To detect health symptoms from voice, language, and other sensor data
 
-**Team Members:** Daniel Low, Debbie Burdinski, Satra Ghosh
+**Team Members:** Isaac Bevers, Kaley Jenny, Rahul Brito, Jordan Wilke, Miles Silva, Fabio Catania
+
+<br />
+
+**Prior work:**
+
+#### Detecting vocal fold paralysis and biases in voice data collection
+Analyzing sustained vowel and read speech to detect unilateral vocal fold paralysis. Also exploring biases
+in recording and comparing ML performance to that of clinician's ability to detect diagnosis from voice.
+
+[Link to publication](https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000516)
+
+**Collaborators:** Phil Song
 
 <br />
 
@@ -47,13 +59,3 @@ Featured in [MIT News](https://news.mit.edu/2020/covid-19-impact-mental-health-1
 **Collaborators:** Matt Nock, Walter Dempsey, Kelly Zuromski, Daniel Kessler, RallyPoint 
 
 <br />
-
-#### Tracking longitudinal changes in voice and language using ecological momentary assessments
-**Collaborators:** Kate Bentley, Joe Maimone, Daniel Coppersmith, Rebecca Fortrang, Alex Millner, Matt Nock 
-
-<br />
-
-#### Tracking changes in speech during transcranial magnetic stimulation trials
-**Collaborators:** Joan Camprodon
- 
- <br />
