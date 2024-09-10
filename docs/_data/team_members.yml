@@ -171,3 +171,11 @@
   number_educ: 2
   education1: MEng in Computer Science and Engineering, MIT
   education2: B.S. in Computer Science and Engineering and Brain and Cognitive Science, MIT
+
+- name: Bruke Wossenseged
+  photo: ../images/bruke_wossenseged.jpeg
+  info: MEng Student, MIT
+  email: brukew@mit.edu
+  number_educ: 2
+  education1: MEng in Electrical Engineering and Computer Science, MIT
+  education2: B.S. in Electrical Engineering and Computer Science, MIT
