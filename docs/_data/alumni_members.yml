@@ -1,3 +1,11 @@
+- name: Chaitanya Kapoor
+  photo: ../images/ck.png
+  info: Visiting undergraduate student
+  email: ckapoor@mit.edu
+  duration: 2024
+  number_educ: 1
+  education1: B.E. in Electrical and Electronics Engineering, BITS Pilani
+
 - name: Daniel M. Low
   photo: ../images/daniel_low_lo_fi.png
   info: PhD Student

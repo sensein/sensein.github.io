@@ -134,13 +134,6 @@
   education1: PhD Biomedical Engineering, Case Western Reserve University  
   education2: MD, Case Western Reserve University
 
-- name: Chaitanya Kapoor
-  photo: ../images/ck.png
-  info: Visiting Student
-  email: ckapoor@mit.edu
-  number_educ: 1
-  education1: B.E. in Electrical and Electronics Engineering, BITS Pilani
-
 - name: Miles Silva
   photo: ../images/non_descript_photo.png
   info: MEng Student, MIT
