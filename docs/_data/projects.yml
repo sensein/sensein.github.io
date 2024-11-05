@@ -1,3 +1,13 @@
+- title: "BBQS AI Resource and Data Coordinating Center"
+  image: https://static.wixstatic.com/media/c57c96_fa6f08e1e79240838d786b6b1b8d5842~mv2.png/v1/fill/w_576,h_324,al_c,lg_1,q_85,enc_auto/Image-empty-state.png
+  description: >
+    A data and AI coordination center for the BRAIN Initiative Brain Behavior
+    Quantification and Synchronization (BBQS) program. Supported by
+    NIMH U24MH136628 (PIs: Ghosh, Cabrera, Kennedy).
+  authors: BBQS team (MIT, Penn State, UMass-Medical, JHU/APL, UCBerkeley/LBNL)
+  highlight: 1
+  news2: <a href="https://github.com/brain-bbqs" target="_blank">BBQS on GitHub</a>
+
 - title: "DANDI: Distributed Archives for Neurophysiology Data Integration"
   image: https://dl.dropbox.com/s/fhpw39cnog45p92/dandi-workflow-v2.png
   description: >
@@ -35,7 +45,7 @@
   link:
     url: https://projectreporter.nih.gov/project_info_description.cfm?aid=10021957
     display:  Project summary from NIH.
-  highlight: 1
+  highlight: 0
   news2: <a href="https://github.com/neuronets" target="_blank">Neuronets on GitHub</a>
 
 - title: "ReproNim: A Center for Reproducible Neuroimaging Computation"
@@ -61,7 +71,7 @@
   link:
     url: ../naturalistic_parcellation
     display:  Project details
-  highlight: 1
+  highlight: 0
   news2:
 
 - title: Voice and language biomarkers of health
@@ -88,5 +98,5 @@
   link:
     url: ../mumble_melody_project
     display:  Project details
-  highlight:   1
+  highlight:   0
   news2: <a href="../mumble_melody_study">Study page</a>
