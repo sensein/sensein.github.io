@@ -16,13 +16,6 @@
   number_educ: 1
   education1: PhD Atmospheric Physics, University of Warsaw
 
-- name: Christopher J Markiewicz
-  photo: //avatars2.githubusercontent.com/u/83442?s=460&v=4
-  info: Research Affiliate, started 2017, working on Nipype, Neuroscout
-  email: cjmarkie@mit.edu
-  number_educ: 1
-  education1: PhD Cognitive and Neural Systems, Boston University
-
 - name: Debbie Burdinski
   photo: ../images/debbie.jpeg
   info: MD-PhD Student, Harvard Medical School and MIT

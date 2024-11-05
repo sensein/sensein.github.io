@@ -49,6 +49,14 @@
   number_educ: 1
   education1: B.S. in Physics, EPFL
 
+- name: Christopher J Markiewicz
+  photo: //avatars2.githubusercontent.com/u/83442?s=460&v=4
+  info: Research Affiliate, started 2017, working on Nipype, Neuroscout
+  email: cjmarkie@mit.edu
+  duration: 2018 - 2023
+  number_educ: 1
+  education1: PhD Cognitive and Neural Systems, Boston University
+
 - name: Alicia Zhang
   photo: ../images/alicia_zhang_photo.jpg
   info: Undergraduate Researcher
