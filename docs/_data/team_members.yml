@@ -165,3 +165,11 @@
   number_educ: 2
   education1: MEng in Electrical Engineering and Computer Science, MIT
   education2: B.S. in Electrical Engineering and Computer Science, MIT
+
+- name: Yassine Jamaa
+  photo: ../images/jamaa-picture-small-format.jpg
+  info: M.S. Computational Neuroscience
+  email: jamaayas@mit.edu
+  number_educ: 2
+  education1: M.S. Computational Neuroscience, EPFL
+  education2: B.S. in Life Science Engineering, EPFL
