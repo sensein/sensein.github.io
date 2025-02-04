@@ -1,7 +1,7 @@
 - name: Satrajit S Ghosh
   photo: //satra.cogitatum.org/assets/satra.png
   info: >
-    Director of Open Data in Neuroscience Initiative and Principal Research Scientist at MIT; Assistant 
+    Director of Open Data in Neuroscience Initiative and Principal Research Scientist at MIT; Assistant
     Professor of Otolaryngology at Harvard Medical School
   email: satra@mit.edu
   number_educ: 3
@@ -81,7 +81,7 @@
   info: Research Scientist
   email: hgazula@mit.edu
   number_educ: 0
-  
+
 - name: Puja Trivedi
   photo: ../images/puja.png
   info: Software Engineer
@@ -124,7 +124,7 @@
   info: Research Scientist
   email: kabi@mit.edu
   number_educ: 2
-  education1: PhD Biomedical Engineering, Case Western Reserve University  
+  education1: PhD Biomedical Engineering, Case Western Reserve University
   education2: MD, Case Western Reserve University
 
 - name: Miles Silva
@@ -141,7 +141,7 @@
   email: tekraj@mit.edu
   number_educ: 2
   education1: Ph.D. in Computer Science, University of Innsbruck
-  education2: M.Sc. in Computer Science, University of Tartu 
+  education2: M.Sc. in Computer Science, University of Tartu
 
 - name: Isaac Bevers
   photo: ../images/isaac_bevers.jpeg
@@ -173,3 +173,9 @@
   number_educ: 2
   education1: M.S. Computational Neuroscience, EPFL
   education2: B.S. in Life Science Engineering, EPFL
+
+- name: Veronika Moroz
+  photo: ../images/Veronika.jpg
+  info: Undergraduate Researcher
+  email: vmoroz@mit.edu
+  number_educ: 0
