@@ -1,3 +1,18 @@
+- name: Harsha Gazula
+  photo: ../images/non_descript_photo.png
+  info: Research Scientist
+  duration: 2023 - 2025
+  email: hgazula@mit.edu
+  number_educ: 0
+
+- name: Alina Weinberger
+  photo: ../images/AlinaWeinberger.png
+  info: Visiting M.S. student from Technical University of Munich
+  email: alina991@mit.edu
+  duration: 2024
+  number_educ: 1
+  education1: M.S. Neuroengineering, Technichal University of Munich
+
 - name: Chaitanya Kapoor
   photo: ../images/ck.png
   info: Visiting undergraduate student

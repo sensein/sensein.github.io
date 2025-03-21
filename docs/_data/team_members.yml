@@ -76,12 +76,6 @@
   number_educ: 1
   education1: B.S. in Neuroscience, Emmanuel College
 
-- name: Harsha Gazula
-  photo: ../images/non_descript_photo.png
-  info: Research Scientist
-  email: hgazula@mit.edu
-  number_educ: 0
-
 - name: Puja Trivedi
   photo: ../images/puja.png
   info: Software Engineer
@@ -111,13 +105,6 @@
   number_educ: 2
   education1: M.S in Computer Science, Northeastern University
   education2: B.S. in Economics & Political Science, Northeastern University
-
-- name: Alina Weinberger
-  photo: ../images/AlinaWeinberger.png
-  info: Visiting M.S. student from Technical University of Munich
-  email: alina991@mit.edu
-  number_educ: 1
-  education1: M.S. Neuroengineering, Technichal University of Munich
 
 - name: Kabilar Gunalan
   photo: ../images/kabilar-gunalan.jpg
