@@ -47,13 +47,6 @@
   education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
   education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
 
-- name: Maedbh King
-  photo: ../images/maedbhking.jpg
-  info: ICoN Postdoctoral Fellow
-  email: maedbh@mit.edu
-  number_educ: 1
-  education1: Ph.D. in Cognitive Neuroscience, UC Berkeley
-
 - name: Meral Hacikamiloglu
   photo: ../images/meral.jpg
   info: Research Affiliate
@@ -91,21 +84,6 @@
   number_educ: 1
   education1: Ph.D. in Communication, UC Santa Barbara
 
-- name: Jong-Hwan Lee
-  photo: ../images/JHLee_22jul21.jpg
-  info: Visiting Scientist
-  email: jonghlee@mit.edu
-  number_educ: 1
-  education1: Ph.D. in Electrical Engineering and Computer Science, KAIST, Korea
-
-- name: Aaron Kanzer
-  photo: ../images/Aaron_Kanzer.png
-  info: Software Engineer
-  email: akanzer@mit.edu
-  number_educ: 2
-  education1: M.S in Computer Science, Northeastern University
-  education2: B.S. in Economics & Political Science, Northeastern University
-
 - name: Kabilar Gunalan
   photo: ../images/kabilar-gunalan.jpg
   info: Research Scientist
@@ -113,14 +91,6 @@
   number_educ: 2
   education1: PhD Biomedical Engineering, Case Western Reserve University
   education2: MD, Case Western Reserve University
-
-- name: Miles Silva
-  photo: ../images/non_descript_photo.png
-  info: MEng Student, MIT
-  email: mbsilva@mit.edu
-  number_educ: 2
-  education1: MEng in Computation and Cognition, MIT
-  education2: B.S. in Computation and Cognition, MIT
 
 - name: Tek Raj Chhetri
   photo: ../images/tekraj.jpeg
@@ -152,17 +122,3 @@
   number_educ: 2
   education1: MEng in Electrical Engineering and Computer Science, MIT
   education2: B.S. in Electrical Engineering and Computer Science, MIT
-
-- name: Yassine Jamaa
-  photo: ../images/jamaa-picture-small-format.jpg
-  info: M.S. Computational Neuroscience
-  email: jamaayas@mit.edu
-  number_educ: 2
-  education1: M.S. Computational Neuroscience, EPFL
-  education2: B.S. in Life Science Engineering, EPFL
-
-- name: Veronika Moroz
-  photo: ../images/Veronika.jpg
-  info: Undergraduate Researcher
-  email: vmoroz@mit.edu
-  number_educ: 0
