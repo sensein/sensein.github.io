@@ -122,3 +122,13 @@
   number_educ: 2
   education1: MEng in Electrical Engineering and Computer Science, MIT
   education2: B.S. in Electrical Engineering and Computer Science, MIT
+
+- name: Manaal Mohammed
+  photo: ../images/manaal_mohammed.jpeg
+  info: MEng Student, MIT
+  email: manaal@mit.edu
+  number_educ: 2
+  education1: MEng in Artificial Intelligence and Decision Making, MIT
+  education2: B.S. in Artificial Intelligence and Decision Making, MIT
+
+
