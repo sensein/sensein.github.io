@@ -142,7 +142,7 @@
 
 - name: Lucie Bierent
   photo: ../images/lucie_bierent.jpg
-  info:  Visiting MSc student
+  info: Visiting MSc student
   email: lucie271@mit.edu
   number_educ: 2
   education1: MSc in Data Science, ETH Zurich
