@@ -92,15 +92,6 @@
   education1: PhD Biomedical Engineering, Case Western Reserve University
   education2: MD, Case Western Reserve University
 
-- name: Suliman Sharif
-  photo: ../images/sul.jpeg
-  info: Research Scientist
-  email: sulstice@mit.edu
-  number_educ: 3
-  education1: Ph.D. Pharmaceutical Sciences, University of Maryland, School of Pharmacy
-  education2: MSc. Organic Chemistry, University of California, Riversde
-  education3: BSc. Biochemistry, University of Texas at Austin
-  
 - name: Tek Raj Chhetri
   photo: ../images/tekraj.jpeg
   info: Postdoctoral Associate
@@ -147,3 +138,12 @@
   number_educ: 2
   education1: MSc in Data Science, ETH Zurich
   education2: B.S. in Mechanical Engineering, EPFL
+
+- name: Suliman Sharif
+  photo: ../images/sul.jpeg
+  info: Research Scientist
+  email: sulstice@mit.edu
+  number_educ: 3
+  education1: Ph.D. Pharmaceutical Sciences, University of Maryland, School of Pharmacy
+  education2: MSc. Organic Chemistry, University of California, Riversde
+  education3: BSc. Biochemistry, University of Texas at Austin
