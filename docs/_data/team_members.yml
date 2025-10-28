@@ -84,6 +84,13 @@
   number_educ: 1
   education1: Ph.D. in Communication, UC Santa Barbara
 
+- name: Jong-Hwan Lee
+  photo: ../images/JHLee_22jul21.jpg
+  info: Visiting Scientist
+  email: jonghlee@mit.edu
+  number_educ: 1
+  education1: Ph.D. in Electrical Engineering and Computer Science, KAIST, Korea
+
 - name: Kabilar Gunalan
   photo: ../images/kabilar-gunalan.jpg
   info: Research Scientist
@@ -99,13 +106,6 @@
   number_educ: 2
   education1: Ph.D. in Computer Science, University of Innsbruck
   education2: M.Sc. in Computer Science, University of Tartu
-
-- name: Isaac Bevers
-  photo: ../images/isaac_bevers.jpeg
-  info: Computational Technical Associate I
-  email: isaacb@mit.edu
-  number_educ: 1
-  education1: B.S. in Symbolic Systems, Stanford University
 
 - name: Jordan Wilke
   photo: ../images/jordan_wilke.jpeg
