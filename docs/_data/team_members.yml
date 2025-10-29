@@ -154,3 +154,10 @@
   education1: Ph.D. Pharmaceutical Sciences, University of Maryland, School of Pharmacy
   education2: MSc. Organic Chemistry, University of California, Riversde
   education3: BSc. Biochemistry, University of Texas at Austin
+
+- name: Nader Nikbakht
+  photo: ../images/nader.jpg
+  info: Research Scientist
+  email: nikbakht@mit.edu
+  number_educ: 1
+  education1: Ph.D. in Computational and Systems Neuroscience, SISSA
