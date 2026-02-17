@@ -31,7 +31,7 @@
   education1: BS Chemistry, Duke University
 
 - name: Rahul Brito
-  photo: //static.projects.iq.harvard.edu/files/styles/profile_full/public/shbtphd/files/brito_rahul.jpg?m=1606794791&itok=7EVxwkUu
+  photo: //shbtphd.hms.harvard.edu/sites/g/files/omnuum5491/files/styles/hwp_4_5__960x1200/public/shbtphd/files/brito_rahul.jpg?itok=QnmDZK9z
   info: PhD Student
   email: rfbrito@mit.edu
   number_educ: 1
@@ -68,7 +68,7 @@
   education2: B.S. in Computer Science with Specialization in Bioinformatics, University of California - San Diego
 
 - name: Yibei Chen
-  photo: https://yibeichen.me/images/headshot.jpg
+  photo: //yibeichen.me/images/headshot.jpg
   info: Postdoctoral Associate
   email: yibei@mit.edu
   number_educ: 1
@@ -112,6 +112,13 @@
   number_educ: 2
   education1: MEng in Artificial Intelligence and Decision Making, MIT
   education2: B.S. in Artificial Intelligence and Decision Making, MIT
+
+- name: Aparna BG
+  photo: ../images/non_descript_photo.png
+  info: MSc Student, IISER, India
+  email: aparna21@iisertvm.ac.in
+  number_educ: 1
+  education2: BSc/MSc, IISER, India
 
 - name: Lucie Bierent
   photo: ../images/lucie_bierent.jpg
