@@ -1,5 +1,5 @@
 - name: Jeff Mentch
-  photo: //scholar.harvard.edu/files/mentch/files/y3xdh4wb_400x400.jpg
+  photo: //shbtphd.hms.harvard.edu/sites/g/files/omnuum5491/files/styles/hwp_4_5__1380x1730/public/shbtphd/files/mentch_jeff.jpg?itok=Dz87-kOF
   info: PhD Student
   email: jsmentch@mit.edu
   duration: 2020 - 2025
@@ -135,7 +135,7 @@
   education1: B.S. in Computer Science and Engineering, MIT
 
 - name: Agathe Tournant
-  photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=cwcd3BIAAAAJ&citpid=2
+  photo: ../images/non_descript_photo.png
   info: Visiting M.S. student from ETH Zurich
   email: agathe01@mit.edu
   duration: 2023 - 2024
@@ -339,6 +339,7 @@
 - name: Frances Mulligan (They/Them)
   photo: https://avatars.githubusercontent.com/u/40801017?s=400&u=c845986f5bb7fb1774e19d228e8636476476c8c3&v=4
   info: Technical Assistant, worked on mumble melody and reproschema
+  duration: 2021
   number_educ: 1
   education1: B.S, Johnson & Wales University
 
@@ -351,7 +352,7 @@
   education1: BA Life Sciences Engineering, EPFL
 
 - name: Kate Bentley
-  photo: //static.projects.iq.harvard.edu/files/styles/profile_full/public/nocklab/files/katebentley.jpg?m=1538413235&itok=eimTu4Yw
+  photo: //nocklab.fas.harvard.edu/sites/g/files/omnuum9586/files/styles/hwp_4_5__960x1200/public/2025-05/KHB%20headshot%206.jpg?h=04584c27&itok=KMSRz9Zb
   duration: 2019 - 2020
   info: Visiting scientist
   email: kbent@mit.edu
@@ -369,7 +370,6 @@
   education1: BS Biomedical Science, Management and Science University, Malaysia
   education2: MS Allied Health Sciences; Biomedical Science, National University of Malaysia
   education3: PhD Candidate, Biomedical Engineering, University Teknologi PETRONAS, Malaysia
-  education4:
 
 - name: Bhavya Kandimalla
   photo: https://avatars1.githubusercontent.com/u/32016424?s=400&u=dfa0c934cfbbfa0d8edf38662337e0ae170a771d&v=4
@@ -382,7 +382,7 @@
   education3: <a href="https://www.linkedin.com/in/bhavya-kandimalla-a02248100">Full CV</a>
 
 - name: Kevin Sitek
-  photo: //scholar.harvard.edu/files/sitek/files/sthelena.jpg?m=1486764630
+  photo: //communication.northwestern.edu/images/faculty/sitek-530.jpg
   duration: 2012 - 209, now postdoc at Dr. David Ress' lab in Baylor College of Medicine, Houston, TX
   info: >
     Worked on auditory brainstem neurophysiology, speech production in depression
@@ -421,7 +421,7 @@
   education1: BS Cognitive Science, Union College
 
 - name: Smruti Padhy
-  photo: https://media.licdn.com/dms/image/C4E03AQF1a62BHoUVtA/profile-displayphoto-shrink_200_200/0?e=1553126400&v=beta&t=ltDmX-eypzNC5KcC51C4_BIM69UW9YrEv0XDvz1RocY
+  photo: //tacc.utexas.edu/media/filer_public_thumbnails/filer_public/27/3a/273a1e0d-1b3f-43f5-a10a-5828758c9501/smruti-padhy.png__500.0x625.0_q85_subsampling-2.jpg
   duration: >
     Research Scientist 2015 - 2017, now Engineering Scientist at Texas Advanced
     Computing Center (TACC)
@@ -433,7 +433,7 @@
   education1: PhD Computer Science, Indian Institute of Technology
 
 - name: Gregory Ciccarelli
-  photo: https://royalsociety.org/~/media/events/2018/11/attention-to-sound/Ciccarelli%20resized.jpg
+  photo: //avatars.sched.co/2/29/9921816/avatar.jpg?e7e
   duration: PhD student 2015 - 2018, now Technical Staff at MITLL
   info: >
     Imaging, processing, and modeling, speech from individuals with
@@ -443,7 +443,7 @@
   education1: PhD Electrical Engineering and Computer Science, MIT
 
 - name: Yoel Sanchez Araujo
-  photo: https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/2000px-Missing_avatar.svg.png
+  photo: //ysanchezaraujo.github.io/images/ysa.jpg
   duration: >
     Technical Assistant 2015 - 2017, now Research Specialist at Princeton
     University.
