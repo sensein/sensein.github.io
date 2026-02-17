@@ -1,7 +1,36 @@
+- name: Jeff Mentch
+  photo: //scholar.harvard.edu/files/mentch/files/y3xdh4wb_400x400.jpg
+  info: PhD Student
+  email: jsmentch@mit.edu
+  duration: 2020 - 2025
+  number_educ: 2
+  education1: BS Biology, Penn State
+  education2: AM Digital Musics, Dartmouth College
+
+- name: Fabio Catania
+  photo: ../images/fabio_catania_photo.jpg
+  info: Postdoctoral research fellow, MIT
+  email: fabiocat@mit.edu
+  duration: 2022 - 2025
+  number_educ: 3
+  education1: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
+  education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
+  education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
+
+- name: Bruke Wossenseged
+  photo: ../images/bruke_wossenseged.jpeg
+  info: MEng Student, MIT
+  email: brukew@mit.edu
+  duration: 2024 - 2025
+  number_educ: 2
+  education1: MEng in Electrical Engineering and Computer Science, MIT
+  education2: B.S. in Electrical Engineering and Computer Science, MIT
+
 - name: Isaac Bevers
   photo: ../images/isaac_bevers.jpeg
   info: Computational Technical Associate I
   email: isaacb@mit.edu
+  duration: 2024 - 2025
   number_educ: 1
   education1: B.S. in Symbolic Systems, Stanford University
 
@@ -9,6 +38,7 @@
   photo: ../images/non_descript_photo.png
   info: MEng Student, MIT
   email: mbsilva@mit.edu
+  duration: 2024 - 2025
   number_educ: 2
   education1: MEng in Computation and Cognition, MIT
   education2: B.S. in Computation and Cognition, MIT
@@ -17,6 +47,7 @@
   photo: ../images/maedbhking.jpg
   info: ICoN Postdoctoral Fellow
   email: maedbh@mit.edu
+  duration: 2022 - 2025
   number_educ: 1
   education1: Ph.D. in Cognitive Neuroscience, UC Berkeley
 
@@ -24,6 +55,7 @@
   photo: ../images/Aaron_Kanzer.png
   info: Software Engineer
   email: akanzer@mit.edu
+  duration: 2023 - 2025
   number_educ: 2
   education1: M.S in Computer Science, Northeastern University
   education2: B.S. in Economics & Political Science, Northeastern University
@@ -32,6 +64,7 @@
   photo: ../images/jamaa-picture-small-format.jpg
   info: M.S. Computational Neuroscience
   email: jamaayas@mit.edu
+  duration: 2024 - 2025
   number_educ: 2
   education1: M.S. Computational Neuroscience, EPFL
   education2: B.S. in Life Science Engineering, EPFL
@@ -40,6 +73,7 @@
   photo: ../images/Veronika.jpg
   info: Undergraduate Researcher
   email: vmoroz@mit.edu
+  duration: 2025
   number_educ: 0
 
 - name: Harsha Gazula
