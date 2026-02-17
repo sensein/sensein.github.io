@@ -30,29 +30,12 @@
   number_educ: 1
   education1: BS Chemistry, Duke University
 
-- name: Jeff Mentch
-  photo: //scholar.harvard.edu/files/mentch/files/y3xdh4wb_400x400.jpg
-  info: PhD Student
-  email: jsmentch@mit.edu
-  number_educ: 2
-  education1: BS Biology, Penn State
-  education2: AM Digital Musics, Dartmouth College
-
 - name: Rahul Brito
   photo: //static.projects.iq.harvard.edu/files/styles/profile_full/public/shbtphd/files/brito_rahul.jpg?m=1606794791&itok=7EVxwkUu
   info: PhD Student
   email: rfbrito@mit.edu
   number_educ: 1
   education1: BS Bioengineering, University of Washington
-
-- name: Fabio Catania
-  photo: ../images/fabio_catania_photo.jpg
-  info: Postdoctoral research fellow, MIT
-  email: fabiocat@mit.edu
-  number_educ: 3
-  education1: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
-  education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
-  education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
 
 - name: Meral Hacikamiloglu
   photo: ../images/meral.jpg
@@ -85,7 +68,7 @@
   education2: B.S. in Computer Science with Specialization in Bioinformatics, University of California - San Diego
 
 - name: Yibei Chen
-  photo: https://avatars.githubusercontent.com/u/20402800?v=4
+  photo: https://yibeichen.me/images/headshot.jpg
   info: Postdoctoral Associate
   email: yibei@mit.edu
   number_educ: 1
@@ -121,14 +104,6 @@
   number_educ: 2
   education1: MEng in Computer Science and Engineering, MIT
   education2: B.S. in Computer Science and Engineering and Brain and Cognitive Science, MIT
-
-- name: Bruke Wossenseged
-  photo: ../images/bruke_wossenseged.jpeg
-  info: MEng Student, MIT
-  email: brukew@mit.edu
-  number_educ: 2
-  education1: MEng in Electrical Engineering and Computer Science, MIT
-  education2: B.S. in Electrical Engineering and Computer Science, MIT
 
 - name: Manaal Mohammed
   photo: ../images/manaal_mohammed.jpeg
