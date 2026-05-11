@@ -1,5 +1,5 @@
 - title: Mapping the human subcortical auditory system using histology, postmortem MRI and in vivo MRI at 7T
-  image: //iiif.elifesciences.org/lax:48932%2Felife-48932-fig5-v2.tif/full/1500,/0/default.jpg
+  image: /images/external/default-9fc0dc25.jpg
   description: >
     This work captures current MRI capabilities for investigating the human
     subcortical auditory system, describes challenges that remain, and
@@ -14,7 +14,7 @@
     <a href="//elifesciences.org/articles/48932/figures#data" target="_blank">Data and code availability</a>
 
 - title: Functional gradients of the cerebellum
-  image: //iiif.elifesciences.org/lax:36652%2Felife-36652-fig1-v1.tif/full/1500,/0/default.jpg
+  image: /images/external/default-36895d2a.jpg
   description: >
     We show that cerebellar functional regions follow a gradual organization
     which progresses from primary (motor) to transmodal (DMN, task-unfocused)
@@ -31,7 +31,7 @@
     target="_blank">Littlebrain</a> paper
 
 - title: "fMRIPrep: a robust preprocessing pipeline for functional MRI"
-  image: //github.com/oesteban/fmriprep/raw/38a63e9504ab67812b63813c5fe9af882109408e/docs/_static/fmriprep-workflow-all.png
+  image: /images/external/fmriprep-workflow-all-be05fd09.png
   description: >
     fMRIPrep is a Nipype-based, easily accessible, state-of-the-art approach for
     processing functional MRI data that is robust to variations in scan
@@ -48,7 +48,7 @@
   news2: <a href="//fmriprep.readthedocs.io/en/stable/index.html" target="_blank">fMRIPrep Documentation</a>
 
 - title: "Distributed Weight Consolidation: A Brain Segmentation Case Study"
-  image: //dl.dropbox.com/s/yak1xaeh2e8k3mj/Screenshot%202019-01-27%2018.35.52.png
+  image: /images/external/Screenshot_2019-01-27_18.35.52-b0961a94.png
   description: >
     This paper introduces distributed weight consolidation (DWC), a continual
     learning method to consolidate the weights of separate neural networks, each
@@ -65,7 +65,7 @@
     target="_blank">Neuronets on Github</a>.
 
 - title: Mindboggling morphometry of human brains
-  image: //mfr.osf.io/export?url=https://osf.io/y9yhg/?action=download%26direct%26mode=render&initialWidth=673&childId=mfrIframe&format=1200x1200.jpeg
+  image: /images/external/export-847dcdbf.img
   description: >
     This paper introduces a computational anatomy toolbox for extracting
     individual anatomical features for a MRI based signature of brain morphology.
@@ -81,7 +81,7 @@
     target="_blank">Mindboggle website</a>
 
 - title: Situating the default-mode network along a principal gradient of macroscale cortical organization.
-  image: //www.pnas.org/content/pnas/113/44/12574/F1.medium.gif
+  image: /images/external/F1.medium-eea1967d.gif
   description: >
     The paper describes an overarching organization of large-scale connectivity
     that situates the default-mode network at the opposite end of a spectrum

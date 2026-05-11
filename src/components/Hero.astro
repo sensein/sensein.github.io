@@ -9,20 +9,21 @@ const slides = [
     alt: "Group lunch, May 2022",
   },
   {
-    src: "https://iiif.elifesciences.org/lax:36652%2Felife-36652-fig1-v1.tif/full/1500,/0/default.jpg",
+    src: "/images/external/default-36895d2a.jpg",
     alt: "Figure from an eLife publication",
   },
   {
-    src: "https://miykael.github.io/nipype_tutorial/static/images/nipype_architecture.png",
+    src: "/images/external/nipype_architecture-2ac08216.png",
     alt: "Nipype workflow architecture diagram",
   },
   {
-    src: "https://pnas.org/cms/10.1073/pnas.1608282113/asset/5ecf6af1-f59a-40ed-9d24-5d1dbff6dac6/assets/graphic/pnas.1608282113fig01.jpeg",
+    src: "/images/external/pnas.1608282113fig01-eabc721d.jpg",
     alt: "Figure from a PNAS publication",
   },
   {
-    src: "https://jamanetwork.com/data/journals/psych/926165/yoa120057f4.png",
-    alt: "Figure from a JAMA Psychiatry publication",
+    src: "/images/external/jama-sad-treatment-prediction.png",
+    caption: "Predicting treatment response in SAD — JAMA Psychiatry",
+    alt: "Figure from a JAMA Psychiatry paper on predicting treatment outcome in social anxiety disorder",
   },
 ];
 ---
@@ -82,7 +83,7 @@ const slides = [
                 src={slide.src.startsWith("/") ? withBase(slide.src) : slide.src}
                 alt={slide.alt}
                 loading={i === 0 ? "eager" : "lazy"}
-                class="w-full h-full object-cover"
+                class="w-full h-full object-contain bg-(--color-surface)"
               />
               {slide.caption && (
                 <figcaption

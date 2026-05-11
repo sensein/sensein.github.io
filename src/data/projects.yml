@@ -1,15 +1,18 @@
 - title: "BBQS AI Resource and Data Coordinating Center"
-  image: https://static.wixstatic.com/media/c57c96_fa6f08e1e79240838d786b6b1b8d5842~mv2.png/v1/fill/w_576,h_324,al_c,lg_1,q_85,enc_auto/Image-empty-state.png
+  image: /images/external/Image-empty-state-96e94311.png
   description: >
     A data and AI coordination center for the BRAIN Initiative Brain Behavior
     Quantification and Synchronization (BBQS) program. Supported by
     NIMH U24MH136628 (PIs: Ghosh, Cabrera, Kennedy).
   authors: BBQS team (MIT, Penn State, UMass-Medical, JHU/APL, UCBerkeley/LBNL)
+  link:
+    url: https://brain-bbqs.org
+    display: Project website
   highlight: 1
   news2: <a href="https://github.com/brain-bbqs" target="_blank">BBQS on GitHub</a>
 
 - title: "DANDI: Distributed Archives for Neurophysiology Data Integration"
-  image: https://dl.dropbox.com/s/fhpw39cnog45p92/dandi-workflow-v2.png
+  image: /images/external/dandi-workflow-v2-49e8082b.png
   description: >
     A platform for data ingestion, search, and computing targeted towards
     cellular neurophysiology. Supported by NIMH R24MH117295 (PI: Ghosh and Halchenko).
@@ -21,7 +24,7 @@
   news2: <a href="https://github.com/dandi" target="_blank">DANDI on GitHub</a>
 
 - title: "BICAN Knowledgebase for neuroscience"
-  image: https://static.wixstatic.com/media/c57c96_fa6f08e1e79240838d786b6b1b8d5842~mv2.png/v1/fill/w_576,h_324,al_c,lg_1,q_85,enc_auto/Image-empty-state.png
+  image: /images/external/Image-empty-state-96e94311.png
   description: >
     Develop an extensible Brain Cell Knowledge Base (BCKB) to ingest and standardize c
     omprehensive cell type information from BICAN's development of a multimodal, 
@@ -36,7 +39,7 @@
   news2: <a href="https://github.com/brain-bican" target="_blank">BICAN on GitHub</a>
 
 - title: "Nobrainer: A Robust And Validated Neural Netwrok Tool Suite For Imagers"
-  image: https://github.com/neuronets/trained-models/raw/master/images/brain-extraction/unet-best-prediction.png
+  image: /images/external/unet-best-prediction-8b27578e.png
   description: >
     Develop an open Python library to simplify integrating deep learning into neuroimaging research. 
     We will build and distribute user-friendly and cloud enabled end-user applications for the 
@@ -49,7 +52,7 @@
   news2: <a href="https://github.com/neuronets" target="_blank">Neuronets on GitHub</a>
 
 - title: "ReproNim: A Center for Reproducible Neuroimaging Computation"
-  image: http://www.repronim.org/flow.svg
+  image:
   description: >
     A Center dedicated to improving reproducibility in neuroimaging through the
     development of products designed to enhance efficiency and provenance

@@ -1,5 +1,5 @@
 - name: Satrajit S Ghosh
-  photo: //satra.cogitatum.org/assets/satra.png
+  photo: /images/external/satra-0175756d.png
   info: >
     Director of Open Data in Neuroscience Initiative and Senior Research Scientist at MIT; Assistant
     Professor of Otolaryngology at Harvard Medical School
@@ -10,21 +10,21 @@
   education3: <a href="http://satra.cogitatum.org/assets/CV_Latest.pdf">Full CV</a>
 
 - name: Olga Vieira
-  photo: //gablab.mit.edu/wp-content/uploads/bfi_thumb/olga-viera-1-ore0oeees7r1j34ya75q04sepnaj6ijsslhd63bac8.jpg
+  photo: /images/external/olga-viera-1-ore0oeees7r1j34ya75q04sepna-690e2232.jpg
   info: Administrative Assistant II
   email: ovieira@mit.edu
   number_educ: 1
   education1: AA, Accounting, Krasnodar Polytechnic Institute
 
 - name: Dorota Jarecka
-  photo: //gablab.mit.edu/wp-content/uploads/bfi_thumb/dorata-jarecka-nm70tl9ny3k30jco6p80294a9zcc8mf7rx0ep2q8m0.jpg
+  photo: /images/external/dorata-jarecka-nm70tl9ny3k30jco6p80294a9-4dd2a5c1.jpg
   info: Research Scientist, started 2016, working on Nipype, ReproNim
   email: djarecka@mit.edu
   number_educ: 1
   education1: PhD Atmospheric Physics, University of Warsaw
 
 - name: Rahul Brito
-  photo: //shbtphd.hms.harvard.edu/sites/g/files/omnuum5491/files/styles/hwp_4_5__960x1200/public/shbtphd/files/brito_rahul.jpg?itok=QnmDZK9z
+  photo: /images/external/brito_rahul-fed7fdad.jpg
   info: PhD Student
   email: rfbrito@mit.edu
   number_educ: 1
@@ -61,7 +61,7 @@
   education2: B.S. in Computer Science with Specialization in Bioinformatics, University of California - San Diego
 
 - name: Yibei Chen
-  photo: //yibeichen.me/images/headshot.jpg
+  photo: /images/external/headshot-b21c195b.jpg
   info: Postdoctoral Associate
   email: yibei@mit.edu
   number_educ: 1
