@@ -1,62 +1,53 @@
 # Content for /publications/ — summary, keyword tag cloud, and topic groupings.
-# Sourced from src/data/publications.yml (n=169 entries at time of writing).
-#
-# example_count values are counts of corpus entries whose title matches the
-# topic's keyword pattern (title-keyword proxy — the publications corpus does
-# not yet carry an explicit `topics:` field, so counts will firm up once
-# entries are tagged).
+# Topic example_count is the number of corpus entries whose `topics:` tags
+# overlap with the topic area's tag set.
 
-summary: >
-  A working list of papers and preprints from the Senseable Intelligence Group
-  at the MIT McGovern Institute, compiled from group CVs, NCBI MyBibliography,
-  and OpenAlex. Entries are organised by year, publication type, and topic and
-  link out to the canonical record (DOI, PubMed, arXiv) and, where available,
-  open-access PDFs. The list is filterable by year, type, topic, and lab author.
+summary: 'A working list of papers and preprints from the Senseable Intelligence Group at the MIT McGovern Institute, compiled from group CVs, NCBI MyBibliography, and OpenAlex. Entries are organised by year, publication type, and topic and link out to the canonical record (DOI, PubMed, arXiv) and, where available, open-access PDFs. The list is filterable by year, type, topic, and lab author.
 
+  '
 keywords:
-  - brain
-  - neuroimaging
-  - fmri
-  - connectivity
-  - functional
-  - imaging
-  - network
-  - speech
-  - voice
-  - auditory
-  - anxiety
-  - depression
-  - mental-health
-  - adolescent
-  - autism
-  - reproducible
-  - nipype
-  - dandi
-  - open-data
-  - segmentation
-
+- brain
+- neuroimaging
+- fmri
+- connectivity
+- functional
+- imaging
+- network
+- speech
+- voice
+- auditory
+- anxiety
+- depression
+- mental-health
+- adolescent
+- autism
+- reproducible
+- nipype
+- dandi
+- open-data
+- segmentation
 topics:
-  - label: Neuroimaging and brain dynamics
-    description: Methods, atlases, and population studies of human brain structure and function.
-    example_count: 100
-  - label: Brain states and naturalistic dynamics
-    description: Latent brain states, real-time neurofeedback, and responses to naturalistic stimuli.
-    example_count: 23
-  - label: Reproducibility and open infrastructure
-    description: Workflows, standards, and archives for reproducible, FAIR neuroscience (Nipype, Pydra, DANDI, ReproNim).
-    example_count: 30
-  - label: Speech and voice biomarkers
-    description: Using voice, speech, and acoustic features to detect and track health conditions.
-    example_count: 23
-  - label: Mental health and psychiatry
-    description: Symptom dimensions, clinical populations, and digital signals for psychiatric conditions.
-    example_count: 36
-  - label: Child development and learning
-    description: Adolescent brain studies (ABCD), autism, literacy, and pediatric speech.
-    example_count: 27
-  - label: Knowledge graphs and agentic extraction
-    description: Ontologies, schemas, and LLM-agent pipelines for structured biomedical knowledge.
-    example_count: 6
-  - label: Machine learning and predictive models
-    description: Deep learning, classification, and predictive modelling across neuro and behavioural data.
-    example_count: 21
+- label: Neuroimaging and brain dynamics
+  description: Methods, atlases, and population studies of human brain structure and function.
+  example_count: 85
+- label: Brain states and naturalistic dynamics
+  description: Latent brain states, real-time neurofeedback, and responses to naturalistic stimuli.
+  example_count: 3
+- label: Reproducibility and open infrastructure
+  description: Workflows, standards, and archives for reproducible, FAIR neuroscience (Nipype, Pydra, DANDI, ReproNim).
+  example_count: 35
+- label: Speech and voice biomarkers
+  description: Using voice, speech, and acoustic features to detect and track health conditions.
+  example_count: 31
+- label: Mental health and psychiatry
+  description: Symptom dimensions, clinical populations, and digital signals for psychiatric conditions.
+  example_count: 25
+- label: Child development and learning
+  description: Adolescent brain studies (ABCD), autism, literacy, and pediatric speech.
+  example_count: 22
+- label: Knowledge graphs and agentic extraction
+  description: Ontologies, schemas, and LLM-agent pipelines for structured biomedical knowledge.
+  example_count: 8
+- label: Machine learning and predictive models
+  description: Deep learning, classification, and predictive modelling across neuro and behavioural data.
+  example_count: 15

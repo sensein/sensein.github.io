@@ -1,5 +1,6 @@
 - id: 10.1162/imag.a.1116
   type: journal
+  category: original-research
   year: 2026
   title: Context modulates brain state dynamics and behavioral responses during narrative comprehension
   authors:
@@ -23,8 +24,14 @@
   lab_authors:
   - Yibei Chen
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - brain-dynamics
+  - behavioral-quantification
+  - naturalistic-data
 - id: 10.64898/2026.03.31.715699
   type: preprint
+  category: original-research
   year: 2026
   title: A human subcortical connectome at 400 μm resolution
   authors:
@@ -50,9 +57,12 @@
   lab_authors:
   - Kabilar Gunalan
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 0
 - id: 10.64898/2026.04.30.722039
   type: preprint
+  category: methods
   year: 2026
   title: A layered standards framework for integrating single-cell and spatial omics data into brain cell atlases
   authors:
@@ -111,9 +121,13 @@
   - Puja Trivedi
   - Tek Raj Chhetri
   - Satrajit S Ghosh
+  topics:
+  - cell-atlas
+  - software
   cited_by: 0
 - id: 10.31234/osf.io/stek7_v1
   type: preprint
+  category: original-research
   year: 2026
   title: Large Language Model–Generated Tutoring Responses Receive Higher Ratings but Are Penalized by Source-Based Evaluation Bias
   authors:
@@ -129,9 +143,13 @@
   lab_authors:
   - Fabio Catania
   - Satrajit S Ghosh
+  topics:
+  - education
+  - llm
   cited_by: 0
 - id: 10.64898/2026.03.23.713749
   type: preprint
+  category: original-research
   year: 2026
   title: Pregistered movie-fMRI analyses reveal altered visual feature encoding in autism in pSTS
   authors:
@@ -151,9 +169,14 @@
   - Jeff Mentch
   - Yibei Chen
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - autism
+  - computer-vision
   cited_by: 0
 - id: 10.1162/imag.a.145
   type: journal
+  category: original-research
   year: 2025
   title: 'Brain functional connectivity predicts depression and anxiety during childhood and adolescence: A connectome-based predictive modeling approach'
   authors:
@@ -184,9 +207,15 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - child-development
+  - adolescence
   cited_by: 3
 - id: 10.1371/journal.pone.0313351
   type: journal
+  category: commentary
   year: 2025
   title: 'Predicting treatment response to cognitive behavior therapy in social anxiety disorder on the basis of demographics, psychiatric history, and scales: A machine learning approach'
   authors:
@@ -208,9 +237,16 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - psychiatry
+  - machine-learning
+  - behavioral-quantification
+  - clinical-trial
+  - clinical
   cited_by: 3
 - id: 10.1007/s11881-025-00342-1
   type: journal
+  category: original-research
   year: 2025
   title: '(Not so) universal literacy screening: a survey of educators reveals variability in implementation'
   authors:
@@ -238,9 +274,15 @@
   - Fabio Catania
   - Meral Hacikamiloglu
   - Satrajit S Ghosh
+  topics:
+  - child-development
+  - education
+  - machine-learning
+  - speech
   cited_by: 1
 - id: 10.2196/63343
   type: journal
+  category: methods
   year: 2025
   title: 'Standardizing Survey Data Collection to Enhance Reproducibility: Development and Comparative Evaluation of the ReproSchema Ecosystem'
   authors:
@@ -281,9 +323,21 @@
   - Daniel M. Low
   - Isaac Bevers
   - Satrajit S Ghosh
+  topics:
+  - reproducibility
+  - neuroimaging
+  - software
+  - training
+  - knowledge-graphs
+  preprints:
+  - id: 10.2196/preprints.63343
+    url: https://doi.org/10.2196/preprints.63343
+    year: 2024
+    doi: 10.2196/preprints.63343
   cited_by: 1
 - id: 10.1145/3701716.3715483
   type: journal
+  category: original-research
   year: 2025
   title: 'Bridging the Scientific Knowledge Gap and Reproducibility: A Survey of Provenance, Assertion and Evidence Ontologies'
   authors:
@@ -310,8 +364,12 @@
   - Dorota Jarecka
   - Puja Trivedi
   - Satrajit S Ghosh
+  topics:
+  - reproducibility
+  - knowledge-graphs
 - id: 10.1002/hipo.70028
   type: journal
+  category: original-research
   year: 2025
   title: Evidence of Disrupted Hippocampal Gray- and White-Matter Development in Adolescent Anxiety Disorders, Independent From Early-Life Stress
   authors:
@@ -339,8 +397,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - child-development
+  - adolescence
 - id: 10.1523/eneuro.0486-24.2025
   type: journal
+  category: original-research
   year: 2025
   title: 'Open Data In Neurophysiology: Advancements, Solutions & Challenges'
   authors:
@@ -365,8 +429,11 @@
   lab_authors:
   - Satrajit S Ghosh
   - Nima Dehghani
+  topics:
+  - open-data
 - id: 10.1177/21677026251351850
   type: journal
+  category: original-research
   year: 2025
   title: Prospective Relations between Cortical Thickness and Change in Internalizing Symptoms are Moderated by Chronic Stress Exposure in Adolescents with Depression and Anxiety
   authors:
@@ -392,8 +459,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - child-development
+  - adolescence
 - id: 10.1093/pnasnexus/pgaf304
   type: journal
+  category: original-research
   year: 2025
   title: Social determinants of health and brain connectivity predict physical activity behavior change after new cardiovascular diagnosis
   authors:
@@ -414,8 +487,17 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - behavioral-quantification
+  preprints:
+  - id: 10.1101/2024.09.30.24314678
+    venue: medRxiv
+    url: https://doi.org/10.1101/2024.09.30.24314678
+    year: 2024
+    doi: 10.1101/2024.09.30.24314678
 - id: 10.3389/fdgth.2025.1484521
   type: conference
+  category: original-research
   year: 2025
   title: Interactive Panel Summaries of the 2024 Voice AI Symposium
   authors:
@@ -465,8 +547,15 @@
   - bridge2ai-voice
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech-biomarkers
+  - open-data
+  - ai-ready
+  - consortium
+  - speech
 - id: 10.1101/2025.10.23.25338518
   type: preprint
+  category: original-research
   year: 2025
   title: 'Consensus-Based Definitions for Vocal Biomarkers: The International VOCAL Initiative'
   authors:
@@ -505,9 +594,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
+  - speech-biomarkers
+  - consortium
   cited_by: 2
 - id: 10.1101/2025.07.17.665306
   type: preprint
+  category: original-research
   year: 2025
   title: A naturalistic reinforcement learning task uncovers historical neural representations
   authors:
@@ -527,9 +621,13 @@
   lab_authors:
   - Satrajit S Ghosh
   - Jong-Hwan Lee
+  topics:
+  - computer-vision
+  - naturalistic-data
   cited_by: 0
 - id: pmid:40832056
   type: journal
+  category: original-research
   year: 2025
   title: An Intelligent Infrastructure as a Foundation for Modern Science
   authors:
@@ -543,8 +641,11 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
 - id: 10.48550/arxiv.2509.10432
   type: preprint
+  category: perspective
   year: 2025
   title: 'Standards in the Preparation of Biomedical Research Metadata: A Bridge2AI Perspective'
   authors:
@@ -568,9 +669,15 @@
   - bridge2ai-voice
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech-biomarkers
+  - open-data
+  - ai-ready
+  - consortium
   cited_by: 0
 - id: 10.48550/arxiv.2507.03674
   type: preprint
+  category: software
   year: 2025
   title: 'STRUCTSENSE: A Task-Agnostic Agentic Framework for Structured Information Extraction with Human-In-The-Loop Evaluation and Benchmarking'
   authors:
@@ -596,9 +703,16 @@
   - Yibei Chen
   - Dorota Jarecka
   - Satrajit S Ghosh
+  topics:
+  - knowledge-graphs
+  - agents
+  - llm
+  - neuroimaging
+  - software
   cited_by: 0
 - id: 10.1126/science.adh9979
   type: journal
+  category: original-research
   year: 2024
   title: Integrated platform for multiscale molecular imaging and phenotyping of the human brain
   authors:
@@ -643,9 +757,18 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  preprints:
+  - id: 10.1101/2022.03.13.484171
+    venue: bioRxiv (Cold Spring Harbor Laboratory)
+    url: https://doi.org/10.1101/2022.03.13.484171
+    year: 2022
+    doi: 10.1101/2022.03.13.484171
   cited_by: 49
 - id: 10.1038/s41597-024-03629-x
   type: journal
+  category: original-research
   year: 2024
   title: The Human Connectome Project of adolescent anxiety and depression dataset
   authors:
@@ -681,9 +804,15 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - child-development
+  - adolescence
   cited_by: 17
 - id: 10.1162/imag_a_00074
   type: journal
+  category: original-research
   year: 2024
   title: A reproducible and generalizable software workflow for analysis of large-scale neuroimaging data collections using BIDS Apps
   authors:
@@ -722,9 +851,15 @@
   - Dorota Jarecka
   - Yibei Chen
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - reproducibility
+  - workflows
+  - software
   cited_by: 12
 - id: 10.1017/s0033291724001557
   type: journal
+  category: original-research
   year: 2024
   title: 'Detecting suicide risk among U.S. servicemembers and veterans: a deep learning approach using social media data'
   authors:
@@ -755,9 +890,17 @@
   lab_authors:
   - Daniel M. Low
   - Satrajit S Ghosh
+  topics:
+  - suicide-prevention
+  - social-media
+  - causal-inference
+  - nlp
+  - psychiatry
+  - deep-learning
   cited_by: 9
 - id: 10.1371/journal.pdig.0000516
   type: journal
+  category: original-research
   year: 2024
   title: Identifying bias in models that detect vocal fold paralysis from audio recordings using explainable machine learning and clinician ratings
   authors:
@@ -781,9 +924,15 @@
   lab_authors:
   - Daniel M. Low
   - Satrajit S Ghosh
+  topics:
+  - speech-biomarkers
+  - clinical
+  - speech
+  - machine-learning
   cited_by: 8
 - id: 10.1176/appi.ajp.20230249
   type: journal
+  category: original-research
   year: 2024
   title: 'Resting-State Functional Connectivity of the Amygdala in Autism: A Preregistered Large-Scale Study'
   authors:
@@ -807,9 +956,13 @@
   lab_authors:
   - Dorota Jarecka
   - Satrajit S Ghosh
+  topics:
+  - psychiatry
+  - autism
   cited_by: 6
 - id: 10.52294/001c.123059
   type: journal
+  category: software
   year: 2024
   title: 'Brainchop: Providing an Edge Ecosystem for Deployment of Neuroimaging Artificial Intelligence Models'
   authors:
@@ -834,9 +987,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - software
   cited_by: 3
 - id: 10.1162/imag_a_00103
   type: journal
+  category: original-research
   year: 2024
   title: The Past, Present, and Future of the Brain Imaging Data Structure (BIDS)
   authors:
@@ -968,8 +1125,12 @@
   lab_authors:
   - Christopher J Markiewicz
   - Satrajit S Ghosh
+  topics:
+  - workflows
+  - software
 - id: 10.1038/s41592-023-02145-x
   type: journal
+  category: original-research
   year: 2024
   title: 'Neurodesk: an accessible, flexible and portable data analysis environment for reproducible neuroimaging'
   authors:
@@ -1039,9 +1200,15 @@
   lab_authors:
   - Satrajit S Ghosh
   - Jakub Kaczmarzyk
+  topics:
+  - reproducibility
+  - neuroimaging
+  - software
+  - training
   cited_by: 59
 - id: 10.21105/joss.05839
   type: journal
+  category: software
   year: 2024
   title: HeuDiConv - flexible DICOM conversion into structured directory layouts
   authors:
@@ -1086,9 +1253,12 @@
   - Mathias Goncalves
   - Satrajit S Ghosh
   - Christopher J Markiewicz
+  topics:
+  - software
   cited_by: 33
 - id: 10.21437/interspeech.2024-1926
   type: conference
+  category: original-research
   year: 2024
   title: 'Developing Multi-Disorder Voice Protocols: A team science approach involving clinical expertise, bioethics, standards, and DEI'
   authors:
@@ -1119,9 +1289,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
+  - clinical
   cited_by: 1
 - id: 10.1001/jamanetworkopen.2024.34354
   type: journal
+  category: original-research
   year: 2024
   title: Year-Long Cannabis Use for Medical Symptoms and Brain Activation During Cognitive Processes
   authors:
@@ -1144,8 +1318,17 @@
   lab_authors:
   - Alisha Kodibagkar
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  preprints:
+  - id: 10.1101/2024.04.29.24306516
+    venue: medRxiv
+    url: https://doi.org/10.1101/2024.04.29.24306516
+    year: 2024
+    doi: 10.1101/2024.04.29.24306516
 - id: 10.1101/2024.10.23.619844
   type: preprint
+  category: original-research
   year: 2024
   title: AI-readiness Criteria for Biomedical Data
   authors:
@@ -1191,9 +1374,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 22
 - id: 10.52294/001c.92760
   type: conference
+  category: commentary
   year: 2024
   title: Proceedings of the OHBM Brainhack 2022
   authors:
@@ -1295,134 +1481,12 @@
   - Christopher J Markiewicz
   - Jeff Mentch
   - Kevin Sitek
+  topics:
+  - neuroimaging
   cited_by: 3
-- id: 10.1101/2024.04.29.24306516
-  type: preprint
-  year: 2024
-  title: Impact of year-long cannabis use for medical symptoms on brain activation during cognitive processes
-  authors:
-  - Debbie Burdinski
-  - Alisha Kodibagkar
-  - Kevin Potter
-  - Randi M. Schuster
-  - A. Eden Evins
-  - Satrajit Ghosh
-  - Jodi M. Gilman
-  venue: medRxiv
-  doi: 10.1101/2024.04.29.24306516
-  pmid: '38746368'
-  url: https://doi.org/10.1101/2024.04.29.24306516
-  pdf_url: https://www.medrxiv.org/content/medrxiv/early/2024/05/01/2024.04.29.24306516.full.pdf
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Debbie Burdinski
-  - Alisha Kodibagkar
-  - Satrajit S Ghosh
-  cited_by: 1
-  superseded_by: 10.1001/jamanetworkopen.2024.34354
-- id: slug:heudiconv-a-flexible-dicom-conversion-into-2024
-  type: journal
-  year: 2024
-  title: 'HeuDiConv: A flexible DICOM conversion into structured directory layouts Journal of Open Source Software 9:99'
-  authors:
-  - Halchenko YO
-  - Goncalves M
-  - Ghosh S
-  - Velasco P
-  - Visconti di di Castello M
-  - Salo
-  - Wodder JT
-  - Hanke M
-  - Sadil P
-  - Gorgolewski KJ
-  - Ioanas H
-  - Rorden C
-  - Hendrickson TJ
-  - Dayan M
-  - Houlihan SD
-  - Kent J
-  - Strauss T
-  - Lee J
-  - To I
-  - Markiewicz CJ
-  - Lukas D
-  - Butler ER
-  - Thompson T
-  - Termenon M
-  - Smith DV
-  - Macdonald A
-  - Kennedy DN
-  sources:
-  - cv
-  projects: []
-  lab_authors:
-  - Mathias Goncalves
-  - Satrajit S Ghosh
-  - Christopher J Markiewicz
-- id: 10.1101/2024.09.30.24314678
-  type: preprint
-  year: 2024
-  title: Social Determinants of Health and Functional Brain Connectivity Predict Long-Term Physical Activity in Older Adults with a New Cardiovascular Diagnosis
-  authors:
-  - Nagashree Thovinakere
-  - Satrajit Ghosh
-  - Yasser Itturia-Medina
-  - Maiya R. Geddes
-  venue: medRxiv
-  doi: 10.1101/2024.09.30.24314678
-  pmid: '39830285'
-  url: https://doi.org/10.1101/2024.09.30.24314678
-  pdf_url: https://www.medrxiv.org/content/medrxiv/early/2025/01/09/2024.09.30.24314678.full.pdf
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 0
-  superseded_by: 10.1093/pnasnexus/pgaf304
-- id: 10.2196/preprints.63343
-  type: preprint
-  year: 2024
-  title: 'Standardizing Survey Data Collection to Enhance Reproducibility: Development and Comparative Evaluation of the ReproSchema Ecosystem (Preprint)'
-  authors:
-  - Yibei Chen
-  - Dorota Jarecka
-  - Sanu Ann Abraham
-  - Rémi Gau
-  - Evan Ng
-  - Daniel M. Low
-  - Isaac Bevers
-  - Alistair E. W. Johnson
-  - Anisha Keshavan
-  - Arno Klein
-  - Jon Clucas
-  - Zaliqa Rosli
-  - Steven M. Hodge
-  - Janosch Linkersdörfer
-  - Hauke Bartsch
-  - Samir Das
-  - Damien A. Fair
-  - David N. Kennedy
-  - Satrajit Ghosh
-  doi: 10.2196/preprints.63343
-  url: https://doi.org/10.2196/preprints.63343
-  superseded_by: 10.2196/63343
-  sources:
-  - openalex
-  projects:
-  - repronim
-  lab_authors:
-  - Yibei Chen
-  - Dorota Jarecka
-  - Sanu Ann Abraham
-  - Daniel M. Low
-  - Isaac Bevers
-  - Satrajit S Ghosh
-  cited_by: 0
 - id: 10.1007/s00418-023-02209-1
   type: journal
+  category: software
   year: 2023
   title: 'OME-Zarr: a cloud-optimized bioimaging file format with international community support'
   authors:
@@ -1508,9 +1572,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - software
   cited_by: 113
 - id: 10.1371/journal.pbio.3002133
   type: journal
+  category: original-research
   year: 2023
   title: A guide to the BRAIN Initiative Cell Census Network data ecosystem
   authors:
@@ -1631,9 +1698,19 @@
   lab_authors:
   - Satrajit S Ghosh
   - Dorota Jarecka
+  topics:
+  - open-data
+  - consortium
+  preprints:
+  - id: 10.1101/2022.10.26.513573
+    venue: bioRxiv (Cold Spring Harbor Laboratory)
+    url: https://doi.org/10.1101/2022.10.26.513573
+    year: 2022
+    doi: 10.1101/2022.10.26.513573
   cited_by: 51
 - id: 10.1148/radiol.230096
   type: journal
+  category: original-research
   year: 2023
   title: Brain Growth Charts for Quantitative Analysis of Pediatric Clinical Brain MRI Scans with Limited Imaging Pathology
   authors:
@@ -1676,9 +1753,20 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - child-development
+  - clinical
+  preprints:
+  - id: 10.1101/2023.01.13.23284533
+    venue: medRxiv
+    url: https://doi.org/10.1101/2023.01.13.23284533
+    year: 2023
+    doi: 10.1101/2023.01.13.23284533
   cited_by: 23
 - id: 10.1038/s41597-023-02614-0
   type: journal
+  category: review
   year: 2023
   title: A comparison of neuroelectrophysiology databases
   authors:
@@ -1721,9 +1809,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - review
   cited_by: 21
 - id: 10.1186/s12888-023-05223-8
   type: journal
+  category: original-research
   year: 2023
   title: 'Mindfulness-based real-time fMRI neurofeedback: a randomized controlled trial to optimize dosing for depressed adolescents'
   authors:
@@ -1764,9 +1855,22 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - child-development
+  - adolescence
+  - clinical-trial
+  - clinical
+  preprints:
+  - id: 10.31234/osf.io/v3fqx
+    url: https://doi.org/10.31234/osf.io/v3fqx
+    year: 2023
+    doi: 10.31234/osf.io/v3fqx
   cited_by: 15
 - id: 10.1038/s41562-023-01647-0
   type: journal
+  category: perspective
   year: 2023
   title: Align with the NMIND consortium for better neuroimaging
   authors:
@@ -1800,9 +1904,13 @@
   - Dorota Jarecka
   - Christopher J Markiewicz
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - consortium
   cited_by: 11
 - id: 10.3389/fninf.2023.1174156
   type: journal
+  category: software
   year: 2023
   title: 'NIDM-Terms: community-based terminology management for improved neuroimaging dataset descriptions and query'
   authors:
@@ -1832,9 +1940,13 @@
   lab_authors:
   - Sanu Ann Abraham
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - software
   cited_by: 6
 - id: 10.1038/s41598-023-27934-4
   type: journal
+  category: original-research
   year: 2023
   title: Dissociating COVID-19 from other respiratory infections based on acoustic, motor coordination, and phonemic patterns
   authors:
@@ -1858,51 +1970,12 @@
   lab_authors:
   - Daniel M. Low
   - Satrajit S Ghosh
+  topics:
+  - speech
   cited_by: 4
-- id: 10.1101/2023.01.13.23284533
-  type: preprint
-  year: 2023
-  title: Brain growth charts of “clinical controls” for quantitative analysis of clinically acquired brain MRI
-  authors:
-  - Jenna Schabdach
-  - J. Eric Schmitt
-  - Susan Sotardi
-  - Arastoo Vossough
-  - Savvas Andronikou
-  - Timothy P. L. Roberts
-  - Hao Huang
-  - Viveknarayanan Padmanabhan
-  - Alfredo Oritz-Rosa
-  - Margaret Gardner
-  - Sydney Covitz
-  - Saashi A. Bedford
-  - Ayan S. Mandal
-  - Barbara H. Chaiyachati
-  - Simon R. White
-  - Edward T. Bullmore
-  - Richard A. I. Bethlehem
-  - Russell T. Shinohara
-  - Benjamin Billot
-  - Juan Eugenio Iglesias
-  - Satrajit Ghosh
-  - Raquel E. Gur
-  - Theodore D. Satterthwaite
-  - David R. Roalf
-  - Jakob Seidlitz
-  - Aaron Alexander‐Bloch
-  venue: medRxiv
-  doi: 10.1101/2023.01.13.23284533
-  url: https://doi.org/10.1101/2023.01.13.23284533
-  pdf_url: https://www.medrxiv.org/content/medrxiv/early/2023/01/18/2023.01.13.23284533.full.pdf
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 2
-  superseded_by: 10.1148/radiol.230096
 - id: 10.1145/3577190.3617133
   type: conference
+  category: original-research
   year: 2023
   title: Multimodal Conversational Agents for People with Neurodevelopmental Disorders
   authors:
@@ -1922,47 +1995,12 @@
   lab_authors:
   - Fabio Catania
   - Satrajit S Ghosh
+  topics:
+  - agents
   cited_by: 1
-- id: 10.31234/osf.io/v3fqx
-  type: preprint
-  year: 2023
-  title: 'Mindfulness-based Real-time fMRI Neurofeedback: A Randomized Controlled Trial to Optimize Dosing for Depressed Adolescents (Study Protocol)'
-  authors:
-  - Paul Alexander Bloom
-  - David Pagliaccio
-  - Jiahe Zhang
-  - Clemens Bauer
-  - Mia Kyler
-  - Keara D. Greene
-  - Isaac N. Treves
-  - Francesca Morfini
-  - Katherine Durham
-  - Rachel Cherner
-  - Zia Bajwa
-  - Emma Wool
-  - Valur Olafsson
-  - Ray F. Lee
-  - Jonathan Cardona
-  - Jaclyn S. Kirshenbaum
-  - Satrajit Ghosh
-  - Oliver Hinds
-  - Paul Wighton
-  - Hanga Galfalvy
-  - Blair H. Simpson
-  - Susan Whitfield‐Gabrieli
-  - Randy P. Auerbach
-  doi: 10.31234/osf.io/v3fqx
-  url: https://doi.org/10.31234/osf.io/v3fqx
-  pdf_url: https://osf.io/v3fqx/download
-  superseded_by: 10.1186/s12888-023-05223-8
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 0
 - id: 10.7554/elife.78362
   type: journal
+  category: original-research
   year: 2022
   title: The Neurodata Without Borders ecosystem for neurophysiological data science
   authors:
@@ -1991,9 +2029,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 152
 - id: 10.1038/s41592-022-01681-2
   type: journal
+  category: original-research
   year: 2022
   title: 'TemplateFlow: FAIR-sharing of multi-scale, multi-species brain models'
   authors:
@@ -2023,9 +2064,12 @@
   - Mathias Goncalves
   - Christopher J Markiewicz
   - Satrajit S Ghosh
+  topics:
+  - reproducibility
   cited_by: 120
 - id: 10.1007/s12021-020-09509-0
   type: journal
+  category: original-research
   year: 2022
   title: 'A Standards Organization for Open and FAIR Neuroscience: the International Neuroinformatics Coordinating Facility'
   authors:
@@ -2065,9 +2109,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - reproducibility
   cited_by: 51
 - id: 10.1007/s12021-021-09557-0
   type: journal
+  category: perspective
   year: 2022
   title: Is Neuroscience FAIR? A Call for Collaborative Standardisation of Neuroscience Data
   authors:
@@ -2100,9 +2147,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - reproducibility
   cited_by: 42
 - id: 10.1038/s41598-022-19356-5
   type: journal
+  category: original-research
   year: 2022
   title: Deep neural networks allow expert-level brain meningioma segmentation and present potential for improvement of clinical practice
   authors:
@@ -2134,9 +2184,20 @@
   - Jakub Kaczmarzyk
   - Aakanksha Rana
   - Satrajit S Ghosh
+  topics:
+  - deep-learning
+  - machine-learning
+  - clinical
+  preprints:
+  - id: 10.1101/2021.05.11.21256429
+    venue: medRxiv
+    url: https://doi.org/10.1101/2021.05.11.21256429
+    year: 2021
+    doi: 10.1101/2021.05.11.21256429
   cited_by: 26
 - id: 10.1016/j.jpsychires.2022.09.051
   type: journal
+  category: perspective
   year: 2022
   title: Can machine learning identify childhood characteristics that predict future development of bipolar disorder a decade later?
   authors:
@@ -2163,9 +2224,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - psychiatry
+  - child-development
+  - machine-learning
   cited_by: 15
 - id: 10.7554/elife.79277
   type: journal
+  category: original-research
   year: 2022
   title: Neuroscout, a unified platform for generalizable and reproducible fMRI research
   authors:
@@ -2195,9 +2261,15 @@
   - Christopher J Markiewicz
   - Jeff Mentch
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - naturalistic-data
+  - parcellation
+  - reproducibility
   cited_by: 14
 - id: 10.1016/j.neuroimage.2022.119737
   type: journal
+  category: original-research
   year: 2022
   title: 'Through the looking glass: Deep interpretable dynamic directed connectivity in resting fMRI'
   authors:
@@ -2218,9 +2290,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 14
 - id: 10.3389/fnins.2022.751595
   type: journal
+  category: original-research
   year: 2022
   title: Structural Connectivity of Human Inferior Colliculus Subdivisions Using in vivo and post mortem Diffusion MRI Tractography
   authors:
@@ -2243,9 +2318,13 @@
   lab_authors:
   - Kevin Sitek
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - connectomics
   cited_by: 6
 - id: 10.3389/fnins.2022.871228
   type: journal
+  category: original-research
   year: 2022
   title: 'Microscopy-BIDS: An Extension to the Brain Imaging Data Structure for Microscopy Data'
   authors:
@@ -2278,53 +2357,13 @@
   lab_authors:
   - Satrajit S Ghosh
   - Christopher J Markiewicz
-- id: 10.1101/2022.03.13.484171
-  type: preprint
-  year: 2022
-  title: Integrated platform for multi-scale molecular imaging and phenotyping of the human brain
-  authors:
-  - Juhyuk Park
-  - Ji Wang
-  - Webster Guan
-  - Lars Gjesteby
-  - Dylan Pollack
-  - Lee Kamentsky
-  - Nicholas B. Evans
-  - Jeff Stirman
-  - Xinyi Gu
-  - Chuanxi Zhao
-  - Slayton Marx
-  - Minyoung E. Kim
-  - Seo Woo Choi
-  - M Snyder
-  - David Chavez
-  - Clover Su-Arcaro
-  - Yuxuan Tian
-  - Chang Sin Park
-  - Qiangge Zhang
-  - Dae Hee Yun
-  - Mira Moukheiber
-  - Guoping Feng
-  - X. William Yang
-  - C. Dirk Keene
-  - Patrick R. Hof
-  - Satrajit Ghosh
-  - Matthew P. Frosch
-  - Laura J. Brattain
-  - Kwanghun Chung
-  venue: bioRxiv (Cold Spring Harbor Laboratory)
-  doi: 10.1101/2022.03.13.484171
-  url: https://doi.org/10.1101/2022.03.13.484171
-  pdf_url: https://www.biorxiv.org/content/biorxiv/early/2022/03/15/2022.03.13.484171.full.pdf
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 13
-  superseded_by: 10.1126/science.adh9979
+  topics:
+  - workflows
+  - software
+  - imaging
 - id: 10.1109/ojemb.2022.3143688
   type: journal
+  category: review
   year: 2022
   title: 'Artificial Intelligence for Detecting COVID-19 With the Aid of Human Cough, Breathing and Speech Signals: Scoping Review'
   authors:
@@ -2348,9 +2387,13 @@
   lab_authors:
   - Daniel M. Low
   - Satrajit S Ghosh
+  topics:
+  - speech
+  - review
   cited_by: 12
 - id: 10.1177/21677026221079628
   type: journal
+  category: original-research
   year: 2022
   title: Connectivity Patterns Evoked by Fearful Faces Demonstrate Reduced Flexibility Across a Shared Dimension of Adolescent Anxiety and Depression
   authors:
@@ -2380,125 +2423,15 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - psychiatry
+  - child-development
+  - adolescence
+  - clinical
   cited_by: 7
-- id: 10.1101/2022.10.26.513573
-  type: preprint
-  year: 2022
-  title: 'The BRAIN Initiative Cell Census Network Data Ecosystem: A User’s Guide'
-  authors:
-  - Michael Hawrylycz
-  - Maryann E. Martone
-  - Patrick R. Hof
-  - Ed S. Lein
-  - Aviv Regev
-  - Giorgio A. Ascoli
-  - Jan G. Bjaalie
-  - Hong‐Wei Dong
-  - Satrajit Ghosh
-  - Jesse Gillis
-  - Ronna Hertzano
-  - David R. Haynor
-  - Yongsoo Kim
-  - Yufeng Liu
-  - Jeremy A. Miller
-  - Partha P. Mitra
-  - Eran A. Mukamel
-  - David Osumi-Sutherland
-  - Hanchuan Peng
-  - Patrick L. Ray
-  - Raymond Sanchez
-  - Alex Ropelewski
-  - Richard H. Scheuermann
-  - Shawn Zheng Kai Tan
-  - Timothy L. Tickle
-  - Hagen Tilgner
-  - Merina Varghese
-  - Brock A. Wester
-  - Owen White
-  - Brian D. Aevermann
-  - David Allemang
-  - Seth A. Ament
-  - Thomas L. Athey
-  - Pamela Baker
-  - C L Baker
-  - Katherine Baker
-  - Anita Bandrowski
-  - Prajal Bishwakarma
-  - Ambrose Carr
-  - Min Chen
-  - Roni Choudhury
-  - Jonah Cool
-  - Heather H. Creasy
-  - Florence D. D’Orazi
-  - Kylee Degatano
-  - Ben Dichter
-  - Song‐Lin Ding
-  - Tim Dolbeare
-  - Joseph R. Ecker
-  - Rongxin Fang
-  - Jean‐Christophe Fillion‐Robin
-  - Timothy P. Fliss
-  - James C. Gee
-  - Tom Gillespie
-  - Nathan W. Gouwens
-  - Yaroslav O. Halchenko
-  - Nomi L. Harris
-  - Brian R. Herb
-  - Houri Hintiryan
-  - Gregory Hood
-  - S. Horvath
-  - Dorota Jarecka
-  - Shengdian Jiang
-  - Farzaneh Khajouei
-  - Elizabeth Kiernan
-  - Hüseyin Kır
-  - Lauren Kruse
-  - Changkyu Lee
-  - Boudewijn P. F. Lelieveldt
-  - Yang Eric Li
-  - Hanqing Liu
-  - Anup Markuhar
-  - James C. Mathews
-  - Kaylee L. Mathews
-  - Michael I. Miller
-  - Tyler Mollenkopf
-  - Shoaib Mufti
-  - Chris Mungall
-  - Lydia Ng
-  - Joshua Orvis
-  - Maja Puchades
-  - Lei Qu
-  - Joseph P. Receveur
-  - Bing Ren
-  - Nathan Sjoquist
-  - Brian Staats
-  - Carol L. Thompson
-  - Daniel J. Tward
-  - Cindy T. J. van Velthoven
-  - Quanxin Wang
-  - Fangming Xie
-  - Hua Xu
-  - Zizhen Yao
-  - Zhixi Yun
-  - Hongkui Zeng
-  - Guo‐Qiang Zhang
-  - Yun Zhang
-  - W. Jim Zheng
-  - Brian Zingg
-  venue: bioRxiv (Cold Spring Harbor Laboratory)
-  doi: 10.1101/2022.10.26.513573
-  url: https://doi.org/10.1101/2022.10.26.513573
-  pdf_url: https://www.biorxiv.org/content/biorxiv/early/2022/10/30/2022.10.26.513573.full.pdf
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  - Dorota Jarecka
-  cited_by: 7
-  superseded_by: 10.1371/journal.pbio.3002133
 - id: 10.1038/s41586-021-03950-0
   type: journal
+  category: original-research
   year: 2021
   title: A multimodal cell census and atlas of the mammalian primary motor cortex
   authors:
@@ -2515,9 +2448,12 @@
   - openalex
   projects: []
   lab_authors: []
+  topics:
+  - neuroimaging
   cited_by: 564
 - id: 10.21105/joss.03262
   type: journal
+  category: software
   year: 2021
   title: 'DataLad: distributed system for joint management of code, data, and their relationship'
   authors:
@@ -2567,9 +2503,12 @@
   - Satrajit S Ghosh
   - Christopher J Markiewicz
   - Dorota Jarecka
+  topics:
+  - software
   cited_by: 155
 - id: 10.1016/j.neuron.2021.04.001
   type: conference
+  category: commentary
   year: 2021
   title: 'Brainhack: Developing a culture of open, inclusive, community-driven neuroscience'
   authors:
@@ -2643,9 +2582,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 52
 - id: 10.2196/22369
   type: journal
+  category: original-research
   year: 2021
   title: 'Remote Digital Psychiatry for Mobile Mental Health Assessment and Therapy: MindLogger Platform Development Study'
   authors:
@@ -2683,9 +2625,18 @@
   lab_authors:
   - Satrajit S Ghosh
   - Sanu Ann Abraham
+  topics:
+  - psychiatry
+  - mental-health
+  preprints:
+  - id: 10.2196/preprints.22369
+    url: https://doi.org/10.2196/preprints.22369
+    year: 2020
+    doi: 10.2196/preprints.22369
   cited_by: 35
 - id: 10.1007/s12311-020-01213-8
   type: journal
+  category: original-research
   year: 2021
   title: Functional Alterations in Cerebellar Functional Connectivity in Anxiety Disorders
   authors:
@@ -2719,9 +2670,13 @@
   lab_authors:
   - Mathias Goncalves
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
   cited_by: 29
 - id: 10.18653/v1/2021.cinlp-1.8
   type: journal
+  category: original-research
   year: 2021
   title: 'It''s quality and quantity: the effect of the amount of comments on online suicidal posts'
   authors:
@@ -2746,8 +2701,15 @@
   lab_authors:
   - Daniel M. Low
   - Satrajit S Ghosh
+  topics:
+  - suicide-prevention
+  - social-media
+  - causal-inference
+  - nlp
+  - psychiatry
 - id: 10.1002/hbm.25351
   type: journal
+  category: original-research
   year: 2021
   title: 'The Open Brain Consent: Informing research participants and obtaining consent to share brain imaging data'
   authors:
@@ -2798,40 +2760,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 60
-- id: 10.1101/2021.05.11.21256429
-  type: preprint
-  year: 2021
-  title: Deep neural networks allow expert-level brain meningioma detection, segmentation and improvement of current clinical practice
-  authors:
-  - Alessandro Boaro
-  - Jakub Kaczmarzyk
-  - Vasileios K. Kavouridis
-  - Maya Harary
-  - Marco Mammi
-  - Hassan Y. Dawood
-  - Alice Shea
-  - Elise Y. Cho
-  - Parikshit Juvekar
-  - Thomas Noh
-  - Aakanksha Rana
-  - Satrajit Ghosh
-  - Omar Arnaout
-  venue: medRxiv
-  doi: 10.1101/2021.05.11.21256429
-  url: https://doi.org/10.1101/2021.05.11.21256429
-  pdf_url: https://www.medrxiv.org/content/medrxiv/early/2022/01/07/2021.05.11.21256429.full.pdf
-  superseded_by: 10.1038/s41598-022-19356-5
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Jakub Kaczmarzyk
-  - Aakanksha Rana
-  - Satrajit S Ghosh
-  cited_by: 1
 - id: 10.1109/ijcnn52387.2021.9534161
   type: journal
+  category: original-research
   year: 2021
   title: Uncertainty-Aware Boosted Ensembling in Multi-Modal Settings
   authors:
@@ -2848,9 +2782,12 @@
   lab_authors:
   - Wazeer Zulfikar
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 0
 - id: 10.1002/lio2.354
   type: journal
+  category: review
   year: 2020
   title: 'Automated assessment of psychiatric disorders using speech: A systematic review'
   authors:
@@ -2873,9 +2810,15 @@
   - Daniel M. Low
   - Kate Bentley
   - Satrajit S Ghosh
+  topics:
+  - speech-biomarkers
+  - psychiatry
+  - review
+  - speech
   cited_by: 481
 - id: 10.2196/22635
   type: journal
+  category: original-research
   year: 2020
   title: 'Natural Language Processing Reveals Vulnerable Mental Health Support Groups and Heightened Health Anxiety on Reddit During COVID-19: Observational Study'
   authors:
@@ -2899,9 +2842,24 @@
   lab_authors:
   - Daniel M. Low
   - Satrajit S Ghosh
+  topics:
+  - nlp
+  - mental-health
+  - social-media
+  - psychiatry
+  preprints:
+  - id: 10.31234/osf.io/xvwcy
+    url: https://doi.org/10.31234/osf.io/xvwcy
+    year: 2020
+    doi: 10.31234/osf.io/xvwcy
+  - id: 10.2196/preprints.22635
+    url: https://doi.org/10.2196/preprints.22635
+    year: 2020
+    doi: 10.2196/preprints.22635
   cited_by: 343
 - id: 10.1038/s41596-020-0327-3
   type: journal
+  category: original-research
   year: 2020
   title: Analysis of task-based functional MRI data preprocessed with fMRIPrep
   authors:
@@ -2947,9 +2905,12 @@
   - Christopher J Markiewicz
   - Mathias Goncalves
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 307
 - id: 10.1016/j.psychres.2020.112770
   type: journal
+  category: original-research
   year: 2020
   title: 'Real-time fMRI neurofeedback reduces auditory hallucinations and modulates resting state connectivity of involved brain regions: Part 2: Default mode network -preliminary evidence'
   authors:
@@ -2976,9 +2937,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
   cited_by: 85
 - id: 10.1016/j.psychres.2020.112862
   type: journal
+  category: original-research
   year: 2020
   title: 'Real-time fMRI feedback impacts brain activation, results in auditory hallucinations reduction: Part 1: Superior temporal gyrus -Preliminary evidence'
   authors:
@@ -3005,9 +2970,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
   cited_by: 41
 - id: 10.1016/j.nicl.2020.102240
   type: journal
+  category: original-research
   year: 2020
   title: Brain function and clinical characterization in the Boston adolescent neuroimaging of depression and anxiety study
   authors:
@@ -3048,9 +3017,16 @@
   lab_authors:
   - Mathias Goncalves
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - child-development
+  - adolescence
+  - clinical
   cited_by: 37
 - id: 10.1016/j.nicl.2020.102266
   type: journal
+  category: original-research
   year: 2020
   title: 'Cingulum-Callosal white-matter microstructure associated with emotional dysregulation in children: A diffusion tensor imaging study'
   authors:
@@ -3082,9 +3058,14 @@
   lab_authors:
   - Mathias Goncalves
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - connectomics
+  - child-development
   cited_by: 32
 - id: 10.1016/j.nicl.2020.102242
   type: journal
+  category: original-research
   year: 2020
   title: Image acquisition and quality assurance in the Boston Adolescent Neuroimaging of Depression and Anxiety study
   authors:
@@ -3126,9 +3107,15 @@
   lab_authors:
   - Mathias Goncalves
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - child-development
+  - adolescence
   cited_by: 31
 - id: 10.1146/annurev-neuro-100119-110036
   type: journal
+  category: original-research
   year: 2020
   title: 'Toward Community-Driven Big Open Brain Science: Open Big Data and Tools for Structure, Function, and Genetics'
   authors:
@@ -3156,9 +3143,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 19
 - id: 10.1007/s12311-019-01050-4
   type: journal
+  category: original-research
   year: 2020
   title: 'Neurodevelopmental and Psychiatric Symptoms in Patients with a Cyst Compressing the Cerebellum: an Ongoing Enigma'
   authors:
@@ -3180,9 +3170,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - clinical
   cited_by: 18
 - id: 10.25080/majora-342d178e-012
   type: conference
+  category: software
   year: 2020
   title: Pydra - a flexible and lightweight dataflow engine for scientific analyses
   authors:
@@ -3207,32 +3202,15 @@
   - Mathias Goncalves
   - Jakub Kaczmarzyk
   - Satrajit S Ghosh
+  topics:
+  - software
+  - neuroimaging
+  - reproducibility
+  - workflows
   cited_by: 8
-- id: 10.31234/osf.io/xvwcy
-  type: preprint
-  year: 2020
-  title: 'Natural language processing reveals vulnerable mental health support groups and heightened health anxiety on Reddit during COVID-19: an observational study'
-  authors:
-  - Daniel M. Low
-  - Laurie Rumker
-  - Tanya Talkar
-  - John Torous
-  - Guillermo Cecchi
-  - Satrajit Ghosh
-  doi: 10.31234/osf.io/xvwcy
-  url: https://doi.org/10.31234/osf.io/xvwcy
-  pdf_url: https://osf.io/xvwcy/download
-  superseded_by: 10.2196/22635
-  sources:
-  - openalex
-  projects:
-  - covid-reddit-mental-health
-  lab_authors:
-  - Daniel M. Low
-  - Satrajit S Ghosh
-  cited_by: 39
 - id: 10.1101/2020.09.04.283820
   type: preprint
+  category: original-research
   year: 2020
   title: Asymmetric Functional Gradients in the Human Subcortex
   authors:
@@ -3250,44 +3228,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 5
-- id: 10.2196/preprints.22369
-  type: preprint
-  year: 2020
-  title: 'Remote Digital Psychiatry for Mobile Mental Health Assessment and Therapy: MindLogger Platform Development Study (Preprint)'
-  authors:
-  - Arno Klein
-  - Jon Clucas
-  - Anirudh Krishnakumar
-  - Satrajit Ghosh
-  - Wilhelm Van Auken
-  - Benjamin Thonet
-  - Ihor Sabram
-  - Nino Acuna
-  - Anisha Keshavan
-  - Henry Rossiter
-  - Yao Xiao
-  - Sergey Semenuta
-  - Alessandra Badioli
-  - Kseniia Konishcheva
-  - Sanu Ann Abraham
-  - Lindsay Alexander
-  - Kathleen R. Merikangas
-  - Joël Swendsen
-  - Ariel B. Lindner
-  - Michael P. Milham
-  doi: 10.2196/preprints.22369
-  url: https://doi.org/10.2196/preprints.22369
-  superseded_by: 10.2196/22369
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  - Sanu Ann Abraham
-  cited_by: 2
 - id: 10.1109/isbi45749.2020.9098466
   type: journal
+  category: software
   year: 2020
   title: Software Tool to Read, Represent, Manipulate, and Apply N-Dimensional Spatial Transforms
   authors:
@@ -3305,31 +3251,12 @@
   - Mathias Goncalves
   - Christopher J Markiewicz
   - Satrajit S Ghosh
+  topics:
+  - software
   cited_by: 1
-- id: 10.2196/preprints.22635
-  type: preprint
-  year: 2020
-  title: 'Natural Language Processing Reveals Vulnerable Mental Health Support Groups and Heightened Health Anxiety on Reddit During COVID-19: Observational Study (Preprint)'
-  authors:
-  - Daniel M. Low
-  - Laurie Rumker
-  - Tanya Talkar
-  - John Torous
-  - Guillermo Cecchi
-  - Satrajit Ghosh
-  doi: 10.2196/preprints.22635
-  url: https://doi.org/10.2196/preprints.22635
-  superseded_by: 10.2196/22635
-  sources:
-  - openalex
-  projects:
-  - covid-reddit-mental-health
-  lab_authors:
-  - Daniel M. Low
-  - Satrajit S Ghosh
-  cited_by: 0
 - id: 10.1038/s41592-018-0235-4
   type: journal
+  category: original-research
   year: 2019
   title: 'fMRIPrep: a robust preprocessing pipeline for functional MRI'
   authors:
@@ -3364,9 +3291,14 @@
   - Christopher J Markiewicz
   - Mathias Goncalves
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - workflows
+  - software
   cited_by: 4094
 - id: 10.3389/fninf.2019.00001
   type: journal
+  category: perspective
   year: 2019
   title: 'Everything Matters: The ReproNim Perspective on Reproducible Neuroimaging'
   authors:
@@ -3411,9 +3343,15 @@
   - Dorota Jarecka
   - Jakub Kaczmarzyk
   - Smruti Padhy
+  topics:
+  - reproducibility
+  - neuroimaging
+  - software
+  - training
   cited_by: 117
 - id: 10.7554/elife.48932
   type: journal
+  category: original-research
   year: 2019
   title: Mapping the human subcortical auditory system using histology, postmortem MRI and in vivo MRI at 7T
   authors:
@@ -3438,9 +3376,13 @@
   lab_authors:
   - Kevin Sitek
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - imaging
   cited_by: 91
 - id: 10.1371/journal.pone.0210028
   type: journal
+  category: software
   year: 2019
   title: 'LittleBrain: A gradient-based tool for the topographical interpretation of cerebellar neuroimaging findings'
   authors:
@@ -3465,9 +3407,13 @@
   - Mathias Goncalves
   - Jakub Kaczmarzyk
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - software
   cited_by: 38
 - id: 10.1016/j.dcn.2019.100707
   type: journal
+  category: original-research
   year: 2019
   title: 'Neurofeedback and neuroplasticity of visual self-processing in depressed and healthy adolescents: A preliminary study'
   authors:
@@ -3494,9 +3440,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - psychiatry
+  - child-development
+  - adolescence
   cited_by: 36
 - id: 10.1044/2019_jslhr-19-00154
   type: journal
+  category: original-research
   year: 2019
   title: Persistent Neurobehavioral Markers of Developmental Morphosyntax Errors in Adults
   authors:
@@ -3521,9 +3472,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
+  - behavioral-quantification
   cited_by: 4
 - id: 10.3389/fninf.2019.00067
   type: journal
+  category: original-research
   year: 2019
   title: Knowing What You Know in Brain Segmentation Using Bayesian Deep Neural Networks
   authors:
@@ -3551,9 +3506,18 @@
   lab_authors:
   - Jakub Kaczmarzyk
   - Satrajit S Ghosh
+  topics:
+  - deep-learning
+  - machine-learning
+  preprints:
+  - id: 2018-unknown-arxiv-cornell-university
+    venue: arXiv (Cornell University)
+    url: https://arxiv.org/abs/1812.01719v3
+    year: 2018
   cited_by: 2
 - id: 10.3928/00485713-20190412-01
   type: journal
+  category: perspective
   year: 2019
   title: Will Neuroimaging Produce a Clinical Tool for Psychiatry?
   authors:
@@ -3567,9 +3531,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - clinical
   cited_by: 1
 - id: 10.7554/elife.36652
   type: journal
+  category: original-research
   year: 2018
   title: Functional gradients of the cerebellum
   authors:
@@ -3589,9 +3558,18 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  preprints:
+  - id: 10.1101/254326
+    venue: bioRxiv (Cold Spring Harbor Laboratory)
+    url: https://doi.org/10.1101/254326
+    year: 2018
+    doi: 10.1101/254326
   cited_by: 492
 - id: 10.1177/0194599817739838
   type: journal
+  category: review
   year: 2018
   title: 'Diffusion Tensor Imaging of Central Auditory Pathways in Patients with Sensorineural Hearing Loss: A Systematic Review'
   authors:
@@ -3618,82 +3596,15 @@
   lab_authors:
   - Satrajit S Ghosh
   - Kevin Sitek
+  topics:
+  - neuroimaging
+  - connectomics
+  - clinical
+  - review
   cited_by: 58
-- id: 10.48550/arxiv.1805.10863
-  type: preprint
-  year: 2018
-  title: 'Distributed Weight Consolidation: A Brain Segmentation Case Study'
-  authors:
-  - McClure P
-  - Kaczmarzyk JR
-  - Ghosh SS
-  - Bandettini P
-  - Zheng CY
-  - Lee JA
-  - Nielson D
-  - Pereira F
-  venue: Adv Neural Inf Process Syst
-  doi: 10.48550/arxiv.1805.10863
-  pmid: '34376963'
-  pmcid: PMC8351531
-  arxiv: '1805.10863'
-  url: https://doi.org/10.48550/arxiv.1805.10863
-  superseded_by: slug:distributed-weight-consolidation-a-brain-segmentation-2018
-  sources:
-  - ncbi
-  - openalex
-  projects: []
-  lab_authors:
-  - Jakub Kaczmarzyk
-  - Satrajit S Ghosh
-  cited_by: 5
-- id: 10.1101/254326
-  type: preprint
-  year: 2018
-  title: 'Functional Gradients of the Cerebellum: A Fundamental Movement-To-Thought Principle'
-  authors:
-  - Xavier Guell
-  - Jeremy D. Schmahmann
-  - John D. E. Gabrieli
-  - Satrajit Ghosh
-  venue: bioRxiv (Cold Spring Harbor Laboratory)
-  doi: 10.1101/254326
-  url: https://doi.org/10.1101/254326
-  pdf_url: https://www.biorxiv.org/content/biorxiv/early/2018/01/27/254326.full.pdf
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 11
-  superseded_by: 10.7554/elife.36652
-- id: slug:knowing-what-you-know-in-brain-2018
-  type: preprint
-  year: 2018
-  title: Knowing what you know in brain segmentation using deep neural networks.
-  authors:
-  - Patrick McClure
-  - Nao Rho
-  - John A. Lee
-  - Jakub Kaczmarzyk
-  - Charles Zheng
-  - Satrajit Ghosh
-  - Dylan M. Nielson
-  - Adam G. Thomas
-  - Peter A. Bandettini
-  - Francisco Pereira
-  venue: arXiv (Cornell University)
-  url: https://arxiv.org/abs/1812.01719v3
-  superseded_by: 10.3389/fninf.2019.00067
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Jakub Kaczmarzyk
-  - Satrajit S Ghosh
-  cited_by: 3
-- id: slug:distributed-weight-consolidation-a-brain-segmentation-2018
+- id: 2018-p-distributed-weight-consolidation-brain
   type: conference
+  category: original-research
   year: 2018
   title: 'Distributed Weight Consolidation: A Brain Segmentation Case Study In: NeurIPS - Neural Information Processing Systems 2018'
   authors:
@@ -3711,8 +3622,18 @@
   lab_authors:
   - Jakub Kaczmarzyk
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  preprints:
+  - id: 10.48550/arxiv.1805.10863
+    venue: Adv Neural Inf Process Syst
+    url: https://doi.org/10.48550/arxiv.1805.10863
+    year: 2018
+    doi: 10.48550/arxiv.1805.10863
+    arxiv: '1805.10863'
 - id: 10.1371/journal.pcbi.1005350
   type: journal
+  category: original-research
   year: 2017
   title: Mindboggling morphometry of human brains
   authors:
@@ -3740,9 +3661,25 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  preprints:
+  - id: 2011-unknown-digital-access-libraries-universit
+    venue: Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))
+    url: http://hdl.handle.net/2078.1/107923
+    year: 2011
+  - id: 2012-unknown-digital-access-libraries-universit
+    venue: Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))
+    url: http://hdl.handle.net/2078.1/120184
+    year: 2012
+  - venue: Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))
+    year: 2012
+    url: http://hdl.handle.net/2078/117836
+    id: 2012-unknown-digital-access-libraries-universit-2
   cited_by: 796
 - id: 10.1093/gigascience/giw011
   type: journal
+  category: original-research
   year: 2017
   title: 'The Healthy Brain Network Serial Scanning Initiative: a resource for evaluating inter-individual differences and their reliabilities across scan conditions and sessions'
   authors:
@@ -3775,9 +3712,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - consortium
   cited_by: 112
 - id: 10.1044/2017_jslhr-l-15-0446
   type: journal
+  category: original-research
   year: 2017
   title: Phonological Working Memory for Words and Nonwords in Cerebral Cortex
   authors:
@@ -3798,9 +3738,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
   cited_by: 64
 - id: 10.1371/journal.pcbi.1005209
   type: chapter
+  category: original-research
   year: 2017
   title: 'BIDS apps: Improving ease of use, accessibility, and reproducibility of neuroimaging data analysis methods'
   authors:
@@ -3846,9 +3789,15 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - reproducibility
+  - workflows
+  - software
   cited_by: 56
 - id: 10.1016/j.neuroimage.2017.04.028
   type: journal
+  category: original-research
   year: 2017
   title: 'Diffeomorphic functional brain surface alignment: Functional demons'
   authors:
@@ -3870,9 +3819,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 47
 - id: 10.1037/neu0000243
   type: journal
+  category: original-research
   year: 2017
   title: Relation of white-matter microstructure to reading ability and disability in beginning readers
   authors:
@@ -3897,9 +3849,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - education
   cited_by: 31
 - id: 10.12688/f1000research.10783.2
   type: journal
+  category: methods
   year: 2017
   title: A very simple, re-executable neuroimaging publication
   authors:
@@ -3924,9 +3879,15 @@
   - repronim
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - reproducibility
+  - neuroimaging
+  - software
+  - training
   cited_by: 14
 - id: 10.1073/pnas.1608282113
   type: journal
+  category: original-research
   year: 2016
   title: Situating the default-mode network along a principal gradient of macroscale cortical organization
   authors:
@@ -3955,9 +3916,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 2585
 - id: 10.1038/sdata.2016.44
   type: journal
+  category: original-research
   year: 2016
   title: The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments
   authors:
@@ -4000,9 +3964,18 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  preprints:
+  - id: 10.1101/034561
+    venue: bioRxiv (Cold Spring Harbor Laboratory)
+    url: https://doi.org/10.1101/034561
+    year: 2015
+    doi: 10.1101/034561
   cited_by: 1871
 - id: 10.1038/mp.2015.109
   type: journal
+  category: commentary
   year: 2016
   title: Brain connectomics predict response to treatment in social anxiety disorder
   authors:
@@ -4027,9 +4000,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - psychiatry
+  - cell-atlas
   cited_by: 216
 - id: 10.1016/j.neuron.2016.11.020
   type: journal
+  category: original-research
   year: 2016
   title: Dysfunction of Rapid Neural Adaptation in Dyslexia
   authors:
@@ -4056,9 +4034,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - education
   cited_by: 146
 - id: 10.1016/j.jalz.2016.02.006
   type: journal
+  category: original-research
   year: 2016
   title: Crowdsourced estimation of cognitive decline and resilience in Alzheimer's disease
   authors:
@@ -4177,9 +4158,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 93
 - id: 10.1016/j.neuroimage.2015.04.016
   type: journal
+  category: original-research
   year: 2016
   title: 'NeuroVault.org: A repository for sharing unthresholded statistical maps, parcellations, and atlases of the human brain'
   authors:
@@ -4207,9 +4191,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - parcellation
   cited_by: 90
 - id: 10.1038/sdata.2016.102
   type: journal
+  category: original-research
   year: 2016
   title: Sharing brain mapping statistical results with the neuroimaging data model
   authors:
@@ -4244,9 +4232,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 67
 - id: 10.3389/fnhum.2016.00190
   type: journal
+  category: original-research
   year: 2016
   title: 'Decreased Cerebellar-Orbitofrontal Connectivity Correlates with Stuttering Severity: Whole-Brain Functional and Structural Connectivity Associations with Persistent Developmental Stuttering'
   authors:
@@ -4270,9 +4261,13 @@
   lab_authors:
   - Kevin Sitek
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - speech
   cited_by: 56
 - id: 10.1186/s13742-016-0121-x
   type: conference
+  category: commentary
   year: 2016
   title: 'Brainhack: a collaborative workshop for the open neuroscience community'
   authors:
@@ -4334,9 +4329,12 @@
   - openalex
   projects: []
   lab_authors: []
+  topics:
+  - neuroimaging
   cited_by: 50
 - id: 10.21437/interspeech.2016-292
   type: conference
+  category: original-research
   year: 2016
   title: Neurophysiological Vocal Source Modeling for Biomarkers of Disease
   authors:
@@ -4354,9 +4352,13 @@
   lab_authors:
   - Gregory Ciccarelli
   - Satrajit S Ghosh
+  topics:
+  - speech
+  - speech-biomarkers
   cited_by: 3
 - id: 10.1101/053934
   type: preprint
+  category: original-research
   year: 2016
   title: 'Linked Data in Neuroscience: Applications, Benefits, and Challenges'
   authors:
@@ -4378,9 +4380,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 4
 - id: 10.3389/fninf.2015.00008
   type: journal
+  category: original-research
   year: 2015
   title: 'NeuroVault.org: a web-based repository for collecting and sharing unthresholded statistical maps of the human brain'
   authors:
@@ -4409,9 +4414,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 650
 - id: 10.1016/j.neuron.2014.10.047
   type: journal
+  category: original-research
   year: 2015
   title: Prediction as a humanitarian and pragmatic contribution from human cognitive neuroscience
   authors:
@@ -4431,9 +4439,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 582
 - id: 10.1007/978-3-319-24571-3_38
   type: journal
+  category: original-research
   year: 2015
   title: Predicting Activation Across Individuals with Resting-State Functional Connectivity Based Multi-Atlas Label Fusion
   authors:
@@ -4452,9 +4463,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 5
 - id: 10.21437/interspeech.2015-187
   type: journal
+  category: original-research
   year: 2015
   title: Segment-dependent dynamics in predicting Parkinson's disease
   authors:
@@ -4473,51 +4487,12 @@
   lab_authors:
   - Satrajit S Ghosh
   - Gregory Ciccarelli
+  topics:
+  - neuroimaging
   cited_by: 35
-- id: 10.1101/034561
-  type: preprint
-  year: 2015
-  title: 'The Brain Imaging Data Structure: a standard for organizing and describing outputs of neuroimaging experiments'
-  authors:
-  - Krzysztof J. Gorgolewski
-  - Tibor Auer
-  - Vince D. Calhoun
-  - R. Cameron Craddock
-  - Samir Das
-  - Eugene Duff
-  - Guillaume Flandin
-  - Satrajit Ghosh
-  - Tristan Glatard
-  - Yaroslav O. Halchenko
-  - Daniel A. Handwerker
-  - Michael Hanke
-  - David B. Keator
-  - Xiangrui Li
-  - Zachary Michael
-  - Camille Maumet
-  - B. Nolan Nichols
-  - Thomas E. Nichols
-  - Jean‐Baptiste Poline
-  - Ariel Rokem
-  - Gunnar Schaefer
-  - Vanessa Sochat
-  - William Triplett
-  - Jessica A. Turner
-  - Gaël Varoquaux
-  - Russell A. Poldrack
-  venue: bioRxiv (Cold Spring Harbor Laboratory)
-  doi: 10.1101/034561
-  url: https://doi.org/10.1101/034561
-  pdf_url: https://www.biorxiv.org/content/biorxiv/early/2016/05/12/034561.full.pdf
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 14
-  superseded_by: 10.1038/sdata.2016.44
 - id: 10.3389/fnhum.2014.00054
   type: journal
+  category: original-research
   year: 2014
   title: 'Diffusion imaging of cerebral white matter in persons who stutter: evidence for network-level anomalies'
   authors:
@@ -4540,9 +4515,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - connectomics
+  - speech
   cited_by: 105
 - id: 10.1371/journal.pone.0100552
   type: journal
+  category: original-research
   year: 2014
   title: Brain bases of reading fluency in typical reading and impaired fluency in dyslexia
   authors:
@@ -4567,9 +4547,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - education
   cited_by: 66
 - id: 10.1016/j.bandl.2014.01.002
   type: conference
+  category: commentary
   year: 2014
   title: Impaired timing adjustments in response to time-varying auditory perturbation during connected speech production in persons who stutter
   authors:
@@ -4590,9 +4573,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
   cited_by: 61
 - id: 10.1016/j.nicl.2014.07.002
   type: chapter
+  category: original-research
   year: 2014
   title: Optimizing real time fMRI neurofeedback for therapeutic discovery and development
   authors:
@@ -4632,9 +4618,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 224
 - id: 10.1001/2013.jamapsychiatry.5
   type: journal
+  category: original-research
   year: 2013
   title: Predicting treatment response in social anxiety disorder from functional magnetic resonance imaging
   authors:
@@ -4662,9 +4651,14 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - psychiatry
+  - clinical-trial
+  - clinical
   cited_by: 265
 - id: 10.1152/jn.00533.2011
   type: journal
+  category: original-research
   year: 2013
   title: 'Roles of default-mode network and supplementary motor area in human vigilance performance: evidence from real-time fMRI'
   authors:
@@ -4686,9 +4680,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 77
 - id: 10.3389/fnins.2013.00162
   type: journal
+  category: original-research
   year: 2013
   title: 'Instrumentation bias in the use and evaluation of scientific software: recommendations for reproducible practices in the computational sciences'
   authors:
@@ -4712,9 +4709,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - reproducibility
+  - software
   cited_by: 43
 - id: 10.1109/prni.2013.64
   type: conference
+  category: original-research
   year: 2013
   title: 'Predicting Treatment Response from Resting State fMRI Data: Comparison of Parcellation Approaches'
   authors:
@@ -4731,9 +4732,15 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - parcellation
+  - clinical-trial
+  - clinical
   cited_by: 2
 - id: 10.3389/fnins.2013.00055
   type: journal
+  category: original-research
   year: 2013
   title: Optimized design and analysis of sparse-sampling fMRI experiments
   authors:
@@ -4749,9 +4756,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 18
 - id: 10.3389/fninf.2012.00009
   type: journal
+  category: methods
   year: 2012
   title: Data sharing in neuroimaging research
   authors:
@@ -4782,9 +4792,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - open-data
   cited_by: 277
 - id: 10.1371/journal.pone.0041830
   type: journal
+  category: original-research
   year: 2012
   title: 'Weak responses to auditory feedback perturbation during articulation in persons who stutter: evidence for abnormal auditory-motor transformation'
   authors:
@@ -4807,9 +4821,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
+  - assistive-tech
   cited_by: 153
 - id: 10.3389/fncom.2012.00018
   type: journal
+  category: review
   year: 2012
   title: Learning from open source software projects to improve scientific review
   authors:
@@ -4830,9 +4848,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - software
+  - review
   cited_by: 27
 - id: 10.48550/arxiv.1209.5922
   type: preprint
+  category: methods
   year: 2012
   title: Towards structured sharing of raw and derived neuroimaging data across existing resources
   authors:
@@ -4856,50 +4878,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 5
-- id: slug:automated-identification-of-human-brain-features-2012
-  type: preprint
-  year: 2012
-  title: Automated identification of human brain features using multi-atlas, registration-based segmentation
-  authors:
-  - Arno Klein
-  - Satrajit Ghosh
-  - Forrest Sheng Bao
-  - Joachim Giard
-  - Eliezer Stavsky
-  - Yrjö Häme
-  - Ramin V. Parsey
-  venue: Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))
-  url: http://hdl.handle.net/2078.1/120184
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 0
-  superseded_by: 10.1371/journal.pcbi.1005350
-- id: slug:mindboggle-2-automated-human-brain-mri-2012
-  type: preprint
-  year: 2012
-  title: 'Mindboggle 2: Automated human brain MRI feature extraction, identification, shape analysis, and labeling'
-  authors:
-  - Arno Klein
-  - Forrest Sheng Bao
-  - Eliezer Stavsky
-  - Yrjö Häme
-  - Joachim Giard
-  - Nolan Nichols
-  - Satrajit Ghosh
-  venue: Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))
-  url: http://hdl.handle.net/2078/117836
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 0
 - id: 10.3389/fninf.2011.00013
   type: journal
+  category: software
   year: 2011
   title: 'Nipype: a flexible, lightweight and extensible neuroimaging data processing framework in python'
   authors:
@@ -4924,9 +4908,20 @@
   - nipype-pydra
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - software
+  - neuroimaging
+  - reproducibility
+  - workflows
   cited_by: 2425
+  preprints:
+  - venue: null
+    year: 2010
+    url: https://www.research.ed.ac.uk/portal/en/publications/nipype-opensource-platform-for-unified-and-replicable-interaction-with-existing-neuroimaging-tools(b81fb2a1-1114-4245-8f49-ac30c570200d)/export.html
+    id: 2010-unknown-nipype-opensource-platform-unified
 - id: 10.1016/j.neuroimage.2010.12.065
   type: journal
+  category: original-research
   year: 2011
   title: fMRI investigation of unexpected somatosensory feedback perturbation during speech
   authors:
@@ -4948,9 +4943,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - speech
   cited_by: 152
 - id: 10.1523/jneurosci.3653-11.2011
   type: journal
+  category: original-research
   year: 2011
   title: Focal manipulations of formant trajectories reveal a role of auditory feedback in the online control of both within-syllable and between-syllable speech timing
   authors:
@@ -4971,9 +4970,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
+  - assistive-tech
   cited_by: 94
 - id: 10.1016/j.neuroimage.2010.07.060
   type: journal
+  category: original-research
   year: 2011
   title: Computing moment-to-moment BOLD activation for real-time neurofeedback
   authors:
@@ -4996,9 +4999,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 92
 - id: 10.1001/archoto.2011.11
   type: journal
+  category: original-research
   year: 2011
   title: Cine magnetic resonance imaging with simultaneous audio to evaluate pediatric velopharyngeal insufficiency
   authors:
@@ -5020,9 +5026,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - child-development
   cited_by: 34
 - id: 10.1044/1092-4388(2010/09-0256)
   type: journal
+  category: original-research
   year: 2011
   title: The influence of auditory acuity on acoustic variability and the use of motor equivalence during adaptation to a perturbation
   authors:
@@ -5043,44 +5052,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
   cited_by: 29
-- id: slug:brain-shape-analysis-for-predicting-treatment-2011
-  type: preprint
-  year: 2011
-  title: Brain shape analysis for predicting treatment remission in major depressive disorder
-  authors:
-  - Forrest Sheng Bao
-  - Satrajit Ghosh
-  - Joachim Giard
-  - Ramin V. Parsey
-  - Arno Klein
-  venue: Digital Access to Libraries (Université catholique de Louvain (UCL), l'Université de Namur (UNamur) and the Université Saint-Louis (USL-B))
-  url: http://hdl.handle.net/2078.1/107923
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 5
-  superseded_by: 10.1371/journal.pcbi.1005350
-- id: slug:phonetic-variability-in-speech-perception-and-2011
-  type: journal
-  year: 2011
-  title: Phonetic Variability in Speech Perception and the Phonological Deficit in Dyslexia.
-  authors:
-  - Tyler K. Perrachione
-  - Stephanie N. Del Tufo
-  - Satrajit Ghosh
-  - John D. E. Gabrieli
-  url: http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.727.9702
-  sources:
-  - openalex
-  projects: []
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 4
-- id: slug:phonetic-variability-in-speech-perception-and-2011
+- id: 2011-perrachione-phonetic-variability-speech-perception
   type: conference
+  category: original-research
   year: 2011
   title: '"Phonetic variability in speech perception and the phonological deficit in dyslexia." 17th Meeting of the International Congress of Phonetic Sciences, (Hong Kong, August 2011)'
   authors:
@@ -5093,8 +5070,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
+  - education
 - id: 10.1016/j.neuroimage.2010.05.075
   type: journal
+  category: original-research
   year: 2010
   title: Evaluating the validity of volume-based and surface-based brain image registration for developmental cognitive neuroscience studies in children 4 to 11 years of age
   authors:
@@ -5120,9 +5101,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - child-development
   cited_by: 294
 - id: 10.1016/j.neuroimage.2010.01.091
   type: journal
+  category: original-research
   year: 2010
   title: Evaluation of volume-based and surface-based brain image registration methods
   authors:
@@ -5147,30 +5132,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 275
-- id: slug:nipype-opensource-platform-for-unified-and-2010
-  type: journal
-  year: 2010
-  title: 'Nipype: Opensource platform for unified and replicable interaction with existing neuroimaging tools'
-  authors:
-  - Satrajit Ghosh
-  - Chris Burns
-  - Dav Clark
-  - Krzysztof J. Gorgolewski
-  - Yaroslav O. Halchenko
-  - Cindee Madison
-  - Rosalia Tungaraza
-  - Jarrod Millman
-  url: https://www.research.ed.ac.uk/portal/en/publications/nipype-opensource-platform-for-unified-and-replicable-interaction-with-existing-neuroimaging-tools(b81fb2a1-1114-4245-8f49-ac30c570200d)/export.html
-  sources:
-  - openalex
-  projects:
-  - nipype-pydra
-  lab_authors:
-  - Satrajit S Ghosh
-  cited_by: 4
 - id: 10.1044/1092-4388(2008/07-0119)
   type: journal
+  category: original-research
   year: 2008
   title: A neuroimaging study of premotor lateralization and cerebellar involvement in the production of phonemes and syllables
   authors:
@@ -5189,9 +5156,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - speech
   cited_by: 197
-- id: slug:a-system-for-online-dynamic-perturbation-2008
+- id: 2008-cai-system-online-dynamic-perturbation
   type: conference
+  category: original-research
   year: 2008
   title: A system for online dynamic perturbation of formant trajectories and results from perturbations of the mandarin triphthong /iau
   authors:
@@ -5209,9 +5180,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
   cited_by: 55
-- id: slug:mechanisms-of-vowel-production-auditory-goals-2008
+- id: 2008-perkell-mechanisms-vowel-production-auditory
   type: conference
+  category: original-research
   year: 2008
   title: 'Mechanisms of vowel production: Auditory goals and speaker acuity'
   authors:
@@ -5231,9 +5205,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
   cited_by: 15
 - id: 10.1901/jaba.2008.2008-97
   type: journal
+  category: original-research
   year: 2008
   title: Prediction of Successful Memory Encoding from fMRI Data
   authors:
@@ -5256,9 +5233,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 11
 - id: 10.1080/03008200500344017
   type: conference
+  category: original-research
   year: 2007
   title: Gestural phasing in /kt/ sequences contrasting within and cross word contexts
   authors:
@@ -5278,9 +5258,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
   cited_by: 5
 - id: 10.1016/j.bandl.2005.06.001
   type: journal
+  category: original-research
   year: 2006
   title: Neural modeling and imaging of the cortical interactions underlying syllable production
   authors:
@@ -5299,9 +5282,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 878
 - id: 10.1186/1471-2342-5-7
   type: journal
+  category: software
   year: 2005
   title: 'Mindboggle: automated brain labeling with multiple atlases'
   authors:
@@ -5323,9 +5309,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - software
   cited_by: 116
 - id: 10.1044/1092-4388(2004/005)
   type: journal
+  category: original-research
   year: 2004
   title: Representation of sound categories in auditory cortical maps
   authors:
@@ -5344,9 +5333,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - speech
   cited_by: 123
-- id: slug:unstable-or-insufficiently-activated-internal-models-2004
+- id: 2004-max-unstable-insufficiently-activated-internal
   type: journal
+  category: original-research
   year: 2004
   title: 'Unstable or insufficiently activated internal models and feedback-biased motor control as sources of dysfluency: A theoretical model of stuttering'
   authors:
@@ -5361,8 +5354,11 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech
 - id: 10.1016/s1053-8119(03)00188-5
   type: journal
+  category: original-research
   year: 2003
   title: Region of interest based analysis of functional imaging data
   authors:
@@ -5381,9 +5377,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
   cited_by: 182
-- id: slug:a-model-of-cortical-and-cerebellar-2003
+- id: 2003-guenther-model-cortical-cerebellar-function
   type: conference
+  category: methods
   year: 2003
   title: A model of cortical and cerebellar function in speech
   authors:
@@ -5395,8 +5394,12 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
-- id: slug:a-neural-model-of-speech-production-2003
+  topics:
+  - neuroimaging
+  - speech
+- id: 2003-guenther-neural-model-speech-production
   type: conference
+  category: original-research
   year: 2003
   title: A neural model of speech production
   authors:
@@ -5409,8 +5412,11 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
-- id: slug:the-effects-of-categorization-training-on-2001
+  topics:
+  - speech
+- id: 2001-guenther-effects-categorization-training-auditory
   type: conference
+  category: original-research
   year: 2001
   title: The effects of categorization training on auditory perception and cortical representations
   authors:
@@ -5424,8 +5430,13 @@
   projects: []
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - neuroimaging
+  - speech
+  - machine-learning
 - id: 10.31234/osf.io/9rdux_v4
   type: preprint
+  category: original-research
   year: 2025
   title: 'Text Psychometrics: Assessing Psychological Constructs in Text Using Natural Language Processing'
   authors:
@@ -5443,8 +5454,11 @@
   lab_authors:
   - Daniel M. Low
   - Satrajit S Ghosh
+  topics:
+  - nlp
 - id: 10.31234/osf.io/vf2bc_v3
   type: preprint
+  category: original-research
   year: 2025
   title: 'Using large language models to create lexicons for interpretable text models with high content validity: the Suicide Risk Lexicon'
   authors:
@@ -5466,8 +5480,16 @@
   - Daniel M. Low
   - Kate Bentley
   - Satrajit S Ghosh
+  topics:
+  - suicide-prevention
+  - social-media
+  - causal-inference
+  - nlp
+  - psychiatry
+  - llm
 - id: 10.48550/arXiv.2409.09511
   type: preprint
+  category: original-research
   year: 2024
   title: Explaining Deep Learning Embeddings for Speech Emotion Recognition by Predicting Interpretable Acoustic Features
   authors:
@@ -5489,8 +5511,16 @@
   - Fabio Catania
   - Gasser Elbanna
   - Satrajit S Ghosh
+  topics:
+  - software
+  - speech-biomarkers
+  - reproducibility
+  - speech
+  - deep-learning
+  - machine-learning
 - id: 10.3389/fdgth.2025.1514971
   type: journal
+  category: original-research
   year: 2025
   title: 'The Bridge2AI-voice application: initial feasibility study of voice data acquisition through mobile health'
   authors:
@@ -5515,3 +5545,9 @@
   - bridge2ai-voice
   lab_authors:
   - Satrajit S Ghosh
+  topics:
+  - speech-biomarkers
+  - open-data
+  - ai-ready
+  - consortium
+  - speech

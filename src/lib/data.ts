@@ -53,10 +53,34 @@ export interface Project {
   publications?: string[];
 }
 
+/** Summary of a preprint precursor attached to a published-of-record entry. */
+export interface PreprintRef {
+  id: string;
+  venue?: string;
+  url?: string;
+  year?: number;
+  doi?: string;
+  arxiv?: string;
+}
+
+/** Coarse-grained kind of article — orthogonal to `type` (the publication form). */
+export type PublicationCategory =
+  | "original-research"
+  | "methods"
+  | "software"
+  | "review"
+  | "perspective"
+  | "commentary"
+  | "editorial"
+  | "dataset"
+  | "benchmark"
+  | "tutorial";
+
 /** Schema for the curated publications corpus in src/data/publications.yml. */
 export interface Publication {
   id: string;
   type: "journal" | "preprint" | "conference" | "chapter" | "workshop" | "software" | "patent" | "dataset";
+  category: PublicationCategory;
   year: number;
   title: string;
   authors: string[];
@@ -71,8 +95,11 @@ export interface Publication {
   sources?: string[];
   projects?: string[];
   lab_authors?: string[];
+  topics: string[];
+  /** Preprint precursor(s) that have been superseded by this published-of-record
+   *  entry. Only present on the journal/conference/chapter record. */
+  preprints?: PreprintRef[];
   cited_by?: number;
-  superseded_by?: string;
 }
 
 /** Legacy schema for src/data/publist.yml (the manually-curated highlights). */
