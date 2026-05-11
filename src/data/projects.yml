@@ -216,7 +216,7 @@
     integrating speech-feature extraction. Research questions: Can an
     avatar understand child speech? Can LLMs adapt to each child? Can an
     LLM effectively teach vocabulary?
-  funder: MGAIC (MIT Generative AI Consortium) — $75 000, 2025–2026
+  funder: MGAIC (MIT Generative AI Consortium), 2025–2026
   image: /images/projects/riverst-kiva.jpg
   themes: [child-development, llm, speech, education]
   links:
@@ -303,7 +303,7 @@
     gated 3D CNN), Lucie Bierent's on socialization-behavior recognition
     (reaction to name-calling, non-verbal communication, gesture
     prediction), and Bruke Wossenseged's thesis work. # TODO Bruke's topic
-  funder: Simons Foundation (Site PI, $125 000 MIT sub, 2025–2026)
+  funder: Simons Foundation (Site PI, 2025–2026)
   image: /images/projects/sails-placeholder.svg
   themes: [child-development, autism, computer-vision, speech]
   links:
