@@ -3,7 +3,10 @@ import Container from "./Container.astro";
 import { withBase } from "~/lib/url";
 
 const year = new Date().getFullYear();
-const commit = (process.env.GITHUB_SHA ?? process.env.COMMIT_SHA ?? "dev").slice(0, 7);
+// Prefer COMMIT_SHA (the PR head, set by our workflow) over GITHUB_SHA, which on
+// pull_request events is the synthetic merge commit and not findable in branch
+// history.
+const commit = (process.env.COMMIT_SHA ?? process.env.GITHUB_SHA ?? "dev").slice(0, 7);
 const builtAt = new Date().toISOString().replace("T", " ").slice(0, 16) + "Z";
 
 const funders = [
