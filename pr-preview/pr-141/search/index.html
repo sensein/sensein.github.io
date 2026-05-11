@@ -8,7 +8,7 @@
           }
         } catch (_) {}
       })();
-    </script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/pr-preview/pr-141/_astro/about.Bud7kql2.css"></head> <body class="min-h-screen flex flex-col"> <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-(--color-accent) text-white px-3 py-2 rounded-md text-sm">
+    </script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/pr-preview/pr-141/_astro/about.DNSufVBC.css"></head> <body class="min-h-screen flex flex-col"> <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 bg-(--color-accent) text-white px-3 py-2 rounded-md text-sm">
 Skip to content
 </a> <header class="sticky top-0 z-40 border-b border-(--color-border) bg-(--color-canvas)/85 backdrop-blur-md"> <script type="module">function o(t){return t==="light"?"dark":t==="dark"?"system":"light"}function a(t){const e=document.documentElement;t==="light"||t==="dark"?(e.setAttribute("data-theme",t),localStorage.setItem("theme",t)):(e.removeAttribute("data-theme"),localStorage.removeItem("theme"));const l=t==="light"?"Light theme (click for dark)":t==="dark"?"Dark theme (click for system)":"System theme (click for light)";document.querySelectorAll("[data-theme-toggle]").forEach(r=>{r.setAttribute("title",l),r.setAttribute("aria-label",l)})}document.querySelectorAll("[data-theme-toggle]").forEach(t=>{t.addEventListener("click",()=>{a(o(localStorage.getItem("theme")))})});a(localStorage.getItem("theme")??"system");</script><div class="mx-auto w-full px-6 sm:px-8 max-w-6xl ">  <div class="flex h-16 items-center justify-between gap-6"> <a href="/pr-preview/pr-141/" class="flex items-center gap-2.5 text-(--color-ink) hover:text-(--color-accent) transition-colors"> <span class="inline-block leading-none shrink-0"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 812.000000 800.000000" preserveAspectRatio="xMidYMid meet" width="28" height="28" role="img" aria-label="Senseable Intelligence Group">
 <g transform="translate(0.000000,800.000000) scale(0.100000,-0.100000)"
@@ -101,38 +101,31 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
 
     // Hybrid keyword + MiniLM search. Records + embeddings are static files
     // built by scripts/build-search-embeddings.mjs.
-    type Record = {
-      k: "person" | "project" | "publication";
-      t: string;
-      b: string;
-      h: string;
-      y: number | null;
-      g: string;
-      r: string | null;
-      s: string | null;
-    };
+    //
+    // NOTE: This block is rendered as-is (define:vars forces plain JS — no
+    // TypeScript compilation), so no type annotations or `as` casts.
 
-    const input = document.querySelector<HTMLInputElement>("[data-search-input]");
-    const resultsEl = document.querySelector<HTMLOListElement>("[data-results]");
-    const emptyEl = document.querySelector<HTMLElement>("[data-empty]");
-    const countEl = document.querySelector<HTMLElement>("[data-result-count]");
-    const filterBtns = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-kind-filters] button"));
-    const semDot = document.querySelector<HTMLElement>("[data-semantic-dot]");
-    const semLabel = document.querySelector<HTMLElement>("[data-semantic-label]");
+    const input = document.querySelector("[data-search-input]");
+    const resultsEl = document.querySelector("[data-results]");
+    const emptyEl = document.querySelector("[data-empty]");
+    const countEl = document.querySelector("[data-result-count]");
+    const filterBtns = Array.from(document.querySelectorAll("[data-kind-filters] button"));
+    const semDot = document.querySelector("[data-semantic-dot]");
+    const semLabel = document.querySelector("[data-semantic-label]");
     let activeKind = "all";
 
-    let records: Record[] = [];
-    let vectors: Float32Array | null = null; // length = records.length * dim
+    let records = [];
+    let vectors = null; // Float32Array length = records.length * dim
     let dim = 0;
-    let extractor: any = null;
+    let extractor = null;
     let extractorLoadStarted = false;
 
-    function escapeHtml(s: string) {
-      return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
+    function escapeHtml(s) {
+      return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
     }
 
-    // Convert IEEE 754 float16 (Uint16) → float32. Standard formula.
-    function f16ToF32(h: number): number {
+    // IEEE 754 float16 → float32.
+    function f16ToF32(h) {
       const sign = (h & 0x8000) >> 15;
       const exp = (h & 0x7c00) >> 10;
       const mant = h & 0x03ff;
@@ -141,18 +134,19 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
       return (sign ? -1 : 1) * Math.pow(2, exp - 15) * (1 + mant / 1024);
     }
 
-    function setSemanticStatus(state: "off" | "loading" | "ready" | "error", label?: string) {
+    function setSemanticStatus(state, label) {
       if (!semDot || !semLabel) return;
       const map = {
         off: "bg-(--color-border-strong)",
         loading: "bg-(--color-accent)",
         ready: "bg-emerald-500",
         error: "bg-red-500",
-      } as const;
+      };
       semDot.className = `inline-block w-1.5 h-1.5 rounded-full ${map[state]}`;
       if (state === "loading") semDot.classList.add("animate-pulse");
       else semDot.classList.remove("animate-pulse");
-      semLabel.textContent = label ?? `semantic: ${state === "ready" ? "ready" : state === "loading" ? "loading…" : state === "error" ? "unavailable" : "not loaded"}`;
+      semLabel.textContent =
+        label ?? `semantic: ${state === "ready" ? "ready" : state === "loading" ? "loading…" : state === "error" ? "unavailable" : "not loaded"}`;
     }
 
     async function loadIndex() {
@@ -179,11 +173,14 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
 
     async function ensureExtractor() {
       if (extractor) return extractor;
-      if (extractorLoadStarted) return null; // still loading
+      if (extractorLoadStarted) return null;
       extractorLoadStarted = true;
       setSemanticStatus("loading", "semantic: loading model…");
       try {
-        const mod = await import("@xenova/transformers");
+        // jsDelivr ESM build: the inline define:vars script is plain JS,
+        // so a bare specifier like "@xenova/transformers" can't resolve in
+        // the browser. The CDN URL ships a pre-bundled ESM module.
+        const mod = await import("https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2/+esm");
         mod.env.allowLocalModels = false;
         extractor = await mod.pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2");
         setSemanticStatus("ready");
@@ -195,14 +192,14 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
       }
     }
 
-    async function embedQuery(q: string): Promise<Float32Array | null> {
+    async function embedQuery(q) {
       const ex = await ensureExtractor();
       if (!ex) return null;
       const out = await ex(q, { pooling: "mean", normalize: true });
-      return out.data as Float32Array;
+      return out.data;
     }
 
-    function keywordScore(rec: Record, qTokens: string[]): number {
+    function keywordScore(rec, qTokens) {
       if (qTokens.length === 0) return 0;
       const t = rec.t.toLowerCase();
       const b = rec.b.toLowerCase();
@@ -218,7 +215,7 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
       return s;
     }
 
-    function cosineSim(qVec: Float32Array, idx: number): number {
+    function cosineSim(qVec, idx) {
       if (!vectors) return 0;
       const off = idx * dim;
       let s = 0;
@@ -226,7 +223,7 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
       return s; // both unit-normed
     }
 
-    function kindLabel(k: string): string {
+    function kindLabel(k) {
       return k === "person" ? "Person" : k === "project" ? "Project" : "Publication";
     }
 
@@ -241,16 +238,12 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
       let pool = records.map((r, idx) => ({ r, idx }));
       if (activeKind !== "all") pool = pool.filter(({ r }) => r.k === activeKind);
 
-      let hits: { r: Record; idx: number; s: number }[];
+      let hits;
       if (qTokens.length > 0) {
-        // Initial pass: keyword scores so results show instantly.
         hits = pool
           .map(({ r, idx }) => ({ r, idx, s: keywordScore(r, qTokens) }))
           .filter((x) => x.s > 0)
           .sort((a, b) => b.s - a.s);
-
-        // If there's no keyword hit, still show the full pool so semantic
-        // can rank it later.
         if (hits.length === 0) hits = pool.map(({ r, idx }) => ({ r, idx, s: 0 }));
       } else {
         hits = pool.map(({ r, idx }) => ({ r, idx, s: 0 }));
@@ -260,16 +253,13 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
 
       paint(hits, q);
 
-      // Semantic re-rank (async). Only if we have a query and vectors loaded.
       if (qTokens.length === 0 || !vectors) return;
       if (q === lastQuery) return;
       lastQuery = q;
       const qVec = await embedQuery(q);
-      if (myToken !== renderToken) return; // newer query in flight
+      if (myToken !== renderToken) return;
       if (!qVec) return;
 
-      // Blend: keyword (0..100+) normalised by max kw score, weighted 0.4;
-      // cosine (0..1) weighted 0.6.
       const maxKw = Math.max(1, ...hits.map((h) => h.s));
       const blended = pool.map(({ r, idx }) => {
         const kw = keywordScore(r, qTokens) / maxKw;
@@ -277,23 +267,22 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
         return { r, idx, s: 0.4 * kw + 0.6 * sem };
       });
       blended.sort((a, b) => b.s - a.s);
-      // Filter out near-zero matches.
       const filtered = blended.filter((x) => x.s > 0.15).slice(0, 100);
       paint(filtered, q);
     }
 
-    function paint(hits: { r: Record; s: number }[], q: string) {
+    function paint(hits, q) {
       if (hits.length === 0) {
-        resultsEl!.innerHTML = "";
-        emptyEl!.classList.remove("hidden");
-        countEl!.textContent = "No results";
+        resultsEl.innerHTML = "";
+        emptyEl.classList.remove("hidden");
+        countEl.textContent = "No results";
         return;
       }
-      emptyEl!.classList.add("hidden");
-      countEl!.textContent = q
+      emptyEl.classList.add("hidden");
+      countEl.textContent = q
         ? `${hits.length} result${hits.length === 1 ? "" : "s"} for "${q}"`
         : `Showing ${hits.length} item${hits.length === 1 ? "" : "s"} (start typing to filter)`;
-      resultsEl!.innerHTML = hits
+      resultsEl.innerHTML = hits
         .slice(0, 200)
         .map(({ r }) => {
           const meta = [
@@ -316,12 +305,12 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
     }
 
     input?.addEventListener("input", () => {
-      lastQuery = ""; // allow re-ranking
+      lastQuery = "";
       render();
     });
     filterBtns.forEach((btn) =>
       btn.addEventListener("click", () => {
-        activeKind = btn.dataset.kind!;
+        activeKind = btn.dataset.kind;
         filterBtns.forEach((b) => {
           if (b === btn) {
             b.classList.add("border-(--color-accent)", "bg-(--color-accent-soft)", "text-(--color-accent-strong)", "font-medium");
@@ -336,7 +325,6 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
       }),
     );
 
-    // Pre-fill from ?q= and (optional) ?kind=
     const url = new URL(window.location.href);
     const initialQ = url.searchParams.get("q");
     if (initialQ && input) input.value = initialQ;
@@ -354,7 +342,6 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
       });
     }
 
-    // Boot: load the index, render, then load vectors + model in background.
     (async () => {
       try {
         await loadIndex();
@@ -362,9 +349,7 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
         try {
           await loadVectors();
           setSemanticStatus("loading", "semantic: warming up");
-          // Kick off the extractor download too — doesn't block keyword search.
           ensureExtractor().then(() => {
-            // Re-render so a typed query gets re-ranked.
             lastQuery = "";
             render();
           });
@@ -374,7 +359,7 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
         }
       } catch (e) {
         console.error("search failed to initialise", e);
-        countEl!.textContent = "Search failed to load.";
+        if (countEl) countEl.textContent = "Search failed to load.";
       }
     })();
   })();</script>  </main> <footer class="mt-24 border-t border-(--color-border) bg-(--color-surface)/40"> <div class="mx-auto w-full px-6 sm:px-8 max-w-6xl py-12">  <div class="grid gap-10 md:grid-cols-3 text-sm"> <div> <h3 class="text-(--color-ink) font-semibold tracking-tight mb-3">
