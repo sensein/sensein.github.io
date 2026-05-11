@@ -3,22 +3,26 @@ import Container from "./Container.astro";
 import { withBase } from "~/lib/url";
 
 const slides = [
-  { src: "/images/220505-group-lunch.jpg", caption: "The group, May 2022" },
+  {
+    src: "/images/220505-group-lunch.jpg",
+    caption: "The group, May 2022",
+    alt: "Group lunch, May 2022",
+  },
   {
     src: "https://iiif.elifesciences.org/lax:36652%2Felife-36652-fig1-v1.tif/full/1500,/0/default.jpg",
-    caption: "Cortical surface analysis — eLife 2018",
+    alt: "Figure from an eLife publication",
   },
   {
     src: "https://miykael.github.io/nipype_tutorial/static/images/nipype_architecture.png",
-    caption: "Nipype workflow architecture",
+    alt: "Nipype workflow architecture diagram",
   },
   {
     src: "https://pnas.org/cms/10.1073/pnas.1608282113/asset/5ecf6af1-f59a-40ed-9d24-5d1dbff6dac6/assets/graphic/pnas.1608282113fig01.jpeg",
-    caption: "Connectome variability — PNAS 2016",
+    alt: "Figure from a PNAS publication",
   },
   {
     src: "https://jamanetwork.com/data/journals/psych/926165/yoa120057f4.png",
-    caption: "Speech biomarkers — JAMA Psychiatry",
+    alt: "Figure from a JAMA Psychiatry publication",
   },
 ];
 ---
@@ -76,15 +80,17 @@ const slides = [
             >
               <img
                 src={slide.src.startsWith("/") ? withBase(slide.src) : slide.src}
-                alt={slide.caption}
+                alt={slide.alt}
                 loading={i === 0 ? "eager" : "lazy"}
                 class="w-full h-full object-cover"
               />
-              <figcaption
-                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent text-white text-xs px-4 py-3"
-              >
-                {slide.caption}
-              </figcaption>
+              {slide.caption && (
+                <figcaption
+                  class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent text-white text-xs px-4 py-3"
+                >
+                  {slide.caption}
+                </figcaption>
+              )}
             </figure>
           ))}
         </div>
