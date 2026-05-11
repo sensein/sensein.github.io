@@ -1,0 +1,58 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import SectionHeading from "~/components/SectionHeading.astro";
+import { collaborators } from "~/lib/data";
+
+const groups = collaborators();
+---
+<PageLayout
+  eyebrow="Collaborators"
+  title="Working with others"
+  size="wide"
+  lede="Our work is open, our policies are explicit, and our collaboration network spans many institutions."
+>
+  <section class="prose max-w-3xl">
+    <h2>Our collaboration policies</h2>
+    <ul>
+      <li>
+        Authorship is a function of intellectual contribution and we try to minimize
+        author bloat. For multi-institution student collaborations, we identify ahead of
+        time who the primary advisers and collaborators are on a project.
+      </li>
+      <li>
+        Our work is open. However, there have been prior situations where we have
+        applied for patents during collaborations.
+      </li>
+      <li>
+        We tend to share any data we collect and any code we produce under open
+        licenses (data: PDDL, code: Apache 2.0, doc: CC-BY).
+      </li>
+      <li>
+        Any digital research work we produce together should be re-executable and hopefully
+        reproducible / generalizable.
+      </li>
+    </ul>
+  </section>
+
+  {groups.length > 0 && (
+    <section class="mt-16">
+      <SectionHeading
+        eyebrow="Network"
+        title="Active collaborators"
+        description="This list may not always be accurate, but tries to reflect our current active collaborations. If we’ve missed your name or listed incorrect information, please let us know."
+      />
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {groups.map((g) => (
+          <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-5">
+            <h3 class="font-serif text-base font-semibold text-(--color-ink) leading-tight">
+              {g.home}
+            </h3>
+            <ul class="mt-3 space-y-1 text-sm text-(--color-ink-muted)">
+              {g.persons?.map((p) => <li>{p.name}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+</PageLayout>

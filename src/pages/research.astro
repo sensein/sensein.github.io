@@ -1,0 +1,102 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import SectionHeading from "~/components/SectionHeading.astro";
+import ProjectCard from "~/components/ProjectCard.astro";
+import { normalizeImage } from "~/lib/images";
+import { projects } from "~/lib/data";
+
+const all = projects();
+const highlighted = all.filter((p) => p.highlight === 1);
+const heroImage = normalizeImage("/images/multi_sensory_integration.png");
+---
+<PageLayout
+  eyebrow="Research"
+  title="What we work on"
+  size="wide"
+  lede="There are no biological markers for diagnosing mental illness or for indicating how best to treat it. Our group hopes to change that — building robust, predictive models of human health from neuroimaging, speech, and machine learning."
+>
+  <section class="grid lg:grid-cols-[1.6fr_1fr] gap-10 items-start">
+    <div class="prose">
+      <p>
+        A fundamental problem in psychiatry is that there are no biological markers for
+        diagnosing mental illness or for indicating how best to treat it. Treatment
+        decisions are based entirely on symptoms, and doctors and their patients will
+        typically try one treatment, then if it does not work, try another. Our research
+        suggests that individual brain scans and speaking patterns can hold valuable
+        information for guiding psychiatrists and patients. Current areas include
+        depression, suicide, anxiety disorders, autism, Parkinson disease, and brain
+        tumors.
+      </p>
+      <p>
+        To support this broader goal, our group develops novel analytic platforms that use
+        such information to create robust, predictive models around human health. We
+        believe that solving this problem will require complex integration of different
+        types of sensors into an adaptive learning system together with patient,
+        caregiver, and community feedback.
+      </p>
+      <p>
+        Our research interests span computer science and neuroscience — specifically applied
+        machine learning, signal processing, and translational medicine. Our portfolio
+        comprises projects on spoken communication, brain imaging, and informatics to
+        address gaps in three areas: the neural basis and translational applications of
+        speaking, precision psychiatry and medicine, and preserving information for
+        reproducible research.
+      </p>
+      <p>
+        Many of the tools we develop can be used across domains. If you have a need we can
+        address, we would like to hear from you. If you have solved problems associated
+        with any of the projects below, we would love to hear from you too — for us, a
+        solution typically implies available data, code, and/or replicated results.
+      </p>
+    </div>
+    <figure class="lg:sticky lg:top-24">
+      <img
+        src={heroImage}
+        alt="Multi-sensory integration diagram"
+        class="rounded-lg border border-(--color-border) bg-(--color-surface) w-full"
+      />
+    </figure>
+  </section>
+
+  <section class="mt-20">
+    <SectionHeading
+      id="highlights"
+      eyebrow="Highlights"
+      title="Featured projects"
+    />
+    <div class="grid md:grid-cols-2 gap-5">
+      {highlighted.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <SectionHeading id="full-list" eyebrow="Index" title="All projects" />
+    <ul class="divide-y divide-(--color-border) border-y border-(--color-border)">
+      {all.map((p) => (
+        <li class="py-5">
+          <h3 class="font-medium text-(--color-ink) leading-snug">{p.title}</h3>
+          {p.authors && (
+            <p class="mt-1 text-sm text-(--color-ink-muted) italic">{p.authors}</p>
+          )}
+          {p.description && (
+            <p class="mt-2 text-sm text-(--color-ink-muted) leading-relaxed">
+              {p.description}
+            </p>
+          )}
+          {p.link?.url && (
+            <p class="mt-2">
+              <a
+                href={p.link.url}
+                target="_blank"
+                rel="noopener"
+                class="text-sm text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+              >
+                {p.link.display ?? "Visit"} →
+              </a>
+            </p>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+</PageLayout>

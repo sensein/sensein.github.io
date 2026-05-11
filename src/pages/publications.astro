@@ -1,0 +1,82 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import SectionHeading from "~/components/SectionHeading.astro";
+import PublicationCard from "~/components/PublicationCard.astro";
+import { publist } from "~/lib/data";
+
+const highlighted = publist().filter((p) => p.highlight === 1);
+
+const publistDetails = {
+  firstname: "Satrajit",
+  middlename: "S",
+  lastname: "Ghosh",
+  email: "satra@mit.edu",
+  website: "//www.mit.edu/~satra",
+  address: "",
+  biosketch: "",
+};
+---
+<PageLayout
+  eyebrow="Publications"
+  title="Publications"
+  size="wide"
+  lede="Featured publications below; the full archive is fetched live from PublicationsList.org. For a complete and continually-updated list, see Google Scholar."
+>
+  <p class="text-sm text-(--color-ink-muted) -mt-4 mb-8">
+    For a complete list, see
+    <a
+      href="https://scholar.google.com/citations?user=QnYCqUsAAAAJ&hl=en"
+      target="_blank"
+      rel="noopener"
+      class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+    >Google Scholar</a>.
+  </p>
+
+  <section>
+    <SectionHeading id="highlights" eyebrow="Featured" title="Highlights" />
+    <div class="grid md:grid-cols-2 gap-5">
+      {highlighted.map((pub) => <PublicationCard pub={pub} />)}
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <SectionHeading
+      id="full-list"
+      eyebrow="Archive"
+      title="Full list"
+      description="Live feed from PublicationsList.org — conference papers follow journal articles."
+    />
+    <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-6">
+      <div id="publistdiv">Loading publications…</div>
+      <div id="tagslist" style="display:none;"></div>
+      <div id="authorslist" style="display:none;"></div>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ publistDetails }}>
+    window.details = publistDetails;
+    window.readonly = "1";
+    window.rootpath = "//publicationslist.org/";
+    window.ownpage = "1";
+    window.userid = "satra";
+    window.mode = "publish";
+    window.nothumbs = 0;
+    window.publistBrand = "PublicationsList.org";
+    window.localInstall = 0;
+    window.citationFormat = "default";
+    window.previewMode = "";
+    window.uptodate = "1";
+    window.recent = false;
+  </script>
+  <script is:inline src="https://publicationslist.org/data/satra/publist.js"></script>
+  <script is:inline src="https://publicationslist.org/schema.js?"></script>
+  <!-- jQuery 3.7.1 + Migrate 3.4.1: bumps from the legacy 1.9.1 to a
+       patched modern version. Migrate plugin shims deprecated APIs that
+       publicationslist.org's BROWSER/DOM/pubutil scripts may still call. -->
+  <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script is:inline src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-+JBSPVNa2pE/zqGE8YfQ4Bphzv1plE0FjPDtxYwhe1U=" crossorigin="anonymous"></script>
+  <script is:inline src="https://publicationslist.org/data/satra/BROWSER.js?1384435485"></script>
+  <script is:inline src="https://publicationslist.org/data/satra/DOM.js?1384435485"></script>
+  <script is:inline src="https://publicationslist.org/data/satra/pubutil.js?1434354606"></script>
+  <script is:inline src="https://publicationslist.org/data/satra/pubinit.js?1384435485"></script>
+</PageLayout>

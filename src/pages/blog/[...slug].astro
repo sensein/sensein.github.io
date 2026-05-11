@@ -1,0 +1,56 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Container from "~/components/Container.astro";
+import { withBase } from "~/lib/url";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  return posts.map((post) => {
+    const m = post.id.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
+    const slug = m ? m[4] : post.id;
+    const date = m
+      ? new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3])))
+      : null;
+    return {
+      params: { slug },
+      props: { post, date },
+    };
+  });
+}
+
+const { post, date } = Astro.props;
+const { Content } = await render(post);
+---
+<BaseLayout title={post.data.title} description={post.data.excerpt}>
+  <Container size="narrow" class="pt-14 pb-6">
+    <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
+      <a href={withBase("/blog")} class="hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+        ← Blog
+      </a>
+    </p>
+    <h1
+      class="mt-4 font-serif text-4xl md:text-5xl font-semibold tracking-tight text-(--color-ink) leading-[1.05]"
+    >
+      {post.data.title}
+    </h1>
+    <div class="mt-5 flex items-center gap-3 text-sm text-(--color-ink-muted)">
+      {date && (
+        <time>
+          {date.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            timeZone: "UTC",
+          })}
+        </time>
+      )}
+      {post.data.author && <span>· {post.data.author}</span>}
+    </div>
+  </Container>
+  <Container size="narrow" class="py-10">
+    <article class="prose">
+      <Content />
+    </article>
+  </Container>
+</BaseLayout>

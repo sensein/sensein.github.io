@@ -1,0 +1,29 @@
+---
+import logoSvg from "~/assets/lab_logo.svg?raw";
+
+interface Props {
+  size?: number;
+  class?: string;
+  title?: string;
+}
+const { size = 28, class: className = "", title } = Astro.props;
+
+// Inline the SVG so currentColor can theme it. Strip XML prolog/DOCTYPE/metadata,
+// then drop any pre-existing width/height/style on the root <svg> so our props win.
+const inner = logoSvg
+  .replace(/<\?xml[^>]*\?>\s*/i, "")
+  .replace(/<!DOCTYPE[^>]*>\s*/i, "")
+  .replace(/<metadata>[\s\S]*?<\/metadata>\s*/i, "")
+  .replace(/<svg\b([^>]*)>/i, (_, attrs) => {
+    const cleaned = attrs
+      .replace(/\s+(width|height|style)="[^"]*"/gi, "")
+      .replace(/\s+xml:space="[^"]*"/gi, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    const aria = title
+      ? ` role="img" aria-label="${title}"`
+      : ' role="img" aria-hidden="true"';
+    return `<svg ${cleaned} width="${size}" height="${size}"${aria}>`;
+  });
+---
+<span class={`inline-block leading-none ${className}`} set:html={inner} />

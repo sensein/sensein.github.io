@@ -1,0 +1,8 @@
+# Active students. Add entries with the same shape as team_members.yml:
+#
+# - name: Full Name
+#   photo: //example.com/photo.jpg
+#   info: Short role description
+#   email: name@mit.edu
+#   number_educ: 1
+#   education1: Degree, Institution

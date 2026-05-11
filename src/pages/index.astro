@@ -1,0 +1,53 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Container from "~/components/Container.astro";
+import Hero from "~/components/Hero.astro";
+import NewsList from "~/components/NewsList.astro";
+import ProjectCard from "~/components/ProjectCard.astro";
+import SectionHeading from "~/components/SectionHeading.astro";
+import { projects } from "~/lib/data";
+import { withBase } from "~/lib/url";
+
+const highlighted = projects().filter((p) => p.highlight === 1);
+---
+<BaseLayout>
+  <Hero />
+
+  <Container size="wide" class="py-20">
+    <div class="grid lg:grid-cols-[2fr_1fr] gap-12 lg:gap-16">
+      <section>
+        <SectionHeading
+          eyebrow="Research highlights"
+          title="Selected projects"
+          description="A snapshot of active work spanning data coordination, neurophysiology archives, knowledgebases, and speech health."
+        />
+        <div class="grid sm:grid-cols-2 gap-5">
+          {highlighted.map((proj) => (
+            <ProjectCard project={proj} featured />
+          ))}
+        </div>
+        <p class="mt-6">
+          <a
+            href={withBase("/research")}
+            class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+          >
+            See all research →
+          </a>
+        </p>
+      </section>
+
+      <aside class="lg:sticky lg:top-24 self-start">
+        <SectionHeading eyebrow="Latest" title="News" />
+        <NewsList limit={6} compact />
+        <p class="mt-6">
+          <a
+            href={withBase("/news")}
+            class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+          >
+            All news →
+          </a>
+        </p>
+      </aside>
+    </div>
+  </Container>
+</BaseLayout>
