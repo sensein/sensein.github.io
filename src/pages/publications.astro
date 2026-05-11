@@ -80,14 +80,15 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
 
   <!-- Topic areas summary; cards are clickable filters -->
   <Container size="wide" class="py-6">
-    <SectionHeading title="Topic areas" description="Click a topic to filter the list below by that tag." />
+    <SectionHeading title="Topic areas" description="Click one or more topics to filter the list below. Multiple selections combine with OR." />
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
       {topicCardData.map((t) => (
         <button
           type="button"
           data-topic-card
           data-topic-tag={t.tag ?? ""}
-          class="text-left rounded-lg border border-(--color-border) bg-(--color-canvas) p-4 hover:border-(--color-accent) hover:shadow-sm transition-all"
+          aria-pressed="false"
+          class="text-left rounded-lg border border-(--color-border) bg-(--color-canvas) p-4 hover:border-(--color-accent) hover:shadow-sm transition-all aria-pressed:border-(--color-accent) aria-pressed:bg-(--color-accent-soft) aria-pressed:shadow-sm"
         >
           <p class="font-medium text-(--color-ink)">{t.label}</p>
           <p class="mt-1 text-xs text-(--color-ink-muted) leading-snug">{t.description}</p>
@@ -261,6 +262,21 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
         section.style.display = hasVisible ? "" : "none";
       }
       if (counter) counter.textContent = String(visible);
+      syncTopicCards();
+    }
+
+    function syncTopicCards() {
+      const selected = new Set(
+        Array.from(
+          document.querySelectorAll<HTMLInputElement>(
+            'fieldset[data-filter-group="topic"] input[type=checkbox]:checked',
+          ),
+        ).map((cb) => cb.value),
+      );
+      document.querySelectorAll<HTMLButtonElement>("[data-topic-card]").forEach((card) => {
+        const tag = card.dataset.topicTag ?? "";
+        card.setAttribute("aria-pressed", selected.has(tag) ? "true" : "false");
+      });
     }
 
     function setGroupSelection(key: string, value: string, on: boolean | "toggle") {
