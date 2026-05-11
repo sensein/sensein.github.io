@@ -1,0 +1,68 @@
+---
+import type { Project } from "~/lib/data";
+import { normalizeImage } from "~/lib/images";
+
+interface Props {
+  project: Project;
+  featured?: boolean;
+}
+const { project, featured = false } = Astro.props;
+const image = project.image ? normalizeImage(project.image) : null;
+---
+<article
+  class={`group rounded-lg border border-(--color-border) bg-(--color-canvas) overflow-hidden hover:border-(--color-border-strong) hover:shadow-sm transition-all ${
+    featured ? "" : ""
+  }`}
+>
+  {image && (
+    <a
+      href={project.link?.url ?? "#"}
+      class="block aspect-[16/9] bg-(--color-surface) overflow-hidden"
+      target={project.link?.url ? "_blank" : undefined}
+      rel={project.link?.url ? "noopener" : undefined}
+    >
+      <img
+        src={image}
+        alt={project.title}
+        loading="lazy"
+        class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+      />
+    </a>
+  )}
+  <div class="p-5">
+    <h3 class="font-serif text-lg font-semibold text-(--color-ink) leading-snug">
+      {project.title}
+    </h3>
+    {project.authors && (
+      <p class="mt-1 text-xs text-(--color-ink-faint) italic">
+        {project.authors}
+      </p>
+    )}
+    {project.description && (
+      <p class="mt-3 text-sm text-(--color-ink-muted) leading-relaxed">
+        {project.description}
+      </p>
+    )}
+    <div class="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+      {project.link?.url && (
+        <a
+          href={project.link.url}
+          target="_blank"
+          rel="noopener"
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+        >
+          {project.link.display ?? "Visit"} →
+        </a>
+      )}
+      {project.news2 && (
+        <span
+          class="text-(--color-ink-muted) [&_a]:text-(--color-accent) [&_a:hover]:text-(--color-accent-strong) [&_a]:underline-offset-3 [&_a:hover]:underline"
+          set:html={project.news2}
+        />
+      )}
+    </div>
+    {project.news1 && (
+      <p class="mt-2 text-sm text-red-600 dark:text-red-400 font-medium" set:html={project.news1} />
+    )}
+  </div>
+</article>

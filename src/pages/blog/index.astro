@@ -1,0 +1,50 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import { withBase } from "~/lib/url";
+
+function parseFromId(id: string): { date: Date | null; slug: string } {
+  const match = id.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
+  if (!match) return { date: null, slug: id };
+  const [, y, m, d, slug] = match;
+  return { date: new Date(Number(y), Number(m) - 1, Number(d)), slug };
+}
+
+const posts = (await getCollection("posts"))
+  .map((p) => ({ ...p, ...parseFromId(p.id) }))
+  .sort((a, b) => (b.date?.getTime() ?? 0) - (a.date?.getTime() ?? 0));
+---
+<PageLayout
+  eyebrow="Writing"
+  title="Blog"
+  lede="Notes from conferences, projects, and tools we’re building."
+>
+  <ul class="divide-y divide-(--color-border) border-y border-(--color-border)">
+    {posts.map((post) => (
+      <li class="py-6">
+        <a
+          href={withBase(`/blog/${post.slug}`)}
+          class="group flex flex-col gap-1"
+        >
+          {post.date && (
+            <time class="text-xs uppercase tracking-wider text-(--color-ink-faint)">
+              {post.date.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            </time>
+          )}
+          <h2 class="font-serif text-xl font-semibold text-(--color-ink) group-hover:text-(--color-accent) transition-colors">
+            {post.data.title}
+          </h2>
+          {post.data.author && (
+            <p class="text-sm text-(--color-ink-muted) italic">
+              {post.data.author}
+            </p>
+          )}
+        </a>
+      </li>
+    ))}
+  </ul>
+</PageLayout>

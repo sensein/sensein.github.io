@@ -1,0 +1,39 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+---
+<PageLayout
+  eyebrow="Colophon"
+  title="About this website"
+  lede="How this site is built and where the content lives."
+>
+  <div class="prose max-w-3xl">
+    <p>
+      This site is built with <a href="https://astro.build">Astro</a> and
+      <a href="https://tailwindcss.com">Tailwind CSS</a>, deployed via GitHub Pages.
+      All content lives in YAML data files and Markdown — easy to edit by hand or in the
+      GitHub UI.
+    </p>
+    <h2>Where to edit content</h2>
+    <ul>
+      <li>People — <code>src/data/team_members.yml</code>, <code>students.yml</code>, <code>alumni_members.yml</code></li>
+      <li>Projects — <code>src/data/projects.yml</code></li>
+      <li>Publications — <code>src/data/papers.yml</code>, <code>publist.yml</code></li>
+      <li>News — <code>src/data/news.yml</code></li>
+      <li>Collaborators — <code>src/data/collaborators.yml</code></li>
+      <li>Blog posts — <code>src/content/posts/*.md</code></li>
+      <li>Page copy — <code>src/pages/*.astro</code></li>
+    </ul>
+    <h2>Previewing changes</h2>
+    <p>
+      Every pull request gets an isolated preview at
+      <code>sensein.group/pr-preview/pr-N/</code> automatically — open a PR and watch the
+      checks for the link.
+    </p>
+    <h2>Lineage</h2>
+    <p>
+      The earlier version of this site was adapted from the
+      <a href="https://github.com/mpa139/allanlab">Allan Lab</a> Jekyll template (MIT
+      licensed). This rewrite preserves the YAML-driven approach.
+    </p>
+  </div>
+</PageLayout>

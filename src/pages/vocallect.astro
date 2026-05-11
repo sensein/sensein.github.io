@@ -1,0 +1,51 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import { withBase } from "~/lib/url";
+---
+<PageLayout
+  eyebrow="Project"
+  title="Vocallect"
+  lede="Detecting speech biomarkers of communication disorders."
+>
+  <div class="prose max-w-3xl">
+    <p>
+      <strong>Overall aim:</strong> To understand and classify the impacts that
+      communication disorders may have on speech production and acoustic quality.
+    </p>
+    <p>
+      <strong>Team members:</strong> Kenny Nguyen, Daniel Low, Satra Ghosh.<br />
+      <strong>Collaborators:</strong> Phillip Song.
+    </p>
+
+    <img
+      src={withBase("/images/Vocallect Image.png")}
+      alt="Vocallect"
+      class="my-6"
+    />
+
+    <h2>Questions we are trying to answer</h2>
+    <ul>
+      <li>Can voice recordings be used to diagnose communication disorders and voice health?</li>
+      <li>Are there disorder-specific acoustic biomarkers?</li>
+      <li>Can we create more easily accessible, home-based screening and tracking tools?</li>
+    </ul>
+
+    <p>
+      Communication disorders adversely impact productivity, reduce quality of life, and
+      may be associated with life-threatening malignancies or neoplasms. The majority of
+      communication disorders are diagnosed by a surgical specialist based on a laryngeal
+      exam. Overlap in identifiable symptoms is common, however, leading to a degree of
+      subjectivity in their diagnosis. Additionally, these clinics are not readily
+      accessible in many regions.
+    </p>
+    <p>
+      Our study is interested in exploring alternative methods for diagnosing
+      communication disorders. Advances in technology and smartphones have led to
+      suggestions that voice recordings, which hold rich information on vocal tract
+      physiology, may be used to distinguish between different disorders. Thus, we hope
+      to collect acoustic samples of communication disorders to understand and delineate
+      disorder-specific acoustic biomarkers, enabling more accessible, home-based
+      screening tools for diagnosis and tracking.
+    </p>
+  </div>
+</PageLayout>

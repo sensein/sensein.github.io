@@ -1,0 +1,73 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import { withBase } from "~/lib/url";
+---
+<PageLayout
+  eyebrow="Project"
+  title="Mumble Melody"
+  lede="Musically modulated auditory feedback to increase fluency for people who stutter."
+>
+  <div class="prose max-w-3xl">
+    <p>
+      <strong>Overall aim:</strong> To increase stuttering fluency utilizing altered
+      auditory feedback (AAF) in the form of a mobile application.
+    </p>
+    <p>
+      <strong>Members:</strong> Rébecca Kleinberger, Alisha Kodibagkar, Megha Vemuri,
+      Akito van Troyer, Satrajit Ghosh.
+    </p>
+
+    <img
+      src={withBase("/images/Mumble_Melody_1.jpg")}
+      alt="Mumble Melody"
+      class="my-6"
+    />
+
+    <h2>Specific goals</h2>
+    <ul>
+      <li>Create a simple and effective medical tool</li>
+      <li>Improve quality of life for People Who Stutter (PWS)</li>
+      <li>Learn more about speech functions</li>
+    </ul>
+
+    <h2>Project description</h2>
+    <p>
+      Stuttering is a condition characterized by involuntary, periodic disturbances in
+      speech fluency, usually via sound repetitions, blockages, or prolongations. This
+      condition improves when an individual’s speech is played back to them in an altered
+      manner — most famously when delayed by fractions of a second, but also when the
+      frequency is shifted, when masked with white noise, and when reading in choral
+      speech. This phenomenon of altered feedback-induced fluency is theorized to result
+      from a reduced ability to detect small errors in articulation that occur in
+      stuttering, which reduces its inhibition on speech initiation and output via the
+      feedback mechanism.
+    </p>
+    <p>
+      In people who stutter, there is both structural and functional evidence of atypical
+      hemispheric lateralization of speech and language. People who stutter, when
+      speaking fluently, tend to activate the right hemisphere during speech tasks. The
+      white matter integrity is disrupted on the left. This rightward shift of speech
+      function may be compensatory (as opposed to causal). Trials comparing fluent versus
+      nonfluent trials in people who stutter reveal the former to be associated with
+      activity in the right hemisphere and the latter with the left hemisphere.
+    </p>
+    <p>
+      Mumble Melody is interested in working with people who stutter (PWS) to improve
+      their fluency utilizing this information. We have created a mobile application that
+      transforms the user’s voice through their microphone input and plays it back to
+      their headphones in real time. These transformations come in the form of AAF with
+      options to play the voice unaltered, reverberated, whispered, or with a harmonious
+      effect. This tool is meant to be more efficient, affordable, and simple than
+      traditional AAF devices or other stuttering therapies.
+    </p>
+
+    <h2>Publications</h2>
+    <p>
+      Kleinberger Rébecca, George Stefanakis, Satrajit Ghosh, Tod Machover, Mike Erkinnen:
+      <a href="https://web.media.mit.edu/~rebklein/downloads/papers/RK/SNLabstract.pdf">
+        Fluency Effects of Novel Acoustic Vocal Transformation in People Who Stutter: An
+        Exploratory Behavioral Study
+      </a>, SNL 2019: Society for the Neurobiology of Language, Helsinki, Finland, August 2019.
+    </p>
+  </div>
+</PageLayout>

@@ -1,0 +1,99 @@
+---
+import { withBase, isActive } from "~/lib/url";
+import Container from "./Container.astro";
+
+const nav = [
+  { label: "Research", href: "/research" },
+  { label: "Publications", href: "/publications" },
+  { label: "Team", href: "/team" },
+  { label: "Collaborators", href: "/collab" },
+  { label: "News", href: "/news" },
+  { label: "Blog", href: "/blog" },
+  { label: "Openings", href: "/openings" },
+];
+
+const pathname = Astro.url.pathname;
+---
+<header
+  class="sticky top-0 z-40 border-b border-(--color-border) bg-(--color-canvas)/85 backdrop-blur-md"
+>
+  <Container size="wide">
+    <div class="flex h-16 items-center justify-between gap-6">
+      <a
+        href={withBase("/")}
+        class="flex items-center gap-2.5 text-(--color-ink) hover:text-(--color-accent) transition-colors"
+      >
+        <span aria-hidden="true" class="grid place-items-center">
+          <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5" opacity="0.4" />
+            <path d="M5 16c2.5 0 2.5-7 5-7s2.5 14 5 14 2.5-9 5-9 2.5 4 5 4 1-2 2-2"
+              stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="font-semibold tracking-tight text-[15px]">Senseable Intelligence Group</span>
+      </a>
+      <button
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        data-nav-toggle
+        class="md:hidden inline-flex items-center justify-center rounded-md border border-(--color-border) p-2 text-(--color-ink)"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <nav class="hidden md:flex items-center gap-1 text-sm">
+        {nav.map((item) => {
+          const active = isActive(pathname, item.href);
+          return (
+            <a
+              href={withBase(item.href)}
+              class={`px-3 py-2 rounded-md transition-colors ${
+                active
+                  ? "text-(--color-accent) bg-(--color-accent-soft)"
+                  : "text-(--color-ink-muted) hover:text-(--color-ink) hover:bg-(--color-surface)"
+              }`}
+              aria-current={active ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          );
+        })}
+      </nav>
+    </div>
+    <nav data-nav-mobile class="hidden md:hidden pb-4 -mt-1">
+      <div class="flex flex-col gap-1 text-sm border-t border-(--color-border) pt-3">
+        {nav.map((item) => {
+          const active = isActive(pathname, item.href);
+          return (
+            <a
+              href={withBase(item.href)}
+              class={`px-3 py-2 rounded-md transition-colors ${
+                active
+                  ? "text-(--color-accent) bg-(--color-accent-soft)"
+                  : "text-(--color-ink-muted) hover:text-(--color-ink) hover:bg-(--color-surface)"
+              }`}
+              aria-current={active ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          );
+        })}
+      </div>
+    </nav>
+  </Container>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>("[data-nav-toggle]");
+  const menu = document.querySelector<HTMLElement>("[data-nav-mobile]");
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      const open = menu.classList.toggle("hidden") === false;
+      btn.setAttribute("aria-expanded", String(open));
+    });
+  }
+</script>

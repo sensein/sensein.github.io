@@ -6,3 +6,15 @@ _site
 .idea
 .ruby-version
 vendor/
+
+# Astro / Node
+node_modules
+dist
+.astro
+.env
+.env.*
+!.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

@@ -1,0 +1,24 @@
+---
+import { sortedNews } from "~/lib/data";
+
+interface Props {
+  limit?: number;
+  compact?: boolean;
+}
+const { limit, compact = false } = Astro.props;
+const all = sortedNews();
+const items = typeof limit === "number" ? all.slice(0, limit) : all;
+---
+<ul class={`space-y-${compact ? "4" : "5"}`}>
+  {items.map((item) => (
+    <li class="flex flex-col gap-1 border-l-2 border-(--color-border) pl-4">
+      <time class="text-xs uppercase tracking-wider text-(--color-ink-faint)">
+        {item.date}
+      </time>
+      <p
+        class="text-sm text-(--color-ink) leading-relaxed [&_a]:text-(--color-accent) [&_a:hover]:text-(--color-accent-strong) [&_a]:underline-offset-3 [&_a:hover]:underline"
+        set:html={item.headline}
+      />
+    </li>
+  ))}
+</ul>

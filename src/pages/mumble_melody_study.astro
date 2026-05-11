@@ -1,0 +1,116 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import { withBase } from "~/lib/url";
+---
+<PageLayout
+  eyebrow="Study"
+  title="Mumble Melody Study"
+  lede="A one-month clinical trial exploring new auditory feedback approaches to help increase fluency for People Who Stutter (PWS)."
+>
+  <div class="prose max-w-3xl">
+    <img
+      src={withBase("/images/Mumble_Melody_logo.jpg")}
+      alt="Mumble Melody logo"
+      class="my-6 max-w-[120px]"
+    />
+
+    <h2>Who we are</h2>
+    <p>
+      We are a group of researchers from MIT running a 1-month clinical trial exploring
+      new auditory feedback approaches to help increase fluency for People Who Stutter
+      (PWS). Our application Mumble Melody provides different modes that alter your voice
+      in real time. The Mumble Melody app is a work-in-progress based on our research
+      that aims to gather user feedback and better understand what aspects of the
+      experience are most important for PWS.
+    </p>
+
+    <p>To be eligible for this study, you must:</p>
+    <ul>
+      <li>Identify as a person who stutters</li>
+      <li>Have a compatible iPhone, iPad or Mac</li>
+      <li>Have a SEPARATE browser-supporting device with a microphone</li>
+      <li>Be 18-years-old or older</li>
+      <li>Live in the United States</li>
+    </ul>
+    <p>
+      If you are eligible and are interested in participating, please fill out this form:
+      <a href="https://redcap.link/mumblemelodystudy">redcap.link/mumblemelodystudy</a>.
+    </p>
+
+    <img
+      src={withBase("/images/Mumble_Melody_2.jpg")}
+      alt="Mumble Melody participant"
+      class="my-6"
+    />
+
+    <h2>Background</h2>
+    <p>
+      Stuttering affects 1% of adults and 8% of children, and there are 70 million PWS
+      worldwide. Stuttering-like-disfluencies include blocks, repetitions, and
+      prolongations. While there is no cure for stuttering, the Mumble Melody team is
+      investigating audio-based approaches that may help increase fluency. Previous
+      research has looked at simple vocal transformations — particularly pitch/frequency
+      shifts and delays — but none have altered the acoustic landscapes using digital
+      technologies that enable more complexity and nuance. Our data shows our novel modes
+      to have extended benefits compared with pitch shifts and delays in terms of
+      effects, pleasantness, and control.
+    </p>
+
+    <h2>About this study</h2>
+    <p>
+      The purpose of this study is to use altered auditory vocal feedback to increase
+      fluency in people who stutter and to examine changes in this effect over the course
+      of a one-month period occurring outside the laboratory setting. It has three
+      components: (1) daily sessions on your mobile device using an iOS app (time
+      flexible); (2) a 10–15 minute survey at the beginning and end of the study; (3) a
+      15-minute eligibility screening, one 40-minute baseline session at the beginning of
+      week 1, and four 30-minute testing sessions at the end of each week, on your
+      computer using a web platform for four weeks. We won’t be collecting any personal
+      data or voice data. <a href="https://tinyurl.com/mumblemelodyapp">Here</a> is a
+      link to download the app.
+    </p>
+
+    <img
+      src={withBase("/images/1 Month Study Flyer.png")}
+      alt="1 month study flyer"
+      class="my-6"
+    />
+
+    <h2>Disclaimer</h2>
+    <p>
+      The approach provided in our study does not intend to cure or fix stuttering.
+      Stuttering is a very complex condition, still not completely understood by the
+      research community, and it comes with influential social and identity-forging
+      elements. Our goal is to gather feedback from potential users to help improve the
+      science and research on stuttering. Please be aware that the research is ongoing,
+      and Musically Modulated Auditory Feedback might not work for all users. The Mumble
+      Melody application will automatically deactivate in about a month.
+    </p>
+
+    <h2>Will it work on my device?</h2>
+    <ul>
+      <li>iPhone, iOS 12.0 or later</li>
+      <li>iPad, iPadOS 12.0 or later</li>
+      <li>Mac, macOS 11.0 or later, with Apple M1 chip or later</li>
+      <li>iPod touch, iOS 12.0 or later</li>
+    </ul>
+
+    <h2>Contact us</h2>
+    <p>
+      If you have any questions or concerns, contact us at
+      <a href="mailto:mumblemelody@mit.edu">mumblemelody@mit.edu</a>.
+    </p>
+
+    <h2>Stuttering study mailing list</h2>
+    <p>
+      We are regularly launching new studies to support research on stuttering. If you
+      are interested in being contacted to participate in such studies, please fill out
+      <a href="https://forms.gle/KbGgLA5xjbnkr46A8">this form</a>.
+    </p>
+
+    <h2>Learn more about our research</h2>
+    <p>
+      <a href={withBase("/mumble_melody_project")}>About the Mumble Melody project →</a>
+    </p>
+  </div>
+</PageLayout>

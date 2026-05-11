@@ -1,0 +1,26 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Container from "~/components/Container.astro";
+import { withBase } from "~/lib/url";
+---
+<BaseLayout title="Not found">
+  <Container size="narrow" class="py-32 text-center">
+    <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
+      404
+    </p>
+    <h1
+      class="mt-4 font-serif text-4xl md:text-5xl font-semibold tracking-tight text-(--color-ink)"
+    >
+      Page not found
+    </h1>
+    <p class="mt-4 text-(--color-ink-muted)">
+      The page you tried to reach doesn’t exist or has moved.
+    </p>
+    <a
+      href={withBase("/")}
+      class="mt-8 inline-flex items-center gap-2 rounded-md bg-(--color-accent) hover:bg-(--color-accent-strong) text-white px-5 py-2.5 text-sm font-medium transition-colors"
+    >
+      ← Back home
+    </a>
+  </Container>
+</BaseLayout>

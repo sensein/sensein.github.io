@@ -1,0 +1,48 @@
+---
+import PageLayout from "~/layouts/PageLayout.astro";
+import SectionHeading from "~/components/SectionHeading.astro";
+import PublicationCard from "~/components/PublicationCard.astro";
+import { publist, papers, parseLooseDate } from "~/lib/data";
+
+const highlighted = publist().filter((p) => p.highlight === 1);
+const fullList = [...papers()].sort((a, b) => {
+  const da = parseLooseDate(a.date)?.getTime() ?? 0;
+  const db = parseLooseDate(b.date)?.getTime() ?? 0;
+  return db - da;
+});
+---
+<PageLayout
+  eyebrow="Publications"
+  title="Publications"
+  size="wide"
+  lede="Featured work and a chronological list of recent papers. For the complete archive, see Google Scholar."
+>
+  <p class="text-sm text-(--color-ink-muted) -mt-4 mb-8">
+    For a complete list, see
+    <a
+      href="https://scholar.google.com/citations?user=QnYCqUsAAAAJ&hl=en"
+      target="_blank"
+      rel="noopener"
+      class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+    >Google Scholar</a>.
+  </p>
+
+  <section>
+    <SectionHeading id="highlights" eyebrow="Featured" title="Highlights" />
+    <div class="grid md:grid-cols-2 gap-5">
+      {highlighted.map((pub) => <PublicationCard pub={pub} />)}
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <SectionHeading
+      id="full-list"
+      eyebrow="Recent"
+      title="Recent papers"
+      description="Sorted by year, most recent first."
+    />
+    <div class="divide-y divide-(--color-border) border-y border-(--color-border)">
+      {fullList.map((pub) => <PublicationCard pub={pub} variant="compact" />)}
+    </div>
+  </section>
+</PageLayout>

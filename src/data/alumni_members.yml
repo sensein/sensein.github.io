@@ -1,0 +1,478 @@
+- name: Jeff Mentch
+  photo: //shbtphd.hms.harvard.edu/sites/g/files/omnuum5491/files/styles/hwp_4_5__1380x1730/public/shbtphd/files/mentch_jeff.jpg?itok=Dz87-kOF
+  info: PhD Student
+  email: jsmentch@mit.edu
+  duration: 2020 - 2025
+  number_educ: 2
+  education1: BS Biology, Penn State
+  education2: AM Digital Musics, Dartmouth College
+
+- name: Fabio Catania
+  photo: ../images/fabio_catania_photo.jpg
+  info: Postdoctoral research fellow, MIT
+  email: fabiocat@mit.edu
+  duration: 2022 - 2025
+  number_educ: 3
+  education1: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
+  education2: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
+  education3: Ph.D. in Information Technology @ Politecnico di Milano, Italy
+
+- name: Bruke Wossenseged
+  photo: ../images/bruke_wossenseged.jpeg
+  info: MEng Student, MIT
+  email: brukew@mit.edu
+  duration: 2024 - 2025
+  number_educ: 2
+  education1: MEng in Electrical Engineering and Computer Science, MIT
+  education2: B.S. in Electrical Engineering and Computer Science, MIT
+
+- name: Isaac Bevers
+  photo: ../images/isaac_bevers.jpeg
+  info: Computational Technical Associate I
+  email: isaacb@mit.edu
+  duration: 2024 - 2025
+  number_educ: 1
+  education1: B.S. in Symbolic Systems, Stanford University
+
+- name: Miles Silva
+  photo: ../images/non_descript_photo.png
+  info: MEng Student, MIT
+  email: mbsilva@mit.edu
+  duration: 2024 - 2025
+  number_educ: 2
+  education1: MEng in Computation and Cognition, MIT
+  education2: B.S. in Computation and Cognition, MIT
+
+- name: Maedbh King
+  photo: ../images/maedbhking.jpg
+  info: ICoN Postdoctoral Fellow
+  email: maedbh@mit.edu
+  duration: 2022 - 2025
+  number_educ: 1
+  education1: Ph.D. in Cognitive Neuroscience, UC Berkeley
+
+- name: Aaron Kanzer
+  photo: ../images/Aaron_Kanzer.png
+  info: Software Engineer
+  email: akanzer@mit.edu
+  duration: 2023 - 2025
+  number_educ: 2
+  education1: M.S in Computer Science, Northeastern University
+  education2: B.S. in Economics & Political Science, Northeastern University
+
+- name: Yassine Jamaa
+  photo: ../images/jamaa-picture-small-format.jpg
+  info: M.S. Computational Neuroscience
+  email: jamaayas@mit.edu
+  duration: 2024 - 2025
+  number_educ: 2
+  education1: M.S. Computational Neuroscience, EPFL
+  education2: B.S. in Life Science Engineering, EPFL
+
+- name: Veronika Moroz
+  photo: ../images/Veronika.jpg
+  info: Undergraduate Researcher
+  email: vmoroz@mit.edu
+  duration: 2025
+  number_educ: 0
+
+- name: Harsha Gazula
+  photo: ../images/non_descript_photo.png
+  info: Research Scientist
+  duration: 2023 - 2025
+  email: hgazula@mit.edu
+  number_educ: 0
+
+- name: Alina Weinberger
+  photo: ../images/AlinaWeinberger.png
+  info: Visiting M.S. student from Technical University of Munich
+  email: alina991@mit.edu
+  duration: 2024
+  number_educ: 1
+  education1: M.S. Neuroengineering, Technichal University of Munich
+
+- name: Chaitanya Kapoor
+  photo: ../images/ck.png
+  info: Visiting undergraduate student
+  email: ckapoor@mit.edu
+  duration: 2024
+  number_educ: 1
+  education1: B.E. in Electrical and Electronics Engineering, BITS Pilani
+
+- name: Daniel M. Low
+  photo: ../images/daniel_low_lo_fi.png
+  info: PhD Student
+  email: dlow@mit.edu
+  duration: 2019 - 2024
+  number_educ: 2
+  education1: MA Language & Communication Technologies, University of Groningen
+  education2: MS Cognitive Science, CIMeC, University of Trento
+
+- name: Gasser Elbanna
+  photo: ../images/Gasser.png
+  info: PhD Student
+  email: gelbanna@mit.edu
+  duration: 2022 - 2024
+  number_educ: 2
+  education1: M.Sc. in Neuroscience and Neuroengineering, EPFL
+  education2: B.Sc. in Systems and Biomedical Engineering, Cairo University
+
+- name: Sabeen Lohawala
+  photo: ../images/sabeen.png
+  info: MEng Student, MIT
+  email: sabeen@mit.edu
+  duration: 2023 - 2024
+  number_educ: 2
+  education1: MEng in Computer Science, MIT
+  education2: B.S. in Computer Science, MIT
+
+- name: Ahmed Zain
+  photo: ../images/ahmed_zain.jpeg
+  info: Undergraduate Researcher
+  email: azain@mit.edu
+  duration: 2023 - 2024
+  number_educ: 1
+  education1: B.S. in Computer Science and Engineering, MIT
+
+- name: Agathe Tournant
+  photo: ../images/non_descript_photo.png
+  info: Visiting M.S. student from ETH Zurich
+  email: agathe01@mit.edu
+  duration: 2023 - 2024
+  number_educ: 1
+  education1: B.S. in Physics, EPFL
+
+- name: Christopher J Markiewicz
+  photo: //avatars2.githubusercontent.com/u/83442?s=460&v=4
+  info: Research Affiliate, started 2017, working on Nipype, Neuroscout
+  email: cjmarkie@mit.edu
+  duration: 2018 - 2023
+  number_educ: 1
+  education1: PhD Cognitive and Neural Systems, Boston University
+
+- name: Alicia Zhang
+  photo: ../images/alicia_zhang_photo.jpg
+  info: Undergraduate Researcher
+  email: aliciaz@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Mathematics, Artificial Intelligence and Decision Making, MIT
+
+- name: Olivia Han
+  photo: ../images/non_descript_photo.png
+  info: Undergraduate Researcher
+  email: olivia02@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Computer Science, Artificial Intelligence and Decision Making, MIT
+
+- name: Jai Amin
+  photo: ../images/jai_amin.png
+  info: Technical Intern
+  email: jamin30@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Computer Science and Artificial Intelligence, Northeastern University
+
+- name: Amber Lien
+  photo: ../images/non_descript_photo.png
+  info: Undergraduate Researcher
+  email: amber03@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Electrical Engineering and Computer Science, MIT
+
+- name: Edward Gaibor
+  photo: ../images/edwardgaibor.png
+  info: Technical Intern
+  email: egaibor@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B. S in Computer Science @ UMass Boston
+
+- name: Kapish Potula
+  photo: ../images/Kapish.png
+  info: Undergraduate Researcher
+  email: kpotula7@gatech.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Neuroscience, Georgia Institute of Technology
+
+- name: Sooyoung Ahn
+  photo: ../images/sooyoung.jpg
+  info: Technical Associate I
+  email: sooyoung@mit.edu
+  duration: 2022 - 2023
+  number_educ: 1
+  education1: B.S. in Electrical & Computer Engineering, Carnegie Mellon University
+
+- name: Matthias Steiner
+  photo: ../images/matthias.jpg
+  info: Visiting MSc. Student from ETH Zurich
+  email: matth406@mit.edu
+  duration: 2023 - 2023
+  number_educ: 2
+  education1: MSc. in Statistics, ETH Zurich
+  education2: B.A. in Economics, University of St. Gallen
+
+- name: Anurag Gade
+  photo: ../images/anurag.jpeg
+  info: Undergraduate Researcher
+  email: f20201337@hyderabad.bits-pilani.ac.in
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B. E. in Electrical and Electronics Engineering, BITS Pilani
+  
+- name: Alisha Kodibagkar
+  photo: ../images/alisha_kodibagkar_photo.jpeg
+  info: Technical Associate I - working on Mumble Melody
+  email: akodiba1@mit.edu
+  duration: 2022 - 2023
+  number_educ: 1
+  education1: B.S. and M.S.E., Biomedical Engineering, Johns Hopkins University
+
+- name: Zihao Wang
+  photo: ../images/Zihao_Wang.jpg
+  info: Undergraduate Researcher
+  email: zwang7@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Computer Science, Artificial Intelligence and Decision Making, MIT
+
+- name: Kai McClennen
+  photo: ../images/kaimcclennen.jpg
+  info: Undergraduate Researcher
+  email: kmcclenn@mit.edu
+  duration: 2023 - 2023
+  number_educ: 1
+  education1: B.S. in Computer Science and Engineering, MIT
+
+- name: Claudia Liauw
+  photo: ../images/claudia.jpg
+  info: Visiting Student
+  email: cliauw@mit.edu
+  duration: 2022 - 2023
+  number_educ: 2
+  education1: Currently Pursuing B.S. in Biological Sciences, Nanyang Technological University, Singapore
+  education2: <a href="https://www.linkedin.com/in/claudialiauw/">LinkedIn</a>
+
+- name: Kenny Nguyen
+  photo: ../images/Kenny Nguyen - Photo.jpg
+  info: Technical Associate I, started 2020, working on Vocallect; MD student, Larner College of Medicine, University of Vermont
+  email: kennyngu@mit.edu
+  duration: 2020 - 2022
+  number_educ: 2
+  education1: B.S., Neurobiology & Physiology, Purdue University
+  education2: M.Ed., Harvard Graduate School of Education
+
+- name: Hoda Rajaei
+  photo: //scholar.google.com/citations?view_op=medium_photo&user=t4LK88UAAAAJ&citpid=2
+  info: Research Staff, worked on Nobrainer
+  email: hodaraja@mit.edu
+  duration: 2019 - 2022
+  number_educ: 1
+  education1: PhD Florida International University
+
+- name: Megha Vemuri
+  photo: ../images/megha_vemuri_photo.jpeg
+  info: Undergraduate Research Assistant - working on Mumble Melody
+  email: mvemuri@mit.edu
+  duration: 2021 - 2022
+  number_educ: 1
+  education1: Currently Pursuing B.S. in Computation and Cognition, MIT
+
+- name: Rebecca Kleinberger
+  photo: //web.media.mit.edu/~rebklein/RKHS.jpg
+  info: Research Affiliate and Postdoc at MIT; working on Mumble Melody; Faculty at Northeastern University
+  email: rebklein@mit.edu
+  duration: 2020 - 2022
+  number_educ: 3
+  education1: Meng Mechanical Engineering, ENSAM
+  education2: MRes Computer Graphics, UCL
+  education3: PhD, MIT Media Lab
+
+- name: Dhritiman Das
+  photo: //scholar.googleusercontent.com/citations?view_op=medium_photo&user=mpptTvcAAAAJ&citpid=2
+  info: Postdoctoral Researcher, MIT; worked on Nobrainer
+  duration: 2020 - 2022
+  email: dasd@mit.edu
+  number_educ: 2
+  education1: M.S, Biomedical Engineering, Arizona State University
+  education2: Ph.D. Computer Science, Technical University of Munich (TUM)
+  education3: Visiting Scientist at the <a href="http://campar.in.tum.de/Chair/ResearchIBBM">Image-Based Biomedical Modeling</a> group at TUM
+
+- name: YingXing Feng
+  photo: //scholar.googleusercontent.com/citations?view_op=view_photo&user=BIqRR9wAAAAJ&citpid=5
+  info: PhD Student (Visited Spring 2022) - Using fNIRS and physiological signals to study the interaction of workload stress and affective states.
+  email: fengyx@mit.edu
+  number_educ: 4
+  education1: Diploma in Microelectronic Engineering, INTI International College Penang
+  education2: BEng(Hons.) E&E Engineering, University of Bradford
+  education3: MSc. E&E Engineering, Universiti Teknologi PETRONAS
+  education4: <a href="https://www.linkedin.com/in/yxfeng/">Connect here</a>
+
+- name: Aakanksha Rana
+  photo: //team.inria.fr/ayin/files/2013/08/aak.jpg
+  info: Postdoctoral Associate, MIT
+  duration: 2020 - 2022
+  email: aakrana@mit.edu
+  number_educ: 2
+  education1: M.S, Signal Processing, Telecom Paris(ENST)
+  education2: Ph.D., Computer Vision & Machine Learning, Telecom Paris(ENST)
+
+- name: Mathias Goncalves
+  photo: //avatars3.githubusercontent.com/u/14110164?s=460&v=4
+  info: Research Affiliate/Technical Assistant, worked on Nipype, BANDA, ReproNim
+  duration: 2015 - 2021
+  email: mathiasg@mit.edu
+  number_educ: 1
+  education1: BA Biology, Boston University
+
+- name: Sanu Ann Abraham
+  photo: //avatars3.githubusercontent.com/u/5114945?s=460&v=4
+  info: Technical Assistant, worked on Repronim
+  duration: 2018 - 2021
+  email: sanuann@mit.edu
+  number_educ: 1
+  education1: MS Electronics and Electrical Communication Engineering, IIT Kharagpur
+
+- name: Frances Mulligan (They/Them)
+  photo: https://avatars.githubusercontent.com/u/40801017?s=400&u=c845986f5bb7fb1774e19d228e8636476476c8c3&v=4
+  info: Technical Assistant, worked on mumble melody and reproschema
+  duration: 2021
+  number_educ: 1
+  education1: B.S, Johnson & Wales University
+
+- name: Alice Bizeul
+  photo: //avatars3.githubusercontent.com/u/43455173?s=460&v=4
+  duration: Spring - Summer 2020
+  info: Visiting MS student from EPFL; Worked on evaluating BRAIN GANs
+  email: alice.bizeul@mit.edu
+  number_educ: 1
+  education1: BA Life Sciences Engineering, EPFL
+
+- name: Kate Bentley
+  photo: //nocklab.fas.harvard.edu/sites/g/files/omnuum9586/files/styles/hwp_4_5__960x1200/public/2025-05/KHB%20headshot%206.jpg?h=04584c27&itok=KMSRz9Zb
+  duration: 2019 - 2020
+  info: Visiting scientist
+  email: kbent@mit.edu
+  number_educ: 3
+  education1: PhD Boston University
+  education2: Clinical Fellow, MGH
+  education3: Recipient of the MIT-Philips Award for Clinicians
+
+- name: Aishah Ismail
+  photo: https://i1.rgstatic.net/ii/profile.image/721324620124160-1548988599234_Q512/Aishah_Ismail4.jpg
+  duration: Fall 2019
+  info: Visiting student working on processing retinal images
+  email: aishah3@mit.edu
+  number_educ: 3
+  education1: BS Biomedical Science, Management and Science University, Malaysia
+  education2: MS Allied Health Sciences; Biomedical Science, National University of Malaysia
+  education3: PhD Candidate, Biomedical Engineering, University Teknologi PETRONAS, Malaysia
+
+- name: Bhavya Kandimalla
+  photo: https://avatars1.githubusercontent.com/u/32016424?s=400&u=dfa0c934cfbbfa0d8edf38662337e0ae170a771d&v=4
+  duration: Fall 2019
+  info: Intern, working on the DANDI project at MIT
+  email: bkandimalla.wpi@gmail.com
+  number_educ: 3
+  education1: BS Biology and Biotechnology, Worcester Polytechnic Institute
+  education2: MS Candidate Bioinformatics, Johns Hopkins University
+  education3: <a href="https://www.linkedin.com/in/bhavya-kandimalla-a02248100">Full CV</a>
+
+- name: Kevin Sitek
+  photo: //communication.northwestern.edu/images/faculty/sitek-530.jpg
+  duration: 2012 - 209, now postdoc at Dr. David Ress' lab in Baylor College of Medicine, Houston, TX
+  info: >
+    Worked on auditory brainstem neurophysiology, speech production in depression
+    and indivudals who stutter. Recipient of an NIH F31 award.
+  email: ksitek@mit.edu
+  number_educ: 2
+  education1: PhD, Speech and Hearing Biosciences and Technology, Harvard University
+  education2: BS Linguistics, University of California, Berkeley
+
+- name: Debanjan Ghosh
+  photo: //scholar.google.com/citations?view_op=medium_photo&user=Sc_vp7gAAAAJ&citpid=1
+  duration: 2018 - 2019, now at Educational Testing Service
+  info: Worked on language models in Neuroscout
+  email: dg513@mit.edu
+  number_educ: 1
+  education1: PhD Computer Science, Rutgers University
+
+- name: Wazeer Zulfikar
+  photo: //avatars1.githubusercontent.com/u/15856554?s=460&v=4
+  duration: >
+     Visiting student, 2019
+  info: Worked on generative models for brains and tumors.
+  email: wazeer@mit.edu
+  number_educ: 1
+  education1: BITS Pilani, Goa
+
+- name: Jakub Kaczmarzyk
+  photo: http://gablab.mit.edu/wp-content/uploads/bfi_thumb/jakub-kaczmarzyk-nm70tqwp33rsy74h9rnrh7p1uakjit1lsoxbkqhvko.jpg
+  duration: >
+    Technical Assistant 2017 - 2019, now MD-PhD student at Stony Brook University
+  info: >
+    He developed Nobrainer and Neurodocker, and contributed to many of the
+    group's projects
+  email: jakubk@mit.edu
+  number_educ: 1
+  education1: BS Cognitive Science, Union College
+
+- name: Smruti Padhy
+  photo: //tacc.utexas.edu/media/filer_public_thumbnails/filer_public/27/3a/273a1e0d-1b3f-43f5-a10a-5828758c9501/smruti-padhy.png__500.0x625.0_q85_subsampling-2.jpg
+  duration: >
+    Research Scientist 2015 - 2017, now Engineering Scientist at Texas Advanced
+    Computing Center (TACC)
+  info: >
+    As a member of ReproNim, she developed BrainVerse, a project management
+    platform to make neuroimaging research more reproducible.
+  email: spadhy@tacc.utexas.edu
+  number_educ: 1
+  education1: PhD Computer Science, Indian Institute of Technology
+
+- name: Gregory Ciccarelli
+  photo: //avatars.sched.co/2/29/9921816/avatar.jpg?e7e
+  duration: PhD student 2015 - 2018, now Technical Staff at MITLL
+  info: >
+    Imaging, processing, and modeling, speech from individuals with
+    self-assessed depression
+  email: gciccarelli@mit.edu
+  number_educ: 1
+  education1: PhD Electrical Engineering and Computer Science, MIT
+
+- name: Yoel Sanchez Araujo
+  photo: //ysanchezaraujo.github.io/images/ysa.jpg
+  duration: >
+    Technical Assistant 2015 - 2017, now Research Specialist at Princeton
+    University.
+  info: >
+    As a member of the group, he analyzed imaging and genetic data from
+    individuals with schizophrenia using machine learning. The data was from the
+    GENUS consortium and supported by an NIMH supplement to Genetic Determinants
+    of Schizophrenia Intermediate Phenotypes.
+  email: ysa@mit.edu
+  number_educ: 0
+  education1:
+
+- name: Shilpa Chakravartula
+  photo: https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/2000px-Missing_avatar.svg.png
+  duration: Contractor 2017
+  info: >
+    As a member of the group, she helped investigate open science grid for
+    running large scale computation.
+  email: <not specified>
+  number_educ: 0
+  education1:
+
+- name: Du (Derry) Chen
+  photo: https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Missing_avatar.svg/2000px-Missing_avatar.svg.png
+  duration: Intern 2017, Undergraduate at Cornell University
+  info: >
+    As a member of the group, he helped improve BrainVerse implementation in
+    its early days.
+  email: <not specified>
+  number_educ: 0
+  education1:
+

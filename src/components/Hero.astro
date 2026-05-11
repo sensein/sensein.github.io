@@ -1,0 +1,138 @@
+---
+import Container from "./Container.astro";
+import { withBase } from "~/lib/url";
+
+const slides = [
+  { src: "/images/220505-group-lunch.jpg", caption: "The group, May 2022" },
+  {
+    src: "https://iiif.elifesciences.org/lax:36652%2Felife-36652-fig1-v1.tif/full/1500,/0/default.jpg",
+    caption: "Cortical surface analysis — eLife 2018",
+  },
+  {
+    src: "https://miykael.github.io/nipype_tutorial/static/images/nipype_architecture.png",
+    caption: "Nipype workflow architecture",
+  },
+  {
+    src: "https://pnas.org/cms/10.1073/pnas.1608282113/asset/5ecf6af1-f59a-40ed-9d24-5d1dbff6dac6/assets/graphic/pnas.1608282113fig01.jpeg",
+    caption: "Connectome variability — PNAS 2016",
+  },
+  {
+    src: "https://jamanetwork.com/data/journals/psych/926165/yoa120057f4.png",
+    caption: "Speech biomarkers — JAMA Psychiatry",
+  },
+];
+---
+<section class="relative overflow-hidden border-b border-(--color-border)">
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 -z-10 bg-gradient-to-b from-(--color-accent-soft)/60 to-(--color-canvas)"
+  ></div>
+  <Container size="wide" class="py-20 md:py-28">
+    <div class="grid lg:grid-cols-[1.1fr_1fr] gap-12 items-center">
+      <div>
+        <p
+          class="text-xs uppercase tracking-[0.2em] text-(--color-accent) font-medium"
+        >
+          Senseable Intelligence Group · MIT
+        </p>
+        <h1
+          class="mt-4 font-serif text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-(--color-ink)"
+        >
+          Neuroimaging, speech, and machine learning for mental health.
+        </h1>
+        <p
+          class="mt-6 text-lg md:text-xl text-(--color-ink-muted) leading-relaxed max-w-2xl"
+        >
+          We build frameworks, run extensive collaborations, and use brain imaging and
+          speech communication to improve assessments and treatments for mental health and
+          neurological disorders — with reproducibility at the core.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href={withBase("/research")}
+            class="inline-flex items-center gap-2 rounded-md bg-(--color-accent) hover:bg-(--color-accent-strong) text-white px-5 py-2.5 text-sm font-medium transition-colors"
+          >
+            Explore our research →
+          </a>
+          <a
+            href={withBase("/team")}
+            class="inline-flex items-center gap-2 rounded-md border border-(--color-border) hover:border-(--color-border-strong) px-5 py-2.5 text-sm font-medium text-(--color-ink) transition-colors"
+          >
+            Meet the team
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div
+          class="aspect-[4/3] overflow-hidden rounded-xl border border-(--color-border) bg-(--color-surface) shadow-sm"
+          data-carousel
+        >
+          {slides.map((slide, i) => (
+            <figure
+              data-slide={i}
+              class={`absolute inset-0 transition-opacity duration-700 ${
+                i === 0 ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <img
+                src={slide.src.startsWith("/") ? withBase(slide.src) : slide.src}
+                alt={slide.caption}
+                loading={i === 0 ? "eager" : "lazy"}
+                class="w-full h-full object-cover"
+              />
+              <figcaption
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent text-white text-xs px-4 py-3"
+              >
+                {slide.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <div class="mt-3 flex items-center justify-center gap-2">
+          {slides.map((_, i) => (
+            <button
+              type="button"
+              data-dot={i}
+              aria-label={`Slide ${i + 1}`}
+              class={`h-1.5 rounded-full transition-all ${
+                i === 0
+                  ? "w-6 bg-(--color-accent)"
+                  : "w-1.5 bg-(--color-border-strong) hover:bg-(--color-ink-faint)"
+              }`}
+            ></button>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<script>
+  const carousel = document.querySelector<HTMLElement>("[data-carousel]");
+  if (carousel) {
+    const slides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-slide]"));
+    const dots = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-dot]"));
+    let i = 0;
+    const show = (n: number) => {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((el, idx) => {
+        el.style.opacity = idx === i ? "1" : "0";
+      });
+      dots.forEach((el, idx) => {
+        if (idx === i) {
+          el.classList.remove("w-1.5", "bg-(--color-border-strong)", "hover:bg-(--color-ink-faint)");
+          el.classList.add("w-6", "bg-(--color-accent)");
+        } else {
+          el.classList.add("w-1.5", "bg-(--color-border-strong)", "hover:bg-(--color-ink-faint)");
+          el.classList.remove("w-6", "bg-(--color-accent)");
+        }
+      });
+    };
+    dots.forEach((dot, idx) => dot.addEventListener("click", () => show(idx)));
+    let timer = window.setInterval(() => show(i + 1), 5500);
+    carousel.addEventListener("mouseenter", () => window.clearInterval(timer));
+    carousel.addEventListener("mouseleave", () => {
+      timer = window.setInterval(() => show(i + 1), 5500);
+    });
+  }
+</script>

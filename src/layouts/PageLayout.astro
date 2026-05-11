@@ -1,0 +1,36 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Container from "~/components/Container.astro";
+
+interface Props {
+  title: string;
+  eyebrow?: string;
+  description?: string;
+  lede?: string;
+  size?: "narrow" | "default" | "wide";
+}
+
+const { title, eyebrow, description, lede, size = "default" } = Astro.props;
+---
+<BaseLayout title={title} description={description ?? lede}>
+  <Container size={size} class="pt-14 pb-6">
+    {eyebrow && (
+      <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium mb-3">
+        {eyebrow}
+      </p>
+    )}
+    <h1
+      class="font-serif text-4xl md:text-5xl font-semibold tracking-tight text-(--color-ink) leading-[1.05]"
+    >
+      {title}
+    </h1>
+    {lede && (
+      <p class="mt-5 text-lg md:text-xl text-(--color-ink-muted) max-w-3xl leading-relaxed">
+        {lede}
+      </p>
+    )}
+  </Container>
+  <Container size={size} class="py-10">
+    <slot />
+  </Container>
+</BaseLayout>

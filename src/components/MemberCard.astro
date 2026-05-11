@@ -1,0 +1,56 @@
+---
+import type { TeamMember } from "~/lib/data";
+import { memberEducations } from "~/lib/data";
+import { normalizeImage } from "~/lib/images";
+
+interface Props {
+  member: TeamMember;
+  showEducation?: boolean;
+  showDuration?: boolean;
+}
+const { member, showEducation = true, showDuration = false } = Astro.props;
+const educations = memberEducations(member);
+const photo = normalizeImage(member.photo);
+---
+<article
+  class="flex gap-5 p-5 rounded-lg border border-(--color-border) bg-(--color-canvas) hover:border-(--color-border-strong) transition-colors"
+>
+  <div class="shrink-0">
+    <img
+      src={photo}
+      alt={member.name}
+      loading="lazy"
+      class="w-24 h-24 object-cover rounded-md bg-(--color-surface)"
+    />
+  </div>
+  <div class="min-w-0">
+    <h3 class="font-serif text-lg font-semibold text-(--color-ink) leading-tight">
+      {member.name}
+    </h3>
+    {showDuration && member.duration && (
+      <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mt-1">
+        {member.duration}
+      </p>
+    )}
+    {member.info && (
+      <p class="mt-1.5 text-sm text-(--color-ink-muted) leading-relaxed" set:html={member.info} />
+    )}
+    {member.email && (
+      <p class="mt-2 text-sm">
+        <a
+          href={`mailto:${member.email}`}
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline break-all"
+        >
+          {member.email}
+        </a>
+      </p>
+    )}
+    {showEducation && educations.length > 0 && (
+      <ul class="mt-3 space-y-1 text-xs text-(--color-ink-muted)">
+        {educations.map((e) => (
+          <li set:html={`• ${e}`} />
+        ))}
+      </ul>
+    )}
+  </div>
+</article>
