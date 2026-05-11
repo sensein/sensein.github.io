@@ -65,7 +65,7 @@
     target="_blank">Neuronets on Github</a>.
 
 - title: Mindboggling morphometry of human brains
-  image: /images/external/export-847dcdbf.img
+  image: /images/external/export-847dcdbf.img  # TODO replace with a proper WebP figure (OSF asset has no extension)
   description: >
     This paper introduces a computational anatomy toolbox for extracting
     individual anatomical features for a MRI based signature of brain morphology.
@@ -81,7 +81,7 @@
     target="_blank">Mindboggle website</a>
 
 - title: Situating the default-mode network along a principal gradient of macroscale cortical organization.
-  image: /images/external/F1.medium-eea1967d.gif
+  image: /images/external/F1.medium-eea1967d.gif  # TODO replace — file is JS source, not a real image (PNAS returned HTML on the original fetch)
   description: >
     The paper describes an overarching organization of large-scale connectivity
     that situates the default-mode network at the opposite end of a spectrum
