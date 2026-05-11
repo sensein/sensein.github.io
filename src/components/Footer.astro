@@ -5,16 +5,23 @@ import { withBase } from "~/lib/url";
 const year = new Date().getFullYear();
 
 const funders = [
-  { label: "NIBIB", href: "https://www.nibib.nih.gov/" },
-  { label: "NIMH", href: "https://www.nimh.nih.gov/index.shtml" },
-  {
-    label: "McGovern MINT Program",
-    href: "http://mcgovern.mit.edu/technology/neurotechnology-program",
-  },
-  {
-    label: "MIT Philips Award for Clinicians",
-    href: "https://medicalresearch.mit.edu/",
-  },
+  // NIH (most active grants — primary funder for the group)
+  { label: "NIH/NIDA U24 DA064429", href: "https://reporter.nih.gov/search/OsbCHzaScU6FVeHg9b-MGw/project-details/10888562" },
+  { label: "NIH/NIMH U24 MH130918" },
+  { label: "NIH/NIMH UM1 MH134812" },
+  { label: "NIH/NIMH R24 MH117295" },
+  { label: "NIH/NINDS UM1 NS132358" },
+  { label: "NIH/NIBIB P41 EB019936" },
+  { label: "NIH/OD OT2 OD032720" },
+  // Other current sponsors
+  { label: "MIT GenAI Consortium", href: "https://mitgenai.mit.edu/" },
+  { label: "Schmidt Futures", href: "https://www.schmidtfutures.com/" },
+  { label: "Citadel" },
+  { label: "Simons Foundation", href: "https://www.simonsfoundation.org/" },
+  { label: "Child Mind Institute", href: "https://childmind.org/" },
+  // Philanthropy
+  { label: "Lann S. Woehrle '78 and Christopher Woehrle Psychiatric Research Fund" },
+  { label: "MIT Philips Award for Clinicians", href: "https://medicalresearch.mit.edu/" },
   { label: "Philanthropic support" },
 ];
 
@@ -61,18 +68,20 @@ const affiliations = [
         <h3 class="text-(--color-ink) font-semibold tracking-tight mb-3">
           Funding
         </h3>
-        <ul class="space-y-1.5 text-(--color-ink-muted)">
+        <ul class="flex flex-wrap gap-1.5 text-(--color-ink-muted) text-xs">
           {funders.map((f) => (
             <li>
               {f.href ? (
                 <a
                   href={f.href}
-                  class="hover:text-(--color-accent) transition-colors underline-offset-3 hover:underline"
+                  target="_blank"
+                  rel="noopener"
+                  class="inline-block rounded-md border border-(--color-border) px-1.5 py-0.5 hover:border-(--color-accent) hover:text-(--color-accent) transition-colors leading-tight"
                 >
                   {f.label}
                 </a>
               ) : (
-                <span>{f.label}</span>
+                <span class="inline-block rounded-md border border-(--color-border) px-1.5 py-0.5 leading-tight">{f.label}</span>
               )}
             </li>
           ))}

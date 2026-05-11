@@ -11,20 +11,34 @@ const pageRaw = (await import("~/data/publications_page.yml?raw")).default as st
 const page = yaml.load(pageRaw) as {
   summary: string;
   keywords: string[];
-  topics: { label: string; tag?: string; description: string; example_count: number }[];
+  topics: { label: string; tag?: string; description: string; example_count?: number }[];
 };
 
 const all = publications().sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
 const totalCount = all.length;
 
-const years = Array.from(new Set(all.map((p) => p.year))).sort((a, b) => b - a);
-const types = Array.from(new Set(all.map((p) => p.type))).sort();
-const categories = Array.from(new Set(all.map((p) => p.category).filter(Boolean))).sort();
-const topicTags = (() => {
-  const c = new Map<string, number>();
-  for (const p of all) for (const t of p.topics ?? []) c.set(t, (c.get(t) ?? 0) + 1);
-  return [...c.entries()].sort((a, b) => b[1] - a[1]).map(([k, v]) => ({ tag: k, count: v }));
-})();
+function counted<T extends string | number>(values: Iterable<T>): { value: T; count: number }[] {
+  const c = new Map<T, number>();
+  for (const v of values) if (v != null) c.set(v, (c.get(v) ?? 0) + 1);
+  return [...c.entries()].sort((a, b) => {
+    if (typeof a[0] === "number" && typeof b[0] === "number") return (b[0] as number) - (a[0] as number);
+    return String(a[0]).localeCompare(String(b[0]));
+  }).map(([value, count]) => ({ value, count }));
+}
+
+const years = counted(all.map((p) => p.year));
+const types = counted(all.map((p) => p.type));
+const categories = counted(all.flatMap((p) => p.category ? [p.category] : []));
+const topicTagCounts = counted(all.flatMap((p) => p.topics ?? []));
+const topicCountMap = new Map(topicTagCounts.map((t) => [t.value as string, t.count]));
+
+// Compute the actual count of papers whose `topics:` field includes the
+// topic-area's `tag`. This replaces the stale example_count proxy in
+// publications_page.yml so the cards and the filter agree.
+const topicCardData = page.topics.map((t) => ({
+  ...t,
+  count: t.tag ? (topicCountMap.get(t.tag) ?? 0) : 0,
+}));
 
 // Group publications by year for the rendered list.
 const byYear = new Map<number, typeof all>();
@@ -66,9 +80,9 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
 
   <!-- Topic areas summary; cards are clickable filters -->
   <Container size="wide" class="py-6">
-    <SectionHeading title="Topic areas" description="Click a topic to filter the list below." />
+    <SectionHeading title="Topic areas" description="Click a topic to filter the list below by that tag." />
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
-      {page.topics.map((t) => (
+      {topicCardData.map((t) => (
         <button
           type="button"
           data-topic-card
@@ -78,7 +92,7 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
           <p class="font-medium text-(--color-ink)">{t.label}</p>
           <p class="mt-1 text-xs text-(--color-ink-muted) leading-snug">{t.description}</p>
           <p class="mt-2 text-[11px] text-(--color-ink-faint) font-mono">
-            {t.example_count} papers
+            {t.count} {t.count === 1 ? "paper" : "papers"}
             {t.tag && <span class="ml-1">· tag <code>{t.tag}</code></span>}
           </p>
         </button>
@@ -86,43 +100,94 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
     </div>
   </Container>
 
-  <!-- Filters -->
+  <!-- Filters: checkboxes (OR within each group, AND across groups) -->
   <Container size="wide" class="pt-10 pb-2">
-    <SectionHeading id="full-list" title="All publications" description="Filter by year, type, category, or topic. Filters combine (AND)." />
-    <div class="rounded-lg border border-(--color-border) bg-(--color-surface)/40 p-4 text-sm" data-pub-filters>
-      <div class="grid sm:grid-cols-4 gap-4">
-        <label class="flex flex-col gap-1">
-          <span class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">Year</span>
-          <select data-filter="year" class="rounded-md border border-(--color-border) bg-(--color-canvas) px-2 py-1.5 text-(--color-ink)">
-            <option value="">All ({totalCount})</option>
-            {years.map((y) => <option value={y}>{y}</option>)}
-          </select>
-        </label>
-        <label class="flex flex-col gap-1">
-          <span class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">Type</span>
-          <select data-filter="type" class="rounded-md border border-(--color-border) bg-(--color-canvas) px-2 py-1.5 text-(--color-ink)">
-            <option value="">All</option>
-            {types.map((t) => <option value={t}>{t}</option>)}
-          </select>
-        </label>
-        <label class="flex flex-col gap-1">
-          <span class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">Category</span>
-          <select data-filter="category" class="rounded-md border border-(--color-border) bg-(--color-canvas) px-2 py-1.5 text-(--color-ink)">
-            <option value="">All</option>
-            {categories.map((c) => <option value={c}>{c}</option>)}
-          </select>
-        </label>
-        <label class="flex flex-col gap-1">
-          <span class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">Topic</span>
-          <select data-filter="topic" class="rounded-md border border-(--color-border) bg-(--color-canvas) px-2 py-1.5 text-(--color-ink)">
-            <option value="">All</option>
-            {topicTags.map((t) => <option value={t.tag}>{t.tag} ({t.count})</option>)}
-          </select>
-        </label>
+    <SectionHeading
+      id="full-list"
+      title="All publications"
+      description="Filter by year, type, category, or topic. Selections within a column combine with OR; columns combine with AND."
+    />
+    <div
+      class="rounded-lg border border-(--color-border) bg-(--color-surface)/40 p-4 text-sm"
+      data-pub-filters
+    >
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4">
+        <fieldset data-filter-group="year">
+          <legend class="text-[11px] uppercase tracking-wider text-(--color-ink-faint) mb-1.5 flex items-center justify-between w-full">
+            <span>Year</span>
+            <button type="button" data-clear-group class="normal-case tracking-normal text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline text-[10px]">clear</button>
+          </legend>
+          <ul class="space-y-1 max-h-48 overflow-y-auto pr-1">
+            {years.map(({ value, count }) => (
+              <li>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-(--color-ink)">
+                  <input type="checkbox" value={value} class="accent-(--color-accent)" />
+                  <span class="flex-1">{value}</span>
+                  <span class="text-[11px] text-(--color-ink-faint) font-mono">{count}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
+
+        <fieldset data-filter-group="type">
+          <legend class="text-[11px] uppercase tracking-wider text-(--color-ink-faint) mb-1.5 flex items-center justify-between w-full">
+            <span>Type</span>
+            <button type="button" data-clear-group class="normal-case tracking-normal text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline text-[10px]">clear</button>
+          </legend>
+          <ul class="space-y-1">
+            {types.map(({ value, count }) => (
+              <li>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-(--color-ink)">
+                  <input type="checkbox" value={value} class="accent-(--color-accent)" />
+                  <span class="flex-1">{value}</span>
+                  <span class="text-[11px] text-(--color-ink-faint) font-mono">{count}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
+
+        <fieldset data-filter-group="category">
+          <legend class="text-[11px] uppercase tracking-wider text-(--color-ink-faint) mb-1.5 flex items-center justify-between w-full">
+            <span>Category</span>
+            <button type="button" data-clear-group class="normal-case tracking-normal text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline text-[10px]">clear</button>
+          </legend>
+          <ul class="space-y-1">
+            {categories.map(({ value, count }) => (
+              <li>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-(--color-ink)">
+                  <input type="checkbox" value={value} class="accent-(--color-accent)" />
+                  <span class="flex-1">{value}</span>
+                  <span class="text-[11px] text-(--color-ink-faint) font-mono">{count}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
+
+        <fieldset data-filter-group="topic">
+          <legend class="text-[11px] uppercase tracking-wider text-(--color-ink-faint) mb-1.5 flex items-center justify-between w-full">
+            <span>Topic</span>
+            <button type="button" data-clear-group class="normal-case tracking-normal text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline text-[10px]">clear</button>
+          </legend>
+          <ul class="space-y-1 max-h-48 overflow-y-auto pr-1">
+            {topicTagCounts.map(({ value, count }) => (
+              <li>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-(--color-ink)">
+                  <input type="checkbox" value={value} class="accent-(--color-accent)" />
+                  <span class="flex-1 truncate"><code class="text-xs">{value}</code></span>
+                  <span class="text-[11px] text-(--color-ink-faint) font-mono">{count}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
       </div>
-      <div class="mt-3 flex items-center justify-between text-xs text-(--color-ink-faint)">
+
+      <div class="mt-4 pt-3 border-t border-(--color-border) flex items-center justify-between text-xs text-(--color-ink-faint)">
         <span><span data-pub-count>{totalCount}</span> of {totalCount} papers shown</span>
-        <button type="button" data-reset class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">Reset filters</button>
+        <button type="button" data-reset class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">Reset all filters</button>
       </div>
     </div>
   </Container>
@@ -155,54 +220,84 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
 <script>
   const root = document.querySelector<HTMLElement>("[data-pub-filters]");
   if (root) {
-    const selects = Array.from(root.querySelectorAll<HTMLSelectElement>("select[data-filter]"));
+    const groups = Array.from(root.querySelectorAll<HTMLFieldSetElement>("[data-filter-group]"));
     const reset = root.querySelector<HTMLButtonElement>("[data-reset]");
     const counter = root.querySelector<HTMLElement>("[data-pub-count]");
     const items = Array.from(document.querySelectorAll<HTMLElement>("[data-pub]"));
-    const groups = Array.from(document.querySelectorAll<HTMLElement>("[data-year-group]"));
+    const yearSections = Array.from(document.querySelectorAll<HTMLElement>("[data-year-group]"));
+
+    function readSelections(): Record<string, Set<string>> {
+      const sel: Record<string, Set<string>> = {};
+      for (const g of groups) {
+        const key = g.dataset.filterGroup!;
+        const checked = Array.from(g.querySelectorAll<HTMLInputElement>("input[type=checkbox]:checked")).map(
+          (cb) => cb.value,
+        );
+        if (checked.length) sel[key] = new Set(checked);
+      }
+      return sel;
+    }
 
     function applyFilters() {
-      const filters: Record<string, string> = {};
-      for (const s of selects) if (s.value) filters[s.dataset.filter!] = s.value;
+      const sel = readSelections();
       let visible = 0;
       for (const item of items) {
         let ok = true;
-        if (filters.year && item.dataset.year !== filters.year) ok = false;
-        if (filters.type && item.dataset.type !== filters.type) ok = false;
-        if (filters.category && item.dataset.category !== filters.category) ok = false;
-        if (filters.topic) {
-          const topics = (item.dataset.topics ?? "").split(",");
-          if (!topics.includes(filters.topic)) ok = false;
+        if (sel.year && !sel.year.has(item.dataset.year ?? "")) ok = false;
+        if (sel.type && !sel.type.has(item.dataset.type ?? "")) ok = false;
+        if (sel.category && !sel.category.has(item.dataset.category ?? "")) ok = false;
+        if (sel.topic) {
+          const itemTopics = (item.dataset.topics ?? "").split(",").filter(Boolean);
+          if (!itemTopics.some((t) => sel.topic!.has(t))) ok = false;
         }
         item.style.display = ok ? "" : "none";
         if (ok) visible++;
       }
-      for (const g of groups) {
-        const hasVisible = Array.from(g.querySelectorAll<HTMLElement>("[data-pub]")).some(
+      for (const section of yearSections) {
+        const hasVisible = Array.from(section.querySelectorAll<HTMLElement>("[data-pub]")).some(
           (el) => el.style.display !== "none",
         );
-        g.style.display = hasVisible ? "" : "none";
+        section.style.display = hasVisible ? "" : "none";
       }
       if (counter) counter.textContent = String(visible);
     }
-    selects.forEach((s) => s.addEventListener("change", applyFilters));
+
+    function setGroupSelection(key: string, value: string, on: boolean | "toggle") {
+      const group = groups.find((g) => g.dataset.filterGroup === key);
+      if (!group) return;
+      const cb = group.querySelector<HTMLInputElement>(`input[type=checkbox][value="${CSS.escape(value)}"]`);
+      if (!cb) return;
+      cb.checked = on === "toggle" ? !cb.checked : on;
+    }
+
+    // Wire checkbox changes.
+    groups.forEach((g) =>
+      g.querySelectorAll<HTMLInputElement>("input[type=checkbox]").forEach((cb) =>
+        cb.addEventListener("change", applyFilters),
+      ),
+    );
+    // Per-column clear buttons.
+    groups.forEach((g) => {
+      const btn = g.querySelector<HTMLButtonElement>("[data-clear-group]");
+      btn?.addEventListener("click", () => {
+        g.querySelectorAll<HTMLInputElement>("input[type=checkbox]").forEach((cb) => (cb.checked = false));
+        applyFilters();
+      });
+    });
+    // Reset all.
     reset?.addEventListener("click", () => {
-      selects.forEach((s) => (s.value = ""));
+      groups.forEach((g) =>
+        g.querySelectorAll<HTMLInputElement>("input[type=checkbox]").forEach((cb) => (cb.checked = false)),
+      );
       applyFilters();
     });
 
-    // Topic-area cards act as quick filter shortcuts.
-    const topicSelect = selects.find((s) => s.dataset.filter === "topic");
+    // Topic-area cards toggle the topic checkbox.
     document.querySelectorAll<HTMLButtonElement>("[data-topic-card]").forEach((card) => {
       card.addEventListener("click", () => {
-        const tag = card.dataset.topicTag ?? "";
-        if (!tag || !topicSelect) return;
-        // Toggle off if same tag is already applied.
-        if (topicSelect.value === tag) {
-          topicSelect.value = "";
-        } else {
-          topicSelect.value = tag;
-        }
+        const tag = card.dataset.topicTag;
+        if (!tag) return;
+        setGroupSelection("topic", tag, "toggle");
         applyFilters();
         document.getElementById("full-list")?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
