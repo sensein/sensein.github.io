@@ -7,7 +7,11 @@
     Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+}
 
+/* Light theme tokens (default + when user picks Light) */
+:root,
+:root[data-theme="light"] {
   --color-ink: oklch(0.21 0.02 264);
   --color-ink-muted: oklch(0.45 0.02 264);
   --color-ink-faint: oklch(0.62 0.015 264);
@@ -18,10 +22,12 @@
   --color-accent: oklch(0.45 0.16 254);
   --color-accent-strong: oklch(0.36 0.18 254);
   --color-accent-soft: oklch(0.95 0.03 254);
+  color-scheme: light;
 }
 
+/* Auto: when system is dark AND user hasn't explicitly chosen, use dark */
 @media (prefers-color-scheme: dark) {
-  @theme {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
     --color-ink: oklch(0.97 0.005 264);
     --color-ink-muted: oklch(0.78 0.01 264);
     --color-ink-faint: oklch(0.62 0.015 264);
@@ -32,7 +38,23 @@
     --color-accent: oklch(0.72 0.14 254);
     --color-accent-strong: oklch(0.82 0.13 254);
     --color-accent-soft: oklch(0.28 0.06 254);
+    color-scheme: dark;
   }
+}
+
+/* Explicit Dark, regardless of system */
+:root[data-theme="dark"] {
+  --color-ink: oklch(0.97 0.005 264);
+  --color-ink-muted: oklch(0.78 0.01 264);
+  --color-ink-faint: oklch(0.62 0.015 264);
+  --color-canvas: oklch(0.16 0.015 264);
+  --color-surface: oklch(0.21 0.015 264);
+  --color-border: oklch(0.28 0.012 264);
+  --color-border-strong: oklch(0.38 0.012 264);
+  --color-accent: oklch(0.72 0.14 254);
+  --color-accent-strong: oklch(0.82 0.13 254);
+  --color-accent-soft: oklch(0.28 0.06 254);
+  color-scheme: dark;
 }
 
 html {
@@ -51,6 +73,17 @@ body {
 ::selection {
   background-color: var(--color-accent-soft);
   color: var(--color-accent-strong);
+}
+
+/* Theme toggle icon swapping */
+[data-theme-icon] {
+  display: none;
+}
+:root[data-theme="light"] [data-theme-icon="light"],
+:root[data-theme="dark"] [data-theme-icon="dark"],
+:root:not([data-theme="light"]):not([data-theme="dark"])
+  [data-theme-icon="system"] {
+  display: block;
 }
 
 /* Prose: long-form text styling for migrated markdown */
@@ -156,4 +189,76 @@ body {
   border: 0;
   border-top: 1px solid var(--color-border);
   margin: 2rem 0;
+}
+
+/* publicationslist.org embed: minimal styling so it doesn't clash with the
+   surrounding design. The script renders into #publistdiv. */
+#publistdiv {
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+#publistdiv a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+#publistdiv a:hover {
+  color: var(--color-accent-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+#publistdiv .yeartitle,
+#publistdiv .noyeartitle,
+#publistdiv .yearsep,
+#publistdiv .noyearsep {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.4rem;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.1rem;
+}
+#publistdiv .refdiv,
+#publistdiv .publication,
+#publistdiv .aPublication {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted var(--color-border);
+  color: var(--color-ink-muted);
+}
+#publistdiv .title {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+#publistdiv .journal,
+#publistdiv .booktitle {
+  font-style: italic;
+}
+#publistdiv .editor,
+#publistdiv .dup {
+  color: var(--color-ink-faint);
+}
+#publistdiv .abstract,
+#publistdiv .note {
+  color: var(--color-ink-muted);
+  font-style: italic;
+  margin: 0.5rem 0 0.5rem 1.5rem;
+}
+#publistdiv .control,
+#publistdiv .controls a,
+#publistdiv .fullText,
+#publistdiv .pdflink,
+#publistdiv .htmllink,
+#publistdiv .doilink,
+#publistdiv .repolink,
+#publistdiv .pubmedlink {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+}
+#publistdiv .contact,
+#publistdiv .selbutton,
+#publistdiv .unselbutton {
+  display: none;
 }

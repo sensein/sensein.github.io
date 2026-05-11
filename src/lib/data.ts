@@ -70,15 +70,20 @@ function load<T>(name: string): T {
   return yaml.load(raw) as T;
 }
 
-export const teamMembers = () => load<TeamMember[]>("team_members.yml");
-export const students = () => load<TeamMember[]>("students.yml");
-export const alumniMembers = () => load<TeamMember[]>("alumni_members.yml");
+function loadArray<T>(name: string): T[] {
+  const v = load<T[] | null>(name);
+  return Array.isArray(v) ? v : [];
+}
+
+export const teamMembers = () => loadArray<TeamMember>("team_members.yml");
+export const students = () => loadArray<TeamMember>("students.yml");
+export const alumniMembers = () => loadArray<TeamMember>("alumni_members.yml");
 export const collaborators = () =>
-  load<CollaboratorGroup[]>("collaborators.yml");
-export const projects = () => load<Project[]>("projects.yml");
-export const papers = () => load<Publication[]>("papers.yml");
-export const publist = () => load<Publication[]>("publist.yml");
-export const news = () => load<NewsItem[]>("news.yml");
+  loadArray<CollaboratorGroup>("collaborators.yml");
+export const projects = () => loadArray<Project>("projects.yml");
+export const papers = () => loadArray<Publication>("papers.yml");
+export const publist = () => loadArray<Publication>("publist.yml");
+export const news = () => loadArray<NewsItem>("news.yml");
 
 /**
  * Educations entries are split across enumerated keys (education1..N).

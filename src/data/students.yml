@@ -1,16 +1,8 @@
-#- name:
-#  photo: rock.jpg
-#  info:
-#  email:
-#  number_educ:
-#  education1:
-#  education2:
-#  education3:
-#  education4:
-
-- name: Corne Koks
-  photo: rock.jpg
-  info: Master student
-  email: -@Physics.LeidenUniv.nl
-  number_educ: 0
-  education1:
+# Active students. Add entries with the same shape as team_members.yml:
+#
+# - name: Full Name
+#   photo: //example.com/photo.jpg
+#   info: Short role description
+#   email: name@mit.edu
+#   number_educ: 1
+#   education1: Degree, Institution

@@ -2,20 +2,25 @@
 import PageLayout from "~/layouts/PageLayout.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
 import PublicationCard from "~/components/PublicationCard.astro";
-import { publist, papers, parseLooseDate } from "~/lib/data";
+import { publist } from "~/lib/data";
 
 const highlighted = publist().filter((p) => p.highlight === 1);
-const fullList = [...papers()].sort((a, b) => {
-  const da = parseLooseDate(a.date)?.getTime() ?? 0;
-  const db = parseLooseDate(b.date)?.getTime() ?? 0;
-  return db - da;
-});
+
+const publistDetails = {
+  firstname: "Satrajit",
+  middlename: "S",
+  lastname: "Ghosh",
+  email: "satra@mit.edu",
+  website: "//www.mit.edu/~satra",
+  address: "",
+  biosketch: "",
+};
 ---
 <PageLayout
   eyebrow="Publications"
   title="Publications"
   size="wide"
-  lede="Featured work and a chronological list of recent papers. For the complete archive, see Google Scholar."
+  lede="Featured publications below; the full archive is fetched live from PublicationsList.org. For a complete and continually-updated list, see Google Scholar."
 >
   <p class="text-sm text-(--color-ink-muted) -mt-4 mb-8">
     For a complete list, see
@@ -37,12 +42,37 @@ const fullList = [...papers()].sort((a, b) => {
   <section class="mt-20">
     <SectionHeading
       id="full-list"
-      eyebrow="Recent"
-      title="Recent papers"
-      description="Sorted by year, most recent first."
+      eyebrow="Archive"
+      title="Full list"
+      description="Live feed from PublicationsList.org — conference papers follow journal articles."
     />
-    <div class="divide-y divide-(--color-border) border-y border-(--color-border)">
-      {fullList.map((pub) => <PublicationCard pub={pub} variant="compact" />)}
+    <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-6">
+      <div id="publistdiv">Loading publications…</div>
+      <div id="tagslist" style="display:none;"></div>
+      <div id="authorslist" style="display:none;"></div>
     </div>
   </section>
+
+  <script is:inline define:vars={{ publistDetails }}>
+    window.details = publistDetails;
+    window.readonly = "1";
+    window.rootpath = "//publicationslist.org/";
+    window.ownpage = "1";
+    window.userid = "satra";
+    window.mode = "publish";
+    window.nothumbs = 0;
+    window.publistBrand = "PublicationsList.org";
+    window.localInstall = 0;
+    window.citationFormat = "default";
+    window.previewMode = "";
+    window.uptodate = "1";
+    window.recent = false;
+  </script>
+  <script is:inline src="https://publicationslist.org/data/satra/publist.js"></script>
+  <script is:inline src="https://publicationslist.org/schema.js?"></script>
+  <script is:inline src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script is:inline src="https://publicationslist.org/data/satra/BROWSER.js?1384435485"></script>
+  <script is:inline src="https://publicationslist.org/data/satra/DOM.js?1384435485"></script>
+  <script is:inline src="https://publicationslist.org/data/satra/pubutil.js?1434354606"></script>
+  <script is:inline src="https://publicationslist.org/data/satra/pubinit.js?1384435485"></script>
 </PageLayout>

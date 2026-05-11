@@ -1,6 +1,7 @@
 ---
 import { withBase, isActive } from "~/lib/url";
 import Container from "./Container.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 
 const nav = [
   { label: "Research", href: "/research" },
@@ -45,24 +46,29 @@ const pathname = Astro.url.pathname;
           <line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
       </button>
-      <nav class="hidden md:flex items-center gap-1 text-sm">
-        {nav.map((item) => {
-          const active = isActive(pathname, item.href);
-          return (
-            <a
-              href={withBase(item.href)}
-              class={`px-3 py-2 rounded-md transition-colors ${
-                active
-                  ? "text-(--color-accent) bg-(--color-accent-soft)"
-                  : "text-(--color-ink-muted) hover:text-(--color-ink) hover:bg-(--color-surface)"
-              }`}
-              aria-current={active ? "page" : undefined}
-            >
-              {item.label}
-            </a>
-          );
-        })}
-      </nav>
+      <div class="hidden md:flex items-center gap-2 text-sm">
+        <nav class="flex items-center gap-1">
+          {nav.map((item) => {
+            const active = isActive(pathname, item.href);
+            return (
+              <a
+                href={withBase(item.href)}
+                class={`px-3 py-2 rounded-md transition-colors ${
+                  active
+                    ? "text-(--color-accent) bg-(--color-accent-soft)"
+                    : "text-(--color-ink-muted) hover:text-(--color-ink) hover:bg-(--color-surface)"
+                }`}
+                aria-current={active ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+            );
+          })}
+        </nav>
+        <div class="pl-2 border-l border-(--color-border)">
+          <ThemeToggle />
+        </div>
+      </div>
     </div>
     <nav data-nav-mobile class="hidden md:hidden pb-4 -mt-1">
       <div class="flex flex-col gap-1 text-sm border-t border-(--color-border) pt-3">
@@ -82,6 +88,10 @@ const pathname = Astro.url.pathname;
             </a>
           );
         })}
+        <div class="px-3 pt-3 mt-2 border-t border-(--color-border) flex items-center justify-between text-(--color-ink-muted)">
+          <span>Theme</span>
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   </Container>
