@@ -2,6 +2,7 @@
 import type { TeamMember } from "~/lib/data";
 import { memberEducations, personSlug } from "~/lib/data";
 import { normalizeImage } from "~/lib/images";
+import SocialLinks from "./SocialLinks.astro";
 
 interface Props {
   member: TeamMember;
@@ -47,6 +48,8 @@ const slug = personSlug(member.name);
         </a>
       </p>
     )}
+    <SocialLinks member={member} />
+
     {showEducation && educations.length > 0 && (
       <ul class="mt-3 space-y-1 text-xs text-(--color-ink-muted)">
         {educations.map((e) => (

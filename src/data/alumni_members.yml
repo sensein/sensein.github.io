@@ -2,6 +2,7 @@
   photo: /images/people/debbie-burdinski.webp
   info: MD-PhD Student, Harvard Medical School and MIT
   email: dclb@mit.edu
+  orcid: "0000-0002-5625-3619"
   duration: 2020 - 2026
   number_educ: 1
   education1: BS Chemistry, Duke University
@@ -9,6 +10,7 @@
   photo: /images/people/lucie-bierent.webp
   info: Visiting MSc student
   email: lucie271@mit.edu
+  github: "lucie271"
   duration: 2025 - 2026
   number_educ: 2
   education1: MSc in Data Science, ETH Zurich
@@ -17,6 +19,10 @@
   photo: /images/people/jeff-mentch.webp
   info: PhD Student
   email: jsmentch@mit.edu
+  github: "jsmentch"
+  website: "https://jeffmentch.com/"
+  orcid: "0000-0002-7762-8678"
+  twitter: "@jshoonm"
   duration: 2020 - 2025
   number_educ: 2
   education1: BS Biology, Penn State
@@ -25,6 +31,11 @@
   photo: /images/people/fabio-catania.webp
   info: Postdoctoral research fellow, MIT
   email: fabiocat@mit.edu
+  github: "fabiocat93"
+  linkedin: "https://www.linkedin.com/in/fabiocatania/"
+  scholar: "https://scholar.google.com/citations?user=cn8YPK0AAAAJ"
+  orcid: "0000-0002-5403-9002"
+  twitter: "@FabioCatania10"
   duration: 2022 - 2025
   number_educ: 3
   education1: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
@@ -34,6 +45,7 @@
   photo: /images/people/bruke-wossenseged.webp
   info: MEng Student, MIT
   email: brukew@mit.edu
+  github: "brukew"
   duration: 2024 - 2025
   number_educ: 2
   education1: MEng in Electrical Engineering and Computer Science, MIT
@@ -42,6 +54,7 @@
   photo: /images/people/isaac-bevers.webp
   info: Computational Technical Associate I
   email: isaacb@mit.edu
+  github: "ibevers"
   duration: 2024 - 2025
   number_educ: 1
   education1: B.S. in Symbolic Systems, Stanford University
@@ -49,6 +62,7 @@
   photo: /images/people/miles-silva.webp
   info: MEng Student, MIT
   email: mbsilva@mit.edu
+  github: "900miles"
   duration: 2024 - 2025
   number_educ: 2
   education1: MEng in Computation and Cognition, MIT
@@ -57,6 +71,12 @@
   photo: /images/people/maedbh-king.webp
   info: ICoN Postdoctoral Fellow
   email: maedbh@mit.edu
+  github: "maedbhk"
+  linkedin: "https://www.linkedin.com/in/maedbhking/"
+  website: "http://www.maedbhking.com/"
+  scholar: "https://scholar.google.com/citations?user=5Mha26gAAAAJ"
+  orcid: "0000-0001-5374-1011"
+  twitter: "@maedbhk"
   duration: 2022 - 2025
   number_educ: 1
   education1: Ph.D. in Cognitive Neuroscience, UC Berkeley
@@ -64,6 +84,8 @@
   photo: /images/people/aaron-kanzer.webp
   info: Software Engineer
   email: akanzer@mit.edu
+  github: "aaronkanzer"
+  website: "https://aaronkanzer.github.io/"
   duration: 2023 - 2025
   number_educ: 2
   education1: M.S in Computer Science, Northeastern University
@@ -72,6 +94,7 @@
   photo: /images/people/yassine-jamaa.webp
   info: M.S. Computational Neuroscience
   email: jamaayas@mit.edu
+  github: "YassineJamaa"
   duration: 2024 - 2025
   number_educ: 2
   education1: M.S. Computational Neuroscience, EPFL
@@ -80,6 +103,7 @@
   photo: /images/people/veronika-moroz.webp
   info: Undergraduate Researcher
   email: vmoroz@mit.edu
+  github: "Veronika271"
   duration: 2025
   number_educ: 0
 - name: Harsha Gazula
@@ -87,11 +111,14 @@
   info: Research Scientist
   duration: 2023 - 2025
   email: hgazula@mit.edu
+  github: "harshagazula"
+  orcid: "0000-0001-9318-8871"
   number_educ: 0
 - name: Alina Weinberger
   photo: /images/people/alina-weinberger.webp
   info: Visiting M.S. student from Technical University of Munich
   email: alina991@mit.edu
+  github: "ALINA991"
   duration: 2024
   number_educ: 1
   education1: M.S. Neuroengineering, Technichal University of Munich
@@ -99,6 +126,7 @@
   photo: /images/people/chaitanya-kapoor.webp
   info: Visiting undergraduate student
   email: ckapoor@mit.edu
+  github: "atomic-rooster"
   duration: 2024
   number_educ: 1
   education1: B.E. in Electrical and Electronics Engineering, BITS Pilani
@@ -106,6 +134,12 @@
   photo: /images/people/daniel-m-low.webp
   info: PhD Student
   email: dlow@mit.edu
+  github: "danielmlow"
+  website: "https://danielmlow.github.io/"
+  scholar: "https://scholar.google.com/citations?user=gxM0BLwAAAAJ"
+  orcid: "0000-0002-8866-8667"
+  twitter: "@danielmlow"
+  bluesky: "danielmlow.bsky.social"
   duration: 2019 - 2024
   number_educ: 2
   education1: MA Language & Communication Technologies, University of Groningen
@@ -114,6 +148,12 @@
   photo: /images/people/gasser-elbanna.webp
   info: PhD Student
   email: gelbanna@mit.edu
+  github: "GasserElbanna"
+  linkedin: "https://www.linkedin.com/in/gasser-elbanna-b38802127/"
+  website: "https://gasserelbanna.github.io/"
+  scholar: "https://scholar.google.com/citations?user=DCdkLrwAAAAJ"
+  orcid: "0009-0002-2077-548X"
+  twitter: "@gasser_elbanna"
   duration: 2022 - 2024
   number_educ: 2
   education1: M.Sc. in Neuroscience and Neuroengineering, EPFL
@@ -122,6 +162,9 @@
   photo: /images/people/sabeen-lohawala.webp
   info: MEng Student, MIT
   email: sabeen@mit.edu
+  github: "sabeenlohawala"
+  linkedin: "https://www.linkedin.com/in/sabeen/"
+  website: "https://sabeenlohawala.cargo.site/"
   duration: 2023 - 2024
   number_educ: 2
   education1: MEng in Computer Science, MIT
@@ -137,6 +180,7 @@
   photo: /images/people/agathe-tournant.webp
   info: Visiting M.S. student from ETH Zurich
   email: agathe01@mit.edu
+  github: "agathetournant"
   duration: 2023 - 2024
   number_educ: 1
   education1: B.S. in Physics, EPFL
@@ -144,6 +188,8 @@
   photo: /images/people/christopher-j-markiewicz.webp
   info: Research Affiliate, started 2017, working on Nipype, Neuroscout
   email: cjmarkie@mit.edu
+  github: "effigies"
+  orcid: "0000-0002-6533-164X"
   duration: 2018 - 2023
   number_educ: 1
   education1: PhD Cognitive and Neural Systems, Boston University
@@ -151,6 +197,7 @@
   photo: /images/people/alicia-zhang.webp
   info: Undergraduate Researcher
   email: aliciaz@mit.edu
+  github: "alicia-z"
   duration: 2023 - 2023
   number_educ: 1
   education1: B.S. in Mathematics, Artificial Intelligence and Decision Making, MIT
@@ -165,6 +212,9 @@
   photo: /images/people/jai-amin.webp
   info: Technical Intern
   email: jamin30@mit.edu
+  github: "jaiamin"
+  linkedin: "https://www.linkedin.com/in/jaiamin30/"
+  website: "https://jaiamin.com/"
   duration: 2023 - 2023
   number_educ: 1
   education1: B.S. in Computer Science and Artificial Intelligence, Northeastern University
@@ -208,6 +258,7 @@
   photo: /images/people/anurag-gade.webp
   info: Undergraduate Researcher
   email: f20201337@hyderabad.bits-pilani.ac.in
+  github: "AnuragGade"
   duration: 2023 - 2023
   number_educ: 1
   education1: B. E. in Electrical and Electronics Engineering, BITS Pilani
@@ -215,6 +266,9 @@
   photo: /images/people/alisha-kodibagkar.webp
   info: Technical Associate I - working on Mumble Melody
   email: akodiba1@mit.edu
+  github: "AlishaKodibagkar"
+  website: "https://alishakodibagkar.github.io/"
+  twitter: "@alishakodib"
   duration: 2022 - 2023
   number_educ: 1
   education1: B.S. and M.S.E., Biomedical Engineering, Johns Hopkins University
@@ -252,6 +306,7 @@
   photo: /images/people/hoda-rajaei.webp
   info: Research Staff, worked on Nobrainer
   email: hodaraja@mit.edu
+  orcid: "0000-0002-0754-5586"
   duration: 2019 - 2022
   number_educ: 1
   education1: PhD Florida International University
@@ -259,6 +314,7 @@
   photo: /images/people/megha-vemuri.webp
   info: Undergraduate Research Assistant - working on Mumble Melody
   email: mvemuri@mit.edu
+  github: "meghavemuri"
   duration: 2021 - 2022
   number_educ: 1
   education1: Currently Pursuing B.S. in Computation and Cognition, MIT
@@ -266,6 +322,7 @@
   photo: /images/people/rebecca-kleinberger.webp
   info: Research Affiliate and Postdoc at MIT; working on Mumble Melody; Faculty at Northeastern University
   email: rebklein@mit.edu
+  orcid: "0000-0002-5667-5598"
   duration: 2020 - 2022
   number_educ: 3
   education1: Meng Mechanical Engineering, ENSAM
@@ -276,6 +333,9 @@
   info: Postdoctoral Researcher, MIT; worked on Nobrainer
   duration: 2020 - 2022
   email: dasd@mit.edu
+  github: "dhritimandas"
+  orcid: "0000-0001-6627-0618"
+  twitter: "@dhritimandas_"
   number_educ: 2
   education1: M.S, Biomedical Engineering, Arizona State University
   education2: Ph.D. Computer Science, Technical University of Munich (TUM)
@@ -294,6 +354,8 @@
   info: Postdoctoral Associate, MIT
   duration: 2020 - 2022
   email: aakrana@mit.edu
+  github: "Aakanksha-Rana"
+  orcid: "0000-0002-8350-7602"
   number_educ: 2
   education1: M.S, Signal Processing, Telecom Paris(ENST)
   education2: Ph.D., Computer Vision & Machine Learning, Telecom Paris(ENST)
@@ -302,6 +364,8 @@
   info: Research Affiliate/Technical Assistant, worked on Nipype, BANDA, ReproNim
   duration: 2015 - 2021
   email: mathiasg@mit.edu
+  github: "mgxd"
+  orcid: "0000-0002-7252-7771"
   number_educ: 1
   education1: BA Biology, Boston University
 - name: Sanu Ann Abraham
@@ -309,6 +373,8 @@
   info: Technical Assistant, worked on Repronim
   duration: 2018 - 2021
   email: sanuann@mit.edu
+  github: "sanuann"
+  orcid: "0000-0002-6169-8575"
   number_educ: 1
   education1: MS Electronics and Electrical Communication Engineering, IIT Kharagpur
 - name: Frances Mulligan (They/Them)
@@ -358,6 +424,11 @@
 
     '
   email: ksitek@mit.edu
+  github: "sitek"
+  website: "https://sitek.github.io/"
+  orcid: "0000-0002-2172-5786"
+  twitter: "@krsitek"
+  bluesky: "sitek.bsky.social"
   number_educ: 2
   education1: PhD, Speech and Hearing Biosciences and Technology, Harvard University
   education2: BS Linguistics, University of California, Berkeley
@@ -375,6 +446,8 @@
     '
   info: Worked on generative models for brains and tumors.
   email: wazeer@mit.edu
+  orcid: "0009-0008-7753-8817"
+  twitter: "@wazeerzulfikar"
   number_educ: 1
   education1: BITS Pilani, Goa
 - name: Jakub Kaczmarzyk
@@ -386,6 +459,9 @@
 
     '
   email: jakubk@mit.edu
+  github: "kaczmarj"
+  website: "https://kaczmarj.github.io/"
+  orcid: "0000-0002-5544-7577"
   number_educ: 1
   education1: BS Cognitive Science, Union College
 - name: Smruti Padhy
@@ -397,6 +473,7 @@
 
     '
   email: spadhy@tacc.utexas.edu
+  orcid: "0000-0002-4218-5651"
   number_educ: 1
   education1: PhD Computer Science, Indian Institute of Technology
 - name: Gregory Ciccarelli
@@ -417,6 +494,7 @@
 
     '
   email: ysa@mit.edu
+  orcid: "0009-0003-1237-3760"
   number_educ: 0
   education1: null
 - name: Shilpa Chakravartula

@@ -11,6 +11,16 @@ export interface TeamMember {
   photo?: string;
   info?: string;
   email?: string;
+  /** GitHub username only (no URL). */
+  github?: string;
+  linkedin?: string;
+  website?: string;
+  scholar?: string;
+  orcid?: string;
+  /** Twitter/X handle (with or without leading @). */
+  twitter?: string;
+  /** Bluesky handle (e.g. user.bsky.social). */
+  bluesky?: string;
   duration?: string;
   number_educ?: number;
   education1?: string;

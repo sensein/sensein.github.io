@@ -1,5 +1,5 @@
 - title: Mapping the human subcortical auditory system using histology, postmortem MRI and in vivo MRI at 7T
-  image: /images/external/default-9fc0dc25.jpg
+  image: /images/external/default-9fc0dc25.webp
   description: >
     This work captures current MRI capabilities for investigating the human
     subcortical auditory system, describes challenges that remain, and
@@ -14,7 +14,7 @@
     <a href="//elifesciences.org/articles/48932/figures#data" target="_blank">Data and code availability</a>
 
 - title: Functional gradients of the cerebellum
-  image: /images/external/default-36895d2a.jpg
+  image: /images/external/default-36895d2a.webp
   description: >
     We show that cerebellar functional regions follow a gradual organization
     which progresses from primary (motor) to transmodal (DMN, task-unfocused)
@@ -31,7 +31,7 @@
     target="_blank">Littlebrain</a> paper
 
 - title: "fMRIPrep: a robust preprocessing pipeline for functional MRI"
-  image: /images/external/fmriprep-workflow-all-be05fd09.png
+  image: /images/external/fmriprep-workflow-all-be05fd09.webp
   description: >
     fMRIPrep is a Nipype-based, easily accessible, state-of-the-art approach for
     processing functional MRI data that is robust to variations in scan
@@ -48,7 +48,7 @@
   news2: <a href="//fmriprep.readthedocs.io/en/stable/index.html" target="_blank">fMRIPrep Documentation</a>
 
 - title: "Distributed Weight Consolidation: A Brain Segmentation Case Study"
-  image: /images/external/Screenshot_2019-01-27_18.35.52-b0961a94.png
+  image: /images/external/Screenshot_2019-01-27_18.35.52-b0961a94.webp
   description: >
     This paper introduces distributed weight consolidation (DWC), a continual
     learning method to consolidate the weights of separate neural networks, each
