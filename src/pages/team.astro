@@ -16,7 +16,7 @@ const alumni = alumniMembers();
 >
   <section>
     <SectionHeading id="members" eyebrow="Members" title="Current members" />
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-start">
       {members.map((m) => <MemberTile member={m} />)}
     </div>
   </section>
@@ -24,7 +24,7 @@ const alumni = alumniMembers();
   {studentList.length > 0 && (
     <section class="mt-20">
       <SectionHeading id="students" eyebrow="Students" title="Students" />
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-start">
         {studentList.map((m) => <MemberTile member={m} />)}
       </div>
     </section>
@@ -37,7 +37,7 @@ const alumni = alumniMembers();
       title="Alumni"
       description="Past members of the group and their roles while with us."
     />
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-start">
       {alumni.map((m) => (
         <MemberTile member={m} showEducation={false} showDuration />
       ))}
