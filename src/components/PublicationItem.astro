@@ -16,10 +16,8 @@ const primaryUrl =
   (pub.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}/` : undefined);
 
 const authors = pub.authors ?? [];
-const authorList =
-  authors.length > 8
-    ? `${authors.slice(0, 6).join(", ")}, …, ${authors[authors.length - 1]}`
-    : authors.join(", ");
+const SHORT = 6;
+const restCount = Math.max(0, authors.length - SHORT);
 
 const typeLabel = pub.type === "preprint"
   ? "Preprint"
@@ -49,9 +47,35 @@ const typeLabel = pub.type === "preprint"
       </a>
     </h3>
     {authors.length > 0 && (
-      <p class="mt-1 text-sm text-(--color-ink-muted) italic">{authorList}</p>
+      restCount === 0 ? (
+        <p class="mt-1 text-sm text-(--color-ink-muted) italic">{authors.join(", ")}</p>
+      ) : (
+        <p class="mt-1 text-sm text-(--color-ink-muted) italic" data-authors>
+          <span data-authors-short>{authors.slice(0, SHORT).join(", ")}</span><span
+            data-authors-rest
+            hidden
+          >, {authors.slice(SHORT).join(", ")}</span>
+          <button
+            type="button"
+            data-authors-toggle
+            data-rest-count={restCount}
+            aria-expanded="false"
+            class="not-italic ml-1 text-xs text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+          >+{restCount} more</button>
+        </p>
+      )
     )}
-    <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs">
+    <div class="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+      <a
+        href={detailUrl}
+        class="inline-flex items-center gap-1 rounded-md border border-(--color-border) hover:border-(--color-accent) hover:text-(--color-accent) text-(--color-ink-muted) px-2 py-0.5 font-medium transition-colors"
+      >
+        Details
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
       {pub.doi && (
         <a
           href={`https://doi.org/${pub.doi}`}
@@ -105,3 +129,18 @@ const typeLabel = pub.type === "preprint"
     </div>
   </article>
 </li>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-authors-toggle]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const root = btn.closest<HTMLElement>("[data-authors]");
+      if (!root) return;
+      const rest = root.querySelector<HTMLElement>("[data-authors-rest]");
+      if (!rest) return;
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      rest.hidden = expanded;
+      btn.setAttribute("aria-expanded", String(!expanded));
+      btn.textContent = expanded ? `+${btn.dataset.restCount} more` : "show less";
+    });
+  });
+</script>

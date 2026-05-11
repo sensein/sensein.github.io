@@ -1,7 +1,7 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
-import MemberCard from "~/components/MemberCard.astro";
+import MemberTile from "~/components/MemberTile.astro";
 import { teamMembers, students, alumniMembers } from "~/lib/data";
 
 const members = teamMembers();
@@ -12,20 +12,20 @@ const alumni = alumniMembers();
   eyebrow="People"
   title="The team"
   size="wide"
-  lede="The researchers, engineers, students, and alumni who make this work happen."
+  lede="The researchers, engineers, students, and alumni who make this work happen. Click a tile to expand details."
 >
   <section>
     <SectionHeading id="members" eyebrow="Members" title="Current members" />
-    <div class="grid md:grid-cols-2 gap-5">
-      {members.map((m) => <MemberCard member={m} />)}
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      {members.map((m) => <MemberTile member={m} />)}
     </div>
   </section>
 
   {studentList.length > 0 && (
     <section class="mt-20">
       <SectionHeading id="students" eyebrow="Students" title="Students" />
-      <div class="grid md:grid-cols-2 gap-5">
-        {studentList.map((m) => <MemberCard member={m} />)}
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {studentList.map((m) => <MemberTile member={m} />)}
       </div>
     </section>
   )}
@@ -37,9 +37,9 @@ const alumni = alumniMembers();
       title="Alumni"
       description="Past members of the group and their roles while with us."
     />
-    <div class="grid md:grid-cols-2 gap-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {alumni.map((m) => (
-        <MemberCard member={m} showEducation={false} showDuration />
+        <MemberTile member={m} showEducation={false} showDuration />
       ))}
     </div>
   </section>

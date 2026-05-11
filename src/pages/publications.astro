@@ -11,7 +11,7 @@ const pageRaw = (await import("~/data/publications_page.yml?raw")).default as st
 const page = yaml.load(pageRaw) as {
   summary: string;
   keywords: string[];
-  topics: { label: string; description: string; example_count: number }[];
+  topics: { label: string; tag?: string; description: string; example_count: number }[];
 };
 
 const all = publications().sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
@@ -39,11 +39,8 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
     <div class="grid lg:grid-cols-[1.7fr_1fr] gap-10 items-center">
       <div>
         <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
-          Publications
+          Publications · {totalCount} papers and preprints
         </p>
-        <h1 class="mt-4 font-serif text-4xl md:text-5xl font-semibold tracking-tight text-(--color-ink) leading-[1.05]">
-          {totalCount} papers and preprints
-        </h1>
         <p class="mt-5 text-lg text-(--color-ink-muted) leading-relaxed max-w-3xl">
           {page.summary}
         </p>
@@ -67,16 +64,24 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
     </div>
   </Container>
 
-  <!-- Topic areas summary -->
+  <!-- Topic areas summary; cards are clickable filters -->
   <Container size="wide" class="py-6">
-    <SectionHeading title="Topic areas" />
+    <SectionHeading title="Topic areas" description="Click a topic to filter the list below." />
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
       {page.topics.map((t) => (
-        <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-4">
+        <button
+          type="button"
+          data-topic-card
+          data-topic-tag={t.tag ?? ""}
+          class="text-left rounded-lg border border-(--color-border) bg-(--color-canvas) p-4 hover:border-(--color-accent) hover:shadow-sm transition-all"
+        >
           <p class="font-medium text-(--color-ink)">{t.label}</p>
           <p class="mt-1 text-xs text-(--color-ink-muted) leading-snug">{t.description}</p>
-          <p class="mt-2 text-[11px] text-(--color-ink-faint) font-mono">{t.example_count} papers</p>
-        </div>
+          <p class="mt-2 text-[11px] text-(--color-ink-faint) font-mono">
+            {t.example_count} papers
+            {t.tag && <span class="ml-1">· tag <code>{t.tag}</code></span>}
+          </p>
+        </button>
       ))}
     </div>
   </Container>
@@ -184,6 +189,23 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
     reset?.addEventListener("click", () => {
       selects.forEach((s) => (s.value = ""));
       applyFilters();
+    });
+
+    // Topic-area cards act as quick filter shortcuts.
+    const topicSelect = selects.find((s) => s.dataset.filter === "topic");
+    document.querySelectorAll<HTMLButtonElement>("[data-topic-card]").forEach((card) => {
+      card.addEventListener("click", () => {
+        const tag = card.dataset.topicTag ?? "";
+        if (!tag || !topicSelect) return;
+        // Toggle off if same tag is already applied.
+        if (topicSelect.value === tag) {
+          topicSelect.value = "";
+        } else {
+          topicSelect.value = tag;
+        }
+        applyFilters();
+        document.getElementById("full-list")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
     });
   }
 </script>

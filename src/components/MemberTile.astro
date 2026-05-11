@@ -1,0 +1,79 @@
+---
+import type { TeamMember } from "~/lib/data";
+import { memberEducations, personSlug } from "~/lib/data";
+import { normalizeImage } from "~/lib/images";
+import SocialLinks from "./SocialLinks.astro";
+
+interface Props {
+  member: TeamMember;
+  showEducation?: boolean;
+  showDuration?: boolean;
+}
+const { member, showEducation = true, showDuration = false } = Astro.props;
+const educations = memberEducations(member);
+const photo = normalizeImage(member.photo);
+const slug = personSlug(member.name);
+---
+<details
+  id={slug}
+  class="group scroll-mt-24 rounded-lg border border-(--color-border) bg-(--color-canvas) hover:border-(--color-border-strong) transition-colors overflow-hidden target:ring-2 target:ring-(--color-accent)"
+>
+  <summary
+    class="cursor-pointer list-none [&::-webkit-details-marker]:hidden p-3 flex items-center gap-3"
+  >
+    <img
+      src={photo}
+      alt=""
+      loading="lazy"
+      class="shrink-0 w-12 h-12 object-cover rounded-md bg-(--color-surface)"
+    />
+    <div class="min-w-0 flex-1">
+      <p class="font-medium text-(--color-ink) text-sm truncate">{member.name}</p>
+      {showDuration && member.duration && (
+        <p class="text-xs text-(--color-ink-faint) truncate">{member.duration}</p>
+      )}
+    </div>
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="shrink-0 text-(--color-ink-faint) group-open:rotate-180 transition-transform"
+      aria-hidden="true"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </summary>
+  <div class="px-3 pb-4 -mt-1 border-t border-(--color-border) pt-3">
+    {!showDuration && member.duration && (
+      <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-1">
+        {member.duration}
+      </p>
+    )}
+    {member.info && (
+      <p class="text-sm text-(--color-ink-muted) leading-relaxed" set:html={member.info} />
+    )}
+    {member.email && (
+      <p class="mt-2 text-sm">
+        <a
+          href={`mailto:${member.email}`}
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline break-all"
+        >
+          {member.email}
+        </a>
+      </p>
+    )}
+    <SocialLinks member={member} />
+    {showEducation && educations.length > 0 && (
+      <ul class="mt-3 space-y-1 text-xs text-(--color-ink-muted)">
+        {educations.map((e) => (
+          <li set:html={`• ${e}`} />
+        ))}
+      </ul>
+    )}
+  </div>
+</details>
