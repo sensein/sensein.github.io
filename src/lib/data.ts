@@ -1,10 +1,10 @@
-import fs from "node:fs";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
 import yaml from "js-yaml";
 
-const HERE = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = path.resolve(HERE, "../data");
+const RAW_FILES = import.meta.glob<string>("../data/*.yml", {
+  eager: true,
+  query: "?raw",
+  import: "default",
+});
 
 export interface TeamMember {
   name: string;
@@ -60,14 +60,21 @@ export interface NewsItem {
 }
 
 function load<T>(name: string): T {
-  const raw = fs.readFileSync(path.join(DATA_DIR, name), "utf-8");
+  const key = `../data/${name}`;
+  const raw = RAW_FILES[key];
+  if (typeof raw !== "string") {
+    throw new Error(
+      `Data file not found: ${name}. Available: ${Object.keys(RAW_FILES).join(", ")}`,
+    );
+  }
   return yaml.load(raw) as T;
 }
 
 export const teamMembers = () => load<TeamMember[]>("team_members.yml");
 export const students = () => load<TeamMember[]>("students.yml");
 export const alumniMembers = () => load<TeamMember[]>("alumni_members.yml");
-export const collaborators = () => load<CollaboratorGroup[]>("collaborators.yml");
+export const collaborators = () =>
+  load<CollaboratorGroup[]>("collaborators.yml");
 export const projects = () => load<Project[]>("projects.yml");
 export const papers = () => load<Publication[]>("papers.yml");
 export const publist = () => load<Publication[]>("publist.yml");
@@ -94,8 +101,8 @@ export function memberEducations(m: TeamMember): string[] {
 }
 
 /**
- * Parse the YAML date string like "2024 10 15" → Date. Bad/missing values
- * return null. Used for sorting news/papers.
+ * Parse loose YAML date strings like "2024 10 15" or "2024-10-15".
+ * Bad/missing values return null.
  */
 export function parseLooseDate(s: string | undefined): Date | null {
   if (!s) return null;
