@@ -4,6 +4,11 @@ The `/research/` page is generated from `src/data/projects.yml`. Anyone can open
 a pull request adding a new project, updating contributors, fixing a link, or
 moving a project to "former" — no Astro / Node knowledge required.
 
+A companion file `src/data/publications.yml` holds the canonical
+publications corpus (deduplicated from CV / NCBI MyBibliography / OpenAlex,
+~200 entries). Project entries cross-reference publications by DOI / arXiv id
+via the `publications:` list.
+
 ## Schema
 
 Each entry is a YAML object with these fields. Only `slug`, `title`, and
@@ -24,7 +29,23 @@ Each entry is a YAML object with these fields. Only `slug`, `title`, and
   contributors:                    # optional; both lists are optional
     current: [Satrajit S Ghosh, Nader Nikbakht]
     former: [Daniel M. Low]
+  publications:                    # optional; DOI or arXiv ids resolved from
+    - 10.1234/example              # publications.yml
+    - arXiv:2507.03674
 ```
+
+### Cross-referencing publications
+
+Add a DOI or arXiv id to the project's `publications:` list. The
+corresponding full record lives in `src/data/publications.yml`. If a paper
+isn't in the corpus yet, add it there in the same PR — the corpus entry's
+own `projects: [<slug>]` should also be set, so the link works both ways.
+
+When adding a paper to the corpus, follow the existing schema (see top of
+`publications.yml` for examples). Required fields: `id`, `type`, `year`,
+`title`, `authors`. Strongly recommended: `doi` (or `arxiv`/`pmid`),
+`venue`, `url`. The `lab_authors:` list should use the canonical roster
+names so the renderer can link them.
 
 ## Contributor names
 

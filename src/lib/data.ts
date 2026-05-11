@@ -49,15 +49,34 @@ export interface Project {
   themes?: string[];
   links?: ProjectLink[];
   contributors?: ProjectContributors;
-  // Legacy fields (deprecated): kept while older entries are migrated.
-  authors?: string;
-  link?: { url?: string; display?: string };
-  highlight?: number;
-  news1?: string;
-  news2?: string;
+  /** Cross-reference IDs into publications.yml (DOIs, arXiv ids). */
+  publications?: string[];
 }
 
+/** Schema for the curated publications corpus in src/data/publications.yml. */
 export interface Publication {
+  id: string;
+  type: "journal" | "preprint" | "conference" | "chapter" | "workshop" | "software" | "patent" | "dataset";
+  year: number;
+  title: string;
+  authors: string[];
+  venue?: string;
+  doi?: string;
+  pmid?: string;
+  pmcid?: string;
+  arxiv?: string;
+  url?: string;
+  pdf_url?: string;
+  github?: string;
+  sources?: string[];
+  projects?: string[];
+  lab_authors?: string[];
+  cited_by?: number;
+  superseded_by?: string;
+}
+
+/** Legacy schema for src/data/publist.yml (the manually-curated highlights). */
+export interface FeaturedPublication {
   title: string;
   image?: string;
   description?: string;
@@ -98,9 +117,16 @@ export const alumniMembers = () => loadArray<TeamMember>("alumni_members.yml");
 export const collaborators = () =>
   loadArray<CollaboratorGroup>("collaborators.yml");
 export const projects = () => loadArray<Project>("projects.yml");
-export const papers = () => loadArray<Publication>("papers.yml");
-export const publist = () => loadArray<Publication>("publist.yml");
+export const publications = () => loadArray<Publication>("publications.yml");
+export const publist = () => loadArray<FeaturedPublication>("publist.yml");
 export const news = () => loadArray<NewsItem>("news.yml");
+
+/** Publications filtered to a given project slug, newest-first. */
+export function publicationsForProject(slug: string): Publication[] {
+  return publications()
+    .filter((p) => (p.projects ?? []).includes(slug))
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+}
 
 /**
  * Educations entries are split across enumerated keys (education1..N).
