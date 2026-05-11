@@ -153,6 +153,27 @@ const labAuthorSet = new Set(pub.lab_authors ?? []);
       </dl>
     </section>
 
+    {pub.key_findings && (
+      <section class="mt-8">
+        <SectionHeading title="Key findings" />
+        <p class="text-(--color-ink) leading-relaxed">
+          {pub.key_findings}
+        </p>
+      </section>
+    )}
+
+    {pub.abstract && (
+      <section class="mt-8">
+        <SectionHeading
+          title="Abstract"
+          description={pub.abstract_source ? `Source: ${pub.abstract_source}` : undefined}
+        />
+        <div class="prose">
+          <p>{pub.abstract}</p>
+        </div>
+      </section>
+    )}
+
     {pub.topics && pub.topics.length > 0 && (
       <section class="mt-8">
         <SectionHeading title="Topics" />

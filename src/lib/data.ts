@@ -110,6 +110,13 @@ export interface Publication {
    *  entry. Only present on the journal/conference/chapter record. */
   preprints?: PreprintRef[];
   cited_by?: number;
+  /** Abstract pulled verbatim from PubMed / PMC / arXiv / OpenAlex / Crossref.
+      No paraphrasing — only authoritative sources. */
+  abstract?: string;
+  abstract_source?: "pubmed" | "pmc" | "arxiv" | "openalex" | "crossref" | "publisher";
+  /** 1–3 sentence summary of the paper's main contribution. Derived directly
+      from the abstract; never invented when the abstract is absent. */
+  key_findings?: string;
 }
 
 /** Legacy schema for src/data/publist.yml (the manually-curated highlights). */
