@@ -50,12 +50,34 @@ jobs:
           umbrella-dir: pr-preview
           action: auto
 
-      - name: Add 'Preview' check with link
+      - name: Create deployment + status (preview)
         if: github.event.action != 'closed'
         uses: actions/github-script@v7
         with:
           script: |
-            const url = process.env.PREVIEW_URL;
+            const previewUrl = process.env.PREVIEW_URL;
+            const environment = `pr-preview-${context.payload.pull_request.number}`;
+            const dep = await github.rest.repos.createDeployment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.payload.pull_request.head.sha,
+              environment,
+              transient_environment: true,
+              production_environment: false,
+              auto_merge: false,
+              required_contexts: [],
+              description: `Preview for PR #${context.payload.pull_request.number}`,
+            });
+            await github.rest.repos.createDeploymentStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              deployment_id: dep.data.id,
+              state: 'success',
+              environment_url: previewUrl,
+              log_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              description: 'Preview deployed',
+            });
+            // Also a check for the Checks tab.
             await github.rest.checks.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -63,9 +85,31 @@ jobs:
               head_sha: context.payload.pull_request.head.sha,
               status: 'completed',
               conclusion: 'success',
-              details_url: url,
+              details_url: previewUrl,
               output: {
                 title: 'Preview deployed',
-                summary: `[View preview](${url})\n\nUpdates on every push to this PR. Removed automatically when the PR closes.`,
+                summary: `[View preview](${previewUrl})\n\nUpdates on every push to this PR. Removed automatically when the PR closes.`,
               },
             });
+
+      - name: Mark preview deployment inactive (on PR close)
+        if: github.event.action == 'closed'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const environment = `pr-preview-${context.payload.pull_request.number}`;
+            const { data: deployments } = await github.rest.repos.listDeployments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              environment,
+              per_page: 100,
+            });
+            for (const dep of deployments) {
+              await github.rest.repos.createDeploymentStatus({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                deployment_id: dep.id,
+                state: 'inactive',
+                description: 'PR closed; preview removed',
+              });
+            }
