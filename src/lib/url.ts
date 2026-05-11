@@ -11,7 +11,11 @@ export function withBase(path: string): string {
 }
 
 export function isActive(currentPath: string, target: string): boolean {
-  const stripped = currentPath.replace(BASE, "") || "/";
+  // Strip BASE only if it's an actual prefix, not anywhere it appears in the path.
+  const stripped =
+    BASE && currentPath.startsWith(BASE)
+      ? currentPath.slice(BASE.length) || "/"
+      : currentPath || "/";
   const t = target === "/" ? "/" : target.replace(/\/$/, "");
   const c = stripped === "/" ? "/" : stripped.replace(/\/$/, "");
   if (t === "/") return c === "/";

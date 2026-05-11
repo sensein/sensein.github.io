@@ -67,7 +67,7 @@ const slides = [
           </a>
         </div>
       </div>
-      <div class="relative">
+      <div class="relative" data-carousel-root>
         <div
           class="aspect-[4/3] overflow-hidden rounded-xl border border-(--color-border) bg-(--color-surface) shadow-sm"
           data-carousel
@@ -115,10 +115,12 @@ const slides = [
 </section>
 
 <script>
-  const carousel = document.querySelector<HTMLElement>("[data-carousel]");
-  if (carousel) {
+  document.querySelectorAll<HTMLElement>("[data-carousel-root]").forEach((root) => {
+    const carousel = root.querySelector<HTMLElement>("[data-carousel]");
+    if (!carousel) return;
     const slides = Array.from(carousel.querySelectorAll<HTMLElement>("[data-slide]"));
-    const dots = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-dot]"));
+    const dots = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-dot]"));
+    if (!slides.length) return;
     let i = 0;
     const show = (n: number) => {
       i = (n + slides.length) % slides.length;
@@ -141,5 +143,5 @@ const slides = [
     carousel.addEventListener("mouseleave", () => {
       timer = window.setInterval(() => show(i + 1), 5500);
     });
-  }
+  });
 </script>

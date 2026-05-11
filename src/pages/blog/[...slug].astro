@@ -9,7 +9,9 @@ export async function getStaticPaths() {
   return posts.map((post) => {
     const m = post.id.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/);
     const slug = m ? m[4] : post.id;
-    const date = m ? new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3])) : null;
+    const date = m
+      ? new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3])))
+      : null;
     return {
       params: { slug },
       props: { post, date },
@@ -39,6 +41,7 @@ const { Content } = await render(post);
             year: "numeric",
             month: "long",
             day: "numeric",
+            timeZone: "UTC",
           })}
         </time>
       )}

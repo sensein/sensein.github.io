@@ -114,7 +114,7 @@ export function parseLooseDate(s: string | undefined): Date | null {
   const parts = s.trim().split(/[\s\-/]+/).map((p) => parseInt(p, 10));
   if (!parts.length || Number.isNaN(parts[0])) return null;
   const [y, m = 1, d = 1] = parts;
-  return new Date(y, Math.max(0, m - 1), d);
+  return new Date(Date.UTC(y, Math.max(0, m - 1), d));
 }
 
 export function sortedNews(): NewsItem[] {
