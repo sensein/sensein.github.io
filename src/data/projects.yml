@@ -344,7 +344,7 @@
     Analyses of psychotic experiences in the Adolescent Brain Cognitive
     Development (ABCD) study — risk factors, transitions, and adolescent
     brain-imaging correlates. # TODO expand description
-  image: /images/projects/abcd-psychotic-experiences.jpg
+  image: /images/projects/abcd-psychotic-experiences-placeholder.svg
   themes: [psychiatry, neuroimaging, adolescence]
   links:
     - { label: "Burdinski et al. 2024 (JAMA Netw Open) — cannabis & cognition", url: "https://doi.org/10.1001/jamanetworkopen.2024.34354" }
