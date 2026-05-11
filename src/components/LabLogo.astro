@@ -1,0 +1,20 @@
+---
+import logoSvg from "~/assets/lab_logo.svg?raw";
+
+interface Props {
+  size?: number;
+  class?: string;
+  title?: string;
+}
+const { size = 28, class: className = "", title } = Astro.props;
+
+// Strip the XML prolog and DOCTYPE; inject role/title/sizing on the <svg>.
+const inner = logoSvg
+  .replace(/<\?xml[^>]*\?>\s*/i, "")
+  .replace(/<!DOCTYPE[^>]*>\s*/i, "")
+  .replace(
+    /<svg([^>]*)>/i,
+    `<svg$1 width="${size}" height="${size}" role="img"${title ? ` aria-label="${title}"` : " aria-hidden=\"true\""}>`,
+  );
+---
+<span class={`inline-block ${className}`} set:html={inner} />

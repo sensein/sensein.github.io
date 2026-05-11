@@ -2,6 +2,7 @@
 import { withBase, isActive } from "~/lib/url";
 import Container from "./Container.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+import LabLogo from "./LabLogo.astro";
 
 const nav = [
   { label: "Research", href: "/research" },
@@ -24,13 +25,7 @@ const pathname = Astro.url.pathname;
         href={withBase("/")}
         class="flex items-center gap-2.5 text-(--color-ink) hover:text-(--color-accent) transition-colors"
       >
-        <span aria-hidden="true" class="grid place-items-center">
-          <svg width="26" height="26" viewBox="0 0 32 32" fill="none">
-            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5" opacity="0.4" />
-            <path d="M5 16c2.5 0 2.5-7 5-7s2.5 14 5 14 2.5-9 5-9 2.5 4 5 4 1-2 2-2"
-              stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </span>
+        <LabLogo size={28} class="shrink-0" title="Senseable Intelligence Group" />
         <span class="font-semibold tracking-tight text-[15px]">Senseable Intelligence Group</span>
       </a>
       <button

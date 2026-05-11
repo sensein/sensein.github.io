@@ -23,13 +23,6 @@
   number_educ: 1
   education1: PhD Atmospheric Physics, University of Warsaw
 
-- name: Debbie Burdinski
-  photo: ../images/debbie.jpeg
-  info: MD-PhD Student, Harvard Medical School and MIT
-  email: dclb@mit.edu
-  number_educ: 1
-  education1: BS Chemistry, Duke University
-
 - name: Rahul Brito
   photo: //shbtphd.hms.harvard.edu/sites/g/files/omnuum5491/files/styles/hwp_4_5__960x1200/public/shbtphd/files/brito_rahul.jpg?itok=QnmDZK9z
   info: PhD Student
@@ -119,14 +112,6 @@
   email: aparna21@iisertvm.ac.in
   number_educ: 1
   education2: BSc/MSc, IISER, India
-
-- name: Lucie Bierent
-  photo: ../images/lucie_bierent.jpg
-  info: Visiting MSc student
-  email: lucie271@mit.edu
-  number_educ: 2
-  education1: MSc in Data Science, ETH Zurich
-  education2: B.S. in Mechanical Engineering, EPFL
 
 - name: Suliman Sharif
   photo: ../images/sul.jpeg

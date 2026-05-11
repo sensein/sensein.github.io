@@ -476,3 +476,20 @@
   number_educ: 0
   education1:
 
+
+- name: Debbie Burdinski
+  photo: ../images/debbie.jpeg
+  info: MD-PhD Student, Harvard Medical School and MIT
+  email: dclb@mit.edu
+  duration: finished 2026
+  number_educ: 1
+  education1: BS Chemistry, Duke University
+
+- name: Lucie Bierent
+  photo: ../images/lucie_bierent.jpg
+  info: Visiting MSc student
+  email: lucie271@mit.edu
+  duration: 2025 - 2026
+  number_educ: 2
+  education1: MSc in Data Science, ETH Zurich
+  education2: B.S. in Mechanical Engineering, EPFL
