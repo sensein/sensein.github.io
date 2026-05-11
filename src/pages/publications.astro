@@ -201,15 +201,16 @@ const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
         </h2>
         <ul>
           {items.map((p) => (
-            <li
-              data-pub
-              data-type={p.type}
-              data-category={p.category}
-              data-topics={(p.topics ?? []).join(",")}
-              data-year={p.year}
-            >
-              <PublicationItem pub={p} />
-            </li>
+            <PublicationItem
+              pub={p}
+              liAttrs={{
+                "data-pub": true,
+                "data-type": p.type,
+                "data-category": p.category,
+                "data-topics": (p.topics ?? []).join(","),
+                "data-year": p.year,
+              }}
+            />
           ))}
         </ul>
       </section>

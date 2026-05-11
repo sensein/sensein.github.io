@@ -4,8 +4,13 @@ import { withBase } from "~/lib/url";
 
 interface Props {
   pub: Publication;
+  /** Extra attributes spread onto the rendered <li>. Used by /publications/
+   *  to attach the data-pub / data-category / etc. filter hooks directly,
+   *  since nesting <li><li> is invalid HTML and the browser auto-closes the
+   *  outer one. */
+  liAttrs?: Record<string, string | number | boolean | undefined>;
 }
-const { pub } = Astro.props;
+const { pub, liAttrs = {} } = Astro.props;
 
 const detailUrl = withBase(`/publications/${pub.id}`);
 
@@ -27,7 +32,7 @@ const typeLabel = pub.type === "preprint"
       ? "Chapter"
       : null;
 ---
-<li class="py-4 border-b border-(--color-border) last:border-b-0">
+<li class="py-4 border-b border-(--color-border) last:border-b-0" {...liAttrs}>
   <article>
     <div class="flex items-baseline gap-3 flex-wrap text-xs uppercase tracking-wider text-(--color-ink-faint)">
       <span>{pub.year}</span>
