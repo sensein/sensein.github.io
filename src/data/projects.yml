@@ -42,7 +42,7 @@
     - { label: NIH BRAIN BBQS program, url: "https://braininitiative.nih.gov/research/systems-neuroscience/brain-behavior-quantification-and-synchronization-program" }
     - { label: BARD.CC on NIH RePORTER, url: "https://reporter.nih.gov/search/OsbCHzaScU6FVeHg9b-MGw/project-details/10888562" }
   contributors:
-    current: [Nader Nikbakht, Satrajit S Ghosh, Sully, Tek Raj Chhetri]
+    current: [Nader Nikbakht, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri]
     former: []
   publications: []
 
@@ -97,7 +97,7 @@
     - { label: BICAN portal, url: https://www.portal.brain-bican.org/ }
     - { label: BICAN team page, url: https://brain-bican.org/teams/bican-knowledgebase }
   contributors:
-    current: [Dorota Jarecka, Nader Nikbakht, Nima Dehghani, Puja Trivedi, Satrajit S Ghosh, Sully, Tek Raj Chhetri]
+    current: [Dorota Jarecka, Nader Nikbakht, Nima Dehghani, Puja Trivedi, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri]
     former: [Jai Amin]
   publications:
     - 10.1145/3701716.3715483  # Chhetri et al. 2025, provenance/assertion ontologies
@@ -414,7 +414,7 @@
     - { label: "Preprint (arXiv 2507.03674)", url: https://arxiv.org/abs/2507.03674 }
     - { label: StructSense on GitHub, url: https://github.com/sensein/structsense }
   contributors:
-    current: [Dorota Jarecka, Nader Nikbakht, Puja Trivedi, Satrajit S Ghosh, Sully, Tek Raj Chhetri, Yibei Chen]
+    current: [Dorota Jarecka, Nader Nikbakht, Puja Trivedi, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri, Yibei Chen]
     former: []
   publications:
     - arXiv:2507.03674   # Chhetri et al. 2025 StructSense
