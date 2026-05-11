@@ -120,7 +120,7 @@
     - { label: BICAN portal, url: https://www.portal.brain-bican.org/ }
     - { label: "Park et al. 2024, Science (PMID 38870291)", url: "https://doi.org/10.1126/science.adh9979" }
   contributors:
-    current: [Satrajit S Ghosh] # TODO add other current contributors as the lab identifies them
+    current: [Kabilar Gunalan, Satrajit S Ghosh]
     former: []
   publications:
     - 10.1126/science.adh9979
