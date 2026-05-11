@@ -200,7 +200,7 @@
     - { label: senselab API docs, url: https://sensein.group/senselab/senselab.html }
   contributors:
     current: [Jordan Wilke, Satrajit S Ghosh]
-    former: [Fabio Catania]
+    former: [Bruke Wossenseged, Fabio Catania, Gasser Elbanna, Isaac Bevers, Miles Silva]
   publications: []
 
 - slug: riverst-kiva
