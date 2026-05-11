@@ -15,9 +15,6 @@ const allContribs = [
   ...(project.contributors?.current ?? []).map((n) => ({ name: n, kind: "current" as const })),
   ...(project.contributors?.former ?? []).map((n) => ({ name: n, kind: "former" as const })),
 ];
-// Show up to 6 names on the card; rest collapse to "+N more".
-const visibleContribs = allContribs.slice(0, 6);
-const extraContribCount = allContribs.length - visibleContribs.length;
 
 const pubCount = projectPublications(project).length;
 const linkCount = (project.links ?? []).filter((l) => l.url).length;
@@ -61,10 +58,10 @@ const linkCount = (project.links ?? []).filter((l) => l.url).length;
       </p>
     )}
 
-    {visibleContribs.length > 0 && (
+    {allContribs.length > 0 && (
       <p class="mt-3 text-xs text-(--color-ink-muted) leading-relaxed">
         <span class="text-(--color-ink-faint)">People: </span>
-        {visibleContribs.map((c, i) => {
+        {allContribs.map((c, i) => {
           const href = personHref(c.name);
           const label = c.kind === "former" ? `${c.name}*` : c.name;
           return (
@@ -79,13 +76,10 @@ const linkCount = (project.links ?? []).filter((l) => l.url).length;
               ) : (
                 <span>{label}</span>
               )}
-              {i < visibleContribs.length - 1 && <span>, </span>}
+              {i < allContribs.length - 1 && <span>, </span>}
             </>
           );
         })}
-        {extraContribCount > 0 && (
-          <span class="text-(--color-ink-faint)"> +{extraContribCount} more</span>
-        )}
       </p>
     )}
 
