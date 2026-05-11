@@ -129,6 +129,47 @@ export function publicationsForProject(slug: string): Publication[] {
 }
 
 /**
+ * Look up a publication by cross-reference id used in projects.yml. Accepts
+ * DOIs ("10.x/y"), arXiv ids ("arXiv:2401.12345" or "arxiv:2401.12345"),
+ * pmid:NNN, or slug:foo identifiers. Returns null if not found.
+ */
+let _pubIndex: Map<string, Publication> | null = null;
+function pubIndex(): Map<string, Publication> {
+  if (_pubIndex) return _pubIndex;
+  const idx = new Map<string, Publication>();
+  for (const p of publications()) {
+    idx.set(p.id.toLowerCase(), p);
+    if (p.doi) idx.set(p.doi.toLowerCase(), p);
+    if (p.arxiv) {
+      idx.set(`arxiv:${p.arxiv.toLowerCase()}`, p);
+      idx.set(`10.48550/arxiv.${p.arxiv.toLowerCase()}`, p);
+    }
+    if (p.pmid) idx.set(`pmid:${p.pmid}`, p);
+  }
+  _pubIndex = idx;
+  return idx;
+}
+
+export function findPublication(ref: string): Publication | null {
+  return pubIndex().get(ref.trim().toLowerCase()) ?? null;
+}
+
+/** Collect publications cross-referenced by a project entry, in order. */
+export function projectPublications(project: Project): Publication[] {
+  if (!project.publications?.length) return [];
+  const seen = new Set<string>();
+  const out: Publication[] = [];
+  for (const ref of project.publications) {
+    const p = findPublication(ref);
+    if (p && !seen.has(p.id)) {
+      seen.add(p.id);
+      out.push(p);
+    }
+  }
+  return out;
+}
+
+/**
  * Educations entries are split across enumerated keys (education1..N).
  * Collapse them into a clean array for templates.
  */

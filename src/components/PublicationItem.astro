@@ -1,0 +1,110 @@
+---
+import type { Publication } from "~/lib/data";
+
+interface Props {
+  pub: Publication;
+}
+const { pub } = Astro.props;
+
+const primaryUrl =
+  pub.url ??
+  (pub.doi ? `https://doi.org/${pub.doi}` : undefined) ??
+  (pub.arxiv ? `https://arxiv.org/abs/${pub.arxiv}` : undefined) ??
+  (pub.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}/` : undefined);
+
+const authors = pub.authors ?? [];
+const authorList =
+  authors.length > 8
+    ? `${authors.slice(0, 6).join(", ")}, …, ${authors[authors.length - 1]}`
+    : authors.join(", ");
+
+const typeLabel = pub.type === "preprint"
+  ? "Preprint"
+  : pub.type === "conference"
+    ? "Conference"
+    : pub.type === "chapter"
+      ? "Chapter"
+      : null;
+---
+<li class="py-4 border-b border-(--color-border) last:border-b-0">
+  <article>
+    <div class="flex items-baseline gap-3 flex-wrap text-xs uppercase tracking-wider text-(--color-ink-faint)">
+      <span>{pub.year}</span>
+      {typeLabel && (
+        <span class="px-1.5 py-0.5 rounded border border-(--color-border) bg-(--color-surface)/50">
+          {typeLabel}
+        </span>
+      )}
+      {pub.venue && <span class="normal-case tracking-normal italic">{pub.venue}</span>}
+    </div>
+    <h3 class="mt-1.5 text-(--color-ink) leading-snug">
+      {primaryUrl ? (
+        <a
+          href={primaryUrl}
+          target="_blank"
+          rel="noopener"
+          class="hover:text-(--color-accent) transition-colors"
+        >
+          {pub.title}
+        </a>
+      ) : (
+        pub.title
+      )}
+    </h3>
+    {authors.length > 0 && (
+      <p class="mt-1 text-sm text-(--color-ink-muted) italic">{authorList}</p>
+    )}
+    <div class="mt-1.5 flex flex-wrap gap-x-3 gap-y-1 text-xs">
+      {pub.doi && (
+        <a
+          href={`https://doi.org/${pub.doi}`}
+          target="_blank"
+          rel="noopener"
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+        >
+          doi
+        </a>
+      )}
+      {pub.arxiv && (
+        <a
+          href={`https://arxiv.org/abs/${pub.arxiv}`}
+          target="_blank"
+          rel="noopener"
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+        >
+          arXiv
+        </a>
+      )}
+      {pub.pmid && (
+        <a
+          href={`https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}/`}
+          target="_blank"
+          rel="noopener"
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+        >
+          PubMed
+        </a>
+      )}
+      {pub.pmcid && (
+        <a
+          href={`https://pmc.ncbi.nlm.nih.gov/articles/${pub.pmcid}/`}
+          target="_blank"
+          rel="noopener"
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+        >
+          PMC
+        </a>
+      )}
+      {pub.github && (
+        <a
+          href={`https://github.com/${pub.github}`}
+          target="_blank"
+          rel="noopener"
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+        >
+          code
+        </a>
+      )}
+    </div>
+  </article>
+</li>

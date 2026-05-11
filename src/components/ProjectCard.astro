@@ -1,38 +1,32 @@
 ---
 import type { Project } from "~/lib/data";
-import { personHref } from "~/lib/data";
+import { personHref, projectPublications } from "~/lib/data";
 import { normalizeImage } from "~/lib/images";
 import { withBase } from "~/lib/url";
 
 interface Props {
   project: Project;
-  featured?: boolean;
 }
 const { project } = Astro.props;
 const image = project.image ? normalizeImage(project.image) : null;
+const detailUrl = withBase(`/projects/${project.slug}`);
 
-const primaryLink =
-  project.links?.find((l) => l.url)?.url ?? project.link?.url ?? null;
-
-const contributors = [
+const allContribs = [
   ...(project.contributors?.current ?? []).map((n) => ({ name: n, kind: "current" as const })),
   ...(project.contributors?.former ?? []).map((n) => ({ name: n, kind: "former" as const })),
 ];
+// Show up to 6 names on the card; rest collapse to "+N more".
+const visibleContribs = allContribs.slice(0, 6);
+const extraContribCount = allContribs.length - visibleContribs.length;
 
-function linkify(href: string): string {
-  return /^https?:\/\//i.test(href) ? href : withBase(href);
-}
+const pubCount = projectPublications(project).length;
+const linkCount = (project.links ?? []).filter((l) => l.url).length;
 ---
 <article
   class="group flex flex-col rounded-lg border border-(--color-border) bg-(--color-canvas) overflow-hidden hover:border-(--color-border-strong) hover:shadow-sm transition-all"
 >
   {image && (
-    <a
-      href={primaryLink ? linkify(primaryLink) : "#"}
-      class="block aspect-[16/9] bg-(--color-surface) overflow-hidden"
-      target={primaryLink?.startsWith("http") ? "_blank" : undefined}
-      rel={primaryLink?.startsWith("http") ? "noopener" : undefined}
-    >
+    <a href={detailUrl} class="block aspect-[16/9] bg-(--color-surface) overflow-hidden">
       <img
         src={image}
         alt={project.title}
@@ -44,7 +38,9 @@ function linkify(href: string): string {
   <div class="p-5 flex-1 flex flex-col">
     <div class="flex items-start justify-between gap-3">
       <h3 class="font-serif text-lg font-semibold text-(--color-ink) leading-snug">
-        {project.title}
+        <a href={detailUrl} class="hover:text-(--color-accent) transition-colors">
+          {project.title}
+        </a>
       </h3>
       {project.status === "former" && (
         <span class="shrink-0 text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded border border-(--color-border) text-(--color-ink-faint)">
@@ -60,15 +56,15 @@ function linkify(href: string): string {
     )}
 
     {project.description && (
-      <p class="mt-3 text-sm text-(--color-ink-muted) leading-relaxed">
+      <p class="mt-3 text-sm text-(--color-ink-muted) leading-relaxed line-clamp-4">
         {project.description}
       </p>
     )}
 
-    {contributors.length > 0 && (
+    {visibleContribs.length > 0 && (
       <p class="mt-3 text-xs text-(--color-ink-muted) leading-relaxed">
         <span class="text-(--color-ink-faint)">People: </span>
-        {contributors.map((c, i) => {
+        {visibleContribs.map((c, i) => {
           const href = personHref(c.name);
           const label = c.kind === "former" ? `${c.name}*` : c.name;
           return (
@@ -83,10 +79,13 @@ function linkify(href: string): string {
               ) : (
                 <span>{label}</span>
               )}
-              {i < contributors.length - 1 && <span>, </span>}
+              {i < visibleContribs.length - 1 && <span>, </span>}
             </>
           );
         })}
+        {extraContribCount > 0 && (
+          <span class="text-(--color-ink-faint)"> +{extraContribCount} more</span>
+        )}
       </p>
     )}
 
@@ -100,21 +99,25 @@ function linkify(href: string): string {
       </ul>
     )}
 
-    {project.links && project.links.length > 0 && (
-      <div class="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
-        {project.links.map((l) =>
-          l.url ? (
-            <a
-              href={linkify(l.url)}
-              target={l.url.startsWith("http") ? "_blank" : undefined}
-              rel={l.url.startsWith("http") ? "noopener" : undefined}
-              class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
-            >
-              {l.label ?? l.url} →
-            </a>
-          ) : null,
+    <div class="mt-auto pt-4 flex items-center justify-between gap-3 text-xs">
+      <div class="flex gap-3 text-(--color-ink-faint)">
+        {linkCount > 0 && (
+          <span>{linkCount} {linkCount === 1 ? "link" : "links"}</span>
+        )}
+        {pubCount > 0 && (
+          <span>{pubCount} {pubCount === 1 ? "paper" : "papers"}</span>
         )}
       </div>
-    )}
+      <a
+        href={detailUrl}
+        class="inline-flex items-center gap-1.5 rounded-md border border-(--color-border) hover:border-(--color-accent) hover:text-(--color-accent) text-(--color-ink-muted) px-3 py-1.5 font-medium transition-colors"
+      >
+        Learn more
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </a>
+    </div>
   </div>
 </article>

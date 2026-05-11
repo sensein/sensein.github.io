@@ -114,6 +114,7 @@
     multiscale molecular imaging and phenotyping platform for the human
     brain.
   funder: NIMH UM1 MH134812 (Co-I)
+  image: /images/projects/bican-um1.jpg
   themes: [cell-atlas, imaging, consortium]
   links:
     - { label: BICAN portal, url: https://www.portal.brain-bican.org/ }
@@ -134,6 +135,7 @@
     imaging, storage, and dissemination of neural-circuit data. Use cases
     include DBS-circuit mapping and biophysical modeling.
   funder: NINDS UM1 NS132358 (Site PI)
+  image: /images/projects/linc.jpg
   themes: [connectomics, imaging, consortium]
   links:
     - { label: CONNECTS project site, url: https://connects.mgh.harvard.edu/ }
@@ -164,6 +166,7 @@
     b2aiprep (data packaging) and contributes to the protocol design,
     ethics, and pediatric arm.
   funder: NIH OD OT2 OD032720 (MPI)
+  image: /images/projects/bridge2ai-voice.jpg
   themes: [speech-biomarkers, open-data, ai-ready, consortium]
   links:
     - { label: Bridge2AI Voice site, url: https://b2ai-voice.org/ }
@@ -194,6 +197,7 @@
     (primarily voice and speech, but also text and video) using robust,
     reproducible pipelines and utilities." Used by the Bridge2AI-Voice and
     Riverst / KIVA stacks.
+  image: /images/projects/senselab.jpg
   themes: [software, speech-biomarkers, reproducibility]
   links:
     - { label: senselab on GitHub, url: https://github.com/sensein/senselab }
@@ -213,6 +217,7 @@
     avatar understand child speech? Can LLMs adapt to each child? Can an
     LLM effectively teach vocabulary?
   funder: MGAIC (MIT Generative AI Consortium) — $75 000, 2025–2026
+  image: /images/projects/riverst-kiva.jpg
   themes: [child-development, llm, speech, education]
   links:
     - { label: Riverst on GitHub, url: https://github.com/sensein/riverst }
@@ -238,6 +243,7 @@
     Extraction), containerized BIDS apps (FreeSurfer / FSL / ANTs / MRIQC),
     and BABS (BIDS App Bootstrap).
   funder: NIBIB P41 EB019936 (Site PI; PI Kennedy, UMass Med; Director TR&D Project 2)
+  image: /images/projects/repronim.png
   themes: [reproducibility, neuroimaging, software, training]
   links:
     - { label: Project website, url: https://repronim.org }
@@ -272,6 +278,7 @@
     dataflow engine designed to succeed Nipype: reproducible, scalable
     workflows linking shell commands and Python functions.
   funder: NIBIB R01 EB020740 (PI, 2016–2020; project ongoing as community software)
+  image: /images/projects/nipype-pydra.png
   themes: [software, neuroimaging, reproducibility, workflows]
   links:
     - { label: Nipype, url: https://nipype.readthedocs.io/ }
@@ -297,6 +304,7 @@
     (reaction to name-calling, non-verbal communication, gesture
     prediction), and Bruke Wossenseged's thesis work. # TODO Bruke's topic
   funder: Simons Foundation (Site PI, $125 000 MIT sub, 2025–2026)
+  image: /images/projects/sails-placeholder.svg
   themes: [child-development, autism, computer-vision, speech]
   links:
     - { label: sailsprep on GitHub, url: https://github.com/sensein/sailsprep }
@@ -318,6 +326,7 @@
     configurations relate to the world and behavior? How does this
     structure differ between the neurodivergent and neurotypical
     populations?
+  image: /images/projects/brain-states.jpg
   themes: [neuroimaging, brain-dynamics]
   links:
     - { label: "bioRxiv preprint (Chen et al. 2025)", url: "https://www.biorxiv.org/content/10.1101/2025.04.05.647323v3" }
@@ -335,6 +344,7 @@
     Analyses of psychotic experiences in the Adolescent Brain Cognitive
     Development (ABCD) study — risk factors, transitions, and adolescent
     brain-imaging correlates. # TODO expand description
+  image: /images/projects/abcd-psychotic-experiences.jpg
   themes: [psychiatry, neuroimaging, adolescence]
   links:
     - { label: "Burdinski et al. 2024 (JAMA Netw Open) — cannabis & cognition", url: "https://doi.org/10.1001/jamanetworkopen.2024.34354" }
@@ -356,6 +366,7 @@
     Whisper baseline 0.59), with a voice-cloning anonymization scheme for
     data release.
   funder: Harvard University gift (Schmidt Futures & Citadel; Site Co-I) + MIT GenAI Consortium
+  image: /images/projects/readnet.jpg
   themes: [child-development, education, machine-learning, speech]
   links:
     - { label: ReadNet at Reach Every Reader, url: https://reacheveryreader.gse.harvard.edu/readnet-project/ }
@@ -380,6 +391,7 @@
     analysis → repeat, applied to large-scale neurophysiology
     archives. # TODO expand description with methods + outputs
   funder: MGAIC (MIT Generative AI Consortium)
+  image: /images/projects/hypsynth-placeholder.svg
   themes: [neurophysiology, machine-learning, automation, agents]
   links: [] # TODO add paper / preprint / repo URLs once available
   contributors:
@@ -396,6 +408,7 @@
     entities) from neuroscience literature, with a prototype tool that
     converts flat NER data into valid, Marr-aligned JSON-LD. arXiv 2507.03674
     (Chhetri, Chen, Trivedi, Jarecka et al., 2025).
+  image: /images/projects/structsense.png
   themes: [knowledge-graphs, agents, llm]
   links:
     - { label: "Preprint (arXiv 2507.03674)", url: https://arxiv.org/abs/2507.03674 }
@@ -487,6 +500,7 @@
     Analyzed sustained vowel and read speech to detect unilateral
     vocal-fold paralysis; explored biases in recording and compared ML
     performance to clinicians' diagnosis-from-voice ability.
+  image: /images/projects/vocal-fold-paralysis.jpg
   themes: [speech-biomarkers, clinical]
   links:
     - { label: "PLOS Digital Health paper (PMID 38814935)", url: "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000516" }
@@ -505,6 +519,7 @@
     Systematic review of 127 studies across 8 psychiatric disorders;
     catalogued acoustic features and offered guidelines for data
     acquisition and machine-learning models.
+  image: /images/projects/psychiatric-speech-review.jpg
   themes: [speech-biomarkers, psychiatry, review]
   links:
     - { label: "Paper (Laryngoscope Investig Otolaryngol 2020)", url: "https://onlinelibrary.wiley.com/doi/abs/10.1002/lio2.354" }
@@ -523,6 +538,7 @@
     changes across 15 mental-health support communities, surfacing
     vulnerable groups and a doubling of posts within suicidality and
     loneliness clusters. Released a Mental Health Reddit Dataset.
+  image: /images/projects/covid-reddit-mental-health.jpg
   themes: [nlp, mental-health, social-media]
   links:
     - { label: JMIR paper, url: "https://www.jmir.org/2020/10/e22635" }
@@ -545,6 +561,7 @@
     Estimated the effect of peer responses to suicidal posts among U.S.
     Servicemembers and veterans, using observational data and a deep
     learning approach on social-media interactions.
+  image: /images/projects/veteran-peer-response.jpg
   themes: [suicide-prevention, social-media, causal-inference, nlp]
   links:
     - { label: "Psychological Medicine 2024 (PMID 39279263)", url: "https://doi.org/10.1017/S0033291724001557" }
