@@ -42,7 +42,7 @@
     - { label: NIH BRAIN BBQS program, url: "https://braininitiative.nih.gov/research/systems-neuroscience/brain-behavior-quantification-and-synchronization-program" }
     - { label: BARD.CC on NIH RePORTER, url: "https://reporter.nih.gov/search/OsbCHzaScU6FVeHg9b-MGw/project-details/10888562" }
   contributors:
-    current: [Nader Nikbakht, Satrajit S Ghosh]
+    current: [Nader Nikbakht, Satrajit S Ghosh, Sully, Tek Raj Chhetri]
     former: []
   publications: []
 
@@ -97,7 +97,7 @@
     - { label: BICAN portal, url: https://www.portal.brain-bican.org/ }
     - { label: BICAN team page, url: https://brain-bican.org/teams/bican-knowledgebase }
   contributors:
-    current: [Dorota Jarecka, Nader Nikbakht, Nima Dehghani, Puja Trivedi, Satrajit S Ghosh, Tek Raj Chhetri]
+    current: [Dorota Jarecka, Nader Nikbakht, Nima Dehghani, Puja Trivedi, Satrajit S Ghosh, Sully, Tek Raj Chhetri]
     former: [Jai Amin]
   publications:
     - 10.1145/3701716.3715483  # Chhetri et al. 2025, provenance/assertion ontologies
@@ -212,7 +212,7 @@
     integrating speech-feature extraction. Research questions: Can an
     avatar understand child speech? Can LLMs adapt to each child? Can an
     LLM effectively teach vocabulary?
-  funder: MIT GenAI Consortium ($75 000, 2025–2026)
+  funder: MGAIC (MIT Generative AI Consortium) — $75 000, 2025–2026
   themes: [child-development, llm, speech, education]
   links:
     - { label: Riverst on GitHub, url: https://github.com/sensein/riverst }
@@ -302,7 +302,7 @@
     - { label: sailsprep on GitHub, url: https://github.com/sensein/sailsprep }
     - { label: ASD AI scoping review, url: https://github.com/sensein/asd-ai-scoping-review }
   contributors:
-    current: [Manaal Mohammed, Satrajit S Ghosh]
+    current: [Manaal Mohammed, Satrajit S Ghosh, Yibei Chen]
     former: [Bruke Wossenseged, Lucie Bierent]
   publications: []
   # External collaborators: TODO list.
@@ -339,8 +339,8 @@
   links:
     - { label: "Burdinski et al. 2024 (JAMA Netw Open) — cannabis & cognition", url: "https://doi.org/10.1001/jamanetworkopen.2024.34354" }
   contributors:
-    current: [Satrajit S Ghosh] # TODO confirm whether continuing under another lead now that Debbie graduated
-    former: [Alisha Kodibagkar, Debbie Burdinski]
+    current: [Debbie Burdinski, Satrajit S Ghosh]
+    former: [Alisha Kodibagkar]
   publications:
     - 10.1001/jamanetworkopen.2024.34354  # Burdinski et al. 2024 cannabis paper
 
@@ -371,31 +371,16 @@
     - 10.1007/s11881-025-00342-1   # Ozernov-Palchik et al. 2025 (Not so) universal literacy screening
     - 10.31234/osf.io/stek7_v1     # Ozernov-Palchik et al. 2026 LLM tutoring preprint
 
-- slug: dandi-reuse
-  title: DANDI-reuse — Neurophysiology data papers + AI Scientist
-  status: active
-  description: >
-    Multiple papers in preparation reusing DANDI data — spatially-masked
-    regression for electrophysiology, neuronal constraints in RNNs,
-    scaling laws for cortical inhibition, hippocampal / lateral-septum
-    dynamics, state-dependent complexity, cortical traveling waves,
-    Bayesian inference of cortical assembly formation — plus an
-    "AI Scientist" loop (metadata ingestion → hypothesis refinement →
-    in-silico experiment design → analysis → repeat).
-  themes: [neurophysiology, machine-learning, automation]
-  links: []
-  contributors:
-    current: [Nima Dehghani, Satrajit S Ghosh]
-    former: []
-  publications:
-    - 10.1523/ENEURO.0486-24.2025  # Gillon et al. 2025 ODIN review (Dehghani)
-
 - slug: hypsynth
-  title: HypSyNth # TODO expand the name / acronym
+  title: HypSyNth — AI co-scientist for neurophysiology # TODO confirm full name
   status: active
   description: >
-    Nima Dehghani's project. # TODO expand description, scope, methods, and outputs
-  themes: [neurophysiology] # TODO refine
+    An "AI co-scientist" loop for neurophysiology: metadata / data
+    ingestion → hypothesis refinement → in-silico experiment design →
+    analysis → repeat, applied to large-scale neurophysiology
+    archives. # TODO expand description with methods + outputs
+  funder: MGAIC (MIT Generative AI Consortium)
+  themes: [neurophysiology, machine-learning, automation, agents]
   links: [] # TODO add paper / preprint / repo URLs once available
   contributors:
     current: [Nima Dehghani, Satrajit S Ghosh]
@@ -416,7 +401,7 @@
     - { label: "Preprint (arXiv 2507.03674)", url: https://arxiv.org/abs/2507.03674 }
     - { label: StructSense on GitHub, url: https://github.com/sensein/structsense }
   contributors:
-    current: [Dorota Jarecka, Nader Nikbakht, Puja Trivedi, Satrajit S Ghosh, Tek Raj Chhetri, Yibei Chen]
+    current: [Dorota Jarecka, Nader Nikbakht, Puja Trivedi, Satrajit S Ghosh, Sully, Tek Raj Chhetri, Yibei Chen]
     former: []
   publications:
     - arXiv:2507.03674   # Chhetri et al. 2025 StructSense

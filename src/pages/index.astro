@@ -3,15 +3,8 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import Container from "~/components/Container.astro";
 import Hero from "~/components/Hero.astro";
 import NewsList from "~/components/NewsList.astro";
-import ProjectCard from "~/components/ProjectCard.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
-import { projects } from "~/lib/data";
 import { withBase } from "~/lib/url";
-
-// Show the first 4 active projects on the homepage. Order = projects.yml order.
-const highlighted = projects()
-  .filter((p) => p.status === "active")
-  .slice(0, 4);
 ---
 <BaseLayout>
   <Hero />
@@ -19,29 +12,8 @@ const highlighted = projects()
   <Container size="wide" class="py-20">
     <div class="grid lg:grid-cols-[2fr_1fr] gap-12 lg:gap-16">
       <section>
-        <SectionHeading
-          eyebrow="Research highlights"
-          title="Selected projects"
-          description="A snapshot of active work spanning data coordination, neurophysiology archives, knowledgebases, and speech health."
-        />
-        <div class="grid sm:grid-cols-2 gap-5">
-          {highlighted.map((proj) => (
-            <ProjectCard project={proj} featured />
-          ))}
-        </div>
-        <p class="mt-6">
-          <a
-            href={withBase("/research")}
-            class="text-sm font-medium text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
-          >
-            See all research →
-          </a>
-        </p>
-      </section>
-
-      <aside class="lg:sticky lg:top-24 self-start">
         <SectionHeading eyebrow="Latest" title="News" />
-        <NewsList limit={6} compact />
+        <NewsList limit={8} />
         <p class="mt-6">
           <a
             href={withBase("/news")}
@@ -50,6 +22,32 @@ const highlighted = projects()
             All news →
           </a>
         </p>
+      </section>
+
+      <aside class="lg:sticky lg:top-24 self-start space-y-3 text-sm">
+        <SectionHeading eyebrow="Explore" title="Where to go" />
+        <ul class="space-y-2">
+          <li>
+            <a href={withBase("/research")} class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+              Research projects →
+            </a>
+          </li>
+          <li>
+            <a href={withBase("/publications")} class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+              Publications →
+            </a>
+          </li>
+          <li>
+            <a href={withBase("/team")} class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+              The team →
+            </a>
+          </li>
+          <li>
+            <a href={withBase("/openings")} class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+              Openings →
+            </a>
+          </li>
+        </ul>
       </aside>
     </div>
   </Container>
