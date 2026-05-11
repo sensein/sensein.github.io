@@ -29,10 +29,27 @@ export interface CollaboratorGroup {
   persons: CollaboratorPerson[];
 }
 
+export interface ProjectLink {
+  label?: string;
+  url?: string;
+}
+
+export interface ProjectContributors {
+  current?: string[];
+  former?: string[];
+}
+
 export interface Project {
+  slug: string;
   title: string;
-  image?: string;
+  status: "active" | "former";
   description?: string;
+  funder?: string;
+  image?: string;
+  themes?: string[];
+  links?: ProjectLink[];
+  contributors?: ProjectContributors;
+  // Legacy fields (deprecated): kept while older entries are migrated.
   authors?: string;
   link?: { url?: string; display?: string };
   highlight?: number;
@@ -123,4 +140,39 @@ export function sortedNews(): NewsItem[] {
     const db = parseLooseDate(b.date)?.getTime() ?? 0;
     return db - da;
   });
+}
+
+/**
+ * Stable URL-safe slug for a person's display name.
+ * "Satrajit Ghosh" -> "satrajit-ghosh"
+ */
+export function personSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/** All team members across roster files, keyed by personSlug(name). */
+let _peopleIndex: Map<string, TeamMember & { roster: "current" | "students" | "alumni" }> | null = null;
+export function peopleIndex() {
+  if (_peopleIndex) return _peopleIndex;
+  const idx = new Map<string, TeamMember & { roster: "current" | "students" | "alumni" }>();
+  for (const m of teamMembers()) idx.set(personSlug(m.name), { ...m, roster: "current" });
+  for (const m of students()) idx.set(personSlug(m.name), { ...m, roster: "students" });
+  for (const m of alumniMembers()) idx.set(personSlug(m.name), { ...m, roster: "alumni" });
+  _peopleIndex = idx;
+  return idx;
+}
+
+/**
+ * Return the team-page anchor link for a contributor name, or null if the
+ * person isn't in the roster files. Falls back to plain text rendering.
+ */
+export function personHref(name: string, baseUrl = "/team/"): string | null {
+  const slug = personSlug(name);
+  if (!peopleIndex().has(slug)) return null;
+  return `${baseUrl}#${slug}`;
 }

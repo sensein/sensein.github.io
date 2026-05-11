@@ -6,7 +6,8 @@ import { normalizeImage } from "~/lib/images";
 import { projects } from "~/lib/data";
 
 const all = projects();
-const highlighted = all.filter((p) => p.highlight === 1);
+const active = all.filter((p) => p.status === "active");
+const former = all.filter((p) => p.status === "former");
 const heroImage = normalizeImage("/images/multi_sensory_integration.png");
 ---
 <PageLayout
@@ -35,14 +36,6 @@ const heroImage = normalizeImage("/images/multi_sensory_integration.png");
         caregiver, and community feedback.
       </p>
       <p>
-        Our research interests span computer science and neuroscience — specifically applied
-        machine learning, signal processing, and translational medicine. Our portfolio
-        comprises projects on spoken communication, brain imaging, and informatics to
-        address gaps in three areas: the neural basis and translational applications of
-        speaking, precision psychiatry and medicine, and preserving information for
-        reproducible research.
-      </p>
-      <p>
         Many of the tools we develop can be used across domains. If you have a need we can
         address, we would like to hear from you. If you have solved problems associated
         with any of the projects below, we would love to hear from you too — for us, a
@@ -60,43 +53,38 @@ const heroImage = normalizeImage("/images/multi_sensory_integration.png");
 
   <section class="mt-20">
     <SectionHeading
-      id="highlights"
-      eyebrow="Highlights"
-      title="Featured projects"
+      id="active"
+      eyebrow="Ongoing"
+      title="Active projects"
+      description="What's happening in the group right now."
     />
-    <div class="grid md:grid-cols-2 gap-5">
-      {highlighted.map((p) => <ProjectCard project={p} />)}
-    </div>
+    {active.length === 0 ? (
+      <p class="text-(--color-ink-muted)">No active projects listed.</p>
+    ) : (
+      <div class="grid md:grid-cols-2 gap-5">
+        {active.map((p) => <ProjectCard project={p} />)}
+      </div>
+    )}
   </section>
 
-  <section class="mt-20">
-    <SectionHeading id="full-list" eyebrow="Index" title="All projects" />
-    <ul class="divide-y divide-(--color-border) border-y border-(--color-border)">
-      {all.map((p) => (
-        <li class="py-5">
-          <h3 class="font-medium text-(--color-ink) leading-snug">{p.title}</h3>
-          {p.authors && (
-            <p class="mt-1 text-sm text-(--color-ink-muted) italic">{p.authors}</p>
-          )}
-          {p.description && (
-            <p class="mt-2 text-sm text-(--color-ink-muted) leading-relaxed">
-              {p.description}
-            </p>
-          )}
-          {p.link?.url && (
-            <p class="mt-2">
-              <a
-                href={p.link.url}
-                target="_blank"
-                rel="noopener"
-                class="text-sm text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
-              >
-                {p.link.display ?? "Visit"} →
-              </a>
-            </p>
-          )}
-        </li>
-      ))}
-    </ul>
-  </section>
+  {former.length > 0 && (
+    <section class="mt-20">
+      <SectionHeading
+        id="former"
+        eyebrow="Archive"
+        title="Past projects"
+        description="Completed or paused efforts. Asterisks (*) on contributor names indicate former members."
+      />
+      <div class="grid md:grid-cols-2 gap-5">
+        {former.map((p) => <ProjectCard project={p} />)}
+      </div>
+    </section>
+  )}
+
+  <p class="mt-12 text-xs text-(--color-ink-faint)">
+    Missing a project? Contributors not credited? Open a PR editing
+    <code>src/data/projects.yml</code> — see
+    <a href="https://github.com/sensein/sensein.github.io/blob/main/PROJECTS.md" class="underline underline-offset-3 hover:text-(--color-accent)">PROJECTS.md</a>
+    for the schema.
+  </p>
 </PageLayout>

@@ -8,7 +8,10 @@ import SectionHeading from "~/components/SectionHeading.astro";
 import { projects } from "~/lib/data";
 import { withBase } from "~/lib/url";
 
-const highlighted = projects().filter((p) => p.highlight === 1);
+// Show the first 4 active projects on the homepage. Order = projects.yml order.
+const highlighted = projects()
+  .filter((p) => p.status === "active")
+  .slice(0, 4);
 ---
 <BaseLayout>
   <Hero />
