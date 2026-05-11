@@ -1,10 +1,13 @@
 ---
 import type { Publication } from "~/lib/data";
+import { withBase } from "~/lib/url";
 
 interface Props {
   pub: Publication;
 }
 const { pub } = Astro.props;
+
+const detailUrl = withBase(`/publications/${pub.id}`);
 
 const primaryUrl =
   pub.url ??
@@ -38,18 +41,12 @@ const typeLabel = pub.type === "preprint"
       {pub.venue && <span class="normal-case tracking-normal italic">{pub.venue}</span>}
     </div>
     <h3 class="mt-1.5 text-(--color-ink) leading-snug">
-      {primaryUrl ? (
-        <a
-          href={primaryUrl}
-          target="_blank"
-          rel="noopener"
-          class="hover:text-(--color-accent) transition-colors"
-        >
-          {pub.title}
-        </a>
-      ) : (
-        pub.title
-      )}
+      <a
+        href={detailUrl}
+        class="hover:text-(--color-accent) transition-colors"
+      >
+        {pub.title}
+      </a>
     </h3>
     {authors.length > 0 && (
       <p class="mt-1 text-sm text-(--color-ink-muted) italic">{authorList}</p>

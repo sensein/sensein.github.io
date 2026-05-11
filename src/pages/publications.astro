@@ -1,82 +1,189 @@
 ---
-import PageLayout from "~/layouts/PageLayout.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Container from "~/components/Container.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
-import PublicationCard from "~/components/PublicationCard.astro";
-import { publist } from "~/lib/data";
+import PublicationItem from "~/components/PublicationItem.astro";
+import { publications } from "~/lib/data";
+import { withBase } from "~/lib/url";
+import yaml from "js-yaml";
 
-const highlighted = publist().filter((p) => p.highlight === 1);
-
-const publistDetails = {
-  firstname: "Satrajit",
-  middlename: "S",
-  lastname: "Ghosh",
-  email: "satra@mit.edu",
-  website: "//www.mit.edu/~satra",
-  address: "",
-  biosketch: "",
+const pageRaw = (await import("~/data/publications_page.yml?raw")).default as string;
+const page = yaml.load(pageRaw) as {
+  summary: string;
+  keywords: string[];
+  topics: { label: string; description: string; example_count: number }[];
 };
+
+const all = publications().sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+const totalCount = all.length;
+
+const years = Array.from(new Set(all.map((p) => p.year))).sort((a, b) => b - a);
+const types = Array.from(new Set(all.map((p) => p.type))).sort();
+const categories = Array.from(new Set(all.map((p) => p.category).filter(Boolean))).sort();
+const topicTags = (() => {
+  const c = new Map<string, number>();
+  for (const p of all) for (const t of p.topics ?? []) c.set(t, (c.get(t) ?? 0) + 1);
+  return [...c.entries()].sort((a, b) => b[1] - a[1]).map(([k, v]) => ({ tag: k, count: v }));
+})();
+
+// Group publications by year for the rendered list.
+const byYear = new Map<number, typeof all>();
+for (const p of all) {
+  if (!byYear.has(p.year)) byYear.set(p.year, []);
+  byYear.get(p.year)!.push(p);
+}
+const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
 ---
-<PageLayout
-  eyebrow="Publications"
-  title="Publications"
-  size="wide"
-  lede="Featured publications below; the full archive is fetched live from PublicationsList.org. For a complete and continually-updated list, see Google Scholar."
->
-  <p class="text-sm text-(--color-ink-muted) -mt-4 mb-8">
-    For a complete list, see
-    <a
-      href="https://scholar.google.com/citations?user=QnYCqUsAAAAJ&hl=en"
-      target="_blank"
-      rel="noopener"
-      class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
-    >Google Scholar</a>.
-  </p>
-
-  <section>
-    <SectionHeading id="highlights" eyebrow="Featured" title="Highlights" />
-    <div class="grid md:grid-cols-2 gap-5">
-      {highlighted.map((pub) => <PublicationCard pub={pub} />)}
+<BaseLayout title="Publications" description={page.summary}>
+  <Container size="wide" class="pt-14 pb-6">
+    <div class="grid lg:grid-cols-[1.7fr_1fr] gap-10 items-center">
+      <div>
+        <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
+          Publications
+        </p>
+        <h1 class="mt-4 font-serif text-4xl md:text-5xl font-semibold tracking-tight text-(--color-ink) leading-[1.05]">
+          {totalCount} papers and preprints
+        </h1>
+        <p class="mt-5 text-lg text-(--color-ink-muted) leading-relaxed max-w-3xl">
+          {page.summary}
+        </p>
+        <p class="mt-3 text-sm text-(--color-ink-muted)">
+          Also see
+          <a
+            href="https://scholar.google.com/citations?user=QnYCqUsAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener"
+            class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+          >Google Scholar</a> for the continually-updated index.
+        </p>
+      </div>
+      <figure class="text-(--color-ink-muted)">
+        <img
+          src={withBase("/images/publications-hero.svg")}
+          alt=""
+          class="w-full max-w-md"
+        />
+      </figure>
     </div>
-  </section>
+  </Container>
 
-  <section class="mt-20">
-    <SectionHeading
-      id="full-list"
-      eyebrow="Archive"
-      title="Full list"
-      description="Live feed from PublicationsList.org — conference papers follow journal articles."
-    />
-    <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-6">
-      <div id="publistdiv">Loading publications…</div>
-      <div id="tagslist" style="display:none;"></div>
-      <div id="authorslist" style="display:none;"></div>
+  <!-- Topic areas summary -->
+  <Container size="wide" class="py-6">
+    <SectionHeading title="Topic areas" />
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
+      {page.topics.map((t) => (
+        <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-4">
+          <p class="font-medium text-(--color-ink)">{t.label}</p>
+          <p class="mt-1 text-xs text-(--color-ink-muted) leading-snug">{t.description}</p>
+          <p class="mt-2 text-[11px] text-(--color-ink-faint) font-mono">{t.example_count} papers</p>
+        </div>
+      ))}
     </div>
-  </section>
+  </Container>
 
-  <script is:inline define:vars={{ publistDetails }}>
-    window.details = publistDetails;
-    window.readonly = "1";
-    window.rootpath = "//publicationslist.org/";
-    window.ownpage = "1";
-    window.userid = "satra";
-    window.mode = "publish";
-    window.nothumbs = 0;
-    window.publistBrand = "PublicationsList.org";
-    window.localInstall = 0;
-    window.citationFormat = "default";
-    window.previewMode = "";
-    window.uptodate = "1";
-    window.recent = false;
-  </script>
-  <script is:inline src="https://publicationslist.org/data/satra/publist.js"></script>
-  <script is:inline src="https://publicationslist.org/schema.js?"></script>
-  <!-- jQuery 3.7.1 + Migrate 3.4.1: bumps from the legacy 1.9.1 to a
-       patched modern version. Migrate plugin shims deprecated APIs that
-       publicationslist.org's BROWSER/DOM/pubutil scripts may still call. -->
-  <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script is:inline src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-+JBSPVNa2pE/zqGE8YfQ4Bphzv1plE0FjPDtxYwhe1U=" crossorigin="anonymous"></script>
-  <script is:inline src="https://publicationslist.org/data/satra/BROWSER.js?1384435485"></script>
-  <script is:inline src="https://publicationslist.org/data/satra/DOM.js?1384435485"></script>
-  <script is:inline src="https://publicationslist.org/data/satra/pubutil.js?1434354606"></script>
-  <script is:inline src="https://publicationslist.org/data/satra/pubinit.js?1384435485"></script>
-</PageLayout>
+  <!-- Filters -->
+  <Container size="wide" class="pt-10 pb-2">
+    <SectionHeading id="full-list" title="All publications" description="Filter by year, type, category, or topic. Filters combine (AND)." />
+    <div class="rounded-lg border border-(--color-border) bg-(--color-surface)/40 p-4 text-sm" data-pub-filters>
+      <div class="grid sm:grid-cols-4 gap-4">
+        <label class="flex flex-col gap-1">
+          <span class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">Year</span>
+          <select data-filter="year" class="rounded-md border border-(--color-border) bg-(--color-canvas) px-2 py-1.5 text-(--color-ink)">
+            <option value="">All ({totalCount})</option>
+            {years.map((y) => <option value={y}>{y}</option>)}
+          </select>
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">Type</span>
+          <select data-filter="type" class="rounded-md border border-(--color-border) bg-(--color-canvas) px-2 py-1.5 text-(--color-ink)">
+            <option value="">All</option>
+            {types.map((t) => <option value={t}>{t}</option>)}
+          </select>
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">Category</span>
+          <select data-filter="category" class="rounded-md border border-(--color-border) bg-(--color-canvas) px-2 py-1.5 text-(--color-ink)">
+            <option value="">All</option>
+            {categories.map((c) => <option value={c}>{c}</option>)}
+          </select>
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">Topic</span>
+          <select data-filter="topic" class="rounded-md border border-(--color-border) bg-(--color-canvas) px-2 py-1.5 text-(--color-ink)">
+            <option value="">All</option>
+            {topicTags.map((t) => <option value={t.tag}>{t.tag} ({t.count})</option>)}
+          </select>
+        </label>
+      </div>
+      <div class="mt-3 flex items-center justify-between text-xs text-(--color-ink-faint)">
+        <span><span data-pub-count>{totalCount}</span> of {totalCount} papers shown</span>
+        <button type="button" data-reset class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">Reset filters</button>
+      </div>
+    </div>
+  </Container>
+
+  <!-- List -->
+  <Container size="wide" class="py-6">
+    {yearGroups.map(([year, items]) => (
+      <section data-year-group={year} class="mt-8">
+        <h2 class="text-xs uppercase tracking-wider text-(--color-ink-faint) py-2 border-b border-(--color-border) sticky top-16 bg-(--color-canvas)/95 backdrop-blur-sm">
+          {year}  ·  {items.length} {items.length === 1 ? "paper" : "papers"}
+        </h2>
+        <ul>
+          {items.map((p) => (
+            <li
+              data-pub
+              data-type={p.type}
+              data-category={p.category}
+              data-topics={(p.topics ?? []).join(",")}
+              data-year={p.year}
+            >
+              <PublicationItem pub={p} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </Container>
+</BaseLayout>
+
+<script>
+  const root = document.querySelector<HTMLElement>("[data-pub-filters]");
+  if (root) {
+    const selects = Array.from(root.querySelectorAll<HTMLSelectElement>("select[data-filter]"));
+    const reset = root.querySelector<HTMLButtonElement>("[data-reset]");
+    const counter = root.querySelector<HTMLElement>("[data-pub-count]");
+    const items = Array.from(document.querySelectorAll<HTMLElement>("[data-pub]"));
+    const groups = Array.from(document.querySelectorAll<HTMLElement>("[data-year-group]"));
+
+    function applyFilters() {
+      const filters: Record<string, string> = {};
+      for (const s of selects) if (s.value) filters[s.dataset.filter!] = s.value;
+      let visible = 0;
+      for (const item of items) {
+        let ok = true;
+        if (filters.year && item.dataset.year !== filters.year) ok = false;
+        if (filters.type && item.dataset.type !== filters.type) ok = false;
+        if (filters.category && item.dataset.category !== filters.category) ok = false;
+        if (filters.topic) {
+          const topics = (item.dataset.topics ?? "").split(",");
+          if (!topics.includes(filters.topic)) ok = false;
+        }
+        item.style.display = ok ? "" : "none";
+        if (ok) visible++;
+      }
+      for (const g of groups) {
+        const hasVisible = Array.from(g.querySelectorAll<HTMLElement>("[data-pub]")).some(
+          (el) => el.style.display !== "none",
+        );
+        g.style.display = hasVisible ? "" : "none";
+      }
+      if (counter) counter.textContent = String(visible);
+    }
+    selects.forEach((s) => s.addEventListener("change", applyFilters));
+    reset?.addEventListener("click", () => {
+      selects.forEach((s) => (s.value = ""));
+      applyFilters();
+    });
+  }
+</script>

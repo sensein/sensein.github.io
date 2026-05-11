@@ -1,0 +1,265 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Container from "~/components/Container.astro";
+import SectionHeading from "~/components/SectionHeading.astro";
+import {
+  publications,
+  projects,
+  teamMembers,
+  alumniMembers,
+  students,
+  personSlug,
+} from "~/lib/data";
+import { withBase } from "~/lib/url";
+
+// Build a single flat index at build time. Client-side JS does the filtering.
+// Each record: { kind, title, body, href, year, tags, roster }
+type IndexRecord = {
+  kind: "person" | "project" | "publication";
+  title: string;
+  body: string;
+  href: string;
+  year?: number;
+  tags: string[];
+  roster?: "current" | "alumni" | "students";
+  status?: "active" | "former";
+};
+
+const records: IndexRecord[] = [];
+
+for (const m of teamMembers()) {
+  records.push({
+    kind: "person",
+    title: m.name,
+    body: `${m.info ?? ""} ${m.email ?? ""}`,
+    href: `/team/#${personSlug(m.name)}`,
+    tags: ["current"],
+    roster: "current",
+  });
+}
+for (const m of students()) {
+  records.push({
+    kind: "person",
+    title: m.name,
+    body: `${m.info ?? ""} ${m.email ?? ""}`,
+    href: `/team/#${personSlug(m.name)}`,
+    tags: ["students"],
+    roster: "students",
+  });
+}
+for (const m of alumniMembers()) {
+  records.push({
+    kind: "person",
+    title: m.name,
+    body: `${m.info ?? ""} ${m.duration ?? ""}`,
+    href: `/team/#${personSlug(m.name)}`,
+    tags: ["alumni"],
+    roster: "alumni",
+  });
+}
+
+for (const p of projects()) {
+  records.push({
+    kind: "project",
+    title: p.title,
+    body: `${p.description ?? ""} ${p.funder ?? ""} ${(p.contributors?.current ?? []).join(" ")} ${(p.contributors?.former ?? []).join(" ")}`,
+    href: `/projects/${p.slug}`,
+    tags: p.themes ?? [],
+    status: p.status,
+  });
+}
+
+for (const pub of publications()) {
+  records.push({
+    kind: "publication",
+    title: pub.title,
+    body: `${(pub.authors ?? []).join(", ")} ${pub.venue ?? ""}`,
+    href: `/publications/${pub.id}`,
+    year: pub.year,
+    tags: pub.topics ?? [],
+  });
+}
+
+// Serialise to JSON to embed in the page (avoids a separate fetch).
+const indexJSON = JSON.stringify(
+  records.map((r) => ({
+    k: r.kind,
+    t: r.title,
+    b: r.body,
+    h: r.href,
+    y: r.year ?? null,
+    g: r.tags.join(",").toLowerCase(),
+    r: r.roster ?? null,
+    s: r.status ?? null,
+  })),
+);
+---
+<BaseLayout title="Search" description="Search across people, projects, and publications.">
+  <Container size="wide" class="pt-14 pb-6">
+    <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">Search</p>
+    <h1 class="mt-4 font-serif text-4xl md:text-5xl font-semibold tracking-tight text-(--color-ink) leading-[1.05]">
+      Find anything on the site
+    </h1>
+    <p class="mt-5 text-lg text-(--color-ink-muted) leading-relaxed max-w-3xl">
+      Search across people ({teamMembers().length + students().length + alumniMembers().length}),
+      projects ({projects().length}),
+      and publications ({publications().length}).
+      Type a query, optionally filter by kind, and click any result to open it.
+    </p>
+  </Container>
+
+  <Container size="wide" class="py-6">
+    <div class="rounded-lg border border-(--color-border) bg-(--color-surface)/40 p-4">
+      <label class="block">
+        <span class="sr-only">Search query</span>
+        <input
+          type="search"
+          autocomplete="off"
+          placeholder="Search…"
+          data-search-input
+          class="w-full rounded-md border border-(--color-border) bg-(--color-canvas) px-4 py-3 text-lg text-(--color-ink) placeholder:text-(--color-ink-faint) focus:outline-none focus:border-(--color-accent)"
+          autofocus
+        />
+      </label>
+      <div class="mt-3 flex flex-wrap gap-2 text-xs" data-kind-filters>
+        <button type="button" data-kind="all" class="px-3 py-1.5 rounded-full border border-(--color-accent) bg-(--color-accent-soft) text-(--color-accent-strong) font-medium">
+          All
+        </button>
+        <button type="button" data-kind="person" class="px-3 py-1.5 rounded-full border border-(--color-border) text-(--color-ink-muted) hover:border-(--color-border-strong)">
+          People
+        </button>
+        <button type="button" data-kind="project" class="px-3 py-1.5 rounded-full border border-(--color-border) text-(--color-ink-muted) hover:border-(--color-border-strong)">
+          Projects
+        </button>
+        <button type="button" data-kind="publication" class="px-3 py-1.5 rounded-full border border-(--color-border) text-(--color-ink-muted) hover:border-(--color-border-strong)">
+          Publications
+        </button>
+      </div>
+      <p class="mt-3 text-xs text-(--color-ink-faint)" data-result-count></p>
+    </div>
+  </Container>
+
+  <Container size="wide" class="pb-20">
+    <ol data-results class="divide-y divide-(--color-border) border-y border-(--color-border)"></ol>
+    <p data-empty class="hidden py-12 text-center text-(--color-ink-faint)">
+      No matches. Try a shorter or different query.
+    </p>
+  </Container>
+
+  <script type="application/json" id="search-index" set:html={indexJSON}></script>
+  <script>
+    const idxEl = document.getElementById("search-index");
+    const records: Array<{
+      k: "person" | "project" | "publication";
+      t: string;
+      b: string;
+      h: string;
+      y: number | null;
+      g: string;
+      r: string | null;
+      s: string | null;
+    }> = idxEl ? JSON.parse(idxEl.textContent!) : [];
+
+    const input = document.querySelector<HTMLInputElement>("[data-search-input]");
+    const resultsEl = document.querySelector<HTMLOListElement>("[data-results]");
+    const emptyEl = document.querySelector<HTMLElement>("[data-empty]");
+    const countEl = document.querySelector<HTMLElement>("[data-result-count]");
+    const filterBtns = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-kind-filters] button"));
+    let activeKind = "all";
+
+    function escapeHtml(s: string) {
+      return s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
+    }
+
+    function score(rec: typeof records[number], qTokens: string[]): number {
+      if (qTokens.length === 0) return 0;
+      const t = rec.t.toLowerCase();
+      const b = rec.b.toLowerCase();
+      const g = rec.g;
+      let s = 0;
+      for (const q of qTokens) {
+        if (t === q) s += 100;
+        else if (t.startsWith(q + " ") || t.startsWith(q + "-")) s += 50;
+        else if (t.includes(q)) s += 25;
+        if (g.includes(q)) s += 15;
+        if (b.includes(q)) s += 5;
+      }
+      return s;
+    }
+
+    function kindLabel(k: string): string {
+      return k === "person" ? "Person" : k === "project" ? "Project" : "Publication";
+    }
+
+    function render() {
+      const q = (input?.value ?? "").trim().toLowerCase();
+      const qTokens = q.split(/\s+/).filter(Boolean);
+      let pool = records;
+      if (activeKind !== "all") pool = pool.filter((r) => r.k === activeKind);
+      let hits = pool;
+      if (qTokens.length > 0) {
+        const scored = pool
+          .map((r) => ({ r, s: score(r, qTokens) }))
+          .filter((x) => x.s > 0)
+          .sort((a, b) => b.s - a.s);
+        hits = scored.map((x) => x.r);
+      } else {
+        // No query: show records sorted by kind then alpha title (cap at 50)
+        hits = [...pool]
+          .sort((a, b) => a.k.localeCompare(b.k) || a.t.localeCompare(b.t))
+          .slice(0, 50);
+      }
+
+      if (hits.length === 0) {
+        resultsEl!.innerHTML = "";
+        emptyEl!.classList.remove("hidden");
+        countEl!.textContent = "No results";
+        return;
+      }
+      emptyEl!.classList.add("hidden");
+      countEl!.textContent = q
+        ? `${hits.length} result${hits.length === 1 ? "" : "s"} for "${q}"`
+        : `Showing ${hits.length} item${hits.length === 1 ? "" : "s"} (start typing to filter)`;
+      resultsEl!.innerHTML = hits
+        .slice(0, 200)
+        .map((r) => {
+          const meta = [
+            kindLabel(r.k),
+            r.y != null ? r.y.toString() : null,
+            r.s ? (r.s === "former" ? "past" : r.s) : null,
+            r.r ? r.r : null,
+          ]
+            .filter(Boolean)
+            .join("  ·  ");
+          return `<li class="py-4">
+  <a href="${escapeHtml(r.h)}" class="block group">
+    <p class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">${escapeHtml(meta)}</p>
+    <p class="mt-1 text-(--color-ink) group-hover:text-(--color-accent) transition-colors leading-snug">${escapeHtml(r.t)}</p>
+    ${r.b.trim() ? `<p class="mt-1 text-xs text-(--color-ink-muted) leading-snug line-clamp-2">${escapeHtml(r.b.slice(0, 200))}</p>` : ""}
+  </a>
+</li>`;
+        })
+        .join("");
+    }
+
+    input?.addEventListener("input", render);
+    filterBtns.forEach((btn) =>
+      btn.addEventListener("click", () => {
+        activeKind = btn.dataset.kind!;
+        filterBtns.forEach((b) => {
+          if (b === btn) {
+            b.classList.add("border-(--color-accent)", "bg-(--color-accent-soft)", "text-(--color-accent-strong)", "font-medium");
+            b.classList.remove("border-(--color-border)", "text-(--color-ink-muted)", "hover:border-(--color-border-strong)");
+          } else {
+            b.classList.remove("border-(--color-accent)", "bg-(--color-accent-soft)", "text-(--color-accent-strong)", "font-medium");
+            b.classList.add("border-(--color-border)", "text-(--color-ink-muted)", "hover:border-(--color-border-strong)");
+          }
+        });
+        render();
+      }),
+    );
+
+    // Initial render
+    render();
+  </script>
+</BaseLayout>

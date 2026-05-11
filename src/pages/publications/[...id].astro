@@ -1,0 +1,236 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Container from "~/components/Container.astro";
+import SectionHeading from "~/components/SectionHeading.astro";
+import { publications, projects, personSlug, peopleIndex } from "~/lib/data";
+import { withBase } from "~/lib/url";
+
+export async function getStaticPaths() {
+  return publications().map((pub) => ({
+    params: { id: pub.id },
+    props: { pub },
+  }));
+}
+
+const { pub } = Astro.props;
+
+const projectMap = new Map(projects().map((p) => [p.slug, p]));
+const linkedProjects = (pub.projects ?? []).map((slug) => projectMap.get(slug)).filter(Boolean);
+
+const peopleIdx = peopleIndex();
+function personLink(name: string) {
+  const slug = personSlug(name);
+  return peopleIdx.has(slug) ? `/team/#${slug}` : null;
+}
+
+const primaryUrl =
+  pub.url ??
+  (pub.doi ? `https://doi.org/${pub.doi}` : undefined) ??
+  (pub.arxiv ? `https://arxiv.org/abs/${pub.arxiv}` : undefined) ??
+  (pub.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}/` : undefined);
+
+const labAuthorSet = new Set(pub.lab_authors ?? []);
+---
+<BaseLayout title={pub.title} description={`${pub.year} · ${pub.venue ?? pub.type}`}>
+  <Container size="default" class="pt-14 pb-6">
+    <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
+      <a href={withBase("/publications")} class="hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+        ← Publications
+      </a>
+    </p>
+    <div class="mt-4 flex items-baseline gap-3 flex-wrap text-xs uppercase tracking-wider text-(--color-ink-faint)">
+      <span>{pub.year}</span>
+      <span class="px-1.5 py-0.5 rounded border border-(--color-border) bg-(--color-surface)/50">
+        {pub.type}
+      </span>
+      <span class="px-1.5 py-0.5 rounded border border-(--color-border) bg-(--color-surface)/50">
+        {pub.category}
+      </span>
+      {pub.venue && (
+        <span class="normal-case tracking-normal italic text-(--color-ink-muted)">{pub.venue}</span>
+      )}
+    </div>
+    <h1 class="mt-3 font-serif text-2xl md:text-3xl font-semibold tracking-tight text-(--color-ink) leading-snug max-w-4xl">
+      {primaryUrl ? (
+        <a href={primaryUrl} target="_blank" rel="noopener" class="hover:text-(--color-accent) transition-colors">
+          {pub.title}
+        </a>
+      ) : (
+        pub.title
+      )}
+    </h1>
+    <p class="mt-3 text-(--color-ink-muted) leading-relaxed">
+      {(pub.authors ?? []).map((a, i) => {
+        const isLab = labAuthorSet.has(a);
+        const href = isLab ? personLink(a) : null;
+        return (
+          <>
+            {href ? (
+              <a href={withBase(href)} class="text-(--color-ink) hover:text-(--color-accent) underline-offset-3 hover:underline font-medium">
+                {a}
+              </a>
+            ) : (
+              <span class={isLab ? "text-(--color-ink) font-medium" : ""}>{a}</span>
+            )}
+            {i < (pub.authors!.length - 1) && <span>, </span>}
+          </>
+        );
+      })}
+    </p>
+  </Container>
+
+  <Container size="default" class="py-6">
+    <!-- Identifiers / external links -->
+    <section class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-5">
+      <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-3">Identifiers and access</p>
+      <dl class="grid sm:grid-cols-2 gap-y-2 text-sm">
+        {pub.doi && (
+          <>
+            <dt class="text-(--color-ink-faint)">DOI</dt>
+            <dd>
+              <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener" class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline break-all">
+                {pub.doi}
+              </a>
+            </dd>
+          </>
+        )}
+        {pub.arxiv && (
+          <>
+            <dt class="text-(--color-ink-faint)">arXiv</dt>
+            <dd>
+              <a href={`https://arxiv.org/abs/${pub.arxiv}`} target="_blank" rel="noopener" class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+                {pub.arxiv}
+              </a>
+            </dd>
+          </>
+        )}
+        {pub.pmid && (
+          <>
+            <dt class="text-(--color-ink-faint)">PubMed</dt>
+            <dd>
+              <a href={`https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}/`} target="_blank" rel="noopener" class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+                {pub.pmid}
+              </a>
+            </dd>
+          </>
+        )}
+        {pub.pmcid && (
+          <>
+            <dt class="text-(--color-ink-faint)">PMC</dt>
+            <dd>
+              <a href={`https://pmc.ncbi.nlm.nih.gov/articles/${pub.pmcid}/`} target="_blank" rel="noopener" class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+                {pub.pmcid}
+              </a>
+            </dd>
+          </>
+        )}
+        {pub.pdf_url && (
+          <>
+            <dt class="text-(--color-ink-faint)">PDF</dt>
+            <dd>
+              <a href={pub.pdf_url} target="_blank" rel="noopener" class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline break-all">
+                Open-access copy →
+              </a>
+            </dd>
+          </>
+        )}
+        {pub.github && (
+          <>
+            <dt class="text-(--color-ink-faint)">Code</dt>
+            <dd>
+              <a href={`https://github.com/${pub.github}`} target="_blank" rel="noopener" class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+                {pub.github}
+              </a>
+            </dd>
+          </>
+        )}
+        {typeof pub.cited_by === "number" && (
+          <>
+            <dt class="text-(--color-ink-faint)">Cited by</dt>
+            <dd class="text-(--color-ink)">{pub.cited_by}</dd>
+          </>
+        )}
+      </dl>
+    </section>
+
+    {pub.topics && pub.topics.length > 0 && (
+      <section class="mt-8">
+        <SectionHeading title="Topics" />
+        <ul class="flex flex-wrap gap-1.5">
+          {pub.topics.map((t) => (
+            <li class="text-xs px-2 py-1 rounded border border-(--color-border) text-(--color-ink-muted) bg-(--color-surface)/40">
+              {t}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {linkedProjects.length > 0 && (
+      <section class="mt-8">
+        <SectionHeading title="Associated projects" />
+        <ul class="grid sm:grid-cols-2 gap-3">
+          {linkedProjects.map((proj) => (
+            <li>
+              <a href={withBase(`/projects/${proj!.slug}`)} class="block rounded-md border border-(--color-border) hover:border-(--color-accent) p-3 text-sm transition-colors">
+                <p class="font-medium text-(--color-ink)">{proj!.title}</p>
+                {proj!.funder && <p class="text-[11px] font-mono text-(--color-ink-faint) mt-0.5">{proj!.funder}</p>}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {pub.preprints && pub.preprints.length > 0 && (
+      <section class="mt-8">
+        <SectionHeading title={`Preprint precursor${pub.preprints.length === 1 ? "" : "s"}`} description="Earlier versions of this work that have been superseded by the published record above." />
+        <ul class="space-y-2 text-sm">
+          {pub.preprints.map((pre) => (
+            <li class="border-l-2 border-(--color-border) pl-3">
+              {pre.url ? (
+                <a href={pre.url} target="_blank" rel="noopener" class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+                  {pre.venue ?? pre.id}
+                </a>
+              ) : (
+                <span>{pre.venue ?? pre.id}</span>
+              )}
+              {pre.year && <span class="text-(--color-ink-faint) ml-2">{pre.year}</span>}
+              {pre.doi && (
+                <span class="text-xs text-(--color-ink-muted) ml-2 break-all">{pre.doi}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {pub.lab_authors && pub.lab_authors.length > 0 && (
+      <section class="mt-8">
+        <SectionHeading title="Lab authors" />
+        <ul class="flex flex-wrap gap-x-3 gap-y-1 text-sm">
+          {pub.lab_authors.map((name) => {
+            const href = personLink(name);
+            return (
+              <li>
+                {href ? (
+                  <a href={withBase(href)} class="text-(--color-ink) hover:text-(--color-accent) underline-offset-3 hover:underline">
+                    {name}
+                  </a>
+                ) : (
+                  <span class="text-(--color-ink-muted)">{name}</span>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    )}
+
+    <p class="mt-12 text-xs text-(--color-ink-faint)">
+      This record was curated from the lab's CV, NCBI MyBibliography, and OpenAlex. See
+      <a href="https://github.com/sensein/sensein.github.io/blob/main/PROJECTS.md" class="underline underline-offset-3 hover:text-(--color-accent)">PROJECTS.md</a>
+      for how to add or correct an entry via a pull request.
+    </p>
+  </Container>
+</BaseLayout>
