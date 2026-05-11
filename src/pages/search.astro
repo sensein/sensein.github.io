@@ -259,6 +259,24 @@ const indexJSON = JSON.stringify(
       }),
     );
 
+    // Pre-fill from ?q= and (optional) ?kind=
+    const url = new URL(window.location.href);
+    const initialQ = url.searchParams.get("q");
+    if (initialQ && input) input.value = initialQ;
+    const initialKind = url.searchParams.get("kind");
+    if (initialKind && filterBtns.some((b) => b.dataset.kind === initialKind)) {
+      activeKind = initialKind;
+      filterBtns.forEach((b) => {
+        const on = b.dataset.kind === initialKind;
+        b.classList.toggle("bg-(--color-accent-soft)", on);
+        b.classList.toggle("text-(--color-accent-strong)", on);
+        b.classList.toggle("border-(--color-accent)", on);
+        b.classList.toggle("font-medium", on);
+        b.classList.toggle("text-(--color-ink-muted)", !on);
+        b.classList.toggle("border-(--color-border)", !on);
+      });
+    }
+
     // Initial render
     render();
   </script>
