@@ -3,6 +3,8 @@ import Container from "./Container.astro";
 import { withBase } from "~/lib/url";
 
 const year = new Date().getFullYear();
+const commit = (process.env.GITHUB_SHA ?? process.env.COMMIT_SHA ?? "dev").slice(0, 7);
+const builtAt = new Date().toISOString().replace("T", " ").slice(0, 16) + "Z";
 
 const funders = [
   // NIH (most active grants — primary funder for the group)
@@ -111,6 +113,9 @@ const affiliations = [
       class="mt-10 pt-6 border-t border-(--color-border) flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs text-(--color-ink-faint)"
     >
       <p>© 2019 – {year} Senseable Intelligence Group</p>
+      <span class="font-mono text-[10px] opacity-70" title={`Built ${builtAt}`}>
+        build {commit} · {builtAt}
+      </span>
       <a
         href={withBase("/about")}
         class="hover:text-(--color-accent) transition-colors underline-offset-3 hover:underline"
