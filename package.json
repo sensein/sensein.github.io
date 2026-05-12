@@ -26,5 +26,8 @@
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "playwright": "^1.60.0"
+  },
+  "overrides": {
+    "protobufjs": "^7.5.5"
   }
 }
