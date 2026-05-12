@@ -47,6 +47,8 @@ export interface ProjectLink {
 export interface ProjectContributors {
   current?: string[];
   former?: string[];
+  /** External collaborators (non-lab). Plain text, optionally "Name (Affiliation)". */
+  external?: string[];
 }
 
 export interface Project {

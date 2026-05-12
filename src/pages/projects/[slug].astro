@@ -21,6 +21,7 @@ const pubs = projectPublications(project);
 const contribs = {
   current: project.contributors?.current ?? [],
   former: project.contributors?.former ?? [],
+  external: project.contributors?.external ?? [],
 };
 
 function linkify(href: string): string {
@@ -104,10 +105,10 @@ function linkify(href: string): string {
       </section>
     )}
 
-    {(contribs.current.length > 0 || contribs.former.length > 0) && (
+    {(contribs.current.length > 0 || contribs.former.length > 0 || contribs.external.length > 0) && (
       <section class="mt-14">
         <SectionHeading eyebrow="People" title="Contributors" />
-        <div class="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
+        <div class="grid sm:grid-cols-3 gap-x-8 gap-y-2 text-sm">
           {contribs.current.length > 0 && (
             <div>
               <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-2">Current</p>
@@ -147,6 +148,16 @@ function linkify(href: string): string {
                     </li>
                   );
                 })}
+              </ul>
+            </div>
+          )}
+          {contribs.external.length > 0 && (
+            <div>
+              <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-2">External collaborators</p>
+              <ul class="space-y-1">
+                {contribs.external.map((entry) => (
+                  <li class="text-(--color-ink-muted)">{entry}</li>
+                ))}
               </ul>
             </div>
           )}

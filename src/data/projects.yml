@@ -35,12 +35,14 @@
     BARD.CC, the BBQS AI Resource and Data Coordinating Center.
   funder: NIDA U24 DA064429 (Lead PI; MPI Cabrera, Kennedy)
   image: /images/external/bbqs-logo.webp
-  themes: [behavioral-quantification, consortium, open-data]
+  themes:
+  - open-data-standards
+  - ml-nlp-knowledge
   links:
-    - { label: Project website, url: https://brain-bbqs.org }
-    - { label: BBQS on GitHub, url: https://github.com/brain-bbqs }
-    - { label: NIH BRAIN BBQS program, url: "https://braininitiative.nih.gov/research/systems-neuroscience/brain-behavior-quantification-and-synchronization-program" }
-    - { label: BARD.CC on NIH RePORTER, url: "https://reporter.nih.gov/search/OsbCHzaScU6FVeHg9b-MGw/project-details/10888562" }
+  - {label: Project website, url: https://brain-bbqs.org}
+  - {label: BBQS on GitHub, url: https://github.com/brain-bbqs}
+  - {label: NIH BRAIN BBQS program, url: "https://braininitiative.nih.gov/research/systems-neuroscience/brain-behavior-quantification-and-synchronization-program"}
+  - {label: BARD.CC on NIH RePORTER, url: "https://reporter.nih.gov/search/OsbCHzaScU6FVeHg9b-MGw/project-details/10888562"}
   contributors:
     current: [Nader Nikbakht, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri]
     former: []
@@ -55,22 +57,24 @@
     for neurophysiology, behavioral, and imaging data.
   funder: NIMH R24 MH117295 (Lead PI; MPI Halchenko, Dartmouth)
   image: /images/external/dandi-workflow-v2-49e8082b.webp
-  themes: [open-data, neurophysiology, software]
+  themes:
+  - open-data-standards
+  - reproducibility-tooling
   links:
-    - { label: DANDI archive, url: https://dandiarchive.org/ }
-    - { label: About DANDI, url: https://about.dandiarchive.org/ }
-    - { label: Documentation, url: https://docs.dandiarchive.org/ }
-    - { label: DANDI Hub (JupyterHub), url: https://hub.dandiarchive.org/ }
-    - { label: DANDI on GitHub, url: https://github.com/dandi }
-    - { label: BICCN R24 team page, url: https://biccn.org/teams/r24-ghosh }
+  - {label: DANDI archive, url: https://dandiarchive.org/}
+  - {label: About DANDI, url: https://about.dandiarchive.org/}
+  - {label: Documentation, url: https://docs.dandiarchive.org/}
+  - {label: DANDI Hub (JupyterHub), url: https://hub.dandiarchive.org/}
+  - {label: DANDI on GitHub, url: https://github.com/dandi}
+  - {label: BICCN R24 team page, url: https://biccn.org/teams/r24-ghosh}
   contributors:
     current: [Kabilar Gunalan, Nima Dehghani, Satrajit S Ghosh]
     former: [Christopher J Markiewicz]
   publications:
-    - 10.7554/eLife.78362     # Rübel et al. 2022, NWB ecosystem
-    - 10.1038/s41597-023-02614-0   # Subash et al. 2023, comparison of databases
-    - 10.1523/ENEURO.0486-24.2025  # Gillon et al. 2025, ODIN review
-    - 10.1007/s12021-021-09557-0   # Poline et al. 2022, FAIR
+  - 10.7554/eLife.78362       # Rübel et al. 2022, NWB ecosystem
+  - 10.1038/s41597-023-02614-0     # Subash et al. 2023, comparison of databases
+  - 10.1523/ENEURO.0486-24.2025    # Gillon et al. 2025, ODIN review
+  - 10.1007/s12021-021-09557-0     # Poline et al. 2022, FAIR
 
 - slug: bican-knowledgebase
   title: BICAN Knowledgebase (BrainKB)
@@ -84,24 +88,27 @@
     and the schemas / data translators.
   funder: NIMH U24 MH130918 (MPI with Mufti, Hawrylycz, Ng — Allen Institute)
   image: /images/external/bican-logo.avif
-  themes: [cell-atlas, knowledge-graphs, open-data, software]
+  themes:
+  - open-data-standards
+  - ml-nlp-knowledge
+  - reproducibility-tooling
   links:
-    - { label: BrainKB (beta), url: https://beta.brainkb.org }
-    - { label: BrainKB about, url: https://beta.brainkb.org/about }
-    - { label: BrainKB docs, url: https://sensein.group/brainkbdocs/ }
-    - { label: BICAN data models, url: https://github.com/brain-bican/models }
-    - { label: BICAN data models docs, url: https://brain-bican.github.io/models/ }
-    - { label: bkbit toolkit, url: https://github.com/brain-bican/bkbit }
-    - { label: bkbit docs, url: https://brain-bican.github.io/bkbit/ }
-    - { label: BICAN on GitHub, url: https://github.com/brain-bican }
-    - { label: BICAN portal, url: https://www.portal.brain-bican.org/ }
-    - { label: BICAN team page, url: https://brain-bican.org/teams/bican-knowledgebase }
+  - {label: BrainKB (beta), url: https://beta.brainkb.org}
+  - {label: BrainKB about, url: https://beta.brainkb.org/about}
+  - {label: BrainKB docs, url: https://sensein.group/brainkbdocs/}
+  - {label: BICAN data models, url: https://github.com/brain-bican/models}
+  - {label: BICAN data models docs, url: https://brain-bican.github.io/models/}
+  - {label: bkbit toolkit, url: https://github.com/brain-bican/bkbit}
+  - {label: bkbit docs, url: https://brain-bican.github.io/bkbit/}
+  - {label: BICAN on GitHub, url: https://github.com/brain-bican}
+  - {label: BICAN portal, url: https://www.portal.brain-bican.org/}
+  - {label: BICAN team page, url: https://brain-bican.org/teams/bican-knowledgebase}
   contributors:
     current: [Dorota Jarecka, Nader Nikbakht, Nima Dehghani, Puja Trivedi, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri]
     former: [Jai Amin]
   publications:
-    - 10.1145/3701716.3715483  # Chhetri et al. 2025, provenance/assertion ontologies
-    - 10.1371/journal.pbio.3002133  # Hawrylycz et al. 2023, BICAN data ecosystem
+  - 10.1145/3701716.3715483    # Chhetri et al. 2025, provenance/assertion ontologies
+  - 10.1371/journal.pbio.3002133    # Hawrylycz et al. 2023, BICAN data ecosystem
 
 - slug: bican-um1
   title: BICAN UM1 — Multi-Scale Multi-Omic Human Brain Atlas
@@ -115,15 +122,17 @@
     brain.
   funder: NIMH UM1 MH134812 (Co-I)
   image: /images/projects/bican-um1.webp
-  themes: [cell-atlas, imaging, consortium]
+  themes:
+  - connectomics-circuits
+  - open-data-standards
   links:
-    - { label: BICAN portal, url: https://www.portal.brain-bican.org/ }
-    - { label: "Park et al. 2024, Science (PMID 38870291)", url: "https://doi.org/10.1126/science.adh9979" }
+  - {label: BICAN portal, url: https://www.portal.brain-bican.org/}
+  - {label: "Park et al. 2024, Science (PMID 38870291)", url: "https://doi.org/10.1126/science.adh9979"}
   contributors:
     current: [Kabilar Gunalan, Satrajit S Ghosh]
     former: []
   publications:
-    - 10.1126/science.adh9979
+  - 10.1126/science.adh9979
 
 - slug: linc
   title: LINC / CONNECTS — Large-scale Imaging of Neural Circuits
@@ -136,19 +145,22 @@
     include DBS-circuit mapping and biophysical modeling.
   funder: NINDS UM1 NS132358 (Site PI)
   image: /images/projects/linc.webp
-  themes: [connectomics, imaging, consortium]
+  themes:
+  - connectomics-circuits
+  - neuroimaging-methods
+  - open-data-standards
   links:
-    - { label: CONNECTS project site, url: https://connects.mgh.harvard.edu/ }
-    - { label: CONNECTS team, url: https://connects.mgh.harvard.edu/people/ }
-    - { label: LINC data platform, url: https://lincbrain.org/ }
-    - { label: LINC gallery, url: https://gallery.lincbrain.org }
-    - { label: LINC documentation, url: https://docs.lincbrain.org/ }
-    - { label: lincbrain on GitHub, url: https://github.com/lincbrain }
+  - {label: CONNECTS project site, url: https://connects.mgh.harvard.edu/}
+  - {label: CONNECTS team, url: https://connects.mgh.harvard.edu/people/}
+  - {label: LINC data platform, url: https://lincbrain.org/}
+  - {label: LINC gallery, url: https://gallery.lincbrain.org}
+  - {label: LINC documentation, url: https://docs.lincbrain.org/}
+  - {label: lincbrain on GitHub, url: https://github.com/lincbrain}
   contributors:
     current: [Kabilar Gunalan, Satrajit S Ghosh]
     former: []
   publications:
-    - 10.64898/2026.03.31.715699  # Maffei et al. 2026, subcortical connectome 400 µm preprint
+  - 10.64898/2026.03.31.715699    # Maffei et al. 2026, subcortical connectome 400 µm preprint
   # Consortium PIs (external): Suzanne Haber (Rochester), Elizabeth Hillman
   # (Columbia), Anastasia Yendiki (MGH); Site PIs: Mike Fox (BWH), Jeff
   # Lichtman (Harvard), Claire Walsh / Peter Lee (UCL), Zhuhao Wu (Cornell Med).
@@ -167,25 +179,28 @@
     ethics, and pediatric arm.
   funder: NIH OD OT2 OD032720 (MPI)
   image: /images/projects/bridge2ai-voice.webp
-  themes: [speech-biomarkers, open-data, ai-ready, consortium]
+  themes:
+  - speech-voice-biomarkers
+  - open-data-standards
+  - mental-health-psychiatry
   links:
-    - { label: Bridge2AI Voice site, url: https://b2ai-voice.org/ }
-    - { label: Bridge2AI program — Voice, url: https://bridge2ai.org/data-voice/ }
-    - { label: Studies portal, url: https://studies.b2ai-voice.org/ }
-    - { label: Voice dataset, url: https://b2ai-voice.org/bridge2ai-voice-dataset/ }
-    - { label: Global voice datasets map, url: https://map.b2ai-voice.org/ }
-    - { label: b2aiprep on GitHub, url: https://github.com/sensein/b2aiprep }
-    - { label: "PhysioNet dataset v3.1.0", url: "https://physionet.org/content/b2ai-voice/3.1.0/" }
-    - { label: "PhysioNet pediatric v1.0.0", url: "https://physionet.org/content/b2ai-voice-pediatric/1.0.0/" }
-    - { label: NIH Bridge2AI program, url: https://commonfund.nih.gov/bridge2ai }
+  - {label: Bridge2AI Voice site, url: https://b2ai-voice.org/}
+  - {label: Bridge2AI program — Voice, url: https://bridge2ai.org/data-voice/}
+  - {label: Studies portal, url: https://studies.b2ai-voice.org/}
+  - {label: Voice dataset, url: https://b2ai-voice.org/bridge2ai-voice-dataset/}
+  - {label: Global voice datasets map, url: https://map.b2ai-voice.org/}
+  - {label: b2aiprep on GitHub, url: https://github.com/sensein/b2aiprep}
+  - {label: "PhysioNet dataset v3.1.0", url: "https://physionet.org/content/b2ai-voice/3.1.0/"}
+  - {label: "PhysioNet pediatric v1.0.0", url: "https://physionet.org/content/b2ai-voice-pediatric/1.0.0/"}
+  - {label: NIH Bridge2AI program, url: https://commonfund.nih.gov/bridge2ai}
   contributors:
     current: [Jordan Wilke, Kaley Jenney, Rahul Brito, Satrajit S Ghosh]
     former: [Daniel M. Low, Fabio Catania]
   publications:
-    - 10.3389/fdgth.2025.1484521  # Bélisle-Pipon et al. 2025, Voice AI Symposium panel summaries
-    - 10.3389/fdgth.2024.1484818  # Voice AI Symposium 2024 workshop summaries
-    - 10.3389/fdgth.2024.1484503  # Voice AI Symposium 2024 keynote summaries
-    - 10.3389/fdgth.2025.1514971  # Bridge2AI-voice mobile feasibility study
+  - 10.3389/fdgth.2025.1484521    # Bélisle-Pipon et al. 2025, Voice AI Symposium panel summaries
+  - 10.3389/fdgth.2024.1484818    # Voice AI Symposium 2024 workshop summaries
+  - 10.3389/fdgth.2024.1484503    # Voice AI Symposium 2024 keynote summaries
+  - 10.3389/fdgth.2025.1514971    # Bridge2AI-voice mobile feasibility study
 
 - slug: senselab
   title: senselab
@@ -198,10 +213,12 @@
     reproducible pipelines and utilities." Used by the Bridge2AI-Voice and
     Riverst / KIVA stacks.
   image: /images/projects/senselab.webp
-  themes: [software, speech-biomarkers, reproducibility]
+  themes:
+  - reproducibility-tooling
+  - speech-voice-biomarkers
   links:
-    - { label: senselab on GitHub, url: https://github.com/sensein/senselab }
-    - { label: senselab API docs, url: https://sensein.group/senselab/senselab.html }
+  - {label: senselab on GitHub, url: https://github.com/sensein/senselab}
+  - {label: senselab API docs, url: https://sensein.group/senselab/senselab.html}
   contributors:
     current: [Jordan Wilke, Satrajit S Ghosh]
     former: [Bruke Wossenseged, Fabio Catania, Gasser Elbanna, Isaac Bevers, Miles Silva]
@@ -218,18 +235,21 @@
     LLM effectively teach vocabulary?
   funder: MGAIC (MIT Generative AI Consortium), 2025–2026
   image: /images/projects/riverst-kiva.webp
-  themes: [child-development, llm, speech, education]
+  themes:
+  - child-development-education
+  - ml-nlp-knowledge
+  - speech-voice-biomarkers
   links:
-    - { label: Live demo, url: https://sensein.group/riverst/ }
-    - { label: Riverst on GitHub, url: https://github.com/sensein/riverst }
-    - { label: Interactive Avatar, url: https://github.com/sensein/interactive-avatar }
-    - { label: Avatar orchestrator, url: https://github.com/sensein/interactive-avatar-orchestrator }
-    - { label: Avatar animation generation, url: https://github.com/sensein/generate-avatar-animations }
+  - {label: Live demo, url: https://sensein.group/riverst/}
+  - {label: Riverst on GitHub, url: https://github.com/sensein/riverst}
+  - {label: Interactive Avatar, url: https://github.com/sensein/interactive-avatar}
+  - {label: Avatar orchestrator, url: https://github.com/sensein/interactive-avatar-orchestrator}
+  - {label: Avatar animation generation, url: https://github.com/sensein/generate-avatar-animations}
   contributors:
     current: [Jordan Wilke, Satrajit S Ghosh]
     former: [Fabio Catania]
   publications:
-    - 10.31234/osf.io/stek7_v1  # Ozernov-Palchik et al. 2026 LLM tutoring preprint
+  - 10.31234/osf.io/stek7_v1    # Ozernov-Palchik et al. 2026 LLM tutoring preprint
   # External: Ola Ozernov-Palchik (BU / Wheelock).
 
 - slug: repronim
@@ -245,28 +265,31 @@
     and BABS (BIDS App Bootstrap).
   funder: NIBIB P41 EB019936 (Site PI; PI Kennedy, UMass Med; Director TR&D Project 2)
   image: /images/projects/repronim.webp
-  themes: [reproducibility, neuroimaging, software, training]
+  themes:
+  - reproducibility-tooling
+  - neuroimaging-methods
+  - open-data-standards
   links:
-    - { label: Project website, url: https://repronim.org }
-    - { label: ReproNim on GitHub, url: https://github.com/repronim }
-    - { label: ReproNim training, url: https://repronim.org/resources/training/ }
-    - { label: ABCD-ReproNim, url: https://www.abcd-repronim.org/ }
-    - { label: ABCD-ReproNim materials, url: https://abcd-repronim.github.io/materials/ }
-    - { label: ReproSchema, url: https://github.com/ReproNim/reproschema }
-    - { label: BABS (BIDS App Bootstrap), url: https://github.com/PennLINC/babs }
-    - { label: BABS docs, url: https://pennlinc-babs.readthedocs.io/en/stable/overview.html }
-    - { label: Neurodocker, url: https://github.com/repronim/neurodocker }
-    - { label: DataLad handbook, url: https://handbook.datalad.org/ }
+  - {label: Project website, url: https://repronim.org}
+  - {label: ReproNim on GitHub, url: https://github.com/repronim}
+  - {label: ReproNim training, url: https://repronim.org/resources/training/}
+  - {label: ABCD-ReproNim, url: https://www.abcd-repronim.org/}
+  - {label: ABCD-ReproNim materials, url: https://abcd-repronim.github.io/materials/}
+  - {label: ReproSchema, url: https://github.com/ReproNim/reproschema}
+  - {label: BABS (BIDS App Bootstrap), url: https://github.com/PennLINC/babs}
+  - {label: BABS docs, url: https://pennlinc-babs.readthedocs.io/en/stable/overview.html}
+  - {label: Neurodocker, url: https://github.com/repronim/neurodocker}
+  - {label: DataLad handbook, url: https://handbook.datalad.org/}
   contributors:
     current: [Dorota Jarecka, Satrajit S Ghosh, Yibei Chen]
     former: [Christopher J Markiewicz, Daniel M. Low, Isaac Bevers, Jakub Kaczmarzyk, Mathias Goncalves, Sanu Ann Abraham, Smruti Padhy]
   publications:
-    - 10.12688/f1000research.10783.2   # Ghosh et al. 2017 Simple 1
-    - 10.3389/fninf.2019.00001         # Kennedy et al. 2019 Everything Matters
-    - 10.3389/fninf.2023.1174156       # Queder et al. 2023 NIDM-Terms
-    - 10.1162/imag_a_00074             # Zhao et al. 2024 BABS
-    - 10.2196/63343                    # Chen et al. 2025 ReproSchema
-    - 10.21105/joss.05839              # Halchenko et al. 2024 HeuDiConv
+  - 10.12688/f1000research.10783.2     # Ghosh et al. 2017 Simple 1
+  - 10.3389/fninf.2019.00001           # Kennedy et al. 2019 Everything Matters
+  - 10.3389/fninf.2023.1174156         # Queder et al. 2023 NIDM-Terms
+  - 10.1162/imag_a_00074               # Zhao et al. 2024 BABS
+  - 10.2196/63343                      # Chen et al. 2025 ReproSchema
+  - 10.21105/joss.05839                # Halchenko et al. 2024 HeuDiConv
 
 - slug: nipype-pydra
   title: Nipype / Pydra
@@ -280,41 +303,56 @@
     workflows linking shell commands and Python functions.
   funder: NIBIB R01 EB020740 (PI, 2016–2020; project ongoing as community software)
   image: /images/projects/nipype-pydra.webp
-  themes: [software, neuroimaging, reproducibility, workflows]
+  themes:
+  - reproducibility-tooling
+  - neuroimaging-methods
   links:
-    - { label: Nipype, url: https://nipype.readthedocs.io/ }
-    - { label: Pydra, url: https://nipype.github.io/pydra/ }
-    - { label: nipy/nipype, url: https://github.com/nipy/nipype }
-    - { label: nipype/pydra, url: https://github.com/nipype/pydra }
-    - { label: nipype2pydra, url: https://github.com/nipype/nipype2pydra }
+  - {label: Nipype, url: https://nipype.readthedocs.io/}
+  - {label: Pydra, url: https://nipype.github.io/pydra/}
+  - {label: nipy/nipype, url: https://github.com/nipy/nipype}
+  - {label: nipype/pydra, url: https://github.com/nipype/pydra}
+  - {label: nipype2pydra, url: https://github.com/nipype/nipype2pydra}
   contributors:
     current: [Dorota Jarecka, Satrajit S Ghosh]
     former: [Christopher J Markiewicz, Jakub Kaczmarzyk, Mathias Goncalves]
   publications:
-    - 10.3389/fninf.2011.00013   # Gorgolewski et al. 2011 Nipype
+  - 10.3389/fninf.2011.00013     # Gorgolewski et al. 2011 Nipype
 
 - slug: sails
-  title: SAILS # TODO expand the acronym
+  title: 'SAILS — Speech & Action In-home Learning System'
   status: active
   description: >
-    Multi-modal AI for measuring language and social communication
-    trajectories from naturalistic home videos. Brings together three
-    theses: Manaal Mohammed's on automated target-child behavior detection
-    (vocalizations via USC-SAIL / Whisper baseline; locomotion via S3D
-    gated 3D CNN), Lucie Bierent's on socialization-behavior recognition
-    (reaction to name-calling, non-verbal communication, gesture
-    prediction), and Bruke Wossenseged's thesis work. # TODO Bruke's topic
-  funder: Simons Foundation (Site PI, 2025–2026)
+    Into the Wild — automated quantification of autism-relevant
+    behaviors from naturalistic home videos. The study pipeline runs
+    end-to-end: parents are reached through SPARK Research Match,
+    submit questionnaires and home-video uploads, and complete a
+    remote language assessment; videos pass automated metadata checks
+    and human quality review; trained annotators produce ground-truth
+    labels against a shared manual with ICC reliability checks; and
+    VLM-based models score uniform frame samples for video-level
+    behavior predictions. Brings together three theses: Manaal
+    Mohammed's on target-child behavior detection (vocalizations via
+    USC-SAIL / Whisper baseline; locomotion via S3D gated 3D CNN),
+    Lucie Bierent's on socialization-behavior recognition (response to
+    name, non-verbal communication, gesture prediction), and Bruke
+    Wossenseged's thesis work.
+  funder: Simons Foundation (Site PI, 2025–2026); Kennedy Krieger Institute partnership
   image: /images/projects/sails-placeholder.svg
-  themes: [child-development, autism, computer-vision, speech]
+  themes: [child-development-education, mental-health-psychiatry, ml-nlp-knowledge, speech-voice-biomarkers]
   links:
-    - { label: sailsprep on GitHub, url: https://github.com/sensein/sailsprep }
-    - { label: ASD AI scoping review, url: https://github.com/sensein/asd-ai-scoping-review }
+  - {label: sailsprep on GitHub, url: https://github.com/sensein/sailsprep}
+  - {label: ASD AI scoping review, url: https://github.com/sensein/asd-ai-scoping-review}
   contributors:
-    current: [Manaal Mohammed, Satrajit S Ghosh, Yibei Chen]
-    former: [Bruke Wossenseged, Lucie Bierent]
+    current: [Satrajit S Ghosh, Yibei Chen, Manaal Mohammed, Aparna BG]
+    former: [Bruke Wossenseged, Lucie Bierent, Fabio Catania]
+    external:
+    - Rachel Reetzke (Kennedy Krieger)
+    - Rebecca Landa (Kennedy Krieger)
+    - Elizabeth Eiler (Kennedy Krieger)
+    - Arushi Singh (Kennedy Krieger)
+    - Jeremy Perrin (Kennedy Krieger)
+    - Vini Singh (Kennedy Krieger)
   publications: []
-  # External collaborators: TODO list.
 
 - slug: brain-states
   title: Brain States
@@ -328,15 +366,17 @@
     structure differ between the neurodivergent and neurotypical
     populations?
   image: /images/projects/brain-states.webp
-  themes: [neuroimaging, brain-dynamics]
+  themes:
+  - brain-dynamics-naturalistic
+  - neuroimaging-methods
   links:
-    - { label: "bioRxiv preprint (Chen et al. 2025)", url: "https://www.biorxiv.org/content/10.1101/2025.04.05.647323v3" }
-    - { label: Yibei Chen — MIT BCS, url: https://bcs.mit.edu/directory/yibei-chen }
+  - {label: "bioRxiv preprint (Chen et al. 2025)", url: "https://www.biorxiv.org/content/10.1101/2025.04.05.647323v3"}
+  - {label: Yibei Chen — MIT BCS, url: https://bcs.mit.edu/directory/yibei-chen}
   contributors:
     current: [Satrajit S Ghosh, Yibei Chen]
     former: []
   publications:
-    - 10.1162/IMAG.a.1116   # Chen et al. 2026, narrative comprehension brain states
+  - 10.1162/IMAG.a.1116     # Chen et al. 2026, narrative comprehension brain states
 
 - slug: abcd-psychotic-experiences
   title: Psychotic Experiences in ABCD
@@ -346,14 +386,17 @@
     Development (ABCD) study — risk factors, transitions, and adolescent
     brain-imaging correlates. # TODO expand description
   image: /images/projects/abcd-psychotic-experiences-placeholder.svg
-  themes: [psychiatry, neuroimaging, adolescence]
+  themes:
+  - mental-health-psychiatry
+  - child-development-education
+  - neuroimaging-methods
   links:
-    - { label: "Burdinski et al. 2024 (JAMA Netw Open) — cannabis & cognition", url: "https://doi.org/10.1001/jamanetworkopen.2024.34354" }
+  - {label: "Burdinski et al. 2024 (JAMA Netw Open) — cannabis & cognition", url: "https://doi.org/10.1001/jamanetworkopen.2024.34354"}
   contributors:
     current: [Debbie Burdinski, Satrajit S Ghosh]
     former: [Alisha Kodibagkar]
   publications:
-    - 10.1001/jamanetworkopen.2024.34354  # Burdinski et al. 2024 cannabis paper
+  - 10.1001/jamanetworkopen.2024.34354    # Burdinski et al. 2024 cannabis paper
 
 - slug: readnet
   title: ReadNet — ML for verbal literacy screening
@@ -368,20 +411,23 @@
     data release.
   funder: Harvard University gift (Schmidt Futures & Citadel; Site Co-I) + MIT GenAI Consortium
   image: /images/projects/readnet.webp
-  themes: [child-development, education, machine-learning, speech]
+  themes:
+  - child-development-education
+  - ml-nlp-knowledge
+  - speech-voice-biomarkers
   links:
-    - { label: ReadNet at Reach Every Reader, url: https://reacheveryreader.gse.harvard.edu/readnet-project/ }
-    - { label: Reach Every Reader, url: https://reacheveryreader.gse.harvard.edu/ }
-    - { label: "DrivenData: Goodnight Moon challenge", url: "https://www.drivendata.org/competitions/298/literacy-screening/" }
-    - { label: Goodnight Moon winners blog, url: https://drivendata.co/blog/goodnight-moon-winners }
-    - { label: Winning models repo, url: https://github.com/drivendataorg/goodnight-moon }
-    - { label: readnet_survey analysis, url: https://github.com/sensein/readnet_survey }
+  - {label: ReadNet at Reach Every Reader, url: https://reacheveryreader.gse.harvard.edu/readnet-project/}
+  - {label: Reach Every Reader, url: https://reacheveryreader.gse.harvard.edu/}
+  - {label: "DrivenData: Goodnight Moon challenge", url: "https://www.drivendata.org/competitions/298/literacy-screening/"}
+  - {label: Goodnight Moon winners blog, url: https://drivendata.co/blog/goodnight-moon-winners}
+  - {label: Winning models repo, url: https://github.com/drivendataorg/goodnight-moon}
+  - {label: readnet_survey analysis, url: https://github.com/sensein/readnet_survey}
   contributors:
     current: [Meral Hacikamiloglu, Satrajit S Ghosh]
     former: [Fabio Catania]
   publications:
-    - 10.1007/s11881-025-00342-1   # Ozernov-Palchik et al. 2025 (Not so) universal literacy screening
-    - 10.31234/osf.io/stek7_v1     # Ozernov-Palchik et al. 2026 LLM tutoring preprint
+  - 10.1007/s11881-025-00342-1     # Ozernov-Palchik et al. 2025 (Not so) universal literacy screening
+  - 10.31234/osf.io/stek7_v1       # Ozernov-Palchik et al. 2026 LLM tutoring preprint
 
 - slug: hypsynth
   title: HypSyNth — AI co-scientist for neurophysiology # TODO confirm full name
@@ -393,7 +439,9 @@
     archives. # TODO expand description with methods + outputs
   funder: MGAIC (MIT Generative AI Consortium)
   image: /images/projects/hypsynth-placeholder.svg
-  themes: [neurophysiology, machine-learning, automation, agents]
+  themes:
+  - ml-nlp-knowledge
+  - reproducibility-tooling
   links: [] # TODO add paper / preprint / repo URLs once available
   contributors:
     current: [Nima Dehghani, Satrajit S Ghosh]
@@ -410,15 +458,16 @@
     converts flat NER data into valid, Marr-aligned JSON-LD. arXiv 2507.03674
     (Chhetri, Chen, Trivedi, Jarecka et al., 2025).
   image: /images/projects/structsense.webp
-  themes: [knowledge-graphs, agents, llm]
+  themes:
+  - ml-nlp-knowledge
   links:
-    - { label: "Preprint (arXiv 2507.03674)", url: https://arxiv.org/abs/2507.03674 }
-    - { label: StructSense on GitHub, url: https://github.com/sensein/structsense }
+  - {label: "Preprint (arXiv 2507.03674)", url: https://arxiv.org/abs/2507.03674}
+  - {label: StructSense on GitHub, url: https://github.com/sensein/structsense}
   contributors:
     current: [Dorota Jarecka, Nader Nikbakht, Puja Trivedi, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri, Yibei Chen]
     former: []
   publications:
-    - arXiv:2507.03674   # Chhetri et al. 2025 StructSense
+  - arXiv:2507.03674     # Chhetri et al. 2025 StructSense
 
 # ─── Former projects ─────────────────────────────────────────────────────────
 
@@ -433,18 +482,21 @@
     studies.
   funder: NIMH RF1 MH121885 (PI, 2020–2024)
   image: /images/external/unet-best-prediction-8b27578e.webp
-  themes: [software, deep-learning, neuroimaging]
+  themes:
+  - reproducibility-tooling
+  - neuroimaging-methods
+  - ml-nlp-knowledge
   links:
-    - { label: Nobrainer on GitHub, url: https://github.com/neuronets/nobrainer }
-    - { label: Trained model zoo, url: https://github.com/neuronets/nobrainer-zoo }
-    - { label: Pretrained models, url: https://github.com/neuronets/trained-models }
-    - { label: Neuronets on GitHub, url: https://github.com/neuronets }
+  - {label: Nobrainer on GitHub, url: https://github.com/neuronets/nobrainer}
+  - {label: Trained model zoo, url: https://github.com/neuronets/nobrainer-zoo}
+  - {label: Pretrained models, url: https://github.com/neuronets/trained-models}
+  - {label: Neuronets on GitHub, url: https://github.com/neuronets}
   contributors:
     current: []
     former: [Aakanksha Rana, Jakub Kaczmarzyk, Satrajit S Ghosh]
   publications:
-    - 10.3389/fninf.2019.00067     # McClure et al. 2019 KWYK
-    - 10.1038/s41598-022-19026-6   # Boaro et al. 2022 meningioma
+  - 10.3389/fninf.2019.00067       # McClure et al. 2019 KWYK
+  - 10.1038/s41598-022-19026-6     # Boaro et al. 2022 meningioma
 
 - slug: mumble-melody
   title: "Mumble Melody — Musically-modulated auditory feedback for people who stutter"
@@ -456,15 +508,17 @@
     Aug 2023 for the underlying technique.
   funder: McGovern Institute NTP + MIT Deshpande Center (PI; co-PI Machover)
   image: /images/Mumble_Melody_logo.webp
-  themes: [speech, clinical-trial, assistive-tech]
+  themes:
+  - speech-voice-biomarkers
+  - mental-health-psychiatry
   links:
-    - { label: Project page, url: /mumble_melody_project }
-    - { label: Study page, url: /mumble_melody_study }
-    - { label: MIT Media Lab project, url: https://www.media.mit.edu/projects/mumble-melody/overview/ }
-    - { label: Mumble Melody on the App Store, url: "https://apps.apple.com/us/app/mumble-melody/id1607934697" }
-    - { label: "US Patent 11,727,949 B2", url: "https://patents.google.com/patent/US11727949B2/en" }
-    - { label: MumbleMelody-Long study repo, url: https://github.com/sensein/MumbleMelody_Long }
-    - { label: Stuttering survey repo, url: https://github.com/sensein/Stuttering_survey }
+  - {label: Project page, url: /mumble_melody_project}
+  - {label: Study page, url: /mumble_melody_study}
+  - {label: MIT Media Lab project, url: https://www.media.mit.edu/projects/mumble-melody/overview/}
+  - {label: Mumble Melody on the App Store, url: "https://apps.apple.com/us/app/mumble-melody/id1607934697"}
+  - {label: "US Patent 11,727,949 B2", url: "https://patents.google.com/patent/US11727949B2/en"}
+  - {label: MumbleMelody-Long study repo, url: https://github.com/sensein/MumbleMelody_Long}
+  - {label: Stuttering survey repo, url: https://github.com/sensein/Stuttering_survey}
   contributors:
     current: []
     former: [Akito van Troyer, Alisha Kodibagkar, George Stefanakis, Megha Vemuri, Mike Erkkinen, Rebecca Kleinberger, Satrajit S Ghosh, Tod Machover]
@@ -481,15 +535,17 @@
     across datasets.
   funder: NIMH R01 MH109682 (Site PI; PI Yarkoni)
   image: /images/brain_parcellation.webp
-  themes: [neuroimaging, naturalistic-data, parcellation]
+  themes:
+  - brain-dynamics-naturalistic
+  - neuroimaging-methods
   links:
-    - { label: Project page, url: /naturalistic_parcellation }
-    - { label: "Neuroscout paper (eLife 2022)", url: "https://elifesciences.org/articles/79277" }
+  - {label: Project page, url: /naturalistic_parcellation}
+  - {label: "Neuroscout paper (eLife 2022)", url: "https://elifesciences.org/articles/79277"}
   contributors:
     current: []
     former: [Christopher J Markiewicz, Jeff Mentch, Satrajit S Ghosh]
   publications:
-    - 10.7554/eLife.79277   # de la Vega et al. 2022 Neuroscout
+  - 10.7554/eLife.79277     # de la Vega et al. 2022 Neuroscout
   # External: Neuroscout Team, Peer Herholz.
 
 # Former sub-projects from the prior "Voice and Language Biomarkers" umbrella.
@@ -502,15 +558,17 @@
     vocal-fold paralysis; explored biases in recording and compared ML
     performance to clinicians' diagnosis-from-voice ability.
   image: /images/projects/vocal-fold-paralysis.webp
-  themes: [speech-biomarkers, clinical]
+  themes:
+  - speech-voice-biomarkers
+  - mental-health-psychiatry
   links:
-    - { label: "PLOS Digital Health paper (PMID 38814935)", url: "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000516" }
-    - { label: medRxiv preprint, url: "https://www.medrxiv.org/content/10.1101/2020.11.23.20235945v8" }
+  - {label: "PLOS Digital Health paper (PMID 38814935)", url: "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000516"}
+  - {label: medRxiv preprint, url: "https://www.medrxiv.org/content/10.1101/2020.11.23.20235945v8"}
   contributors:
     current: []
     former: [Daniel M. Low, Satrajit S Ghosh]
   publications:
-    - 10.1371/journal.pdig.0000516  # Low et al. 2024 vocal-fold-paralysis
+  - 10.1371/journal.pdig.0000516    # Low et al. 2024 vocal-fold-paralysis
   # External: Phil Song.
 
 - slug: psychiatric-speech-review
@@ -521,15 +579,17 @@
     catalogued acoustic features and offered guidelines for data
     acquisition and machine-learning models.
   image: /images/projects/psychiatric-speech-review.webp
-  themes: [speech-biomarkers, psychiatry, review]
+  themes:
+  - speech-voice-biomarkers
+  - mental-health-psychiatry
   links:
-    - { label: "Paper (Laryngoscope Investig Otolaryngol 2020)", url: "https://onlinelibrary.wiley.com/doi/abs/10.1002/lio2.354" }
-    - { label: Plots / figures repo, url: "https://github.com/danielmlow/review" }
+  - {label: "Paper (Laryngoscope Investig Otolaryngol 2020)", url: "https://onlinelibrary.wiley.com/doi/abs/10.1002/lio2.354"}
+  - {label: Plots / figures repo, url: "https://github.com/danielmlow/review"}
   contributors:
     current: []
     former: [Daniel M. Low, Kate Bentley, Satrajit S Ghosh]
   publications:
-    - 10.1002/lio2.354
+  - 10.1002/lio2.354
 
 - slug: covid-reddit-mental-health
   title: COVID-19 mental-health concerns on Reddit
@@ -540,19 +600,21 @@
     vulnerable groups and a doubling of posts within suicidality and
     loneliness clusters. Released a Mental Health Reddit Dataset.
   image: /images/projects/covid-reddit-mental-health.webp
-  themes: [nlp, mental-health, social-media]
+  themes:
+  - mental-health-psychiatry
+  - ml-nlp-knowledge
   links:
-    - { label: JMIR paper, url: "https://www.jmir.org/2020/10/e22635" }
-    - { label: MIT News, url: "https://news.mit.edu/2020/covid-19-impact-mental-health-1105" }
-    - { label: WEF coverage, url: "https://www.weforum.org/stories/2020/11/machine-learning-track-pandemic-impact-mental-health/" }
-    - { label: Zenodo dataset, url: "https://zenodo.org/record/3941387" }
-    - { label: OSF supplement, url: "https://osf.io/2bfpn/" }
-    - { label: GitHub, url: "https://github.com/danielmlow/reddit" }
+  - {label: JMIR paper, url: "https://www.jmir.org/2020/10/e22635"}
+  - {label: MIT News, url: "https://news.mit.edu/2020/covid-19-impact-mental-health-1105"}
+  - {label: WEF coverage, url: "https://www.weforum.org/stories/2020/11/machine-learning-track-pandemic-impact-mental-health/"}
+  - {label: Zenodo dataset, url: "https://zenodo.org/record/3941387"}
+  - {label: OSF supplement, url: "https://osf.io/2bfpn/"}
+  - {label: GitHub, url: "https://github.com/danielmlow/reddit"}
   contributors:
     current: []
     former: [Daniel M. Low, Satrajit S Ghosh]
   publications:
-    - 10.2196/22635
+  - 10.2196/22635
   # External: Laurie Rumker, Tanya Talkar, John Torous, Guillermo Cecchi.
 
 - slug: veteran-peer-response
@@ -563,14 +625,16 @@
     Servicemembers and veterans, using observational data and a deep
     learning approach on social-media interactions.
   image: /images/projects/veteran-peer-response.webp
-  themes: [suicide-prevention, social-media, causal-inference, nlp]
+  themes:
+  - mental-health-psychiatry
+  - ml-nlp-knowledge
   links:
-    - { label: "Psychological Medicine 2024 (PMID 39279263)", url: "https://doi.org/10.1017/S0033291724001557" }
-    - { label: "EMNLP 2021 — Causal Inference & NLP", url: "https://aclanthology.org/2021.cinlp-1.8/" }
+  - {label: "Psychological Medicine 2024 (PMID 39279263)", url: "https://doi.org/10.1017/S0033291724001557"}
+  - {label: "EMNLP 2021 — Causal Inference & NLP", url: "https://aclanthology.org/2021.cinlp-1.8/"}
   contributors:
     current: []
     former: [Daniel M. Low, Satrajit S Ghosh]
   publications:
-    - 10.1017/S0033291724001557
-    - 10.18653/v1/2021.cinlp-1.8
+  - 10.1017/S0033291724001557
+  - 10.18653/v1/2021.cinlp-1.8
   # External: Matt Nock, Walter Dempsey, Kelly Zuromski, Daniel Kessler, RallyPoint.

@@ -4,11 +4,22 @@ import SectionHeading from "~/components/SectionHeading.astro";
 import ProjectCard from "~/components/ProjectCard.astro";
 import { normalizeImage } from "~/lib/images";
 import { projects } from "~/lib/data";
+import yaml from "js-yaml";
 
 const all = projects();
 const active = all.filter((p) => p.status === "active");
 const former = all.filter((p) => p.status === "former");
 const heroImage = normalizeImage("/images/multi_sensory_integration.webp");
+
+// Theme chip metadata — same 9-theme taxonomy used on /publications/.
+const themeRaw = (await import("~/data/publications_page.yml?raw")).default as string;
+const themeMeta = yaml.load(themeRaw) as { topics: { tag: string; label: string }[] };
+const counts = new Map<string, number>();
+for (const p of all) for (const t of p.themes ?? []) counts.set(t, (counts.get(t) ?? 0) + 1);
+const chips = themeMeta.topics
+  .map((t) => ({ tag: t.tag, label: t.label, count: counts.get(t.tag) ?? 0 }))
+  .filter((t) => t.count > 0)
+  .sort((a, b) => b.count - a.count);
 ---
 <PageLayout
   eyebrow="Research"
@@ -51,33 +62,124 @@ const heroImage = normalizeImage("/images/multi_sensory_integration.webp");
     </figure>
   </section>
 
-  <section class="mt-20">
-    <SectionHeading
-      id="active"
-      title="Active projects"
-      description="What's happening in the group right now."
-    />
+  <section class="mt-16" data-project-filters aria-label="Filter projects by theme">
+    <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-3">
+      Filter by theme <span class="normal-case tracking-normal text-(--color-ink-muted)">— click one or more; multiple selections combine with OR.</span>
+    </p>
+    <div class="flex flex-wrap gap-2 text-sm">
+      <button
+        type="button"
+        data-chip-all
+        aria-pressed="true"
+        class="rounded-full border border-(--color-border) px-3 py-1 text-(--color-ink-muted) hover:border-(--color-border-strong) transition-colors aria-pressed:border-(--color-accent) aria-pressed:bg-(--color-accent-soft) aria-pressed:text-(--color-accent-strong) aria-pressed:font-medium"
+      >
+        All <span class="font-mono text-[11px] text-(--color-ink-faint) ml-1">{all.length}</span>
+      </button>
+      {chips.map((c) => (
+        <button
+          type="button"
+          data-chip
+          data-tag={c.tag}
+          aria-pressed="false"
+          class="rounded-full border border-(--color-border) px-3 py-1 text-(--color-ink-muted) hover:border-(--color-border-strong) transition-colors aria-pressed:border-(--color-accent) aria-pressed:bg-(--color-accent-soft) aria-pressed:text-(--color-accent-strong) aria-pressed:font-medium"
+        >
+          {c.label} <span class="font-mono text-[11px] text-(--color-ink-faint) ml-1">{c.count}</span>
+        </button>
+      ))}
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <div class="flex items-baseline justify-between gap-4 mb-3">
+      <SectionHeading
+        id="active"
+        title="Active projects"
+        description="What's happening in the group right now."
+      />
+      <span class="shrink-0 text-xs text-(--color-ink-faint) font-mono" data-active-count>{active.length}</span>
+    </div>
     {active.length === 0 ? (
       <p class="text-(--color-ink-muted)">No active projects listed.</p>
     ) : (
-      <div class="grid md:grid-cols-2 gap-5">
-        {active.map((p) => <ProjectCard project={p} />)}
+      <div class="grid md:grid-cols-2 gap-5" data-project-grid="active">
+        {active.map((p) => (
+          <div data-project data-themes={(p.themes ?? []).join(",")}>
+            <ProjectCard project={p} />
+          </div>
+        ))}
       </div>
     )}
+    <p class="hidden mt-4 text-sm text-(--color-ink-muted)" data-empty-active>
+      No active projects match the selected theme(s).
+    </p>
   </section>
 
   {former.length > 0 && (
     <section class="mt-20">
-      <SectionHeading
-        id="former"
-        title="Past projects"
-        description="Completed or paused efforts. Asterisks (*) on contributor names indicate former members."
-      />
-      <div class="grid md:grid-cols-2 gap-5">
-        {former.map((p) => <ProjectCard project={p} />)}
+      <div class="flex items-baseline justify-between gap-4 mb-3">
+        <SectionHeading
+          id="former"
+          title="Past projects"
+          description="Completed or paused efforts. Asterisks (*) on contributor names indicate former members."
+        />
+        <span class="shrink-0 text-xs text-(--color-ink-faint) font-mono" data-former-count>{former.length}</span>
       </div>
+      <div class="grid md:grid-cols-2 gap-5" data-project-grid="former">
+        {former.map((p) => (
+          <div data-project data-themes={(p.themes ?? []).join(",")}>
+            <ProjectCard project={p} />
+          </div>
+        ))}
+      </div>
+      <p class="hidden mt-4 text-sm text-(--color-ink-muted)" data-empty-former>
+        No past projects match the selected theme(s).
+      </p>
     </section>
   )}
+
+  <script>
+    const chips = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-chip]"));
+    const allBtn = document.querySelector<HTMLButtonElement>("[data-chip-all]");
+    const items = Array.from(document.querySelectorAll<HTMLElement>("[data-project]"));
+    const activeCountEl = document.querySelector<HTMLElement>("[data-active-count]");
+    const formerCountEl = document.querySelector<HTMLElement>("[data-former-count]");
+    const emptyActive = document.querySelector<HTMLElement>("[data-empty-active]");
+    const emptyFormer = document.querySelector<HTMLElement>("[data-empty-former]");
+
+    function selectedTags(): Set<string> {
+      return new Set(chips.filter((c) => c.getAttribute("aria-pressed") === "true").map((c) => c.dataset.tag!));
+    }
+
+    function applyFilter() {
+      const sel = selectedTags();
+      let nActive = 0, nFormer = 0;
+      for (const item of items) {
+        const themes = (item.dataset.themes ?? "").split(",").filter(Boolean);
+        const ok = sel.size === 0 || themes.some((t) => sel.has(t));
+        item.style.display = ok ? "" : "none";
+        if (!ok) continue;
+        if (item.closest('[data-project-grid="active"]')) nActive++;
+        else if (item.closest('[data-project-grid="former"]')) nFormer++;
+      }
+      if (allBtn) allBtn.setAttribute("aria-pressed", sel.size === 0 ? "true" : "false");
+      if (activeCountEl) activeCountEl.textContent = String(nActive);
+      if (formerCountEl) formerCountEl.textContent = String(nFormer);
+      emptyActive?.classList.toggle("hidden", nActive > 0);
+      emptyFormer?.classList.toggle("hidden", nFormer > 0);
+    }
+
+    chips.forEach((c) =>
+      c.addEventListener("click", () => {
+        const on = c.getAttribute("aria-pressed") === "true";
+        c.setAttribute("aria-pressed", on ? "false" : "true");
+        applyFilter();
+      }),
+    );
+    allBtn?.addEventListener("click", () => {
+      chips.forEach((c) => c.setAttribute("aria-pressed", "false"));
+      applyFilter();
+    });
+  </script>
 
   <p class="mt-12 text-xs text-(--color-ink-faint)">
     Missing a project? Contributors not credited? Open a PR editing
