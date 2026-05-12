@@ -73,7 +73,7 @@ const pubCount = publications().length;
     </p>
   </Container>
 
-  <script define:vars={{ INDEX_URL: withBase("/search-index.json"), VECTORS_URL: withBase("/search-vectors.bin") }}>
+  <script define:vars={{ INDEX_URL: withBase("/search-index.json"), VECTORS_URL: withBase("/search-vectors.bin"), BASE_URL: withBase("/") }}>
     // Hybrid keyword + MiniLM search. Records + embeddings are static files
     // built by scripts/build-search-embeddings.mjs.
     //
@@ -215,29 +215,30 @@ const pubCount = publications().length;
       let pool = records.map((r, idx) => ({ r, idx }));
       if (activeKind !== "all") pool = pool.filter(({ r }) => r.k === activeKind);
 
-      let hits;
-      if (qTokens.length > 0) {
-        hits = pool
-          .map(({ r, idx }) => ({ r, idx, s: keywordScore(r, qTokens) }))
-          .filter((x) => x.s > 0)
-          .sort((a, b) => b.s - a.s);
-        if (hits.length === 0) hits = pool.map(({ r, idx }) => ({ r, idx, s: 0 }));
-      } else {
-        hits = pool.map(({ r, idx }) => ({ r, idx, s: 0 }));
-        hits.sort((a, b) => a.r.k.localeCompare(b.r.k) || a.r.t.localeCompare(b.r.t));
-        hits = hits.slice(0, 50);
+      // Empty query → show the prompt empty-state, no result list.
+      if (qTokens.length === 0) {
+        resultsEl.innerHTML = "";
+        emptyEl.classList.remove("hidden");
+        countEl.textContent = "Type a query above to search across people, projects, and publications.";
+        return;
       }
 
-      paint(hits, q);
+      const hits = pool
+        .map(({ r, idx }) => ({ r, idx, s: keywordScore(r, qTokens) }))
+        .filter((x) => x.s > 0)
+        .sort((a, b) => b.s - a.s);
+      const keywordHits = hits.length > 0 ? hits : pool.map(({ r, idx }) => ({ r, idx, s: 0 }));
 
-      if (qTokens.length === 0 || !vectors) return;
+      paint(keywordHits, q);
+
+      if (!vectors) return;
       if (q === lastQuery) return;
       lastQuery = q;
       const qVec = await embedQuery(q);
       if (myToken !== renderToken) return;
       if (!qVec) return;
 
-      const maxKw = Math.max(1, ...hits.map((h) => h.s));
+      const maxKw = Math.max(1, ...keywordHits.map((h) => h.s));
       const blended = pool.map(({ r, idx }) => {
         const kw = keywordScore(r, qTokens) / maxKw;
         const sem = cosineSim(qVec, idx);
@@ -270,8 +271,17 @@ const pubCount = publications().length;
           ]
             .filter(Boolean)
             .join("  ·  ");
+          // r.h is a site-absolute path like "/projects/brain-states" or
+          // "/team/#aparna-bg"; prefix with BASE_URL so it resolves under
+          // the PR preview's base path too. Preserve any "#fragment" and
+          // add a trailing slash on the path portion (Astro builds with
+          // trailing slashes by default).
+          const [pathPart, hashPart] = r.h.split("#");
+          const path = pathPart.endsWith("/") || hashPart !== undefined ? pathPart : pathPart + "/";
+          const base = BASE_URL.replace(/\/$/, "");
+          const href = base + (path.startsWith("/") ? path : "/" + path) + (hashPart !== undefined ? "#" + hashPart : "");
           return `<li class="py-4">
-  <a href="${escapeHtml(r.h)}" class="block group">
+  <a href="${escapeHtml(href)}" class="block group">
     <p class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">${escapeHtml(meta)}</p>
     <p class="mt-1 text-(--color-ink) group-hover:text-(--color-accent) transition-colors leading-snug">${escapeHtml(r.t)}</p>
     ${r.b.trim() ? `<p class="mt-1 text-xs text-(--color-ink-muted) leading-snug line-clamp-2">${escapeHtml(r.b.slice(0, 200))}</p>` : ""}
