@@ -98,6 +98,7 @@ Publications
 No matches. Try a shorter or different query.
 </p>  </div> <script>(function(){const INDEX_URL = "/pr-preview/pr-141/search-index.json";
 const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
+const BASE_URL = "/pr-preview/pr-141/";
 
     // Hybrid keyword + MiniLM search. Records + embeddings are static files
     // built by scripts/build-search-embeddings.mjs.
@@ -240,29 +241,30 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
       let pool = records.map((r, idx) => ({ r, idx }));
       if (activeKind !== "all") pool = pool.filter(({ r }) => r.k === activeKind);
 
-      let hits;
-      if (qTokens.length > 0) {
-        hits = pool
-          .map(({ r, idx }) => ({ r, idx, s: keywordScore(r, qTokens) }))
-          .filter((x) => x.s > 0)
-          .sort((a, b) => b.s - a.s);
-        if (hits.length === 0) hits = pool.map(({ r, idx }) => ({ r, idx, s: 0 }));
-      } else {
-        hits = pool.map(({ r, idx }) => ({ r, idx, s: 0 }));
-        hits.sort((a, b) => a.r.k.localeCompare(b.r.k) || a.r.t.localeCompare(b.r.t));
-        hits = hits.slice(0, 50);
+      // Empty query → show the prompt empty-state, no result list.
+      if (qTokens.length === 0) {
+        resultsEl.innerHTML = "";
+        emptyEl.classList.remove("hidden");
+        countEl.textContent = "Type a query above to search across people, projects, and publications.";
+        return;
       }
 
-      paint(hits, q);
+      const hits = pool
+        .map(({ r, idx }) => ({ r, idx, s: keywordScore(r, qTokens) }))
+        .filter((x) => x.s > 0)
+        .sort((a, b) => b.s - a.s);
+      const keywordHits = hits.length > 0 ? hits : pool.map(({ r, idx }) => ({ r, idx, s: 0 }));
 
-      if (qTokens.length === 0 || !vectors) return;
+      paint(keywordHits, q);
+
+      if (!vectors) return;
       if (q === lastQuery) return;
       lastQuery = q;
       const qVec = await embedQuery(q);
       if (myToken !== renderToken) return;
       if (!qVec) return;
 
-      const maxKw = Math.max(1, ...hits.map((h) => h.s));
+      const maxKw = Math.max(1, ...keywordHits.map((h) => h.s));
       const blended = pool.map(({ r, idx }) => {
         const kw = keywordScore(r, qTokens) / maxKw;
         const sem = cosineSim(qVec, idx);
@@ -295,8 +297,17 @@ const VECTORS_URL = "/pr-preview/pr-141/search-vectors.bin";
           ]
             .filter(Boolean)
             .join("  ·  ");
+          // r.h is a site-absolute path like "/projects/brain-states" or
+          // "/team/#aparna-bg"; prefix with BASE_URL so it resolves under
+          // the PR preview's base path too. Preserve any "#fragment" and
+          // add a trailing slash on the path portion (Astro builds with
+          // trailing slashes by default).
+          const [pathPart, hashPart] = r.h.split("#");
+          const path = pathPart.endsWith("/") || hashPart !== undefined ? pathPart : pathPart + "/";
+          const base = BASE_URL.replace(/\/$/, "");
+          const href = base + (path.startsWith("/") ? path : "/" + path) + (hashPart !== undefined ? "#" + hashPart : "");
           return `<li class="py-4">
-  <a href="${escapeHtml(r.h)}" class="block group">
+  <a href="${escapeHtml(href)}" class="block group">
     <p class="text-[11px] uppercase tracking-wider text-(--color-ink-faint)">${escapeHtml(meta)}</p>
     <p class="mt-1 text-(--color-ink) group-hover:text-(--color-accent) transition-colors leading-snug">${escapeHtml(r.t)}</p>
     ${r.b.trim() ? `<p class="mt-1 text-xs text-(--color-ink-muted) leading-snug line-clamp-2">${escapeHtml(r.b.slice(0, 200))}</p>` : ""}
@@ -379,7 +390,7 @@ McGovern Institute for Brain Research<br>
 Cambridge, MA 02139 USA
 </address> <a href="http://whereis.mit.edu/?go=46" target="_blank" rel="noopener" class="mt-2 inline-block text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
 Directions →
-</a> </div> </div> <div class="mt-10 pt-6 border-t border-(--color-border) flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs text-(--color-ink-faint)"> <p>© 2019 – 2026 Senseable Intelligence Group</p> <span class="font-mono text-[10px] opacity-70" title="Built 2026-05-12 00:08Z">
-build b207c04 · 2026-05-12 00:08Z </span> <a href="/pr-preview/pr-141/about" class="hover:text-(--color-accent) transition-colors underline-offset-3 hover:underline">
+</a> </div> </div> <div class="mt-10 pt-6 border-t border-(--color-border) flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between text-xs text-(--color-ink-faint)"> <p>© 2019 – 2026 Senseable Intelligence Group</p> <span class="font-mono text-[10px] opacity-70" title="Built 2026-05-12 00:55Z">
+build 4b8e79d · 2026-05-12 00:55Z </span> <a href="/pr-preview/pr-141/about" class="hover:text-(--color-accent) transition-colors underline-offset-3 hover:underline">
 About this website
 </a> </div>  </div> </footer> </body></html>
