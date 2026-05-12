@@ -1,0 +1,185 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Container from "~/components/Container.astro";
+import SectionHeading from "~/components/SectionHeading.astro";
+import PublicationItem from "~/components/PublicationItem.astro";
+import { projects, projectPublications, personHref } from "~/lib/data";
+import { normalizeImage } from "~/lib/images";
+import { withBase } from "~/lib/url";
+
+export async function getStaticPaths() {
+  return projects().map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const image = project.image ? normalizeImage(project.image) : null;
+const pubs = projectPublications(project);
+
+const contribs = {
+  current: project.contributors?.current ?? [],
+  former: project.contributors?.former ?? [],
+  external: project.contributors?.external ?? [],
+};
+
+function linkify(href: string): string {
+  return /^https?:\/\//i.test(href) ? href : withBase(href);
+}
+---
+<BaseLayout title={project.title} description={project.description}>
+  <Container size="default" class="pt-14 pb-6">
+    <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
+      <a href={withBase("/research")} class="hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
+        ← Research
+      </a>
+    </p>
+    <div class="mt-4 flex items-start justify-between gap-4 flex-wrap">
+      <h1 class="font-serif text-3xl md:text-4xl font-semibold tracking-tight text-(--color-ink) leading-[1.1] max-w-3xl">
+        {project.title}
+      </h1>
+      {project.status === "former" && (
+        <span class="shrink-0 mt-2 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded border border-(--color-border) text-(--color-ink-faint)">
+          past
+        </span>
+      )}
+    </div>
+    {project.funder && (
+      <p class="mt-3 text-xs font-mono text-(--color-ink-faint)">
+        {project.funder}
+      </p>
+    )}
+  </Container>
+
+  <Container size="default" class="py-6">
+    <div class="grid lg:grid-cols-[1.5fr_1fr] gap-10 items-start">
+      <div>
+        {project.description && (
+          <p class="text-lg text-(--color-ink-muted) leading-relaxed">
+            {project.description}
+          </p>
+        )}
+
+        {project.themes && project.themes.length > 0 && (
+          <ul class="mt-5 flex flex-wrap gap-1.5">
+            {project.themes.map((t) => (
+              <li class="text-[11px] px-1.5 py-0.5 rounded border border-(--color-border) text-(--color-ink-muted) bg-(--color-surface)/40">
+                {t}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {image && (
+        <figure>
+          <img
+            src={image}
+            alt={project.title}
+            class="w-full rounded-lg border border-(--color-border) bg-(--color-surface)"
+          />
+        </figure>
+      )}
+    </div>
+
+    {(project.links?.length ?? 0) > 0 && (
+      <section class="mt-14">
+        <SectionHeading eyebrow="Resources" title="Links" />
+        <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+          {project.links!.map((l) =>
+            l.url ? (
+              <li>
+                <a
+                  href={linkify(l.url)}
+                  target={l.url.startsWith("http") ? "_blank" : undefined}
+                  rel={l.url.startsWith("http") ? "noopener" : undefined}
+                  class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+                >
+                  {l.label ?? l.url} →
+                </a>
+              </li>
+            ) : null,
+          )}
+        </ul>
+      </section>
+    )}
+
+    {(contribs.current.length > 0 || contribs.former.length > 0 || contribs.external.length > 0) && (
+      <section class="mt-14">
+        <SectionHeading eyebrow="People" title="Contributors" />
+        <div class="grid sm:grid-cols-3 gap-x-8 gap-y-2 text-sm">
+          {contribs.current.length > 0 && (
+            <div>
+              <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-2">Current</p>
+              <ul class="space-y-1">
+                {contribs.current.map((name) => {
+                  const href = personHref(name);
+                  return (
+                    <li>
+                      {href ? (
+                        <a href={withBase(href)} class="text-(--color-ink) hover:text-(--color-accent) underline-offset-3 hover:underline">
+                          {name}
+                        </a>
+                      ) : (
+                        <span class="text-(--color-ink-muted)">{name}</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+          {contribs.former.length > 0 && (
+            <div>
+              <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-2">Former</p>
+              <ul class="space-y-1">
+                {contribs.former.map((name) => {
+                  const href = personHref(name);
+                  return (
+                    <li>
+                      {href ? (
+                        <a href={withBase(href)} class="text-(--color-ink) hover:text-(--color-accent) underline-offset-3 hover:underline">
+                          {name}
+                        </a>
+                      ) : (
+                        <span class="text-(--color-ink-muted)">{name}</span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+          {contribs.external.length > 0 && (
+            <div>
+              <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-2">External collaborators</p>
+              <ul class="space-y-1">
+                {contribs.external.map((entry) => (
+                  <li class="text-(--color-ink-muted)">{entry}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </section>
+    )}
+
+    {pubs.length > 0 && (
+      <section class="mt-14">
+        <SectionHeading eyebrow="Publications" title={`${pubs.length} ${pubs.length === 1 ? "paper" : "papers"} associated with this project`} />
+        <ul>
+          {pubs.map((p) => <PublicationItem pub={p} />)}
+        </ul>
+      </section>
+    )}
+
+    <p class="mt-14 text-xs text-(--color-ink-faint)">
+      Edit this project in <code>src/data/projects.yml</code>. Add a paper in
+      <code>src/data/publications.yml</code> and tag it with the project slug.
+      See
+      <a href="https://github.com/sensein/sensein.github.io/blob/main/PROJECTS.md" class="underline underline-offset-3 hover:text-(--color-accent)">PROJECTS.md</a>
+      for conventions.
+    </p>
+  </Container>
+</BaseLayout>

@@ -1,0 +1,77 @@
+name: Link check
+
+on:
+  pull_request:
+    paths:
+      - "src/**"
+      - "public/**"
+      - "*.md"
+      - ".github/workflows/link-check.yml"
+  schedule:
+    # Weekly, Monday 06:00 UTC — catches link rot on long-lived external refs.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write   # so the action can open / update an issue with broken-link results on schedule
+
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Run lychee on built site + YAML / Markdown sources
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Check internal HTML for broken anchors, plus all external links in
+          # YAML / Markdown source. Cache results for a day so repeated runs
+          # don't hammer the same hosts.
+          args: >-
+            --no-progress
+            --verbose
+            --cache --max-cache-age 1d
+            --max-concurrency 8
+            --max-retries 2
+            --retry-wait-time 2
+            --accept 200,202,203,204,206,300..=308,401,403,429
+            --exclude-mail
+            --exclude '\\\.local'
+            --exclude 'localhost'
+            --exclude 'mailto:'
+            --exclude '127\\.0\\.0\\.1'
+            --exclude 'example\\.(com|org|net)'
+            --include-fragments
+            './dist/**/*.html'
+            './src/**/*.yml'
+            './src/**/*.md'
+            './*.md'
+          fail: false   # don't fail CI; the issue body has the details
+
+      - name: Open / update tracking issue with broken links
+        if: ${{ steps.lychee.outputs.exit_code != 0 && github.event_name == 'schedule' }}
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "Link check: broken links (auto-updated)"
+          content-filepath: ./lychee/out.md
+          labels: |
+            link-check
+            automated

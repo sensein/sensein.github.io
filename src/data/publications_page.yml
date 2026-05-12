@@ -1,0 +1,64 @@
+# Content for /publications/ — summary, keyword tag cloud, and topic groupings.
+# Each topic carries a `tag` matching the canonical lowercase-hyphen topic on
+# publications (see the `topics:` field in publications.yml). Clicking a card
+# on the page filters the list to that tag. `example_count` is the size of
+# that intersection.
+
+summary: >
+  A working list of papers and preprints from the Senseable Intelligence
+  Group at the MIT McGovern Institute, compiled from group CVs, NCBI
+  MyBibliography, and OpenAlex. Entries are organised by year, publication
+  type, and topic and link out to the canonical record (DOI, PubMed, arXiv)
+  and, where available, open-access PDFs. The list is filterable by year,
+  type, topic, and lab author.
+
+keywords:
+- brain
+- neuroimaging
+- fmri
+- connectivity
+- functional
+- imaging
+- network
+- speech
+- voice
+- auditory
+- anxiety
+- depression
+- mental-health
+- adolescent
+- autism
+- reproducible
+- nipype
+- dandi
+- open-data
+- segmentation
+
+topics:
+- label: Reproducibility and scientific software
+  tag: reproducibility-tooling
+  description: Open-source tools, pipelines, and workflow standards (Nipype, Pydra, fMRIPrep, BIDS, DataLad) for reproducible neuroscience.
+- label: Neuroimaging methods and atlases
+  tag: neuroimaging-methods
+  description: MRI/dMRI methods, brain atlases, parcellations, segmentation, registration, and morphometry pipelines.
+- label: Open data, standards and consortia
+  tag: open-data-standards
+  description: Data sharing, FAIR standards, archives, and large consortia (BICAN, Bridge2AI, BIDS, NWB, DANDI, ReproSchema).
+- label: Speech, voice and vocal biomarkers
+  tag: speech-voice-biomarkers
+  description: Speech production and perception research and the use of voice as a biomarker of health.
+- label: Mental health and psychiatry
+  tag: mental-health-psychiatry
+  description: Brain and clinical correlates of depression, anxiety, suicide risk, and treatment response across the lifespan.
+- label: Child development, autism and literacy
+  tag: child-development-education
+  description: Pediatric neurodevelopment, autism, reading and literacy, and learning across childhood and adolescence.
+- label: Machine learning, NLP and knowledge graphs
+  tag: ml-nlp-knowledge
+  description: Deep learning, natural language processing, LLMs, knowledge graphs, and agents applied to biomedical and behavioral data.
+- label: Connectomics and brain circuits
+  tag: connectomics-circuits
+  description: Structural and functional connectivity studies of human brain circuits, including subcortex and auditory pathways.
+- label: Brain dynamics and naturalistic neuroscience
+  tag: brain-dynamics-naturalistic
+  description: Brain state dynamics, naturalistic stimuli, real-time fMRI, and neurofeedback approaches to cognition.

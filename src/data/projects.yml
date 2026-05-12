@@ -1,105 +1,640 @@
-- title: "BBQS AI Resource and Data Coordinating Center"
-  image: /images/external/bbqs-logo.png
-  description: >
-    A data and AI coordination center for the BRAIN Initiative Brain Behavior
-    Quantification and Synchronization (BBQS) program. Supported by
-    NIMH U24MH136628 (PIs: Ghosh, Cabrera, Kennedy).
-  authors: BBQS team (MIT, Penn State, UMass-Medical, JHU/APL, UCBerkeley/LBNL)
-  link:
-    url: https://brain-bbqs.org
-    display: Project website
-  highlight: 1
-  news2: <a href="https://github.com/brain-bbqs" target="_blank">BBQS on GitHub</a>
+# Senseable Intelligence Group projects.
+#
+# Each entry has:
+#   - slug:         URL-safe id (also used by the detail page when one exists)
+#   - title:        human-readable name
+#   - status:       "active" or "former"
+#   - description:  one-paragraph summary (the *what* and *why*, briefly)
+#   - funder:       optional grant / award identifier (with role + co-PIs)
+#   - image:        optional path under public/
+#   - themes:       optional list of tags for filtering
+#   - links:        optional [{ label, url }, ...]
+#   - contributors: { current: [name, ...], former: [name, ...] }
+#                   Both lists are alphabetized by display name.
+#   - publications: optional [DOI | arXiv id, ...]  cross-references into
+#                   src/data/publications.yml. The canonical corpus lives
+#                   there; this list is the per-project anchor set.
+#
+# Contributor names should match an entry in team_members.yml /
+# students.yml / alumni_members.yml so they render as links to
+# /team/#<slug>. External / consortium collaborators render as plain text.
+#
+# Iteration: open a PR editing this file. PROJECTS.md has conventions.
+# Lines tagged with "# TODO" need follow-up from someone with the facts.
 
-- title: "DANDI: Distributed Archives for Neurophysiology Data Integration"
-  image: /images/external/dandi-workflow-v2-49e8082b.png
-  description: >
-    A platform for data ingestion, search, and computing targeted towards
-    cellular neurophysiology. Supported by NIMH R24MH117295 (PI: Ghosh and Halchenko).
-  authors: DANDI team (MIT, Dartmouth, Kitware)
-  link:
-    url: https://dandiarchive.org/
-    display:  Project website.
-  highlight: 1
-  news2: <a href="https://github.com/dandi" target="_blank">DANDI on GitHub</a>
+# ─── Active projects ─────────────────────────────────────────────────────────
 
-- title: "BICAN Knowledgebase for neuroscience"
+- slug: bbqs
+  title: BBQS — Brain Behavior Quantification and Synchronization
+  status: active
+  description: >
+    A BRAIN-Initiative consortium developing tools to capture and quantify
+    behavior at high temporal resolution and across multiple dimensions, to
+    synchronize behavior with simultaneously-recorded brain activity, and to
+    build conceptual and computational models of behavior. The lab runs
+    BARD.CC, the BBQS AI Resource and Data Coordinating Center.
+  funder: NIDA U24 DA064429 (Lead PI; MPI Cabrera, Kennedy)
+  image: /images/external/bbqs-logo.webp
+  themes:
+  - open-data-standards
+  - ml-nlp-knowledge
+  links:
+  - {label: Project website, url: https://brain-bbqs.org}
+  - {label: BBQS on GitHub, url: https://github.com/brain-bbqs}
+  - {label: NIH BRAIN BBQS program, url: "https://braininitiative.nih.gov/research/systems-neuroscience/brain-behavior-quantification-and-synchronization-program"}
+  - {label: BARD.CC on NIH RePORTER, url: "https://reporter.nih.gov/search/OsbCHzaScU6FVeHg9b-MGw/project-details/10888562"}
+  contributors:
+    current: [Nader Nikbakht, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri]
+    former: []
+  publications: []
+
+- slug: dandi
+  title: "DANDI — Distributed Archives for Neurophysiology Data Integration"
+  status: active
+  description: >
+    A platform for data ingestion, search, and computing for cellular
+    neurophysiology. DANDI is the BRAIN Initiative's publishing-grade archive
+    for neurophysiology, behavioral, and imaging data.
+  funder: NIMH R24 MH117295 (Lead PI; MPI Halchenko, Dartmouth)
+  image: /images/external/dandi-workflow-v2-49e8082b.webp
+  themes:
+  - open-data-standards
+  - reproducibility-tooling
+  links:
+  - {label: DANDI archive, url: https://dandiarchive.org/}
+  - {label: About DANDI, url: https://about.dandiarchive.org/}
+  - {label: Documentation, url: https://docs.dandiarchive.org/}
+  - {label: DANDI Hub (JupyterHub), url: https://hub.dandiarchive.org/}
+  - {label: DANDI on GitHub, url: https://github.com/dandi}
+  - {label: BICCN R24 team page, url: https://biccn.org/teams/r24-ghosh}
+  contributors:
+    current: [Kabilar Gunalan, Nima Dehghani, Satrajit S Ghosh]
+    former: [Christopher J Markiewicz]
+  publications:
+  - 10.7554/eLife.78362       # Rübel et al. 2022, NWB ecosystem
+  - 10.1038/s41597-023-02614-0     # Subash et al. 2023, comparison of databases
+  - 10.1523/ENEURO.0486-24.2025    # Gillon et al. 2025, ODIN review
+  - 10.1007/s12021-021-09557-0     # Poline et al. 2022, FAIR
+
+- slug: bican-knowledgebase
+  title: BICAN Knowledgebase (BrainKB)
+  status: active
+  description: >
+    An extensible, open-access Brain Cell Knowledge Base built for the BRAIN
+    Initiative Cell Atlas Network. Ingests and standardizes cell-type
+    information across multimodal, multi-species brain atlases and exposes
+    it via the BrainKB platform, the bkbit toolkit, and LinkML-authored
+    schemas. The lab maintains BrainKB, the StructSense extraction agent,
+    and the schemas / data translators.
+  funder: NIMH U24 MH130918 (MPI with Mufti, Hawrylycz, Ng — Allen Institute)
   image: /images/external/bican-logo.avif
-  description: >
-    Develop an extensible Brain Cell Knowledge Base (BCKB) to ingest and standardize c
-    omprehensive cell type information from BICAN's development of a multimodal, 
-    multi-species brain cell atlas and disseminate that atlas as an open and interactive 
-    community resource for advancing knowledge of the brain. Supported by NIMH 1U24MH130918
-     (PI: Mufti, Hawrylycz, Ng, and Ghosh).
-  authors: BICAN team (Allen Institute for Brain Science, MIT)
-  link:
-    url: https://beta.brainkb.org
-    display:  Project website.
-  highlight: 1
-  news2: <a href="https://github.com/brain-bican" target="_blank">BICAN on GitHub</a>
+  themes:
+  - open-data-standards
+  - ml-nlp-knowledge
+  - reproducibility-tooling
+  links:
+  - {label: BrainKB (beta), url: https://beta.brainkb.org}
+  - {label: BrainKB about, url: https://beta.brainkb.org/about}
+  - {label: BrainKB docs, url: https://sensein.group/brainkbdocs/}
+  - {label: BICAN data models, url: https://github.com/brain-bican/models}
+  - {label: BICAN data models docs, url: https://brain-bican.github.io/models/}
+  - {label: bkbit toolkit, url: https://github.com/brain-bican/bkbit}
+  - {label: bkbit docs, url: https://brain-bican.github.io/bkbit/}
+  - {label: BICAN on GitHub, url: https://github.com/brain-bican}
+  - {label: BICAN portal, url: https://www.portal.brain-bican.org/}
+  - {label: BICAN team page, url: https://brain-bican.org/teams/bican-knowledgebase}
+  contributors:
+    current: [Dorota Jarecka, Nader Nikbakht, Nima Dehghani, Puja Trivedi, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri]
+    former: [Jai Amin]
+  publications:
+  - 10.1145/3701716.3715483    # Chhetri et al. 2025, provenance/assertion ontologies
+  - 10.1371/journal.pbio.3002133    # Hawrylycz et al. 2023, BICAN data ecosystem
 
-- title: "Nobrainer: A Robust And Validated Neural Netwrok Tool Suite For Imagers"
-  image: /images/external/unet-best-prediction-8b27578e.png
+- slug: bican-um1
+  title: BICAN UM1 — Multi-Scale Multi-Omic Human Brain Atlas
+  status: active
   description: >
-    Develop an open Python library to simplify integrating deep learning into neuroimaging research. 
-    We will build and distribute user-friendly and cloud enabled end-user applications for the 
-    neuroimaging community.
-  authors: Nobrainer team (MIT, MGH, GSU)
-  link:
-    url: https://projectreporter.nih.gov/project_info_description.cfm?aid=10021957
-    display:  Project summary from NIH.
-  highlight: 0
-  news2: <a href="https://github.com/neuronets" target="_blank">Neuronets on GitHub</a>
+    A BRAIN Initiative UM1 center for multi-scale, multi-omic atlasing of
+    the human brain, contributing analytics and platform integration for
+    proteomic imaging and related modalities. The flagship consortium
+    output to date is Park et al. (2024) in Science, an integrated
+    multiscale molecular imaging and phenotyping platform for the human
+    brain.
+  funder: NIMH UM1 MH134812 (Co-I)
+  image: /images/projects/bican-um1.webp
+  themes:
+  - connectomics-circuits
+  - open-data-standards
+  links:
+  - {label: BICAN portal, url: https://www.portal.brain-bican.org/}
+  - {label: "Park et al. 2024, Science (PMID 38870291)", url: "https://doi.org/10.1126/science.adh9979"}
+  contributors:
+    current: [Kabilar Gunalan, Satrajit S Ghosh]
+    former: []
+  publications:
+  - 10.1126/science.adh9979
 
-- title: "ReproNim: A Center for Reproducible Neuroimaging Computation"
-  image:
+- slug: linc
+  title: LINC / CONNECTS — Large-scale Imaging of Neural Circuits
+  status: active
   description: >
-    A Center dedicated to improving reproducibility in neuroimaging through the
-    development of products designed to enhance efficiency and provenance
-    tracking within laboratories and in collaboration with external stakeholders
-    such as data archives and publishers. Supported by NIBIB P41 EB019936 (PI:
-    David Kennedy, UMass Medical School).
-  authors: ReproNim team
-  link:
-    url: http://repronim.org/
-    display:  Read more about ReproNim
-  highlight: 1
-  news2: <a href="https://github.com/repronim" target="_blank">ReproNim on GitHub</a>
+    A multi-site center combining macaque and human dMRI (660 mT/m and
+    500 mT/m), light-sheet microscopy with tracers, polarization-sensitive
+    OCT, HiP-CT, and micro-CT into integrated pipelines for clearing,
+    imaging, storage, and dissemination of neural-circuit data. Use cases
+    include DBS-circuit mapping and biophysical modeling.
+  funder: NINDS UM1 NS132358 (Site PI)
+  image: /images/projects/linc.webp
+  themes:
+  - connectomics-circuits
+  - neuroimaging-methods
+  - open-data-standards
+  links:
+  - {label: CONNECTS project site, url: https://connects.mgh.harvard.edu/}
+  - {label: CONNECTS team, url: https://connects.mgh.harvard.edu/people/}
+  - {label: LINC data platform, url: https://lincbrain.org/}
+  - {label: LINC gallery, url: https://gallery.lincbrain.org}
+  - {label: LINC documentation, url: https://docs.lincbrain.org/}
+  - {label: lincbrain on GitHub, url: https://github.com/lincbrain}
+  contributors:
+    current: [Kabilar Gunalan, Satrajit S Ghosh]
+    former: []
+  publications:
+  - 10.64898/2026.03.31.715699    # Maffei et al. 2026, subcortical connectome 400 µm preprint
+  # Consortium PIs (external): Suzanne Haber (Rochester), Elizabeth Hillman
+  # (Columbia), Anastasia Yendiki (MGH); Site PIs: Mike Fox (BWH), Jeff
+  # Lichtman (Harvard), Claire Walsh / Peter Lee (UCL), Zhuhao Wu (Cornell Med).
 
-- title: "Naturalistic Parcellation and audiovisual integration"
-  image: ../images/brain_parcellation.png
+- slug: bridge2ai-voice
+  title: Bridge2AI Voice
+  status: active
   description: >
-    A Neuroscout project to generate cortical parcellations using naturalistic (movie viewing) neuroimaging datasets.
-  authors: Jeff Mentch
-  link:
-    url: ../naturalistic_parcellation
-    display:  Project details
-  highlight: 0
-  news2:
+    Build an ethically-sourced, diverse, AI-ready database of 10 000 human
+    voices linked to health information across five disease categories:
+    cardio-respiratory, mood, pediatric speech, voice, and neurological
+    disorders. The consortium develops standards for acoustic research
+    data, technical infrastructure for collection / storage / sharing,
+    ethical guidelines, and educational dissemination. The lab maintains
+    b2aiprep (data packaging) and contributes to the protocol design,
+    ethics, and pediatric arm.
+  funder: NIH OD OT2 OD032720 (MPI)
+  image: /images/projects/bridge2ai-voice.webp
+  themes:
+  - speech-voice-biomarkers
+  - open-data-standards
+  - mental-health-psychiatry
+  links:
+  - {label: Bridge2AI Voice site, url: https://b2ai-voice.org/}
+  - {label: Bridge2AI program — Voice, url: https://bridge2ai.org/data-voice/}
+  - {label: Studies portal, url: https://studies.b2ai-voice.org/}
+  - {label: Voice dataset, url: https://b2ai-voice.org/bridge2ai-voice-dataset/}
+  - {label: Global voice datasets map, url: https://map.b2ai-voice.org/}
+  - {label: b2aiprep on GitHub, url: https://github.com/sensein/b2aiprep}
+  - {label: "PhysioNet dataset v3.1.0", url: "https://physionet.org/content/b2ai-voice/3.1.0/"}
+  - {label: "PhysioNet pediatric v1.0.0", url: "https://physionet.org/content/b2ai-voice-pediatric/1.0.0/"}
+  - {label: NIH Bridge2AI program, url: https://commonfund.nih.gov/bridge2ai}
+  contributors:
+    current: [Jordan Wilke, Kaley Jenney, Rahul Brito, Satrajit S Ghosh]
+    former: [Daniel M. Low, Fabio Catania]
+  publications:
+  - 10.3389/fdgth.2025.1484521    # Bélisle-Pipon et al. 2025, Voice AI Symposium panel summaries
+  - 10.3389/fdgth.2024.1484818    # Voice AI Symposium 2024 workshop summaries
+  - 10.3389/fdgth.2024.1484503    # Voice AI Symposium 2024 keynote summaries
+  - 10.3389/fdgth.2025.1514971    # Bridge2AI-voice mobile feasibility study
 
-- title: Voice and language biomarkers of health
-  image: ../images/review_figure3_heatmap.jpeg
+- slug: senselab
+  title: senselab
+  status: active
   description: >
-    The goal of this project is to observe and analyze speech variations in 
-    across disorders by analyzing different types of data including ecological 
-    momentary assessments, recordings of clinical interviews, and social media posts.
-    Key questions we hope to answer are: 1) Is speech a good longitudinal biomarker? 
-    2) How much speech information is needed for stable tracking? 3) Can linguistic 
-    information augment voice models?
-  authors: Isaac Bevers, Kaley Jenny, Rahul Brito, Jordan Wilke, Miles Silva, Fabio Catania
-  link:
-    url: ../speech_biomarkers
-    display:  Project details
-  highlight: 1
-  news2:
+    Research software toolkit for voice / speech / behavioral analysis and
+    biomarker identification. "Streamlines, optimizes, and enforces best
+    open-science practices for processing and analyzing behavioral data
+    (primarily voice and speech, but also text and video) using robust,
+    reproducible pipelines and utilities." Used by the Bridge2AI-Voice and
+    Riverst / KIVA stacks.
+  image: /images/projects/senselab.webp
+  themes:
+  - reproducibility-tooling
+  - speech-voice-biomarkers
+  links:
+  - {label: senselab on GitHub, url: https://github.com/sensein/senselab}
+  - {label: senselab API docs, url: https://sensein.group/senselab/senselab.html}
+  contributors:
+    current: [Jordan Wilke, Satrajit S Ghosh]
+    former: [Bruke Wossenseged, Fabio Catania, Gasser Elbanna, Isaac Bevers, Miles Silva]
+  publications: []
 
-- title: "Mumble Melody: Musically Modulated Auditory Feedback to Increase Fluency for People Who Stutter"
-  image: ../images/Mumble_Melody_logo.jpg
+- slug: riverst-kiva
+  title: Riverst / KIVA — Digital tutor for childhood literacy
+  status: active
   description: >
-    The aim of this project is to explore assistive technologies to help increase fluency for people who stutter. Our studies investigate the use of Altered Auditory Feedback (AAF), a stuttering intervention in which an individual’s speech is played back to them in an altered manner. Below are further details about this project as well as a page about our study.
-  authors: R Kleinberger, A Kodibagkar, M Vemuri
-  link:
-    url: ../mumble_melody_project
-    display:  Project details
-  highlight:   0
-  news2: <a href="../mumble_melody_study">Study page</a>
+    Riverst is a digital-tutor platform for childhood literacy; KIVA is an
+    instance focused on vocabulary learning. Built on Pipecat and senselab,
+    integrating speech-feature extraction. Research questions: Can an
+    avatar understand child speech? Can LLMs adapt to each child? Can an
+    LLM effectively teach vocabulary?
+  funder: MGAIC (MIT Generative AI Consortium), 2025–2026
+  image: /images/projects/riverst-kiva.webp
+  themes:
+  - child-development-education
+  - ml-nlp-knowledge
+  - speech-voice-biomarkers
+  links:
+  - {label: Live demo, url: https://sensein.group/riverst/}
+  - {label: Riverst on GitHub, url: https://github.com/sensein/riverst}
+  - {label: Interactive Avatar, url: https://github.com/sensein/interactive-avatar}
+  - {label: Avatar orchestrator, url: https://github.com/sensein/interactive-avatar-orchestrator}
+  - {label: Avatar animation generation, url: https://github.com/sensein/generate-avatar-animations}
+  contributors:
+    current: [Jordan Wilke, Satrajit S Ghosh]
+    former: [Fabio Catania]
+  publications:
+  - 10.31234/osf.io/stek7_v1    # Ozernov-Palchik et al. 2026 LLM tutoring preprint
+  # External: Ola Ozernov-Palchik (BU / Wheelock).
+
+- slug: repronim
+  title: ReproNim — Center for Reproducible Neuroimaging Computation
+  status: active
+  description: >
+    A Center dedicated to improving reproducibility in neuroimaging via
+    best practices, tools, and training. Current efforts include Simple 2
+    (re-executable neuroimaging publications with NIDM provenance),
+    ReproSchema (standardized questionnaires / assessments for ABCD, HBCD,
+    Bridge2AI), ReproBRAISE / ABCD-ReproNim (Reproducible BRAIn State
+    Extraction), containerized BIDS apps (FreeSurfer / FSL / ANTs / MRIQC),
+    and BABS (BIDS App Bootstrap).
+  funder: NIBIB P41 EB019936 (Site PI; PI Kennedy, UMass Med; Director TR&D Project 2)
+  image: /images/projects/repronim.webp
+  themes:
+  - reproducibility-tooling
+  - neuroimaging-methods
+  - open-data-standards
+  links:
+  - {label: Project website, url: https://repronim.org}
+  - {label: ReproNim on GitHub, url: https://github.com/repronim}
+  - {label: ReproNim training, url: https://repronim.org/resources/training/}
+  - {label: ABCD-ReproNim, url: https://www.abcd-repronim.org/}
+  - {label: ABCD-ReproNim materials, url: https://abcd-repronim.github.io/materials/}
+  - {label: ReproSchema, url: https://github.com/ReproNim/reproschema}
+  - {label: BABS (BIDS App Bootstrap), url: https://github.com/PennLINC/babs}
+  - {label: BABS docs, url: https://pennlinc-babs.readthedocs.io/en/stable/overview.html}
+  - {label: Neurodocker, url: https://github.com/repronim/neurodocker}
+  - {label: DataLad handbook, url: https://handbook.datalad.org/}
+  contributors:
+    current: [Dorota Jarecka, Satrajit S Ghosh, Yibei Chen]
+    former: [Christopher J Markiewicz, Daniel M. Low, Isaac Bevers, Jakub Kaczmarzyk, Mathias Goncalves, Sanu Ann Abraham, Smruti Padhy]
+  publications:
+  - 10.12688/f1000research.10783.2     # Ghosh et al. 2017 Simple 1
+  - 10.3389/fninf.2019.00001           # Kennedy et al. 2019 Everything Matters
+  - 10.3389/fninf.2023.1174156         # Queder et al. 2023 NIDM-Terms
+  - 10.1162/imag_a_00074               # Zhao et al. 2024 BABS
+  - 10.2196/63343                      # Chen et al. 2025 ReproSchema
+  - 10.21105/joss.05839                # Halchenko et al. 2024 HeuDiConv
+
+- slug: nipype-pydra
+  title: Nipype / Pydra
+  status: active
+  description: >
+    Nipype is a community-developed Python project providing a uniform
+    interface to existing neuroimaging software (ANTS, SPM, FSL,
+    FreeSurfer, Camino, MRtrix, MNE, AFNI, Slicer) and underpinning many
+    popular pipelines including fmriprep. Pydra is a lightweight Python
+    dataflow engine designed to succeed Nipype: reproducible, scalable
+    workflows linking shell commands and Python functions.
+  funder: NIBIB R01 EB020740 (PI, 2016–2020; project ongoing as community software)
+  image: /images/projects/nipype-pydra.webp
+  themes:
+  - reproducibility-tooling
+  - neuroimaging-methods
+  links:
+  - {label: Nipype, url: https://nipype.readthedocs.io/}
+  - {label: Pydra, url: https://nipype.github.io/pydra/}
+  - {label: nipy/nipype, url: https://github.com/nipy/nipype}
+  - {label: nipype/pydra, url: https://github.com/nipype/pydra}
+  - {label: nipype2pydra, url: https://github.com/nipype/nipype2pydra}
+  contributors:
+    current: [Dorota Jarecka, Satrajit S Ghosh]
+    former: [Christopher J Markiewicz, Jakub Kaczmarzyk, Mathias Goncalves]
+  publications:
+  - 10.3389/fninf.2011.00013     # Gorgolewski et al. 2011 Nipype
+
+- slug: sails
+  title: 'SAILS — Speech & Action In-home Learning System'
+  status: active
+  description: >
+    Into the Wild — automated quantification of autism-relevant
+    behaviors from naturalistic home videos. The study pipeline runs
+    end-to-end: parents are reached through SPARK Research Match,
+    submit questionnaires and home-video uploads, and complete a
+    remote language assessment; videos pass automated metadata checks
+    and human quality review; trained annotators produce ground-truth
+    labels against a shared manual with ICC reliability checks; and
+    VLM-based models score uniform frame samples for video-level
+    behavior predictions. Brings together three theses: Manaal
+    Mohammed's on target-child behavior detection (vocalizations via
+    USC-SAIL / Whisper baseline; locomotion via S3D gated 3D CNN),
+    Lucie Bierent's on socialization-behavior recognition (response to
+    name, non-verbal communication, gesture prediction), and Bruke
+    Wossenseged's thesis work.
+  funder: Simons Foundation (Site PI, 2025–2026); Kennedy Krieger Institute partnership
+  image: /images/projects/sails-pipeline.svg
+  themes: [child-development-education, mental-health-psychiatry, ml-nlp-knowledge, speech-voice-biomarkers]
+  links:
+  - {label: sailsprep on GitHub, url: https://github.com/sensein/sailsprep}
+  - {label: ASD AI scoping review, url: https://github.com/sensein/asd-ai-scoping-review}
+  contributors:
+    current: [Satrajit S Ghosh, Yibei Chen, Manaal Mohammed, Aparna BG]
+    former: [Bruke Wossenseged, Lucie Bierent, Fabio Catania]
+    external:
+    - Rachel Reetzke (Kennedy Krieger)
+    - Rebecca Landa (Kennedy Krieger)
+    - Elizabeth Eiler (Kennedy Krieger)
+    - Arushi Singh (Kennedy Krieger)
+    - Jeremy Perrin (Kennedy Krieger)
+    - Vini Singh (Kennedy Krieger)
+  publications: []
+
+- slug: brain-states
+  title: Brain States
+  status: active
+  description: >
+    A brain state is a latent (hidden) variable representing a recurring
+    whole-brain configuration of neural activity — characterized by
+    emissions (spatial patterns), transition probabilities, and dwell
+    time. Research questions: Is there systematic structure in how brain
+    configurations relate to the world and behavior? How does this
+    structure differ between the neurodivergent and neurotypical
+    populations?
+  image: /images/projects/brain-states.webp
+  themes:
+  - brain-dynamics-naturalistic
+  - neuroimaging-methods
+  links:
+  - {label: "bioRxiv preprint (Chen et al. 2025)", url: "https://www.biorxiv.org/content/10.1101/2025.04.05.647323v3"}
+  - {label: Yibei Chen — MIT BCS, url: https://bcs.mit.edu/directory/yibei-chen}
+  contributors:
+    current: [Satrajit S Ghosh, Yibei Chen]
+    former: []
+  publications:
+  - 10.1162/IMAG.a.1116     # Chen et al. 2026, narrative comprehension brain states
+
+- slug: abcd-psychotic-experiences
+  title: Psychotic Experiences in ABCD
+  status: active
+  description: >
+    Analyses of psychotic experiences in the Adolescent Brain Cognitive
+    Development (ABCD) study — risk factors, transitions, and adolescent
+    brain-imaging correlates. # TODO expand description
+  image: /images/projects/abcd-psychotic-experiences-placeholder.svg
+  themes:
+  - mental-health-psychiatry
+  - child-development-education
+  - neuroimaging-methods
+  links:
+  - {label: "Burdinski et al. 2024 (JAMA Netw Open) — cannabis & cognition", url: "https://doi.org/10.1001/jamanetworkopen.2024.34354"}
+  contributors:
+    current: [Debbie Burdinski, Satrajit S Ghosh]
+    former: [Alisha Kodibagkar]
+  publications:
+  - 10.1001/jamanetworkopen.2024.34354    # Burdinski et al. 2024 cannabis paper
+
+- slug: readnet
+  title: ReadNet — ML for verbal literacy screening
+  status: active
+  description: >
+    Manual scoring of verbal literacy screeners is time-consuming and
+    unreliable; ReadNet is an ML approach to help teachers quickly and
+    reliably identify children needing early-literacy intervention. The
+    project ran the DrivenData "Goodnight Moon, Hello Early Literacy
+    Screening" public competition in 2024–2025 (winning AUROC 0.97 vs
+    Whisper baseline 0.59), with a voice-cloning anonymization scheme for
+    data release.
+  funder: Harvard University gift (Schmidt Futures & Citadel; Site Co-I) + MIT GenAI Consortium
+  image: /images/projects/readnet.webp
+  themes:
+  - child-development-education
+  - ml-nlp-knowledge
+  - speech-voice-biomarkers
+  links:
+  - {label: ReadNet at Reach Every Reader, url: https://reacheveryreader.gse.harvard.edu/readnet-project/}
+  - {label: Reach Every Reader, url: https://reacheveryreader.gse.harvard.edu/}
+  - {label: "DrivenData: Goodnight Moon challenge", url: "https://www.drivendata.org/competitions/298/literacy-screening/"}
+  - {label: Goodnight Moon winners blog, url: https://drivendata.co/blog/goodnight-moon-winners}
+  - {label: Winning models repo, url: https://github.com/drivendataorg/goodnight-moon}
+  - {label: readnet_survey analysis, url: https://github.com/sensein/readnet_survey}
+  contributors:
+    current: [Meral Hacikamiloglu, Satrajit S Ghosh]
+    former: [Fabio Catania]
+  publications:
+  - 10.1007/s11881-025-00342-1     # Ozernov-Palchik et al. 2025 (Not so) universal literacy screening
+  - 10.31234/osf.io/stek7_v1       # Ozernov-Palchik et al. 2026 LLM tutoring preprint
+
+- slug: hypsynth
+  title: HypSyNth — AI co-scientist for neurophysiology # TODO confirm full name
+  status: active
+  description: >
+    An "AI co-scientist" loop for neurophysiology: metadata / data
+    ingestion → hypothesis refinement → in-silico experiment design →
+    analysis → repeat, applied to large-scale neurophysiology
+    archives. # TODO expand description with methods + outputs
+  funder: MGAIC (MIT Generative AI Consortium)
+  image: /images/projects/hypsynth-placeholder.svg
+  themes:
+  - ml-nlp-knowledge
+  - reproducibility-tooling
+  links: [] # TODO add paper / preprint / repo URLs once available
+  contributors:
+    current: [Nima Dehghani, Satrajit S Ghosh]
+    former: []
+  publications: [] # TODO
+
+- slug: structsense
+  title: StructSense — Agentic structured information extraction
+  status: active
+  description: >
+    A task-agnostic multi-agent system for structured information
+    extraction. Used by BrainKB to extract causal mechanisms (not just
+    entities) from neuroscience literature, with a prototype tool that
+    converts flat NER data into valid, Marr-aligned JSON-LD. arXiv 2507.03674
+    (Chhetri, Chen, Trivedi, Jarecka et al., 2025).
+  image: /images/projects/structsense.webp
+  themes:
+  - ml-nlp-knowledge
+  links:
+  - {label: "Preprint (arXiv 2507.03674)", url: https://arxiv.org/abs/2507.03674}
+  - {label: StructSense on GitHub, url: https://github.com/sensein/structsense}
+  contributors:
+    current: [Dorota Jarecka, Nader Nikbakht, Puja Trivedi, Satrajit S Ghosh, Suliman Sharif, Tek Raj Chhetri, Yibei Chen]
+    former: []
+  publications:
+  - arXiv:2507.03674     # Chhetri et al. 2025 StructSense
+
+# ─── Former projects ─────────────────────────────────────────────────────────
+
+- slug: nobrainer
+  title: "Nobrainer — Neural network tool suite for imagers"
+  status: former
+  description: >
+    Open Python library to simplify integrating deep learning into
+    neuroimaging research, distributing user-friendly cloud-enabled
+    end-user applications for the community. The Nobrainer / KWYK
+    framework underlies several brain-segmentation and meningioma-detection
+    studies.
+  funder: NIMH RF1 MH121885 (PI, 2020–2024)
+  image: /images/external/unet-best-prediction-8b27578e.webp
+  themes:
+  - reproducibility-tooling
+  - neuroimaging-methods
+  - ml-nlp-knowledge
+  links:
+  - {label: Nobrainer on GitHub, url: https://github.com/neuronets/nobrainer}
+  - {label: Trained model zoo, url: https://github.com/neuronets/nobrainer-zoo}
+  - {label: Pretrained models, url: https://github.com/neuronets/trained-models}
+  - {label: Neuronets on GitHub, url: https://github.com/neuronets}
+  contributors:
+    current: []
+    former: [Aakanksha Rana, Jakub Kaczmarzyk, Satrajit S Ghosh]
+  publications:
+  - 10.3389/fninf.2019.00067       # McClure et al. 2019 KWYK
+  - 10.1038/s41598-022-19026-6     # Boaro et al. 2022 meningioma
+
+- slug: mumble-melody
+  title: "Mumble Melody — Musically-modulated auditory feedback for people who stutter"
+  status: former
+  description: >
+    Mobile app and one-month clinical study using altered auditory feedback
+    (AAF) — pitch shifts, delays, reverberation, whisper, harmony — to
+    increase fluency for people who stutter. US Patent 11,727,949 B2 issued
+    Aug 2023 for the underlying technique.
+  funder: McGovern Institute NTP + MIT Deshpande Center (PI; co-PI Machover)
+  image: /images/Mumble_Melody_logo.webp
+  themes:
+  - speech-voice-biomarkers
+  - mental-health-psychiatry
+  links:
+  - {label: Project page, url: /mumble_melody_project}
+  - {label: Study page, url: /mumble_melody_study}
+  - {label: MIT Media Lab project, url: https://www.media.mit.edu/projects/mumble-melody/overview/}
+  - {label: Mumble Melody on the App Store, url: "https://apps.apple.com/us/app/mumble-melody/id1607934697"}
+  - {label: "US Patent 11,727,949 B2", url: "https://patents.google.com/patent/US11727949B2/en"}
+  - {label: MumbleMelody-Long study repo, url: https://github.com/sensein/MumbleMelody_Long}
+  - {label: Stuttering survey repo, url: https://github.com/sensein/Stuttering_survey}
+  contributors:
+    current: []
+    former: [Akito van Troyer, Alisha Kodibagkar, George Stefanakis, Megha Vemuri, Mike Erkkinen, Rebecca Kleinberger, Satrajit S Ghosh, Tod Machover]
+  publications: []
+
+- slug: naturalistic-parcellation
+  title: Naturalistic Parcellation and audiovisual integration
+  status: former
+  description: >
+    A Neuroscout project generating cortical parcellations from
+    naturalistic (movie-viewing) neuroimaging datasets, with goals
+    including character-ID decoding, audiovisual-feature mapping,
+    auditory-specific and whole-brain parcellations, and reproducibility
+    across datasets.
+  funder: NIMH R01 MH109682 (Site PI; PI Yarkoni)
+  image: /images/brain_parcellation.webp
+  themes:
+  - brain-dynamics-naturalistic
+  - neuroimaging-methods
+  links:
+  - {label: Project page, url: /naturalistic_parcellation}
+  - {label: "Neuroscout paper (eLife 2022)", url: "https://elifesciences.org/articles/79277"}
+  contributors:
+    current: []
+    former: [Christopher J Markiewicz, Jeff Mentch, Satrajit S Ghosh]
+  publications:
+  - 10.7554/eLife.79277     # de la Vega et al. 2022 Neuroscout
+  # External: Neuroscout Team, Peer Herholz.
+
+# Former sub-projects from the prior "Voice and Language Biomarkers" umbrella.
+
+- slug: vocal-fold-paralysis
+  title: Detecting vocal-fold paralysis from voice
+  status: former
+  description: >
+    Analyzed sustained vowel and read speech to detect unilateral
+    vocal-fold paralysis; explored biases in recording and compared ML
+    performance to clinicians' diagnosis-from-voice ability.
+  image: /images/projects/vocal-fold-paralysis.webp
+  themes:
+  - speech-voice-biomarkers
+  - mental-health-psychiatry
+  links:
+  - {label: "PLOS Digital Health paper (PMID 38814935)", url: "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000516"}
+  - {label: medRxiv preprint, url: "https://www.medrxiv.org/content/10.1101/2020.11.23.20235945v8"}
+  contributors:
+    current: []
+    former: [Daniel M. Low, Satrajit S Ghosh]
+  publications:
+  - 10.1371/journal.pdig.0000516    # Low et al. 2024 vocal-fold-paralysis
+  # External: Phil Song.
+
+- slug: psychiatric-speech-review
+  title: Systematic review of speech in psychiatric disorders
+  status: former
+  description: >
+    Systematic review of 127 studies across 8 psychiatric disorders;
+    catalogued acoustic features and offered guidelines for data
+    acquisition and machine-learning models.
+  image: /images/projects/psychiatric-speech-review.webp
+  themes:
+  - speech-voice-biomarkers
+  - mental-health-psychiatry
+  links:
+  - {label: "Paper (Laryngoscope Investig Otolaryngol 2020)", url: "https://onlinelibrary.wiley.com/doi/abs/10.1002/lio2.354"}
+  - {label: Plots / figures repo, url: "https://github.com/danielmlow/review"}
+  contributors:
+    current: []
+    former: [Daniel M. Low, Kate Bentley, Satrajit S Ghosh]
+  publications:
+  - 10.1002/lio2.354
+
+- slug: covid-reddit-mental-health
+  title: COVID-19 mental-health concerns on Reddit
+  status: former
+  description: >
+    Analyzed 800 000+ posts from 2018–2021 to track semantic-content
+    changes across 15 mental-health support communities, surfacing
+    vulnerable groups and a doubling of posts within suicidality and
+    loneliness clusters. Released a Mental Health Reddit Dataset.
+  image: /images/projects/covid-reddit-mental-health.webp
+  themes:
+  - mental-health-psychiatry
+  - ml-nlp-knowledge
+  links:
+  - {label: JMIR paper, url: "https://www.jmir.org/2020/10/e22635"}
+  - {label: MIT News, url: "https://news.mit.edu/2020/covid-19-impact-mental-health-1105"}
+  - {label: WEF coverage, url: "https://www.weforum.org/stories/2020/11/machine-learning-track-pandemic-impact-mental-health/"}
+  - {label: Zenodo dataset, url: "https://zenodo.org/record/3941387"}
+  - {label: OSF supplement, url: "https://osf.io/2bfpn/"}
+  - {label: GitHub, url: "https://github.com/danielmlow/reddit"}
+  contributors:
+    current: []
+    former: [Daniel M. Low, Satrajit S Ghosh]
+  publications:
+  - 10.2196/22635
+  # External: Laurie Rumker, Tanya Talkar, John Torous, Guillermo Cecchi.
+
+- slug: veteran-peer-response
+  title: Peer responses to suicidal posts among veterans
+  status: former
+  description: >
+    Estimated the effect of peer responses to suicidal posts among U.S.
+    Servicemembers and veterans, using observational data and a deep
+    learning approach on social-media interactions.
+  image: /images/projects/veteran-peer-response.webp
+  themes:
+  - mental-health-psychiatry
+  - ml-nlp-knowledge
+  links:
+  - {label: "Psychological Medicine 2024 (PMID 39279263)", url: "https://doi.org/10.1017/S0033291724001557"}
+  - {label: "EMNLP 2021 — Causal Inference & NLP", url: "https://aclanthology.org/2021.cinlp-1.8/"}
+  contributors:
+    current: []
+    former: [Daniel M. Low, Satrajit S Ghosh]
+  publications:
+  - 10.1017/S0033291724001557
+  - 10.18653/v1/2021.cinlp-1.8
+  # External: Matt Nock, Walter Dempsey, Kelly Zuromski, Daniel Kessler, RallyPoint.

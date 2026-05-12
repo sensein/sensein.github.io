@@ -11,6 +11,16 @@ export interface TeamMember {
   photo?: string;
   info?: string;
   email?: string;
+  /** GitHub username only (no URL). */
+  github?: string;
+  linkedin?: string;
+  website?: string;
+  scholar?: string;
+  orcid?: string;
+  /** Twitter/X handle (with or without leading @). */
+  twitter?: string;
+  /** Bluesky handle (e.g. user.bsky.social). */
+  bluesky?: string;
   duration?: string;
   number_educ?: number;
   education1?: string;
@@ -29,18 +39,90 @@ export interface CollaboratorGroup {
   persons: CollaboratorPerson[];
 }
 
-export interface Project {
-  title: string;
-  image?: string;
-  description?: string;
-  authors?: string;
-  link?: { url?: string; display?: string };
-  highlight?: number;
-  news1?: string;
-  news2?: string;
+export interface ProjectLink {
+  label?: string;
+  url?: string;
 }
 
+export interface ProjectContributors {
+  current?: string[];
+  former?: string[];
+  /** External collaborators (non-lab). Plain text, optionally "Name (Affiliation)". */
+  external?: string[];
+}
+
+export interface Project {
+  slug: string;
+  title: string;
+  status: "active" | "former";
+  description?: string;
+  funder?: string;
+  image?: string;
+  themes?: string[];
+  links?: ProjectLink[];
+  contributors?: ProjectContributors;
+  /** Cross-reference IDs into publications.yml (DOIs, arXiv ids). */
+  publications?: string[];
+}
+
+/** Summary of a preprint precursor attached to a published-of-record entry. */
+export interface PreprintRef {
+  id: string;
+  venue?: string;
+  url?: string;
+  year?: number;
+  doi?: string;
+  arxiv?: string;
+}
+
+/** Coarse-grained kind of article — orthogonal to `type` (the publication form). */
+export type PublicationCategory =
+  | "original-research"
+  | "methods"
+  | "software"
+  | "review"
+  | "perspective"
+  | "commentary"
+  | "editorial"
+  | "dataset"
+  | "benchmark"
+  | "tutorial";
+
+/** Schema for the curated publications corpus in src/data/publications.yml. */
 export interface Publication {
+  id: string;
+  type: "journal" | "preprint" | "conference" | "chapter" | "workshop" | "software" | "patent" | "dataset";
+  category: PublicationCategory;
+  year: number;
+  title: string;
+  authors: string[];
+  venue?: string;
+  doi?: string;
+  pmid?: string;
+  pmcid?: string;
+  arxiv?: string;
+  url?: string;
+  pdf_url?: string;
+  github?: string;
+  sources?: string[];
+  projects?: string[];
+  lab_authors?: string[];
+  topics: string[];
+  /** Preprint precursor(s) that have been superseded by this published-of-record
+   *  entry. Only present on the journal/conference/chapter record. */
+  preprints?: PreprintRef[];
+  cited_by?: number;
+  /** Abstract pulled verbatim from PubMed / PMC / arXiv / OpenAlex / Crossref.
+      No paraphrasing — only authoritative sources. */
+  abstract?: string;
+  abstract_source?: "pubmed" | "pmc" | "arxiv" | "openalex" | "crossref" | "publisher";
+  /** 1–3 sentence summary of the paper's main contribution. Derived directly
+      from the abstract; never invented when the abstract is absent. */
+  key_findings?: string;
+}
+
+/** Legacy schema for src/data/publist.yml (the manually-curated highlights). */
+export interface FeaturedPublication {
   title: string;
   image?: string;
   description?: string;
@@ -81,9 +163,57 @@ export const alumniMembers = () => loadArray<TeamMember>("alumni_members.yml");
 export const collaborators = () =>
   loadArray<CollaboratorGroup>("collaborators.yml");
 export const projects = () => loadArray<Project>("projects.yml");
-export const papers = () => loadArray<Publication>("papers.yml");
-export const publist = () => loadArray<Publication>("publist.yml");
+export const publications = () => loadArray<Publication>("publications.yml");
+export const publist = () => loadArray<FeaturedPublication>("publist.yml");
 export const news = () => loadArray<NewsItem>("news.yml");
+
+/** Publications filtered to a given project slug, newest-first. */
+export function publicationsForProject(slug: string): Publication[] {
+  return publications()
+    .filter((p) => (p.projects ?? []).includes(slug))
+    .sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+}
+
+/**
+ * Look up a publication by cross-reference id used in projects.yml. Accepts
+ * DOIs ("10.x/y"), arXiv ids ("arXiv:2401.12345" or "arxiv:2401.12345"),
+ * pmid:NNN, or slug:foo identifiers. Returns null if not found.
+ */
+let _pubIndex: Map<string, Publication> | null = null;
+function pubIndex(): Map<string, Publication> {
+  if (_pubIndex) return _pubIndex;
+  const idx = new Map<string, Publication>();
+  for (const p of publications()) {
+    idx.set(p.id.toLowerCase(), p);
+    if (p.doi) idx.set(p.doi.toLowerCase(), p);
+    if (p.arxiv) {
+      idx.set(`arxiv:${p.arxiv.toLowerCase()}`, p);
+      idx.set(`10.48550/arxiv.${p.arxiv.toLowerCase()}`, p);
+    }
+    if (p.pmid) idx.set(`pmid:${p.pmid}`, p);
+  }
+  _pubIndex = idx;
+  return idx;
+}
+
+export function findPublication(ref: string): Publication | null {
+  return pubIndex().get(ref.trim().toLowerCase()) ?? null;
+}
+
+/** Collect publications cross-referenced by a project entry, in order. */
+export function projectPublications(project: Project): Publication[] {
+  if (!project.publications?.length) return [];
+  const seen = new Set<string>();
+  const out: Publication[] = [];
+  for (const ref of project.publications) {
+    const p = findPublication(ref);
+    if (p && !seen.has(p.id)) {
+      seen.add(p.id);
+      out.push(p);
+    }
+  }
+  return out;
+}
 
 /**
  * Educations entries are split across enumerated keys (education1..N).
@@ -123,4 +253,39 @@ export function sortedNews(): NewsItem[] {
     const db = parseLooseDate(b.date)?.getTime() ?? 0;
     return db - da;
   });
+}
+
+/**
+ * Stable URL-safe slug for a person's display name.
+ * "Satrajit Ghosh" -> "satrajit-ghosh"
+ */
+export function personSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/** All team members across roster files, keyed by personSlug(name). */
+let _peopleIndex: Map<string, TeamMember & { roster: "current" | "students" | "alumni" }> | null = null;
+export function peopleIndex() {
+  if (_peopleIndex) return _peopleIndex;
+  const idx = new Map<string, TeamMember & { roster: "current" | "students" | "alumni" }>();
+  for (const m of teamMembers()) idx.set(personSlug(m.name), { ...m, roster: "current" });
+  for (const m of students()) idx.set(personSlug(m.name), { ...m, roster: "students" });
+  for (const m of alumniMembers()) idx.set(personSlug(m.name), { ...m, roster: "alumni" });
+  _peopleIndex = idx;
+  return idx;
+}
+
+/**
+ * Return the team-page anchor link for a contributor name, or null if the
+ * person isn't in the roster files. Falls back to plain text rendering.
+ */
+export function personHref(name: string, baseUrl = "/team/"): string | null {
+  const slug = personSlug(name);
+  if (!peopleIndex().has(slug)) return null;
+  return `${baseUrl}#${slug}`;
 }

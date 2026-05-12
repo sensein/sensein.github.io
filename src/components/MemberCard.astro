@@ -1,7 +1,8 @@
 ---
 import type { TeamMember } from "~/lib/data";
-import { memberEducations } from "~/lib/data";
+import { memberEducations, personSlug } from "~/lib/data";
 import { normalizeImage } from "~/lib/images";
+import SocialLinks from "./SocialLinks.astro";
 
 interface Props {
   member: TeamMember;
@@ -11,9 +12,11 @@ interface Props {
 const { member, showEducation = true, showDuration = false } = Astro.props;
 const educations = memberEducations(member);
 const photo = normalizeImage(member.photo);
+const slug = personSlug(member.name);
 ---
 <article
-  class="flex gap-5 p-5 rounded-lg border border-(--color-border) bg-(--color-canvas) hover:border-(--color-border-strong) transition-colors"
+  id={slug}
+  class="scroll-mt-24 flex gap-5 p-5 rounded-lg border border-(--color-border) bg-(--color-canvas) hover:border-(--color-border-strong) transition-colors target:ring-2 target:ring-(--color-accent)"
 >
   <div class="shrink-0">
     <img
@@ -45,6 +48,8 @@ const photo = normalizeImage(member.photo);
         </a>
       </p>
     )}
+    <SocialLinks member={member} />
+
     {showEducation && educations.length > 0 && (
       <ul class="mt-3 space-y-1 text-xs text-(--color-ink-muted)">
         {educations.map((e) => (

@@ -1,129 +1,144 @@
 - name: Satrajit S Ghosh
-  photo: /images/external/satra-0175756d.png
-  info: >
-    Director of Open Data in Neuroscience Initiative and Senior Research Scientist at MIT; Assistant
-    Professor of Otolaryngology at Harvard Medical School
+  photo: /images/people/satrajit-s-ghosh.webp
+  info: 'Director of Open Data in Neuroscience Initiative and Senior Research Scientist at MIT; Assistant Professor of Otolaryngology at Harvard Medical School
+
+    '
   email: satra@mit.edu
+  github: "satra"
+  website: "https://satra.cogitatum.org/"
+  orcid: "0000-0002-5312-6729"
+  twitter: "@satra_"
   number_educ: 3
   education1: PhD Cognitive and Neural Systems, Boston University
   education2: BS(Honors) Information Systems and Computer Science, National University of Singapore
   education3: <a href="http://satra.cogitatum.org/assets/CV_Latest.pdf">Full CV</a>
-
 - name: Olga Vieira
-  photo: /images/external/olga-viera-1-ore0oeees7r1j34ya75q04sepna-690e2232.jpg
+  photo: /images/people/olga-vieira.webp
   info: Administrative Assistant II
   email: ovieira@mit.edu
   number_educ: 1
   education1: AA, Accounting, Krasnodar Polytechnic Institute
-
 - name: Dorota Jarecka
-  photo: /images/external/dorata-jarecka-nm70tl9ny3k30jco6p80294a9-4dd2a5c1.jpg
+  photo: /images/people/dorota-jarecka.webp
   info: Research Scientist, started 2016, working on Nipype, ReproNim
   email: djarecka@mit.edu
+  github: "djarecka"
+  linkedin: "https://www.linkedin.com/in/djarecka/"
+  orcid: "0000-0001-8282-2988"
   number_educ: 1
   education1: PhD Atmospheric Physics, University of Warsaw
-
 - name: Rahul Brito
-  photo: /images/external/brito_rahul-fed7fdad.jpg
+  photo: /images/people/rahul-brito.webp
   info: PhD Student
   email: rfbrito@mit.edu
+  github: "Rahul-Brito"
   number_educ: 1
   education1: BS Bioengineering, University of Washington
-
 - name: Meral Hacikamiloglu
-  photo: ../images/meral.jpg
+  photo: /images/people/meral-hacikamiloglu.webp
   info: Research Affiliate
   email: meral@mit.edu
   number_educ: 1
   education1: B.S. in Molecular & Cellular Biology, Vanderbilt University
-
 - name: Nima Dehghani
-  photo: ../images/nima.jpg
+  photo: /images/people/nima-dehghani.webp
   info: Research Scientist
   email: nima.dehghani@mit.edu
+  website: "https://scholar.harvard.edu/nima"
+  orcid: "0000-0003-2032-8903"
   number_educ: 2
   education1: PhD Computational Neuroscience, Complex Systems, Sorbonne Université (Pierre et Marie Curie, Paris VI) & Unité de Neurosciences Information et Complexité (UNIC), CNRS
   education2: MD.
-
 - name: Kaley Jenney
-  photo: ../images/kaley.jpeg
+  photo: /images/people/kaley-jenney.webp
   info: Technical Associate I
   email: jenneyk@mit.edu
   number_educ: 1
   education1: B.S. in Neuroscience, Emmanuel College
-
 - name: Puja Trivedi
-  photo: ../images/puja.png
+  photo: /images/people/puja-trivedi.webp
   info: Software Engineer
   email: ptrivedi@mit.edu
   number_educ: 2
   education1: M.S. in Computer Science, University of California - Los Angeles
   education2: B.S. in Computer Science with Specialization in Bioinformatics, University of California - San Diego
-
 - name: Yibei Chen
-  photo: /images/external/headshot-b21c195b.jpg
+  photo: /images/people/yibei-chen.webp
   info: Postdoctoral Associate
   email: yibei@mit.edu
+  github: "yibeichan"
+  linkedin: "https://www.linkedin.com/in/yibeichen/"
+  website: "https://yibeichen.me/"
+  scholar: "https://scholar.google.com/citations?user=TnalNNUAAAAJ"
+  orcid: "0000-0003-2882-0900"
   number_educ: 1
   education1: Ph.D. in Communication, UC Santa Barbara
-
 - name: Jong-Hwan Lee
-  photo: ../images/JHLee_22jul21.jpg
+  photo: /images/people/jong-hwan-lee.webp
   info: Visiting Scientist
   email: jonghlee@mit.edu
+  orcid: "0000-0002-8902-6009"
   number_educ: 1
   education1: Ph.D. in Electrical Engineering and Computer Science, KAIST, Korea
-
 - name: Kabilar Gunalan
-  photo: ../images/kabilar-gunalan.jpg
+  photo: /images/people/kabilar-gunalan.webp
   info: Research Scientist
   email: kabi@mit.edu
+  github: "kabilar"
+  linkedin: "https://www.linkedin.com/in/kabilar/"
+  orcid: "0000-0001-6964-4865"
   number_educ: 2
   education1: PhD Biomedical Engineering, Case Western Reserve University
   education2: MD, Case Western Reserve University
-
 - name: Tek Raj Chhetri
-  photo: ../images/tekraj.jpeg
+  photo: /images/people/tek-raj-chhetri.webp
   info: Postdoctoral Associate
   email: tekraj@mit.edu
+  github: "tekrajchhetri"
+  linkedin: "https://www.linkedin.com/in/tekrajchhetri/"
+  website: "https://tekrajchhetri.com/"
+  scholar: "https://scholar.google.com/citations?user=QfpwmIIAAAAJ"
+  orcid: "0000-0002-3905-7878"
+  twitter: "@TekRaj_14"
   number_educ: 2
   education1: Ph.D. in Computer Science, University of Innsbruck
   education2: M.Sc. in Computer Science, University of Tartu
-
 - name: Jordan Wilke
-  photo: ../images/jordan_wilke.jpeg
+  photo: /images/people/jordan-wilke.webp
   info: MEng Student, MIT
   email: wilke18@mit.edu
+  github: "wilke0818"
   number_educ: 2
   education1: MEng in Computer Science and Engineering, MIT
   education2: B.S. in Computer Science and Engineering and Brain and Cognitive Science, MIT
-
 - name: Manaal Mohammed
-  photo: ../images/manaal_mohammed.jpeg
+  photo: /images/people/manaal-mohammed.webp
   info: MEng Student, MIT
   email: manaal@mit.edu
+  github: "manaalm"
   number_educ: 2
   education1: MEng in Artificial Intelligence and Decision Making, MIT
   education2: B.S. in Artificial Intelligence and Decision Making, MIT
-
 - name: Aparna BG
-  photo: ../images/non_descript_photo.png
+  photo: /images/people/aparna-bg.webp
   info: MSc Student, IISER, India
   email: aparna21@iisertvm.ac.in
   number_educ: 1
   education2: BSc/MSc, IISER, India
-
 - name: Suliman Sharif
-  photo: ../images/sul.jpeg
+  photo: /images/people/suliman-sharif.webp
   info: Research Scientist
   email: sulstice@mit.edu
+  github: "Sulstice"
+  linkedin: "https://www.linkedin.com/in/sulimansharif/"
+  orcid: "0000-0002-1342-9258"
+  twitter: "@SulimanSharif6"
   number_educ: 3
   education1: Ph.D. Pharmaceutical Sciences, University of Maryland, School of Pharmacy
   education2: MSc. Organic Chemistry, University of California, Riversde
   education3: BSc. Biochemistry, University of Texas at Austin
-
 - name: Nader Nikbakht
-  photo: ../images/nader.jpg
+  photo: /images/people/nader-nikbakht.webp
   info: Research Scientist
   email: nikbakht@mit.edu
   number_educ: 1

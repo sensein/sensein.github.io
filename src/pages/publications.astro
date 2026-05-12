@@ -1,82 +1,323 @@
 ---
-import PageLayout from "~/layouts/PageLayout.astro";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Container from "~/components/Container.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
-import PublicationCard from "~/components/PublicationCard.astro";
-import { publist } from "~/lib/data";
+import PublicationItem from "~/components/PublicationItem.astro";
+import { publications } from "~/lib/data";
+import { withBase } from "~/lib/url";
+import yaml from "js-yaml";
 
-const highlighted = publist().filter((p) => p.highlight === 1);
-
-const publistDetails = {
-  firstname: "Satrajit",
-  middlename: "S",
-  lastname: "Ghosh",
-  email: "satra@mit.edu",
-  website: "//www.mit.edu/~satra",
-  address: "",
-  biosketch: "",
+const pageRaw = (await import("~/data/publications_page.yml?raw")).default as string;
+const page = yaml.load(pageRaw) as {
+  summary: string;
+  keywords: string[];
+  topics: { label: string; tag?: string; description: string; example_count?: number }[];
 };
+
+const all = publications().sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
+const totalCount = all.length;
+
+function counted<T extends string | number>(values: Iterable<T>): { value: T; count: number }[] {
+  const c = new Map<T, number>();
+  for (const v of values) if (v != null) c.set(v, (c.get(v) ?? 0) + 1);
+  return [...c.entries()].sort((a, b) => {
+    if (typeof a[0] === "number" && typeof b[0] === "number") return (b[0] as number) - (a[0] as number);
+    return String(a[0]).localeCompare(String(b[0]));
+  }).map(([value, count]) => ({ value, count }));
+}
+
+const years = counted(all.map((p) => p.year));
+const types = counted(all.map((p) => p.type));
+const categories = counted(all.flatMap((p) => p.category ? [p.category] : []));
+const topicTagCounts = counted(all.flatMap((p) => p.topics ?? []));
+const topicCountMap = new Map(topicTagCounts.map((t) => [t.value as string, t.count]));
+
+// Compute the actual count of papers whose `topics:` field includes the
+// topic-area's `tag`. This replaces the stale example_count proxy in
+// publications_page.yml so the cards and the filter agree.
+const topicCardData = page.topics.map((t) => ({
+  ...t,
+  count: t.tag ? (topicCountMap.get(t.tag) ?? 0) : 0,
+}));
+
+// Group publications by year for the rendered list.
+const byYear = new Map<number, typeof all>();
+for (const p of all) {
+  if (!byYear.has(p.year)) byYear.set(p.year, []);
+  byYear.get(p.year)!.push(p);
+}
+const yearGroups = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
 ---
-<PageLayout
-  eyebrow="Publications"
-  title="Publications"
-  size="wide"
-  lede="Featured publications below; the full archive is fetched live from PublicationsList.org. For a complete and continually-updated list, see Google Scholar."
->
-  <p class="text-sm text-(--color-ink-muted) -mt-4 mb-8">
-    For a complete list, see
-    <a
-      href="https://scholar.google.com/citations?user=QnYCqUsAAAAJ&hl=en"
-      target="_blank"
-      rel="noopener"
-      class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
-    >Google Scholar</a>.
-  </p>
-
-  <section>
-    <SectionHeading id="highlights" eyebrow="Featured" title="Highlights" />
-    <div class="grid md:grid-cols-2 gap-5">
-      {highlighted.map((pub) => <PublicationCard pub={pub} />)}
+<BaseLayout title="Publications" description={page.summary}>
+  <Container size="wide" class="pt-14 pb-6">
+    <div class="grid lg:grid-cols-[1.7fr_1fr] gap-10 items-center">
+      <div>
+        <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
+          Publications · {totalCount} papers and preprints
+        </p>
+        <p class="mt-5 text-lg text-(--color-ink-muted) leading-relaxed max-w-3xl">
+          {page.summary}
+        </p>
+        <p class="mt-3 text-sm text-(--color-ink-muted)">
+          Also see
+          <a
+            href="https://scholar.google.com/citations?user=QnYCqUsAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener"
+            class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline"
+          >Google Scholar</a> for the continually-updated index.
+        </p>
+      </div>
+      <figure class="text-(--color-ink-muted)">
+        <img
+          src={withBase("/images/publications-hero.svg")}
+          alt=""
+          class="w-full max-w-md"
+        />
+      </figure>
     </div>
-  </section>
+  </Container>
 
-  <section class="mt-20">
+  <!-- Topic areas summary; cards are clickable filters -->
+  <Container size="wide" class="py-6">
+    <SectionHeading title="Topic areas" description="Click one or more topics to filter the list below. Multiple selections combine with OR." />
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
+      {topicCardData.map((t) => (
+        <button
+          type="button"
+          data-topic-card
+          data-topic-tag={t.tag ?? ""}
+          aria-pressed="false"
+          class="text-left rounded-lg border border-(--color-border) bg-(--color-canvas) p-4 hover:border-(--color-accent) hover:shadow-sm transition-all aria-pressed:border-(--color-accent) aria-pressed:bg-(--color-accent-soft) aria-pressed:shadow-sm"
+        >
+          <p class="font-medium text-(--color-ink)">{t.label}</p>
+          <p class="mt-1 text-xs text-(--color-ink-muted) leading-snug">{t.description}</p>
+          <p class="mt-2 text-[11px] text-(--color-ink-faint) font-mono">
+            {t.count} {t.count === 1 ? "paper" : "papers"}
+            {t.tag && <span class="ml-1">· tag <code>{t.tag}</code></span>}
+          </p>
+        </button>
+      ))}
+    </div>
+  </Container>
+
+  <!-- Filters: checkboxes (OR within each group, AND across groups) -->
+  <Container size="wide" class="pt-10 pb-2">
     <SectionHeading
       id="full-list"
-      eyebrow="Archive"
-      title="Full list"
-      description="Live feed from PublicationsList.org — conference papers follow journal articles."
+      title="All publications"
+      description="Filter by year, type, category, or topic. Selections within a column combine with OR; columns combine with AND."
     />
-    <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-6">
-      <div id="publistdiv">Loading publications…</div>
-      <div id="tagslist" style="display:none;"></div>
-      <div id="authorslist" style="display:none;"></div>
-    </div>
-  </section>
+    <div
+      class="rounded-lg border border-(--color-border) bg-(--color-surface)/40 p-4 text-sm"
+      data-pub-filters
+    >
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4">
+        <fieldset data-filter-group="year">
+          <legend class="text-[11px] uppercase tracking-wider text-(--color-ink-faint) mb-1.5 flex items-center justify-between w-full">
+            <span>Year</span>
+            <button type="button" data-clear-group class="normal-case tracking-normal text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline text-[10px]">clear</button>
+          </legend>
+          <ul class="space-y-1 max-h-48 overflow-y-auto pr-1">
+            {years.map(({ value, count }) => (
+              <li>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-(--color-ink)">
+                  <input type="checkbox" value={value} class="accent-(--color-accent)" />
+                  <span class="flex-1">{value}</span>
+                  <span class="text-[11px] text-(--color-ink-faint) font-mono">{count}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
 
-  <script is:inline define:vars={{ publistDetails }}>
-    window.details = publistDetails;
-    window.readonly = "1";
-    window.rootpath = "//publicationslist.org/";
-    window.ownpage = "1";
-    window.userid = "satra";
-    window.mode = "publish";
-    window.nothumbs = 0;
-    window.publistBrand = "PublicationsList.org";
-    window.localInstall = 0;
-    window.citationFormat = "default";
-    window.previewMode = "";
-    window.uptodate = "1";
-    window.recent = false;
-  </script>
-  <script is:inline src="https://publicationslist.org/data/satra/publist.js"></script>
-  <script is:inline src="https://publicationslist.org/schema.js?"></script>
-  <!-- jQuery 3.7.1 + Migrate 3.4.1: bumps from the legacy 1.9.1 to a
-       patched modern version. Migrate plugin shims deprecated APIs that
-       publicationslist.org's BROWSER/DOM/pubutil scripts may still call. -->
-  <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script is:inline src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-+JBSPVNa2pE/zqGE8YfQ4Bphzv1plE0FjPDtxYwhe1U=" crossorigin="anonymous"></script>
-  <script is:inline src="https://publicationslist.org/data/satra/BROWSER.js?1384435485"></script>
-  <script is:inline src="https://publicationslist.org/data/satra/DOM.js?1384435485"></script>
-  <script is:inline src="https://publicationslist.org/data/satra/pubutil.js?1434354606"></script>
-  <script is:inline src="https://publicationslist.org/data/satra/pubinit.js?1384435485"></script>
-</PageLayout>
+        <fieldset data-filter-group="type">
+          <legend class="text-[11px] uppercase tracking-wider text-(--color-ink-faint) mb-1.5 flex items-center justify-between w-full">
+            <span>Type</span>
+            <button type="button" data-clear-group class="normal-case tracking-normal text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline text-[10px]">clear</button>
+          </legend>
+          <ul class="space-y-1">
+            {types.map(({ value, count }) => (
+              <li>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-(--color-ink)">
+                  <input type="checkbox" value={value} class="accent-(--color-accent)" />
+                  <span class="flex-1">{value}</span>
+                  <span class="text-[11px] text-(--color-ink-faint) font-mono">{count}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
+
+        <fieldset data-filter-group="category">
+          <legend class="text-[11px] uppercase tracking-wider text-(--color-ink-faint) mb-1.5 flex items-center justify-between w-full">
+            <span>Category</span>
+            <button type="button" data-clear-group class="normal-case tracking-normal text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline text-[10px]">clear</button>
+          </legend>
+          <ul class="space-y-1">
+            {categories.map(({ value, count }) => (
+              <li>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-(--color-ink)">
+                  <input type="checkbox" value={value} class="accent-(--color-accent)" />
+                  <span class="flex-1">{value}</span>
+                  <span class="text-[11px] text-(--color-ink-faint) font-mono">{count}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
+
+        <fieldset data-filter-group="topic">
+          <legend class="text-[11px] uppercase tracking-wider text-(--color-ink-faint) mb-1.5 flex items-center justify-between w-full">
+            <span>Topic</span>
+            <button type="button" data-clear-group class="normal-case tracking-normal text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline text-[10px]">clear</button>
+          </legend>
+          <ul class="space-y-1 max-h-48 overflow-y-auto pr-1">
+            {topicTagCounts.map(({ value, count }) => (
+              <li>
+                <label class="flex items-center gap-2 cursor-pointer hover:text-(--color-ink)">
+                  <input type="checkbox" value={value} class="accent-(--color-accent)" />
+                  <span class="flex-1 truncate"><code class="text-xs">{value}</code></span>
+                  <span class="text-[11px] text-(--color-ink-faint) font-mono">{count}</span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </fieldset>
+      </div>
+
+      <div class="mt-4 pt-3 border-t border-(--color-border) flex items-center justify-between text-xs text-(--color-ink-faint)">
+        <span><span data-pub-count>{totalCount}</span> of {totalCount} papers shown</span>
+        <button type="button" data-reset class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline">Reset all filters</button>
+      </div>
+    </div>
+  </Container>
+
+  <!-- List -->
+  <Container size="wide" class="py-6">
+    {yearGroups.map(([year, items]) => (
+      <section data-year-group={year} class="mt-8">
+        <h2 class="text-xs uppercase tracking-wider text-(--color-ink-faint) py-2 border-b border-(--color-border) sticky top-16 bg-(--color-canvas)/95 backdrop-blur-sm">
+          {year}  ·  {items.length} {items.length === 1 ? "paper" : "papers"}
+        </h2>
+        <ul>
+          {items.map((p) => (
+            <PublicationItem
+              pub={p}
+              liAttrs={{
+                "data-pub": true,
+                "data-type": p.type,
+                "data-category": p.category,
+                "data-topics": (p.topics ?? []).join(","),
+                "data-year": p.year,
+              }}
+            />
+          ))}
+        </ul>
+      </section>
+    ))}
+  </Container>
+</BaseLayout>
+
+<script>
+  const root = document.querySelector<HTMLElement>("[data-pub-filters]");
+  if (root) {
+    const groups = Array.from(root.querySelectorAll<HTMLFieldSetElement>("[data-filter-group]"));
+    const reset = root.querySelector<HTMLButtonElement>("[data-reset]");
+    const counter = root.querySelector<HTMLElement>("[data-pub-count]");
+    const items = Array.from(document.querySelectorAll<HTMLElement>("[data-pub]"));
+    const yearSections = Array.from(document.querySelectorAll<HTMLElement>("[data-year-group]"));
+
+    function readSelections(): Record<string, Set<string>> {
+      const sel: Record<string, Set<string>> = {};
+      for (const g of groups) {
+        const key = g.dataset.filterGroup!;
+        const checked = Array.from(g.querySelectorAll<HTMLInputElement>("input[type=checkbox]:checked")).map(
+          (cb) => cb.value,
+        );
+        if (checked.length) sel[key] = new Set(checked);
+      }
+      return sel;
+    }
+
+    function applyFilters() {
+      const sel = readSelections();
+      let visible = 0;
+      for (const item of items) {
+        let ok = true;
+        if (sel.year && !sel.year.has(item.dataset.year ?? "")) ok = false;
+        if (sel.type && !sel.type.has(item.dataset.type ?? "")) ok = false;
+        if (sel.category && !sel.category.has(item.dataset.category ?? "")) ok = false;
+        if (sel.topic) {
+          const itemTopics = (item.dataset.topics ?? "").split(",").filter(Boolean);
+          if (!itemTopics.some((t) => sel.topic!.has(t))) ok = false;
+        }
+        item.style.display = ok ? "" : "none";
+        if (ok) visible++;
+      }
+      for (const section of yearSections) {
+        const hasVisible = Array.from(section.querySelectorAll<HTMLElement>("[data-pub]")).some(
+          (el) => el.style.display !== "none",
+        );
+        section.style.display = hasVisible ? "" : "none";
+      }
+      if (counter) counter.textContent = String(visible);
+      syncTopicCards();
+    }
+
+    function syncTopicCards() {
+      const selected = new Set(
+        Array.from(
+          document.querySelectorAll<HTMLInputElement>(
+            'fieldset[data-filter-group="topic"] input[type=checkbox]:checked',
+          ),
+        ).map((cb) => cb.value),
+      );
+      document.querySelectorAll<HTMLButtonElement>("[data-topic-card]").forEach((card) => {
+        const tag = card.dataset.topicTag ?? "";
+        card.setAttribute("aria-pressed", selected.has(tag) ? "true" : "false");
+      });
+    }
+
+    function setGroupSelection(key: string, value: string, on: boolean | "toggle") {
+      const group = groups.find((g) => g.dataset.filterGroup === key);
+      if (!group) return;
+      const cb = group.querySelector<HTMLInputElement>(`input[type=checkbox][value="${CSS.escape(value)}"]`);
+      if (!cb) return;
+      cb.checked = on === "toggle" ? !cb.checked : on;
+    }
+
+    // Wire checkbox changes.
+    groups.forEach((g) =>
+      g.querySelectorAll<HTMLInputElement>("input[type=checkbox]").forEach((cb) =>
+        cb.addEventListener("change", applyFilters),
+      ),
+    );
+    // Per-column clear buttons.
+    groups.forEach((g) => {
+      const btn = g.querySelector<HTMLButtonElement>("[data-clear-group]");
+      btn?.addEventListener("click", () => {
+        g.querySelectorAll<HTMLInputElement>("input[type=checkbox]").forEach((cb) => (cb.checked = false));
+        applyFilters();
+      });
+    });
+    // Reset all.
+    reset?.addEventListener("click", () => {
+      groups.forEach((g) =>
+        g.querySelectorAll<HTMLInputElement>("input[type=checkbox]").forEach((cb) => (cb.checked = false)),
+      );
+      applyFilters();
+    });
+
+    // Topic-area cards toggle the topic checkbox.
+    document.querySelectorAll<HTMLButtonElement>("[data-topic-card]").forEach((card) => {
+      card.addEventListener("click", () => {
+        const tag = card.dataset.topicTag;
+        if (!tag) return;
+        setGroupSelection("topic", tag, "toggle");
+        applyFilters();
+        document.getElementById("full-list")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+</script>
