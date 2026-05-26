@@ -212,6 +212,7 @@
     (primarily voice and speech, but also text and video) using robust,
     reproducible pipelines and utilities." Used by the Bridge2AI-Voice and
     Riverst / KIVA stacks.
+  funder: Child Mind Institute
   image: /images/projects/senselab.webp
   themes:
   - reproducibility-tooling
