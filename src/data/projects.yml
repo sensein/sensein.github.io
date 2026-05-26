@@ -403,6 +403,49 @@
   publications:
   - 10.1001/jamanetworkopen.2024.34354    # Burdinski et al. 2024 cannabis paper
 
+- slug: banda
+  title: BANDA — Boston Adolescent Neuroimaging of Depression and Anxiety
+  status: active
+  description: >
+    A Human Connectome Project arm (Connectomes Related to Human
+    Diseases) collecting multimodal MRI, clinical, and neuropsychological
+    data from 215 adolescents aged 14–17, 152 of whom had current anxiety
+    and/or depressive disorders at intake. Imaging spans structural
+    (T1/T2), resting-state and task fMRI, and diffusion-weighted scans,
+    released as both unprocessed and HCP minimally-preprocessed data.
+    The lab contributed the imaging pipelines, quality assurance, and
+    data-release engineering, and continues to support connectome-based
+    predictive-modeling analyses of depression and anxiety risk across
+    BANDA and ABCD.
+  funder: NIMH — Connectomes Related to Human Diseases (Human Connectome Project)
+  image: /images/projects/banda-placeholder.svg
+  themes:
+  - mental-health-psychiatry
+  - child-development-education
+  - neuroimaging-methods
+  links:
+  - {label: BANDA project site, url: https://banda-connect.mit.edu}
+  - {label: "Dataset paper (Sci Data 2024)", url: "https://doi.org/10.1038/s41597-024-03629-x"}
+  contributors:
+    current: [Satrajit S Ghosh, Mathias Goncalves]
+    former: []
+    external:
+      - Susan Whitfield-Gabrieli (Northeastern / MIT)
+      - John D. E. Gabrieli (MIT)
+      - Diego A. Pizzagalli (McLean / Harvard)
+      - Randy P. Auerbach (Columbia)
+      - Stefan G. Hofmann (Philipps-Universität Marburg)
+      - Aude Henin (MGH)
+      - Anastasia Yendiki (MGH Martinos)
+      - Nicholas A. Hubbard (University of Nebraska–Lincoln)
+      - Clemens C. C. Bauer (MIT / Northeastern)
+      - Viviana Siless (MGH Martinos)
+  publications:
+  - 10.1038/s41597-024-03629-x            # Hubbard et al. 2024 dataset (Sci Data)
+  - 10.1016/j.nicl.2020.102242            # Siless et al. 2020 acquisition + QA
+  - 10.1162/imag.a.145                     # Morfini et al. 2025 CPM depression/anxiety
+  - 10.1177/21677026251351850             # Romer et al. 2025 cortical thickness
+
 - slug: readnet
   title: ReadNet — ML for verbal literacy screening
   status: active

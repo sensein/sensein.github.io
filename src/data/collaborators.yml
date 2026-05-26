@@ -5,7 +5,7 @@
 #   - current_institution:  the person's affiliation today (NOT the
 #                           institution at the time of collaboration)
 #   - projects:             list of lab project slugs (from projects.yml)
-#                           and/or ecosystem-effort names (BIDS, BANDA,
+#                           and/or ecosystem-effort names (BIDS, banda,
 #                           fMRIPrep, OpenNeuro, NIDM, Mindboggle, …)
 #   - years:                rough span of the collaboration
 #                           ("2018–present", "2003–2014", "2024")
@@ -66,48 +66,48 @@
 
 - name: Diego A. Pizzagalli
   current_institution: McLean Hospital / Harvard Medical School
-  projects: [BANDA]
+  projects: [banda]
   years: "2020–present"
 
 - name: Randy P. Auerbach
   current_institution: Columbia University
-  projects: [BANDA]
+  projects: [banda]
   years: "2020–present"
   note: Suicide research, adolescent MH
 
 - name: Stefan G. Hofmann
   current_institution: Philipps-Universität Marburg
-  projects: [BANDA]
+  projects: [banda]
   years: "2013–present"
   note: Anxiety / depression treatment outcome
 
 - name: Aude Henin
   current_institution: Massachusetts General Hospital
-  projects: [BANDA]
+  projects: [banda]
   years: "2020–present"
   note: Pediatric anxiety
 
 - name: Clemens C. C. Bauer
   current_institution: MIT McGovern / Northeastern
-  projects: [brain-states, BANDA]
+  projects: [brain-states, banda]
   years: "2020–present"
   note: Neurofeedback for adolescent anxiety
 
 - name: Nicholas A. Hubbard
   current_institution: University of Nebraska–Lincoln
-  projects: [BANDA, brain-states]
+  projects: [banda, brain-states]
   years: "2020–present"
 
 # ─── MIT McGovern Institute ──────────────────────────────────────────────────
 
 - name: John D. E. Gabrieli
   current_institution: MIT McGovern Institute
-  projects: [BANDA, readnet, brain-states]
+  projects: [banda, readnet, brain-states]
   years: "2008–present"
 
 - name: Susan Whitfield-Gabrieli
   current_institution: Northeastern University (also MIT McGovern)
-  projects: [BANDA, brain-states]
+  projects: [banda, brain-states]
   years: "2008–present"
   note: CONN toolbox lead
 
@@ -140,7 +140,7 @@
 
 - name: David N. Kennedy
   current_institution: UMass Chan Medical School
-  projects: [BANDA, NeuroBIDS, NIDM]
+  projects: [banda, NeuroBIDS, NIDM]
   years: "2012–present"
 
 - name: Sohye Kim
@@ -176,7 +176,7 @@
   years: "2012–present"
 
 - name: Krzysztof J. Gorgolewski
-  current_institution: Google (formerly Stanford)
+  current_institution: Anthropic (formerly Stanford / Google)
   projects: [BIDS, OpenNeuro, nipype-pydra]
   years: "2015–present"
 
@@ -230,7 +230,7 @@
   years: "2017–present"
 
 - name: R. Cameron Craddock
-  current_institution: Emory University (formerly CMI)
+  current_institution: Meta
   projects: [CPAC]
   years: "2016–2021"
 
