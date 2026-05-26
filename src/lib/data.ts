@@ -30,13 +30,22 @@ export interface TeamMember {
   education5?: string;
 }
 
-export interface CollaboratorPerson {
+/** A person we've collaborated with. Person-centric: one entry per
+ *  human, with their current institutional home plus the named lab
+ *  projects / ecosystem efforts they participated in and rough years.
+ *  Project tags mix slugs from projects.yml (e.g. "sails", "bican-um1")
+ *  with ecosystem-effort names not modelled as standalone projects
+ *  (e.g. "BANDA", "BIDS", "fMRIPrep"). */
+export interface Collaborator {
   name: string;
-}
-
-export interface CollaboratorGroup {
-  home: string;
-  persons: CollaboratorPerson[];
+  /** Current home institution, e.g. "MGH Martinos Center" or "Stanford". */
+  current_institution?: string;
+  /** Lab projects + ecosystem efforts they contributed to. */
+  projects?: string[];
+  /** Rough year span of the collaboration, e.g. "2018–present" or "2003–2014". */
+  years?: string;
+  /** Optional one-line note (role, sub-project, etc.). */
+  note?: string;
 }
 
 export interface ProjectLink {
@@ -161,7 +170,7 @@ export const teamMembers = () => loadArray<TeamMember>("team_members.yml");
 export const students = () => loadArray<TeamMember>("students.yml");
 export const alumniMembers = () => loadArray<TeamMember>("alumni_members.yml");
 export const collaborators = () =>
-  loadArray<CollaboratorGroup>("collaborators.yml");
+  loadArray<Collaborator>("collaborators.yml");
 export const projects = () => loadArray<Project>("projects.yml");
 export const publications = () => loadArray<Publication>("publications.yml");
 export const publist = () => loadArray<FeaturedPublication>("publist.yml");

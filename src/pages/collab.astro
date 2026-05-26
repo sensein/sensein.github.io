@@ -1,9 +1,10 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
-import SectionHeading from "~/components/SectionHeading.astro";
-import { collaborators } from "~/lib/data";
-
-const groups = collaborators();
+// Collaborator network rendering is suppressed until the dataset is
+// audited end-to-end. The data lives in src/data/collaborators.yml
+// against the person-centric Collaborator schema (current_institution,
+// projects, years). To restore rendering, re-introduce the loader and
+// build a layout from that flat list.
 ---
 <PageLayout
   eyebrow="Collaborators"
@@ -34,25 +35,4 @@ const groups = collaborators();
     </ul>
   </section>
 
-  {groups.length > 0 && (
-    <section class="mt-16">
-      <SectionHeading
-        eyebrow="Network"
-        title="Active collaborators"
-        description="This list may not always be accurate, but tries to reflect our current active collaborations. If we’ve missed your name or listed incorrect information, please let us know."
-      />
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {groups.map((g) => (
-          <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-5">
-            <h3 class="font-serif text-base font-semibold text-(--color-ink) leading-tight">
-              {g.home}
-            </h3>
-            <ul class="mt-3 space-y-1 text-sm text-(--color-ink-muted)">
-              {g.persons?.map((p) => <li>{p.name}</li>)}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </section>
-  )}
 </PageLayout>
