@@ -26,7 +26,7 @@
 #     naturalistic-parcellation)
 #   - Title-Case for ecosystem efforts not modelled as standalone
 #     projects (BANDA, BIDS, fMRIPrep, OpenNeuro, Neuroscout, NIDM,
-#     NeuroBIDS, Mindboggle, DataLad, PyMVPA, nilearn, dcm2niix,
+#     Mindboggle, DataLad, PyMVPA, nilearn, dcm2niix,
 #     ReproSchema, MindLogger, LORIS, CPAC, OHBM-Brainhack)
 
 # ─── Kennedy Krieger / SAILS ─────────────────────────────────────────────────
@@ -136,11 +136,11 @@
   years: "2018–2021"
   note: Cerebellum imaging
 
-# ─── UMass Chan / NeuroBIDS / BANDA ──────────────────────────────────────────
+# ─── UMass Chan / NIDM / BANDA ───────────────────────────────────────────────
 
 - name: David N. Kennedy
   current_institution: UMass Chan Medical School
-  projects: [banda, NeuroBIDS, NIDM]
+  projects: [banda, NIDM, repronim]
   years: "2012–present"
 
 - name: Sohye Kim
@@ -152,7 +152,7 @@
 
 - name: David B. Keator
   current_institution: UC Irvine
-  projects: [NeuroBIDS, NIDM]
+  projects: [NIDM, repronim]
   years: "2012–present"
 
 # ─── Dartmouth / DataLad / DANDI / ReproNim ──────────────────────────────────
