@@ -1,11 +1,20 @@
-# Lab collaborators, grouped by institution and rough era.
-# Built from project external-collaborator notes + frequent
-# publication co-authors (≥3 lab papers). Periods:
-#   active  — collaborations with ≥1 publication in the last ~5 yrs
-#   recent  — last paper 2015–2019
-#   past    — older collaborations (≤2014)
-# Within a period, institutions are listed roughly by collaboration
-# intensity, then alphabetical.
+# Lab collaborators — DRAFT.
+#
+# The current shape (home + persons) carries known errors in
+# institutional attribution. The rendered collaborator network is
+# suppressed on /collab/ until we have a clean, mistake-free source.
+#
+# Target schema (see TODO): person-centric, with
+#   - name
+#   - current_institution (the person's home today, not at the time of
+#     collaboration)
+#   - projects: list of named lab projects they contributed to
+#       (e.g. BANDA, ReadNet, ReproNim, SAILS)
+#   - years: rough year range of the collaboration
+#
+# Until that schema lands, leave entries below as a working draft —
+# we'll re-derive once the project tags and current institutions are
+# verified.
 
 # ─── Active collaborations (2020–present) ────────────────────────────────────
 
@@ -43,6 +52,7 @@
     - name: Anastasia Yendiki              # CONNECTS / LINC site PI
     - name: Viviana Siless
     - name: Xavier Guell                    # cerebellum imaging
+    - name: Aude Henin                      # MGH (pediatric anxiety)
 
 - home: Boston University
   period: active
@@ -50,7 +60,6 @@
   persons:
     - name: Ola Ozernov-Palchik             # Riverst / KIVA literacy lead (BU / Wheelock)
     - name: Stefan G. Hofmann                # anxiety/depression treatment outcome
-    - name: Aude Henin
     - name: Tyler K. Perrachione
 
 - home: Harvard / McLean Hospital
@@ -77,12 +86,18 @@
     - name: Samir Das                       # LORIS
     - name: Peer Herholz                    # Neuroscout
 
-- home: UC Irvine / NeuroBIDS
+- home: UMass Chan Medical School
   period: active
   since: "2012–present"
   persons:
-    - name: David B. Keator
-    - name: Daniel N. Kennedy
+    - name: David N. Kennedy                # NeuroBIDS, BANDA
+    - name: Sohye Kim
+
+- home: UC Irvine
+  period: active
+  since: "2012–present"
+  persons:
+    - name: David B. Keator                # NeuroBIDS
 
 - home: Child Mind Institute
   period: active
@@ -106,9 +121,8 @@
   period: active
   since: "2022–present"
   persons:
-    - name: Michael Hawrylycz
-    - name: Lydia Ng
-    - name: Bilal Mufti
+    - name: Shoaib Mufti                    # BICAN knowledgebase
+    - name: Tyler Mollenkopf
 
 - home: UCSD / NIDM / Bridge2AI
   period: active

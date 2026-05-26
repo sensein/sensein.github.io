@@ -54,6 +54,13 @@ const buckets: { period: "active" | "recent" | "past"; title: string; descriptio
     </ul>
   </section>
 
+  {/*
+    Collaborator network is intentionally suppressed for now.
+    Current src/data/collaborators.yml has known institutional-attribution
+    errors and needs to be rebuilt to a person-centric schema (current
+    institution + named projects + years) before it can be shown
+    publicly. Restore by uncommenting once that's done.
+
   {groups.length > 0 && (
     <p class="mt-10 max-w-3xl text-sm text-(--color-ink-muted)">
       Built from project external-collaborator notes plus frequent publication co-authors.
@@ -92,4 +99,5 @@ const buckets: { period: "active" | "recent" | "past"; title: string; descriptio
       </section>
     ) : null,
   )}
+  */}
 </PageLayout>
