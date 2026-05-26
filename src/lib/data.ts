@@ -37,6 +37,10 @@ export interface CollaboratorPerson {
 export interface CollaboratorGroup {
   home: string;
   persons: CollaboratorPerson[];
+  /** "active" (≥1 paper in the last ~5 yrs), "recent", "past". */
+  period?: "active" | "recent" | "past";
+  /** Free-form year span, e.g. "2018–present" or "2005–2014". */
+  since?: string;
 }
 
 export interface ProjectLink {

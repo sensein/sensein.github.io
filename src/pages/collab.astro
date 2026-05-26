@@ -1,9 +1,29 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
-import { collaborators } from "~/lib/data";
+import { collaborators, type CollaboratorGroup } from "~/lib/data";
 
 const groups = collaborators();
+const buckets: { period: "active" | "recent" | "past"; title: string; description: string; groups: CollaboratorGroup[] }[] = [
+  {
+    period: "active",
+    title: "Active collaborations",
+    description: "Institutions with at least one shared publication or active project in the last ~5 years.",
+    groups: groups.filter((g) => (g.period ?? "active") === "active"),
+  },
+  {
+    period: "recent",
+    title: "Recent collaborations",
+    description: "Last shared paper in 2015–2019, or a one-off recent study.",
+    groups: groups.filter((g) => g.period === "recent"),
+  },
+  {
+    period: "past",
+    title: "Earlier collaborations",
+    description: "Shared work from before 2015.",
+    groups: groups.filter((g) => g.period === "past"),
+  },
+];
 ---
 <PageLayout
   eyebrow="Collaborators"
@@ -35,24 +55,41 @@ const groups = collaborators();
   </section>
 
   {groups.length > 0 && (
-    <section class="mt-16">
-      <SectionHeading
-        eyebrow="Network"
-        title="Active collaborators"
-        description="This list may not always be accurate, but tries to reflect our current active collaborations. If we’ve missed your name or listed incorrect information, please let us know."
-      />
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {groups.map((g) => (
-          <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-5">
-            <h3 class="font-serif text-base font-semibold text-(--color-ink) leading-tight">
-              {g.home}
-            </h3>
-            <ul class="mt-3 space-y-1 text-sm text-(--color-ink-muted)">
-              {g.persons?.map((p) => <li>{p.name}</li>)}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </section>
+    <p class="mt-10 max-w-3xl text-sm text-(--color-ink-muted)">
+      Built from project external-collaborator notes plus frequent publication co-authors.
+      This list may be incomplete or out of date — if we&rsquo;ve missed your name or grouped
+      it incorrectly, please open a PR against <code>src/data/collaborators.yml</code> or let us know.
+    </p>
+  )}
+
+  {buckets.map((b) =>
+    b.groups.length > 0 ? (
+      <section class="mt-14">
+        <SectionHeading
+          eyebrow={b.period === "active" ? "Now" : b.period === "recent" ? "Recent" : "Earlier"}
+          title={b.title}
+          description={b.description}
+        />
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {b.groups.map((g) => (
+            <div class="rounded-lg border border-(--color-border) bg-(--color-canvas) p-5">
+              <div class="flex items-baseline justify-between gap-3">
+                <h3 class="font-serif text-base font-semibold text-(--color-ink) leading-tight">
+                  {g.home}
+                </h3>
+                {g.since && (
+                  <span class="shrink-0 text-[10px] uppercase tracking-wider text-(--color-ink-faint) font-mono">
+                    {g.since}
+                  </span>
+                )}
+              </div>
+              <ul class="mt-3 space-y-1 text-sm text-(--color-ink-muted)">
+                {g.persons?.map((p) => <li>{p.name}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+    ) : null,
   )}
 </PageLayout>

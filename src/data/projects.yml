@@ -469,6 +469,34 @@
   publications:
   - arXiv:2507.03674     # Chhetri et al. 2025 StructSense
 
+- slug: abstract-atlas
+  title: Abstract Atlas — browseable embedding map of conference abstracts and PubMed
+  status: active
+  description: >
+    A static, browser-side atlas for searching and exploring the
+    neuroscience literature landscape via embedding-space visualisation.
+    Pulls OHBM 2026 abstracts (Oxford Abstracts GraphQL API) and a
+    NeuroScape PubMed corpus, enriches each record with figure analysis
+    and OpenAlex reference matching, generates embeddings (Voyage,
+    MiniLM-L6, OpenAI, PubMedBERT, sentence-transformers), reduces with
+    UMAP, and serves the result as a SvelteKit site with lexical search,
+    semantic search (transformers.js, MiniLM-ONNX in-browser), faceted
+    filters, and dual semantic-cluster lenses. The lab uses it to map
+    OHBM 2026 against the wider PubMed neuroimaging atlas.
+  funder: Lab infrastructure (no external grant)
+  image: /images/projects/abstract-atlas-placeholder.svg
+  themes:
+  - ml-nlp-knowledge
+  - open-data-standards
+  - neuroimaging-methods
+  links:
+  - {label: Live atlas, url: https://abstractatlas.brainkb.org}
+  - {label: ohbm2026 on GitHub, url: https://github.com/sensein/ohbm2026}
+  contributors:
+    current: [Tek Raj Chhetri, Satrajit S Ghosh]
+    former: []
+  publications: []
+
 # ─── Former projects ─────────────────────────────────────────────────────────
 
 - slug: nobrainer

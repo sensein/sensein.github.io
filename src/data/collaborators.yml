@@ -1,6 +1,181 @@
-# Active collaborators removed. Add entries with this shape:
-#
-# - home: Institution Name
-#   persons:
-#     - name: Full Name
-#     - name: Another Person
+# Lab collaborators, grouped by institution and rough era.
+# Built from project external-collaborator notes + frequent
+# publication co-authors (≥3 lab papers). Periods:
+#   active  — collaborations with ≥1 publication in the last ~5 yrs
+#   recent  — last paper 2015–2019
+#   past    — older collaborations (≤2014)
+# Within a period, institutions are listed roughly by collaboration
+# intensity, then alphabetical.
+
+# ─── Active collaborations (2020–present) ────────────────────────────────────
+
+- home: Kennedy Krieger Institute (Johns Hopkins)
+  period: active
+  since: "2024–present"
+  persons:
+    - name: Rachel Reetzke
+    - name: Rebecca Landa
+    - name: Elizabeth Eiler
+    - name: Arushi Singh
+    - name: Jeremy Perrin
+    - name: Vini Singh
+
+- home: Dartmouth College
+  period: active
+  since: "2011–present"
+  persons:
+    - name: Yaroslav O. Halchenko          # DANDI MPI, ReproNim
+    - name: Michael Hanke
+
+- home: MIT McGovern Institute / Gabrieli Lab
+  period: active
+  since: "2008–present"
+  persons:
+    - name: John D. E. Gabrieli
+    - name: Susan Whitfield-Gabrieli      # also Northeastern
+    - name: Clemens C. C. Bauer
+    - name: Nicholas A. Hubbard
+
+- home: Massachusetts General Hospital / MGH Martinos Center
+  period: active
+  since: "2017–present"
+  persons:
+    - name: Anastasia Yendiki              # CONNECTS / LINC site PI
+    - name: Viviana Siless
+    - name: Xavier Guell                    # cerebellum imaging
+
+- home: Boston University
+  period: active
+  since: "2017–present"
+  persons:
+    - name: Ola Ozernov-Palchik             # Riverst / KIVA literacy lead (BU / Wheelock)
+    - name: Stefan G. Hofmann                # anxiety/depression treatment outcome
+    - name: Aude Henin
+    - name: Tyler K. Perrachione
+
+- home: Harvard / McLean Hospital
+  period: active
+  since: "2020–present"
+  persons:
+    - name: Diego A. Pizzagalli
+    - name: Randy P. Auerbach              # Columbia/McLean, suicide & adolescent MH
+
+- home: Stanford / Poldrack Lab
+  period: active
+  since: "2012–present"
+  persons:
+    - name: Russell A. Poldrack
+    - name: Krzysztof J. Gorgolewski      # also Google
+    - name: Oscar Esteban                   # also Univ. of Lausanne (fMRIPrep)
+    - name: Ross W. Blair                  # fMRIPrep
+
+- home: McGill / Neuro / MNI
+  period: active
+  since: "2012–present"
+  persons:
+    - name: Jean-Baptiste Poline
+    - name: Samir Das                       # LORIS
+    - name: Peer Herholz                    # Neuroscout
+
+- home: UC Irvine / NeuroBIDS
+  period: active
+  since: "2012–present"
+  persons:
+    - name: David B. Keator
+    - name: Daniel N. Kennedy
+
+- home: Child Mind Institute
+  period: active
+  since: "2016–present"
+  persons:
+    - name: Michael P. Milham
+    - name: Anisha Keshavan
+    - name: Gregory Kiar
+    - name: R. Cameron Craddock            # also Emory
+
+- home: Inria / FAIR Brain Imaging
+  period: active
+  since: "2015–present"
+  persons:
+    - name: Gaël Varoquaux                  # nilearn
+    - name: Camille Maumet                  # NIDM
+    - name: Tibor Auer
+
+- home: Allen Institute for Brain Science
+  period: active
+  since: "2022–present"
+  persons:
+    - name: Michael Hawrylycz
+    - name: Lydia Ng
+    - name: Bilal Mufti
+
+- home: UCSD / NIDM / Bridge2AI
+  period: active
+  since: "2018–present"
+  persons:
+    - name: Maryann E. Martone
+    - name: Jeffrey S. Grethe
+
+- home: University of Texas at Austin / Neuroscout
+  period: active
+  since: "2015–present"
+  persons:
+    - name: Tal Yarkoni
+    - name: Taylor Salo                     # also University of Iowa
+    - name: Alejandro de la Vega
+
+- home: Reddit / suicide-prevention NLP partners
+  period: active
+  since: "2020–present"
+  persons:
+    - name: Matt Nock                       # Harvard
+    - name: Walter Dempsey                  # University of Michigan
+    - name: Kelly Zuromski                  # Harvard
+    - name: Daniel Kessler                  # University of Michigan
+    - name: John Torous                     # BIDMC
+    - name: Guillermo Cecchi                # IBM Research
+    - name: Laurie Rumker
+    - name: Tanya Talkar                    # MIT Lincoln Lab
+
+- home: Open BIDS / OpenNeuro / fMRIPrep ecosystem
+  period: active
+  since: "2015–present"
+  persons:
+    - name: Robert Oostenveld               # Donders Institute
+    - name: Ariel Rokem                     # University of Washington
+    - name: Chris Rorden                    # Univ. of South Carolina (dcm2niix)
+    - name: Guillaume Flandin               # UCL FIL (SPM)
+    - name: Thomas E. Nichols              # Oxford
+
+# ─── Recent collaborations (last paper 2015–2019, or one-off ~2024) ──────────
+
+- home: Mindboggle / brain morphometry
+  period: recent
+  since: "2005–2019"
+  persons:
+    - name: Arno Klein                      # Sage Bionetworks → CMI
+    - name: Georg Langs                     # Med. Univ. of Vienna
+
+- home: Otolaryngology — vocal-fold paralysis
+  period: recent
+  since: "2024"
+  persons:
+    - name: Phillip C. Song                # MEE
+
+# ─── Past collaborations (≤2014) ─────────────────────────────────────────────
+
+- home: BU Speech Lab (Guenther Lab)
+  period: past
+  since: "2001–2016"
+  persons:
+    - name: Frank H. Guenther
+    - name: Jason A. Tourville
+    - name: Alfonso Nieto-Castañón
+    - name: Shanqing Cai
+
+- home: MIT / Speech & Hearing
+  period: past
+  since: "2003–2014"
+  persons:
+    - name: Joseph S. Perkell
+    - name: Christina Triantafyllou
