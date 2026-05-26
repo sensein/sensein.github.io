@@ -1,198 +1,434 @@
-# Lab collaborators — DRAFT.
+# Lab collaborators — person-centric working draft.
 #
-# The current shape (home + persons) carries known errors in
-# institutional attribution. The rendered collaborator network is
-# suppressed on /collab/ until we have a clean, mistake-free source.
+# Schema (see src/lib/data.ts → Collaborator):
+#   - name:                 display name as it should appear publicly
+#   - current_institution:  the person's affiliation today (NOT the
+#                           institution at the time of collaboration)
+#   - projects:             list of lab project slugs (from projects.yml)
+#                           and/or ecosystem-effort names (BIDS, BANDA,
+#                           fMRIPrep, OpenNeuro, NIDM, Mindboggle, …)
+#   - years:                rough span of the collaboration
+#                           ("2018–present", "2003–2014", "2024")
+#   - note:                 optional one-liner (role, sub-project)
 #
-# Target schema (see TODO): person-centric, with
-#   - name
-#   - current_institution (the person's home today, not at the time of
-#     collaboration)
-#   - projects: list of named lab projects they contributed to
-#       (e.g. BANDA, ReadNet, ReproNim, SAILS)
-#   - years: rough year range of the collaboration
+# Status: SEED ENTRIES, not audited end-to-end. Many current
+# institutions and project attributions need verification before
+# /collab/ rendering is re-enabled. Open a PR with corrections.
 #
-# Until that schema lands, leave entries below as a working draft —
-# we'll re-derive once the project tags and current institutions are
-# verified.
+# Conventions for the `projects:` list:
+#   - lowercase-hyphen slug if there is a matching entry in projects.yml
+#     (e.g. sails, repronim, dandi, bican-um1, bican-knowledgebase,
+#     bridge2ai-voice, senselab, riverst-kiva, nipype-pydra, brain-states,
+#     readnet, abcd-psychotic-experiences, linc, bbqs, structsense,
+#     hypsynth, nobrainer, abstract-atlas, mumble-melody,
+#     vocal-fold-paralysis, psychiatric-speech-review,
+#     covid-reddit-mental-health, veteran-peer-response,
+#     naturalistic-parcellation)
+#   - Title-Case for ecosystem efforts not modelled as standalone
+#     projects (BANDA, BIDS, fMRIPrep, OpenNeuro, Neuroscout, NIDM,
+#     NeuroBIDS, Mindboggle, DataLad, PyMVPA, nilearn, dcm2niix,
+#     ReproSchema, MindLogger, LORIS, CPAC, OHBM-Brainhack)
 
-# ─── Active collaborations (2020–present) ────────────────────────────────────
+# ─── Kennedy Krieger / SAILS ─────────────────────────────────────────────────
 
-- home: Kennedy Krieger Institute (Johns Hopkins)
-  period: active
-  since: "2024–present"
-  persons:
-    - name: Rachel Reetzke
-    - name: Rebecca Landa
-    - name: Elizabeth Eiler
-    - name: Arushi Singh
-    - name: Jeremy Perrin
-    - name: Vini Singh
+- name: Rachel Reetzke
+  current_institution: Kennedy Krieger Institute (Johns Hopkins)
+  projects: [sails]
+  years: "2024–present"
 
-- home: Dartmouth College
-  period: active
-  since: "2011–present"
-  persons:
-    - name: Yaroslav O. Halchenko          # DANDI MPI, ReproNim
-    - name: Michael Hanke
+- name: Rebecca Landa
+  current_institution: Kennedy Krieger Institute (Johns Hopkins)
+  projects: [sails]
+  years: "2024–present"
+  note: Center for Autism Services, Science and Innovation
 
-- home: MIT McGovern Institute / Gabrieli Lab
-  period: active
-  since: "2008–present"
-  persons:
-    - name: John D. E. Gabrieli
-    - name: Susan Whitfield-Gabrieli      # also Northeastern
-    - name: Clemens C. C. Bauer
-    - name: Nicholas A. Hubbard
+- name: Elizabeth Eiler
+  current_institution: Kennedy Krieger Institute (Johns Hopkins)
+  projects: [sails]
+  years: "2024–present"
 
-- home: Massachusetts General Hospital / MGH Martinos Center
-  period: active
-  since: "2017–present"
-  persons:
-    - name: Anastasia Yendiki              # CONNECTS / LINC site PI
-    - name: Viviana Siless
-    - name: Xavier Guell                    # cerebellum imaging
-    - name: Aude Henin                      # MGH (pediatric anxiety)
+- name: Arushi Singh
+  current_institution: Kennedy Krieger Institute (Johns Hopkins)
+  projects: [sails]
+  years: "2024–present"
 
-- home: Boston University
-  period: active
-  since: "2017–present"
-  persons:
-    - name: Ola Ozernov-Palchik             # Riverst / KIVA literacy lead (BU / Wheelock)
-    - name: Stefan G. Hofmann                # anxiety/depression treatment outcome
-    - name: Tyler K. Perrachione
+- name: Jeremy Perrin
+  current_institution: Kennedy Krieger Institute (Johns Hopkins)
+  projects: [sails]
+  years: "2024–present"
 
-- home: Harvard / McLean Hospital
-  period: active
-  since: "2020–present"
-  persons:
-    - name: Diego A. Pizzagalli
-    - name: Randy P. Auerbach              # Columbia/McLean, suicide & adolescent MH
+- name: Vini Singh
+  current_institution: Kennedy Krieger Institute (Johns Hopkins)
+  projects: [sails]
+  years: "2024–present"
 
-- home: Stanford / Poldrack Lab
-  period: active
-  since: "2012–present"
-  persons:
-    - name: Russell A. Poldrack
-    - name: Krzysztof J. Gorgolewski      # also Google
-    - name: Oscar Esteban                   # also Univ. of Lausanne (fMRIPrep)
-    - name: Ross W. Blair                  # fMRIPrep
+# ─── BANDA / depression-anxiety treatment outcome ────────────────────────────
 
-- home: McGill / Neuro / MNI
-  period: active
-  since: "2012–present"
-  persons:
-    - name: Jean-Baptiste Poline
-    - name: Samir Das                       # LORIS
-    - name: Peer Herholz                    # Neuroscout
+- name: Diego A. Pizzagalli
+  current_institution: McLean Hospital / Harvard Medical School
+  projects: [BANDA]
+  years: "2020–present"
 
-- home: UMass Chan Medical School
-  period: active
-  since: "2012–present"
-  persons:
-    - name: David N. Kennedy                # NeuroBIDS, BANDA
-    - name: Sohye Kim
+- name: Randy P. Auerbach
+  current_institution: Columbia University
+  projects: [BANDA]
+  years: "2020–present"
+  note: Suicide research, adolescent MH
 
-- home: UC Irvine
-  period: active
-  since: "2012–present"
-  persons:
-    - name: David B. Keator                # NeuroBIDS
+- name: Stefan G. Hofmann
+  current_institution: Philipps-Universität Marburg
+  projects: [BANDA]
+  years: "2013–present"
+  note: Anxiety / depression treatment outcome
 
-- home: Child Mind Institute
-  period: active
-  since: "2005–present"
-  persons:
-    - name: Arno Klein                      # Mindboggle, ReproSchema, MindLogger
-    - name: Michael P. Milham
-    - name: Anisha Keshavan
-    - name: Gregory Kiar
-    - name: R. Cameron Craddock            # also Emory
+- name: Aude Henin
+  current_institution: Massachusetts General Hospital
+  projects: [BANDA]
+  years: "2020–present"
+  note: Pediatric anxiety
 
-- home: Inria / FAIR Brain Imaging
-  period: active
-  since: "2015–present"
-  persons:
-    - name: Gaël Varoquaux                  # nilearn
-    - name: Camille Maumet                  # NIDM
-    - name: Tibor Auer
+- name: Clemens C. C. Bauer
+  current_institution: MIT McGovern / Northeastern
+  projects: [brain-states, BANDA]
+  years: "2020–present"
+  note: Neurofeedback for adolescent anxiety
 
-- home: Allen Institute for Brain Science
-  period: active
-  since: "2022–present"
-  persons:
-    - name: Shoaib Mufti                    # BICAN knowledgebase
-    - name: Tyler Mollenkopf
+- name: Nicholas A. Hubbard
+  current_institution: University of Nebraska–Lincoln
+  projects: [BANDA, brain-states]
+  years: "2020–present"
 
-- home: UCSD / NIDM / Bridge2AI
-  period: active
-  since: "2018–present"
-  persons:
-    - name: Maryann E. Martone
-    - name: Jeffrey S. Grethe
+# ─── MIT McGovern Institute ──────────────────────────────────────────────────
 
-- home: University of Texas at Austin / Neuroscout
-  period: active
-  since: "2015–present"
-  persons:
-    - name: Tal Yarkoni
-    - name: Taylor Salo                     # also University of Iowa
-    - name: Alejandro de la Vega
+- name: John D. E. Gabrieli
+  current_institution: MIT McGovern Institute
+  projects: [BANDA, readnet, brain-states]
+  years: "2008–present"
 
-- home: Reddit / suicide-prevention NLP partners
-  period: active
-  since: "2020–present"
-  persons:
-    - name: Matt Nock                       # Harvard
-    - name: Walter Dempsey                  # University of Michigan
-    - name: Kelly Zuromski                  # Harvard
-    - name: Daniel Kessler                  # University of Michigan
-    - name: John Torous                     # BIDMC
-    - name: Guillermo Cecchi                # IBM Research
-    - name: Laurie Rumker
-    - name: Tanya Talkar                    # MIT Lincoln Lab
+- name: Susan Whitfield-Gabrieli
+  current_institution: Northeastern University (also MIT McGovern)
+  projects: [BANDA, brain-states]
+  years: "2008–present"
+  note: CONN toolbox lead
 
-- home: Open BIDS / OpenNeuro / fMRIPrep ecosystem
-  period: active
-  since: "2015–present"
-  persons:
-    - name: Robert Oostenveld               # Donders Institute
-    - name: Ariel Rokem                     # University of Washington
-    - name: Chris Rorden                    # Univ. of South Carolina (dcm2niix)
-    - name: Guillaume Flandin               # UCL FIL (SPM)
-    - name: Thomas E. Nichols              # Oxford
+- name: Polina Golland
+  current_institution: MIT CSAIL
+  projects: [naturalistic-parcellation]
+  years: "2013–2017"
+  note: Functional brain alignment
 
-# ─── Recent collaborations (last paper 2015–2019, or one-off ~2024) ──────────
+# ─── MGH / Martinos Center ───────────────────────────────────────────────────
 
-- home: Functional brain alignment & parcellation
-  period: recent
-  since: "2013–2017"
-  persons:
-    - name: Georg Langs                     # Medical University of Vienna
-    - name: Karl-Heinz Nenning              # MedUni Vienna
-    - name: Polina Golland                  # MIT CSAIL
-    - name: Mert R. Sabuncu                 # Cornell
+- name: Anastasia Yendiki
+  current_institution: MGH Martinos Center
+  projects: [linc]
+  years: "2017–present"
+  note: CONNECTS / LINC site PI; tractography
 
-- home: Otolaryngology — vocal-fold paralysis
-  period: recent
-  since: "2024"
-  persons:
-    - name: Phillip C. Song                # MEE
+- name: Viviana Siless
+  current_institution: MGH Martinos Center
+  projects: [linc]
+  years: "2020–present"
 
-# ─── Past collaborations (≤2014) ─────────────────────────────────────────────
+- name: Xavier Guell
+  current_institution: MGH Martinos Center
+  projects: []
+  years: "2018–2021"
+  note: Cerebellum imaging
 
-- home: BU Speech Lab (Guenther Lab)
-  period: past
-  since: "2001–2016"
-  persons:
-    - name: Frank H. Guenther
-    - name: Jason A. Tourville
-    - name: Alfonso Nieto-Castañón
-    - name: Shanqing Cai
+# ─── UMass Chan / NeuroBIDS / BANDA ──────────────────────────────────────────
 
-- home: MIT / Speech & Hearing
-  period: past
-  since: "2003–2014"
-  persons:
-    - name: Joseph S. Perkell
-    - name: Christina Triantafyllou
+- name: David N. Kennedy
+  current_institution: UMass Chan Medical School
+  projects: [BANDA, NeuroBIDS, NIDM]
+  years: "2012–present"
+
+- name: Sohye Kim
+  current_institution: UMass Chan Medical School
+  projects: []
+  years: "TBD"
+
+# ─── UC Irvine ───────────────────────────────────────────────────────────────
+
+- name: David B. Keator
+  current_institution: UC Irvine
+  projects: [NeuroBIDS, NIDM]
+  years: "2012–present"
+
+# ─── Dartmouth / DataLad / DANDI / ReproNim ──────────────────────────────────
+
+- name: Yaroslav O. Halchenko
+  current_institution: Dartmouth College
+  projects: [dandi, repronim, DataLad]
+  years: "2011–present"
+  note: DANDI MPI; ReproNim co-lead
+
+- name: Michael Hanke
+  current_institution: Forschungszentrum Jülich
+  projects: [DataLad, PyMVPA]
+  years: "2012–present"
+
+# ─── Stanford / Poldrack Lab / OpenNeuro / fMRIPrep ──────────────────────────
+
+- name: Russell A. Poldrack
+  current_institution: Stanford University
+  projects: [BIDS, OpenNeuro]
+  years: "2012–present"
+
+- name: Krzysztof J. Gorgolewski
+  current_institution: Google (formerly Stanford)
+  projects: [BIDS, OpenNeuro, nipype-pydra]
+  years: "2015–present"
+
+- name: Oscar Esteban
+  current_institution: University of Lausanne (formerly Stanford)
+  projects: [fMRIPrep, nipype-pydra]
+  years: "2017–present"
+
+- name: Ross W. Blair
+  current_institution: Stanford (Squishymedia)
+  projects: [fMRIPrep]
+  years: "2019–present"
+
+# ─── McGill / Neuro / MNI ────────────────────────────────────────────────────
+
+- name: Jean-Baptiste Poline
+  current_institution: McGill University / MNI
+  projects: [BIDS, NIDM, repronim]
+  years: "2012–present"
+
+- name: Samir Das
+  current_institution: McGill University / MNI
+  projects: [LORIS, repronim]
+  years: "2016–present"
+
+- name: Peer Herholz
+  current_institution: MNI / McGill
+  projects: [Neuroscout]
+  years: "2021–present"
+
+# ─── Child Mind Institute ────────────────────────────────────────────────────
+
+- name: Arno Klein
+  current_institution: Child Mind Institute
+  projects: [Mindboggle, ReproSchema, MindLogger]
+  years: "2005–present"
+
+- name: Michael P. Milham
+  current_institution: Child Mind Institute
+  projects: [CPAC]
+  years: "2017–present"
+
+- name: Anisha Keshavan
+  current_institution: Child Mind Institute
+  projects: [Neuroscout]
+  years: "2013–present"
+
+- name: Gregory Kiar
+  current_institution: Child Mind Institute
+  projects: [NIDM]
+  years: "2017–present"
+
+- name: R. Cameron Craddock
+  current_institution: Emory University (formerly CMI)
+  projects: [CPAC]
+  years: "2016–2021"
+
+# ─── Allen Institute (BICAN) ─────────────────────────────────────────────────
+
+- name: Shoaib Mufti
+  current_institution: Allen Institute for Brain Science
+  projects: [bican-knowledgebase]
+  years: "2022–present"
+
+- name: Tyler Mollenkopf
+  current_institution: Allen Institute for Brain Science
+  projects: [bican-knowledgebase]
+  years: "2022–present"
+
+# ─── UCSD / NIDM / Bridge2AI ─────────────────────────────────────────────────
+
+- name: Maryann E. Martone
+  current_institution: UC San Diego
+  projects: [NIDM, bican-knowledgebase]
+  years: "2018–present"
+
+- name: Jeffrey S. Grethe
+  current_institution: UC San Diego
+  projects: [NIDM, bican-knowledgebase]
+  years: "2018–present"
+
+# ─── Inria / nilearn / NIDM ──────────────────────────────────────────────────
+
+- name: Gaël Varoquaux
+  current_institution: Inria Saclay
+  projects: [nilearn]
+  years: "2015–present"
+
+- name: Camille Maumet
+  current_institution: Inria Rennes
+  projects: [NIDM]
+  years: "2015–present"
+
+- name: Tibor Auer
+  current_institution: University of Surrey
+  projects: [BIDS]
+  years: "2016–present"
+
+# ─── Neuroscout / UT Austin ──────────────────────────────────────────────────
+
+- name: Tal Yarkoni
+  current_institution: UT Austin (formerly)
+  projects: [Neuroscout]
+  years: "2015–present"
+
+- name: Alejandro de la Vega
+  current_institution: UT Austin
+  projects: [Neuroscout]
+  years: "2017–present"
+
+- name: Taylor Salo
+  current_institution: University of Pennsylvania (formerly Iowa)
+  projects: [fMRIPrep]
+  years: "2020–present"
+
+# ─── BIDS / OpenNeuro ecosystem (other) ──────────────────────────────────────
+
+- name: Robert Oostenveld
+  current_institution: Donders Institute
+  projects: [BIDS]
+  years: "2021–present"
+
+- name: Ariel Rokem
+  current_institution: University of Washington
+  projects: [BIDS]
+  years: "2016–present"
+
+- name: Chris Rorden
+  current_institution: University of South Carolina
+  projects: [dcm2niix, BIDS]
+  years: "2024"
+
+- name: Guillaume Flandin
+  current_institution: UCL FIL
+  projects: [BIDS]
+  years: "2016–present"
+  note: SPM
+
+- name: Thomas E. Nichols
+  current_institution: University of Oxford
+  projects: [BIDS, NIDM]
+  years: "2015–present"
+
+# ─── Reading / literacy (Riverst & ReadNet) ──────────────────────────────────
+
+- name: Ola Ozernov-Palchik
+  current_institution: Boston University / Wheelock
+  projects: [riverst-kiva, readnet]
+  years: "2017–present"
+
+- name: Tyler K. Perrachione
+  current_institution: Boston University
+  projects: [readnet]
+  years: "2016–2019"
+
+# ─── Speech: vocal-fold paralysis ────────────────────────────────────────────
+
+- name: Phillip C. Song
+  current_institution: Massachusetts Eye & Ear / Harvard
+  projects: [vocal-fold-paralysis]
+  years: "2024"
+
+# ─── Suicide-prevention NLP / digital MH ─────────────────────────────────────
+
+- name: Matthew K. Nock
+  current_institution: Harvard University
+  projects: [veteran-peer-response]
+  years: "2020–present"
+
+- name: Walter Dempsey
+  current_institution: University of Michigan
+  projects: [veteran-peer-response]
+  years: "2020–present"
+
+- name: Kelly Zuromski
+  current_institution: Harvard University
+  projects: [veteran-peer-response]
+  years: "2020–present"
+
+- name: Daniel Kessler
+  current_institution: University of Michigan
+  projects: [veteran-peer-response]
+  years: "2020–present"
+
+- name: John Torous
+  current_institution: Beth Israel Deaconess / Harvard
+  projects: [covid-reddit-mental-health]
+  years: "2020–present"
+
+- name: Guillermo Cecchi
+  current_institution: IBM Research
+  projects: [covid-reddit-mental-health]
+  years: "2020–present"
+
+- name: Laurie Rumker
+  current_institution: TBD
+  projects: [covid-reddit-mental-health]
+  years: "2020"
+
+- name: Tanya Talkar
+  current_institution: MIT Lincoln Laboratory
+  projects: [covid-reddit-mental-health]
+  years: "2020"
+
+# ─── Functional brain alignment / parcellation ───────────────────────────────
+
+- name: Georg Langs
+  current_institution: Medical University of Vienna
+  projects: [naturalistic-parcellation]
+  years: "2013–2017"
+
+- name: Karl-Heinz Nenning
+  current_institution: Medical University of Vienna
+  projects: [naturalistic-parcellation]
+  years: "2017"
+  note: Functional demons
+
+- name: Mert R. Sabuncu
+  current_institution: Cornell University
+  projects: [naturalistic-parcellation]
+  years: "2017"
+
+# ─── Earlier (≤2014) speech / Guenther DIVA model ────────────────────────────
+
+- name: Frank H. Guenther
+  current_institution: Boston University
+  projects: []
+  years: "2001–2016"
+  note: DIVA speech-production model; earlier MIT collaboration
+
+- name: Jason A. Tourville
+  current_institution: Boston University
+  projects: []
+  years: "2003–2014"
+
+- name: Alfonso Nieto-Castañón
+  current_institution: Boston University
+  projects: []
+  years: "2003–2016"
+  note: CONN toolbox
+
+- name: Shanqing Cai
+  current_institution: Google (formerly BU)
+  projects: []
+  years: "2011–2016"
+
+- name: Joseph S. Perkell
+  current_institution: MIT (emeritus)
+  projects: []
+  years: "2003–2016"
+
+- name: Christina Triantafyllou
+  current_institution: Siemens Healthineers (formerly MIT)
+  projects: []
+  years: "2010–2014"
