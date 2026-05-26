@@ -212,7 +212,11 @@
     (primarily voice and speech, but also text and video) using robust,
     reproducible pipelines and utilities." Used by the Bridge2AI-Voice and
     Riverst / KIVA stacks.
-  funder: Child Mind Institute
+  funder: >
+    Cross-funded by the Child Mind Institute, NIH Bridge2AI-Voice
+    (OT2 OD032720), the Simons Foundation (SAILS), the MIT Generative
+    AI Consortium (Riverst / KIVA), the ICON Center at the McGovern
+    Institute (MIT), and the ReadNet project.
   image: /images/projects/senselab.webp
   themes:
   - reproducibility-tooling
