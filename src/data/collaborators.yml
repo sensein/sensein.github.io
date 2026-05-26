@@ -86,8 +86,9 @@
 
 - home: Child Mind Institute
   period: active
-  since: "2016–present"
+  since: "2005–present"
   persons:
+    - name: Arno Klein                      # Mindboggle, ReproSchema, MindLogger
     - name: Michael P. Milham
     - name: Anisha Keshavan
     - name: Gregory Kiar
@@ -149,12 +150,14 @@
 
 # ─── Recent collaborations (last paper 2015–2019, or one-off ~2024) ──────────
 
-- home: Mindboggle / brain morphometry
+- home: Functional brain alignment & parcellation
   period: recent
-  since: "2005–2019"
+  since: "2013–2017"
   persons:
-    - name: Arno Klein                      # Sage Bionetworks → CMI
-    - name: Georg Langs                     # Med. Univ. of Vienna
+    - name: Georg Langs                     # Medical University of Vienna
+    - name: Karl-Heinz Nenning              # MedUni Vienna
+    - name: Polina Golland                  # MIT CSAIL
+    - name: Mert R. Sabuncu                 # Cornell
 
 - home: Otolaryngology — vocal-fold paralysis
   period: recent
