@@ -978,6 +978,12 @@
   abstract: "Detecting voice disorders from voice recordings could allow for frequent, remote, and low-cost screening before costly clinical visits and a more invasive laryngoscopy examination. Our goals were to detect unilateral vocal fold paralysis (UVFP) from voice recordings using machine learning, to identify which acoustic variables were important for prediction to increase trust, and to determine model performance relative to clinician performance. Patients with confirmed UVFP through endoscopic examination (N = 77) and controls with normal voices matched for age and sex (N = 77) were included. Voice samples were elicited by reading the Rainbow Passage and sustaining phonation of the vowel \"a\". Four machine learning models of differing complexity were used. SHapley Additive exPlanations (SHAP) was used to identify important features. The highest median bootstrapped ROC AUC score was 0.87 and beat clinician's performance (range: 0.74-0.81) based on the recordings. Recording durations were different between UVFP recordings and controls due to how that data was originally processed when storing, which we can show can classify both groups. And counterintuitively, many UVFP recordings had higher intensity than controls, when UVFP patients tend to have weaker voices, revealing a dataset-specific bias which we mitigate in an additional analysis. We demonstrate that recording biases in audio duration and intensity created dataset-specific differences between patients and controls, which models used to improve classification. Furthermore, clinician's ratings provide further evidence that patients were over-projecting their voices and being recorded at a higher amplitude signal than controls. Interestingly, after matching audio duration and removing variables associated with intensity in order to mitigate the biases, the models were able to achieve a similar high performance. We provide a set of recommendations to avoid bias when building and evaluating machine learning models for screening in laryngology."
   abstract_source: pubmed
   key_findings: Machine-learning models classified unilateral vocal-fold paralysis from voice recordings (median AUC 0.87, exceeding clinicians) but largely exploited dataset-specific biases in recording duration and intensity; once those biases were mitigated, models still performed well, and the authors give recommendations for unbiased laryngology screening.
+  preprints:
+  - id: 10.1101/2020.11.23.20235945
+    venue: medRxiv
+    url: https://doi.org/10.1101/2020.11.23.20235945
+    year: 2020
+    doi: 10.1101/2020.11.23.20235945
 - id: 10.1176/appi.ajp.20230249
   type: journal
   category: original-research
@@ -5993,3 +5999,32 @@
   abstract: The high-intensity, repetitive noise associated with functional magnetic resonance imaging hinders on-line monitoring of subjects' speech and/or recording speech signals suitable for off-line analysis. The proposed algorithm enhances the speech signal by suppressing the scanner noise in the signal recorded by a single-channel microphone. Significant increases in signal-to-noise ratio are achieved using an adaptive filter that combines time and frequency domain elements. In addition to providing a recording suitable for speech analysis, such a real-time system provides an alternative means (to, e.g., the "panic ball") for communication between the patient and the operator during image acquisition.
   abstract_source: arxiv
   key_findings: Presents a single-channel adaptive filter combining time- and frequency-domain elements to suppress repetitive fMRI scanner noise in recorded speech, achieving significant SNR gains suitable for both real-time patient-operator communication and offline speech analysis during image acquisition.
+- id: 10.64898/2026.05.28.26354346
+  type: preprint
+  category: original-research
+  year: 2026
+  title: Towards A Foundation Model for Clinical Voice Biomarkers
+  authors:
+  - Olivier Elemento
+  - Alexandros Sigaras
+  - Joseph T. Colonel
+  - Iman Hajirasouliha
+  - Satrajit S Ghosh
+  - Yael Bensoussan
+  - Bridge2AI-Voice Consortium
+  - Anaïs Rameau
+  venue: medRxiv
+  doi: 10.64898/2026.05.28.26354346
+  url: https://doi.org/10.64898/2026.05.28.26354346
+  sources:
+  - europepmc
+  projects:
+  - bridge2ai-voice
+  lab_authors:
+  - Satrajit S Ghosh
+  topics:
+  - speech-voice-biomarkers
+  - ml-nlp-knowledge
+  abstract: Vocal biomarkers, encompassing voice and speech, have largely been developed for individual conditions in isolation, limiting their generalizability across diseases and recording settings. To address this, we introduce VoiceFM, a contrastive model that learns general-purpose clinical voice representations by aligning audio embeddings with rich clinical metadata. Using the Bridge2AI-Voice dataset (984 primarily English-speaking adult participants - 846 used for training and 138 held out as a temporally separated validation cohort - 40,056 recordings totaling 176 hours across 5 academic medical centers), VoiceFM pairs a fine-tuned Whisper large-v2 encoder with a tabular transformer over 44 clinical features via symmetric InfoNCE loss. Linear probes on frozen VoiceFM embeddings achieve mean AUROC 0.952 across five evaluation tasks, significantly outperforming Frozen Whisper, Frozen HuBERT, and the contrastively trained VoiceFM-HuBERT. On the 138-participant held-out cohort, VoiceFM-Whisper achieves AUROCs of 0.99 for Alzheimer's/dementia/MCI and 0.89 for airway stenosis. VoiceFM representations transfer to three external datasets without retraining and improve few-shot classification; the model transfers without fine-tuning to Spanish-language Parkinson's disease detection (NeuroVoz, AUROC 0.93) and to the mPower smartphone study (participant-level AUROC 0.87). Together, these results show that contrastive alignment between voice and rich clinical metadata can serve as the basis for a clinical voice foundation model that generalizes across diseases, languages, recording conditions, and patients enrolled after model freeze.
+  abstract_source: publisher
+  key_findings: Introduces VoiceFM, a contrastive clinical-voice foundation model that aligns a fine-tuned Whisper encoder with 44 clinical features on the Bridge2AI-Voice dataset (984 participants, 40,056 recordings, 5 medical centers). Frozen-embedding linear probes reach mean AUROC 0.952 across five screening tasks - outperforming frozen Whisper/HuBERT - generalize to held-out patients (0.99 for Alzheimer's/dementia/MCI), and transfer without fine-tuning to Spanish-language Parkinson's detection and the mPower smartphone study.
