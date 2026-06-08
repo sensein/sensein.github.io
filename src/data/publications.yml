@@ -437,6 +437,7 @@
   - Dehghani N
   venue: eNeuro
   doi: 10.1523/ENEURO.0486-24.2025
+  arxiv: '2407.00976'
   pmid: '41266140'
   pmcid: PMC12658310
   url: https://doi.org/10.1523/ENEURO.0486-24.2025
@@ -656,19 +657,23 @@
   abstract: Abstract Exploration is essential for reinforcement learning (RL) in human development, facilitating cognitive and behavioral adaptation. However, conventional RL paradigms in neuroimaging studies often rely on highly constrained search spaces and artificial, non-naturalistic scenarios, limiting their capacity to reflect the complexity of real-world human exploration and decision- making. To address this gap, we developed a novel, naturalistic RL paradigm called Photographer , which involves a photograph-taking task set in a virtual street-view environment. Participants navigated city scenes and attempted to infer the paradigm’s covert goal solely from feedback, defined as the conceptual similarity between their photograph and a hidden target sentence. Representational similarity analysis revealed that feedback history, an encoding of recent trial attempts, was robustly represented in the middle orbital gyrus and inferior frontal gyrus. These neural representations were consistently observed across two independent participant groups. Moreover, although the two regions coactivated during exploration, each was associated with a distinct functional network.
   abstract_source: openalex
   key_findings: In a naturalistic photograph-taking reinforcement-learning task, representational similarity analysis of fMRI showed that recent-feedback history was robustly encoded in the middle orbital gyrus and inferior frontal gyrus across two independent participant groups, with each region embedded in a distinct functional network.
-- id: pmid:40832056
-  type: journal
-  category: original-research
+- id: 10.48550/arxiv.2508.10051
+  type: preprint
+  category: perspective
   year: 2025
   title: An Intelligent Infrastructure as a Foundation for Modern Science
   authors:
-  - Ghosh S
-  venue: ArXiv
+  - Satrajit S Ghosh
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2508.10051
+  arxiv: '2508.10051'
   pmid: '40832056'
   pmcid: PMC12364050
-  url: https://pubmed.ncbi.nlm.nih.gov/40832056/
+  url: https://doi.org/10.48550/arxiv.2508.10051
+  pdf_url: https://arxiv.org/pdf/2508.10051
   sources:
   - ncbi
+  - arxiv
   projects: []
   lab_authors:
   - Satrajit S Ghosh
@@ -1163,6 +1168,7 @@
   - Gorgolewski KJ
   venue: ArXiv
   doi: 10.1162/imag_a_00103
+  arxiv: '2309.05768'
   pmid: '37744469'
   pmcid: PMC10516110
   url: https://doi.org/10.1162/imag_a_00103
@@ -2917,6 +2923,7 @@
   - Satrajit Ghosh
   - Pattie Maes
   doi: 10.1109/ijcnn52387.2021.9534161
+  arxiv: '2104.10715'
   url: https://doi.org/10.1109/ijcnn52387.2021.9534161
   sources:
   - openalex
@@ -3684,6 +3691,7 @@
   - Pereira F
   venue: Front Neuroinform
   doi: 10.3389/fninf.2019.00067
+  arxiv: '1812.01719'
   pmid: '31749693'
   pmcid: PMC6843052
   url: https://doi.org/10.3389/fninf.2019.00067
@@ -5897,3 +5905,91 @@
   abstract: 'INTRODUCTION: Bridge2AI-Voice, a collaborative multi-institutional consortium, aims to generate a large-scale, ethically sourced voice, speech, and cough database linked to health metadata in order to support AI-driven research. A novel smartphone application, the Bridge2AI-Voice app, was created to collect standardized recordings of acoustic tasks, validated patient questionnaires, and validated patient reported outcomes. Before broad data collection, a feasibility study was undertaken to assess the viability of the app in a clinical setting through task performance metrics and participant feedback. MATERIALS & METHODS: Participants were recruited from a tertiary academic voice center. Participants were instructed to complete a series of tasks through the application on an iPad. The Plan-Do-Study-Act model for quality improvement was implemented. Data collected included demographics and task metrics including time of completion, successful task/recording completion, and need for assistance. Participant feedback was measured by a qualitative interview adapted from the Mobile App Rating Scale. RESULTS: Forty-seven participants were enrolled (61% female, 92% reported primary language of English, mean age of 58.3 years). All owned smart devices, with 49% using mobile health apps. Overall task completion rate was 68%, with acoustic tasks successfully recorded in 41% of cases. Participants requested assistance in 41% of successfully completed tasks, with challenges mainly related to design and instruction understandability. Interview responses reflected favorable perception of voice-screening apps and their features. CONCLUSION: Findings suggest that the Bridge2AI-Voice application is a promising tool for voice data acquisition in a clinical setting. However, development of improved User Interface/User Experience and broader, diverse feasibility studies are needed for a usable tool.Level of evidence: 3.'
   abstract_source: pubmed
   key_findings: In 47 voice-clinic participants, the Bridge2AI-Voice smartphone app achieved a 68% overall task-completion rate but only 41% successful acoustic-task recording, with 41% of completed tasks requiring assistance — indicating the app is a promising but currently UI/UX-limited tool for clinical voice-data collection.
+- id: 10.48550/arxiv.2508.08276
+  type: preprint
+  category: original-research
+  year: 2025
+  title: Evaluating Contrast Localizer for Identifying Causal Units in Social & Mathematical Tasks in Language Models
+  authors:
+  - Yassine Jamaa
+  - Badr AlKhamissi
+  - Satrajit S Ghosh
+  - Martin Schrimpf
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2508.08276
+  arxiv: '2508.08276'
+  url: https://doi.org/10.48550/arxiv.2508.08276
+  pdf_url: https://arxiv.org/pdf/2508.08276
+  sources:
+  - arxiv
+  lab_authors:
+  - Yassine Jamaa
+  - Satrajit S Ghosh
+  topics:
+  - ml-nlp-knowledge
+  abstract: This work adapts a neuroscientific contrast localizer to pinpoint causally relevant units for Theory of Mind (ToM) and mathematical reasoning tasks in large language models (LLMs) and vision-language models (VLMs). Across 11 LLMs and 5 VLMs ranging in size from 3B to 90B parameters, we localize top-activated units using contrastive stimulus sets and assess their causal role via targeted ablations. We compare the effect of lesioning functionally selected units against low-activation and randomly selected units on downstream accuracy across established ToM and mathematical benchmarks. Contrary to expectations, low-activation units sometimes produced larger performance drops than the highly activated ones, and units derived from the mathematical localizer often impaired ToM performance more than those from the ToM localizer. These findings call into question the causal relevance of contrast-based localizers and highlight the need for broader stimulus sets and more accurately capture task-specific units.
+  abstract_source: arxiv
+  key_findings: Adapting a neuroscientific contrast localizer to 11 LLMs and 5 VLMs (3B-90B params), targeted ablation of functionally-selected units sometimes hurt task accuracy less than ablating low-activation units, and math-localizer units impaired Theory-of-Mind performance more than ToM-localizer units - questioning the causal relevance of contrast-based localizers in language models.
+- id: 10.48550/arxiv.2401.00077
+  type: preprint
+  category: perspective
+  year: 2023
+  title: 'SciOps: Achieving Productivity and Reliability in Data-Intensive Research'
+  authors:
+  - Erik C. Johnson
+  - Thinh T. Nguyen
+  - Benjamin K. Dichter
+  - Frank Zappulla
+  - Montgomery Kosma
+  - Kabilar Gunalan
+  - Yaroslav O. Halchenko
+  - Shay Q. Neufeld
+  - Kristen Ratan
+  - Nicholas J. Edwards
+  - Susanne Ressl
+  - Sarah R. Heilbronner
+  - Michael Schirner
+  - Petra Ritter
+  - Brock Wester
+  - Satrajit S Ghosh
+  - Maryann E. Martone
+  - Franco Pestilli
+  - Dimitri Yatsenko
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2401.00077
+  arxiv: '2401.00077'
+  url: https://doi.org/10.48550/arxiv.2401.00077
+  pdf_url: https://arxiv.org/pdf/2401.00077
+  sources:
+  - arxiv
+  lab_authors:
+  - Kabilar Gunalan
+  - Satrajit S Ghosh
+  topics:
+  - reproducibility-tooling
+  - open-data-standards
+  abstract: Scientists are increasingly leveraging advances in instruments, automation, and collaborative tools to scale up their experiments and research goals, leading to new bursts of discovery. Various scientific disciplines, including neuroscience, have adopted key technologies to enhance collaboration, reproducibility, and automation. Drawing inspiration from advancements in the software industry, we present a roadmap to enhance the reliability and scalability of scientific operations for diverse research teams tackling large and complex projects. We introduce a five-level Capability Maturity Model describing the principles of rigorous scientific operations in projects ranging from small-scale exploratory studies to large-scale, multi-disciplinary research endeavors. Achieving higher levels of operational maturity necessitates the adoption of new, technology-enabled methodologies, which we refer to as SciOps. This concept is derived from the DevOps methodologies that have revolutionized the software industry. SciOps involves digital research environments that seamlessly integrate computational, automation, and AI-driven efforts throughout the research cycle-from experimental design and data collection to analysis and dissemination, ultimately leading to closed-loop discovery. This maturity model offers a framework for assessing and improving operational practices in multidisciplinary research teams, guiding them towards greater efficiency and effectiveness in scientific inquiry.
+  abstract_source: arxiv
+  key_findings: Proposes SciOps - a DevOps-inspired five-level Capability Maturity Model for data-intensive research - describing technology-enabled digital research environments that integrate computation, automation, and AI across the research cycle to improve reproducibility, scalability, and closed-loop discovery in multidisciplinary teams.
+- id: 10.48550/arxiv.1207.5827
+  type: preprint
+  category: methods
+  year: 2012
+  title: Algorithm to suppress scanner noise in recorded speech during functional magnetic resonance imaging
+  authors:
+  - Satrajit S Ghosh
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.1207.5827
+  arxiv: '1207.5827'
+  url: https://doi.org/10.48550/arxiv.1207.5827
+  pdf_url: https://arxiv.org/pdf/1207.5827
+  sources:
+  - arxiv
+  lab_authors:
+  - Satrajit S Ghosh
+  topics:
+  - speech-voice-biomarkers
+  - neuroimaging-methods
+  abstract: The high-intensity, repetitive noise associated with functional magnetic resonance imaging hinders on-line monitoring of subjects' speech and/or recording speech signals suitable for off-line analysis. The proposed algorithm enhances the speech signal by suppressing the scanner noise in the signal recorded by a single-channel microphone. Significant increases in signal-to-noise ratio are achieved using an adaptive filter that combines time and frequency domain elements. In addition to providing a recording suitable for speech analysis, such a real-time system provides an alternative means (to, e.g., the "panic ball") for communication between the patient and the operator during image acquisition.
+  abstract_source: arxiv
+  key_findings: Presents a single-channel adaptive filter combining time- and frequency-domain elements to suppress repetitive fMRI scanner noise in recorded speech, achieving significant SNR gains suitable for both real-time patient-operator communication and offline speech analysis during image acquisition.
