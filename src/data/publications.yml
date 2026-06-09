@@ -6028,3 +6028,32 @@
   abstract: Vocal biomarkers, encompassing voice and speech, have largely been developed for individual conditions in isolation, limiting their generalizability across diseases and recording settings. To address this, we introduce VoiceFM, a contrastive model that learns general-purpose clinical voice representations by aligning audio embeddings with rich clinical metadata. Using the Bridge2AI-Voice dataset (984 primarily English-speaking adult participants - 846 used for training and 138 held out as a temporally separated validation cohort - 40,056 recordings totaling 176 hours across 5 academic medical centers), VoiceFM pairs a fine-tuned Whisper large-v2 encoder with a tabular transformer over 44 clinical features via symmetric InfoNCE loss. Linear probes on frozen VoiceFM embeddings achieve mean AUROC 0.952 across five evaluation tasks, significantly outperforming Frozen Whisper, Frozen HuBERT, and the contrastively trained VoiceFM-HuBERT. On the 138-participant held-out cohort, VoiceFM-Whisper achieves AUROCs of 0.99 for Alzheimer's/dementia/MCI and 0.89 for airway stenosis. VoiceFM representations transfer to three external datasets without retraining and improve few-shot classification; the model transfers without fine-tuning to Spanish-language Parkinson's disease detection (NeuroVoz, AUROC 0.93) and to the mPower smartphone study (participant-level AUROC 0.87). Together, these results show that contrastive alignment between voice and rich clinical metadata can serve as the basis for a clinical voice foundation model that generalizes across diseases, languages, recording conditions, and patients enrolled after model freeze.
   abstract_source: publisher
   key_findings: Introduces VoiceFM, a contrastive clinical-voice foundation model that aligns a fine-tuned Whisper encoder with 44 clinical features on the Bridge2AI-Voice dataset (984 participants, 40,056 recordings, 5 medical centers). Frozen-embedding linear probes reach mean AUROC 0.952 across five screening tasks - outperforming frozen Whisper/HuBERT - generalize to held-out patients (0.99 for Alzheimer's/dementia/MCI), and transfer without fine-tuning to Spanish-language Parkinson's detection and the mPower smartphone study.
+- id: 10.1016/j.dcn.2026.101755
+  type: journal
+  category: perspective
+  year: 2026
+  title: 'ABCD-ReproNim: An Educational Program for Responsible and Reproducible Analyses of ABCD Data'
+  authors:
+  - Angela R. Laird
+  - Jessica E. Bartley
+  - Julio A. Peraza
+  - Jean-Baptiste Poline
+  - Satrajit S Ghosh
+  - David N. Kennedy
+  venue: Developmental Cognitive Neuroscience
+  doi: 10.1016/j.dcn.2026.101755
+  url: https://doi.org/10.1016/j.dcn.2026.101755
+  sources:
+  - openalex
+  - crossref
+  projects:
+  - repronim
+  lab_authors:
+  - Satrajit S Ghosh
+  topics:
+  - reproducibility-tooling
+  - child-development-education
+  - open-data-standards
+  abstract: ABCD-ReproNim is a research educational course that provides training in responsible and reproducible analyses of data from the Adolescent Brain Cognitive Development (ABCD) Study. ABCD-ReproNim was established in 2020 and structured as a collaborative partnership between ABCD investigators and ReproNim, a NIBIB-funded P41 center for reproducible neuroimaging whose vision is to help researchers achieve more reproducible data analysis workflows and outcomes. With over 1.1 K registered students and >18 K YouTube views, ABCD-ReproNim has been well-received by the community and is providing ABCD data training while promoting skill development in reproducible analyses that support efficient, re-executable design and FAIR practices. Participants first receive didactic training across a semester-long online course that includes lectures, readings, and data exercises. We use an innovative curricular approach that is grounded in modern, transformational methods of STEM pedagogy, which includes philosophies and features drawn from active learning, inverted classrooms, and hack weeks. At the completion of the course, participants contribute to team-based, collaborative data analysis projects during an in-person hackathon at the host institution, Florida International University, in Miami, Florida. Through this research educational program, we provide (i) a comprehensive understanding of the ABCD dataset; (ii) instructional techniques that enhance the validity and reproducibility of research methods; (iii) support of interdisciplinary, team-based collaborations; and (iv) dissemination of the course, project materials, and research findings. Our overall goal is to contribute to the generation of a cadre of investigators that are well trained in the techniques that support responsible, reproducible, and valid analyses of ABCD data.
+  abstract_source: openalex
+  key_findings: Describes ABCD-ReproNim, a NIBIB-P41/ReproNim partnered training program for responsible and reproducible analyses of ABCD Study data. Combines a semester-long online course (lectures, readings, exercises) using active-learning and hack-week pedagogy with an in-person team hackathon at Florida International University, and has reached 1.1K registered students and 18K+ YouTube views since 2020.
