@@ -1,3 +1,19 @@
+- name: Manaal Mohammed
+  photo: /images/people/manaal-mohammed.webp
+  info: MEng Student, MIT
+  email: manaal@mit.edu
+  duration: 2025 - 2026
+  github: "manaalm"
+  number_educ: 2
+  education1: MEng in Artificial Intelligence and Decision Making, MIT
+  education2: B.S. in Artificial Intelligence and Decision Making, MIT
+- name: Aparna BG
+  photo: /images/people/aparna-bg.webp
+  info: MSc Student, IISER, India
+  email: aparna21@iisertvm.ac.in
+  duration: 2025 - 2026
+  number_educ: 1
+  education2: BSc/MSc, IISER, India
 - name: Debbie Burdinski
   photo: /images/people/debbie-burdinski.webp
   info: MD-PhD Student, Harvard Medical School and MIT
@@ -496,7 +512,7 @@
   email: ysa@mit.edu
   orcid: "0009-0003-1237-3760"
   number_educ: 0
-  education1: null
+  education1:
 - name: Shilpa Chakravartula
   photo: /images/placeholder-person.svg
   duration: Contractor 2017
@@ -505,7 +521,7 @@
     '
   email: <not specified>
   number_educ: 0
-  education1: null
+  education1:
 - name: Du (Derry) Chen
   photo: /images/placeholder-person.svg
   duration: Intern 2017, Undergraduate at Cornell University
@@ -514,4 +530,4 @@
     '
   email: <not specified>
   number_educ: 0
-  education1: null
+  education1:
