@@ -1,0 +1,129 @@
+---
+// Google Analytics 4 with an opt-in / opt-out consent banner.
+//
+// Flow on first visit:
+//   - banner shows with Accept / Decline
+//   - Accept  → localStorage `analytics-consent` = "granted", load gtag.js
+//   - Decline → localStorage `analytics-consent` = "denied", do nothing
+// Subsequent visits respect the stored choice; the banner does not re-appear.
+//
+// A "Privacy preferences" link in the footer (any element with attribute
+// `data-analytics-preferences`) clears the stored choice and re-shows the
+// banner.
+//
+// No tracking script is loaded before consent is granted, and we pass
+// `anonymize_ip: true` to GA when we do load it.
+const GA_ID = "G-7E12DS9X49";
+---
+<div
+  data-analytics-banner
+  hidden
+  role="dialog"
+  aria-labelledby="analytics-title"
+  aria-describedby="analytics-desc"
+  class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-md z-50 rounded-lg border border-(--color-border) bg-(--color-canvas) shadow-lg p-4 text-sm"
+>
+  <p id="analytics-title" class="text-(--color-ink) font-medium">
+    Help us count visits
+  </p>
+  <p id="analytics-desc" class="mt-1 text-(--color-ink-muted) leading-snug text-xs">
+    We use Google Analytics to measure page views and improve the site. No advertising, no cross-site tracking. You can change this any time from the footer.
+  </p>
+  <div class="mt-3 flex items-center gap-2">
+    <button
+      data-analytics-accept
+      type="button"
+      class="rounded-md border border-(--color-accent) bg-(--color-accent) text-white px-3 py-1.5 text-xs font-medium hover:opacity-90 transition-opacity"
+    >
+      Accept
+    </button>
+    <button
+      data-analytics-decline
+      type="button"
+      class="rounded-md border border-(--color-border) text-(--color-ink-muted) hover:text-(--color-ink) hover:border-(--color-border-strong) px-3 py-1.5 text-xs transition-colors"
+    >
+      Decline
+    </button>
+  </div>
+</div>
+
+<script is:inline define:vars={{ GA_ID }}>
+  (function () {
+    var KEY = "analytics-consent";
+    var loaded = false;
+
+    function loadGA() {
+      if (loaded) return;
+      loaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", GA_ID, { anonymize_ip: true });
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+      document.head.appendChild(s);
+    }
+
+    function readChoice() {
+      try { return localStorage.getItem(KEY); } catch (_) { return null; }
+    }
+    function writeChoice(v) {
+      try { localStorage.setItem(KEY, v); } catch (_) {}
+    }
+    function clearChoice() {
+      try { localStorage.removeItem(KEY); } catch (_) {}
+    }
+
+    function showBanner() {
+      var b = document.querySelector("[data-analytics-banner]");
+      if (b) b.removeAttribute("hidden");
+    }
+    function hideBanner() {
+      var b = document.querySelector("[data-analytics-banner]");
+      if (b) b.setAttribute("hidden", "");
+    }
+
+    // Public API (exposed for the footer "Privacy preferences" link).
+    window.analyticsConsent = {
+      accept: function () { writeChoice("granted"); loadGA(); hideBanner(); },
+      decline: function () { writeChoice("denied"); hideBanner(); },
+      reset: function () { clearChoice(); showBanner(); },
+      status: function () { return readChoice(); },
+    };
+
+    function wireBannerButtons() {
+      var acc = document.querySelector("[data-analytics-accept]");
+      var dec = document.querySelector("[data-analytics-decline]");
+      if (acc) acc.addEventListener("click", window.analyticsConsent.accept);
+      if (dec) dec.addEventListener("click", window.analyticsConsent.decline);
+    }
+    function wirePrefsTriggers() {
+      // The footer "Privacy preferences" button (and anything else with
+      // data-analytics-preferences) re-opens the banner so the user can
+      // change their mind. Must work AFTER a choice has been made.
+      document.querySelectorAll("[data-analytics-preferences]").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.analyticsConsent.reset();
+          wireBannerButtons();
+        });
+      });
+    }
+
+    function init() {
+      wirePrefsTriggers();
+      var choice = readChoice();
+      if (choice === "granted") { loadGA(); return; }
+      if (choice === "denied") { return; }
+      showBanner();
+      wireBannerButtons();
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  })();
+</script>

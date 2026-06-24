@@ -119,12 +119,21 @@ const affiliations = [
       <span class="font-mono text-[10px] opacity-70" title={`Built ${builtAt}`}>
         build {commit} · {builtAt}
       </span>
-      <a
-        href={withBase("/about")}
-        class="hover:text-(--color-accent) transition-colors underline-offset-3 hover:underline"
-      >
-        About this website
-      </a>
+      <div class="flex items-center gap-4">
+        <button
+          type="button"
+          data-analytics-preferences
+          class="hover:text-(--color-accent) transition-colors underline-offset-3 hover:underline cursor-pointer"
+        >
+          Privacy preferences
+        </button>
+        <a
+          href={withBase("/about")}
+          class="hover:text-(--color-accent) transition-colors underline-offset-3 hover:underline"
+        >
+          About this website
+        </a>
+      </div>
     </div>
   </Container>
 </footer>
