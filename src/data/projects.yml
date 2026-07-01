@@ -165,6 +165,8 @@
   # (Columbia), Anastasia Yendiki (MGH); Site PIs: Mike Fox (BWH), Jeff
   # Lichtman (Harvard), Claire Walsh / Peter Lee (UCL), Zhuhao Wu (Cornell Med).
 
+  - 10.64898/2026.02.18.705310    # Gong et al. 2026 ultra-high-gradient dMRI
+  - 10.64898/2026.04.02.716198    # Chourrout et al. 2026 HiP-CT + dMRI connectome
 - slug: bridge2ai-voice
   title: Bridge2AI Voice
   status: active
@@ -296,6 +298,7 @@
   - 10.2196/63343                      # Chen et al. 2025 ReproSchema
   - 10.21105/joss.05839                # Halchenko et al. 2024 HeuDiConv
 
+  - 10.31222/osf.io/x64tn_v1           # Urchs et al. 2026 Neurobagel federated data discovery
 - slug: nipype-pydra
   title: Nipype / Pydra
   status: active
@@ -383,6 +386,7 @@
   publications:
   - 10.1162/IMAG.a.1116     # Chen et al. 2026, narrative comprehension brain states
 
+  - 10.64898/2026.05.31.729141 # Chen et al. 2026 brain states across narrative contexts
 - slug: abcd-psychotic-experiences
   title: Psychotic Experiences in ABCD
   status: active
@@ -430,16 +434,16 @@
     current: [Satrajit S Ghosh, Mathias Goncalves]
     former: []
     external:
-      - Susan Whitfield-Gabrieli (Northeastern / MIT)
-      - John D. E. Gabrieli (MIT)
-      - Diego A. Pizzagalli (McLean / Harvard)
-      - Randy P. Auerbach (Columbia)
-      - Stefan G. Hofmann (Philipps-Universität Marburg)
-      - Aude Henin (MGH)
-      - Anastasia Yendiki (MGH Martinos)
-      - Nicholas A. Hubbard (University of Nebraska–Lincoln)
-      - Clemens C. C. Bauer (MIT / Northeastern)
-      - Viviana Siless (MGH Martinos)
+    - Susan Whitfield-Gabrieli (Northeastern / MIT)
+    - John D. E. Gabrieli (MIT)
+    - Diego A. Pizzagalli (McLean / Harvard)
+    - Randy P. Auerbach (Columbia)
+    - Stefan G. Hofmann (Philipps-Universität Marburg)
+    - Aude Henin (MGH)
+    - Anastasia Yendiki (MGH Martinos)
+    - Nicholas A. Hubbard (University of Nebraska–Lincoln)
+    - Clemens C. C. Bauer (MIT / Northeastern)
+    - Viviana Siless (MGH Martinos)
   publications:
   - 10.1038/s41597-024-03629-x            # Hubbard et al. 2024 dataset (Sci Data)
   - 10.1016/j.nicl.2020.102242            # Siless et al. 2020 acquisition + QA

@@ -6057,3 +6057,184 @@
   abstract: ABCD-ReproNim is a research educational course that provides training in responsible and reproducible analyses of data from the Adolescent Brain Cognitive Development (ABCD) Study. ABCD-ReproNim was established in 2020 and structured as a collaborative partnership between ABCD investigators and ReproNim, a NIBIB-funded P41 center for reproducible neuroimaging whose vision is to help researchers achieve more reproducible data analysis workflows and outcomes. With over 1.1 K registered students and >18 K YouTube views, ABCD-ReproNim has been well-received by the community and is providing ABCD data training while promoting skill development in reproducible analyses that support efficient, re-executable design and FAIR practices. Participants first receive didactic training across a semester-long online course that includes lectures, readings, and data exercises. We use an innovative curricular approach that is grounded in modern, transformational methods of STEM pedagogy, which includes philosophies and features drawn from active learning, inverted classrooms, and hack weeks. At the completion of the course, participants contribute to team-based, collaborative data analysis projects during an in-person hackathon at the host institution, Florida International University, in Miami, Florida. Through this research educational program, we provide (i) a comprehensive understanding of the ABCD dataset; (ii) instructional techniques that enhance the validity and reproducibility of research methods; (iii) support of interdisciplinary, team-based collaborations; and (iv) dissemination of the course, project materials, and research findings. Our overall goal is to contribute to the generation of a cadre of investigators that are well trained in the techniques that support responsible, reproducible, and valid analyses of ABCD data.
   abstract_source: openalex
   key_findings: Describes ABCD-ReproNim, a NIBIB-P41/ReproNim partnered training program for responsible and reproducible analyses of ABCD Study data. Combines a semester-long online course (lectures, readings, exercises) using active-learning and hack-week pedagogy with an in-person team hackathon at Florida International University, and has reached 1.1K registered students and 18K+ YouTube views since 2020.
+- id: 10.64898/2026.05.31.729141
+  type: preprint
+  category: original-research
+  year: 2026
+  title: Brain states recur across diverse narrative contexts during longitudinal viewing
+  authors:
+  - Yibei Chen
+  - M Ghavami
+  - Marie St-Laurent
+  - Pierre Bellec
+  - Satrajit S Ghosh
+  venue: bioRxiv
+  doi: 10.64898/2026.05.31.729141
+  url: https://doi.org/10.64898/2026.05.31.729141
+  sources:
+  - europepmc
+  projects:
+  - brain-states
+  lab_authors:
+  - Yibei Chen
+  - Satrajit S Ghosh
+  topics:
+  - brain-dynamics-naturalistic
+  - neuroimaging-methods
+  abstract: 'What does the brain do during the continuous, varied experience of watching a story unfold? One account holds that the brain traverses a finite repertoire of recurring states, but whether that repertoire is a stable property of the individual or is reshaped by each new experience has not been tested across diverse naturalistic content within the same person. We characterized the dynamic brain-state repertoire in six individuals who watched the television series Friends across its six seasons during fMRI (up to ∼146 episodes, ∼54 hours per person). For each individual we fit a sticky hierarchical Dirichlet process hidden Markov model across all episodes, discovering brain states (recurring whole-brain activity patterns with characteristic coupling) without pre-specifying their number. Each individual’s brain visited roughly forty-five states arrayed along a continuous recurrence gradient, from states active in nearly every episode to episode-specific ones, with no sharp division between them. The repertoire was heterogeneous in why its states recurred: a minority locked to scan-run structure, the majority remaining eligible for content. Transitions were organized by the functional-connectivity similarity between states (per-individual Spearman ρ = 0.33–0.55) and, in most individuals, respected resting-state network boundaries. Episode content was associated with which states the brain occupied moment to moment. The recurrence ordering discovered in Friends transferred to state occupancy during other social-narrative films (five of six individuals) and attenuated as stimuli departed from that class, weakening for visual-only reading and audio-only listening. Across diverse narrative experience, the dynamic repertoire is a property of the individual: content varies which states are visited and when, not which states exist.'
+  abstract_source: publisher
+  key_findings: Fitting sticky hierarchical Dirichlet-process HMMs to fMRI from six individuals who each watched up to ~146 episodes (~54 h) of Friends, the brain's repertoire of recurring states is largely a stable, individual-specific property that recurs across diverse narrative contexts rather than being reshaped by each new story.
+- id: 10.64898/2026.02.18.705310
+  type: preprint
+  category: original-research
+  year: 2026
+  title: Multi-dimensional diffusion MRI at ultra-high gradient strength for mapping axonal architecture and microstructure in the primate brain
+  authors:
+  - Ting Gong
+  - Chiara Maffei
+  - Dohyun Sung
+  - Erica Bell
+  - Jingjing Wu
+  - Jingfei Shao
+  - E. W. Rosenblum
+  - Xiaobo Zeng
+  - Gabriel Ramos-Llordén
+  - A. Müller
+  - Mirsad Mahmutovic
+  - Boris Keil
+  - Kabilar Gunalan
+  - Satrajit S Ghosh
+  - Jean C. Augustinack
+  - Susie Y. Huang
+  - Suzanne N. Haber
+  - Anastasia Yendiki
+  venue: bioRxiv
+  doi: 10.64898/2026.02.18.705310
+  url: https://doi.org/10.64898/2026.02.18.705310
+  sources:
+  - europepmc
+  projects:
+  - linc
+  lab_authors:
+  - Kabilar Gunalan
+  - Satrajit S Ghosh
+  topics:
+  - connectomics-circuits
+  - neuroimaging-methods
+  abstract: We present the most comprehensive sampling of the macaque and human brain with diffusion MRI to date. As part of the BRAIN CONNECTS center for Large-scale Imaging of Neural Circuits, we leverage ultra-high-gradient MRI systems, including the first-of-its-kind Connectome 2.0, for post-mortem acquisitions. Each sample is imaged for ∼250 hours at multiple spatial resolutions down to 0.25 mm isotropic for whole macaque brains and 0.4 mm isotropic for human hemispheres. Our optimized protocols allow us to sample both species across ∼50 diffusion shells varying in b-value, diffusion time, and echo time, reaching ultra-high b-values up to 64000 s / mm 2 with high signal-to-noise ratio. We demonstrate that these multi-dimensional data resolve not only white matter connectional architecture but also cortical and subcortical cytoarchitectonic boundaries, at a level of detail previously inaccessible in whole-brain noninvasive imaging. As such, these data are an important resource for both technical development and basic and clinical neuroscience.
+  abstract_source: publisher
+  key_findings: Using ultra-high-gradient systems (including the Connectome 2.0 scanner) from the BRAIN CONNECTS / LINC center, the most comprehensive post-mortem diffusion-MRI sampling of macaque and human brain to date (~250 h/sample, resolutions to 0.25 mm, ~50 shells, b-values to 64,000 s/mm2) maps axonal architecture and microstructure across species.
+- id: 10.64898/2026.04.02.716198
+  type: preprint
+  category: original-research
+  year: 2026
+  title: Hierarchical X-ray microscopy and mesoscopic diffusion MRI in the same brain reveal the human connectome across scales
+  authors:
+  - Morgane Chourrout
+  - Ting Gong
+  - Richard Schalek
+  - A. Keenlyside
+  - Yaël Balbastre
+  - Neha Karlupia
+  - R. A. Gonzales
+  - Istvan N. Huszar
+  - E. Wanjau
+  - Joseph Brunet
+  - Timea Urban
+  - Hector Dejea
+  - David Stansby
+  - Kabilar Gunalan
+  - B. Glickman
+  - Edward Gaibor
+  - J. Scherick
+  - Kalliopi Bintsi
+  - C. Mauri
+  - C. Analoro
+  - Satrajit S Ghosh
+  - A. Bellier
+  - Bruce R. Fischl
+  - Jean Augustinack
+  - Paul Tafforeau
+  - Chiara Maffei
+  - Peter D. Lee
+  - Jeff W. Lichtman
+  - Anastasia Yendiki
+  - Claire L. Walsh
+  venue: bioRxiv
+  doi: 10.64898/2026.04.02.716198
+  url: https://doi.org/10.64898/2026.04.02.716198
+  sources:
+  - europepmc
+  projects:
+  - linc
+  lab_authors:
+  - Kabilar Gunalan
+  - Edward Gaibor
+  - Satrajit S Ghosh
+  topics:
+  - connectomics-circuits
+  - neuroimaging-methods
+  abstract: We present a multimodal pipeline for 3D imaging of cerebral white-matter archi-tecture across scales, from whole-brain axonal projections down to individual myelinated axons. After diffusion MRI, an adult ex vivo human hemisphere undergoes label-free imaging with Hierarchical Phase-Contrast Tomography (HiP-CT) from 20 µm/voxel in the whole hemisphere to 2 µm/voxel in areas of interest, with intrinsic cross-scale alignment. A 4 cm tissue block extracted from the hemisphere is reimaged with HiP-CT at 0.857 µm/voxel, enabling direct visualisation of single myelinated axons. After osmium staining, micro-CT at 0.364 µm/voxel and electron microscopy at 4 nm/voxel are acquired in biop-sies from the tissue block to validate the presence of myelinated axons in the label-free HiP-CT contrast. Spanning three orders of magnitude in resolution, these co-registered multimodal datasets bridge microscopic wiring and macro-scopic brain organisation, providing a foundation for anatomically grounded whole-brain connectomics.
+  abstract_source: publisher
+  key_findings: A multimodal pipeline images cerebral white matter in one ex vivo human hemisphere across scales - mesoscopic diffusion MRI, Hierarchical Phase-Contrast Tomography (HiP-CT, 20 -> 0.857 um/voxel), osmium micro-CT (0.364 um), and electron microscopy (4 nm) - with intrinsic cross-scale alignment, resolving from whole-brain axonal projections down to single myelinated axons.
+- id: 10.31222/osf.io/x64tn_v1
+  type: preprint
+  category: software
+  year: 2026
+  title: 'Neurobagel: building an international network for distributed data discovery'
+  authors:
+  - Sebastian G. W. Urchs
+  - Alan Dai
+  - Arman Jahanpour
+  - Michelle Wang
+  - Mathieu Dugré
+  - Nikhil Bhagwat
+  - Brent McPherson
+  - Julia Pfarr
+  - Emma van Heese
+  - Marina A. Laansma
+  - Emile d'Angremont
+  - Bianca Strasser-Kirchweger
+  - Camille Maumet
+  - Jeffrey S. Grethe
+  - Vincent Taschereau-Dumouchel
+  - Lyuba Zehl
+  - Gabriel A. Devenyi
+  - Florian Hutzler
+  - Sean N. Hatton
+  - Michael Hanke
+  - Erin W. Dickie
+  - Francois Jeanson
+  - Yaroslav O. Halchenko
+  - Christopher J Markiewicz
+  - Katie M. Lavigne
+  - Neda Jahanshad
+  - Paul Thompson
+  - David Keator
+  - Satrajit S Ghosh
+  - Russell A. Poldrack
+  - Stéphane Lehéricy
+  - Jan G. Bjaalie
+  - Franco Pestilli
+  - Dan N. Kennedy
+  - Ysbrand van der Werf
+  - Tristan Glatard
+  - M. Mallar Chakravarty
+  - Jean-Baptiste Poline
+  venue: OSF Preprints
+  doi: 10.31222/osf.io/x64tn_v1
+  url: https://doi.org/10.31222/osf.io/x64tn_v1
+  sources:
+  - europepmc
+  projects:
+  - repronim
+  lab_authors:
+  - Satrajit S Ghosh
+  - Christopher J Markiewicz
+  topics:
+  - open-data-standards
+  - reproducibility-tooling
+  - knowledge-graphs
+  abstract: International data privacy regulations impede the pooling of research data for collaborative analysis. We introduce Neurobagel, a federated network enabling cohort discovery across locally governed, access-controlled datasets. Through intuitive graphical tools and a decentralized query infrastructure, Neurobagel facilitates harmonization, control, and discovery of data according to local regulations. Today, Neurobagel is deployed by consortia and data platforms in Europe, North America, Asia, and Australia, supporting diverse and evolving regulatory frameworks.
+  abstract_source: publisher
+  key_findings: 'Introduces Neurobagel, a federated network for cohort discovery across locally governed, access-controlled datasets: graphical tools plus a decentralized query infrastructure let researchers harmonize and discover data under local privacy regulations, now deployed by consortia and platforms across four continents.'
