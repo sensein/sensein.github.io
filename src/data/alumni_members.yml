@@ -120,7 +120,7 @@
   info: Undergraduate Researcher
   email: vmoroz@mit.edu
   github: "Veronika271"
-  duration: 2025
+  duration: "2025"
   number_educ: 0
 - name: Harsha Gazula
   photo: /images/people/harsha-gazula.webp
@@ -135,7 +135,7 @@
   info: Visiting M.S. student from Technical University of Munich
   email: alina991@mit.edu
   github: "ALINA991"
-  duration: 2024
+  duration: "2024"
   number_educ: 1
   education1: M.S. Neuroengineering, Technichal University of Munich
 - name: Chaitanya Kapoor
@@ -143,7 +143,7 @@
   info: Visiting undergraduate student
   email: ckapoor@mit.edu
   github: "atomic-rooster"
-  duration: 2024
+  duration: "2024"
   number_educ: 1
   education1: B.E. in Electrical and Electronics Engineering, BITS Pilani
 - name: Daniel M. Low
@@ -396,7 +396,7 @@
 - name: Frances Mulligan (They/Them)
   photo: /images/people/frances-mulligan-they-them.webp
   info: Technical Assistant, worked on mumble melody and reproschema
-  duration: 2021
+  duration: "2021"
   number_educ: 1
   education1: B.S, Johnson & Wales University
 - name: Alice Bizeul
