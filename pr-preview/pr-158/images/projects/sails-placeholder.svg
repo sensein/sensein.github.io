@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">SAILS</title>
+  <style>
+    .bg { fill: none; }
+    .frame { fill: none; stroke: currentColor; stroke-width: 2; opacity: 0.25; }
+    .title { fill: currentColor; font: 600 64px/1.1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .sub { fill: currentColor; font: 400 28px/1.3 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; opacity: 0.65; }
+    .slug { fill: currentColor; font: 500 20px/1.0 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; opacity: 0.5; letter-spacing: 0.04em; }
+  </style>
+  <rect class="bg" width="1200" height="630"/>
+  <rect class="frame" x="40" y="40" width="1120" height="550" rx="16"/>
+  <text class="title" x="600" y="295" text-anchor="middle">SAILS</text>
+  <text class="sub" x="600" y="345" text-anchor="middle">Multi-modal AI for language and social communication</text>
+  <text class="slug" x="600" y="540" text-anchor="middle">sails</text>
+</svg>
