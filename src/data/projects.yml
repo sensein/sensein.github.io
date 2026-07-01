@@ -76,6 +76,7 @@
   - 10.1523/ENEURO.0486-24.2025    # Gillon et al. 2025, ODIN review
   - 10.1007/s12021-021-09557-0     # Poline et al. 2022, FAIR
 
+  - 10.64898/2026.03.05.709819     # Yáñez et al. 2026 cortical interneuron morphoelectrics (DANDI R24)
 - slug: bican-knowledgebase
   title: BICAN Knowledgebase (BrainKB)
   status: active

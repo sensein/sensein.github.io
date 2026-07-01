@@ -6238,3 +6238,31 @@
   abstract: International data privacy regulations impede the pooling of research data for collaborative analysis. We introduce Neurobagel, a federated network enabling cohort discovery across locally governed, access-controlled datasets. Through intuitive graphical tools and a decentralized query infrastructure, Neurobagel facilitates harmonization, control, and discovery of data according to local regulations. Today, Neurobagel is deployed by consortia and data platforms in Europe, North America, Asia, and Australia, supporting diverse and evolving regulatory frameworks.
   abstract_source: publisher
   key_findings: 'Introduces Neurobagel, a federated network for cohort discovery across locally governed, access-controlled datasets: graphical tools plus a decentralized query infrastructure let researchers harmonize and discover data under local privacy regulations, now deployed by consortia and platforms across four continents.'
+- id: 10.64898/2026.03.05.709819
+  type: preprint
+  category: original-research
+  year: 2026
+  title: Morphoelectric properties of inhibitory neurons shift gradually and regardless of cell type along the depth of the cerebral cortex
+  authors:
+  - Fatima Yáñez
+  - Fani Messore
+  - Guanxiao Qi
+  - Nima Dehghani
+  - Hanno S. Meyer
+  - Dirk Feldmeyer
+  - Bert Sakmann
+  - Marcel Oberlaender
+  venue: bioRxiv
+  doi: 10.64898/2026.03.05.709819
+  url: https://doi.org/10.64898/2026.03.05.709819
+  sources:
+  - europepmc
+  projects:
+  - dandi
+  lab_authors:
+  - Nima Dehghani
+  topics:
+  - connectomics-circuits
+  abstract: How can we understand the enormous diversity of the GABAergic inhibitory neurons in the cerebral cortex? To address this question, we quantify the electrophysiological and morphological properties of inhibitory neurons across the depth of an entire cortical column in the rat barrel cortex. We find properties that shift gradually with the cortical depth of the cell bodies across all inhibitory neurons, regardless of their cell types. By isolating morphoelectric variations from their shifts along the cortical depth, we find that the same simple relationships between morphoelectric properties distinguish between the four main molecular cell types of inhibitory neurons at any cortical depth, and in both the rat barrel cortex and mouse primary visual cortex. We provide converging evidence from dense electron-microscopic reconstructions of inhibitory neurons in the mouse visual cortex, and observe comparable depth-dependent shifts in additional datasets from the mouse primary motor cortex and the middle temporal gyrus of the human cortex. Our findings indicate that two different sources of morphoelectric variations can account for the diversity of cortical inhibitory neurons. The first source is molecular cell type-specific, but cortical depth-independent. The second source is cortical depth-dependent, but affects inhibitory neurons similarly across all cell types. We propose that intrinsic developmental specification vs. extrinsic environmental modulation leads to such a decoupling of inhibitory type-specific properties from gradual shifts of these properties with cortical depth.
+  abstract_source: publisher
+  key_findings: Quantifying electrophysiological and morphological properties of GABAergic inhibitory neurons across the full depth of a rat barrel-cortex column shows the properties shift gradually with cortical depth regardless of cell type; once depth-related shifts are isolated, consistent morphoelectric relationships distinguish the four main molecular interneuron types at any depth.
