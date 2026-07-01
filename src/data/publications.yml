@@ -6266,3 +6266,36 @@
   abstract: How can we understand the enormous diversity of the GABAergic inhibitory neurons in the cerebral cortex? To address this question, we quantify the electrophysiological and morphological properties of inhibitory neurons across the depth of an entire cortical column in the rat barrel cortex. We find properties that shift gradually with the cortical depth of the cell bodies across all inhibitory neurons, regardless of their cell types. By isolating morphoelectric variations from their shifts along the cortical depth, we find that the same simple relationships between morphoelectric properties distinguish between the four main molecular cell types of inhibitory neurons at any cortical depth, and in both the rat barrel cortex and mouse primary visual cortex. We provide converging evidence from dense electron-microscopic reconstructions of inhibitory neurons in the mouse visual cortex, and observe comparable depth-dependent shifts in additional datasets from the mouse primary motor cortex and the middle temporal gyrus of the human cortex. Our findings indicate that two different sources of morphoelectric variations can account for the diversity of cortical inhibitory neurons. The first source is molecular cell type-specific, but cortical depth-independent. The second source is cortical depth-dependent, but affects inhibitory neurons similarly across all cell types. We propose that intrinsic developmental specification vs. extrinsic environmental modulation leads to such a decoupling of inhibitory type-specific properties from gradual shifts of these properties with cortical depth.
   abstract_source: publisher
   key_findings: Quantifying electrophysiological and morphological properties of GABAergic inhibitory neurons across the full depth of a rat barrel-cortex column shows the properties shift gradually with cortical depth regardless of cell type; once depth-related shifts are isolated, consistent morphoelectric relationships distinguish the four main molecular interneuron types at any depth.
+- id: 10.7554/elife.111008
+  type: journal
+  category: original-research
+  year: 2026
+  title: Pregistered movie-fMRI analyses reveal altered visual feature encoding in autism in pSTS
+  authors:
+  - Jeff Mentch
+  - Yibei Chen
+  - Tamara Vanderwal
+  - Satrajit S Ghosh
+  venue: eLife
+  doi: 10.7554/elife.111008
+  url: https://doi.org/10.7554/elife.111008
+  sources:
+  - crossref
+  projects: []
+  lab_authors:
+  - Jeff Mentch
+  - Yibei Chen
+  - Satrajit S Ghosh
+  topics:
+  - brain-dynamics-naturalistic
+  - child-development-education
+  - neuroimaging-methods
+  preprints:
+  - id: 10.64898/2026.03.23.713749
+    venue: bioRxiv
+    url: https://doi.org/10.64898/2026.03.23.713749
+    year: 2026
+    doi: 10.64898/2026.03.23.713749
+  abstract: Sensory-perceptual differences are widely reported in autism, yet their underlying mechanisms remain unclear. We tested preregistered hypotheses using stacked encoding models applied to naturalistic movie-viewing fMRI from children and adolescents with and without an autism diagnosis from the Healthy Brain Network. We mapped cortical responsiveness to low- and high-level auditory and visual feature spaces. Contrary to enhanced perceptual functioning predictions, autism was not associated with increased low-level encoding in primary sensory cortices. Instead, autistic children and adolescents had reduced high-level visual representations and a relative shift toward low-level over high-level feature encoding in integration and social brain regions including the pSTS and adjacent face/social areas. In pSTS, this high-low weighting tracked Social Responsiveness Scale (SRS) scores. By contrast, audio-visual modality preference and sensory dominance were broadly conserved across groups. Developmentally, encoding exhibited strong, lateralized, modality-congruent age effects. Together, these findings favor weak central coherence accounts over early sensory enhancement.
+  abstract_source: crossref
+  key_findings: Preregistered stacked-encoding analyses of naturalistic movie-fMRI (Healthy Brain Network) show autism is not linked to enhanced low-level sensory encoding; instead, autistic children/adolescents show reduced high-level visual representations and a shift toward low-level encoding in integrative/social regions (notably pSTS), where the high-low weighting tracks Social Responsiveness Scale scores - favoring weak-central-coherence over early-sensory-enhancement accounts.
