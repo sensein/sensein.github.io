@@ -1,0 +1,35 @@
+name: Validate data
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "src/data/**"
+      - "schema/**"
+      - ".github/workflows/validate-data.yml"
+  pull_request:
+    paths:
+      - "src/data/**"
+      - "schema/**"
+      - ".github/workflows/validate-data.yml"
+
+jobs:
+  linkml-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install LinkML
+        run: pip install linkml pyyaml
+
+      - name: Compile schema (fails on schema errors)
+        run: gen-json-schema schema/sensein.yaml > /dev/null
+
+      - name: Validate site data against schema
+        run: python schema/validate_data.py

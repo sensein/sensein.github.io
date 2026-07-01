@@ -1,0 +1,964 @@
+id: https://w3id.org/sensein/website-schema
+name: sensein-website
+title: Senseable Intelligence Group Website Data Schema
+description: >-
+  LinkML schema for the structured YAML data that drives the Senseable
+  Intelligence Group website (people, collaborators, research projects,
+  publications, news, and page content). Classes are aligned to external
+  vocabularies via SKOS mapping predicates and typed against the W3C PROV-DM
+  as agents, activities, and entities. Used to validate the data files in
+  src/data/ in CI.
+license: https://creativecommons.org/licenses/by/4.0/
+default_range: string
+default_prefix: sensein
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  sensein: https://w3id.org/sensein/website-schema/
+  skos: http://www.w3.org/2004/02/skos/core#
+  dcterms: http://purl.org/dc/terms/
+  foaf: http://xmlns.com/foaf/0.1/
+  schema: http://schema.org/
+  prov: http://www.w3.org/ns/prov#
+  fabio: http://purl.org/spar/fabio/
+  bibo: http://purl.org/ontology/bibo/
+  prism: http://prismstandard.org/namespaces/basic/2.0/
+  org: http://www.w3.org/ns/org#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  wikidata: http://www.wikidata.org/entity/
+  xsd: http://www.w3.org/2001/XMLSchema#
+
+imports:
+  - linkml:types
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Classes
+# ─────────────────────────────────────────────────────────────────────────────
+classes:
+
+  # ---- PROV-DM mixins ----------------------------------------------------------
+  ProvenanceAgent:
+    abstract: true
+    mixin: true
+    description: >-
+      PROV-DM Agent mixin. A thing that bears responsibility for an activity or
+      the existence of an entity (here: people).
+    class_uri: prov:Agent
+    exact_mappings:
+      - prov:Agent
+
+  ProvenanceActivity:
+    abstract: true
+    mixin: true
+    description: >-
+      PROV-DM Activity mixin. Something that occurs over a period and acts upon
+      or with entities (here: research projects).
+    class_uri: prov:Activity
+    exact_mappings:
+      - prov:Activity
+
+  ProvenanceEntity:
+    abstract: true
+    mixin: true
+    description: >-
+      PROV-DM Entity mixin. A physical, digital, or conceptual thing (here:
+      publications, links, news items, page content).
+    class_uri: prov:Entity
+    exact_mappings:
+      - prov:Entity
+
+  # ---- People ------------------------------------------------------------------
+  TeamMember:
+    description: A current or former member (or student) of the group.
+    mixins:
+      - ProvenanceAgent
+    class_uri: foaf:Person
+    exact_mappings:
+      - foaf:Person
+      - schema:Person
+    close_mappings:
+      - prov:Person
+    slots:
+      - name
+      - photo
+      - info
+      - email
+      - github
+      - linkedin
+      - website
+      - scholar
+      - orcid
+      - twitter
+      - bluesky
+      - duration
+      - number_educ
+      - education1
+      - education2
+      - education3
+      - education4
+      - education5
+    slot_usage:
+      name:
+        required: true
+
+  Collaborator:
+    description: >-
+      A person the group has collaborated with, with their current institution
+      and the projects/efforts they contributed to.
+    mixins:
+      - ProvenanceAgent
+    class_uri: foaf:Person
+    exact_mappings:
+      - foaf:Person
+      - schema:Person
+    slots:
+      - name
+      - current_institution
+      - projects
+      - years
+      - note
+    slot_usage:
+      name:
+        required: true
+
+  # ---- Projects ----------------------------------------------------------------
+  Project:
+    description: A research project or programme the group runs or contributes to.
+    mixins:
+      - ProvenanceActivity
+    class_uri: schema:ResearchProject
+    exact_mappings:
+      - schema:ResearchProject
+    close_mappings:
+      - foaf:Project
+      - prov:Activity
+    slots:
+      - slug
+      - title
+      - status
+      - description
+      - funder
+      - image
+      - themes
+      - links
+      - contributors
+      - publications
+    slot_usage:
+      slug:
+        required: true
+        identifier: true
+      title:
+        required: true
+      status:
+        required: true
+
+  ProjectLink:
+    description: A labelled outbound hyperlink attached to a project.
+    mixins:
+      - ProvenanceEntity
+    class_uri: schema:WebPage
+    exact_mappings:
+      - schema:WebPage
+    related_mappings:
+      - rdfs:seeAlso
+    slots:
+      - label
+      - url
+
+  ProjectContributors:
+    description: >-
+      Grouping of the people associated with a project, split into current and
+      former lab members (resolved to roster links) and external collaborators.
+    class_uri: prov:Association
+    close_mappings:
+      - prov:Association
+      - schema:contributor
+    slots:
+      - current
+      - former
+      - external
+
+  # ---- Publications ------------------------------------------------------------
+  Publication:
+    description: >-
+      A publication or preprint in the curated corpus (the canonical record of
+      record; superseded preprints are attached via `preprints`).
+    mixins:
+      - ProvenanceEntity
+    class_uri: fabio:Expression
+    exact_mappings:
+      - schema:ScholarlyArticle
+    close_mappings:
+      - bibo:AcademicArticle
+      - fabio:Expression
+    slots:
+      - id
+      - type
+      - category
+      - year
+      - title
+      - authors
+      - venue
+      - doi
+      - pmid
+      - pmcid
+      - arxiv
+      - url
+      - pdf_url
+      - github
+      - sources
+      - projects
+      - lab_authors
+      - topics
+      - preprints
+      - cited_by
+      - abstract
+      - abstract_source
+      - key_findings
+    slot_usage:
+      id:
+        required: true
+        identifier: true
+      type:
+        required: true
+      category:
+        required: true
+      year:
+        required: true
+      title:
+        required: true
+      authors:
+        required: true
+      topics:
+        required: true
+
+  PreprintRef:
+    description: >-
+      A preprint precursor superseded by a published-of-record publication.
+    mixins:
+      - ProvenanceEntity
+    class_uri: fabio:Preprint
+    exact_mappings:
+      - fabio:Preprint
+    close_mappings:
+      - schema:ScholarlyArticle
+    slots:
+      - id
+      - venue
+      - url
+      - year
+      - doi
+      - arxiv
+    slot_usage:
+      id:
+        required: true
+
+  FeaturedPublication:
+    description: >-
+      A manually-curated highlight entry (legacy publist.yml) shown on the
+      home/publications pages.
+    mixins:
+      - ProvenanceEntity
+    class_uri: schema:ScholarlyArticle
+    exact_mappings:
+      - schema:ScholarlyArticle
+    close_mappings:
+      - bibo:AcademicArticle
+    slots:
+      - title
+      - image
+      - description
+      - authors
+      - type
+      - date
+      - link
+      - code link
+      - highlight
+      - news1
+      - news2
+    slot_usage:
+      title:
+        required: true
+      authors:
+        multivalued: false
+        range: string
+      type:
+        range: string
+
+  LinkDisplay:
+    description: A hyperlink with a display label (used by featured publications).
+    mixins:
+      - ProvenanceEntity
+    class_uri: schema:WebPage
+    exact_mappings:
+      - schema:WebPage
+    slots:
+      - url
+      - display
+
+  # ---- News --------------------------------------------------------------------
+  NewsItem:
+    description: A dated one-line news/announcement entry.
+    mixins:
+      - ProvenanceEntity
+    class_uri: schema:NewsArticle
+    exact_mappings:
+      - schema:NewsArticle
+    close_mappings:
+      - bibo:Note
+    slots:
+      - date
+      - headline
+    slot_usage:
+      date:
+        required: true
+      headline:
+        required: true
+
+  # ---- Publications page content ----------------------------------------------
+  PublicationsPage:
+    description: >-
+      Page content for /publications/ — summary text, a keyword cloud, and the
+      topic-area cards.
+    mixins:
+      - ProvenanceEntity
+    class_uri: schema:CollectionPage
+    exact_mappings:
+      - schema:CollectionPage
+    slots:
+      - summary
+      - keywords
+      - topics
+    slot_usage:
+      summary:
+        required: true
+      topics:
+        range: TopicArea
+        multivalued: true
+        inlined_as_list: true
+
+  TopicArea:
+    description: A research topic-area card that maps a label to a filter tag.
+    class_uri: skos:Concept
+    exact_mappings:
+      - skos:Concept
+    close_mappings:
+      - schema:DefinedTerm
+    slots:
+      - label
+      - tag
+      - description
+      - example_count
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Slots (with SKOS ontology alignment + PROV predicate slot_uris)
+# ─────────────────────────────────────────────────────────────────────────────
+slots:
+
+  name:
+    description: Full display name.
+    slot_uri: schema:name
+    exact_mappings:
+      - schema:name
+      - foaf:name
+    close_mappings:
+      - dcterms:title
+
+  photo:
+    description: Path to the person's photo under public/.
+    slot_uri: schema:image
+    exact_mappings:
+      - schema:image
+    close_mappings:
+      - foaf:depiction
+
+  info:
+    description: Short role / affiliation blurb.
+    slot_uri: schema:description
+    exact_mappings:
+      - schema:description
+    close_mappings:
+      - dcterms:description
+
+  email:
+    description: Contact email address.
+    slot_uri: schema:email
+    exact_mappings:
+      - schema:email
+    close_mappings:
+      - foaf:mbox
+
+  github:
+    description: GitHub username (no URL).
+    exact_mappings:
+      - schema:sameAs
+    related_mappings:
+      - foaf:account
+      - schema:codeRepository
+
+  linkedin:
+    description: LinkedIn profile URL.
+    exact_mappings:
+      - schema:sameAs
+    related_mappings:
+      - foaf:account
+
+  website:
+    description: Personal or lab homepage URL.
+    slot_uri: foaf:homepage
+    exact_mappings:
+      - foaf:homepage
+      - schema:url
+
+  scholar:
+    description: Google Scholar profile URL.
+    exact_mappings:
+      - schema:sameAs
+    related_mappings:
+      - foaf:account
+
+  orcid:
+    description: ORCID iD.
+    exact_mappings:
+      - schema:sameAs
+    related_mappings:
+      - wikidata:P496
+
+  twitter:
+    description: Twitter/X handle.
+    exact_mappings:
+      - schema:sameAs
+    related_mappings:
+      - foaf:account
+
+  bluesky:
+    description: Bluesky handle.
+    exact_mappings:
+      - schema:sameAs
+    related_mappings:
+      - foaf:account
+
+  duration:
+    description: Tenure span in the group, e.g. "2020 - 2025".
+    slot_uri: dcterms:temporal
+    close_mappings:
+      - dcterms:temporal
+      - prov:atTime
+
+  number_educ:
+    description: Count of populated education entries.
+    range: integer
+    related_mappings:
+      - schema:numberOfItems
+
+  education1:
+    description: Education / degree entry.
+    slot_uri: schema:alumniOf
+    exact_mappings:
+      - schema:alumniOf
+    close_mappings:
+      - dcterms:educationLevel
+  education2:
+    description: Education / degree entry.
+    slot_uri: schema:alumniOf
+    exact_mappings:
+      - schema:alumniOf
+  education3:
+    description: Education / degree entry.
+    slot_uri: schema:alumniOf
+    exact_mappings:
+      - schema:alumniOf
+  education4:
+    description: Education / degree entry.
+    slot_uri: schema:alumniOf
+    exact_mappings:
+      - schema:alumniOf
+  education5:
+    description: Education / degree entry.
+    slot_uri: schema:alumniOf
+    exact_mappings:
+      - schema:alumniOf
+
+  current_institution:
+    description: The collaborator's current home institution.
+    slot_uri: schema:affiliation
+    exact_mappings:
+      - schema:affiliation
+    close_mappings:
+      - org:memberOf
+      - prov:atLocation
+
+  projects:
+    description: >-
+      Project slugs / effort names this record is associated with. On a
+      publication this asserts the work was generated by those project
+      activities; on a collaborator, participation in them.
+    multivalued: true
+    slot_uri: prov:wasGeneratedBy
+    related_mappings:
+      - prov:wasGeneratedBy
+      - schema:isPartOf
+
+  years:
+    description: Rough year span of the collaboration.
+    slot_uri: prov:atTime
+    close_mappings:
+      - dcterms:temporal
+
+  note:
+    description: Free-text note.
+    slot_uri: skos:note
+    exact_mappings:
+      - skos:note
+    close_mappings:
+      - rdfs:comment
+
+  slug:
+    description: URL-safe stable identifier.
+    slot_uri: dcterms:identifier
+    exact_mappings:
+      - dcterms:identifier
+    close_mappings:
+      - schema:identifier
+
+  title:
+    description: Title.
+    slot_uri: dcterms:title
+    exact_mappings:
+      - dcterms:title
+      - schema:name
+
+  status:
+    description: Whether the project is active or former.
+    range: ProjectStatus
+    slot_uri: schema:creativeWorkStatus
+    exact_mappings:
+      - schema:creativeWorkStatus
+
+  description:
+    description: One-paragraph description.
+    slot_uri: dcterms:description
+    exact_mappings:
+      - dcterms:description
+      - schema:description
+
+  funder:
+    description: Grant / award identifier(s) with role and co-PIs.
+    slot_uri: schema:funder
+    exact_mappings:
+      - schema:funder
+    close_mappings:
+      - prov:wasAttributedTo
+
+  image:
+    description: Path to a representative image under public/.
+    slot_uri: schema:image
+    exact_mappings:
+      - schema:image
+
+  themes:
+    description: Filterable theme tags for the project.
+    multivalued: true
+    slot_uri: dcterms:subject
+    exact_mappings:
+      - dcterms:subject
+    close_mappings:
+      - schema:keywords
+
+  links:
+    description: Outbound links associated with the project.
+    multivalued: true
+    inlined_as_list: true
+    range: ProjectLink
+    related_mappings:
+      - rdfs:seeAlso
+      - schema:relatedLink
+
+  contributors:
+    description: People associated with the project.
+    range: ProjectContributors
+    inlined: true
+    slot_uri: prov:qualifiedAssociation
+    related_mappings:
+      - schema:contributor
+      - prov:wasAssociatedWith
+
+  publications:
+    description: Cross-reference ids into the publications corpus.
+    multivalued: true
+    slot_uri: prov:generated
+    related_mappings:
+      - prov:generated
+      - schema:workExample
+
+  label:
+    description: Human-readable label.
+    slot_uri: rdfs:label
+    exact_mappings:
+      - rdfs:label
+      - schema:name
+
+  url:
+    description: A URL.
+    slot_uri: schema:url
+    exact_mappings:
+      - schema:url
+    close_mappings:
+      - foaf:page
+
+  display:
+    description: Display text for a link.
+    slot_uri: rdfs:label
+    exact_mappings:
+      - rdfs:label
+
+  current:
+    description: Current lab members contributing to the project.
+    multivalued: true
+    slot_uri: prov:wasAssociatedWith
+    related_mappings:
+      - schema:member
+      - prov:wasAssociatedWith
+
+  former:
+    description: Former lab members who contributed to the project.
+    multivalued: true
+    slot_uri: prov:wasAssociatedWith
+    related_mappings:
+      - schema:alumni
+      - prov:wasAssociatedWith
+
+  external:
+    description: External (non-lab) collaborators, as plain text.
+    multivalued: true
+    related_mappings:
+      - schema:contributor
+      - prov:wasAssociatedWith
+
+  id:
+    description: Stable identifier (DOI, arXiv id, pmid:, or slug).
+    slot_uri: dcterms:identifier
+    exact_mappings:
+      - dcterms:identifier
+      - schema:identifier
+
+  type:
+    description: Publication form.
+    range: PublicationType
+    slot_uri: dcterms:type
+    exact_mappings:
+      - dcterms:type
+    close_mappings:
+      - schema:additionalType
+
+  category:
+    description: Coarse-grained kind of article (orthogonal to form).
+    range: PublicationCategory
+    slot_uri: dcterms:type
+    close_mappings:
+      - schema:genre
+      - fabio:hasPortrayalContext
+
+  year:
+    description: Publication year.
+    range: integer
+    slot_uri: dcterms:date
+    exact_mappings:
+      - fabio:hasPublicationYear
+    close_mappings:
+      - dcterms:date
+      - schema:datePublished
+
+  authors:
+    description: Ordered author display names.
+    multivalued: true
+    slot_uri: prov:wasAttributedTo
+    exact_mappings:
+      - schema:author
+      - dcterms:creator
+    close_mappings:
+      - bibo:authorList
+
+  venue:
+    description: Publication venue (journal, conference, or server).
+    slot_uri: prism:publicationName
+    exact_mappings:
+      - prism:publicationName
+    close_mappings:
+      - dcterms:isPartOf
+      - schema:isPartOf
+
+  doi:
+    description: Digital Object Identifier.
+    slot_uri: prism:doi
+    exact_mappings:
+      - prism:doi
+      - bibo:doi
+    related_mappings:
+      - wikidata:P356
+
+  pmid:
+    description: PubMed identifier.
+    related_mappings:
+      - wikidata:P698
+
+  pmcid:
+    description: PubMed Central identifier.
+    related_mappings:
+      - wikidata:P932
+
+  arxiv:
+    description: arXiv identifier.
+    related_mappings:
+      - wikidata:P818
+
+  pdf_url:
+    description: Direct link to an open-access PDF.
+    slot_uri: schema:url
+    exact_mappings:
+      - schema:url
+    close_mappings:
+      - fabio:hasManifestation
+
+  sources:
+    description: Data sources the record was compiled from.
+    multivalued: true
+    slot_uri: prov:wasDerivedFrom
+    related_mappings:
+      - prov:wasDerivedFrom
+      - dcterms:source
+
+  lab_authors:
+    description: Authors who are (or were) lab members.
+    multivalued: true
+    slot_uri: prov:wasAttributedTo
+    close_mappings:
+      - schema:author
+
+  topics:
+    description: Canonical topic tags for the publication.
+    multivalued: true
+    slot_uri: dcterms:subject
+    exact_mappings:
+      - dcterms:subject
+    close_mappings:
+      - schema:about
+
+  preprints:
+    description: Preprint precursors superseded by this record.
+    multivalued: true
+    inlined_as_list: true
+    range: PreprintRef
+    slot_uri: prov:wasRevisionOf
+    related_mappings:
+      - prov:wasRevisionOf
+      - fabio:hasPreVersion
+
+  cited_by:
+    description: Citation count.
+    range: integer
+    close_mappings:
+      - schema:citation
+    related_mappings:
+      - fabio:hasSubjectTerm
+
+  abstract:
+    description: Verbatim abstract from an authoritative source.
+    slot_uri: dcterms:abstract
+    exact_mappings:
+      - dcterms:abstract
+      - bibo:abstract
+
+  abstract_source:
+    description: Which authoritative source the abstract came from.
+    range: AbstractSource
+    slot_uri: dcterms:source
+    related_mappings:
+      - prov:wasDerivedFrom
+      - dcterms:source
+
+  key_findings:
+    description: Short derived summary of the main contribution.
+    close_mappings:
+      - schema:abstract
+    related_mappings:
+      - dcterms:description
+
+  date:
+    description: Date string.
+    slot_uri: dcterms:date
+    exact_mappings:
+      - dcterms:date
+    close_mappings:
+      - schema:datePublished
+
+  link:
+    description: Primary link with display text.
+    range: LinkDisplay
+    inlined: true
+    slot_uri: schema:url
+    related_mappings:
+      - schema:url
+      - rdfs:seeAlso
+
+  code link:
+    description: Link to associated code with display text.
+    range: LinkDisplay
+    inlined: true
+    related_mappings:
+      - schema:codeRepository
+
+  highlight:
+    description: Highlight rank / flag.
+    range: integer
+    close_mappings:
+      - schema:position
+
+  news1:
+    description: Associated news snippet (HTML).
+    close_mappings:
+      - schema:comment
+      - bibo:Note
+
+  news2:
+    description: Associated news snippet (HTML).
+    close_mappings:
+      - schema:comment
+      - bibo:Note
+
+  headline:
+    description: News headline text.
+    slot_uri: schema:headline
+    exact_mappings:
+      - schema:headline
+    close_mappings:
+      - dcterms:title
+
+  summary:
+    description: Page summary text.
+    slot_uri: dcterms:abstract
+    exact_mappings:
+      - schema:abstract
+    close_mappings:
+      - dcterms:description
+
+  keywords:
+    description: Keyword cloud for the publications page.
+    multivalued: true
+    slot_uri: schema:keywords
+    exact_mappings:
+      - schema:keywords
+      - dcterms:subject
+
+  tag:
+    description: Canonical filter tag for a topic area.
+    slot_uri: skos:notation
+    exact_mappings:
+      - skos:notation
+    close_mappings:
+      - dcterms:subject
+
+  example_count:
+    description: Number of publications carrying this topic tag.
+    range: integer
+    close_mappings:
+      - schema:numberOfItems
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Enums (every permissible value carries a `meaning` ontology binding)
+# ─────────────────────────────────────────────────────────────────────────────
+enums:
+
+  ProjectStatus:
+    description: Lifecycle status of a project.
+    permissible_values:
+      active:
+        description: Ongoing project.
+        meaning: schema:ActiveActionStatus
+      former:
+        description: Completed or paused project.
+        meaning: schema:CompletedActionStatus
+
+  PublicationType:
+    description: The bibliographic form of a publication.
+    permissible_values:
+      journal:
+        description: Peer-reviewed journal article.
+        meaning: fabio:JournalArticle
+      preprint:
+        description: Preprint.
+        meaning: fabio:Preprint
+      conference:
+        description: Conference paper.
+        meaning: fabio:ConferencePaper
+      chapter:
+        description: Book chapter.
+        meaning: fabio:BookChapter
+      workshop:
+        description: Workshop paper.
+        meaning: fabio:ConferencePaper
+      software:
+        description: Software release.
+        meaning: schema:SoftwareSourceCode
+      patent:
+        description: Patent.
+        meaning: fabio:Patent
+      dataset:
+        description: Dataset.
+        meaning: schema:Dataset
+
+  PublicationCategory:
+    description: Coarse-grained kind of article, orthogonal to form.
+    permissible_values:
+      original-research:
+        description: Original research paper.
+        meaning: fabio:ResearchPaper
+      methods:
+        description: Methods paper.
+        meaning: fabio:ResearchPaper
+      software:
+        description: Software paper.
+        meaning: schema:SoftwareSourceCode
+      review:
+        description: Review article.
+        meaning: fabio:ReviewArticle
+      perspective:
+        description: Perspective piece.
+        meaning: fabio:Comment
+      commentary:
+        description: Commentary.
+        meaning: fabio:Comment
+      editorial:
+        description: Editorial.
+        meaning: fabio:Editorial
+      dataset:
+        description: Dataset descriptor.
+        meaning: schema:Dataset
+      benchmark:
+        description: Benchmark study.
+        meaning: fabio:ResearchPaper
+      tutorial:
+        description: Tutorial / educational resource.
+        meaning: schema:LearningResource
+
+  AbstractSource:
+    description: Authoritative source an abstract was pulled from.
+    permissible_values:
+      pubmed:
+        description: PubMed.
+        meaning: wikidata:Q180686
+      pmc:
+        description: PubMed Central.
+        meaning: wikidata:Q229883
+      arxiv:
+        description: arXiv.
+        meaning: wikidata:Q118398
+      openalex:
+        description: OpenAlex.
+        meaning: wikidata:Q107507571
+      crossref:
+        description: Crossref.
+        meaning: wikidata:Q5188229
+      publisher:
+        description: Publisher's website.
+        meaning: schema:Organization
