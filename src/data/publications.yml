@@ -552,10 +552,10 @@
   abstract: The 2024 Voice AI Symposium presented by the Bridge2AI-Voice Consortium, was a 2-day event which took place May 1st-May 2nd in Tampa, FL. The event included four interactive panel sessions, which are summarized here. All four interactive panels featured an innovative format, designed to maximize engagement and facilitate deep discussions. Each panel began with a 45 min segment where moderators posed targeted questions to expert panelists, delving into complex topics within the field of voice AI. This was followed by a 45 min "stakeholder forum," during which audience members asked questions and engaged in live interactive polls. Interactive polls stimulated meaningful conversation between panelists and attendees, and brought to light diverse viewpoints. Workshops were audio recorded and transcripts were assembled with assistance from generative A.I tools including Whisper Version 7.13.1 for audio transcription and ChatGPT version 4.0 for content summation. Content was then reviewed and edited by authors.
   abstract_source: pubmed
   key_findings: Four interactive panel sessions at the 2024 Bridge2AI Voice AI Symposium combined expert discussion with audience polls to surface diverse stakeholder perspectives on voice-AI research; the paper summarises these panels, with transcripts assembled using Whisper and ChatGPT and reviewed by the authors.
-- id: 10.1101/2025.10.23.25338518
-  type: preprint
+- id: 10.1159/000553327
+  type: journal
   category: original-research
-  year: 2025
+  year: 2026
   title: 'Consensus-Based Definitions for Vocal Biomarkers: The International VOCAL Initiative'
   authors:
   - Mégane Pizzimenti
@@ -583,13 +583,14 @@
   - Jean‐Christophe Bélisle‐Pipon
   - Yaël Bensoussan
   - Guy Fagherazzi
-  venue: medRxiv
-  doi: 10.1101/2025.10.23.25338518
+  venue: Digital Biomarkers
+  doi: 10.1159/000553327
   pmid: '41404273'
-  url: https://doi.org/10.1101/2025.10.23.25338518
+  url: https://doi.org/10.1159/000553327
   pdf_url: https://www.medrxiv.org/content/medrxiv/early/2025/10/28/2025.10.23.25338518.full.pdf
   sources:
   - openalex
+  - crossref
   projects: []
   lab_authors:
   - Satrajit S Ghosh
@@ -600,6 +601,12 @@
   abstract: "IMPORTANCE: Voice-based health technologies are growing rapidly, but they lack standardized terminology, which hinders interdisciplinary collaboration, research quality, and clinical translation. OBJECTIVE: The objective of this work is to develop universally accepted definitions in the rapidly evolving field of vocal biomarkers, as part of the VOCAL (Vocal Biomarker Guidelines for Ontology, Classification, Application, and Logistics) initiative, a structured, international consensus-based framework that aims to provide standards, and guidelines. DESIGN: VOCAL is a rigorous, international, multi-stage consensus-building study conducted in 2024-2025. SETTING: Multi-institutional collaboration between representatives from the Bridge2AI-Voice Consortium (North America) and the eVoiceNet Network (European Union), culminating in an in person workshop at the 2025 Bridge2AI Voice Symposium. PARTICIPANTS: A group of 24 international experts in medicine, clinical research, speech and language, audio signal processing, statistics, methodology, regulation, ethics. METHODS: VOCAL's iterative process involved five rounds of review, feedback, and an in-person workshop at the international 2025 Bridge2AI Voice Symposium, ensuring the incorporation of diverse perspectives and achieving a robust agreement on the proposed definitions. MAIN OUTCOMES AND MEASURES: Consensus-based definitions for vocal biomarkers, spanning from broad concepts (biomarker, digital biomarker, vocal biomarker) to domain-specific measures (cardio-respiratory acoustic, voice, speech/articulatory, cognitive/language). RESULTS: A hierarchical continuum model of vocal biomarkers was established. We first distinguished between the concepts of vocal measures and vocal biomarkers. We then defined terms from broad, overarching concepts (Level 0: Biomarker, Digital Biomarker, Vocal Biomarker) to more specific physiological and cognitive domains (Level 1: Cardio-Respiratory Acoustic; Level 2: Voice; Level 3: Speech/Articulatory; Level 4: Cognitive/Language, including linguistic and paralinguistic subtypes). CONCLUSIONS AND RELEVANCE: This work provides a shared vocabulary that is essential for fostering communication through interdisciplinary collaboration, improving the quality and efficiency of research and development, and ensuring the ethical, reliable, and scalable deployment of future voice-based health technologies. It lays foundational groundwork for upcoming guidelines and standards, which are crucial for advancing the field of vocal biomarkers into widespread clinical utility."
   abstract_source: pubmed
   key_findings: Through five rounds of review and an in-person workshop, 24 international experts in the VOCAL initiative produced consensus, hierarchical definitions for vocal biomarkers — from broad biomarker concepts down to cardio-respiratory, voice, articulatory, and cognitive/language levels — to standardise terminology for clinical voice-AI development.
+  preprints:
+  - id: 10.1101/2025.10.23.25338518
+    venue: medRxiv
+    url: https://doi.org/10.1101/2025.10.23.25338518
+    year: 2025
+    doi: 10.1101/2025.10.23.25338518
 - id: 10.1101/2025.07.17.665306
   type: preprint
   category: original-research
