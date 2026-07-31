@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="sails-title">
+  <title id="sails-title">SAILS — Into the Wild: automated quantification of autism-relevant behaviors from naturalistic home videos</title>
+  <defs>
+    <style>
+      .ink { fill: currentColor; }
+      .muted { fill: currentColor; opacity: 0.6; }
+      .faint { fill: currentColor; opacity: 0.4; }
+      .stroke-soft { fill: none; stroke: currentColor; stroke-width: 1.5; opacity: 0.35; }
+      .stroke-arrow { fill: none; stroke: currentColor; stroke-width: 1.6; opacity: 0.55; }
+      .step1 { fill: rgb(252 218 226); stroke: rgb(220 90 110); stroke-width: 1.4; }
+      .step2 { fill: rgb(253 241 197); stroke: rgb(206 165 60);  stroke-width: 1.4; }
+      .step3 { fill: rgb(206 222 244); stroke: rgb(86 130 188);  stroke-width: 1.4; }
+      .step4 { fill: rgb(198 230 210); stroke: rgb(82 158 110);  stroke-width: 1.4; }
+      .label { font: 600 18px/1.2 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto; fill: rgb(40 45 55); }
+      .title { font: 700 28px/1.2 ui-serif, Georgia, "Times New Roman", serif; fill: currentColor; }
+      .sub { font: 500 15px/1.3 ui-sans-serif, system-ui, -apple-system; fill: currentColor; opacity: 0.65; }
+      .stage-num { font: 700 13px/1 ui-sans-serif, system-ui; fill: rgb(40 45 55); }
+      .chip { font: 500 12px/1 ui-sans-serif, system-ui, -apple-system; fill: currentColor; opacity: 0.75; }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="none"/>
+
+  <!-- Header -->
+  <text class="title" x="60" y="62">SAILS — Speech &amp; Action In-home Learning System</text>
+  <text class="sub"   x="60" y="92">Into the Wild: automated quantification of autism-relevant behaviors from naturalistic home videos</text>
+
+  <!-- Pipeline lane -->
+  <g transform="translate(60 150)">
+    <!-- Stage 1: Data Collection -->
+    <g>
+      <rect class="step1" x="0"   y="0" width="240" height="80" rx="12"/>
+      <circle cx="22" cy="40" r="13" fill="white" stroke="rgb(40 45 55)" stroke-width="1.4"/>
+      <text class="stage-num" x="22" y="44" text-anchor="middle">1</text>
+      <text class="label" x="125" y="38" text-anchor="middle">Data</text>
+      <text class="label" x="125" y="60" text-anchor="middle">Collection</text>
+      <text class="chip" x="0"   y="106">SPARK Research Match</text>
+      <text class="chip" x="0"   y="124">Parent Questionnaires</text>
+      <text class="chip" x="0"   y="142">Home Video Uploads</text>
+      <text class="chip" x="0"   y="160">Remote Language Assessment</text>
+    </g>
+
+    <!-- Arrow -->
+    <path class="stroke-arrow" d="M250 40 L268 40" marker-end="url(#arrow)"/>
+
+    <!-- Stage 2: Quality Checks -->
+    <g transform="translate(278 0)">
+      <rect class="step2" x="0" y="0" width="240" height="80" rx="12"/>
+      <circle cx="22" cy="40" r="13" fill="white" stroke="rgb(40 45 55)" stroke-width="1.4"/>
+      <text class="stage-num" x="22" y="44" text-anchor="middle">2</text>
+      <text class="label" x="130" y="38" text-anchor="middle">Video Quality</text>
+      <text class="label" x="130" y="60" text-anchor="middle">Checks</text>
+      <text class="chip" x="0" y="106">Metadata extraction</text>
+      <text class="chip" x="0" y="124">Human Checks</text>
+    </g>
+
+    <!-- Arrow -->
+    <path class="stroke-arrow" d="M528 40 L546 40" marker-end="url(#arrow)"/>
+
+    <!-- Stage 3: Human Annotation -->
+    <g transform="translate(556 0)">
+      <rect class="step3" x="0" y="0" width="280" height="80" rx="12"/>
+      <circle cx="22" cy="40" r="13" fill="white" stroke="rgb(40 45 55)" stroke-width="1.4"/>
+      <text class="stage-num" x="22" y="44" text-anchor="middle">3</text>
+      <text class="label" x="150" y="38" text-anchor="middle">Human Annotation</text>
+      <text class="label" x="150" y="60" text-anchor="middle">= Ground truth</text>
+      <text class="chip" x="0" y="106">Annotation Manual</text>
+      <text class="chip" x="0" y="124">Trained Human Annotators</text>
+      <text class="chip" x="0" y="142">Reliability (ICC) Checks</text>
+    </g>
+
+    <!-- Arrow -->
+    <path class="stroke-arrow" d="M846 40 L864 40" marker-end="url(#arrow)"/>
+
+    <!-- Stage 4: Automated Quantification -->
+    <g transform="translate(874 0)">
+      <rect class="step4" x="0" y="0" width="206" height="80" rx="12"/>
+      <circle cx="22" cy="40" r="13" fill="white" stroke="rgb(40 45 55)" stroke-width="1.4"/>
+      <text class="stage-num" x="22" y="44" text-anchor="middle">4</text>
+      <text class="label" x="116" y="38" text-anchor="middle">Automated</text>
+      <text class="label" x="116" y="60" text-anchor="middle">Quantification</text>
+      <text class="chip" x="0" y="106">Uniform-frame extractor</text>
+      <text class="chip" x="0" y="124">VLM model · structured JSON</text>
+      <text class="chip" x="0" y="142">Video-level prediction</text>
+    </g>
+  </g>
+
+  <!-- VLM mini-flow at bottom -->
+  <g transform="translate(60 420)">
+    <text class="sub" x="0" y="0" style="font-size:13px; opacity:0.7;">Stage 4 — VLM scoring</text>
+    <g transform="translate(0 14)">
+      <rect class="stroke-soft" x="0"   y="0" width="110" height="34" rx="6"/>
+      <text class="chip" x="55"  y="22" text-anchor="middle">video</text>
+      <path class="stroke-arrow" d="M114 17 L132 17" marker-end="url(#arrow)"/>
+
+      <rect class="stroke-soft" x="138" y="0" width="140" height="34" rx="6"/>
+      <text class="chip" x="208" y="22" text-anchor="middle">uniform frames</text>
+      <path class="stroke-arrow" d="M282 17 L300 17" marker-end="url(#arrow)"/>
+
+      <rect class="stroke-soft" x="306" y="0" width="120" height="34" rx="6"/>
+      <text class="chip" x="366" y="22" text-anchor="middle">24 frames</text>
+      <path class="stroke-arrow" d="M430 17 L448 17" marker-end="url(#arrow)"/>
+
+      <rect class="stroke-soft" x="454" y="0" width="120" height="34" rx="6"/>
+      <text class="chip" x="514" y="22" text-anchor="middle">VLM model</text>
+      <path class="stroke-arrow" d="M578 17 L596 17" marker-end="url(#arrow)"/>
+
+      <rect class="stroke-soft" x="602" y="0" width="120" height="34" rx="6"/>
+      <text class="chip" x="662" y="22" text-anchor="middle">format check</text>
+      <path class="stroke-arrow" d="M726 17 L744 17" marker-end="url(#arrow)"/>
+
+      <rect class="stroke-soft" x="750" y="0" width="190" height="34" rx="6"/>
+      <text class="chip" x="845" y="22" text-anchor="middle">video-level prediction</text>
+    </g>
+    <text class="chip" x="306" y="64" style="opacity:0.55;">prompt → structured JSON</text>
+  </g>
+
+  <!-- Funder line -->
+  <text class="muted" x="60" y="560" style="font:500 14px ui-sans-serif, system-ui;">
+    Simons Foundation · Kennedy Krieger Institute · MIT McGovern Institute · Senseable Intelligence Group
+  </text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="currentColor" opacity="0.55"/>
+    </marker>
+  </defs>
+</svg>

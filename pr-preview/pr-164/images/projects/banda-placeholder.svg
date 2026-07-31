@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">BANDA — Boston Adolescent Neuroimaging of Depression and Anxiety</title>
+  <defs>
+    <style>
+      .frame { fill: none; stroke: currentColor; stroke-width: 1.5; opacity: 0.25; }
+      .title { fill: currentColor; font: 700 30px/1.1 ui-serif, Georgia, "Times New Roman", serif; }
+      .sub { fill: currentColor; font: 500 15px/1.3 ui-sans-serif, system-ui, -apple-system; opacity: 0.65; }
+      .stat-num { fill: currentColor; font: 700 40px/1 ui-sans-serif, system-ui; }
+      .stat-lbl { fill: currentColor; font: 500 13px/1.2 ui-sans-serif, system-ui; opacity: 0.6; }
+      .mod { fill: currentColor; font: 500 13px/1 ui-sans-serif, system-ui; opacity: 0.8; }
+      .node { fill: none; stroke: currentColor; stroke-width: 1.2; opacity: 0.4; }
+      .edge { stroke: #5b8def; stroke-width: 1; opacity: 0.4; fill: none; }
+      .dot  { fill: #5b8def; opacity: 0.75; }
+      .dot2 { fill: #f08560; opacity: 0.75; }
+    </style>
+  </defs>
+  <rect width="1200" height="630" fill="none"/>
+
+  <text class="title" x="60" y="66">BANDA</text>
+  <text class="sub"   x="60" y="96">Boston Adolescent Neuroimaging of Depression and Anxiety · a Human Connectome Project arm</text>
+
+  <!-- Connectome ring (left) -->
+  <g transform="translate(310 380)">
+    <circle class="frame" cx="0" cy="0" r="150"/>
+    <!-- nodes around the ring -->
+    <g>
+      <circle class="dot"  cx="150"   cy="0"    r="6"/>
+      <circle class="dot"  cx="106"   cy="106"  r="6"/>
+      <circle class="dot"  cx="0"     cy="150"  r="6"/>
+      <circle class="dot"  cx="-106"  cy="106"  r="6"/>
+      <circle class="dot"  cx="-150"  cy="0"    r="6"/>
+      <circle class="dot"  cx="-106"  cy="-106" r="6"/>
+      <circle class="dot2" cx="0"     cy="-150" r="6"/>
+      <circle class="dot"  cx="106"   cy="-106" r="6"/>
+      <circle class="dot2" cx="75"    cy="55"   r="5"/>
+      <circle class="dot"  cx="-75"   cy="55"   r="5"/>
+      <circle class="dot"  cx="-55"   cy="-75"  r="5"/>
+      <circle class="dot2" cx="55"    cy="-75"  r="5"/>
+    </g>
+    <!-- edges (functional connectivity) -->
+    <path class="edge" d="M150 0 L-106 106"/>
+    <path class="edge" d="M106 106 L-150 0"/>
+    <path class="edge" d="M0 150 L0 -150"/>
+    <path class="edge" d="M-106 106 L106 -106"/>
+    <path class="edge" d="M-150 0 L106 106"/>
+    <path class="edge" d="M75 55 L-55 -75"/>
+    <path class="edge" d="M-75 55 L55 -75"/>
+    <path class="edge" d="M0 -150 L-106 106"/>
+    <path class="edge" d="M150 0 L0 150"/>
+  </g>
+
+  <!-- Stats + modalities (right) -->
+  <g transform="translate(620 200)">
+    <text class="stat-num" x="0"   y="40">215</text>
+    <text class="stat-lbl" x="0"   y="62">adolescents (14–17)</text>
+    <text class="stat-num" x="240" y="40">152</text>
+    <text class="stat-lbl" x="240" y="62">with anxiety / depression</text>
+
+    <g transform="translate(0 120)">
+      <text class="stat-lbl" x="0" y="0" style="text-transform:uppercase; letter-spacing:0.1em;">Modalities</text>
+      <rect class="node" x="0"   y="16" width="150" height="34" rx="8"/>
+      <text class="mod" x="75"  y="38" text-anchor="middle">structural T1/T2</text>
+      <rect class="node" x="162" y="16" width="180" height="34" rx="8"/>
+      <text class="mod" x="252" y="38" text-anchor="middle">resting + task fMRI</text>
+      <rect class="node" x="0"   y="58" width="150" height="34" rx="8"/>
+      <text class="mod" x="75"  y="80" text-anchor="middle">diffusion MRI</text>
+      <rect class="node" x="162" y="58" width="180" height="34" rx="8"/>
+      <text class="mod" x="252" y="80" text-anchor="middle">clinical + neuropsych</text>
+    </g>
+
+    <text class="stat-lbl" x="0" y="250">HCP minimally-preprocessed + unprocessed data · CRHD initiative</text>
+  </g>
+</svg>
