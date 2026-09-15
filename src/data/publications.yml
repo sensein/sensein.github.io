@@ -6277,10 +6277,10 @@
   abstract: Sensory-perceptual differences are widely reported in autism, yet their underlying mechanisms remain unclear. We tested preregistered hypotheses using stacked encoding models applied to naturalistic movie-viewing fMRI from children and adolescents with and without an autism diagnosis from the Healthy Brain Network. We mapped cortical responsiveness to low- and high-level auditory and visual feature spaces. Contrary to enhanced perceptual functioning predictions, autism was not associated with increased low-level encoding in primary sensory cortices. Instead, autistic children and adolescents had reduced high-level visual representations and a relative shift toward low-level over high-level feature encoding in integration and social brain regions including the pSTS and adjacent face/social areas. In pSTS, this high-low weighting tracked Social Responsiveness Scale (SRS) scores. By contrast, audio-visual modality preference and sensory dominance were broadly conserved across groups. Developmentally, encoding exhibited strong, lateralized, modality-congruent age effects. Together, these findings favor weak central coherence accounts over early sensory enhancement.
   abstract_source: crossref
   key_findings: Preregistered stacked-encoding analyses of naturalistic movie-fMRI (Healthy Brain Network) show autism is not linked to enhanced low-level sensory encoding; instead, autistic children/adolescents show reduced high-level visual representations and a shift toward low-level encoding in integrative/social regions (notably pSTS), where the high-low weighting tracks Social Responsiveness Scale scores - favoring weak-central-coherence over early-sensory-enhancement accounts.
-- id: 10.64898/2025.12.23.696301
-  type: preprint
+- id: 10.1073/pnas.2608875123
+  type: journal
   category: original-research
-  year: 2025
+  year: 2026
   title: Functional fractionation of large-scale brain networks in the human subcortex
   authors:
   - Jian Li
@@ -6294,11 +6294,14 @@
   - Bruce Fischl
   - Hannah C. Kinney
   - Brian L. Edlow
-  venue: bioRxiv
-  doi: 10.64898/2025.12.23.696301
-  url: https://doi.org/10.64898/2025.12.23.696301
+  venue: Proceedings of the National Academy of Sciences
+  doi: 10.1073/pnas.2608875123
+  pmid: '42673458'
+  pmcid: PMC13552871
+  url: https://doi.org/10.1073/pnas.2608875123
   sources:
-  - europepmc
+  - pubmed
+  - crossref
   projects: []
   lab_authors:
   - Satrajit S Ghosh
@@ -6306,5 +6309,11 @@
   - connectomics-circuits
   - neuroimaging-methods
   abstract: Brain network mapping plays a crucial role in advancing our understanding of human brain organization and the neuroanatomic foundations of cognition. Historically, the identification of large-scale brain networks has focused on the cerebral cortex. In contrast, functional mapping of large-scale brain networks within subcortical regions remains an emerging and challenging field, hindered by a low signal-to-noise ratio in subcortical functional MRI data and an inability to distinguish networks with substantial spatiotemporal overlap. In this study, we fractionated and identified fifteen spatially overlapped and temporally correlated subnetworks, which can be categorized into four large-scale brain networks, with widely connected hub nodes in the caudate, putamen, hippocampus, and thalamus. These subnetworks are highly reproducible across healthy human brains and provide normative functional atlases, released as a community resource. As a proof of principle, the spatial patterns of the subnetworks predict the level of consciousness in patients with severe traumatic brain injury.
-  abstract_source: publisher
+  abstract_source: pubmed
   key_findings: Fractionates subcortical fMRI into fifteen spatially overlapping, temporally correlated subnetworks grouping into four large-scale networks, with hubs in caudate, putamen, hippocampus, and thalamus; the reproducible normative atlases are released as a resource, and their spatial patterns predict level of consciousness in severe traumatic brain injury.
+  preprints:
+  - id: 10.64898/2025.12.23.696301
+    venue: bioRxiv
+    url: https://doi.org/10.64898/2025.12.23.696301
+    year: 2025
+    doi: 10.64898/2025.12.23.696301
