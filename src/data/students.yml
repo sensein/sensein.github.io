@@ -6,3 +6,13 @@
 #   email: name@mit.edu
 #   number_educ: 1
 #   education1: Degree, Institution
+
+- name: Marta da Rocha Diogo
+  photo: /images/people/marta-da-rocha-diogo.webp
+  info: >
+    Visiting Student; PhD Researcher, Department of Law, European University
+    Institute, working on the legal protection of the mind and brain as
+    components of personal identity
+  email: marta.darochadiogo@eui.eu
+  website: "https://www.eui.eu/people?id=marta-da-rocha-diogo"
+  number_educ: 0
