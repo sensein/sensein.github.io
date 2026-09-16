@@ -1,3 +1,29 @@
+- id: 10.48550/arxiv.2606.11415
+  type: preprint
+  category: methods
+  year: 2026
+  title: Spatially Masked Regression Reveals Local and Distributed Predictability in Electrophysiological Recordings
+  authors:
+  - Maryam Ostadsharif Memar
+  - Nima Dehghani
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2606.11415
+  arxiv: '2606.11415'
+  pmid: '42339492'
+  pmcid: PMC13286020
+  url: https://doi.org/10.48550/arxiv.2606.11415
+  pdf_url: https://arxiv.org/pdf/2606.11415
+  sources:
+  - ncbi
+  - arxiv
+  projects: []
+  lab_authors:
+  - Nima Dehghani
+  topics:
+  - connectomics-circuits
+  abstract: "Neural recordings are often interpreted as local measurements, yet the signal at any one sensor can also reflect structured activity distributed across the broader network. This raises a basic question: to what extent does an electrode's signal reflect local versus distributed information in the underlying system? More specifically, how much of an electrode's activity is carried by its immediate neighborhood, and how much is embedded more broadly across the array? We address this with a Spatially Masked Regression (SMR) framework that reconstructs each electrode's timeseries from the remaining electrodes while excluding a configurable neighborhood around the target. By progressively increasing this mask, spatial locality becomes an experimental control for quantifying how much predictive information survives after nearby channels are withheld. We apply SMR to intracranial EEG with heterogeneous electrode coverage and to scalp EEG with standardized montages over sensorimotor cortex. Using distance correlation between original and reconstructed signals, we find strong within-subject reconstruction in both modalities, substantial residual predictability even when local neighbors are excluded, and markedly stronger cross-subject transfer in EEG than in iEEG. Masking shows that nearby electrodes contribute strongly to reconstruction but do not account for all of it, indicating that individual channels reflect both local redundancy and broader distributed structure. Surrogates that preserve selected marginal or spectral properties while disrupting phase structure or temporal ordering substantially reduce performance, supporting the conclusion that SMR depends on structured temporal and cross-channel organization rather than on marginal statistics alone. These results position SMR as an interpretable framework for quantifying the balance between local and distributed information in recordings."
+  abstract_source: pubmed
+  key_findings: Introduces Spatially Masked Regression, which reconstructs each electrode's signal from the rest of the array while excluding a growing neighborhood around it, and finds substantial predictive information persists beyond local neighbors in both intracranial and scalp EEG, with markedly stronger cross-subject transfer in scalp EEG than iEEG.
 - id: 10.1162/imag.a.1116
   type: journal
   category: original-research
