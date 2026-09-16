@@ -1,3 +1,29 @@
+- id: 10.48550/arxiv.2607.05574
+  type: preprint
+  category: original-research
+  year: 2026
+  title: 'Whose fairness? Structural concentration in AI bias research'
+  authors:
+  - Abhash Shrestha
+  - Subigya Gautam
+  - Anu Sapkota
+  - Sanju Tiwari
+  - Tek Raj Chhetri
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2607.05574
+  arxiv: '2607.05574'
+  url: https://doi.org/10.48550/arxiv.2607.05574
+  pdf_url: https://arxiv.org/pdf/2607.05574
+  sources:
+  - arxiv
+  projects: []
+  lab_authors:
+  - Tek Raj Chhetri
+  topics:
+  - ml-nlp-knowledge
+  abstract: "Artificial intelligence increasingly mediates consequential decisions in healthcare, law, and public services, and the field has responded with an extensive methodology for measuring and mitigating bias. Yet the fairness definitions, benchmarks, and debiasing frameworks on which this methodology rests are treated as universal while being produced by a research community whose composition has never been characterized. We show that the AI bias research are structurally concentrated, and that this concentration is greatest, geographically, in precisely the domain the rest of the field inherits from. Analyzing 692 publications spanning five thematic domains, combining bibliometric analysis with semantic clustering, we find that research activity is dominated by a small set of countries, institutions, and authors, with the United States leading publication output and collaboration networks across every domain and most strongly in general fairness and bias mitigation, the largest, most-cited domain with meaningful representation across all four semantic clusters. Low- and middle-income countries remain largely absent from the community and its collaboration networks, and citation influence is highly skewed (median = 9; mean =93.5 ), indicating that a small fraction of publications disproportionately shapes the field. Because the general-fairness domain supplies the definitions and benchmarks that application areas apply, concentration of research effort in this foundational domain propagates across AI bias research as a whole - raising the concern that mitigation methods developed and validated within a narrow set of contexts may not generalize to all populations and settings where AI is deployed. We provide an interactive atlas for continuous monitoring of the field's structure."
+  abstract_source: arxiv
+  key_findings: A bibliometric and semantic-clustering analysis of 692 AI-bias-research publications finds the field is structurally concentrated in a small set of (mostly US) countries, institutions and authors — especially in the foundational general-fairness domain whose definitions and benchmarks propagate to applied areas — with low- and middle-income countries largely absent and citation influence highly skewed, raising doubts about the global generalizability of resulting bias-mitigation methods.
 - id: 10.48550/arxiv.2606.11415
   type: preprint
   category: methods
