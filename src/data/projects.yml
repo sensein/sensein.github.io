@@ -110,6 +110,8 @@
   publications:
   - 10.1145/3701716.3715483    # Chhetri et al. 2025, provenance/assertion ontologies
   - 10.1371/journal.pbio.3002133    # Hawrylycz et al. 2023, BICAN data ecosystem
+  - 10.1016/j.cell.2026.10.031      # BICAN 2026 (Cell), integrated framework for a brain cell atlas
+  - 10.1016/j.cell.2026.10.034      # Ecker et al. 2026 (Cell), from the human genome to the brain cell atlas
 
 - slug: bican-um1
   title: BICAN UM1 — Multi-Scale Multi-Omic Human Brain Atlas

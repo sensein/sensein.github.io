@@ -1,3 +1,230 @@
+- id: 10.1016/j.cell.2026.10.031
+  type: journal
+  category: original-research
+  year: 2026
+  title: Toward an integrated framework for a human and mammalian brain cell atlas
+  authors:
+  - BRAIN Initiative Cell Atlas Network (BICAN)
+  venue: Cell
+  doi: 10.1016/j.cell.2026.10.031
+  pmid: '43020018'
+  url: https://doi.org/10.1016/j.cell.2026.10.031
+  sources:
+  - pubmed
+  - crossref
+  projects:
+  - bican-knowledgebase
+  lab_authors:
+  - Dorota Jarecka
+  - Kabilar Gunalan
+  - Nima Dehghani
+  - Puja Trivedi
+  - Satrajit S Ghosh
+  - Tek Raj Chhetri
+  topics:
+  - open-data-standards
+  - connectomics-circuits
+  abstract: The NIH BRAIN Initiative Cell Atlas Network (BICAN) is developing a standardized, integrated reference framework for classifying and studying brain cell types across human, macaque, marmoset, and mouse. We present a cross-species, multimodal atlas of the basal ganglia, a group of subcortical nuclei central to motor control, adaptive behavior, and neurological disease. Built from large-scale single-cell transcriptomic classification and integrated with epigenomic, spatial genomic, multiomic, and developmental datasets, the atlas provides a curated, data-driven taxonomy with standardized nomenclature, extensive phenotypic characterization, and community-informed annotation. Cell types are mapped into species-specific anatomical reference frameworks and linked across species through structural ontologies. Realizing this resource required coordinated standards for tissue acquisition and processing, harmonized donor metadata, anatomical registration, sequencing pipelines, data infrastructure, visualization, mapping tools, and interoperable metadata. The BICAN basal ganglia atlas demonstrates how pipelines and standards can be implemented, validated, and scaled toward a whole-brain human and mammalian cell-type reference.
+  abstract_source: pubmed
+  key_findings: 'Presents the BICAN cross-species, multimodal basal ganglia atlas (human, macaque, marmoset, mouse): a curated, data-driven cell-type taxonomy with standardized nomenclature, mapped into species-specific anatomical frameworks and linked across species through structural ontologies, together with the coordinated standards and pipelines that made it possible and can scale toward a whole-brain reference.'
+- id: 10.1016/j.cell.2026.10.034
+  type: journal
+  category: perspective
+  year: 2026
+  title: From the human genome to the human brain cell atlas
+  authors:
+  - Joseph Ecker
+  - Satrajit S Ghosh
+  - Michael Hawrylycz
+  - Kiku Ichihara
+  - Arnold Kriegstein
+  - Ed Lein
+  - Chongyuan Luo
+  - Evan Macosko
+  - Shoaib Mufti
+  - Bing Ren
+  - Carol Thompson
+  - Tim Tickle
+  - Andreas Tolias
+  - David Van Essen
+  - Owen White
+  - Xiangmin Xu
+  - Hongkui Zeng
+  - Guo-Qiang Zhang
+  venue: Cell
+  doi: 10.1016/j.cell.2026.10.034
+  pmid: '43020015'
+  url: https://doi.org/10.1016/j.cell.2026.10.034
+  sources:
+  - pubmed
+  - crossref
+  projects:
+  - bican-knowledgebase
+  lab_authors:
+  - Satrajit S Ghosh
+  topics:
+  - open-data-standards
+  - connectomics-circuits
+  abstract: The BRAIN Initiative Cell Atlas Network (BICAN) is establishing an evolving reference for neuroscience by integrating cell identities, anatomy, and multimodal evidence across species. In analogy with the Human Genome Project, the BICAN basal ganglia atlas is a model for a federated reference to advance understanding of brain organization, function, variation, and disease.
+  abstract_source: pubmed
+  key_findings: Frames the BICAN basal ganglia atlas, by analogy with the Human Genome Project, as a model for an evolving, federated reference that integrates cell identities, anatomy and multimodal evidence across species to advance understanding of brain organization, function, variation and disease.
+- id: 10.48550/arxiv.2610.19487
+  type: preprint
+  category: original-research
+  year: 2026
+  title: How Long Is the Coast of a Neuron? Resolution-Dependent Interaction Order and Computational Capacity
+  authors:
+  - Nima Dehghani
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2610.19487
+  arxiv: '2610.19487'
+  url: https://doi.org/10.48550/arxiv.2610.19487
+  pdf_url: https://arxiv.org/pdf/2610.19487
+  sources:
+  - arxiv
+  projects: []
+  lab_authors:
+  - Nima Dehghani
+  topics:
+  - connectomics-circuits
+  abstract: Mandlebrot's coastline paradox reframes measurement as a joint property of an object and its ruler. Here we ask how observational resolution shapes the apparent structure of neural computation. We introduce a scale-indexed decomposition that separates the predictive information captured by direct dependencies from the residual outside that model family. Exact constructions show that projection can convert higher-order dependence into pairwise structure. Projection can increase the direct fraction of surviving information even as total predictive information decreases. A schematic branch-to-soma cascade grounds these effects in local coincidence detection, saturating integration and somatic mixing. Resolving organized nonlinear subunits improves approximation and raises effective representational rank. In a nested hierarchy, these gains occur without increasing information about the target. This distinction separates information availability from access by a restricted readout. A point-neuron or direct population model therefore establishes an effective description at a specified scale. It does not uniquely identify the finer computation that generated the observed relation. Which resolution is adequate depends on the observable and perturbation of interest.
+  abstract_source: arxiv
+  key_findings: Introduces a scale-indexed decomposition of predictive information and shows with exact constructions that coarser observational resolution can convert higher-order dependence into apparent pairwise structure, so a point-neuron or pairwise model gives an effective description at one scale without identifying the finer computation that generated it.
+- id: 10.48550/arxiv.2610.00184
+  type: preprint
+  category: original-research
+  year: 2026
+  title: Field closure, ice neurons, and when a dendrite is a motif
+  authors:
+  - Nima Dehghani
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2610.00184
+  arxiv: '2610.00184'
+  url: https://doi.org/10.48550/arxiv.2610.00184
+  pdf_url: https://arxiv.org/pdf/2610.00184
+  sources:
+  - arxiv
+  projects: []
+  lab_authors:
+  - Nima Dehghani
+  topics:
+  - connectomics-circuits
+  abstract: 'Dendritic silhouettes are cheap. Pond ice neurons, diffusion-limited aggregates, wiring-minimizing arbors, and biological neurons can share a branching statistic because they share a growth instability, not because they are functionally similar. We take that observation as a modeling constraint. The ice neuron only structurally resembles a biological neuron. A biological neuron carries an internal state and a field that it helps generate, letting geometry, dynamics, and field co-sculpt one another. In our construction, the ice neuron is the zero-gain limit of an interfacial system in which a FitzHugh--Nagumo state lives on the moving front and writes back into the field that drives it, with dimensionless gain $γ$. At $γ=0$, morphology and internal dynamics decouple into a Mullins--Sekerka growth band and a damped oscillator. Finite $γ$ deforms the spectrum, shifts the selected instability, and opens an oscillatory region below the isolated Hopf threshold. On a dendrite grown at $γ=0$ and then frozen, field closure increases distal persistence without changing the geometry; its first-order effect remains positive across repeated realizations of the same growth rule and localizes to a small set of non-cable field shortcuts. Nonlinear dynamics remain finite beyond the linear instability: below threshold, closure is almost the transmission; at spike amplitude, it is a correction to a regenerative cable event. A dendritic tree therefore is not intrinsically a structural spandrel. Shape alone is morphology without an internal state or a source term. That is the dendritic silhouette of the ice neuron. Excitability adds an active cable. Field closure is the biophysical mélange in which the neuron helps write the field that acts back on it, sculpting its dynamics and, during growth, its structure. That is a biological neuron.'
+  abstract_source: arxiv
+  key_findings: Shows that dendrite-like branching shape alone is not functionally informative (ice neurons share the statistic through a common growth instability) and that, in a model where a FitzHugh–Nagumo state on the growth front writes back into its driving field, field closure rather than geometry raises distal persistence, distinguishing an excitable neuron from an ice-neuron silhouette.
+- id: 10.48550/arxiv.2609.02195
+  type: preprint
+  category: review
+  year: 2026
+  title: Memory as an Energy Landscape—Hopfield
+  authors:
+  - Nima Dehghani
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2609.02195
+  arxiv: '2609.02195'
+  url: https://doi.org/10.48550/arxiv.2609.02195
+  pdf_url: https://arxiv.org/pdf/2609.02195
+  sources:
+  - arxiv
+  projects: []
+  lab_authors:
+  - Nima Dehghani
+  topics:
+  - connectomics-circuits
+  - ml-nlp-knowledge
+  abstract: "This chapter reconstructs the Hopfield network as a physical theory of memory rather than merely an early neural-network algorithm. It begins with the problem as it stood before 1982-threshold logic, Hebbian association, correlation memories, and recurrent binary networks-and isolates what Hopfield's synthesis added: a dynamical definition of content-addressable memory, a symmetric recurrent architecture with a Lyapunov function, a Hebbian embedding of patterns in its couplings, and a physical account of basins, robustness, and graceful degradation. The binary and graded-response energy functions are derived in full, together with the signal-crosstalk decomposition governing pattern stability, the mean-field theory of retrieval at extensive load, and the zero-temperature retrieval spinodal at (alpha 0.138) established by Amit, Gutfreund, and Sompolinsky. The energy-based program is then followed through analog optimization networks, polynomial dense associative memories, exponential interactions, and modern continuous Hopfield updates, including the precise conditions under which the update becomes scaled dot-product attention. Throughout, capacity claims are tied to their disorder ensemble, scaling limit, and success criterion, showing why numerically different storage limits need not conflict. A closing assessment distinguishes established results from surviving principles, assumption-bound limitations, and open problems, treating the Hopfield network as an effective theory whose symmetry, locality, and point-neuron assumptions delimit its biological reach. Fixed-seed numerical experiments expose the mechanisms discussed but do not substitute for analytical results."
+  abstract_source: arxiv
+  key_findings: Book-chapter reconstruction of the Hopfield network as a physical theory of memory — energy functions, signal-crosstalk and mean-field retrieval theory with its ~0.138 capacity limit — followed through dense associative memories to the conditions under which modern continuous Hopfield updates equal scaled dot-product attention.
+- id: 10.48550/arxiv.2609.02183
+  type: preprint
+  category: review
+  year: 2026
+  title: Neural Logic, Invariance, and the Retina—McCulloch and Pitts
+  authors:
+  - Nima Dehghani
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2609.02183
+  arxiv: '2609.02183'
+  url: https://doi.org/10.48550/arxiv.2609.02183
+  pdf_url: https://arxiv.org/pdf/2609.02183
+  sources:
+  - arxiv
+  projects: []
+  lab_authors:
+  - Nima Dehghani
+  topics:
+  - connectomics-circuits
+  - ml-nlp-knowledge
+  abstract: 'This chapter reconstructs the McCulloch-Pitts program as a physics of neural computation rather than the familiar cartoon of a binary neuron. The 1943 logical calculus is developed in both directions: given a net, characterize the propositions realized by its activity; given an admissible logical expression, construct a net that realizes it. We recover the original distinction between thresholded excitatory summation and absolute inhibitory veto-one the weighted-threshold form cannot preserve for arbitrarily large excitatory inputs-and read unit-time delay as the physical realization of logical depth. Recurrence is treated exactly: an autonomous, deterministic network of finitely many binary units has a finite state space, so every trajectory eventually enters a periodic orbit-a fact about finite-state dynamics, not unbounded Turing computation. A single threshold element realizes only linearly separable Boolean functions, whereas finite feedforward networks of them synthesize any Boolean function on a finite domain. We then follows McCulloch and Pitts beyond threshold logic. The 1945 heterarchy paper turns cyclic preference into an obstruction to representation by a scalar utility. The 1947 work on universals asks how a physical network can identify inputs related by nuisance transformations, developed here via group averaging and feedback canonicalization. The 1959 frog-retina study makes the adequate-stimulus question experimental, revealing parallel invariant operations before the brain proper. Spike-triggered analysis shows how a nonlinearly driven neuron can have a vanishing first-order average while second-order statistics recover its hidden selectivity: methodological failure can masquerade as physiological absence. Modern mathematical tools are used without projecting their notation onto the historical papers, and limitations of the idealization are stated explicitly.'
+  abstract_source: arxiv
+  key_findings: "Book-chapter reconstruction of the McCulloch–Pitts program as a physics of neural computation: the 1943 logical calculus, finite-state dynamics of recurrent nets, and their later work on heterarchy, invariance via group averaging, and the frog retina, including how spike-triggered analysis can miss a neuron's hidden selectivity."
+- id: 10.48550/arxiv.2608.30231
+  type: preprint
+  category: original-research
+  year: 2026
+  title: '“More Is Different” in Neural Circuits: Algebraic Emergence of Effective Theories in Canonical Recurrent Motifs of Biological Neuronal Networks'
+  authors:
+  - Nima Dehghani
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2608.30231
+  arxiv: '2608.30231'
+  url: https://doi.org/10.48550/arxiv.2608.30231
+  pdf_url: https://arxiv.org/pdf/2608.30231
+  sources:
+  - arxiv
+  projects: []
+  lab_authors:
+  - Nima Dehghani
+  topics:
+  - connectomics-circuits
+  abstract: "Canonical neural circuit motifs are usually described functionally: divisive normalization rescales population activity by a pooled signal, and winner-take-all competition selects one pattern through recurrent excitation and shared inhibition. We represent them, and their compositions, algebraically as finite transformation systems and analyze the transition monoids generated by their input-conditioned updates, distinguishing structure already present in a generator from structure that appears only through composition, and, on a joint state space, structure inherited from one factor from structure that lives on a joint configuration. Individually aperiodic updates can generate non-aperiodic monoids. In the WTA, every frozen-drive generator collapses to fixed points, yet short input sequences create local cycles of winner-dependent inhibitory gating: globally dissipative dynamics with a reversible action. The strongest result arises in WTA-to-DN composition. The composed monoid then contains a genuinely composite local cycle in which normalization state and the winner's gating state change together, although every primitive generator is aperiodic. Holonomy analysis certifies this as a group component of the Krohn-Rhodes cascade rather than an incidental cycle, and finds most group-carrying image sets on joint configurations, whereas the uncoupled product has none. An exhaustive interface sweep shows that the composite cycle is a property of the coupling rather than of a chosen map. If motifs are building blocks of neural computation, composing them is a form of programming: one chooses primitives and interfaces so that the generated algebra has the intended repertoire. The transition monoid is that repertoire - what a primitive presents to any later construction. Recurrent circuits are compositional transformation systems; their algebra constrains what they can be programmed to compute."
+  abstract_source: arxiv
+  key_findings: Representing canonical circuit motifs (divisive normalization, winner-take-all) as finite transformation systems, shows that composition creates structure absent from any primitive — individually aperiodic updates can generate non-aperiodic monoids, and WTA-to-DN coupling yields a composite local cycle certified as a Krohn–Rhodes group component — so a circuit's algebra constrains what it can be programmed to compute.
+- id: 10.48550/arxiv.2607.23902
+  type: preprint
+  category: original-research
+  year: 2026
+  title: 'Autonomous Physical Computation: A Categorical Closure Criterion for Physical and Neuromorphic Reservoirs'
+  authors:
+  - Nima Dehghani
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2607.23902
+  arxiv: '2607.23902'
+  url: https://doi.org/10.48550/arxiv.2607.23902
+  pdf_url: https://arxiv.org/pdf/2607.23902
+  sources:
+  - arxiv
+  projects: []
+  lab_authors:
+  - Nima Dehghani
+  topics:
+  - ml-nlp-knowledge
+  abstract: 'Physical reservoirs, neuromorphic devices, and wave-mediated systems often possess memory, feedback, and rich state-dependent dynamics, but these properties do not by themselves establish autonomous computation. Here we develop a closure criterion for autonomous physical computation, motivated by the wave--particle walker. We formulate the walker as a stroboscopic reservoir with state, where the wave field stores an exponentially decaying trace of previous droplet impacts and guides future motion through local slope coupling. This model separates physical writing, storage, reading, feedback, and externally triggered erasure. We then define computation as robust coarse-grained transition preservation: a physical map implements an abstract transition only when a coarse-graining satisfies compositionality, with abstract states realized by separated physical basins and transitions stable under noise. Autonomous physical computation requires a further closure condition: an internal physical readout state must select the next physical operation. This criterion classifies the wave--particle walker as a wave-memory machine with genuine Turing-like primitives, but not as a closed autonomous physical computer, because the erasing phase shift is externally imposed. The framework turns this distinction into a design principle: memory becomes autonomous computation when physical readout basins are coupled back to operation selection.'
+  abstract_source: arxiv
+  key_findings: Proposes a closure criterion for autonomous physical computation — robust coarse-grained transition preservation plus an internal readout state that selects the next operation — and uses it to classify the wave–particle walker as a wave-memory machine with Turing-like primitives but not a closed autonomous computer, since its erasing phase shift is externally imposed.
+- id: 10.48550/arxiv.2603.07792
+  type: preprint
+  category: original-research
+  year: 2026
+  title: 'Dual-Metric Evaluation of Social Bias in Large Language Models: Evidence from an Underrepresented Nepali Cultural Context'
+  authors:
+  - Ashish Pandey
+  - Tek Raj Chhetri
+  venue: ArXiv.org
+  doi: 10.48550/arxiv.2603.07792
+  arxiv: '2603.07792'
+  url: https://doi.org/10.48550/arxiv.2603.07792
+  pdf_url: https://arxiv.org/pdf/2603.07792
+  sources:
+  - arxiv
+  projects: []
+  lab_authors:
+  - Tek Raj Chhetri
+  topics:
+  - ml-nlp-knowledge
+  abstract: 'Large language models (LLMs) increasingly influence global digital ecosystems, yet their potential to perpetuate social and cultural biases remains poorly understood in underrepresented contexts. This study presents a systematic analysis of representational biases in seven state-of-the-art LLMs: GPT-4o-mini, Claude-3-Sonnet, Claude-4-Sonnet, Gemini-2.0-Flash, Gemini-2.0-Lite, Llama-3-70B, and Mistral-Nemo in the Nepali cultural context. Using Croissant-compliant dataset of 2400+ stereotypical and anti-stereotypical sentence pairs on gender roles across social domains, we implement an evaluation framework, Dual-Metric Bias Assessment (DMBA), combining two metrics: (1) agreement with biased statements and (2) stereotypical completion tendencies. Results show models exhibit measurable explicit agreement bias, with mean bias agreement ranging from 0.36 to 0.43 across decoding configurations, and an implicit completion bias rate of 0.740-0.755. Importantly, implicit completion bias follows a non-linear, U-shaped relationship with temperature, peaking at moderate stochasticity (T=0.3) and declining slightly at higher temperatures. Correlation analysis under different decoding settings revealed that explicit agreement strongly aligns with stereotypical sentence agreement but is a weak and often negative predictor of implicit completion bias, indicating generative bias is poorly captured by agreement metrics. Sensitivity analysis shows increasing top-p amplifies explicit bias, while implicit generative bias remains largely stable. Domain-level analysis shows implicit bias is strongest for race and sociocultural stereotypes, while explicit agreement bias is similar across gender and sociocultural categories, with race showing the lowest explicit agreement. These findings highlight the need for culturally grounded datasets and debiasing strategies for LLMs in underrepresented societies.'
+  abstract_source: arxiv
+  key_findings: Evaluating seven LLMs on 2,400+ Nepali-context stereotypical and anti-stereotypical sentence pairs with a Dual-Metric Bias Assessment finds measurable explicit agreement bias (mean 0.36–0.43) and implicit completion bias (0.740–0.755) that is U-shaped in temperature and poorly predicted by agreement metrics, underscoring the need for culturally grounded datasets and debiasing strategies.
 - id: 10.48550/arxiv.2607.05574
   type: preprint
   category: original-research
@@ -5822,22 +6049,25 @@
   - Satrajit S Ghosh
   topics:
   - speech-voice-biomarkers
-- id: 10.31234/osf.io/9rdux_v4
-  type: preprint
+- id: 10.1371/journal.pdig.0001757
+  type: journal
   category: original-research
-  year: 2025
-  title: 'Text Psychometrics: Assessing Psychological Constructs in Text Using Natural Language Processing'
+  year: 2026
+  title: 'Text Psychometrics: Assessing psychological constructs in text using natural language processing'
   authors:
-  - Low DM
-  - Mair P
-  - Nock MK
-  - Ghosh SS
-  venue: PsyArXiv
-  doi: 10.31234/osf.io/9rdux_v4
-  url: https://doi.org/10.31234/osf.io/9rdux_v4
+  - Daniel M. Low
+  - Patrick Mair
+  - Matthew K. Nock
+  - Satrajit S Ghosh
+  venue: PLOS Digital Health
+  doi: 10.1371/journal.pdig.0001757
+  pmid: '43019512'
+  pmcid: PMC13759208
+  url: https://doi.org/10.1371/journal.pdig.0001757
   github: danielmlow/text_psychometrics
   sources:
-  - preprint-sweep
+  - pubmed
+  - crossref
   projects: []
   lab_authors:
   - Daniel M. Low
@@ -5845,27 +6075,36 @@
   topics:
   - ml-nlp-knowledge
   - mental-health-psychiatry
-  abstract: Large language models (LLMs) have revolutionized natural language processing (NLP). Yet when used to assess psychological constructs in text, they are generally not evaluated for the types of validity, reliability, and standardization typically expected from traditional questionnaires with rating scales. This study bridges that gap by demonstrating how to evaluate the psychometric properties of text-based models, which we call Text Psychometrics.We first review different NLP methods, compare their ability to address key challenges in psychological research such as explainability, and outline methods for evaluating them on many desirable psychometric properties. We then demonstrate this through two empirical studies. Study 1 classifies thousands of crisis counseling conversations and Reddit posts into different types of mental health issues and introduces a novel method to evaluate text models for content validity —the extent to which a test captures the full range of expressions of a construct. Study 2 examines prospective criterion validity by estimating how 49 known suicide risk factors predict imminent risk in crisis counseling conversations.In sum, NLP studies in psychology often rely on only a few validation metrics; here, we demonstrate the need for broader psychometric evaluation and provide a practical blueprint and future directions for achieving it.
-  abstract_source: openalex
+  abstract: Large language models (LLMs) have revolutionized natural language processing (NLP). Yet when used to assess psychological constructs in text, they are generally not evaluated for the types of validity, reliability, and standardization typically expected from traditional questionnaires with rating scales. This study bridges that gap by proposing a framework for evaluating the psychometric properties of NLP-based psychological assessments (including LLMs-based ones), an area of research we refer to as Text Psychometrics. We first review different NLP methods, compare their ability to address key challenges in psychological research such as explainability, and outline ways of evaluating them on many desirable psychometric properties. Our goal is to describe most psychometric properties that may be of interest, especially for psychology and NLP researchers who are less familiar with psychometrics or psychometricians who are less familiar with NLP. We then illustrate the tradeoffs of different NLP methods through two empirical studies. Study 1 classifies thousands of crisis counseling conversations and Reddit posts into different types of mental health issues and introduces a novel method to evaluate text models for content validity-the extent to which a test captures the full range of expressions of a single construct. Study 2 examines prospective criterion validity by estimating how 49 known suicide risk factors predict imminent risk in crisis counseling conversations. We find that mentioning lethal means for suicide, the police, depressed mood, and anxiety in text as well as the texter writing more than the counselor characterize the conversations that end up needing an emergency service intervention for imminent suicide risk, which showcases the interpretability of the method that was used. In sum, NLP studies in psychology often rely on only a few validation metrics; here, we demonstrate the need for broader psychometric evaluation and, as a step towards Text Psychometrics, provide practical examples and future directions that can help researchers evaluate these models.
+  abstract_source: pubmed
   key_findings: This work proposes 'Text Psychometrics' — applying questionnaire-style validity and reliability evaluation to NLP-based construct measurement — and demonstrates it by assessing content validity in crisis-counseling and Reddit corpora and by predicting imminent suicide risk from 49 known risk factors.
-- id: 10.31234/osf.io/vf2bc_v3
-  type: preprint
+  preprints:
+  - id: 10.31234/osf.io/9rdux_v4
+    venue: PsyArXiv
+    url: https://doi.org/10.31234/osf.io/9rdux_v4
+    year: 2025
+    doi: 10.31234/osf.io/9rdux_v4
+- id: 10.1037/abn0001152
+  type: journal
   category: original-research
-  year: 2025
-  title: 'Using large language models to create lexicons for interpretable text models with high content validity: the Suicide Risk Lexicon'
+  year: 2026
+  title: 'Using large language models to create lexicons for interpretable text models with high content validity: The suicide risk lexicon'
   authors:
-  - Low DM
-  - Rankin O
-  - Coppersmith DDL
-  - Bentley K
-  - Nock MK
-  - Ghosh SS
-  venue: PsyArXiv
-  doi: 10.31234/osf.io/vf2bc_v3
-  url: https://doi.org/10.31234/osf.io/vf2bc_v3
+  - Daniel M. Low
+  - Osiris Rankin
+  - Daniel D. L. Coppersmith
+  - Kate H. Bentley
+  - Matthew K. Nock
+  - Satrajit S Ghosh
+  venue: Journal of Psychopathology and Clinical Science
+  doi: 10.1037/abn0001152
+  pmid: '42782714'
+  pmcid: PMC13614521
+  url: https://doi.org/10.1037/abn0001152
   github: danielmlow/construct-tracker
   sources:
-  - preprint-sweep
+  - pubmed
+  - crossref
   projects:
   - veteran-peer-response
   lab_authors:
@@ -5875,9 +6114,15 @@
   topics:
   - mental-health-psychiatry
   - ml-nlp-knowledge
-  abstract: Researchers often want to measure a variety of constructs such as anxiety, discrimination, or loneliness in text data from surveys, interviews, social media, and electronic health records. Using large language models (LLMs) --while optimal for text classification-- remain infeasible for many researchers due to concerns around computational expertise, cost, privacy, and compute requirements. Therefore, some researchers prefer to use lightweight models for large datasets or interpretable models to avoid mistakes in high-stakes scenarios such as suicide risk detection. Lexicons offer simple baselines to LLMs by searching for relevant phrases --and can be used together with LLMs to guarantee capturing specific keywords in a deterministic way. However, building new lexicons is resource intensive. In this study, we found that GPT-4 turbo was able to automatically create a lexicon for 49 known risk factors for suicidal thoughts and behaviors, which we release as the Suicide Risk Lexicon. This approach quickly measures most constructs relevant for this application, resulting in high content validity. This lexicon was able to accurately predict risk in crisis counseling conversations. After validating the lexicon with clinical experts, the lexicon outperformed the LIWC lexicon --which has low content validity for mental illness-- and performed similarly to some black-box deep learning models. Due to using an interpretable approach with high content validity, we discovered that active suicidal ideation and direct self-injury were stronger indicators of imminent risk than passive suicidal ideation and depressed mood in this ecological setting. To simplify creating new lexicons for other research domains, we introduce a Python package, construct-tracker, that works with a variety of LLMs. In sum, while we recommend using LLMs for text classification, they remain out of reach for many researchers. Our work demonstrates that LLMs --despite being black-boxes that might be challenging to use-- can counterintuitively create interpretable models by generating lexicons, when this is preferred. Furthermore, we highlight the broader application of lexicons beyond measurement, including their use in benchmarking LLM performance.
-  abstract_source: openalex
-  key_findings: GPT-4-turbo automatically generated a Suicide Risk Lexicon covering 49 risk factors that, after clinical validation, outperformed LIWC and matched some deep-learning models in predicting imminent risk; the released construct-tracker Python package supports building similar interpretable lexicons across domains.
+  abstract: Researchers often want to measure a variety of constructs such as anxiety, discrimination, or loneliness in text data from surveys, interviews, social media, and electronic health records. Using large language models (LLMs)-although optimal for text classification-remain infeasible for some researchers due to concerns around computational expertise, cost, privacy, and compute requirements. Therefore, some researchers prefer to use lightweight models for large data sets or interpretable models to avoid mistakes in high-stakes scenarios. Lexicons offer simple baselines to LLMs by searching for relevant phrases and can be used together with LLMs to guarantee capturing specific keywords. However, building new lexicons is resource intensive. In this study, we found that GPT-4 Turbo was able to automatically create a lexicon for 49 known risk factors for suicidal thoughts and behaviors, which we release as the Suicide Risk Lexicon. Generating a lexicon with LLMs quickly measures most constructs relevant for suicide risk detection, resulting in high content validity. This lexicon was able to accurately predict risk in crisis counseling conversations. After validating the lexicon with clinician ratings, the lexicon modestly outperformed the linguistic inquiry and word count lexicon, which has low content validity for mental illness, and performed similarly to some black-box deep learning models. We discovered that active suicidal ideation and direct self-injury were stronger indicators of imminent risk than passive suicidal ideation and depressed mood in this ecological setting of crisis counseling conversations. To simplify creating new lexicons for other research domains, we introduce a Python package, construct-tracker.
+  abstract_source: pubmed
+  key_findings: GPT-4 Turbo automatically generated a Suicide Risk Lexicon covering 49 known risk factors for suicidal thoughts and behaviors that, after clinician validation, modestly outperformed LIWC and performed similarly to some black-box deep-learning models in predicting risk in crisis-counseling conversations; the released construct-tracker Python package supports building similar interpretable lexicons for other domains.
+  preprints:
+  - id: 10.31234/osf.io/vf2bc_v3
+    venue: PsyArXiv
+    url: https://doi.org/10.31234/osf.io/vf2bc_v3
+    year: 2025
+    doi: 10.31234/osf.io/vf2bc_v3
 - id: 10.48550/arXiv.2409.09511
   type: preprint
   category: original-research
