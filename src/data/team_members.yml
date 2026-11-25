@@ -105,7 +105,7 @@
   education2: M.Sc. in Computer Science, University of Tartu
 - name: Jordan Wilke
   photo: /images/people/jordan-wilke.webp
-  info: MEng Student, MIT
+  info: Technical Associate
   email: wilke18@mit.edu
   github: "wilke0818"
   number_educ: 2
@@ -129,3 +129,11 @@
   email: nikbakht@mit.edu
   number_educ: 1
   education1: Ph.D. in Computational and Systems Neuroscience, SISSA
+- name: Marta da Rocha Diogo
+  info: Visiting PhD Student (Law, European University Institute), Fulbright Fellow, working on the legal and societal implications of neurotechnology
+  email: martadrd@mit.edu
+  github: "martadrd"
+- name: Victoria Sanchez
+  info: Postdoctoral Associate, working on quantitative behavioral phenotyping from naturalistic home videos
+  email: sanchezv@mit.edu
+  github: "cheddarchunk"
