@@ -1,7 +1,9 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
+import PersonCard from "~/components/PersonCard.astro";
 import MemberTile from "~/components/MemberTile.astro";
+import SortToggle from "~/components/SortToggle.astro";
 import { teamMembers, students, alumniMembers } from "~/lib/data";
 import type { TeamMember } from "~/lib/data";
 
@@ -9,7 +11,7 @@ const members = teamMembers();
 const studentList = students();
 const alumni = alumniMembers();
 
-/** Build a per-section orderings map: { nameOrder, originalOrder } per member. */
+/** Pair each member with its alphabetical rank and its curated (YAML) rank. */
 function orderings(list: TeamMember[]) {
   const sorted = [...list]
     .map((m, i) => ({ name: m.name, original: i }))
@@ -22,103 +24,115 @@ function orderings(list: TeamMember[]) {
   }));
 }
 
-const membersWithOrder = orderings(members);
-const studentsWithOrder = orderings(studentList);
-const alumniWithOrder = orderings(alumni);
+const sections = [
+  { id: "members", title: "Current members", list: members, alt: { label: "Tenure", mode: "tenure" } },
+  { id: "students", title: "Students", list: studentList, alt: { label: "Tenure", mode: "tenure" } },
+  { id: "alumni", title: "Alumni", list: alumni, alt: { label: "Recent", mode: "recent" } },
+].filter((s) => s.list.length > 0);
+
+const countBadge =
+  "ml-2 align-middle inline-flex items-center rounded-full bg-(--color-surface) border border-(--color-border) px-2 py-0.5 font-sans text-xs font-medium text-(--color-ink-muted)";
 ---
 <PageLayout
   eyebrow="People"
   title="The team"
   size="wide"
-  lede="The researchers, engineers, students, and alumni who make this work happen. Click a tile to expand details."
+  lede="Researchers, engineers, students and alumni of the Senseable Intelligence Group."
 >
-  <section data-team-section>
-    <div class="flex flex-wrap items-baseline justify-between gap-3">
-      <SectionHeading id="members" eyebrow="Members" title="Current members" />
-      <div class="flex items-center gap-1.5 text-xs" data-sort-toggle data-default="name">
-        <span class="text-(--color-ink-faint) mr-1">Sort:</span>
-        <button type="button" data-sort="name"   class="px-2.5 py-1 rounded-md border border-(--color-accent) bg-(--color-accent-soft) text-(--color-accent-strong) font-medium">Name</button>
-        <button type="button" data-sort="tenure" class="px-2.5 py-1 rounded-md border border-(--color-border) text-(--color-ink-muted) hover:border-(--color-border-strong)">Tenure</button>
-      </div>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-start">
-      {membersWithOrder.map(({ member, nameOrder, originalOrder }) => (
-        <div data-name-order={nameOrder} data-original-order={originalOrder} style={`order:${nameOrder}`}>
-          <MemberTile member={member} />
-        </div>
+  <div class="mb-6 flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between">
+    <nav aria-label="Sections on this page" class="flex flex-wrap gap-1.5 text-sm">
+      {sections.map((s) => (
+        <a
+          href={`#${s.id}`}
+          class="px-2.5 py-1 rounded-md border border-(--color-border) text-(--color-ink-muted) hover:text-(--color-ink) hover:border-(--color-border-strong)"
+        >
+          {s.title} <span class="text-(--color-ink-faint)">{s.list.length}</span>
+        </a>
       ))}
-    </div>
-  </section>
-
-  {studentList.length > 0 && (
-    <section class="mt-20" data-team-section>
-      <div class="flex flex-wrap items-baseline justify-between gap-3">
-        <SectionHeading id="students" eyebrow="Students" title="Students" />
-        <div class="flex items-center gap-1.5 text-xs" data-sort-toggle data-default="name">
-          <span class="text-(--color-ink-faint) mr-1">Sort:</span>
-          <button type="button" data-sort="name"   class="px-2.5 py-1 rounded-md border border-(--color-accent) bg-(--color-accent-soft) text-(--color-accent-strong) font-medium">Name</button>
-          <button type="button" data-sort="tenure" class="px-2.5 py-1 rounded-md border border-(--color-border) text-(--color-ink-muted) hover:border-(--color-border-strong)">Tenure</button>
-        </div>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-start">
-        {studentsWithOrder.map(({ member, nameOrder, originalOrder }) => (
-          <div data-name-order={nameOrder} data-original-order={originalOrder} style={`order:${nameOrder}`}>
-            <MemberTile member={member} />
-          </div>
-        ))}
-      </div>
-    </section>
-  )}
-
-  <section class="mt-20" data-team-section>
-    <div class="flex flex-wrap items-baseline justify-between gap-3">
-      <SectionHeading
-        id="alumni"
-        eyebrow="Past members"
-        title="Alumni"
-        description="Past members of the group and their roles while with us."
+    </nav>
+    <label class="relative block sm:w-72">
+      <span class="sr-only">Filter people by name or role</span>
+      <input
+        type="search"
+        data-person-filter
+        placeholder="Filter by name or role"
+        autocomplete="off"
+        class="w-full rounded-md border border-(--color-border) bg-(--color-canvas) px-3 py-1.5 text-sm text-(--color-ink) placeholder:text-(--color-ink-faint) focus:outline-none focus:border-(--color-accent)"
       />
-      <div class="flex items-center gap-1.5 text-xs" data-sort-toggle data-default="name">
-        <span class="text-(--color-ink-faint) mr-1">Sort:</span>
-        <button type="button" data-sort="name"   class="px-2.5 py-1 rounded-md border border-(--color-accent) bg-(--color-accent-soft) text-(--color-accent-strong) font-medium">Name</button>
-        <button type="button" data-sort="recent" class="px-2.5 py-1 rounded-md border border-(--color-border) text-(--color-ink-muted) hover:border-(--color-border-strong)">Recent</button>
-      </div>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 items-start">
-      {alumniWithOrder.map(({ member, nameOrder, originalOrder }) => (
-        <div data-name-order={nameOrder} data-original-order={originalOrder} style={`order:${nameOrder}`}>
-          <MemberTile member={member} showEducation={false} showDuration />
+    </label>
+  </div>
+
+  {sections.map((s, i) => {
+    const rows = orderings(s.list);
+    const isAlumni = s.id === "alumni";
+    return (
+      <section class={i > 0 ? "mt-10" : ""} data-team-section>
+        <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+          <SectionHeading id={s.id} title={s.title} size="sm">
+            <span slot="after-title" class={countBadge}>{s.list.length}</span>
+          </SectionHeading>
+          <SortToggle altLabel={s.alt.label} altMode={s.alt.mode} />
         </div>
-      ))}
-    </div>
-  </section>
+        <div
+          class={
+            isAlumni
+              ? "grid gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-start"
+              : "grid gap-3 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
+          }
+        >
+          {rows.map(({ member, nameOrder, originalOrder }) => (
+            <div data-name-order={nameOrder} data-original-order={originalOrder} style={`order:${nameOrder}`}>
+              {isAlumni ? <MemberTile member={member} showEducation={false} /> : <PersonCard member={member} />}
+            </div>
+          ))}
+        </div>
+        <p class="hidden mt-2 text-sm text-(--color-ink-muted)" data-empty>No one in this section matches.</p>
+      </section>
+    );
+  })}
 </PageLayout>
 
 <script>
-  // Per-section sort toggle. "name" uses data-name-order; "tenure" / "recent"
-  // both use data-original-order (preserving the curated YAML order, which
-  // already encodes tenure for current members and recency for alumni).
-  document.querySelectorAll<HTMLElement>("[data-team-section]").forEach((section) => {
+  // Sort: "name" uses data-name-order; the second mode uses the curated YAML
+  // order, which already encodes tenure for current members and recency for
+  // alumni.
+  const sections = Array.from(document.querySelectorAll<HTMLElement>("[data-team-section]"));
+  sections.forEach((section) => {
     const toggle = section.querySelector<HTMLElement>("[data-sort-toggle]");
     if (!toggle) return;
     const tiles = Array.from(section.querySelectorAll<HTMLElement>("[data-name-order]"));
     const buttons = Array.from(toggle.querySelectorAll<HTMLButtonElement>("button[data-sort]"));
-
-    function setActive(mode: string) {
-      const attr = mode === "name" ? "data-name-order" : "data-original-order";
-      tiles.forEach((el) => {
-        el.style.order = el.getAttribute(attr) ?? "";
-      });
-      buttons.forEach((b) => {
-        const on = b.dataset.sort === mode;
-        b.classList.toggle("border-(--color-accent)", on);
-        b.classList.toggle("bg-(--color-accent-soft)", on);
-        b.classList.toggle("text-(--color-accent-strong)", on);
-        b.classList.toggle("font-medium", on);
-        b.classList.toggle("border-(--color-border)", !on);
-        b.classList.toggle("text-(--color-ink-muted)", !on);
-      });
-    }
-    buttons.forEach((b) => b.addEventListener("click", () => setActive(b.dataset.sort!)));
+    buttons.forEach((b) =>
+      b.addEventListener("click", () => {
+        const attr = b.dataset.sort === "name" ? "data-name-order" : "data-original-order";
+        tiles.forEach((el) => (el.style.order = el.getAttribute(attr) ?? ""));
+        buttons.forEach((o) => o.setAttribute("aria-pressed", String(o === b)));
+      }),
+    );
   });
+
+  // Filter: hide tiles whose name or role text doesn't contain the query.
+  const input = document.querySelector<HTMLInputElement>("[data-person-filter]");
+  input?.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase();
+    sections.forEach((section) => {
+      let shown = 0;
+      section.querySelectorAll<HTMLElement>("[data-name-order]").forEach((wrap) => {
+        const text = wrap.querySelector<HTMLElement>("[data-person]")?.dataset.search ?? "";
+        const match = !q || text.includes(q);
+        wrap.hidden = !match;
+        if (match) shown++;
+      });
+      section.querySelector<HTMLElement>("[data-empty]")?.classList.toggle("hidden", shown > 0);
+    });
+  });
+
+  // A link to #someone whose alumni tile is collapsed opens that tile.
+  function openTarget() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const el = id ? document.getElementById(id) : null;
+    if (el instanceof HTMLDetailsElement) el.open = true;
+  }
+  openTarget();
+  window.addEventListener("hashchange", openTarget);
 </script>

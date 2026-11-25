@@ -1,4 +1,9 @@
 ---
+/**
+ * Compact, expandable row for a past member. The summary line carries the
+ * name, role and years so the alumni list is readable without opening
+ * anything; the expanded panel adds the full role text, links and education.
+ */
 import type { TeamMember } from "~/lib/data";
 import { memberEducations, personSlug } from "~/lib/data";
 import { normalizeImage } from "~/lib/images";
@@ -7,73 +12,70 @@ import SocialLinks from "./SocialLinks.astro";
 interface Props {
   member: TeamMember;
   showEducation?: boolean;
-  showDuration?: boolean;
 }
-const { member, showEducation = true, showDuration = false } = Astro.props;
+const { member, showEducation = true } = Astro.props;
 const educations = memberEducations(member);
 const photo = normalizeImage(member.photo);
 const slug = personSlug(member.name);
+// Plain-text role for the one-line summary (info may contain inline HTML).
+const role = (member.info ?? "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
+const summary = [role, member.duration].filter(Boolean).join(" · ");
+const hasDetails =
+  role.length > 0 ||
+  (showEducation && educations.length > 0) ||
+  Boolean(member.website || member.github || member.linkedin || member.scholar || member.orcid || member.twitter || member.bluesky || member.email);
 ---
 <details
   id={slug}
-  class="group scroll-mt-24 rounded-lg border border-(--color-border) bg-(--color-canvas) hover:border-(--color-border-strong) transition-colors overflow-hidden target:ring-2 target:ring-(--color-accent)"
+  data-person
+  data-search={`${member.name} ${role}`.toLowerCase()}
+  class="group scroll-mt-20 rounded-lg border border-(--color-border) bg-(--color-canvas) hover:border-(--color-border-strong) transition-colors target:ring-2 target:ring-(--color-accent) open:border-(--color-border-strong)"
 >
   <summary
-    class="cursor-pointer list-none [&::-webkit-details-marker]:hidden p-3 flex items-center gap-3"
+    class="cursor-pointer list-none [&::-webkit-details-marker]:hidden px-2.5 py-2 flex items-center gap-2.5"
   >
     <img
       src={photo}
       alt=""
       loading="lazy"
-      class="shrink-0 w-12 h-12 object-cover rounded-md bg-(--color-surface)"
+      width="40"
+      height="40"
+      class="shrink-0 w-10 h-10 object-cover rounded-md bg-(--color-surface)"
     />
     <div class="min-w-0 flex-1">
-      <p class="font-medium text-(--color-ink) text-sm truncate">{member.name}</p>
-      {showDuration && member.duration && (
-        <p class="text-xs text-(--color-ink-faint) truncate">{member.duration}</p>
+      <p class="font-medium text-(--color-ink) text-sm leading-tight truncate">{member.name}</p>
+      {summary && (
+        <p class="mt-0.5 text-xs text-(--color-ink-muted) leading-tight truncate" title={summary}>{summary}</p>
       )}
     </div>
-    <svg
-      width="14"
-      height="14"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="shrink-0 text-(--color-ink-faint) group-open:rotate-180 transition-transform"
-      aria-hidden="true"
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
+    {hasDetails && (
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="shrink-0 text-(--color-ink-faint) group-open:rotate-180 transition-transform"
+        aria-hidden="true"
+      >
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    )}
   </summary>
-  <div class="px-3 pb-4 -mt-1 border-t border-(--color-border) pt-3">
-    {!showDuration && member.duration && (
-      <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-1">
-        {member.duration}
-      </p>
-    )}
-    {member.info && (
-      <p class="text-sm text-(--color-ink-muted) leading-relaxed" set:html={member.info} />
-    )}
-    {member.email && (
-      <p class="mt-2 text-sm">
-        <a
-          href={`mailto:${member.email}`}
-          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-3 hover:underline break-all"
-        >
-          {member.email}
-        </a>
-      </p>
-    )}
-    <SocialLinks member={member} />
-    {showEducation && educations.length > 0 && (
-      <ul class="mt-3 space-y-1 text-xs text-(--color-ink-muted)">
-        {educations.map((e) => (
-          <li set:html={`• ${e}`} />
-        ))}
-      </ul>
-    )}
-  </div>
+  {hasDetails && (
+    <div class="px-2.5 pb-3 pt-2 border-t border-(--color-border)">
+      {member.info && (
+        <p class="text-sm text-(--color-ink-muted) leading-snug" set:html={member.info} />
+      )}
+      <SocialLinks member={member} showEmail class="mt-2" />
+      {showEducation && educations.length > 0 && (
+        <ul class="mt-2 space-y-0.5 text-xs text-(--color-ink-muted) leading-snug">
+          {educations.map((e) => <li set:html={e} />)}
+        </ul>
+      )}
+    </div>
+  )}
 </details>
