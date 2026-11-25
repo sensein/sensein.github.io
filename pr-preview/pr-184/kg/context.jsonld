@@ -1,0 +1,565 @@
+{
+ "@context": {
+  "@version": 1.1,
+  "@base": "https://sensein.group/",
+  "linkml": "https://w3id.org/linkml/",
+  "sensein": "https://w3id.org/sensein/website-schema/",
+  "sid": "https://sensein.group/id/",
+  "schema": "http://schema.org/",
+  "foaf": "http://xmlns.com/foaf/0.1/",
+  "org": "http://www.w3.org/ns/org#",
+  "prov": "http://www.w3.org/ns/prov#",
+  "dcterms": "http://purl.org/dc/terms/",
+  "dcat": "http://www.w3.org/ns/dcat#",
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "fabio": "http://purl.org/spar/fabio/",
+  "frapo": "http://purl.org/cerif/frapo/",
+  "bibo": "http://purl.org/ontology/bibo/",
+  "prism": "http://prismstandard.org/namespaces/basic/2.0/",
+  "vivo": "http://vivoweb.org/ontology/core#",
+  "time": "http://www.w3.org/2006/time#",
+  "wikidata": "http://www.wikidata.org/entity/",
+  "wdt": "http://www.wikidata.org/prop/direct/",
+  "xsd": "http://www.w3.org/2001/XMLSchema#",
+  "doi": {
+   "@id": "prism:doi"
+  },
+  "arxiv": {
+   "@id": "sensein:arxivId"
+  },
+  "pmid": {
+   "@id": "fabio:hasPubMedId"
+  },
+  "ORCID": "https://orcid.org/",
+  "ROR": "https://ror.org/",
+  "id": "@id",
+  "type": "@type",
+  "identifier": {
+   "@id": "dcterms:identifier"
+  },
+  "slug": {
+   "@id": "sensein:slug"
+  },
+  "name": {
+   "@id": "schema:name"
+  },
+  "alternate_names": {
+   "@id": "schema:alternateName"
+  },
+  "title": {
+   "@id": "dcterms:title"
+  },
+  "label": {
+   "@id": "rdfs:label"
+  },
+  "description": {
+   "@id": "dcterms:description"
+  },
+  "version": {
+   "@id": "schema:version"
+  },
+  "license": {
+   "@id": "dcterms:license",
+   "@type": "@id"
+  },
+  "url": {
+   "@id": "schema:url",
+   "@type": "@id"
+  },
+  "same_as": {
+   "@id": "schema:sameAs",
+   "@type": "@id"
+  },
+  "created": {
+   "@id": "dcterms:created"
+  },
+  "modified": {
+   "@id": "dcterms:modified"
+  },
+  "derived_from": {
+   "@id": "prov:wasDerivedFrom",
+   "@type": "@vocab",
+   "@context": {
+    "pubmed": "sensein:DataSource/pubmed",
+    "ncbi": "sensein:DataSource/ncbi",
+    "pmc": "sensein:DataSource/pmc",
+    "europepmc": "sensein:DataSource/europepmc",
+    "arxiv": "sensein:DataSource/arxiv",
+    "openalex": "sensein:DataSource/openalex",
+    "crossref": "sensein:DataSource/crossref",
+    "publisher": "sensein:DataSource/publisher",
+    "cv": "sensein:DataSource/cv",
+    "preprint-sweep": "sensein:DataSource/preprint-sweep",
+    "site-yaml-v1": "sensein:DataSource/site-yaml-v1"
+   }
+  },
+  "curated_by": {
+   "@id": "sensein:curatedBy"
+  },
+  "curation_notes": {
+   "@id": "skos:editorialNote"
+  },
+  "was_generated_by": {
+   "@id": "prov:wasGeneratedBy"
+  },
+  "started_at": {
+   "@id": "prov:startedAtTime",
+   "@type": "xsd:dateTime"
+  },
+  "ended_at": {
+   "@id": "prov:endedAtTime",
+   "@type": "xsd:dateTime"
+  },
+  "commit": {
+   "@id": "sensein:commit"
+  },
+  "used": {
+   "@id": "prov:used"
+  },
+  "software_agent": {
+   "@id": "prov:wasAssociatedWith"
+  },
+  "path": {
+   "@id": "sensein:path"
+  },
+  "last_changed": {
+   "@id": "dcterms:modified",
+   "@type": "xsd:dateTime"
+  },
+  "sha256": {
+   "@id": "sensein:sha256"
+  },
+  "orcid": {
+   "@id": "vivo:orcidId",
+   "@type": "@id"
+  },
+  "email": {
+   "@id": "schema:email"
+  },
+  "image": {
+   "@id": "schema:image",
+   "@type": "@id"
+  },
+  "bio": {
+   "@id": "schema:description"
+  },
+  "accounts": {
+   "@id": "foaf:account"
+  },
+  "service": {
+   "@id": "foaf:accountServiceHomepage",
+   "@type": "@vocab",
+   "@context": {
+    "github": "sensein:AccountService/github",
+    "linkedin": "sensein:AccountService/linkedin",
+    "google_scholar": "sensein:AccountService/google_scholar",
+    "x": "sensein:AccountService/x",
+    "bluesky": "sensein:AccountService/bluesky",
+    "website": "sensein:AccountService/website"
+   }
+  },
+  "account_name": {
+   "@id": "foaf:accountName"
+  },
+  "education": {
+   "@id": "schema:hasCredential"
+  },
+  "cv": {
+   "@id": "sensein:cv",
+   "@type": "@id"
+  },
+  "statement": {
+   "@id": "rdfs:label"
+  },
+  "credential_category": {
+   "@id": "schema:credentialCategory"
+  },
+  "field_of_study": {
+   "@id": "sensein:fieldOfStudy"
+  },
+  "awarded_by": {
+   "@id": "schema:recognizedBy",
+   "@type": "@id"
+  },
+  "affiliations": {
+   "@id": "schema:affiliation",
+   "@type": "@id"
+  },
+  "organization_type": {
+   "@id": "sensein:organizationType",
+   "@type": "@vocab",
+   "@context": {
+    "research_group": "sensein:OrganizationType/research_group",
+    "university": "sensein:OrganizationType/university",
+    "institute": "sensein:OrganizationType/institute",
+    "department": "sensein:OrganizationType/department",
+    "hospital": "sensein:OrganizationType/hospital",
+    "funder": "sensein:OrganizationType/funder",
+    "company": "sensein:OrganizationType/company",
+    "consortium": "sensein:OrganizationType/consortium",
+    "other": "sensein:OrganizationType/other"
+   }
+  },
+  "parent_organization": {
+   "@id": "schema:parentOrganization",
+   "@type": "@id"
+  },
+  "member": {
+   "@id": "org:member",
+   "@type": "@id"
+  },
+  "organization": {
+   "@id": "org:organization",
+   "@type": "@id"
+  },
+  "role_title": {
+   "@id": "schema:roleName"
+  },
+  "role_category": {
+   "@id": "sensein:roleCategory",
+   "@type": "@vocab",
+   "@context": {
+    "principal_investigator": "sensein:RoleCategory/principal_investigator",
+    "research_scientist": "sensein:RoleCategory/research_scientist",
+    "postdoc": "sensein:RoleCategory/postdoc",
+    "engineer": "sensein:RoleCategory/engineer",
+    "technical_staff": "sensein:RoleCategory/technical_staff",
+    "administrative_staff": "sensein:RoleCategory/administrative_staff",
+    "graduate_student": "sensein:RoleCategory/graduate_student",
+    "undergraduate": "sensein:RoleCategory/undergraduate",
+    "visitor": "sensein:RoleCategory/visitor",
+    "affiliate": "sensein:RoleCategory/affiliate",
+    "other": "sensein:RoleCategory/other"
+   }
+  },
+  "membership_status": {
+   "@id": "sensein:membershipStatus",
+   "@type": "@vocab",
+   "@context": {
+    "current": "sensein:MembershipStatus/current",
+    "former": "sensein:MembershipStatus/former"
+   }
+  },
+  "project_status": {
+   "@id": "sensein:projectStatus",
+   "@type": "@vocab",
+   "@context": {
+    "active": "schema:ActiveActionStatus",
+    "former": "schema:CompletedActionStatus"
+   }
+  },
+  "start_date": {
+   "@id": "schema:startDate"
+  },
+  "end_date": {
+   "@id": "schema:endDate"
+  },
+  "period_text": {
+   "@id": "sensein:periodText"
+  },
+  "roster_section": {
+   "@id": "sensein:rosterSection",
+   "@type": "@vocab",
+   "@context": {
+    "members": "sensein:RosterSection/members",
+    "students": "sensein:RosterSection/students"
+   }
+  },
+  "roster_order": {
+   "@id": "schema:position",
+   "@type": "xsd:integer"
+  },
+  "collaborator": {
+   "@id": "prov:agent",
+   "@type": "@id"
+  },
+  "note": {
+   "@id": "skos:note"
+  },
+  "project_type": {
+   "@id": "sensein:projectType",
+   "@type": "@vocab",
+   "@context": {
+    "lab_project": "sensein:ProjectType/lab_project",
+    "community_effort": "sensein:ProjectType/community_effort"
+   }
+  },
+  "funding_statement": {
+   "@id": "sensein:fundingStatement"
+  },
+  "funded_by": {
+   "@id": "frapo:isFundedBy",
+   "@type": "@id"
+  },
+  "award_number": {
+   "@id": "frapo:hasGrantNumber"
+  },
+  "funder": {
+   "@id": "schema:funder",
+   "@type": "@id"
+  },
+  "lab_role": {
+   "@id": "sensein:labRole"
+  },
+  "themes": {
+   "@id": "dcterms:subject",
+   "@type": "@id"
+  },
+  "links": {
+   "@id": "schema:relatedLink"
+  },
+  "members": {
+   "@id": "schema:member",
+   "@type": "@id"
+  },
+  "former_members": {
+   "@id": "sensein:formerMember",
+   "@type": "@id"
+  },
+  "external_contributors": {
+   "@id": "sensein:externalContributor"
+  },
+  "anchor_publications": {
+   "@id": "sensein:anchorPublication",
+   "@type": "@id"
+  },
+  "projects": {
+   "@id": "prov:wasGeneratedBy",
+   "@type": "@id"
+  },
+  "publication_type": {
+   "@id": "dcterms:type",
+   "@type": "@vocab",
+   "@context": {
+    "journal": "fabio:JournalArticle",
+    "preprint": "fabio:Preprint",
+    "conference": "fabio:ConferencePaper",
+    "chapter": "fabio:BookChapter",
+    "workshop": "fabio:WorkshopPaper",
+    "software": "fabio:ComputerProgram",
+    "patent": "fabio:PatentDocument",
+    "dataset": "fabio:DataFile"
+   }
+  },
+  "category": {
+   "@id": "schema:genre",
+   "@type": "@vocab",
+   "@context": {
+    "original-research": "fabio:ResearchPaper",
+    "methods": "fabio:MethodsPaper",
+    "software": "fabio:ComputerProgram",
+    "review": "fabio:ReviewArticle",
+    "perspective": "fabio:Opinion",
+    "commentary": "fabio:Comment",
+    "editorial": "fabio:Editorial",
+    "dataset": "fabio:DataPaper",
+    "benchmark": "sensein:PublicationCategory/benchmark",
+    "tutorial": "schema:LearningResource"
+   }
+  },
+  "year": {
+   "@id": "fabio:hasPublicationYear",
+   "@type": "xsd:integer"
+  },
+  "authorships": {
+   "@id": "sensein:authorship"
+  },
+  "position": {
+   "@id": "schema:position",
+   "@type": "xsd:integer"
+  },
+  "author_name": {
+   "@id": "schema:name"
+  },
+  "agent": {
+   "@id": "prov:agent",
+   "@type": "@id"
+  },
+  "venue": {
+   "@id": "prism:publicationName"
+  },
+  "pmcid": {
+   "@id": "fabio:hasPubMedCentralId"
+  },
+  "pdf_url": {
+   "@id": "sensein:pdfUrl",
+   "@type": "@id"
+  },
+  "code_repository": {
+   "@id": "schema:codeRepository",
+   "@type": "@id"
+  },
+  "lab_authors": {
+   "@id": "prov:wasAttributedTo",
+   "@type": "@id"
+  },
+  "topics": {
+   "@id": "dcterms:subject",
+   "@type": "@id"
+  },
+  "preprints": {
+   "@id": "fabio:hasPreviousVersion"
+  },
+  "cited_by_count": {
+   "@id": "sensein:citedByCount",
+   "@type": "xsd:integer"
+  },
+  "abstract": {
+   "@id": "dcterms:abstract"
+  },
+  "abstract_source": {
+   "@id": "sensein:abstractSource",
+   "@type": "@vocab",
+   "@context": {
+    "pubmed": "sensein:DataSource/pubmed",
+    "ncbi": "sensein:DataSource/ncbi",
+    "pmc": "sensein:DataSource/pmc",
+    "europepmc": "sensein:DataSource/europepmc",
+    "arxiv": "sensein:DataSource/arxiv",
+    "openalex": "sensein:DataSource/openalex",
+    "crossref": "sensein:DataSource/crossref",
+    "publisher": "sensein:DataSource/publisher",
+    "cv": "sensein:DataSource/cv",
+    "preprint-sweep": "sensein:DataSource/preprint-sweep",
+    "site-yaml-v1": "sensein:DataSource/site-yaml-v1"
+   }
+  },
+  "key_findings": {
+   "@id": "sensein:keyFindings"
+  },
+  "figures": {
+   "@id": "sensein:figure",
+   "@type": "@id"
+  },
+  "highlight": {
+   "@id": "sensein:highlight"
+  },
+  "rank": {
+   "@id": "schema:position",
+   "@type": "xsd:integer"
+  },
+  "summary": {
+   "@id": "schema:abstract"
+  },
+  "citation_text": {
+   "@id": "dcterms:bibliographicCitation"
+  },
+  "notes": {
+   "@id": "schema:comment"
+  },
+  "content_url": {
+   "@id": "schema:contentUrl",
+   "@type": "@id"
+  },
+  "image_kind": {
+   "@id": "sensein:imageKind",
+   "@type": "@vocab",
+   "@context": {
+    "portrait": "sensein:ImageKind/portrait",
+    "project_image": "sensein:ImageKind/project_image",
+    "figure": "sensein:ImageKind/figure",
+    "logo": "sensein:ImageKind/logo",
+    "illustration": "sensein:ImageKind/illustration"
+   }
+  },
+  "caption": {
+   "@id": "schema:caption"
+  },
+  "alt_text": {
+   "@id": "sensein:altText"
+  },
+  "credit": {
+   "@id": "schema:creditText"
+  },
+  "original_url": {
+   "@id": "sensein:originalUrl",
+   "@type": "@id"
+  },
+  "encoding_format": {
+   "@id": "schema:encodingFormat"
+  },
+  "width": {
+   "@id": "schema:width",
+   "@type": "xsd:integer"
+  },
+  "height": {
+   "@id": "schema:height",
+   "@type": "xsd:integer"
+  },
+  "depicts": {
+   "@id": "foaf:depicts",
+   "@type": "@id"
+  },
+  "pref_label": {
+   "@id": "skos:prefLabel"
+  },
+  "definition": {
+   "@id": "skos:definition"
+  },
+  "notation": {
+   "@id": "skos:notation"
+  },
+  "in_scheme": {
+   "@id": "skos:inScheme",
+   "@type": "@id"
+  },
+  "broader": {
+   "@id": "skos:broader",
+   "@type": "@id"
+  },
+  "close_match": {
+   "@id": "skos:closeMatch",
+   "@type": "@id"
+  },
+  "date_published": {
+   "@id": "schema:datePublished"
+  },
+  "headline": {
+   "@id": "schema:headline"
+  },
+  "about": {
+   "@id": "schema:about",
+   "@type": "@id"
+  },
+  "keywords": {
+   "@id": "schema:keywords"
+  },
+  "featured_topics": {
+   "@id": "schema:mentions",
+   "@type": "@id"
+  },
+  "organizations": {
+   "@id": "schema:hasPart"
+  },
+  "people": {
+   "@id": "schema:hasPart"
+  },
+  "memberships": {
+   "@id": "schema:hasPart"
+  },
+  "collaborations": {
+   "@id": "schema:hasPart"
+  },
+  "publications": {
+   "@id": "schema:hasPart"
+  },
+  "grants": {
+   "@id": "schema:hasPart"
+  },
+  "images": {
+   "@id": "schema:hasPart"
+  },
+  "topic_schemes": {
+   "@id": "schema:hasPart"
+  },
+  "news": {
+   "@id": "schema:hasPart"
+  },
+  "pages": {
+   "@id": "schema:hasPart"
+  }
+ }
+}
