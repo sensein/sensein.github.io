@@ -1,35 +1,67 @@
-name: Validate data
+name: Validate knowledge graph
 
 on:
   push:
     branches: ["main"]
     paths:
-      - "src/data/**"
+      - "kg/**"
       - "schema/**"
+      - "scripts/kg/**"
+      - "requirements-kg.txt"
       - ".github/workflows/validate-data.yml"
   pull_request:
     paths:
-      - "src/data/**"
+      - "kg/**"
       - "schema/**"
+      - "scripts/kg/**"
+      - "requirements-kg.txt"
       - ".github/workflows/validate-data.yml"
 
 jobs:
-  linkml-validate:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install LinkML
-        run: pip install linkml pyyaml
+      - name: Install LinkML and the graph build tools
+        run: pip install linkml -r requirements-kg.txt
 
-      - name: Compile schema (fails on schema errors)
-        run: gen-json-schema schema/sensein.yaml > /dev/null
+      - name: Compile the schema (fails on schema errors)
+        run: |
+          gen-json-schema schema/sensein.yaml > /dev/null
+          gen-jsonld-context schema/sensein.yaml > /dev/null
 
-      - name: Validate site data against schema
-        run: python schema/validate_data.py
+      - name: Check references, required slots and enums
+        run: python scripts/kg/build.py --check
+
+      - name: Build the graph (JSON-LD and Turtle)
+        run: python scripts/kg/build.py
+
+      - name: Validate the merged graph with LinkML
+        run: linkml-validate -s schema/sensein.yaml -C KnowledgeGraph build/kg/sensein.yaml
+
+      - name: Check that the Turtle and JSON-LD agree
+        run: |
+          python - <<'PY'
+          import rdflib
+          a = rdflib.Graph().parse("public/kg/sensein.jsonld", format="json-ld")
+          b = rdflib.Graph().parse("public/kg/sensein.ttl", format="turtle")
+          assert len(a) == len(b) > 0, (len(a), len(b))
+          print(f"{len(a)} triples")
+          PY
+
+      - name: Upload the compiled graph
+        uses: actions/upload-artifact@v4
+        with:
+          name: sensein-kg
+          path: |
+            public/kg/
+            build/kg/

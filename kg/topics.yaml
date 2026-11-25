@@ -1,0 +1,95 @@
+# Research areas used to group projects and publications.
+# Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
+
+topic_schemes:
+- id: sid:topics/research-areas
+  title: Research areas
+  description: Topic areas used to group the lab's projects and publications.
+  derived_from:
+  - site-yaml-v1
+topics:
+- id: sid:topic/reproducibility-tooling
+  pref_label: Reproducibility and scientific software
+  notation: reproducibility-tooling
+  in_scheme: sid:topics/research-areas
+  definition: >-
+    Open-source tools, pipelines, and workflow standards (Nipype, Pydra, fMRIPrep, BIDS, DataLad) for
+    reproducible neuroscience.
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/neuroimaging-methods
+  pref_label: Neuroimaging methods and atlases
+  notation: neuroimaging-methods
+  in_scheme: sid:topics/research-areas
+  definition: >-
+    MRI/dMRI methods, brain atlases, parcellations, segmentation, registration, and morphometry pipelines.
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/open-data-standards
+  pref_label: Open data, standards and consortia
+  notation: open-data-standards
+  in_scheme: sid:topics/research-areas
+  definition: >-
+    Data sharing, FAIR standards, archives, and large consortia (BICAN, Bridge2AI, BIDS, NWB, DANDI, ReproSchema).
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/speech-voice-biomarkers
+  pref_label: Speech, voice and vocal biomarkers
+  notation: speech-voice-biomarkers
+  in_scheme: sid:topics/research-areas
+  definition: Speech production and perception research and the use of voice as a biomarker of health.
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/mental-health-psychiatry
+  pref_label: Mental health and psychiatry
+  notation: mental-health-psychiatry
+  in_scheme: sid:topics/research-areas
+  definition: >-
+    Brain and clinical correlates of depression, anxiety, suicide risk, and treatment response across
+    the lifespan.
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/child-development-education
+  pref_label: Child development, autism and literacy
+  notation: child-development-education
+  in_scheme: sid:topics/research-areas
+  definition: >-
+    Pediatric neurodevelopment, autism, reading and literacy, and learning across childhood and adolescence.
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/ml-nlp-knowledge
+  pref_label: Machine learning, NLP and knowledge graphs
+  notation: ml-nlp-knowledge
+  in_scheme: sid:topics/research-areas
+  definition: >-
+    Deep learning, natural language processing, LLMs, knowledge graphs, and agents applied to biomedical
+    and behavioral data.
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/connectomics-circuits
+  pref_label: Connectomics and brain circuits
+  notation: connectomics-circuits
+  in_scheme: sid:topics/research-areas
+  definition: >-
+    Structural and functional connectivity studies of human brain circuits, including subcortex and auditory
+    pathways.
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/brain-dynamics-naturalistic
+  pref_label: Brain dynamics and naturalistic neuroscience
+  notation: brain-dynamics-naturalistic
+  in_scheme: sid:topics/research-areas
+  definition: >-
+    Brain state dynamics, naturalistic stimuli, real-time fMRI, and neurofeedback approaches to cognition.
+  derived_from:
+  - site-yaml-v1
+- id: sid:topic/knowledge-graphs
+  pref_label: Knowledge graphs
+  notation: knowledge-graphs
+  in_scheme: sid:topics/research-areas
+  derived_from:
+  - site-yaml-v1
+  curation_notes:
+  - >-
+    Tag used on publications but missing from the topic list on /publications/; label written during migration,
+    please review.

@@ -1,0 +1,160 @@
+# Organizations: the lab, its host institutions, funders and collaborators' institutions.
+# Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
+
+organizations:
+- id: sid:org/mit
+  name: Massachusetts Institute of Technology
+  alternate_names:
+  - MIT
+  organization_type: university
+  url: https://www.mit.edu/
+- id: sid:org/mcgovern-institute
+  name: McGovern Institute for Brain Research
+  alternate_names:
+  - McGovern Institute
+  organization_type: institute
+  parent_organization: sid:org/mit
+  url: https://mcgovern.mit.edu/
+- id: sid:org/sensein
+  name: Senseable Intelligence Group
+  alternate_names:
+  - sensein
+  organization_type: research_group
+  parent_organization: sid:org/mcgovern-institute
+  url: https://sensein.group/
+- id: sid:org/nih
+  name: National Institutes of Health
+  alternate_names:
+  - NIH
+  organization_type: funder
+  url: https://www.nih.gov/
+- id: sid:org/nida
+  name: National Institute on Drug Abuse
+  alternate_names:
+  - NIDA
+  organization_type: funder
+  parent_organization: sid:org/nih
+- id: sid:org/nimh
+  name: National Institute of Mental Health
+  alternate_names:
+  - NIMH
+  organization_type: funder
+  parent_organization: sid:org/nih
+- id: sid:org/ninds
+  name: National Institute of Neurological Disorders and Stroke
+  alternate_names:
+  - NINDS
+  organization_type: funder
+  parent_organization: sid:org/nih
+- id: sid:org/nibib
+  name: National Institute of Biomedical Imaging and Bioengineering
+  alternate_names:
+  - NIBIB
+  organization_type: funder
+  parent_organization: sid:org/nih
+- id: sid:org/nih-od
+  name: NIH Office of the Director
+  alternate_names:
+  - NIH OD
+  organization_type: funder
+  parent_organization: sid:org/nih
+- id: sid:org/kennedy-krieger-institute-johns-hopkins
+  name: Kennedy Krieger Institute (Johns Hopkins)
+- id: sid:org/mclean-hospital-harvard-medical-school
+  name: McLean Hospital / Harvard Medical School
+- id: sid:org/columbia-university
+  name: Columbia University
+- id: sid:org/philipps-universitat-marburg
+  name: Philipps-Universität Marburg
+- id: sid:org/massachusetts-general-hospital
+  name: Massachusetts General Hospital
+- id: sid:org/mit-mcgovern-northeastern
+  name: MIT McGovern / Northeastern
+- id: sid:org/university-of-nebraska-lincoln
+  name: University of Nebraska–Lincoln
+- id: sid:org/mit-mcgovern-institute
+  name: MIT McGovern Institute
+- id: sid:org/northeastern-university-also-mit-mcgovern
+  name: Northeastern University (also MIT McGovern)
+- id: sid:org/mit-csail
+  name: MIT CSAIL
+- id: sid:org/mgh-martinos-center
+  name: MGH Martinos Center
+- id: sid:org/umass-chan-medical-school
+  name: UMass Chan Medical School
+- id: sid:org/uc-irvine
+  name: UC Irvine
+- id: sid:org/dartmouth-college
+  name: Dartmouth College
+- id: sid:org/forschungszentrum-julich
+  name: Forschungszentrum Jülich
+- id: sid:org/stanford-university
+  name: Stanford University
+- id: sid:org/anthropic-formerly-stanford-google
+  name: Anthropic (formerly Stanford / Google)
+- id: sid:org/university-of-lausanne-formerly-stanford
+  name: University of Lausanne (formerly Stanford)
+- id: sid:org/stanford-squishymedia
+  name: Stanford (Squishymedia)
+- id: sid:org/mcgill-university-mni
+  name: McGill University / MNI
+- id: sid:org/mni-mcgill
+  name: MNI / McGill
+- id: sid:org/child-mind-institute
+  name: Child Mind Institute
+- id: sid:org/meta
+  name: Meta
+- id: sid:org/allen-institute-for-brain-science
+  name: Allen Institute for Brain Science
+- id: sid:org/uc-san-diego
+  name: UC San Diego
+- id: sid:org/inria-saclay
+  name: Inria Saclay
+- id: sid:org/inria-rennes
+  name: Inria Rennes
+- id: sid:org/university-of-surrey
+  name: University of Surrey
+- id: sid:org/google-x-formerly-ut-austin
+  name: Google X (formerly UT Austin)
+- id: sid:org/ut-austin
+  name: UT Austin
+- id: sid:org/university-of-pennsylvania-formerly-iowa
+  name: University of Pennsylvania (formerly Iowa)
+- id: sid:org/donders-institute
+  name: Donders Institute
+- id: sid:org/university-of-washington
+  name: University of Washington
+- id: sid:org/university-of-south-carolina
+  name: University of South Carolina
+- id: sid:org/ucl-fil
+  name: UCL FIL
+- id: sid:org/university-of-oxford
+  name: University of Oxford
+- id: sid:org/boston-university-wheelock
+  name: Boston University / Wheelock
+- id: sid:org/boston-university
+  name: Boston University
+- id: sid:org/massachusetts-eye-ear-harvard
+  name: Massachusetts Eye & Ear / Harvard
+- id: sid:org/harvard-university
+  name: Harvard University
+- id: sid:org/university-of-michigan
+  name: University of Michigan
+- id: sid:org/beth-israel-deaconess-harvard
+  name: Beth Israel Deaconess / Harvard
+- id: sid:org/ibm-research
+  name: IBM Research
+- id: sid:org/tbd
+  name: TBD
+- id: sid:org/mit-lincoln-laboratory
+  name: MIT Lincoln Laboratory
+- id: sid:org/medical-university-of-vienna
+  name: Medical University of Vienna
+- id: sid:org/cornell-university
+  name: Cornell University
+- id: sid:org/google-formerly-bu
+  name: Google (formerly BU)
+- id: sid:org/mit-emeritus
+  name: MIT (emeritus)
+- id: sid:org/siemens-healthineers-formerly-mit
+  name: Siemens Healthineers (formerly MIT)

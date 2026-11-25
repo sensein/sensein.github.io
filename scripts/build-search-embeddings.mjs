@@ -2,8 +2,8 @@
 /**
  * Build-time MiniLM embeddings for the cross-site search.
  *
- * Walks the same data files as src/pages/search.astro (people, projects,
- * publications), builds the same record-text strings, encodes each with
+ * Reads the same records as src/pages/search.astro (people, projects,
+ * publications) from the knowledge graph, builds the same record-text strings, encodes each with
  * `Xenova/all-MiniLM-L6-v2` (384 dims), normalises to unit length, and
  * writes:
  *
@@ -22,18 +22,25 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import yaml from "js-yaml";
 import { pipeline, env } from "@xenova/transformers";
+import { KnowledgeGraph } from "../src/lib/kg.ts";
+import { siteData } from "../src/lib/extract.ts";
 
 env.allowLocalModels = false;
 env.useFSCache = true;
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DATA = path.join(ROOT, "src", "data");
+const GRAPH = path.join(ROOT, "src", "generated", "sensein.jsonld");
 
-async function readYaml(name) {
-  const text = await fs.readFile(path.join(DATA, name), "utf-8");
-  return yaml.load(text);
+// Records come from the compiled knowledge graph (scripts/kg/build.py),
+// through the same extraction the pages use.
+let _data = null;
+async function data() {
+  if (!_data) {
+    const doc = JSON.parse(await fs.readFile(GRAPH, "utf-8"));
+    _data = siteData(new KnowledgeGraph(doc));
+  }
+  return _data;
 }
 
 function personSlug(name) {
@@ -48,7 +55,7 @@ function personSlug(name) {
 async function buildRecords() {
   const records = [];
 
-  const team = (await readYaml("team_members.yml")) ?? [];
+  const team = (await data()).teamMembers();
   for (const m of team) {
     records.push({
       k: "person",
@@ -61,7 +68,7 @@ async function buildRecords() {
       s: null,
     });
   }
-  const studs = (await readYaml("students.yml")) ?? [];
+  const studs = (await data()).students();
   for (const m of studs) {
     records.push({
       k: "person",
@@ -74,7 +81,7 @@ async function buildRecords() {
       s: null,
     });
   }
-  const alums = (await readYaml("alumni_members.yml")) ?? [];
+  const alums = (await data()).alumniMembers();
   for (const m of alums) {
     records.push({
       k: "person",
@@ -87,7 +94,7 @@ async function buildRecords() {
       s: null,
     });
   }
-  const projs = (await readYaml("projects.yml")) ?? [];
+  const projs = (await data()).projects();
   for (const p of projs) {
     records.push({
       k: "project",
@@ -100,7 +107,7 @@ async function buildRecords() {
       s: p.status ?? null,
     });
   }
-  const pubs = (await readYaml("publications.yml")) ?? [];
+  const pubs = (await data()).publications();
   for (const pub of pubs) {
     records.push({
       k: "publication",

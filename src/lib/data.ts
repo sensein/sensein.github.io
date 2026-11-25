@@ -1,180 +1,44 @@
-import yaml from "js-yaml";
+import { KnowledgeGraph, type JsonLdDocument } from "./kg.ts";
+import { siteData, type SiteData } from "./extract.ts";
+import graphJson from "../generated/sensein.jsonld?raw";
 
-const RAW_FILES = import.meta.glob<string>("../data/*.yml", {
-  eager: true,
-  query: "?raw",
-  import: "default",
-});
+export type * from "./extract.ts";
+import type {
+  Publication,
+  Project,
+  TeamMember,
+  NewsItem,
+} from "./extract.ts";
 
-export interface TeamMember {
-  name: string;
-  photo?: string;
-  info?: string;
-  email?: string;
-  /** GitHub username only (no URL). */
-  github?: string;
-  linkedin?: string;
-  website?: string;
-  scholar?: string;
-  orcid?: string;
-  /** Twitter/X handle (with or without leading @). */
-  twitter?: string;
-  /** Bluesky handle (e.g. user.bsky.social). */
-  bluesky?: string;
-  duration?: string;
-  number_educ?: number;
-  education1?: string;
-  education2?: string;
-  education3?: string;
-  education4?: string;
-  education5?: string;
+/**
+ * Site data, extracted from the lab knowledge graph.
+ *
+ * Every accessor below reads the compiled JSON-LD graph (src/lib/kg.ts,
+ * written by scripts/kg/build.py) through siteData() in src/lib/extract.ts.
+ * The shapes returned are the ones the pages have always used, so templates
+ * did not have to change when the data moved from src/data/*.yml into kg/.
+ */
+let _kg: KnowledgeGraph | null = null;
+export function graph(): KnowledgeGraph {
+  if (!_kg) _kg = new KnowledgeGraph(JSON.parse(graphJson) as JsonLdDocument);
+  return _kg;
 }
 
-/** A person we've collaborated with. Person-centric: one entry per
- *  human, with their current institutional home plus the named lab
- *  projects / ecosystem efforts they participated in and rough years.
- *  Project tags mix slugs from projects.yml (e.g. "sails", "bican-um1")
- *  with ecosystem-effort names not modelled as standalone projects
- *  (e.g. "BANDA", "BIDS", "fMRIPrep"). */
-export interface Collaborator {
-  name: string;
-  /** Current home institution, e.g. "MGH Martinos Center" or "Stanford". */
-  current_institution?: string;
-  /** Lab projects + ecosystem efforts they contributed to. */
-  projects?: string[];
-  /** Rough year span of the collaboration, e.g. "2018–present" or "2003–2014". */
-  years?: string;
-  /** Optional one-line note (role, sub-project, etc.). */
-  note?: string;
+let _sd: SiteData | null = null;
+function sd(): SiteData {
+  if (!_sd) _sd = siteData(graph());
+  return _sd;
 }
 
-export interface ProjectLink {
-  label?: string;
-  url?: string;
-}
-
-export interface ProjectContributors {
-  current?: string[];
-  former?: string[];
-  /** External collaborators (non-lab). Plain text, optionally "Name (Affiliation)". */
-  external?: string[];
-}
-
-export interface Project {
-  slug: string;
-  title: string;
-  status: "active" | "former";
-  description?: string;
-  funder?: string;
-  image?: string;
-  themes?: string[];
-  links?: ProjectLink[];
-  contributors?: ProjectContributors;
-  /** Cross-reference IDs into publications.yml (DOIs, arXiv ids). */
-  publications?: string[];
-}
-
-/** Summary of a preprint precursor attached to a published-of-record entry. */
-export interface PreprintRef {
-  id: string;
-  venue?: string;
-  url?: string;
-  year?: number;
-  doi?: string;
-  arxiv?: string;
-}
-
-/** Coarse-grained kind of article — orthogonal to `type` (the publication form). */
-export type PublicationCategory =
-  | "original-research"
-  | "methods"
-  | "software"
-  | "review"
-  | "perspective"
-  | "commentary"
-  | "editorial"
-  | "dataset"
-  | "benchmark"
-  | "tutorial";
-
-/** Schema for the curated publications corpus in src/data/publications.yml. */
-export interface Publication {
-  id: string;
-  type: "journal" | "preprint" | "conference" | "chapter" | "workshop" | "software" | "patent" | "dataset";
-  category: PublicationCategory;
-  year: number;
-  title: string;
-  authors: string[];
-  venue?: string;
-  doi?: string;
-  pmid?: string;
-  pmcid?: string;
-  arxiv?: string;
-  url?: string;
-  pdf_url?: string;
-  github?: string;
-  sources?: string[];
-  projects?: string[];
-  lab_authors?: string[];
-  topics: string[];
-  /** Preprint precursor(s) that have been superseded by this published-of-record
-   *  entry. Only present on the journal/conference/chapter record. */
-  preprints?: PreprintRef[];
-  cited_by?: number;
-  /** Abstract pulled verbatim from PubMed / PMC / arXiv / OpenAlex / Crossref.
-      No paraphrasing — only authoritative sources. */
-  abstract?: string;
-  abstract_source?: "pubmed" | "pmc" | "arxiv" | "openalex" | "crossref" | "publisher";
-  /** 1–3 sentence summary of the paper's main contribution. Derived directly
-      from the abstract; never invented when the abstract is absent. */
-  key_findings?: string;
-}
-
-/** Legacy schema for src/data/publist.yml (the manually-curated highlights). */
-export interface FeaturedPublication {
-  title: string;
-  image?: string;
-  description?: string;
-  authors?: string;
-  type?: string;
-  date?: string;
-  link?: { url?: string; display?: string };
-  "code link"?: { url?: string; display?: string };
-  highlight?: number;
-  news1?: string;
-  news2?: string;
-}
-
-export interface NewsItem {
-  date: string;
-  headline: string;
-}
-
-function load<T>(name: string): T {
-  const key = `../data/${name}`;
-  const raw = RAW_FILES[key];
-  if (typeof raw !== "string") {
-    throw new Error(
-      `Data file not found: ${name}. Available: ${Object.keys(RAW_FILES).join(", ")}`,
-    );
-  }
-  return yaml.load(raw) as T;
-}
-
-function loadArray<T>(name: string): T[] {
-  const v = load<T[] | null>(name);
-  return Array.isArray(v) ? v : [];
-}
-
-export const teamMembers = () => loadArray<TeamMember>("team_members.yml");
-export const students = () => loadArray<TeamMember>("students.yml");
-export const alumniMembers = () => loadArray<TeamMember>("alumni_members.yml");
-export const collaborators = () =>
-  loadArray<Collaborator>("collaborators.yml");
-export const projects = () => loadArray<Project>("projects.yml");
-export const publications = () => loadArray<Publication>("publications.yml");
-export const publist = () => loadArray<FeaturedPublication>("publist.yml");
-export const news = () => loadArray<NewsItem>("news.yml");
+export const teamMembers = () => sd().teamMembers();
+export const students = () => sd().students();
+export const alumniMembers = () => sd().alumniMembers();
+export const collaborators = () => sd().collaborators();
+export const projects = () => sd().projects();
+export const publications = () => sd().publications();
+export const publist = () => sd().publist();
+export const news = () => sd().news();
+export const publicationsPage = () => sd().publicationsPage();
 
 /** Publications filtered to a given project slug, newest-first. */
 export function publicationsForProject(slug: string): Publication[] {

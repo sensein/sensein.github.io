@@ -1,111 +1,95 @@
 # Editing the projects list
 
-The `/research/` page is generated from `src/data/projects.yml`. Anyone can open
-a pull request adding a new project, updating contributors, fixing a link, or
-moving a project to "former" — no Astro / Node knowledge required.
+The `/research/` page is generated from the lab knowledge graph. Projects live
+in [`kg/projects.yaml`](kg/projects.yaml), their awards in
+[`kg/grants.yaml`](kg/grants.yaml), and the papers they cite in
+[`kg/publications.yaml`](kg/publications.yaml). Anyone can open a pull request
+adding a project, updating its members, fixing a link or marking it former; no
+Astro or Node knowledge is needed. [`kg/README.md`](kg/README.md) covers the
+graph as a whole.
 
-A companion file `src/data/publications.yml` holds the canonical
-publications corpus (deduplicated from CV / NCBI MyBibliography / OpenAlex,
-~200 entries). Project entries cross-reference publications by DOI / arXiv id
-via the `publications:` list.
+## A project record
 
-## Schema
-
-Each entry is a YAML object with these fields. Only `slug`, `title`, and
-`status` are required.
+Only `id`, `slug`, `title` and `project_type` are required.
 
 ```yaml
-- slug: bbqs                       # required; url-safe, unique
-  title: BBQS — Brain Behavior …   # required; human-readable
-  status: active                   # required; "active" or "former"
-  description: >                   # one-paragraph summary
+- id: sid:project/bbqs              # required; sid:project/<slug>
+  slug: bbqs                        # required; url-safe, unique
+  title: BBQS — Brain Behavior …    # required
+  project_type: lab_project         # required; or community_effort
+  project_status: active            # active or former
+  start_date: '2024'                # optional; YYYY, YYYY-MM or YYYY-MM-DD
+  description: >-
     Sentence one. Sentence two.
-  funder: NIDA U24 DA064429        # optional; grant / award id
-  image: /images/external/bbqs.png # optional; path under public/
-  themes: [open-data, consortium]  # optional; tags for filtering
-  links:                           # optional list of { label, url }
-    - { label: Project website, url: https://brain-bbqs.org }
-    - { label: GitHub, url: https://github.com/brain-bbqs }
-  contributors:                    # optional; both lists are optional
-    current: [Satrajit S Ghosh, Nader Nikbakht]
-    former: [Daniel M. Low]
-  publications:                    # optional; DOI or arXiv ids resolved from
-    - 10.1234/example              # publications.yml
-    - arXiv:2507.03674
+  funding_statement: NIDA U24 DA064429 (Lead PI; MPI Cabrera, Kennedy)
+  funded_by:                        # grant ids from kg/grants.yaml
+  - sid:grant/u24-da064429
+  image: sid:image/external/bbqs-logo   # an id from kg/images.yaml
+  themes:                           # topic ids from kg/topics.yaml
+  - sid:topic/open-data-standards
+  links:
+  - url: https://brain-bbqs.org
+    label: Project website
+  members:                          # person ids
+  - sid:person/satrajit-s-ghosh
+  former_members:
+  - sid:person/daniel-m-low
+  external_contributors:            # free text for people with no record
+  - Rachel Reetzke (Kennedy Krieger)
+  anchor_publications:              # publication ids, usually doi:…
+  - doi:10.1234/example
+  created: '2026-12-01'
 ```
 
-### Cross-referencing publications
+The build stops with a clear message if any id here points at nothing, so a
+typo in a name can't produce a silent dead link.
 
-Add a DOI or arXiv id to the project's `publications:` list. The
-corresponding full record lives in `src/data/publications.yml`. If a paper
-isn't in the corpus yet, add it there in the same PR — the corpus entry's
-own `projects: [<slug>]` should also be set, so the link works both ways.
+### Linking publications
 
-When adding a paper to the corpus, follow the existing schema (see top of
-`publications.yml` for examples). Required fields: `id`, `type`, `year`,
-`title`, `authors`. Strongly recommended: `doi` (or `arxiv`/`pmid`),
-`venue`, `url`. The `lab_authors:` list should use the canonical roster
-names so the renderer can link them.
+List the paper's id under `anchor_publications`. If the paper isn't in
+`kg/publications.yaml` yet, add it in the same PR, and set its own `projects:`
+to include this project so the link works both ways.
 
-## Contributor names
+## People
 
-Names should match an entry in `src/data/team_members.yml`, `students.yml`, or
-`alumni_members.yml`. When a name matches, the contributor renders as a link
-to that person's anchor on `/team/` (e.g. `/team/#satrajit-s-ghosh`).
-
-If a name **doesn't** match the roster, it still renders as plain text — fine
-for one-off external collaborators. Just be aware: typos in names produce
-dead links visually, plain-text-only renders.
-
-To check the canonical name of a current/former member, search the roster
-files:
+Members are referenced by id. To find someone's id:
 
 ```
-grep -E '^- name:' src/data/team_members.yml src/data/alumni_members.yml
+grep -n "^- id: sid:person/" kg/people.yaml
 ```
 
-If a person should be on the site but isn't in any roster file, add them to
-the appropriate one *in the same PR*.
+If a contributor is in the lab but has no record, add them to
+`kg/people.yaml` (and a membership to `kg/memberships.yaml`) in the same PR.
+Someone outside the lab can go under `external_contributors` as text, or get a
+person record if they will appear elsewhere on the site.
 
 ## Status
 
-- `active` — current work. Shows under "Active projects" on `/research/`.
-- `former` — completed or paused. Shows under "Past projects". A `*` is
-  appended to former-contributor names so a reader can quickly tell who's
-  still in the lab.
+- `active`: current work. Shows under "Active projects" on `/research/`.
+- `former`: completed or paused. Shows under "Past projects". Set `end_date`
+  too.
 
-When moving a project to `former`, also move former-current contributors into
-`contributors.former`.
+When a project ends, move people who are no longer on it from `members` to
+`former_members`.
 
 ## Themes
 
-Free-form lowercase-hyphen tags. Examples currently in use:
+Themes are topics from the research-area vocabulary in
+[`kg/topics.yaml`](kg/topics.yaml): `skos:Concept`s with a label and a
+definition. Reuse one where it fits. A new theme needs a new topic record in
+the same PR.
 
-```
-behavioral-quantification, child-development, clinical, computer-vision,
-connectomics, consortium, deep-learning, education, knowledge-graphs, llm,
-machine-learning, mental-health, naturalistic-data, neuroimaging,
-neurophysiology, nlp, open-data, parcellation, reproducibility, review,
-software, speech, speech-biomarkers, training, workflows
-```
+## Open questions
 
-Reuse tags when reasonable. New tags are fine.
-
-## TODO markers
-
-Lines tagged with `# TODO …` are explicit invitations to fix something:
-
-- `# TODO confirm <person>'s full name` — a contributor's name needs matching to the canonical roster
-- `# TODO add <X> URL` — a link or DOI to be added
-- `# TODO expand description` — a one-liner that should grow into a paragraph
-- `# TODO list collaborators` — external collaborators (not in roster files) to add as bullet comments
-
-When you address a TODO, remove the marker.
+Anything a project record still needs (a missing link, an unconfirmed name, a
+description to expand) is listed under its `curation_notes`. When you resolve
+one, remove the note.
 
 ## Workflow
 
-1. Edit `src/data/projects.yml` on a branch.
-2. (Optional) `npm install && npm run build` to verify the YAML parses and renders.
+1. Edit `kg/projects.yaml` on a branch.
+2. (Optional) `pip install -r requirements-kg.txt && npm run kg` to check the
+   graph, or `npm install && npm run build` to render the site.
 3. Open a PR. The PR-preview deploy will surface the rendered `/research/`
    page at `https://sensein.group/pr-preview/pr-N/research/` so reviewers can
    see the change live.

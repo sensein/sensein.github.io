@@ -1,5 +1,6 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
+import { withBase } from "~/lib/url";
 ---
 <PageLayout
   eyebrow="Colophon"
@@ -10,16 +11,20 @@ import PageLayout from "~/layouts/PageLayout.astro";
     <p>
       This site is built with <a href="https://astro.build">Astro</a> and
       <a href="https://tailwindcss.com">Tailwind CSS</a>, deployed via GitHub Pages.
-      All content lives in YAML data files and Markdown — easy to edit by hand or in the
-      GitHub UI.
+      The people, projects, publications and news are a knowledge graph: YAML files under
+      <code>kg/</code>, described by a <a href="https://linkml.io">LinkML</a> schema and
+      compiled to RDF when the site builds. The pages are generated from that graph, which
+      you can download as <a href={withBase("/kg/sensein.ttl")}>Turtle</a> or
+      <a href={withBase("/kg/sensein.jsonld")}>JSON-LD</a>.
     </p>
     <h2>Where to edit content</h2>
     <ul>
-      <li>People — <code>src/data/team_members.yml</code>, <code>students.yml</code>, <code>alumni_members.yml</code></li>
-      <li>Projects — <code>src/data/projects.yml</code></li>
-      <li>Publications — <code>src/data/papers.yml</code>, <code>publist.yml</code></li>
-      <li>News — <code>src/data/news.yml</code></li>
-      <li>Collaborators — <code>src/data/collaborators.yml</code></li>
+      <li>People — <code>kg/people.yaml</code>, and their roles in <code>kg/memberships.yaml</code></li>
+      <li>Projects — <code>kg/projects.yaml</code>, funding in <code>kg/grants.yaml</code></li>
+      <li>Publications — <code>kg/publications.yaml</code></li>
+      <li>Images and figures — <code>kg/images.yaml</code></li>
+      <li>News — <code>kg/news.yaml</code></li>
+      <li>Collaborators — <code>kg/collaborations.yaml</code></li>
       <li>Blog posts — <code>src/content/posts/*.md</code></li>
       <li>Page copy — <code>src/pages/*.astro</code></li>
     </ul>

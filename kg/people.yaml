@@ -1,0 +1,1661 @@
+# People: current and past lab members, and external collaborators. Roles in the lab are in memberships.yaml.
+# Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
+
+people:
+- id: sid:person/satrajit-s-ghosh
+  name: Satrajit S Ghosh
+  slug: satrajit-s-ghosh
+  url: https://satra.cogitatum.org/
+  orcid: ORCID:0000-0002-5312-6729
+  email: satra@mit.edu
+  image: sid:image/people/satrajit-s-ghosh
+  accounts:
+  - service: github
+    account_name: satra
+    url: https://github.com/satra
+  - service: x
+    account_name: satra_
+    url: https://x.com/satra_
+  cv: http://satra.cogitatum.org/assets/CV_Latest.pdf
+  education:
+  - statement: PhD Cognitive and Neural Systems, Boston University
+  - statement: BS(Honors) Information Systems and Computer Science, National University of Singapore
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/olga-vieira
+  name: Olga Vieira
+  slug: olga-vieira
+  email: ovieira@mit.edu
+  image: sid:image/people/olga-vieira
+  education:
+  - statement: AA, Accounting, Krasnodar Polytechnic Institute
+  created: '2025-10-28'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/dorota-jarecka
+  name: Dorota Jarecka
+  slug: dorota-jarecka
+  orcid: ORCID:0000-0001-8282-2988
+  email: djarecka@mit.edu
+  image: sid:image/people/dorota-jarecka
+  accounts:
+  - service: github
+    account_name: djarecka
+    url: https://github.com/djarecka
+  - service: linkedin
+    url: https://www.linkedin.com/in/djarecka/
+    account_name: djarecka
+  education:
+  - statement: PhD Atmospheric Physics, University of Warsaw
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/rahul-brito
+  name: Rahul Brito
+  slug: rahul-brito
+  email: rfbrito@mit.edu
+  image: sid:image/people/rahul-brito
+  accounts:
+  - service: github
+    account_name: Rahul-Brito
+    url: https://github.com/Rahul-Brito
+  education:
+  - statement: BS Bioengineering, University of Washington
+  created: '2022-04-28'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/meral-hacikamiloglu
+  name: Meral Hacikamiloglu
+  slug: meral-hacikamiloglu
+  email: meral@mit.edu
+  image: sid:image/people/meral-hacikamiloglu
+  education:
+  - statement: B.S. in Molecular & Cellular Biology, Vanderbilt University
+  created: '2023-01-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/nima-dehghani
+  name: Nima Dehghani
+  slug: nima-dehghani
+  url: https://scholar.harvard.edu/nima
+  orcid: ORCID:0000-0003-2032-8903
+  email: nima.dehghani@mit.edu
+  image: sid:image/people/nima-dehghani
+  education:
+  - statement: >-
+      PhD Computational Neuroscience, Complex Systems, Sorbonne Université (Pierre et Marie Curie, Paris
+      VI) & Unité de Neurosciences Information et Complexité (UNIC), CNRS
+  - statement: MD.
+  created: '2023-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/kaley-jenney
+  name: Kaley Jenney
+  slug: kaley-jenney
+  email: jenneyk@mit.edu
+  image: sid:image/people/kaley-jenney
+  education:
+  - statement: B.S. in Neuroscience, Emmanuel College
+  created: '2023-03-31'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/puja-trivedi
+  name: Puja Trivedi
+  slug: puja-trivedi
+  email: ptrivedi@mit.edu
+  image: sid:image/people/puja-trivedi
+  education:
+  - statement: M.S. in Computer Science, University of California - Los Angeles
+  - statement: B.S. in Computer Science with Specialization in Bioinformatics, University of California
+      - San Diego
+  created: '2023-06-09'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/yibei-chen
+  name: Yibei Chen
+  slug: yibei-chen
+  url: https://yibeichen.me/
+  orcid: ORCID:0000-0003-2882-0900
+  email: yibei@mit.edu
+  image: sid:image/people/yibei-chen
+  accounts:
+  - service: github
+    account_name: yibeichan
+    url: https://github.com/yibeichan
+  - service: linkedin
+    url: https://www.linkedin.com/in/yibeichen/
+    account_name: yibeichen
+  - service: google_scholar
+    url: https://scholar.google.com/citations?user=TnalNNUAAAAJ
+    account_name: TnalNNUAAAAJ
+  education:
+  - statement: Ph.D. in Communication, UC Santa Barbara
+  created: '2023-07-31'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/jong-hwan-lee
+  name: Jong-Hwan Lee
+  slug: jong-hwan-lee
+  orcid: ORCID:0000-0002-8902-6009
+  email: jonghlee@mit.edu
+  image: sid:image/people/jong-hwan-lee
+  education:
+  - statement: Ph.D. in Electrical Engineering and Computer Science, KAIST, Korea
+  created: '2023-08-17'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/kabilar-gunalan
+  name: Kabilar Gunalan
+  slug: kabilar-gunalan
+  orcid: ORCID:0000-0001-6964-4865
+  email: kabi@mit.edu
+  image: sid:image/people/kabilar-gunalan
+  accounts:
+  - service: github
+    account_name: kabilar
+    url: https://github.com/kabilar
+  - service: linkedin
+    url: https://www.linkedin.com/in/kabilar/
+    account_name: kabilar
+  education:
+  - statement: PhD Biomedical Engineering, Case Western Reserve University
+  - statement: MD, Case Western Reserve University
+  created: '2023-11-03'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/tek-raj-chhetri
+  name: Tek Raj Chhetri
+  slug: tek-raj-chhetri
+  url: https://tekrajchhetri.com/
+  orcid: ORCID:0000-0002-3905-7878
+  email: tekraj@mit.edu
+  image: sid:image/people/tek-raj-chhetri
+  accounts:
+  - service: github
+    account_name: tekrajchhetri
+    url: https://github.com/tekrajchhetri
+  - service: linkedin
+    url: https://www.linkedin.com/in/tekrajchhetri/
+    account_name: tekrajchhetri
+  - service: google_scholar
+    url: https://scholar.google.com/citations?user=QfpwmIIAAAAJ
+    account_name: QfpwmIIAAAAJ
+  - service: x
+    account_name: TekRaj_14
+    url: https://x.com/TekRaj_14
+  education:
+  - statement: Ph.D. in Computer Science, University of Innsbruck
+  - statement: M.Sc. in Computer Science, University of Tartu
+  created: '2024-03-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/jordan-wilke
+  name: Jordan Wilke
+  slug: jordan-wilke
+  email: wilke18@mit.edu
+  image: sid:image/people/jordan-wilke
+  accounts:
+  - service: github
+    account_name: wilke0818
+    url: https://github.com/wilke0818
+  education:
+  - statement: MEng in Computer Science and Engineering, MIT
+  - statement: B.S. in Computer Science and Engineering and Brain and Cognitive Science, MIT
+  created: '2024-05-20'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/suliman-sharif
+  name: Suliman Sharif
+  slug: suliman-sharif
+  orcid: ORCID:0000-0002-1342-9258
+  email: sulstice@mit.edu
+  image: sid:image/people/suliman-sharif
+  accounts:
+  - service: github
+    account_name: Sulstice
+    url: https://github.com/Sulstice
+  - service: linkedin
+    url: https://www.linkedin.com/in/sulimansharif/
+    account_name: sulimansharif
+  - service: x
+    account_name: SulimanSharif6
+    url: https://x.com/SulimanSharif6
+  education:
+  - statement: Ph.D. Pharmaceutical Sciences, University of Maryland, School of Pharmacy
+  - statement: MSc. Organic Chemistry, University of California, Riversde
+  - statement: BSc. Biochemistry, University of Texas at Austin
+  created: '2025-10-14'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/nader-nikbakht
+  name: Nader Nikbakht
+  slug: nader-nikbakht
+  email: nikbakht@mit.edu
+  image: sid:image/people/nader-nikbakht
+  education:
+  - statement: Ph.D. in Computational and Systems Neuroscience, SISSA
+  created: '2025-10-29'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/marta-da-rocha-diogo
+  name: Marta da Rocha Diogo
+  slug: marta-da-rocha-diogo
+  email: martadrd@mit.edu
+  accounts:
+  - service: github
+    account_name: martadrd
+    url: https://github.com/martadrd
+  created: '2026-11-25'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/victoria-sanchez
+  name: Victoria Sanchez
+  slug: victoria-sanchez
+  email: sanchezv@mit.edu
+  accounts:
+  - service: github
+    account_name: cheddarchunk
+    url: https://github.com/cheddarchunk
+  created: '2026-11-25'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/manaal-mohammed
+  name: Manaal Mohammed
+  slug: manaal-mohammed
+  email: manaal@mit.edu
+  image: sid:image/people/manaal-mohammed
+  accounts:
+  - service: github
+    account_name: manaalm
+    url: https://github.com/manaalm
+  education:
+  - statement: MEng in Artificial Intelligence and Decision Making, MIT
+  - statement: B.S. in Artificial Intelligence and Decision Making, MIT
+  created: '2025-09-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/aparna-bg
+  name: Aparna BG
+  slug: aparna-bg
+  email: aparna21@iisertvm.ac.in
+  image: sid:image/people/aparna-bg
+  education:
+  - statement: BSc/MSc, IISER, India
+  created: '2026-02-17'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/debbie-burdinski
+  name: Debbie Burdinski
+  slug: debbie-burdinski
+  orcid: ORCID:0000-0002-5625-3619
+  email: dclb@mit.edu
+  image: sid:image/people/debbie-burdinski
+  education:
+  - statement: BS Chemistry, Duke University
+  created: '2019-06-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/lucie-bierent
+  name: Lucie Bierent
+  slug: lucie-bierent
+  email: lucie271@mit.edu
+  image: sid:image/people/lucie-bierent
+  accounts:
+  - service: github
+    account_name: lucie271
+    url: https://github.com/lucie271
+  education:
+  - statement: MSc in Data Science, ETH Zurich
+  - statement: B.S. in Mechanical Engineering, EPFL
+  created: '2025-10-20'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/jeff-mentch
+  name: Jeff Mentch
+  slug: jeff-mentch
+  url: https://jeffmentch.com/
+  orcid: ORCID:0000-0002-7762-8678
+  email: jsmentch@mit.edu
+  image: sid:image/people/jeff-mentch
+  accounts:
+  - service: github
+    account_name: jsmentch
+    url: https://github.com/jsmentch
+  - service: x
+    account_name: jshoonm
+    url: https://x.com/jshoonm
+  education:
+  - statement: BS Biology, Penn State
+  - statement: AM Digital Musics, Dartmouth College
+  created: '2020-02-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/fabio-catania
+  name: Fabio Catania
+  slug: fabio-catania
+  orcid: ORCID:0000-0002-5403-9002
+  email: fabiocat@mit.edu
+  image: sid:image/people/fabio-catania
+  accounts:
+  - service: github
+    account_name: fabiocat93
+    url: https://github.com/fabiocat93
+  - service: linkedin
+    url: https://www.linkedin.com/in/fabiocatania/
+    account_name: fabiocatania
+  - service: google_scholar
+    url: https://scholar.google.com/citations?user=cn8YPK0AAAAJ
+    account_name: cn8YPK0AAAAJ
+  - service: x
+    account_name: FabioCatania10
+    url: https://x.com/FabioCatania10
+  education:
+  - statement: B.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
+  - statement: M.S. in Computer Science and Engineering @ Politecnico di Milano, Italy
+  - statement: Ph.D. in Information Technology @ Politecnico di Milano, Italy
+  created: '2022-05-02'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/bruke-wossenseged
+  name: Bruke Wossenseged
+  slug: bruke-wossenseged
+  email: brukew@mit.edu
+  image: sid:image/people/bruke-wossenseged
+  accounts:
+  - service: github
+    account_name: brukew
+    url: https://github.com/brukew
+  education:
+  - statement: MEng in Electrical Engineering and Computer Science, MIT
+  - statement: B.S. in Electrical Engineering and Computer Science, MIT
+  created: '2024-09-10'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/isaac-bevers
+  name: Isaac Bevers
+  slug: isaac-bevers
+  email: isaacb@mit.edu
+  image: sid:image/people/isaac-bevers
+  accounts:
+  - service: github
+    account_name: ibevers
+    url: https://github.com/ibevers
+  education:
+  - statement: B.S. in Symbolic Systems, Stanford University
+  created: '2024-04-04'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/miles-silva
+  name: Miles Silva
+  slug: miles-silva
+  email: mbsilva@mit.edu
+  image: sid:image/people/miles-silva
+  accounts:
+  - service: github
+    account_name: 900miles
+    url: https://github.com/900miles
+  education:
+  - statement: MEng in Computation and Cognition, MIT
+  - statement: B.S. in Computation and Cognition, MIT
+  created: '2024-02-06'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/maedbh-king
+  name: Maedbh King
+  slug: maedbh-king
+  url: http://www.maedbhking.com/
+  orcid: ORCID:0000-0001-5374-1011
+  email: maedbh@mit.edu
+  image: sid:image/people/maedbh-king
+  accounts:
+  - service: github
+    account_name: maedbhk
+    url: https://github.com/maedbhk
+  - service: linkedin
+    url: https://www.linkedin.com/in/maedbhking/
+    account_name: maedbhking
+  - service: google_scholar
+    url: https://scholar.google.com/citations?user=5Mha26gAAAAJ
+    account_name: 5Mha26gAAAAJ
+  - service: x
+    account_name: maedbhk
+    url: https://x.com/maedbhk
+  education:
+  - statement: Ph.D. in Cognitive Neuroscience, UC Berkeley
+  created: '2022-08-01'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/aaron-kanzer
+  name: Aaron Kanzer
+  slug: aaron-kanzer
+  url: https://aaronkanzer.github.io/
+  email: akanzer@mit.edu
+  image: sid:image/people/aaron-kanzer
+  accounts:
+  - service: github
+    account_name: aaronkanzer
+    url: https://github.com/aaronkanzer
+  education:
+  - statement: M.S in Computer Science, Northeastern University
+  - statement: B.S. in Economics & Political Science, Northeastern University
+  created: '2023-10-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/yassine-jamaa
+  name: Yassine Jamaa
+  slug: yassine-jamaa
+  email: jamaayas@mit.edu
+  image: sid:image/people/yassine-jamaa
+  accounts:
+  - service: github
+    account_name: YassineJamaa
+    url: https://github.com/YassineJamaa
+  education:
+  - statement: M.S. Computational Neuroscience, EPFL
+  - statement: B.S. in Life Science Engineering, EPFL
+  created: '2024-12-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/veronika-moroz
+  name: Veronika Moroz
+  slug: veronika-moroz
+  email: vmoroz@mit.edu
+  image: sid:image/people/veronika-moroz
+  accounts:
+  - service: github
+    account_name: Veronika271
+    url: https://github.com/Veronika271
+  created: '2025-02-04'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/harsha-gazula
+  name: Harsha Gazula
+  slug: harsha-gazula
+  orcid: ORCID:0000-0001-9318-8871
+  email: hgazula@mit.edu
+  image: sid:image/people/harsha-gazula
+  accounts:
+  - service: github
+    account_name: harshagazula
+    url: https://github.com/harshagazula
+  created: '2023-05-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/alina-weinberger
+  name: Alina Weinberger
+  slug: alina-weinberger
+  email: alina991@mit.edu
+  image: sid:image/people/alina-weinberger
+  accounts:
+  - service: github
+    account_name: ALINA991
+    url: https://github.com/ALINA991
+  education:
+  - statement: M.S. Neuroengineering, Technichal University of Munich
+  created: '2023-10-31'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/chaitanya-kapoor
+  name: Chaitanya Kapoor
+  slug: chaitanya-kapoor
+  email: ckapoor@mit.edu
+  image: sid:image/people/chaitanya-kapoor
+  accounts:
+  - service: github
+    account_name: atomic-rooster
+    url: https://github.com/atomic-rooster
+  education:
+  - statement: B.E. in Electrical and Electronics Engineering, BITS Pilani
+  created: '2024-01-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/daniel-m-low
+  name: Daniel M. Low
+  slug: daniel-m-low
+  url: https://danielmlow.github.io/
+  orcid: ORCID:0000-0002-8866-8667
+  email: dlow@mit.edu
+  image: sid:image/people/daniel-m-low
+  accounts:
+  - service: github
+    account_name: danielmlow
+    url: https://github.com/danielmlow
+  - service: google_scholar
+    url: https://scholar.google.com/citations?user=gxM0BLwAAAAJ
+    account_name: gxM0BLwAAAAJ
+  - service: x
+    account_name: danielmlow
+    url: https://x.com/danielmlow
+  - service: bluesky
+    account_name: danielmlow.bsky.social
+    url: https://bsky.app/profile/danielmlow.bsky.social
+  education:
+  - statement: MA Language & Communication Technologies, University of Groningen
+  - statement: MS Cognitive Science, CIMeC, University of Trento
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/gasser-elbanna
+  name: Gasser Elbanna
+  slug: gasser-elbanna
+  url: https://gasserelbanna.github.io/
+  orcid: ORCID:0009-0002-2077-548X
+  email: gelbanna@mit.edu
+  image: sid:image/people/gasser-elbanna
+  accounts:
+  - service: github
+    account_name: GasserElbanna
+    url: https://github.com/GasserElbanna
+  - service: linkedin
+    url: https://www.linkedin.com/in/gasser-elbanna-b38802127/
+    account_name: gasser-elbanna-b38802127
+  - service: google_scholar
+    url: https://scholar.google.com/citations?user=DCdkLrwAAAAJ
+    account_name: DCdkLrwAAAAJ
+  - service: x
+    account_name: gasser_elbanna
+    url: https://x.com/gasser_elbanna
+  education:
+  - statement: M.Sc. in Neuroscience and Neuroengineering, EPFL
+  - statement: B.Sc. in Systems and Biomedical Engineering, Cairo University
+  created: '2022-04-20'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/sabeen-lohawala
+  name: Sabeen Lohawala
+  slug: sabeen-lohawala
+  url: https://sabeenlohawala.cargo.site/
+  email: sabeen@mit.edu
+  image: sid:image/people/sabeen-lohawala
+  accounts:
+  - service: github
+    account_name: sabeenlohawala
+    url: https://github.com/sabeenlohawala
+  - service: linkedin
+    url: https://www.linkedin.com/in/sabeen/
+    account_name: sabeen
+  education:
+  - statement: MEng in Computer Science, MIT
+  - statement: B.S. in Computer Science, MIT
+  created: '2023-04-03'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/ahmed-zain
+  name: Ahmed Zain
+  slug: ahmed-zain
+  email: azain@mit.edu
+  image: sid:image/people/ahmed-zain
+  education:
+  - statement: B.S. in Computer Science and Engineering, MIT
+  created: '2023-09-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/agathe-tournant
+  name: Agathe Tournant
+  slug: agathe-tournant
+  email: agathe01@mit.edu
+  image: sid:image/people/agathe-tournant
+  accounts:
+  - service: github
+    account_name: agathetournant
+    url: https://github.com/agathetournant
+  education:
+  - statement: B.S. in Physics, EPFL
+  created: '2023-09-13'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/christopher-j-markiewicz
+  name: Christopher J Markiewicz
+  slug: christopher-j-markiewicz
+  orcid: ORCID:0000-0002-6533-164X
+  email: cjmarkie@mit.edu
+  image: sid:image/people/christopher-j-markiewicz
+  accounts:
+  - service: github
+    account_name: effigies
+    url: https://github.com/effigies
+  education:
+  - statement: PhD Cognitive and Neural Systems, Boston University
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/alicia-zhang
+  name: Alicia Zhang
+  slug: alicia-zhang
+  email: aliciaz@mit.edu
+  image: sid:image/people/alicia-zhang
+  accounts:
+  - service: github
+    account_name: alicia-z
+    url: https://github.com/alicia-z
+  education:
+  - statement: B.S. in Mathematics, Artificial Intelligence and Decision Making, MIT
+  created: '2023-10-30'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/olivia-han
+  name: Olivia Han
+  slug: olivia-han
+  email: olivia02@mit.edu
+  image: sid:image/people/olivia-han
+  education:
+  - statement: B.S. in Computer Science, Artificial Intelligence and Decision Making, MIT
+  created: '2023-10-30'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/jai-amin
+  name: Jai Amin
+  slug: jai-amin
+  url: https://jaiamin.com/
+  email: jamin30@mit.edu
+  image: sid:image/people/jai-amin
+  accounts:
+  - service: github
+    account_name: jaiamin
+    url: https://github.com/jaiamin
+  - service: linkedin
+    url: https://www.linkedin.com/in/jaiamin30/
+    account_name: jaiamin30
+  education:
+  - statement: B.S. in Computer Science and Artificial Intelligence, Northeastern University
+  created: '2023-09-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/amber-lien
+  name: Amber Lien
+  slug: amber-lien
+  email: amber03@mit.edu
+  image: sid:image/people/amber-lien
+  education:
+  - statement: B.S. in Electrical Engineering and Computer Science, MIT
+  created: '2023-06-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/edward-gaibor
+  name: Edward Gaibor
+  slug: edward-gaibor
+  email: egaibor@mit.edu
+  image: sid:image/people/edward-gaibor
+  education:
+  - statement: B. S in Computer Science @ UMass Boston
+  created: '2023-07-14'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/kapish-potula
+  name: Kapish Potula
+  slug: kapish-potula
+  email: kpotula7@gatech.edu
+  image: sid:image/people/kapish-potula
+  education:
+  - statement: B.S. in Neuroscience, Georgia Institute of Technology
+  created: '2023-05-05'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/sooyoung-ahn
+  name: Sooyoung Ahn
+  slug: sooyoung-ahn
+  email: sooyoung@mit.edu
+  image: sid:image/people/sooyoung-ahn
+  education:
+  - statement: B.S. in Electrical & Computer Engineering, Carnegie Mellon University
+  created: '2022-10-24'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/matthias-steiner
+  name: Matthias Steiner
+  slug: matthias-steiner
+  email: matth406@mit.edu
+  image: sid:image/people/matthias-steiner
+  education:
+  - statement: MSc. in Statistics, ETH Zurich
+  - statement: B.A. in Economics, University of St. Gallen
+  created: '2023-03-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/anurag-gade
+  name: Anurag Gade
+  slug: anurag-gade
+  email: f20201337@hyderabad.bits-pilani.ac.in
+  image: sid:image/people/anurag-gade
+  accounts:
+  - service: github
+    account_name: AnuragGade
+    url: https://github.com/AnuragGade
+  education:
+  - statement: B. E. in Electrical and Electronics Engineering, BITS Pilani
+  created: '2023-07-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/alisha-kodibagkar
+  name: Alisha Kodibagkar
+  slug: alisha-kodibagkar
+  url: https://alishakodibagkar.github.io/
+  email: akodiba1@mit.edu
+  image: sid:image/people/alisha-kodibagkar
+  accounts:
+  - service: github
+    account_name: AlishaKodibagkar
+    url: https://github.com/AlishaKodibagkar
+  - service: x
+    account_name: alishakodib
+    url: https://x.com/alishakodib
+  education:
+  - statement: B.S. and M.S.E., Biomedical Engineering, Johns Hopkins University
+  created: '2022-04-21'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/zihao-wang
+  name: Zihao Wang
+  slug: zihao-wang
+  email: zwang7@mit.edu
+  image: sid:image/people/zihao-wang
+  education:
+  - statement: B.S. in Computer Science, Artificial Intelligence and Decision Making, MIT
+  created: '2023-03-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/kai-mcclennen
+  name: Kai McClennen
+  slug: kai-mcclennen
+  email: kmcclenn@mit.edu
+  image: sid:image/people/kai-mcclennen
+  education:
+  - statement: B.S. in Computer Science and Engineering, MIT
+  created: '2023-06-05'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/claudia-liauw
+  name: Claudia Liauw
+  slug: claudia-liauw
+  email: cliauw@mit.edu
+  image: sid:image/people/claudia-liauw
+  education:
+  - statement: Currently Pursuing B.S. in Biological Sciences, Nanyang Technological University, Singapore
+  - statement: <a href="https://www.linkedin.com/in/claudialiauw/">LinkedIn</a>
+  created: '2022-06-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/kenny-nguyen
+  name: Kenny Nguyen
+  slug: kenny-nguyen
+  email: kennyngu@mit.edu
+  image: sid:image/people/kenny-nguyen
+  education:
+  - statement: B.S., Neurobiology & Physiology, Purdue University
+  - statement: M.Ed., Harvard Graduate School of Education
+  created: '2021-08-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/hoda-rajaei
+  name: Hoda Rajaei
+  slug: hoda-rajaei
+  orcid: ORCID:0000-0002-0754-5586
+  email: hodaraja@mit.edu
+  image: sid:image/people/hoda-rajaei
+  education:
+  - statement: PhD Florida International University
+  created: '2019-07-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/megha-vemuri
+  name: Megha Vemuri
+  slug: megha-vemuri
+  email: mvemuri@mit.edu
+  image: sid:image/people/megha-vemuri
+  accounts:
+  - service: github
+    account_name: meghavemuri
+    url: https://github.com/meghavemuri
+  education:
+  - statement: Currently Pursuing B.S. in Computation and Cognition, MIT
+  created: '2022-06-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/rebecca-kleinberger
+  name: Rebecca Kleinberger
+  slug: rebecca-kleinberger
+  orcid: ORCID:0000-0002-5667-5598
+  email: rebklein@mit.edu
+  image: sid:image/people/rebecca-kleinberger
+  education:
+  - statement: Meng Mechanical Engineering, ENSAM
+  - statement: MRes Computer Graphics, UCL
+  - statement: PhD, MIT Media Lab
+  created: '2020-04-09'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/dhritiman-das
+  name: Dhritiman Das
+  slug: dhritiman-das
+  orcid: ORCID:0000-0001-6627-0618
+  email: dasd@mit.edu
+  image: sid:image/people/dhritiman-das
+  accounts:
+  - service: github
+    account_name: dhritimandas
+    url: https://github.com/dhritimandas
+  - service: x
+    account_name: dhritimandas_
+    url: https://x.com/dhritimandas_
+  education:
+  - statement: M.S, Biomedical Engineering, Arizona State University
+  - statement: Ph.D. Computer Science, Technical University of Munich (TUM)
+  - statement: >-
+      Visiting Scientist at the <a href="http://campar.in.tum.de/Chair/ResearchIBBM">Image-Based Biomedical
+      Modeling</a> group at TUM
+  created: '2020-10-02'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/yingxing-feng
+  name: YingXing Feng
+  slug: yingxing-feng
+  email: fengyx@mit.edu
+  image: sid:image/people/yingxing-feng
+  education:
+  - statement: Diploma in Microelectronic Engineering, INTI International College Penang
+  - statement: BEng(Hons.) E&E Engineering, University of Bradford
+  - statement: MSc. E&E Engineering, Universiti Teknologi PETRONAS
+  - statement: <a href="https://www.linkedin.com/in/yxfeng/">Connect here</a>
+  created: '2022-04-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/aakanksha-rana
+  name: Aakanksha Rana
+  slug: aakanksha-rana
+  orcid: ORCID:0000-0002-8350-7602
+  email: aakrana@mit.edu
+  image: sid:image/people/aakanksha-rana
+  accounts:
+  - service: github
+    account_name: Aakanksha-Rana
+    url: https://github.com/Aakanksha-Rana
+  education:
+  - statement: M.S, Signal Processing, Telecom Paris(ENST)
+  - statement: Ph.D., Computer Vision & Machine Learning, Telecom Paris(ENST)
+  created: '2020-10-01'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/mathias-goncalves
+  name: Mathias Goncalves
+  slug: mathias-goncalves
+  orcid: ORCID:0000-0002-7252-7771
+  email: mathiasg@mit.edu
+  image: sid:image/people/mathias-goncalves
+  accounts:
+  - service: github
+    account_name: mgxd
+    url: https://github.com/mgxd
+  education:
+  - statement: BA Biology, Boston University
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/sanu-ann-abraham
+  name: Sanu Ann Abraham
+  slug: sanu-ann-abraham
+  orcid: ORCID:0000-0002-6169-8575
+  email: sanuann@mit.edu
+  image: sid:image/people/sanu-ann-abraham
+  accounts:
+  - service: github
+    account_name: sanuann
+    url: https://github.com/sanuann
+  education:
+  - statement: MS Electronics and Electrical Communication Engineering, IIT Kharagpur
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/frances-mulligan-they-them
+  name: Frances Mulligan (They/Them)
+  slug: frances-mulligan-they-them
+  image: sid:image/people/frances-mulligan-they-them
+  education:
+  - statement: B.S, Johnson & Wales University
+  created: '2021-02-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/alice-bizeul
+  name: Alice Bizeul
+  slug: alice-bizeul
+  email: alice.bizeul@mit.edu
+  image: sid:image/people/alice-bizeul
+  education:
+  - statement: BA Life Sciences Engineering, EPFL
+  created: '2020-02-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/kate-bentley
+  name: Kate Bentley
+  slug: kate-bentley
+  email: kbent@mit.edu
+  image: sid:image/people/kate-bentley
+  education:
+  - statement: PhD Boston University
+  - statement: Clinical Fellow, MGH
+  - statement: Recipient of the MIT-Philips Award for Clinicians
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/aishah-ismail
+  name: Aishah Ismail
+  slug: aishah-ismail
+  email: aishah3@mit.edu
+  image: sid:image/people/aishah-ismail
+  education:
+  - statement: BS Biomedical Science, Management and Science University, Malaysia
+  - statement: MS Allied Health Sciences; Biomedical Science, National University of Malaysia
+  - statement: PhD Candidate, Biomedical Engineering, University Teknologi PETRONAS, Malaysia
+  created: '2019-09-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/bhavya-kandimalla
+  name: Bhavya Kandimalla
+  slug: bhavya-kandimalla
+  email: bkandimalla.wpi@gmail.com
+  image: sid:image/people/bhavya-kandimalla
+  cv: https://www.linkedin.com/in/bhavya-kandimalla-a02248100
+  education:
+  - statement: BS Biology and Biotechnology, Worcester Polytechnic Institute
+  - statement: MS Candidate Bioinformatics, Johns Hopkins University
+  created: '2019-09-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/kevin-sitek
+  name: Kevin Sitek
+  slug: kevin-sitek
+  url: https://sitek.github.io/
+  orcid: ORCID:0000-0002-2172-5786
+  email: ksitek@mit.edu
+  image: sid:image/people/kevin-sitek
+  accounts:
+  - service: github
+    account_name: sitek
+    url: https://github.com/sitek
+  - service: x
+    account_name: krsitek
+    url: https://x.com/krsitek
+  - service: bluesky
+    account_name: sitek.bsky.social
+    url: https://bsky.app/profile/sitek.bsky.social
+  education:
+  - statement: PhD, Speech and Hearing Biosciences and Technology, Harvard University
+  - statement: BS Linguistics, University of California, Berkeley
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/debanjan-ghosh
+  name: Debanjan Ghosh
+  slug: debanjan-ghosh
+  email: dg513@mit.edu
+  image: sid:image/people/debanjan-ghosh
+  education:
+  - statement: PhD Computer Science, Rutgers University
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/wazeer-zulfikar
+  name: Wazeer Zulfikar
+  slug: wazeer-zulfikar
+  orcid: ORCID:0009-0008-7753-8817
+  email: wazeer@mit.edu
+  image: sid:image/people/wazeer-zulfikar
+  accounts:
+  - service: x
+    account_name: wazeerzulfikar
+    url: https://x.com/wazeerzulfikar
+  education:
+  - statement: BITS Pilani, Goa
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/jakub-kaczmarzyk
+  name: Jakub Kaczmarzyk
+  slug: jakub-kaczmarzyk
+  url: https://kaczmarj.github.io/
+  orcid: ORCID:0000-0002-5544-7577
+  email: jakubk@mit.edu
+  image: sid:image/people/jakub-kaczmarzyk
+  accounts:
+  - service: github
+    account_name: kaczmarj
+    url: https://github.com/kaczmarj
+  education:
+  - statement: BS Cognitive Science, Union College
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/smruti-padhy
+  name: Smruti Padhy
+  slug: smruti-padhy
+  orcid: ORCID:0000-0002-4218-5651
+  email: spadhy@tacc.utexas.edu
+  image: sid:image/people/smruti-padhy
+  education:
+  - statement: PhD Computer Science, Indian Institute of Technology
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/gregory-ciccarelli
+  name: Gregory Ciccarelli
+  slug: gregory-ciccarelli
+  email: gciccarelli@mit.edu
+  image: sid:image/people/gregory-ciccarelli
+  education:
+  - statement: PhD Electrical Engineering and Computer Science, MIT
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/yoel-sanchez-araujo
+  name: Yoel Sanchez Araujo
+  slug: yoel-sanchez-araujo
+  orcid: ORCID:0009-0003-1237-3760
+  email: ysa@mit.edu
+  image: sid:image/people/yoel-sanchez-araujo
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/shilpa-chakravartula
+  name: Shilpa Chakravartula
+  slug: shilpa-chakravartula
+  email: <not specified>
+  image: sid:image/placeholder-person
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/du-derry-chen
+  name: Du (Derry) Chen
+  slug: du-derry-chen
+  email: <not specified>
+  image: sid:image/placeholder-person
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:person/akito-van-troyer
+  name: Akito van Troyer
+  slug: akito-van-troyer
+  derived_from:
+  - site-yaml-v1
+  curation_notes:
+  - Named as a former contributor to a lab project but not on the lab roster.
+- id: sid:person/george-stefanakis
+  name: George Stefanakis
+  slug: george-stefanakis
+  derived_from:
+  - site-yaml-v1
+  curation_notes:
+  - Named as a former contributor to a lab project but not on the lab roster.
+- id: sid:person/mike-erkkinen
+  name: Mike Erkkinen
+  slug: mike-erkkinen
+  derived_from:
+  - site-yaml-v1
+  curation_notes:
+  - Named as a former contributor to a lab project but not on the lab roster.
+- id: sid:person/tod-machover
+  name: Tod Machover
+  slug: tod-machover
+  derived_from:
+  - site-yaml-v1
+  curation_notes:
+  - Named as a former contributor to a lab project but not on the lab roster.
+- id: sid:person/rachel-reetzke
+  name: Rachel Reetzke
+  slug: rachel-reetzke
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/kennedy-krieger-institute-johns-hopkins
+  created: '2026-05-12'
+- id: sid:person/rebecca-landa
+  name: Rebecca Landa
+  slug: rebecca-landa
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/kennedy-krieger-institute-johns-hopkins
+  created: '2026-05-12'
+- id: sid:person/elizabeth-eiler
+  name: Elizabeth Eiler
+  slug: elizabeth-eiler
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/kennedy-krieger-institute-johns-hopkins
+  created: '2026-05-12'
+- id: sid:person/arushi-singh
+  name: Arushi Singh
+  slug: arushi-singh
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/kennedy-krieger-institute-johns-hopkins
+  created: '2026-05-12'
+- id: sid:person/jeremy-perrin
+  name: Jeremy Perrin
+  slug: jeremy-perrin
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/kennedy-krieger-institute-johns-hopkins
+  created: '2026-05-12'
+- id: sid:person/vini-singh
+  name: Vini Singh
+  slug: vini-singh
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/kennedy-krieger-institute-johns-hopkins
+  created: '2026-05-12'
+- id: sid:person/diego-a-pizzagalli
+  name: Diego A. Pizzagalli
+  slug: diego-a-pizzagalli
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mclean-hospital-harvard-medical-school
+  created: '2026-05-11'
+- id: sid:person/randy-p-auerbach
+  name: Randy P. Auerbach
+  slug: randy-p-auerbach
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/columbia-university
+  created: '2026-05-11'
+- id: sid:person/stefan-g-hofmann
+  name: Stefan G. Hofmann
+  slug: stefan-g-hofmann
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/philipps-universitat-marburg
+  created: '2026-05-11'
+- id: sid:person/aude-henin
+  name: Aude Henin
+  slug: aude-henin
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/massachusetts-general-hospital
+  created: '2019-01-27'
+- id: sid:person/clemens-c-c-bauer
+  name: Clemens C. C. Bauer
+  slug: clemens-c-c-bauer
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mit-mcgovern-northeastern
+  created: '2026-05-26'
+- id: sid:person/nicholas-a-hubbard
+  name: Nicholas A. Hubbard
+  slug: nicholas-a-hubbard
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-nebraska-lincoln
+  created: '2026-05-11'
+- id: sid:person/john-d-e-gabrieli
+  name: John D. E. Gabrieli
+  slug: john-d-e-gabrieli
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mit-mcgovern-institute
+  created: '2026-05-11'
+- id: sid:person/susan-whitfield-gabrieli
+  name: Susan Whitfield-Gabrieli
+  slug: susan-whitfield-gabrieli
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/northeastern-university-also-mit-mcgovern
+  created: '2019-01-27'
+- id: sid:person/polina-golland
+  name: Polina Golland
+  slug: polina-golland
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mit-csail
+  created: '2026-05-26'
+- id: sid:person/anastasia-yendiki
+  name: Anastasia Yendiki
+  slug: anastasia-yendiki
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mgh-martinos-center
+  created: '2019-01-27'
+- id: sid:person/viviana-siless
+  name: Viviana Siless
+  slug: viviana-siless
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mgh-martinos-center
+  created: '2026-05-11'
+- id: sid:person/xavier-guell
+  name: Xavier Guell
+  slug: xavier-guell
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mgh-martinos-center
+  created: '2019-01-27'
+- id: sid:person/david-n-kennedy
+  name: David N. Kennedy
+  slug: david-n-kennedy
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/umass-chan-medical-school
+  created: '2026-05-11'
+- id: sid:person/sohye-kim
+  name: Sohye Kim
+  slug: sohye-kim
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/umass-chan-medical-school
+  created: '2026-05-26'
+- id: sid:person/david-b-keator
+  name: David B. Keator
+  slug: david-b-keator
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/uc-irvine
+  created: '2026-05-11'
+- id: sid:person/yaroslav-o-halchenko
+  name: Yaroslav O. Halchenko
+  slug: yaroslav-o-halchenko
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/dartmouth-college
+  created: '2026-05-11'
+- id: sid:person/michael-hanke
+  name: Michael Hanke
+  slug: michael-hanke
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/forschungszentrum-julich
+  created: '2019-01-27'
+- id: sid:person/russell-a-poldrack
+  name: Russell A. Poldrack
+  slug: russell-a-poldrack
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/stanford-university
+  created: '2026-05-11'
+- id: sid:person/krzysztof-j-gorgolewski
+  name: Krzysztof J. Gorgolewski
+  slug: krzysztof-j-gorgolewski
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/anthropic-formerly-stanford-google
+  created: '2026-05-11'
+- id: sid:person/oscar-esteban
+  name: Oscar Esteban
+  slug: oscar-esteban
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-lausanne-formerly-stanford
+  created: '2019-01-27'
+- id: sid:person/ross-w-blair
+  name: Ross W. Blair
+  slug: ross-w-blair
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/stanford-squishymedia
+  created: '2026-05-26'
+- id: sid:person/jean-baptiste-poline
+  name: Jean-Baptiste Poline
+  slug: jean-baptiste-poline
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mcgill-university-mni
+  created: '2019-01-27'
+- id: sid:person/samir-das
+  name: Samir Das
+  slug: samir-das
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mcgill-university-mni
+  created: '2019-01-27'
+- id: sid:person/peer-herholz
+  name: Peer Herholz
+  slug: peer-herholz
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mni-mcgill
+  created: '2026-05-11'
+- id: sid:person/arno-klein
+  name: Arno Klein
+  slug: arno-klein
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/child-mind-institute
+  created: '2019-01-27'
+- id: sid:person/michael-p-milham
+  name: Michael P. Milham
+  slug: michael-p-milham
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/child-mind-institute
+  created: '2026-05-11'
+- id: sid:person/anisha-keshavan
+  name: Anisha Keshavan
+  slug: anisha-keshavan
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/child-mind-institute
+  created: '2019-01-27'
+- id: sid:person/gregory-kiar
+  name: Gregory Kiar
+  slug: gregory-kiar
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/child-mind-institute
+  created: '2026-05-26'
+- id: sid:person/r-cameron-craddock
+  name: R. Cameron Craddock
+  slug: r-cameron-craddock
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/meta
+  created: '2026-05-11'
+- id: sid:person/shoaib-mufti
+  name: Shoaib Mufti
+  slug: shoaib-mufti
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/allen-institute-for-brain-science
+  created: '2026-05-11'
+- id: sid:person/tyler-mollenkopf
+  name: Tyler Mollenkopf
+  slug: tyler-mollenkopf
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/allen-institute-for-brain-science
+  created: '2026-05-11'
+- id: sid:person/maryann-e-martone
+  name: Maryann E. Martone
+  slug: maryann-e-martone
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/uc-san-diego
+  created: '2026-05-11'
+- id: sid:person/jeffrey-s-grethe
+  name: Jeffrey S. Grethe
+  slug: jeffrey-s-grethe
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/uc-san-diego
+  created: '2026-05-11'
+- id: sid:person/gael-varoquaux
+  name: Gaël Varoquaux
+  slug: gael-varoquaux
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/inria-saclay
+  created: '2026-05-11'
+- id: sid:person/camille-maumet
+  name: Camille Maumet
+  slug: camille-maumet
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/inria-rennes
+  created: '2019-01-27'
+- id: sid:person/tibor-auer
+  name: Tibor Auer
+  slug: tibor-auer
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-surrey
+  created: '2019-01-27'
+- id: sid:person/tal-yarkoni
+  name: Tal Yarkoni
+  slug: tal-yarkoni
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/google-x-formerly-ut-austin
+  created: '2019-01-27'
+- id: sid:person/alejandro-de-la-vega
+  name: Alejandro de la Vega
+  slug: alejandro-de-la-vega
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/ut-austin
+  created: '2019-01-27'
+- id: sid:person/taylor-salo
+  name: Taylor Salo
+  slug: taylor-salo
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-pennsylvania-formerly-iowa
+  created: '2019-01-27'
+- id: sid:person/robert-oostenveld
+  name: Robert Oostenveld
+  slug: robert-oostenveld
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/donders-institute
+  created: '2026-05-26'
+- id: sid:person/ariel-rokem
+  name: Ariel Rokem
+  slug: ariel-rokem
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-washington
+  created: '2022-03-19'
+- id: sid:person/chris-rorden
+  name: Chris Rorden
+  slug: chris-rorden
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-south-carolina
+  created: '2026-05-26'
+- id: sid:person/guillaume-flandin
+  name: Guillaume Flandin
+  slug: guillaume-flandin
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/ucl-fil
+  created: '2019-01-27'
+- id: sid:person/thomas-e-nichols
+  name: Thomas E. Nichols
+  slug: thomas-e-nichols
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-oxford
+  created: '2026-05-11'
+- id: sid:person/ola-ozernov-palchik
+  name: Ola Ozernov-Palchik
+  slug: ola-ozernov-palchik
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/boston-university-wheelock
+  created: '2026-05-11'
+- id: sid:person/tyler-k-perrachione
+  name: Tyler K. Perrachione
+  slug: tyler-k-perrachione
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/boston-university
+  created: '2026-05-11'
+- id: sid:person/phillip-c-song
+  name: Phillip C. Song
+  slug: phillip-c-song
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/massachusetts-eye-ear-harvard
+  created: '2026-05-26'
+- id: sid:person/matthew-k-nock
+  name: Matthew K. Nock
+  slug: matthew-k-nock
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/harvard-university
+  created: '2026-05-26'
+- id: sid:person/walter-dempsey
+  name: Walter Dempsey
+  slug: walter-dempsey
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-michigan
+  created: '2026-05-11'
+- id: sid:person/kelly-zuromski
+  name: Kelly Zuromski
+  slug: kelly-zuromski
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/harvard-university
+  created: '2026-05-11'
+- id: sid:person/daniel-kessler
+  name: Daniel Kessler
+  slug: daniel-kessler
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/university-of-michigan
+  created: '2026-05-11'
+- id: sid:person/john-torous
+  name: John Torous
+  slug: john-torous
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/beth-israel-deaconess-harvard
+  created: '2026-05-11'
+- id: sid:person/guillermo-cecchi
+  name: Guillermo Cecchi
+  slug: guillermo-cecchi
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/ibm-research
+  created: '2019-01-27'
+- id: sid:person/laurie-rumker
+  name: Laurie Rumker
+  slug: laurie-rumker
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/tbd
+  created: '2026-05-11'
+- id: sid:person/tanya-talkar
+  name: Tanya Talkar
+  slug: tanya-talkar
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mit-lincoln-laboratory
+  created: '2026-05-11'
+- id: sid:person/georg-langs
+  name: Georg Langs
+  slug: georg-langs
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/medical-university-of-vienna
+  created: '2019-01-27'
+- id: sid:person/karl-heinz-nenning
+  name: Karl-Heinz Nenning
+  slug: karl-heinz-nenning
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/medical-university-of-vienna
+  created: '2026-05-26'
+- id: sid:person/mert-r-sabuncu
+  name: Mert R. Sabuncu
+  slug: mert-r-sabuncu
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/cornell-university
+  created: '2026-05-26'
+- id: sid:person/frank-h-guenther
+  name: Frank H. Guenther
+  slug: frank-h-guenther
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/boston-university
+  created: '2026-05-11'
+- id: sid:person/jason-a-tourville
+  name: Jason A. Tourville
+  slug: jason-a-tourville
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/boston-university
+  created: '2026-05-11'
+- id: sid:person/alfonso-nieto-castanon
+  name: Alfonso Nieto-Castañón
+  slug: alfonso-nieto-castanon
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/boston-university
+  created: '2026-05-11'
+- id: sid:person/shanqing-cai
+  name: Shanqing Cai
+  slug: shanqing-cai
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/google-formerly-bu
+  created: '2026-05-11'
+- id: sid:person/joseph-s-perkell
+  name: Joseph S. Perkell
+  slug: joseph-s-perkell
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/mit-emeritus
+  created: '2026-05-11'
+- id: sid:person/christina-triantafyllou
+  name: Christina Triantafyllou
+  slug: christina-triantafyllou
+  derived_from:
+  - site-yaml-v1
+  affiliations:
+  - sid:org/siemens-healthineers-formerly-mit
+  created: '2026-05-11'
