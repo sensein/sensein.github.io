@@ -295,6 +295,14 @@
    "@id": "schema:funder",
    "@type": "@id"
   },
+  "award_status": {
+   "@id": "sensein:awardStatus",
+   "@type": "@vocab",
+   "@context": {
+    "current": "schema:ActiveActionStatus",
+    "past": "schema:CompletedActionStatus"
+   }
+  },
   "lab_role": {
    "@id": "sensein:labRole"
   },
@@ -576,12 +584,12 @@
    "version": "2.0.0",
    "license": "https://creativecommons.org/licenses/by/4.0/",
    "was_generated_by": {
-    "id": "sid:build/9de1e4096b64-20261126T005718Z",
+    "id": "sid:build/08214fcd4bae-20261126T005758Z",
     "type": [
      "prov:Activity"
     ],
-    "started_at": "2026-11-26T00:57:18+00:00",
-    "commit": "9de1e4096b64226496feea8f7c9a521d95b46788",
+    "started_at": "2026-11-26T00:57:58+00:00",
+    "commit": "08214fcd4bae60c9ea8362c00a016be5b37123e5",
     "used": [
      {
       "id": "sid:source/kg/collaborations.yaml",
@@ -599,9 +607,9 @@
        "prov:Entity"
       ],
       "path": "kg/grants.yaml",
-      "commit": "7bfbca343226b9ef711746539784d9803f91a4f1",
-      "last_changed": "2026-11-25T23:50:30Z",
-      "sha256": "bb2411e7f7c8900bf87810e8992a5bf3f336cfc4b72047b45b7301b554a19cd2"
+      "commit": "fcd9dee482bc1616adb2a5335d80b5ed98e87087",
+      "last_changed": "2026-11-26T00:53:20Z",
+      "sha256": "4aa4d2ce843e161baf18bbe8999a6e6d98ea6875715adcb4913f66fba6d121d4"
      },
      {
       "id": "sid:source/kg/images.yaml",
@@ -639,9 +647,9 @@
        "prov:Entity"
       ],
       "path": "kg/organizations.yaml",
-      "commit": "7bfbca343226b9ef711746539784d9803f91a4f1",
-      "last_changed": "2026-11-25T23:50:30Z",
-      "sha256": "ef21d4267b3d9c7307dfef9257d529de17921cbbc75d32946b292ed16c1acbcd"
+      "commit": "bf30ce97471a0f6e89e455cdedee1d96ba57d8b6",
+      "last_changed": "2026-11-26T00:35:20Z",
+      "sha256": "5e2851eadcd822b330dd07da200b6d5a1658c216e825d70c558de2964e625e64"
      },
      {
       "id": "sid:source/kg/pages.yaml",
@@ -669,9 +677,9 @@
        "prov:Entity"
       ],
       "path": "kg/projects.yaml",
-      "commit": "24704badcb1c31bf30f37d9b5cadb85cb74c26fe",
-      "last_changed": "2026-11-26T00:00:33Z",
-      "sha256": "db61635e25c2c9da3b27bc504fa7a6f62d9357f5a3c45095728dc3b8fd9c1125"
+      "commit": "e57c76e64d3d79394dc50c0b5d0eb11fd3cd3008",
+      "last_changed": "2026-11-26T00:51:19Z",
+      "sha256": "2be18501baafb727285fd2a546e7fd7264037572b7b33b85757c5341b7f833b0"
      },
      {
       "id": "sid:source/kg/publications.yaml",
@@ -851,6 +859,105 @@
    ],
    "organization_type": "funder",
    "parent_organization": "sid:org/nih"
+  },
+  {
+   "id": "sid:org/dod",
+   "type": [
+    "schema:Organization",
+    "prov:Agent"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "name": "U.S. Department of Defense",
+   "url": "https://www.defense.gov/",
+   "alternate_names": [
+    "DOD"
+   ],
+   "organization_type": "funder"
+  },
+  {
+   "id": "sid:org/simons-foundation",
+   "type": [
+    "schema:Organization",
+    "prov:Agent"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "name": "Simons Foundation",
+   "url": "https://www.simonsfoundation.org/",
+   "organization_type": "funder"
+  },
+  {
+   "id": "sid:org/fore",
+   "type": [
+    "schema:Organization",
+    "prov:Agent"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "name": "Foundation for Ophthalmology Research and Education International",
+   "alternate_names": [
+    "FORE"
+   ],
+   "organization_type": "funder"
+  },
+  {
+   "id": "sid:org/mit-genai-consortium",
+   "type": [
+    "schema:Organization",
+    "prov:Agent"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "name": "MIT Generative AI Consortium",
+   "alternate_names": [
+    "MIT GenAI Consortium",
+    "MGAIC"
+   ],
+   "organization_type": "consortium",
+   "parent_organization": "sid:org/mit"
+  },
+  {
+   "id": "sid:org/mcgovern-neurotechnology-program",
+   "type": [
+    "schema:Organization",
+    "prov:Agent"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "name": "McGovern Institute Neurotechnology Program",
+   "alternate_names": [
+    "McGovern NTP"
+   ],
+   "organization_type": "funder",
+   "parent_organization": "sid:org/mcgovern-institute"
+  },
+  {
+   "id": "sid:org/mit-deshpande-center",
+   "type": [
+    "schema:Organization",
+    "prov:Agent"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "name": "MIT Deshpande Center for Technological Innovation",
+   "alternate_names": [
+    "Deshpande Center"
+   ],
+   "organization_type": "funder",
+   "parent_organization": "sid:org/mit"
   },
   {
    "id": "sid:org/kennedy-krieger-institute-johns-hopkins",
@@ -11001,6 +11108,9 @@
    "project_status": "active",
    "description": "Riverst is a digital-tutor platform for childhood literacy; KIVA is an instance focused on vocabulary learning. Built on Pipecat and senselab, integrating speech-feature extraction. Research questions: Can an avatar understand child speech? Can LLMs adapt to each child? Can an LLM effectively teach vocabulary?",
    "funding_statement": "MGAIC (MIT Generative AI Consortium), 2025–2026",
+   "funded_by": [
+    "sid:grant/mgaic-early-literacy-tutors"
+   ],
    "image": "sid:image/projects/riverst-kiva",
    "themes": [
     "sid:topic/child-development-education",
@@ -11272,7 +11382,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11284,6 +11394,10 @@
    "project_status": "active",
    "description": "Into the Wild — automated quantification of autism-relevant behaviors from naturalistic home videos. The study pipeline runs end-to-end: parents are reached through SPARK Research Match, submit questionnaires and home-video uploads, and complete a remote language assessment; videos pass automated metadata checks and human quality review; trained annotators produce ground-truth labels against a shared manual with ICC reliability checks; and VLM-based models score uniform frame samples for video-level behavior predictions. Brings together three theses: Manaal Mohammed's on target-child behavior detection (vocalizations via USC-SAIL / Whisper baseline; locomotion via S3D gated 3D CNN), Lucie Bierent's on socialization-behavior recognition (response to name, non-verbal communication, gesture prediction), and Bruke Wossenseged's thesis work.",
    "funding_statement": "Simons Foundation (Site PI, 2025–2026); Kennedy Krieger Institute partnership",
+   "funded_by": [
+    "sid:grant/simons-home-videos-phenotyping",
+    "sid:grant/simons-home-videos"
+   ],
    "image": "sid:image/projects/sails-pipeline",
    "themes": [
     "sid:topic/child-development-education",
@@ -11450,6 +11564,9 @@
    "project_status": "active",
    "description": "A Human Connectome Project arm (Connectomes Related to Human Diseases) collecting multimodal MRI, clinical, and neuropsychological data from 215 adolescents aged 14–17, 152 of whom had current anxiety and/or depressive disorders at intake. Imaging spans structural (T1/T2), resting-state and task fMRI, and diffusion-weighted scans, released as both unprocessed and HCP minimally-preprocessed data. The lab contributed the imaging pipelines, quality assurance, and data-release engineering, and continues to support connectome-based predictive-modeling analyses of depression and anxiety risk across BANDA and ABCD.",
    "funding_statement": "NIMH — Connectomes Related to Human Diseases (Human Connectome Project)",
+   "funded_by": [
+    "sid:grant/u01-mh108168"
+   ],
    "image": "sid:image/projects/banda-placeholder",
    "themes": [
     "sid:topic/mental-health-psychiatry",
@@ -11517,6 +11634,9 @@
    "project_status": "active",
    "description": "Manual scoring of verbal literacy screeners is time-consuming and unreliable; ReadNet is an ML approach to help teachers quickly and reliably identify children needing early-literacy intervention. The project ran the DrivenData \"Goodnight Moon, Hello Early Literacy Screening\" public competition in 2024–2025 (winning AUROC 0.97 vs Whisper baseline 0.59), with a voice-cloning anonymization scheme for data release.",
    "funding_statement": "Harvard University gift (Schmidt Futures & Citadel; Site Co-I) + MIT GenAI Consortium",
+   "funded_by": [
+    "sid:grant/harvard-readnet"
+   ],
    "image": "sid:image/projects/readnet",
    "themes": [
     "sid:topic/child-development-education",
@@ -11802,7 +11922,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11814,6 +11934,10 @@
    "project_status": "former",
    "description": "Mobile app and one-month clinical study using altered auditory feedback (AAF) — pitch shifts, delays, reverberation, whisper, harmony — to increase fluency for people who stutter. US Patent 11,727,949 B2 issued Aug 2023 for the underlying technique.",
    "funding_statement": "McGovern Institute NTP + MIT Deshpande Center (PI; co-PI Machover)",
+   "funded_by": [
+    "sid:grant/mcgovern-stuttering-apparatus",
+    "sid:grant/deshpande-mumble-melody"
+   ],
    "image": "sid:image/mumble-melody-logo",
    "themes": [
     "sid:topic/speech-voice-biomarkers",
@@ -12172,7 +12296,7 @@
     "schema:ResearchProject"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -12180,7 +12304,10 @@
    ],
    "slug": "nidm",
    "title": "NIDM",
-   "project_type": "community_effort"
+   "project_type": "community_effort",
+   "funded_by": [
+    "sid:grant/rf1-mh120021"
+   ]
   },
   {
    "id": "sid:project/datalad",
@@ -12284,7 +12411,7 @@
     "schema:ResearchProject"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -12292,7 +12419,10 @@
    ],
    "slug": "neuroscout",
    "title": "Neuroscout",
-   "project_type": "community_effort"
+   "project_type": "community_effort",
+   "funded_by": [
+    "sid:grant/r01-mh109682"
+   ]
   },
   {
    "id": "sid:project/mindboggle",
@@ -12391,55 +12521,29 @@
    "project_type": "community_effort"
   },
   {
-   "id": "sid:grant/u24-da064429",
+   "id": "sid:grant/simons-home-videos-phenotyping",
    "type": [
     "frapo:Grant"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
-    "site-yaml-v1"
+    "cv"
    ],
-   "award_number": "U24 DA064429",
-   "funder": "sid:org/nida",
-   "lab_role": "Lead PI",
-   "note": "MPI Cabrera, Kennedy"
-  },
-  {
-   "id": "sid:grant/r24-mh117295",
-   "type": [
-    "frapo:Grant"
-   ],
-   "modified": {
-    "@value": "2026-11-25",
-    "@type": "xsd:date"
+   "title": "Advancing the Generalizability and Scalability of Quantitative Behavioral Phenotyping from Naturalistic Home Videos",
+   "funder": "sid:org/simons-foundation",
+   "lab_role": "Co-PI",
+   "start_date": {
+    "@value": "2026",
+    "@type": "xsd:gYear"
    },
-   "derived_from": [
-    "site-yaml-v1"
-   ],
-   "award_number": "R24 MH117295",
-   "funder": "sid:org/nimh",
-   "lab_role": "Lead PI",
-   "note": "MPI Halchenko, Dartmouth"
-  },
-  {
-   "id": "sid:grant/u24-mh130918",
-   "type": [
-    "frapo:Grant"
-   ],
-   "modified": {
-    "@value": "2026-11-25",
-    "@type": "xsd:date"
+   "end_date": {
+    "@value": "2027",
+    "@type": "xsd:gYear"
    },
-   "derived_from": [
-    "site-yaml-v1"
-   ],
-   "award_number": "U24 MH130918",
-   "funder": "sid:org/nimh",
-   "lab_role": "MPI",
-   "note": "with Mufti, Hawrylycz, Ng — Allen Institute"
+   "award_status": "current"
   },
   {
    "id": "sid:grant/um1-mh134812",
@@ -12447,15 +12551,54 @@
     "frapo:Grant"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
-    "site-yaml-v1"
+    "site-yaml-v1",
+    "cv"
    ],
+   "title": "Center for Multi-Scale Multi-Omic Human Brain Atlas",
    "award_number": "UM1 MH134812",
    "funder": "sid:org/nimh",
-   "lab_role": "Co-I"
+   "lab_role": "Co-I",
+   "start_date": {
+    "@value": "2025",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2030",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
+  },
+  {
+   "id": "sid:grant/u24-da064429",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "site-yaml-v1",
+    "cv"
+   ],
+   "title": "BBQS AI Resource and Data Coordinating Center (BARD.CC)",
+   "award_number": "U24 DA064429",
+   "funder": "sid:org/nida",
+   "lab_role": "Lead PI",
+   "note": "MPI Laura Cabrera, Penn State University; David Kennedy, UMass Medical School",
+   "start_date": {
+    "@value": "2024",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2029",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
   },
   {
    "id": "sid:grant/um1-ns132358",
@@ -12463,15 +12606,26 @@
     "frapo:Grant"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
-    "site-yaml-v1"
+    "site-yaml-v1",
+    "cv"
    ],
+   "title": "BRAIN Connects: The center for Large-scale Imaging of Neural Circuits (LINC)",
    "award_number": "UM1 NS132358",
    "funder": "sid:org/ninds",
-   "lab_role": "Site PI"
+   "lab_role": "Site PI",
+   "start_date": {
+    "@value": "2023",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2028",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
   },
   {
    "id": "sid:grant/ot2-od032720",
@@ -12479,15 +12633,108 @@
     "frapo:Grant"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
-    "site-yaml-v1"
+    "site-yaml-v1",
+    "cv"
    ],
+   "title": "Voice as a Biomarker of Health: Building an ethically sourced, bioacoustic database to understand disease like never before",
    "award_number": "OT2 OD032720",
    "funder": "sid:org/nih-od",
-   "lab_role": "MPI"
+   "lab_role": "MPI",
+   "start_date": {
+    "@value": "2022",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2026",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
+  },
+  {
+   "id": "sid:grant/u24-mh130918",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "site-yaml-v1",
+    "cv"
+   ],
+   "title": "An extensible brain knowledge base and toolset spanning modalities for multi-species data-driven cell types",
+   "award_number": "U24 MH130918",
+   "funder": "sid:org/nimh",
+   "lab_role": "MPI",
+   "note": "with Shoaib Mufti, Michael Hawrylycz, Lydia Ng, Allen Institute for Brain Science",
+   "start_date": {
+    "@value": "2022",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2027",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
+  },
+  {
+   "id": "sid:grant/harvard-readnet",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "ReadNet: Preventing Reading Failure",
+   "funder": "sid:org/harvard-university",
+   "lab_role": "Site Co-Investigator",
+   "note": "gift from Schmidt Futures and Citadel",
+   "start_date": {
+    "@value": "2022",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2026",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
+  },
+  {
+   "id": "sid:grant/r24-mh117295",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "site-yaml-v1",
+    "cv"
+   ],
+   "title": "DANDI: Distributed Archives for Neurophysiology Data Integration",
+   "award_number": "R24 MH117295",
+   "funder": "sid:org/nimh",
+   "lab_role": "Lead PI",
+   "note": "MPI Yaroslav Halchenko, Dartmouth College",
+   "start_date": {
+    "@value": "2019",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2029",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
   },
   {
    "id": "sid:grant/p41-eb019936",
@@ -12495,16 +12742,267 @@
     "frapo:Grant"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
-    "site-yaml-v1"
+    "site-yaml-v1",
+    "cv"
    ],
+   "title": "ReproNim: Center for Reproducible Neuroimaging Computation",
    "award_number": "P41 EB019936",
    "funder": "sid:org/nibib",
    "lab_role": "Site PI",
-   "note": "PI Kennedy, UMass Med; Director TR&D Project 2"
+   "note": "PI David Kennedy, UMass Medical School; Director, Technology, Research and Development Project 2",
+   "start_date": {
+    "@value": "2016",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2031",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
+  },
+  {
+   "id": "sid:grant/r03-eb008673",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Dissemination of cross-platform software for artifact detection and region of interest analysis of fMRI data",
+   "award_number": "R03 EB008673",
+   "funder": "sid:org/nibib",
+   "lab_role": "PI",
+   "note": "co-PI Susan Whitfield-Gabrieli, McGovern Institute for Brain Research, MIT",
+   "start_date": {
+    "@value": "2008",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2010",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/r21-mh092564",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Learned regulation of the limbic network via combined EEG and fMRI",
+   "award_number": "R21 MH092564",
+   "funder": "sid:org/nimh",
+   "lab_role": "Co-Investigator",
+   "note": "PI John Gabrieli",
+   "start_date": {
+    "@value": "2012",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2014",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/mcgovern-murfi",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "MURFI: An Optimized Platform for Realtime fMRI Neurofeedback",
+   "funder": "sid:org/mcgovern-neurotechnology-program",
+   "lab_role": "Co-PI",
+   "note": "with John Gabrieli (MIT), Eden Evins (MGH)",
+   "start_date": {
+    "@value": "2012",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2015",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/dod-pt100120",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Using Real-Time Functional Brain Imaging and Computer Training To Enhance Recovery from Traumatic Brain Injury (TBI)",
+   "award_number": "PT100120",
+   "funder": "sid:org/dod",
+   "lab_role": "Co-Investigator",
+   "note": "Clinical trial award; PI John Gabrieli",
+   "start_date": {
+    "@value": "2011",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2016",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/r01-mh092380-supplement",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Genetic Determinants of Schizophrenia Intermediate Phenotypes",
+   "award_number": "R01 MH092380",
+   "funder": "sid:org/nimh",
+   "lab_role": "Site PI",
+   "note": "Supplement; PI Tracey Petryshen, MGH",
+   "start_date": {
+    "@value": "2015",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2017",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/dod-ar110329",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "A randomized controlled trial of intranasal oxytocin as an adjunct to behavioral therapy for autism spectrum disorder",
+   "award_number": "AR110329",
+   "funder": "sid:org/dod",
+   "lab_role": "Site PI",
+   "note": "Clinical trial award; PI John Gabrieli, MGH",
+   "start_date": {
+    "@value": "2012",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2017",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/mcgovern-voice-tracking",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Brain basis for voice-based tracking of neurological disorders",
+   "funder": "sid:org/mcgovern-neurotechnology-program",
+   "lab_role": "PI",
+   "note": "with MIT Lincoln Lab funds; co-PI Tom Quatieri, MIT Lincoln Laboratory",
+   "start_date": {
+    "@value": "2014",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2017",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/dod-isn-blast-tbi",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Blast Induced Traumatic Brain Injury",
+   "funder": "sid:org/dod",
+   "lab_role": "Investigator",
+   "note": "through the Institute for Soldier Nanotechnologies",
+   "start_date": {
+    "@value": "2012",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2018",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/u01-mh108168",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Connectomes related to anxiety and depression in adolescents",
+   "award_number": "U01 MH108168",
+   "funder": "sid:org/nimh",
+   "lab_role": "Informatics Lead",
+   "note": "PI Susan Whitfield-Gabrieli, John Gabrieli, MIT",
+   "start_date": {
+    "@value": "2015",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2020",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
   },
   {
    "id": "sid:grant/r01-eb020740",
@@ -12512,12 +13010,14 @@
     "frapo:Grant"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
-    "site-yaml-v1"
+    "site-yaml-v1",
+    "cv"
    ],
+   "title": "Nipype: Dataflows for Reproducible Biomedical Research",
    "award_number": "R01 EB020740",
    "funder": "sid:org/nibib",
    "lab_role": "PI",
@@ -12529,7 +13029,140 @@
    "end_date": {
     "@value": "2020",
     "@type": "xsd:gYear"
-   }
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/fore-retinal-oct",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Tracking Alzheimer's Disease from Retinal OCT Images using Deep Learning",
+   "funder": "sid:org/fore",
+   "lab_role": "PI",
+   "start_date": {
+    "@value": "2019",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2020",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/mcgovern-stuttering-apparatus",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Realtime speech modification apparatus for enhancing fluency in people that stutter",
+   "funder": "sid:org/mcgovern-neurotechnology-program",
+   "lab_role": "PI",
+   "note": "co-PI Tod Machover, Media Arts and Sciences",
+   "start_date": {
+    "@value": "2020",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2021",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/rf1-mh120021",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "The Neuroimaging Data Model: FAIR descriptors of Brain Initiative Imaging Experiments",
+   "award_number": "RF1 MH120021",
+   "funder": "sid:org/nimh",
+   "lab_role": "Site PI",
+   "note": "PI David Keator, University of California, Irvine",
+   "start_date": {
+    "@value": "2019",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2022",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/r01-mh109682",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "site-yaml-v1",
+    "cv"
+   ],
+   "title": "NeuroScout: A cloud-based platform for rapid re-analysis of naturalistic fMRI datasets",
+   "award_number": "R01 MH109682",
+   "funder": "sid:org/nimh",
+   "lab_role": "Site PI",
+   "note": "PI Tal Yarkoni, UTexas, Austin",
+   "start_date": {
+    "@value": "2016",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2022",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/deshpande-mumble-melody",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Mumble Melody: A real-time speech modification system to enhance fluency in people who stutter",
+   "funder": "sid:org/mit-deshpande-center",
+   "lab_role": "PI",
+   "note": "co-PI Tod Machover, Media Arts and Sciences",
+   "start_date": {
+    "@value": "2020",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2023",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
   },
   {
    "id": "sid:grant/rf1-mh121885",
@@ -12537,12 +13170,14 @@
     "frapo:Grant"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
-    "site-yaml-v1"
+    "site-yaml-v1",
+    "cv"
    ],
+   "title": "Nobrainer: A robust and validated neural network tool suite for imagers",
    "award_number": "RF1 MH121885",
    "funder": "sid:org/nimh",
    "lab_role": "PI",
@@ -12553,24 +13188,86 @@
    "end_date": {
     "@value": "2024",
     "@type": "xsd:gYear"
-   }
+   },
+   "award_status": "past"
   },
   {
-   "id": "sid:grant/r01-mh109682",
+   "id": "sid:grant/cmi-psychiatric-biometrics",
    "type": [
     "frapo:Grant"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
-    "site-yaml-v1"
+    "cv"
    ],
-   "award_number": "R01 MH109682",
-   "funder": "sid:org/nimh",
+   "title": "Biometric assessment and monitoring of psychiatric symptoms",
+   "funder": "sid:org/child-mind-institute",
+   "lab_role": "PI",
+   "start_date": {
+    "@value": "2023",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2025",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/simons-home-videos",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "A Multi-Modal AI Approach to Measure Language and Social Communication Trajectories from Home Videos",
+   "funder": "sid:org/simons-foundation",
    "lab_role": "Site PI",
-   "note": "PI Yarkoni"
+   "start_date": {
+    "@value": "2025",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2026",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/mgaic-early-literacy-tutors",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "curation_notes": [
+    "The CV gives no role; Satra confirmed PI on 2026-11-26."
+   ],
+   "title": "AI-Driven Tutors and Open Datasets for Early Literacy Education",
+   "funder": "sid:org/mit-genai-consortium",
+   "lab_role": "PI",
+   "start_date": {
+    "@value": "2025",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2026",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
   },
   {
    "id": "DOI:10.1162/imag.a.1116",

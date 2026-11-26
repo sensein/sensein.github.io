@@ -295,6 +295,14 @@
    "@id": "schema:funder",
    "@type": "@id"
   },
+  "award_status": {
+   "@id": "sensein:awardStatus",
+   "@type": "@vocab",
+   "@context": {
+    "current": "schema:ActiveActionStatus",
+    "past": "schema:CompletedActionStatus"
+   }
+  },
   "lab_role": {
    "@id": "sensein:labRole"
   },
