@@ -455,7 +455,7 @@ projects:
     via USC-SAIL / Whisper baseline; locomotion via S3D gated 3D CNN), Lucie Bierent's on socialization-behavior
     recognition (response to name, non-verbal communication, gesture prediction), and Bruke Wossenseged's
     thesis work.
-  funding_statement: Simons Foundation (Site PI, 2025–2026); Kennedy Krieger Institute partnership
+  funding_statement: Simons Foundation (Site PI, 2025–2026; Co-PI, 2026–2027); Kennedy Krieger Institute partnership
   funded_by:
   - sid:grant/simons-home-videos-phenotyping
   - sid:grant/simons-home-videos
