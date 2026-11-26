@@ -1,0 +1,75 @@
+---
+/**
+ * The lab's grants, current and past, as the knowledge graph has them (from
+ * the CV), each with the projects it funds. Amounts are not shown.
+ */
+import SectionHeading from "~/components/SectionHeading.astro";
+import { grants as allGrants, jsonldFor, type Grant } from "~/lib/data";
+import { withBase } from "~/lib/url";
+
+interface Props {
+  grants?: Grant[];
+}
+
+const { grants = allGrants() } = Astro.props;
+const groups = [
+  { key: "current", label: "Current", items: grants.filter((g) => g.status !== "past") },
+  { key: "past", label: "Past", items: grants.filter((g) => g.status === "past") },
+].filter((g) => g.items.length > 0);
+const jsonldText = JSON.stringify(jsonldFor(...grants.map((g) => g.id))).replace(/</g, "\\u003c");
+---
+{grants.length > 0 && (
+  <section class="mt-12" aria-labelledby="funding">
+    <div class="flex items-baseline justify-between gap-4 mb-3">
+      <SectionHeading
+        id="funding"
+        title="Funding"
+        description="Grants and awards behind our projects, current and past."
+      />
+      <span class="shrink-0 text-xs text-(--color-ink-faint) font-mono">{grants.length}</span>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-x-10 gap-y-8 items-start">
+      {groups.map((group) => (
+        <div>
+          <h3 class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-2">
+            {group.label} <span class="font-mono normal-case tracking-normal ml-1">{group.items.length}</span>
+          </h3>
+          <ul class="divide-y divide-(--color-border) border-y border-(--color-border)" aria-label={`${group.label} grants`}>
+            {group.items.map((g) => (
+              <li class="py-2.5 grid grid-cols-[4.75rem_1fr] gap-3 text-sm">
+                <span class="font-mono text-xs text-(--color-ink-faint) pt-0.5">{g.years}</span>
+                <div class="min-w-0">
+                  <p class="text-(--color-ink) leading-snug">{g.title ?? g.award}</p>
+                  <p class="mt-0.5 text-xs text-(--color-ink-muted) leading-relaxed">
+                    {g.funderShort ? (
+                      <abbr title={g.funder} class="no-underline font-medium">{g.funderShort}</abbr>
+                    ) : g.funder && <span class="font-medium">{g.funder}</span>}
+                    {g.award && <span class="font-mono"> {g.award}</span>}
+                    {g.role && <span> · {g.role}</span>}
+                    {g.note && <span class="text-(--color-ink-faint)"> · {g.note}</span>}
+                  </p>
+                  {g.projects.length > 0 && (
+                    <p class="mt-0.5 text-xs text-(--color-ink-faint)">
+                      Funds{" "}
+                      {g.projects.map((p, i) => (
+                        <>
+                          {i > 0 && ", "}
+                          {p.slug ? (
+                            <a href={withBase(`/projects/${p.slug}`)} class="text-(--color-accent) hover:underline">{p.title}</a>
+                          ) : (
+                            <span class="text-(--color-ink-muted)">{p.title}</span>
+                          )}
+                        </>
+                      ))}
+                    </p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <script type="application/ld+json" set:html={jsonldText} />
+  </section>
+)}

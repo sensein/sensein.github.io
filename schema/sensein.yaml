@@ -385,6 +385,7 @@ classes:
       - note
       - start_date
       - end_date
+      - award_status
       - url
 
   WebLink:
@@ -1001,6 +1002,15 @@ slots:
     close_mappings:
       - frapo:isAwardedBy
 
+  award_status:
+    description: >-
+      Whether the award is current or past, as the lab's CV lists it. Kept
+      separately from end_date because the CV is the authority, not the year.
+    range: AwardStatus
+    slot_uri: sensein:awardStatus
+    close_mappings:
+      - schema:actionStatus
+
   lab_role:
     description: The lab's role on the award, such as Lead PI, MPI, Site PI or Co-I.
     slot_uri: sensein:labRole
@@ -1458,6 +1468,15 @@ enums:
         meaning: schema:ActiveActionStatus
       former:
         description: Completed or paused.
+        meaning: schema:CompletedActionStatus
+
+  AwardStatus:
+    permissible_values:
+      current:
+        description: Listed under Current in the CV.
+        meaning: schema:ActiveActionStatus
+      past:
+        description: Listed under Past in the CV.
         meaning: schema:CompletedActionStatus
 
   ProjectType:

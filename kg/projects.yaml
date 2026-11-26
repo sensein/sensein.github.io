@@ -309,6 +309,8 @@ projects:
     Can an avatar understand child speech? Can LLMs adapt to each child? Can an LLM effectively teach
     vocabulary?
   funding_statement: MGAIC (MIT Generative AI Consortium), 2025–2026
+  funded_by:
+  - sid:grant/mgaic-early-literacy-tutors
   image: sid:image/projects/riverst-kiva
   themes:
   - sid:topic/child-development-education
@@ -454,6 +456,8 @@ projects:
     recognition (response to name, non-verbal communication, gesture prediction), and Bruke Wossenseged's
     thesis work.
   funding_statement: Simons Foundation (Site PI, 2025–2026); Kennedy Krieger Institute partnership
+  funded_by:
+  - sid:grant/simons-home-videos
   image: sid:image/projects/sails-pipeline
   themes:
   - sid:topic/child-development-education
@@ -554,6 +558,8 @@ projects:
     to support connectome-based predictive-modeling analyses of depression and anxiety risk across BANDA
     and ABCD.
   funding_statement: NIMH — Connectomes Related to Human Diseases (Human Connectome Project)
+  funded_by:
+  - sid:grant/u01-mh108168
   image: sid:image/projects/banda-placeholder
   themes:
   - sid:topic/mental-health-psychiatry
@@ -598,6 +604,8 @@ projects:
     (winning AUROC 0.97 vs Whisper baseline 0.59), with a voice-cloning anonymization scheme for data
     release.
   funding_statement: Harvard University gift (Schmidt Futures & Citadel; Site Co-I) + MIT GenAI Consortium
+  funded_by:
+  - sid:grant/harvard-readnet
   image: sid:image/projects/readnet
   themes:
   - sid:topic/child-development-education
@@ -758,6 +766,9 @@ projects:
     reverberation, whisper, harmony — to increase fluency for people who stutter. US Patent 11,727,949
     B2 issued Aug 2023 for the underlying technique.
   funding_statement: McGovern Institute NTP + MIT Deshpande Center (PI; co-PI Machover)
+  funded_by:
+  - sid:grant/mcgovern-stuttering-apparatus
+  - sid:grant/deshpande-mumble-melody
   image: sid:image/mumble-melody-logo
   themes:
   - sid:topic/speech-voice-biomarkers
@@ -934,6 +945,8 @@ projects:
   slug: nidm
   title: NIDM
   project_type: community_effort
+  funded_by:
+  - sid:grant/rf1-mh120021
   derived_from:
   - site-yaml-v1
 - id: sid:project/datalad
@@ -976,6 +989,8 @@ projects:
   slug: neuroscout
   title: Neuroscout
   project_type: community_effort
+  funded_by:
+  - sid:grant/r01-mh109682
   derived_from:
   - site-yaml-v1
 - id: sid:project/mindboggle
