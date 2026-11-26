@@ -584,12 +584,12 @@
    "version": "2.0.0",
    "license": "https://creativecommons.org/licenses/by/4.0/",
    "was_generated_by": {
-    "id": "sid:build/6386f82fe6bd-20261126T005151Z",
+    "id": "sid:build/c0890cd4d4d9-20261126T005349Z",
     "type": [
      "prov:Activity"
     ],
-    "started_at": "2026-11-26T00:51:51+00:00",
-    "commit": "6386f82fe6bd57a8e4542a585985356eb855a85f",
+    "started_at": "2026-11-26T00:53:49+00:00",
+    "commit": "c0890cd4d4d906a77564dfe6de40a84f92bce261",
     "used": [
      {
       "id": "sid:source/kg/collaborations.yaml",
@@ -607,9 +607,9 @@
        "prov:Entity"
       ],
       "path": "kg/grants.yaml",
-      "commit": "e57c76e64d3d79394dc50c0b5d0eb11fd3cd3008",
-      "last_changed": "2026-11-26T00:51:19Z",
-      "sha256": "0994e2da3945f611159f6edd462b3244cf33edc229999ae1e78c2a77d58e7491"
+      "commit": "fcd9dee482bc1616adb2a5335d80b5ed98e87087",
+      "last_changed": "2026-11-26T00:53:20Z",
+      "sha256": "4aa4d2ce843e161baf18bbe8999a6e6d98ea6875715adcb4913f66fba6d121d4"
      },
      {
       "id": "sid:source/kg/images.yaml",
@@ -13254,10 +13254,11 @@
     "cv"
    ],
    "curation_notes": [
-    "The CV gives no role for the lab on this award."
+    "The CV gives no role; Satra confirmed PI on 2026-11-26."
    ],
    "title": "AI-Driven Tutors and Open Datasets for Early Literacy Education",
    "funder": "sid:org/mit-genai-consortium",
+   "lab_role": "PI",
    "start_date": {
     "@value": "2025",
     "@type": "xsd:gYear"
