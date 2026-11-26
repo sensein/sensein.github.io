@@ -1,0 +1,962 @@
+# Time-bounded roles of people in the lab. A person with no end_date is a current member.
+# Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
+
+memberships:
+- id: sid:membership/satrajit-s-ghosh
+  member: sid:person/satrajit-s-ghosh
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: >-
+    Director of Open Data in Neuroscience Initiative and Senior Research Scientist at MIT; Assistant Professor
+    of Otolaryngology at Harvard Medical School
+  role_category: principal_investigator
+  roster_section: members
+  roster_order: 1
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/olga-vieira
+  member: sid:person/olga-vieira
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Administrative Assistant II
+  role_category: administrative_staff
+  roster_section: members
+  roster_order: 2
+  created: '2025-10-28'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/dorota-jarecka
+  member: sid:person/dorota-jarecka
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Research Scientist, started 2016, working on Nipype, ReproNim
+  role_category: research_scientist
+  start_date: '2016'
+  roster_section: members
+  roster_order: 3
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/rahul-brito
+  member: sid:person/rahul-brito
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: PhD Student
+  role_category: graduate_student
+  roster_section: members
+  roster_order: 4
+  created: '2022-04-28'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/meral-hacikamiloglu
+  member: sid:person/meral-hacikamiloglu
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Research Affiliate
+  role_category: affiliate
+  roster_section: members
+  roster_order: 5
+  created: '2023-01-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/nima-dehghani
+  member: sid:person/nima-dehghani
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Research Scientist
+  role_category: research_scientist
+  roster_section: members
+  roster_order: 6
+  created: '2023-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/kaley-jenney
+  member: sid:person/kaley-jenney
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Technical Associate I
+  role_category: technical_staff
+  roster_section: members
+  roster_order: 7
+  created: '2023-03-31'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/puja-trivedi
+  member: sid:person/puja-trivedi
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Software Engineer
+  role_category: engineer
+  roster_section: members
+  roster_order: 8
+  created: '2023-06-09'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/yibei-chen
+  member: sid:person/yibei-chen
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Postdoctoral Associate
+  role_category: postdoc
+  roster_section: members
+  roster_order: 9
+  created: '2023-07-31'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/jong-hwan-lee
+  member: sid:person/jong-hwan-lee
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Visiting Scientist
+  role_category: visitor
+  roster_section: members
+  roster_order: 10
+  created: '2023-08-17'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/kabilar-gunalan
+  member: sid:person/kabilar-gunalan
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Research Scientist
+  role_category: research_scientist
+  roster_section: members
+  roster_order: 11
+  created: '2023-11-03'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/tek-raj-chhetri
+  member: sid:person/tek-raj-chhetri
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Postdoctoral Associate
+  role_category: postdoc
+  roster_section: members
+  roster_order: 12
+  created: '2024-03-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/jordan-wilke
+  member: sid:person/jordan-wilke
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Technical Associate
+  role_category: technical_staff
+  roster_section: members
+  roster_order: 13
+  created: '2024-05-20'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/suliman-sharif
+  member: sid:person/suliman-sharif
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Research Scientist
+  role_category: research_scientist
+  roster_section: members
+  roster_order: 14
+  created: '2025-10-14'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/nader-nikbakht
+  member: sid:person/nader-nikbakht
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Research Scientist
+  role_category: research_scientist
+  roster_section: members
+  roster_order: 15
+  created: '2025-10-29'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/marta-da-rocha-diogo
+  member: sid:person/marta-da-rocha-diogo
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: >-
+    Visiting PhD Student (Law, European University Institute), Fulbright Fellow, working on the legal
+    and societal implications of neurotechnology
+  role_category: visitor
+  roster_section: members
+  roster_order: 16
+  created: '2026-11-25'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/victoria-sanchez
+  member: sid:person/victoria-sanchez
+  organization: sid:org/sensein
+  membership_status: current
+  role_title: Postdoctoral Associate, working on quantitative behavioral phenotyping from naturalistic
+    home videos
+  role_category: postdoc
+  roster_section: members
+  roster_order: 17
+  created: '2026-11-25'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/manaal-mohammed
+  member: sid:person/manaal-mohammed
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: MEng Student, MIT
+  role_category: graduate_student
+  period_text: 2025 - 2026
+  start_date: '2025'
+  end_date: '2026'
+  roster_order: 1
+  created: '2025-09-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/aparna-bg
+  member: sid:person/aparna-bg
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: MSc Student, IISER, India
+  role_category: graduate_student
+  period_text: 2025 - 2026
+  start_date: '2025'
+  end_date: '2026'
+  roster_order: 2
+  created: '2026-02-17'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/debbie-burdinski
+  member: sid:person/debbie-burdinski
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: MD-PhD Student, Harvard Medical School and MIT
+  role_category: graduate_student
+  period_text: 2020 - 2026
+  start_date: '2020'
+  end_date: '2026'
+  roster_order: 3
+  created: '2019-06-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/lucie-bierent
+  member: sid:person/lucie-bierent
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting MSc student
+  role_category: visitor
+  period_text: 2025 - 2026
+  start_date: '2025'
+  end_date: '2026'
+  roster_order: 4
+  created: '2025-10-20'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/jeff-mentch
+  member: sid:person/jeff-mentch
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: PhD Student
+  role_category: graduate_student
+  period_text: 2020 - 2025
+  start_date: '2020'
+  end_date: '2025'
+  roster_order: 5
+  created: '2020-02-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/fabio-catania
+  member: sid:person/fabio-catania
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Postdoctoral research fellow, MIT
+  role_category: postdoc
+  period_text: 2022 - 2025
+  start_date: '2022'
+  end_date: '2025'
+  roster_order: 6
+  created: '2022-05-02'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/bruke-wossenseged
+  member: sid:person/bruke-wossenseged
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: MEng Student, MIT
+  role_category: graduate_student
+  period_text: 2024 - 2025
+  start_date: '2024'
+  end_date: '2025'
+  roster_order: 7
+  created: '2024-09-10'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/isaac-bevers
+  member: sid:person/isaac-bevers
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Computational Technical Associate I
+  role_category: technical_staff
+  period_text: 2024 - 2025
+  start_date: '2024'
+  end_date: '2025'
+  roster_order: 8
+  created: '2024-04-04'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/miles-silva
+  member: sid:person/miles-silva
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: MEng Student, MIT
+  role_category: graduate_student
+  period_text: 2024 - 2025
+  start_date: '2024'
+  end_date: '2025'
+  roster_order: 9
+  created: '2024-02-06'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/maedbh-king
+  member: sid:person/maedbh-king
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: ICoN Postdoctoral Fellow
+  role_category: postdoc
+  period_text: 2022 - 2025
+  start_date: '2022'
+  end_date: '2025'
+  roster_order: 10
+  created: '2022-08-01'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/aaron-kanzer
+  member: sid:person/aaron-kanzer
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Software Engineer
+  role_category: engineer
+  period_text: 2023 - 2025
+  start_date: '2023'
+  end_date: '2025'
+  roster_order: 11
+  created: '2023-10-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/yassine-jamaa
+  member: sid:person/yassine-jamaa
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: M.S. Computational Neuroscience
+  role_category: graduate_student
+  period_text: 2024 - 2025
+  start_date: '2024'
+  end_date: '2025'
+  roster_order: 12
+  created: '2024-12-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/veronika-moroz
+  member: sid:person/veronika-moroz
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: '2025'
+  start_date: '2025'
+  end_date: '2025'
+  roster_order: 13
+  created: '2025-02-04'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/harsha-gazula
+  member: sid:person/harsha-gazula
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Research Scientist
+  role_category: research_scientist
+  period_text: 2023 - 2025
+  start_date: '2023'
+  end_date: '2025'
+  roster_order: 14
+  created: '2023-05-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/alina-weinberger
+  member: sid:person/alina-weinberger
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting M.S. student from Technical University of Munich
+  role_category: visitor
+  period_text: '2024'
+  start_date: '2024'
+  end_date: '2024'
+  roster_order: 15
+  created: '2023-10-31'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/chaitanya-kapoor
+  member: sid:person/chaitanya-kapoor
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting undergraduate student
+  role_category: visitor
+  period_text: '2024'
+  start_date: '2024'
+  end_date: '2024'
+  roster_order: 16
+  created: '2024-01-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/daniel-m-low
+  member: sid:person/daniel-m-low
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: PhD Student
+  role_category: graduate_student
+  period_text: 2019 - 2024
+  start_date: '2019'
+  end_date: '2024'
+  roster_order: 17
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/gasser-elbanna
+  member: sid:person/gasser-elbanna
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: PhD Student
+  role_category: graduate_student
+  period_text: 2022 - 2024
+  start_date: '2022'
+  end_date: '2024'
+  roster_order: 18
+  created: '2022-04-20'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/sabeen-lohawala
+  member: sid:person/sabeen-lohawala
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: MEng Student, MIT
+  role_category: graduate_student
+  period_text: 2023 - 2024
+  start_date: '2023'
+  end_date: '2024'
+  roster_order: 19
+  created: '2023-04-03'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/ahmed-zain
+  member: sid:person/ahmed-zain
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: 2023 - 2024
+  start_date: '2023'
+  end_date: '2024'
+  roster_order: 20
+  created: '2023-09-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/agathe-tournant
+  member: sid:person/agathe-tournant
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting M.S. student from ETH Zurich
+  role_category: visitor
+  period_text: 2023 - 2024
+  start_date: '2023'
+  end_date: '2024'
+  roster_order: 21
+  created: '2023-09-13'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/christopher-j-markiewicz
+  member: sid:person/christopher-j-markiewicz
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Research Affiliate, started 2017, working on Nipype, Neuroscout
+  role_category: affiliate
+  period_text: 2018 - 2023
+  start_date: '2018'
+  end_date: '2023'
+  roster_order: 22
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/alicia-zhang
+  member: sid:person/alicia-zhang
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 23
+  created: '2023-10-30'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/olivia-han
+  member: sid:person/olivia-han
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 24
+  created: '2023-10-30'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/jai-amin
+  member: sid:person/jai-amin
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Technical Intern
+  role_category: technical_staff
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 25
+  created: '2023-09-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/amber-lien
+  member: sid:person/amber-lien
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 26
+  created: '2023-06-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/edward-gaibor
+  member: sid:person/edward-gaibor
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Technical Intern
+  role_category: technical_staff
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 27
+  created: '2023-07-14'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/kapish-potula
+  member: sid:person/kapish-potula
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 28
+  created: '2023-05-05'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/sooyoung-ahn
+  member: sid:person/sooyoung-ahn
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Technical Associate I
+  role_category: technical_staff
+  period_text: 2022 - 2023
+  start_date: '2022'
+  end_date: '2023'
+  roster_order: 29
+  created: '2022-10-24'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/matthias-steiner
+  member: sid:person/matthias-steiner
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting MSc. Student from ETH Zurich
+  role_category: visitor
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 30
+  created: '2023-03-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/anurag-gade
+  member: sid:person/anurag-gade
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 31
+  created: '2023-07-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/alisha-kodibagkar
+  member: sid:person/alisha-kodibagkar
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Technical Associate I - working on Mumble Melody
+  role_category: technical_staff
+  period_text: 2022 - 2023
+  start_date: '2022'
+  end_date: '2023'
+  roster_order: 32
+  created: '2022-04-21'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/zihao-wang
+  member: sid:person/zihao-wang
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 33
+  created: '2023-03-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/kai-mcclennen
+  member: sid:person/kai-mcclennen
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Researcher
+  role_category: undergraduate
+  period_text: 2023 - 2023
+  start_date: '2023'
+  end_date: '2023'
+  roster_order: 34
+  created: '2023-06-05'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/claudia-liauw
+  member: sid:person/claudia-liauw
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting Student
+  role_category: visitor
+  period_text: 2022 - 2023
+  start_date: '2022'
+  end_date: '2023'
+  roster_order: 35
+  created: '2022-06-16'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/kenny-nguyen
+  member: sid:person/kenny-nguyen
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: >-
+    Technical Associate I, started 2020, working on Vocallect; MD student, Larner College of Medicine,
+    University of Vermont
+  role_category: graduate_student
+  period_text: 2020 - 2022
+  start_date: '2020'
+  end_date: '2022'
+  roster_order: 36
+  created: '2021-08-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/hoda-rajaei
+  member: sid:person/hoda-rajaei
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Research Staff, worked on Nobrainer
+  role_category: other
+  period_text: 2019 - 2022
+  start_date: '2019'
+  end_date: '2022'
+  roster_order: 37
+  created: '2019-07-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/megha-vemuri
+  member: sid:person/megha-vemuri
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Undergraduate Research Assistant - working on Mumble Melody
+  role_category: undergraduate
+  period_text: 2021 - 2022
+  start_date: '2021'
+  end_date: '2022'
+  roster_order: 38
+  created: '2022-06-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/rebecca-kleinberger
+  member: sid:person/rebecca-kleinberger
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Research Affiliate and Postdoc at MIT; working on Mumble Melody; Faculty at Northeastern
+    University
+  role_category: postdoc
+  period_text: 2020 - 2022
+  start_date: '2020'
+  end_date: '2022'
+  roster_order: 39
+  created: '2020-04-09'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/dhritiman-das
+  member: sid:person/dhritiman-das
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Postdoctoral Researcher, MIT; worked on Nobrainer
+  role_category: postdoc
+  period_text: 2020 - 2022
+  start_date: '2020'
+  end_date: '2022'
+  roster_order: 40
+  created: '2020-10-02'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/yingxing-feng
+  member: sid:person/yingxing-feng
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: >-
+    PhD Student (Visited Spring 2022) - Using fNIRS and physiological signals to study the interaction
+    of workload stress and affective states.
+  role_category: graduate_student
+  roster_order: 41
+  created: '2022-04-15'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/aakanksha-rana
+  member: sid:person/aakanksha-rana
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Postdoctoral Associate, MIT
+  role_category: postdoc
+  period_text: 2020 - 2022
+  start_date: '2020'
+  end_date: '2022'
+  roster_order: 42
+  created: '2020-10-01'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/mathias-goncalves
+  member: sid:person/mathias-goncalves
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Research Affiliate/Technical Assistant, worked on Nipype, BANDA, ReproNim
+  role_category: technical_staff
+  period_text: 2015 - 2021
+  start_date: '2015'
+  end_date: '2021'
+  roster_order: 43
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/sanu-ann-abraham
+  member: sid:person/sanu-ann-abraham
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Technical Assistant, worked on Repronim
+  role_category: technical_staff
+  period_text: 2018 - 2021
+  start_date: '2018'
+  end_date: '2021'
+  roster_order: 44
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/frances-mulligan-they-them
+  member: sid:person/frances-mulligan-they-them
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Technical Assistant, worked on mumble melody and reproschema
+  role_category: technical_staff
+  period_text: '2021'
+  start_date: '2021'
+  end_date: '2021'
+  roster_order: 45
+  created: '2021-02-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/alice-bizeul
+  member: sid:person/alice-bizeul
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting MS student from EPFL; Worked on evaluating BRAIN GANs
+  role_category: visitor
+  period_text: Spring - Summer 2020
+  start_date: '2020'
+  end_date: '2020'
+  roster_order: 46
+  created: '2020-02-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/kate-bentley
+  member: sid:person/kate-bentley
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting scientist
+  role_category: visitor
+  period_text: 2019 - 2020
+  start_date: '2019'
+  end_date: '2020'
+  roster_order: 47
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/aishah-ismail
+  member: sid:person/aishah-ismail
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Visiting student working on processing retinal images
+  role_category: visitor
+  period_text: Fall 2019
+  start_date: '2019'
+  end_date: '2019'
+  roster_order: 48
+  created: '2019-09-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/bhavya-kandimalla
+  member: sid:person/bhavya-kandimalla
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Intern, working on the DANDI project at MIT
+  role_category: technical_staff
+  period_text: Fall 2019
+  start_date: '2019'
+  end_date: '2019'
+  roster_order: 49
+  created: '2019-09-08'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/kevin-sitek
+  member: sid:person/kevin-sitek
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: >-
+    Worked on auditory brainstem neurophysiology, speech production in depression and indivudals who stutter.
+    Recipient of an NIH F31 award.
+  role_category: undergraduate
+  period_text: 2012 - 209, now postdoc at Dr. David Ress' lab in Baylor College of Medicine, Houston,
+    TX
+  start_date: '2012'
+  roster_order: 50
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/debanjan-ghosh
+  member: sid:person/debanjan-ghosh
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Worked on language models in Neuroscout
+  role_category: other
+  period_text: 2018 - 2019, now at Educational Testing Service
+  start_date: '2018'
+  end_date: '2019'
+  roster_order: 51
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/wazeer-zulfikar
+  member: sid:person/wazeer-zulfikar
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Worked on generative models for brains and tumors.
+  role_category: other
+  period_text: Visiting student, 2019
+  start_date: '2019'
+  end_date: '2019'
+  roster_order: 52
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/jakub-kaczmarzyk
+  member: sid:person/jakub-kaczmarzyk
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: He developed Nobrainer and Neurodocker, and contributed to many of the group's projects
+  role_category: other
+  period_text: Technical Assistant 2017 - 2019, now MD-PhD student at Stony Brook University
+  start_date: '2017'
+  end_date: '2019'
+  roster_order: 53
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/smruti-padhy
+  member: sid:person/smruti-padhy
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: >-
+    As a member of ReproNim, she developed BrainVerse, a project management platform to make neuroimaging
+    research more reproducible.
+  role_category: other
+  period_text: Research Scientist 2015 - 2017, now Engineering Scientist at Texas Advanced Computing Center
+    (TACC)
+  start_date: '2015'
+  end_date: '2017'
+  roster_order: 54
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/gregory-ciccarelli
+  member: sid:person/gregory-ciccarelli
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: Imaging, processing, and modeling, speech from individuals with self-assessed depression
+  role_category: other
+  period_text: PhD student 2015 - 2018, now Technical Staff at MITLL
+  start_date: '2015'
+  end_date: '2018'
+  roster_order: 55
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/yoel-sanchez-araujo
+  member: sid:person/yoel-sanchez-araujo
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: >-
+    As a member of the group, he analyzed imaging and genetic data from individuals with schizophrenia
+    using machine learning. The data was from the GENUS consortium and supported by an NIMH supplement
+    to Genetic Determinants of Schizophrenia Intermediate Phenotypes.
+  role_category: other
+  period_text: Technical Assistant 2015 - 2017, now Research Specialist at Princeton University.
+  start_date: '2015'
+  end_date: '2017'
+  roster_order: 56
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/shilpa-chakravartula
+  member: sid:person/shilpa-chakravartula
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: >-
+    As a member of the group, she helped investigate open science grid for running large scale computation.
+  role_category: other
+  period_text: Contractor 2017
+  start_date: '2017'
+  end_date: '2017'
+  roster_order: 57
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:membership/du-derry-chen
+  member: sid:person/du-derry-chen
+  organization: sid:org/sensein
+  membership_status: former
+  role_title: As a member of the group, he helped improve BrainVerse implementation in its early days.
+  role_category: other
+  period_text: Intern 2017, Undergraduate at Cornell University
+  start_date: '2017'
+  end_date: '2017'
+  roster_order: 58
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1

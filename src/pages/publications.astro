@@ -3,16 +3,10 @@ import BaseLayout from "~/layouts/BaseLayout.astro";
 import Container from "~/components/Container.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
 import PublicationItem from "~/components/PublicationItem.astro";
-import { publications } from "~/lib/data";
+import { publications, publicationsPage } from "~/lib/data";
 import { withBase } from "~/lib/url";
-import yaml from "js-yaml";
 
-const pageRaw = (await import("~/data/publications_page.yml?raw")).default as string;
-const page = yaml.load(pageRaw) as {
-  summary: string;
-  keywords: string[];
-  topics: { label: string; tag?: string; description: string; example_count?: number }[];
-};
+const page = publicationsPage();
 
 const all = publications().sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
 const totalCount = all.length;
@@ -34,7 +28,7 @@ const topicCountMap = new Map(topicTagCounts.map((t) => [t.value as string, t.co
 
 // Compute the actual count of papers whose `topics:` field includes the
 // topic-area's `tag`. This replaces the stale example_count proxy in
-// publications_page.yml so the cards and the filter agree.
+// the old page data, so the cards and the filter agree.
 const topicCardData = page.topics.map((t) => ({
   ...t,
   count: t.tag ? (topicCountMap.get(t.tag) ?? 0) : 0,

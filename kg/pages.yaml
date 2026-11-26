@@ -1,0 +1,45 @@
+# Editable text for pages whose layout lives in the site code.
+# Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
+
+pages:
+- id: sid:page/publications
+  path: /publications/
+  title: Publications
+  summary: >-
+    A working list of papers and preprints from the Senseable Intelligence Group at the MIT McGovern Institute,
+    compiled from group CVs, NCBI MyBibliography, and OpenAlex. Entries are organised by year, publication
+    type, and topic and link out to the canonical record (DOI, PubMed, arXiv) and, where available, open-access
+    PDFs. The list is filterable by year, type, topic, and lab author.
+  keywords:
+  - brain
+  - neuroimaging
+  - fmri
+  - connectivity
+  - functional
+  - imaging
+  - network
+  - speech
+  - voice
+  - auditory
+  - anxiety
+  - depression
+  - mental-health
+  - adolescent
+  - autism
+  - reproducible
+  - nipype
+  - dandi
+  - open-data
+  - segmentation
+  featured_topics:
+  - sid:topic/reproducibility-tooling
+  - sid:topic/neuroimaging-methods
+  - sid:topic/open-data-standards
+  - sid:topic/speech-voice-biomarkers
+  - sid:topic/mental-health-psychiatry
+  - sid:topic/child-development-education
+  - sid:topic/ml-nlp-knowledge
+  - sid:topic/connectomics-circuits
+  - sid:topic/brain-dynamics-naturalistic
+  derived_from:
+  - site-yaml-v1

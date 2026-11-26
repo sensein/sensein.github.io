@@ -1,0 +1,673 @@
+# Working relationships between the lab and external people.
+# Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
+
+collaborations:
+- id: sid:collaboration/rachel-reetzke
+  collaborator: sid:person/rachel-reetzke
+  projects:
+  - sid:project/sails
+  period_text: 2024–present
+  start_date: '2024'
+  created: '2026-05-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/rebecca-landa
+  collaborator: sid:person/rebecca-landa
+  projects:
+  - sid:project/sails
+  period_text: 2024–present
+  start_date: '2024'
+  note: Center for Autism Services, Science and Innovation
+  created: '2026-05-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/elizabeth-eiler
+  collaborator: sid:person/elizabeth-eiler
+  projects:
+  - sid:project/sails
+  period_text: 2024–present
+  start_date: '2024'
+  created: '2026-05-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/arushi-singh
+  collaborator: sid:person/arushi-singh
+  projects:
+  - sid:project/sails
+  period_text: 2024–present
+  start_date: '2024'
+  created: '2026-05-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/jeremy-perrin
+  collaborator: sid:person/jeremy-perrin
+  projects:
+  - sid:project/sails
+  period_text: 2024–present
+  start_date: '2024'
+  created: '2026-05-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/vini-singh
+  collaborator: sid:person/vini-singh
+  projects:
+  - sid:project/sails
+  period_text: 2024–present
+  start_date: '2024'
+  created: '2026-05-12'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/diego-a-pizzagalli
+  collaborator: sid:person/diego-a-pizzagalli
+  projects:
+  - sid:project/banda
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/randy-p-auerbach
+  collaborator: sid:person/randy-p-auerbach
+  projects:
+  - sid:project/banda
+  period_text: 2020–present
+  start_date: '2020'
+  note: Suicide research, adolescent MH
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/stefan-g-hofmann
+  collaborator: sid:person/stefan-g-hofmann
+  projects:
+  - sid:project/banda
+  period_text: 2013–present
+  start_date: '2013'
+  note: Anxiety / depression treatment outcome
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/aude-henin
+  collaborator: sid:person/aude-henin
+  projects:
+  - sid:project/banda
+  period_text: 2020–present
+  start_date: '2020'
+  note: Pediatric anxiety
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/clemens-c-c-bauer
+  collaborator: sid:person/clemens-c-c-bauer
+  projects:
+  - sid:project/brain-states
+  - sid:project/banda
+  period_text: 2020–present
+  start_date: '2020'
+  note: Neurofeedback for adolescent anxiety
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/nicholas-a-hubbard
+  collaborator: sid:person/nicholas-a-hubbard
+  projects:
+  - sid:project/banda
+  - sid:project/brain-states
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/john-d-e-gabrieli
+  collaborator: sid:person/john-d-e-gabrieli
+  projects:
+  - sid:project/banda
+  - sid:project/readnet
+  - sid:project/brain-states
+  period_text: 2008–present
+  start_date: '2008'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/susan-whitfield-gabrieli
+  collaborator: sid:person/susan-whitfield-gabrieli
+  projects:
+  - sid:project/banda
+  - sid:project/brain-states
+  period_text: 2008–present
+  start_date: '2008'
+  note: CONN toolbox lead
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/polina-golland
+  collaborator: sid:person/polina-golland
+  projects:
+  - sid:project/naturalistic-parcellation
+  period_text: 2013–2017
+  start_date: '2013'
+  end_date: '2017'
+  note: Functional brain alignment
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/anastasia-yendiki
+  collaborator: sid:person/anastasia-yendiki
+  projects:
+  - sid:project/linc
+  period_text: 2017–present
+  start_date: '2017'
+  note: CONNECTS / LINC site PI; tractography
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/viviana-siless
+  collaborator: sid:person/viviana-siless
+  projects:
+  - sid:project/linc
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/xavier-guell
+  collaborator: sid:person/xavier-guell
+  period_text: 2018–2021
+  start_date: '2018'
+  end_date: '2021'
+  note: Cerebellum imaging
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/david-n-kennedy
+  collaborator: sid:person/david-n-kennedy
+  projects:
+  - sid:project/banda
+  - sid:project/nidm
+  - sid:project/repronim
+  period_text: 2012–present
+  start_date: '2012'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/sohye-kim
+  collaborator: sid:person/sohye-kim
+  period_text: TBD
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/david-b-keator
+  collaborator: sid:person/david-b-keator
+  projects:
+  - sid:project/nidm
+  - sid:project/repronim
+  period_text: 2012–present
+  start_date: '2012'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/yaroslav-o-halchenko
+  collaborator: sid:person/yaroslav-o-halchenko
+  projects:
+  - sid:project/dandi
+  - sid:project/repronim
+  - sid:project/datalad
+  period_text: 2011–present
+  start_date: '2011'
+  note: DANDI MPI; ReproNim co-lead
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/michael-hanke
+  collaborator: sid:person/michael-hanke
+  projects:
+  - sid:project/datalad
+  - sid:project/pymvpa
+  period_text: 2012–present
+  start_date: '2012'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/russell-a-poldrack
+  collaborator: sid:person/russell-a-poldrack
+  projects:
+  - sid:project/bids
+  - sid:project/openneuro
+  period_text: 2012–present
+  start_date: '2012'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/krzysztof-j-gorgolewski
+  collaborator: sid:person/krzysztof-j-gorgolewski
+  projects:
+  - sid:project/bids
+  - sid:project/openneuro
+  - sid:project/nipype-pydra
+  period_text: 2015–present
+  start_date: '2015'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/oscar-esteban
+  collaborator: sid:person/oscar-esteban
+  projects:
+  - sid:project/fmriprep
+  - sid:project/nipype-pydra
+  period_text: 2017–present
+  start_date: '2017'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/ross-w-blair
+  collaborator: sid:person/ross-w-blair
+  projects:
+  - sid:project/fmriprep
+  period_text: 2019–present
+  start_date: '2019'
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/jean-baptiste-poline
+  collaborator: sid:person/jean-baptiste-poline
+  projects:
+  - sid:project/bids
+  - sid:project/nidm
+  - sid:project/repronim
+  period_text: 2012–present
+  start_date: '2012'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/samir-das
+  collaborator: sid:person/samir-das
+  projects:
+  - sid:project/loris
+  - sid:project/repronim
+  period_text: 2016–present
+  start_date: '2016'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/peer-herholz
+  collaborator: sid:person/peer-herholz
+  projects:
+  - sid:project/neuroscout
+  period_text: 2021–present
+  start_date: '2021'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/arno-klein
+  collaborator: sid:person/arno-klein
+  projects:
+  - sid:project/mindboggle
+  - sid:project/reproschema
+  - sid:project/mindlogger
+  period_text: 2005–present
+  start_date: '2005'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/michael-p-milham
+  collaborator: sid:person/michael-p-milham
+  projects:
+  - sid:project/cpac
+  period_text: 2017–present
+  start_date: '2017'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/anisha-keshavan
+  collaborator: sid:person/anisha-keshavan
+  projects:
+  - sid:project/neuroscout
+  period_text: 2013–present
+  start_date: '2013'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/gregory-kiar
+  collaborator: sid:person/gregory-kiar
+  projects:
+  - sid:project/nidm
+  period_text: 2017–present
+  start_date: '2017'
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/r-cameron-craddock
+  collaborator: sid:person/r-cameron-craddock
+  projects:
+  - sid:project/cpac
+  period_text: 2016–2021
+  start_date: '2016'
+  end_date: '2021'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/shoaib-mufti
+  collaborator: sid:person/shoaib-mufti
+  projects:
+  - sid:project/bican-knowledgebase
+  period_text: 2022–present
+  start_date: '2022'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/tyler-mollenkopf
+  collaborator: sid:person/tyler-mollenkopf
+  projects:
+  - sid:project/bican-knowledgebase
+  period_text: 2022–present
+  start_date: '2022'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/maryann-e-martone
+  collaborator: sid:person/maryann-e-martone
+  projects:
+  - sid:project/nidm
+  - sid:project/bican-knowledgebase
+  period_text: 2018–present
+  start_date: '2018'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/jeffrey-s-grethe
+  collaborator: sid:person/jeffrey-s-grethe
+  projects:
+  - sid:project/nidm
+  - sid:project/bican-knowledgebase
+  period_text: 2018–present
+  start_date: '2018'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/gael-varoquaux
+  collaborator: sid:person/gael-varoquaux
+  projects:
+  - sid:project/nilearn
+  period_text: 2015–present
+  start_date: '2015'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/camille-maumet
+  collaborator: sid:person/camille-maumet
+  projects:
+  - sid:project/nidm
+  period_text: 2015–present
+  start_date: '2015'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/tibor-auer
+  collaborator: sid:person/tibor-auer
+  projects:
+  - sid:project/bids
+  period_text: 2016–present
+  start_date: '2016'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/tal-yarkoni
+  collaborator: sid:person/tal-yarkoni
+  projects:
+  - sid:project/neuroscout
+  period_text: 2015–present
+  start_date: '2015'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/alejandro-de-la-vega
+  collaborator: sid:person/alejandro-de-la-vega
+  projects:
+  - sid:project/neuroscout
+  period_text: 2017–present
+  start_date: '2017'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/taylor-salo
+  collaborator: sid:person/taylor-salo
+  projects:
+  - sid:project/fmriprep
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/robert-oostenveld
+  collaborator: sid:person/robert-oostenveld
+  projects:
+  - sid:project/bids
+  period_text: 2021–present
+  start_date: '2021'
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/ariel-rokem
+  collaborator: sid:person/ariel-rokem
+  projects:
+  - sid:project/bids
+  period_text: 2016–present
+  start_date: '2016'
+  created: '2022-03-19'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/chris-rorden
+  collaborator: sid:person/chris-rorden
+  projects:
+  - sid:project/dcm2niix
+  - sid:project/bids
+  period_text: '2024'
+  start_date: '2024'
+  end_date: '2024'
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/guillaume-flandin
+  collaborator: sid:person/guillaume-flandin
+  projects:
+  - sid:project/bids
+  period_text: 2016–present
+  start_date: '2016'
+  note: SPM
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/thomas-e-nichols
+  collaborator: sid:person/thomas-e-nichols
+  projects:
+  - sid:project/bids
+  - sid:project/nidm
+  period_text: 2015–present
+  start_date: '2015'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/ola-ozernov-palchik
+  collaborator: sid:person/ola-ozernov-palchik
+  projects:
+  - sid:project/riverst-kiva
+  - sid:project/readnet
+  period_text: 2017–present
+  start_date: '2017'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/tyler-k-perrachione
+  collaborator: sid:person/tyler-k-perrachione
+  projects:
+  - sid:project/readnet
+  period_text: 2016–2019
+  start_date: '2016'
+  end_date: '2019'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/phillip-c-song
+  collaborator: sid:person/phillip-c-song
+  projects:
+  - sid:project/vocal-fold-paralysis
+  period_text: '2024'
+  start_date: '2024'
+  end_date: '2024'
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/matthew-k-nock
+  collaborator: sid:person/matthew-k-nock
+  projects:
+  - sid:project/veteran-peer-response
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/walter-dempsey
+  collaborator: sid:person/walter-dempsey
+  projects:
+  - sid:project/veteran-peer-response
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/kelly-zuromski
+  collaborator: sid:person/kelly-zuromski
+  projects:
+  - sid:project/veteran-peer-response
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/daniel-kessler
+  collaborator: sid:person/daniel-kessler
+  projects:
+  - sid:project/veteran-peer-response
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/john-torous
+  collaborator: sid:person/john-torous
+  projects:
+  - sid:project/covid-reddit-mental-health
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/guillermo-cecchi
+  collaborator: sid:person/guillermo-cecchi
+  projects:
+  - sid:project/covid-reddit-mental-health
+  period_text: 2020–present
+  start_date: '2020'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/laurie-rumker
+  collaborator: sid:person/laurie-rumker
+  projects:
+  - sid:project/covid-reddit-mental-health
+  period_text: '2020'
+  start_date: '2020'
+  end_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/tanya-talkar
+  collaborator: sid:person/tanya-talkar
+  projects:
+  - sid:project/covid-reddit-mental-health
+  period_text: '2020'
+  start_date: '2020'
+  end_date: '2020'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/georg-langs
+  collaborator: sid:person/georg-langs
+  projects:
+  - sid:project/naturalistic-parcellation
+  period_text: 2013–2017
+  start_date: '2013'
+  end_date: '2017'
+  created: '2019-01-27'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/karl-heinz-nenning
+  collaborator: sid:person/karl-heinz-nenning
+  projects:
+  - sid:project/naturalistic-parcellation
+  period_text: '2017'
+  start_date: '2017'
+  end_date: '2017'
+  note: Functional demons
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/mert-r-sabuncu
+  collaborator: sid:person/mert-r-sabuncu
+  projects:
+  - sid:project/naturalistic-parcellation
+  period_text: '2017'
+  start_date: '2017'
+  end_date: '2017'
+  created: '2026-05-26'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/frank-h-guenther
+  collaborator: sid:person/frank-h-guenther
+  period_text: 2001–2016
+  start_date: '2001'
+  end_date: '2016'
+  note: DIVA speech-production model; earlier MIT collaboration
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/jason-a-tourville
+  collaborator: sid:person/jason-a-tourville
+  period_text: 2003–2014
+  start_date: '2003'
+  end_date: '2014'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/alfonso-nieto-castanon
+  collaborator: sid:person/alfonso-nieto-castanon
+  period_text: 2003–2016
+  start_date: '2003'
+  end_date: '2016'
+  note: CONN toolbox
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/shanqing-cai
+  collaborator: sid:person/shanqing-cai
+  period_text: 2011–2016
+  start_date: '2011'
+  end_date: '2016'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/joseph-s-perkell
+  collaborator: sid:person/joseph-s-perkell
+  period_text: 2003–2016
+  start_date: '2003'
+  end_date: '2016'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1
+- id: sid:collaboration/christina-triantafyllou
+  collaborator: sid:person/christina-triantafyllou
+  period_text: 2010–2014
+  start_date: '2010'
+  end_date: '2014'
+  created: '2026-05-11'
+  derived_from:
+  - site-yaml-v1

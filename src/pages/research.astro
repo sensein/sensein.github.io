@@ -3,8 +3,7 @@ import PageLayout from "~/layouts/PageLayout.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
 import ProjectCard from "~/components/ProjectCard.astro";
 import { normalizeImage } from "~/lib/images";
-import { projects } from "~/lib/data";
-import yaml from "js-yaml";
+import { projects, publicationsPage } from "~/lib/data";
 
 const all = projects();
 const active = all.filter((p) => p.status === "active");
@@ -12,8 +11,7 @@ const former = all.filter((p) => p.status === "former");
 const heroImage = normalizeImage("/images/multi_sensory_integration.webp");
 
 // Theme chip metadata — same 9-theme taxonomy used on /publications/.
-const themeRaw = (await import("~/data/publications_page.yml?raw")).default as string;
-const themeMeta = yaml.load(themeRaw) as { topics: { tag: string; label: string }[] };
+const themeMeta = publicationsPage();
 const counts = new Map<string, number>();
 for (const p of all) for (const t of p.themes ?? []) counts.set(t, (counts.get(t) ?? 0) + 1);
 const chips = themeMeta.topics
@@ -183,7 +181,7 @@ const chips = themeMeta.topics
 
   <p class="mt-12 text-xs text-(--color-ink-faint)">
     Missing a project? Contributors not credited? Open a PR editing
-    <code>src/data/projects.yml</code> — see
+    <code>kg/projects.yaml</code> — see
     <a href="https://github.com/sensein/sensein.github.io/blob/main/PROJECTS.md" class="underline underline-offset-3 hover:text-(--color-accent)">PROJECTS.md</a>
     for the schema.
   </p>

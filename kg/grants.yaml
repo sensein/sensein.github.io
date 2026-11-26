@@ -1,0 +1,74 @@
+# Funding awards, linked from projects through funded_by.
+# Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
+
+grants:
+- id: sid:grant/u24-da064429
+  award_number: U24 DA064429
+  funder: sid:org/nida
+  lab_role: Lead PI
+  note: MPI Cabrera, Kennedy
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/r24-mh117295
+  award_number: R24 MH117295
+  funder: sid:org/nimh
+  lab_role: Lead PI
+  note: MPI Halchenko, Dartmouth
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/u24-mh130918
+  award_number: U24 MH130918
+  funder: sid:org/nimh
+  lab_role: MPI
+  note: with Mufti, Hawrylycz, Ng — Allen Institute
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/um1-mh134812
+  award_number: UM1 MH134812
+  funder: sid:org/nimh
+  lab_role: Co-I
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/um1-ns132358
+  award_number: UM1 NS132358
+  funder: sid:org/ninds
+  lab_role: Site PI
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/ot2-od032720
+  award_number: OT2 OD032720
+  funder: sid:org/nih-od
+  lab_role: MPI
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/p41-eb019936
+  award_number: P41 EB019936
+  funder: sid:org/nibib
+  lab_role: Site PI
+  note: PI Kennedy, UMass Med; Director TR&D Project 2
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/r01-eb020740
+  award_number: R01 EB020740
+  funder: sid:org/nibib
+  lab_role: PI
+  start_date: '2016'
+  end_date: '2020'
+  note: project ongoing as community software
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/rf1-mh121885
+  award_number: RF1 MH121885
+  funder: sid:org/nimh
+  lab_role: PI
+  start_date: '2020'
+  end_date: '2024'
+  derived_from:
+  - site-yaml-v1
+- id: sid:grant/r01-mh109682
+  award_number: R01 MH109682
+  funder: sid:org/nimh
+  lab_role: Site PI
+  note: PI Yarkoni
+  derived_from:
+  - site-yaml-v1

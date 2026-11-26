@@ -1,10 +1,10 @@
 ---
 import PageLayout from "~/layouts/PageLayout.astro";
 // Collaborator network rendering is suppressed until the dataset is
-// audited end-to-end. The data lives in src/data/collaborators.yml
-// against the person-centric Collaborator schema (current_institution,
-// projects, years). To restore rendering, re-introduce the loader and
-// build a layout from that flat list.
+// audited end-to-end. The data lives in kg/collaborations.yaml (with the
+// people in kg/people.yaml); collaborators() in src/lib/data.ts returns the
+// flat list (name, current_institution, projects, years). To restore
+// rendering, build a layout from that list.
 ---
 <PageLayout
   eyebrow="Collaborators"

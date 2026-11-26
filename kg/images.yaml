@@ -1,0 +1,1017 @@
+# Image files the site serves: portraits, project images, figures and logos.
+# Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
+
+images:
+- id: sid:image/people/satrajit-s-ghosh
+  content_url: /images/people/satrajit-s-ghosh.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/satrajit-s-ghosh
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/olga-vieira
+  content_url: /images/people/olga-vieira.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/olga-vieira
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/dorota-jarecka
+  content_url: /images/people/dorota-jarecka.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/dorota-jarecka
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/rahul-brito
+  content_url: /images/people/rahul-brito.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/rahul-brito
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/meral-hacikamiloglu
+  content_url: /images/people/meral-hacikamiloglu.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/meral-hacikamiloglu
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/nima-dehghani
+  content_url: /images/people/nima-dehghani.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/nima-dehghani
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/kaley-jenney
+  content_url: /images/people/kaley-jenney.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/kaley-jenney
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/puja-trivedi
+  content_url: /images/people/puja-trivedi.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/puja-trivedi
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/yibei-chen
+  content_url: /images/people/yibei-chen.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/yibei-chen
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/jong-hwan-lee
+  content_url: /images/people/jong-hwan-lee.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/jong-hwan-lee
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/kabilar-gunalan
+  content_url: /images/people/kabilar-gunalan.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/kabilar-gunalan
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/tek-raj-chhetri
+  content_url: /images/people/tek-raj-chhetri.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/tek-raj-chhetri
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/jordan-wilke
+  content_url: /images/people/jordan-wilke.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/jordan-wilke
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/suliman-sharif
+  content_url: /images/people/suliman-sharif.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/suliman-sharif
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/nader-nikbakht
+  content_url: /images/people/nader-nikbakht.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/nader-nikbakht
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/manaal-mohammed
+  content_url: /images/people/manaal-mohammed.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/manaal-mohammed
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/aparna-bg
+  content_url: /images/people/aparna-bg.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/aparna-bg
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/debbie-burdinski
+  content_url: /images/people/debbie-burdinski.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/debbie-burdinski
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/lucie-bierent
+  content_url: /images/people/lucie-bierent.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/lucie-bierent
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/jeff-mentch
+  content_url: /images/people/jeff-mentch.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/jeff-mentch
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/fabio-catania
+  content_url: /images/people/fabio-catania.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/fabio-catania
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/bruke-wossenseged
+  content_url: /images/people/bruke-wossenseged.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/bruke-wossenseged
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/isaac-bevers
+  content_url: /images/people/isaac-bevers.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/isaac-bevers
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/miles-silva
+  content_url: /images/people/miles-silva.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/miles-silva
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/maedbh-king
+  content_url: /images/people/maedbh-king.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/maedbh-king
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/aaron-kanzer
+  content_url: /images/people/aaron-kanzer.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/aaron-kanzer
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/yassine-jamaa
+  content_url: /images/people/yassine-jamaa.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/yassine-jamaa
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/veronika-moroz
+  content_url: /images/people/veronika-moroz.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/veronika-moroz
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/harsha-gazula
+  content_url: /images/people/harsha-gazula.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/harsha-gazula
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/alina-weinberger
+  content_url: /images/people/alina-weinberger.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/alina-weinberger
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/chaitanya-kapoor
+  content_url: /images/people/chaitanya-kapoor.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/chaitanya-kapoor
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/daniel-m-low
+  content_url: /images/people/daniel-m-low.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/daniel-m-low
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/gasser-elbanna
+  content_url: /images/people/gasser-elbanna.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/gasser-elbanna
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/sabeen-lohawala
+  content_url: /images/people/sabeen-lohawala.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/sabeen-lohawala
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/ahmed-zain
+  content_url: /images/people/ahmed-zain.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/ahmed-zain
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/agathe-tournant
+  content_url: /images/people/agathe-tournant.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/agathe-tournant
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/christopher-j-markiewicz
+  content_url: /images/people/christopher-j-markiewicz.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/christopher-j-markiewicz
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/alicia-zhang
+  content_url: /images/people/alicia-zhang.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/alicia-zhang
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/olivia-han
+  content_url: /images/people/olivia-han.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/olivia-han
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/jai-amin
+  content_url: /images/people/jai-amin.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/jai-amin
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/amber-lien
+  content_url: /images/people/amber-lien.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/amber-lien
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/edward-gaibor
+  content_url: /images/people/edward-gaibor.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/edward-gaibor
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/kapish-potula
+  content_url: /images/people/kapish-potula.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/kapish-potula
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/sooyoung-ahn
+  content_url: /images/people/sooyoung-ahn.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/sooyoung-ahn
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/matthias-steiner
+  content_url: /images/people/matthias-steiner.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/matthias-steiner
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/anurag-gade
+  content_url: /images/people/anurag-gade.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/anurag-gade
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/alisha-kodibagkar
+  content_url: /images/people/alisha-kodibagkar.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/alisha-kodibagkar
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/zihao-wang
+  content_url: /images/people/zihao-wang.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/zihao-wang
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/kai-mcclennen
+  content_url: /images/people/kai-mcclennen.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/kai-mcclennen
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/claudia-liauw
+  content_url: /images/people/claudia-liauw.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/claudia-liauw
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/kenny-nguyen
+  content_url: /images/people/kenny-nguyen.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/kenny-nguyen
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/hoda-rajaei
+  content_url: /images/people/hoda-rajaei.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/hoda-rajaei
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/megha-vemuri
+  content_url: /images/people/megha-vemuri.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/megha-vemuri
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/rebecca-kleinberger
+  content_url: /images/people/rebecca-kleinberger.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/rebecca-kleinberger
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/dhritiman-das
+  content_url: /images/people/dhritiman-das.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/dhritiman-das
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/yingxing-feng
+  content_url: /images/people/yingxing-feng.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/yingxing-feng
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/aakanksha-rana
+  content_url: /images/people/aakanksha-rana.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/aakanksha-rana
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/mathias-goncalves
+  content_url: /images/people/mathias-goncalves.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/mathias-goncalves
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/sanu-ann-abraham
+  content_url: /images/people/sanu-ann-abraham.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/sanu-ann-abraham
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/frances-mulligan-they-them
+  content_url: /images/people/frances-mulligan-they-them.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/frances-mulligan-they-them
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/alice-bizeul
+  content_url: /images/people/alice-bizeul.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/alice-bizeul
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/kate-bentley
+  content_url: /images/people/kate-bentley.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/kate-bentley
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/aishah-ismail
+  content_url: /images/people/aishah-ismail.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/aishah-ismail
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/bhavya-kandimalla
+  content_url: /images/people/bhavya-kandimalla.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/bhavya-kandimalla
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/kevin-sitek
+  content_url: /images/people/kevin-sitek.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/kevin-sitek
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/debanjan-ghosh
+  content_url: /images/people/debanjan-ghosh.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/debanjan-ghosh
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/wazeer-zulfikar
+  content_url: /images/people/wazeer-zulfikar.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/wazeer-zulfikar
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/jakub-kaczmarzyk
+  content_url: /images/people/jakub-kaczmarzyk.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/jakub-kaczmarzyk
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/smruti-padhy
+  content_url: /images/people/smruti-padhy.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/smruti-padhy
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/gregory-ciccarelli
+  content_url: /images/people/gregory-ciccarelli.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/gregory-ciccarelli
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/people/yoel-sanchez-araujo
+  content_url: /images/people/yoel-sanchez-araujo.webp
+  image_kind: portrait
+  encoding_format: image/webp
+  width: 320
+  height: 320
+  depicts:
+  - sid:person/yoel-sanchez-araujo
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/placeholder-person
+  content_url: /images/placeholder-person.svg
+  image_kind: portrait
+  encoding_format: image/svg+xml
+  depicts:
+  - sid:person/shilpa-chakravartula
+  - sid:person/du-derry-chen
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/default-9fc0dc25
+  content_url: /images/external/default-9fc0dc25.webp
+  image_kind: figure
+  encoding_format: image/webp
+  width: 1500
+  height: 1397
+  depicts:
+  - DOI:10.7554/elife.48932
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/default-36895d2a
+  content_url: /images/external/default-36895d2a.webp
+  image_kind: figure
+  encoding_format: image/webp
+  width: 1500
+  height: 1314
+  depicts:
+  - DOI:10.7554/elife.36652
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/fmriprep-workflow-all-be05fd09
+  content_url: /images/external/fmriprep-workflow-all-be05fd09.webp
+  image_kind: figure
+  encoding_format: image/webp
+  width: 1376
+  height: 980
+  depicts:
+  - DOI:10.1038/s41592-018-0235-4
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/screenshot-2019-01-27-18-35-52-b0961a94
+  content_url: /images/external/Screenshot_2019-01-27_18.35.52-b0961a94.webp
+  image_kind: figure
+  encoding_format: image/webp
+  width: 432
+  height: 323
+  depicts:
+  - sid:publication/2018-p-distributed-weight-consolidation-brain
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/export-847dcdbf
+  content_url: /images/external/export-847dcdbf.img
+  image_kind: figure
+  width: 894
+  height: 308
+  depicts:
+  - DOI:10.1371/journal.pcbi.1005350
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/f1-medium-eea1967d
+  content_url: /images/external/F1.medium-eea1967d.gif
+  image_kind: figure
+  encoding_format: image/gif
+  depicts:
+  - DOI:10.1073/pnas.1608282113
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/bbqs-logo
+  content_url: /images/external/bbqs-logo.webp
+  image_kind: logo
+  encoding_format: image/webp
+  width: 1024
+  height: 1024
+  depicts:
+  - sid:project/bbqs
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/dandi-workflow-v2-49e8082b
+  content_url: /images/external/dandi-workflow-v2-49e8082b.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1793
+  height: 805
+  depicts:
+  - sid:project/dandi
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/bican-logo
+  content_url: /images/external/bican-logo.avif
+  image_kind: logo
+  depicts:
+  - sid:project/bican-knowledgebase
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/bican-um1
+  content_url: /images/projects/bican-um1.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 640
+  height: 397
+  depicts:
+  - sid:project/bican-um1
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/linc
+  content_url: /images/projects/linc.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1200
+  height: 719
+  depicts:
+  - sid:project/linc
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/bridge2ai-voice
+  content_url: /images/projects/bridge2ai-voice.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 720
+  height: 736
+  depicts:
+  - sid:project/bridge2ai-voice
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/senselab
+  content_url: /images/projects/senselab.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1400
+  height: 875
+  depicts:
+  - sid:project/senselab
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/riverst-kiva
+  content_url: /images/projects/riverst-kiva.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1400
+  height: 809
+  depicts:
+  - sid:project/riverst-kiva
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/repronim
+  content_url: /images/projects/repronim.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 512
+  height: 512
+  depicts:
+  - sid:project/repronim
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/nipype-pydra
+  content_url: /images/projects/nipype-pydra.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 600
+  height: 120
+  depicts:
+  - sid:project/nipype-pydra
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/sails-pipeline
+  content_url: /images/projects/sails-pipeline.svg
+  image_kind: project_image
+  encoding_format: image/svg+xml
+  depicts:
+  - sid:project/sails
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/brain-states
+  content_url: /images/projects/brain-states.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 800
+  height: 638
+  depicts:
+  - sid:project/brain-states
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/abcd-psychotic-experiences-placeholder
+  content_url: /images/projects/abcd-psychotic-experiences-placeholder.svg
+  image_kind: project_image
+  encoding_format: image/svg+xml
+  depicts:
+  - sid:project/abcd-psychotic-experiences
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/banda-placeholder
+  content_url: /images/projects/banda-placeholder.svg
+  image_kind: project_image
+  encoding_format: image/svg+xml
+  depicts:
+  - sid:project/banda
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/readnet
+  content_url: /images/projects/readnet.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1298
+  height: 430
+  depicts:
+  - sid:project/readnet
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/hypsynth-placeholder
+  content_url: /images/projects/hypsynth-placeholder.svg
+  image_kind: project_image
+  encoding_format: image/svg+xml
+  depicts:
+  - sid:project/hypsynth
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/structsense
+  content_url: /images/projects/structsense.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1400
+  height: 606
+  depicts:
+  - sid:project/structsense
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/abstract-atlas-placeholder
+  content_url: /images/projects/abstract-atlas-placeholder.svg
+  image_kind: project_image
+  encoding_format: image/svg+xml
+  depicts:
+  - sid:project/abstract-atlas
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/external/unet-best-prediction-8b27578e
+  content_url: /images/external/unet-best-prediction-8b27578e.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1157
+  height: 406
+  depicts:
+  - sid:project/nobrainer
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/mumble-melody-logo
+  content_url: /images/Mumble_Melody_logo.webp
+  image_kind: logo
+  encoding_format: image/webp
+  width: 312
+  height: 594
+  depicts:
+  - sid:project/mumble-melody
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/brain-parcellation
+  content_url: /images/brain_parcellation.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1296
+  height: 736
+  depicts:
+  - sid:project/naturalistic-parcellation
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/vocal-fold-paralysis
+  content_url: /images/projects/vocal-fold-paralysis.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1400
+  height: 606
+  depicts:
+  - sid:project/vocal-fold-paralysis
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/psychiatric-speech-review
+  content_url: /images/projects/psychiatric-speech-review.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 4201
+  height: 2920
+  depicts:
+  - sid:project/psychiatric-speech-review
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/covid-reddit-mental-health
+  content_url: /images/projects/covid-reddit-mental-health.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 800
+  height: 401
+  depicts:
+  - sid:project/covid-reddit-mental-health
+  derived_from:
+  - site-yaml-v1
+- id: sid:image/projects/veteran-peer-response
+  content_url: /images/projects/veteran-peer-response.webp
+  image_kind: project_image
+  encoding_format: image/webp
+  width: 1400
+  height: 679
+  depicts:
+  - sid:project/veteran-peer-response
+  derived_from:
+  - site-yaml-v1

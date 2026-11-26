@@ -4,9 +4,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "kg": "python3 scripts/kg/build.py",
+    "predev": "python3 scripts/kg/build.py",
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "node scripts/build-search-embeddings.mjs",
+    "prebuild": "python3 scripts/kg/build.py && node scripts/build-search-embeddings.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check"
