@@ -584,12 +584,12 @@
    "version": "2.0.0",
    "license": "https://creativecommons.org/licenses/by/4.0/",
    "was_generated_by": {
-    "id": "sid:build/b415d9ce4733-20261126T012554Z",
+    "id": "sid:build/58e88ee1e5e5-20261126T013047Z",
     "type": [
      "prov:Activity"
     ],
-    "started_at": "2026-11-26T01:25:54+00:00",
-    "commit": "b415d9ce4733ddaae0a365b8e62bf1547b4d8d71",
+    "started_at": "2026-11-26T01:30:47+00:00",
+    "commit": "58e88ee1e5e50db828aa44f77cf07fbaaf0df8e6",
     "used": [
      {
       "id": "sid:source/kg/collaborations.yaml",
@@ -677,9 +677,9 @@
        "prov:Entity"
       ],
       "path": "kg/projects.yaml",
-      "commit": "0e871d8c4914d31d1d558d888290a471e014c200",
-      "last_changed": "2026-11-26T01:00:25Z",
-      "sha256": "3d129da9a42f013a8e471516dd344205c3ba7b8b5f98eeaf00c9b7bf819e4d21"
+      "commit": "4086e1bd8fe371ac23611f51f950402adbe84e5d",
+      "last_changed": "2026-11-26T01:27:30Z",
+      "sha256": "9fa9c8edb9fdd27ae592a00ae0be9f13f3ddde92a5f54a5f83e598d216ddc928"
      },
      {
       "id": "sid:source/kg/publications.yaml",
@@ -11558,10 +11558,13 @@
    "derived_from": [
     "site-yaml-v1"
    ],
+   "curation_notes": [
+    "Moved to past projects at Satra's request on 2026-11-26."
+   ],
    "slug": "banda",
    "title": "BANDA — Boston Adolescent Neuroimaging of Depression and Anxiety",
    "project_type": "lab_project",
-   "project_status": "active",
+   "project_status": "former",
    "description": "A Human Connectome Project arm (Connectomes Related to Human Diseases) collecting multimodal MRI, clinical, and neuropsychological data from 215 adolescents aged 14–17, 152 of whom had current anxiety and/or depressive disorders at intake. Imaging spans structural (T1/T2), resting-state and task fMRI, and diffusion-weighted scans, released as both unprocessed and HCP minimally-preprocessed data. The lab contributed the imaging pipelines, quality assurance, and data-release engineering, and continues to support connectome-based predictive-modeling analyses of depression and anxiety risk across BANDA and ABCD.",
    "funding_statement": "NIMH — Connectomes Related to Human Diseases (Human Connectome Project)",
    "funded_by": [
