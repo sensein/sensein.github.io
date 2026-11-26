@@ -72,11 +72,11 @@ projects:
   former_members:
   - sid:person/christopher-j-markiewicz
   anchor_publications:
-  - doi:10.7554/elife.78362
-  - doi:10.1038/s41597-023-02614-0
-  - doi:10.1523/eneuro.0486-24.2025
-  - doi:10.1007/s12021-021-09557-0
-  - doi:10.64898/2026.03.05.709819
+  - DOI:10.7554/elife.78362
+  - DOI:10.1038/s41597-023-02614-0
+  - DOI:10.1523/eneuro.0486-24.2025
+  - DOI:10.1007/s12021-021-09557-0
+  - DOI:10.64898/2026.03.05.709819
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -130,8 +130,8 @@ projects:
   former_members:
   - sid:person/jai-amin
   anchor_publications:
-  - doi:10.1145/3701716.3715483
-  - doi:10.1371/journal.pbio.3002133
+  - DOI:10.1145/3701716.3715483
+  - DOI:10.1371/journal.pbio.3002133
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -161,7 +161,7 @@ projects:
   - sid:person/kabilar-gunalan
   - sid:person/satrajit-s-ghosh
   anchor_publications:
-  - doi:10.1126/science.adh9979
+  - DOI:10.1126/science.adh9979
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -200,9 +200,9 @@ projects:
   - sid:person/kabilar-gunalan
   - sid:person/satrajit-s-ghosh
   anchor_publications:
-  - doi:10.64898/2026.03.31.715699
-  - doi:10.64898/2026.02.18.705310
-  - doi:10.64898/2026.04.02.716198
+  - DOI:10.64898/2026.03.31.715699
+  - DOI:10.64898/2026.02.18.705310
+  - DOI:10.64898/2026.04.02.716198
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -253,8 +253,8 @@ projects:
   - sid:person/daniel-m-low
   - sid:person/fabio-catania
   anchor_publications:
-  - doi:10.3389/fdgth.2025.1484521
-  - doi:10.3389/fdgth.2025.1514971
+  - DOI:10.3389/fdgth.2025.1484521
+  - DOI:10.3389/fdgth.2025.1514971
   curation_notes:
   - 'Anchor publication not in the corpus: 10.3389/fdgth.2024.1484818'
   - 'Anchor publication not in the corpus: 10.3389/fdgth.2024.1484503'
@@ -331,7 +331,7 @@ projects:
   former_members:
   - sid:person/fabio-catania
   anchor_publications:
-  - doi:10.31234/osf.io/stek7_v1
+  - DOI:10.31234/osf.io/stek7_v1
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -388,13 +388,13 @@ projects:
   - sid:person/sanu-ann-abraham
   - sid:person/smruti-padhy
   anchor_publications:
-  - doi:10.12688/f1000research.10783.2
-  - doi:10.3389/fninf.2019.00001
-  - doi:10.3389/fninf.2023.1174156
-  - doi:10.1162/imag_a_00074
-  - doi:10.2196/63343
-  - doi:10.21105/joss.05839
-  - doi:10.31222/osf.io/x64tn_v1
+  - DOI:10.12688/f1000research.10783.2
+  - DOI:10.3389/fninf.2019.00001
+  - DOI:10.3389/fninf.2023.1174156
+  - DOI:10.1162/imag_a_00074
+  - DOI:10.2196/63343
+  - DOI:10.21105/joss.05839
+  - DOI:10.31222/osf.io/x64tn_v1
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -434,7 +434,7 @@ projects:
   - sid:person/jakub-kaczmarzyk
   - sid:person/mathias-goncalves
   anchor_publications:
-  - doi:10.3389/fninf.2011.00013
+  - DOI:10.3389/fninf.2011.00013
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -507,8 +507,8 @@ projects:
   - sid:person/satrajit-s-ghosh
   - sid:person/yibei-chen
   anchor_publications:
-  - doi:10.1162/imag.a.1116
-  - doi:10.64898/2026.05.31.729141
+  - DOI:10.1162/imag.a.1116
+  - DOI:10.64898/2026.05.31.729141
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -534,7 +534,7 @@ projects:
   former_members:
   - sid:person/alisha-kodibagkar
   anchor_publications:
-  - doi:10.1001/jamanetworkopen.2024.34354
+  - DOI:10.1001/jamanetworkopen.2024.34354
   curation_notes:
   - 'To do (from the old site data): expand description'
   created: '2026-05-11'
@@ -579,10 +579,10 @@ projects:
   - Clemens C. C. Bauer (MIT / Northeastern)
   - Viviana Siless (MGH Martinos)
   anchor_publications:
-  - doi:10.1038/s41597-024-03629-x
-  - doi:10.1016/j.nicl.2020.102242
-  - doi:10.1162/imag.a.145
-  - doi:10.1177/21677026251351850
+  - DOI:10.1038/s41597-024-03629-x
+  - DOI:10.1016/j.nicl.2020.102242
+  - DOI:10.1162/imag.a.145
+  - DOI:10.1177/21677026251351850
   created: '2026-05-26'
   derived_from:
   - site-yaml-v1
@@ -622,8 +622,8 @@ projects:
   former_members:
   - sid:person/fabio-catania
   anchor_publications:
-  - doi:10.1007/s11881-025-00342-1
-  - doi:10.31234/osf.io/stek7_v1
+  - DOI:10.1007/s11881-025-00342-1
+  - DOI:10.31234/osf.io/stek7_v1
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -678,7 +678,7 @@ projects:
   - sid:person/tek-raj-chhetri
   - sid:person/yibei-chen
   anchor_publications:
-  - doi:10.48550/arxiv.2507.03674
+  - DOI:10.48550/arxiv.2507.03674
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -742,7 +742,7 @@ projects:
   - sid:person/jakub-kaczmarzyk
   - sid:person/satrajit-s-ghosh
   anchor_publications:
-  - doi:10.3389/fninf.2019.00067
+  - DOI:10.3389/fninf.2019.00067
   curation_notes:
   - 'Anchor publication not in the corpus: 10.1038/s41598-022-19026-6'
   created: '2026-05-11'
@@ -815,7 +815,7 @@ projects:
   - sid:person/jeff-mentch
   - sid:person/satrajit-s-ghosh
   anchor_publications:
-  - doi:10.7554/elife.79277
+  - DOI:10.7554/elife.79277
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -840,7 +840,7 @@ projects:
   - sid:person/daniel-m-low
   - sid:person/satrajit-s-ghosh
   anchor_publications:
-  - doi:10.1371/journal.pdig.0000516
+  - DOI:10.1371/journal.pdig.0000516
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -866,7 +866,7 @@ projects:
   - sid:person/kate-bentley
   - sid:person/satrajit-s-ghosh
   anchor_publications:
-  - doi:10.1002/lio2.354
+  - DOI:10.1002/lio2.354
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -900,7 +900,7 @@ projects:
   - sid:person/daniel-m-low
   - sid:person/satrajit-s-ghosh
   anchor_publications:
-  - doi:10.2196/22635
+  - DOI:10.2196/22635
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1
@@ -925,8 +925,8 @@ projects:
   - sid:person/daniel-m-low
   - sid:person/satrajit-s-ghosh
   anchor_publications:
-  - doi:10.1017/s0033291724001557
-  - doi:10.18653/v1/2021.cinlp-1.8
+  - DOI:10.1017/s0033291724001557
+  - DOI:10.18653/v1/2021.cinlp-1.8
   created: '2026-05-11'
   derived_from:
   - site-yaml-v1

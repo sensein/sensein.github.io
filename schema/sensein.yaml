@@ -52,9 +52,11 @@ prefixes:
   wikidata: http://www.wikidata.org/entity/
   wdt: http://www.wikidata.org/prop/direct/
   xsd: http://www.w3.org/2001/XMLSchema#
-  doi: https://doi.org/
-  arxiv: https://arxiv.org/abs/
-  pmid: https://pubmed.ncbi.nlm.nih.gov/
+  # Upper-case so they don't clash with the doi, arxiv and pmid slots, which
+  # take the same names in the JSON-LD context.
+  DOI: https://doi.org/
+  arXiv: https://arxiv.org/abs/
+  PMID: https://pubmed.ncbi.nlm.nih.gov/
   ORCID: https://orcid.org/
   ROR: https://ror.org/
 
@@ -621,7 +623,7 @@ slots:
     range: uriorcurie
     description: >-
       The node's IRI as a CURIE. Lab entities use sid: (for example
-      sid:person/satrajit-s-ghosh); publications use doi:, arxiv: or pmid:.
+      sid:person/satrajit-s-ghosh); publications use DOI:, arXiv: or PMID:.
 
   identifier:
     description: An external identifier string, such as a DOI or arXiv id.

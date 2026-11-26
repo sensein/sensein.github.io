@@ -2,7 +2,7 @@
 # Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
 
 publications:
-- id: doi:10.1162/imag.a.1116
+- id: DOI:10.1162/imag.a.1116
   slug: 10.1162/imag.a.1116
   publication_type: journal
   category: original-research
@@ -59,7 +59,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.64898/2026.03.31.715699
+- id: DOI:10.64898/2026.03.31.715699
   slug: 10.64898/2026.03.31.715699
   publication_type: preprint
   category: original-research
@@ -127,7 +127,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.64898/2026.04.30.722039
+- id: DOI:10.64898/2026.04.30.722039
   slug: 10.64898/2026.04.30.722039
   publication_type: preprint
   category: methods
@@ -269,7 +269,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.31234/osf.io/stek7_v1
+- id: DOI:10.31234/osf.io/stek7_v1
   slug: 10.31234/osf.io/stek7_v1
   publication_type: preprint
   category: original-research
@@ -324,7 +324,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.1162/imag.a.145
+- id: DOI:10.1162/imag.a.145
   slug: 10.1162/imag.a.145
   publication_type: journal
   category: original-research
@@ -414,7 +414,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1371/journal.pone.0313351
+- id: DOI:10.1371/journal.pone.0313351
   slug: 10.1371/journal.pone.0313351
   publication_type: journal
   category: commentary
@@ -475,7 +475,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1007/s11881-025-00342-1
+- id: DOI:10.1007/s11881-025-00342-1
   slug: 10.1007/s11881-025-00342-1
   publication_type: journal
   category: original-research
@@ -549,7 +549,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.2196/63343
+- id: DOI:10.2196/63343
   slug: 10.2196/63343
   publication_type: journal
   category: methods
@@ -673,7 +673,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1145/3701716.3715483
+- id: DOI:10.1145/3701716.3715483
   slug: 10.1145/3701716.3715483
   publication_type: journal
   category: original-research
@@ -732,7 +732,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1002/hipo.70028
+- id: DOI:10.1002/hipo.70028
   slug: 10.1002/hipo.70028
   publication_type: journal
   category: original-research
@@ -804,7 +804,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1523/eneuro.0486-24.2025
+- id: DOI:10.1523/eneuro.0486-24.2025
   slug: 10.1523/eneuro.0486-24.2025
   publication_type: journal
   category: original-research
@@ -868,7 +868,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1177/21677026251351850
+- id: DOI:10.1177/21677026251351850
   slug: 10.1177/21677026251351850
   publication_type: journal
   category: original-research
@@ -932,7 +932,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1093/pnasnexus/pgaf304
+- id: DOI:10.1093/pnasnexus/pgaf304
   slug: 10.1093/pnasnexus/pgaf304
   publication_type: journal
   category: original-research
@@ -997,7 +997,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fdgth.2025.1484521
+- id: DOI:10.3389/fdgth.2025.1484521
   slug: 10.3389/fdgth.2025.1484521
   publication_type: conference
   category: original-research
@@ -1107,7 +1107,7 @@ publications:
   - ncbi
   - cv
   - site-yaml-v1
-- id: doi:10.1159/000553327
+- id: DOI:10.1159/000553327
   slug: 10.1159/000553327
   publication_type: journal
   category: original-research
@@ -1220,7 +1220,7 @@ publications:
   - openalex
   - crossref
   - site-yaml-v1
-- id: doi:10.1101/2025.07.17.665306
+- id: DOI:10.1101/2025.07.17.665306
   slug: 10.1101/2025.07.17.665306
   publication_type: preprint
   category: original-research
@@ -1274,7 +1274,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.48550/arxiv.2508.10051
+- id: DOI:10.48550/arxiv.2508.10051
   slug: 10.48550/arxiv.2508.10051
   publication_type: preprint
   category: perspective
@@ -1325,7 +1325,7 @@ publications:
   - ncbi
   - arxiv
   - site-yaml-v1
-- id: doi:10.48550/arxiv.2509.10432
+- id: DOI:10.48550/arxiv.2509.10432
   slug: 10.48550/arxiv.2509.10432
   publication_type: preprint
   category: perspective
@@ -1392,7 +1392,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.48550/arxiv.2507.03674
+- id: DOI:10.48550/arxiv.2507.03674
   slug: 10.48550/arxiv.2507.03674
   publication_type: preprint
   category: software
@@ -1461,7 +1461,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.1126/science.adh9979
+- id: DOI:10.1126/science.adh9979
   slug: 10.1126/science.adh9979
   publication_type: journal
   category: original-research
@@ -1567,7 +1567,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41597-024-03629-x
+- id: DOI:10.1038/s41597-024-03629-x
   slug: 10.1038/s41597-024-03629-x
   publication_type: journal
   category: original-research
@@ -1651,7 +1651,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1162/imag_a_00074
+- id: DOI:10.1162/imag_a_00074
   slug: 10.1162/imag_a_00074
   publication_type: journal
   category: original-research
@@ -1747,7 +1747,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1017/s0033291724001557
+- id: DOI:10.1017/s0033291724001557
   slug: 10.1017/s0033291724001557
   publication_type: journal
   category: original-research
@@ -1823,7 +1823,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1371/journal.pdig.0000516
+- id: DOI:10.1371/journal.pdig.0000516
   slug: 10.1371/journal.pdig.0000516
   publication_type: journal
   category: original-research
@@ -1898,7 +1898,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1176/appi.ajp.20230249
+- id: DOI:10.1176/appi.ajp.20230249
   slug: 10.1176/appi.ajp.20230249
   publication_type: journal
   category: original-research
@@ -1966,7 +1966,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.52294/001c.123059
+- id: DOI:10.52294/001c.123059
   slug: 10.52294/001c.123059
   publication_type: journal
   category: software
@@ -2028,7 +2028,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1162/imag_a_00103
+- id: DOI:10.1162/imag_a_00103
   slug: 10.1162/imag_a_00103
   publication_type: journal
   category: original-research
@@ -2297,7 +2297,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41592-023-02145-x
+- id: DOI:10.1038/s41592-023-02145-x
   slug: 10.1038/s41592-023-02145-x
   publication_type: journal
   category: original-research
@@ -2443,7 +2443,7 @@ publications:
   - ncbi
   - openalex
   - site-yaml-v1
-- id: doi:10.21105/joss.05839
+- id: DOI:10.21105/joss.05839
   slug: 10.21105/joss.05839
   publication_type: journal
   category: software
@@ -2525,7 +2525,7 @@ publications:
   - ncbi
   - openalex
   - site-yaml-v1
-- id: doi:10.21437/interspeech.2024-1926
+- id: DOI:10.21437/interspeech.2024-1926
   slug: 10.21437/interspeech.2024-1926
   publication_type: conference
   category: original-research
@@ -2584,7 +2584,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1001/jamanetworkopen.2024.34354
+- id: DOI:10.1001/jamanetworkopen.2024.34354
   slug: 10.1001/jamanetworkopen.2024.34354
   publication_type: journal
   category: original-research
@@ -2662,7 +2662,7 @@ publications:
   - ncbi
   - cv
   - site-yaml-v1
-- id: doi:10.1101/2024.10.23.619844
+- id: DOI:10.1101/2024.10.23.619844
   slug: 10.1101/2024.10.23.619844
   publication_type: preprint
   category: original-research
@@ -2770,7 +2770,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.52294/001c.92760
+- id: DOI:10.52294/001c.92760
   slug: 10.52294/001c.92760
   publication_type: conference
   category: commentary
@@ -2981,7 +2981,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.1007/s00418-023-02209-1
+- id: DOI:10.1007/s00418-023-02209-1
   slug: 10.1007/s00418-023-02209-1
   publication_type: journal
   category: software
@@ -3159,7 +3159,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1371/journal.pbio.3002133
+- id: DOI:10.1371/journal.pbio.3002133
   slug: 10.1371/journal.pbio.3002133
   publication_type: journal
   category: original-research
@@ -3418,7 +3418,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1148/radiol.230096
+- id: DOI:10.1148/radiol.230096
   slug: 10.1148/radiol.230096
   publication_type: journal
   category: original-research
@@ -3534,7 +3534,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41597-023-02614-0
+- id: DOI:10.1038/s41597-023-02614-0
   slug: 10.1038/s41597-023-02614-0
   publication_type: journal
   category: review
@@ -3628,7 +3628,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1186/s12888-023-05223-8
+- id: DOI:10.1186/s12888-023-05223-8
   slug: 10.1186/s12888-023-05223-8
   publication_type: journal
   category: original-research
@@ -3736,7 +3736,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41562-023-01647-0
+- id: DOI:10.1038/s41562-023-01647-0
   slug: 10.1038/s41562-023-01647-0
   publication_type: journal
   category: perspective
@@ -3797,7 +3797,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fninf.2023.1174156
+- id: DOI:10.3389/fninf.2023.1174156
   slug: 10.3389/fninf.2023.1174156
   publication_type: journal
   category: software
@@ -3873,7 +3873,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41598-023-27934-4
+- id: DOI:10.1038/s41598-023-27934-4
   slug: 10.1038/s41598-023-27934-4
   publication_type: journal
   category: original-research
@@ -3938,7 +3938,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1145/3577190.3617133
+- id: DOI:10.1145/3577190.3617133
   slug: 10.1145/3577190.3617133
   publication_type: conference
   category: original-research
@@ -3987,7 +3987,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.7554/elife.78362
+- id: DOI:10.7554/elife.78362
   slug: 10.7554/elife.78362
   publication_type: journal
   category: original-research
@@ -4054,7 +4054,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41592-022-01681-2
+- id: DOI:10.1038/s41592-022-01681-2
   slug: 10.1038/s41592-022-01681-2
   publication_type: journal
   category: original-research
@@ -4121,7 +4121,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1007/s12021-020-09509-0
+- id: DOI:10.1007/s12021-020-09509-0
   slug: 10.1007/s12021-020-09509-0
   publication_type: journal
   category: original-research
@@ -4217,7 +4217,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1007/s12021-021-09557-0
+- id: DOI:10.1007/s12021-021-09557-0
   slug: 10.1007/s12021-021-09557-0
   publication_type: journal
   category: perspective
@@ -4288,7 +4288,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41598-022-19356-5
+- id: DOI:10.1038/s41598-022-19356-5
   slug: 10.1038/s41598-022-19356-5
   publication_type: journal
   category: original-research
@@ -4372,7 +4372,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.jpsychires.2022.09.051
+- id: DOI:10.1016/j.jpsychires.2022.09.051
   slug: 10.1016/j.jpsychires.2022.09.051
   publication_type: journal
   category: perspective
@@ -4447,7 +4447,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.7554/elife.79277
+- id: DOI:10.7554/elife.79277
   slug: 10.7554/elife.79277
   publication_type: journal
   category: original-research
@@ -4518,7 +4518,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuroimage.2022.119737
+- id: DOI:10.1016/j.neuroimage.2022.119737
   slug: 10.1016/j.neuroimage.2022.119737
   publication_type: journal
   category: original-research
@@ -4586,7 +4586,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fnins.2022.751595
+- id: DOI:10.3389/fnins.2022.751595
   slug: 10.3389/fnins.2022.751595
   publication_type: journal
   category: original-research
@@ -4655,7 +4655,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fnins.2022.871228
+- id: DOI:10.3389/fnins.2022.871228
   slug: 10.3389/fnins.2022.871228
   publication_type: journal
   category: original-research
@@ -4729,7 +4729,7 @@ publications:
   - ncbi
   - cv
   - site-yaml-v1
-- id: doi:10.1109/ojemb.2022.3143688
+- id: DOI:10.1109/ojemb.2022.3143688
   slug: 10.1109/ojemb.2022.3143688
   publication_type: journal
   category: review
@@ -4803,7 +4803,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.1177/21677026221079628
+- id: DOI:10.1177/21677026221079628
   slug: 10.1177/21677026221079628
   publication_type: journal
   category: original-research
@@ -4881,7 +4881,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41586-021-03950-0
+- id: DOI:10.1038/s41586-021-03950-0
   slug: 10.1038/s41586-021-03950-0
   publication_type: journal
   category: original-research
@@ -4930,7 +4930,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.21105/joss.03262
+- id: DOI:10.21105/joss.03262
   slug: 10.21105/joss.03262
   publication_type: journal
   category: software
@@ -5043,7 +5043,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuron.2021.04.001
+- id: DOI:10.1016/j.neuron.2021.04.001
   slug: 10.1016/j.neuron.2021.04.001
   publication_type: conference
   category: commentary
@@ -5192,7 +5192,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.2196/22369
+- id: DOI:10.2196/22369
   slug: 10.2196/22369
   publication_type: journal
   category: original-research
@@ -5305,7 +5305,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1007/s12311-020-01213-8
+- id: DOI:10.1007/s12311-020-01213-8
   slug: 10.1007/s12311-020-01213-8
   publication_type: journal
   category: original-research
@@ -5390,7 +5390,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.18653/v1/2021.cinlp-1.8
+- id: DOI:10.18653/v1/2021.cinlp-1.8
   slug: 10.18653/v1/2021.cinlp-1.8
   publication_type: journal
   category: original-research
@@ -5455,7 +5455,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1002/hbm.25351
+- id: DOI:10.1002/hbm.25351
   slug: 10.1002/hbm.25351
   publication_type: journal
   category: original-research
@@ -5570,7 +5570,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1109/ijcnn52387.2021.9534161
+- id: DOI:10.1109/ijcnn52387.2021.9534161
   slug: 10.1109/ijcnn52387.2021.9534161
   publication_type: journal
   category: original-research
@@ -5620,7 +5620,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.1002/lio2.354
+- id: DOI:10.1002/lio2.354
   slug: 10.1002/lio2.354
   publication_type: journal
   category: review
@@ -5686,7 +5686,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.2196/22635
+- id: DOI:10.2196/22635
   slug: 10.2196/22635
   publication_type: journal
   category: original-research
@@ -5778,7 +5778,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41596-020-0327-3
+- id: DOI:10.1038/s41596-020-0327-3
   slug: 10.1038/s41596-020-0327-3
   publication_type: journal
   category: original-research
@@ -5880,7 +5880,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.psychres.2020.112770
+- id: DOI:10.1016/j.psychres.2020.112770
   slug: 10.1016/j.psychres.2020.112770
   publication_type: journal
   category: original-research
@@ -5949,7 +5949,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.psychres.2020.112862
+- id: DOI:10.1016/j.psychres.2020.112862
   slug: 10.1016/j.psychres.2020.112862
   publication_type: journal
   category: original-research
@@ -6019,7 +6019,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.nicl.2020.102240
+- id: DOI:10.1016/j.nicl.2020.102240
   slug: 10.1016/j.nicl.2020.102240
   publication_type: journal
   category: original-research
@@ -6117,7 +6117,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.nicl.2020.102266
+- id: DOI:10.1016/j.nicl.2020.102266
   slug: 10.1016/j.nicl.2020.102266
   publication_type: journal
   category: original-research
@@ -6199,7 +6199,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.nicl.2020.102242
+- id: DOI:10.1016/j.nicl.2020.102242
   slug: 10.1016/j.nicl.2020.102242
   publication_type: journal
   category: original-research
@@ -6303,7 +6303,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1146/annurev-neuro-100119-110036
+- id: DOI:10.1146/annurev-neuro-100119-110036
   slug: 10.1146/annurev-neuro-100119-110036
   publication_type: journal
   category: original-research
@@ -6366,7 +6366,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1007/s12311-019-01050-4
+- id: DOI:10.1007/s12311-019-01050-4
   slug: 10.1007/s12311-019-01050-4
   publication_type: journal
   category: original-research
@@ -6429,7 +6429,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.25080/majora-342d178e-012
+- id: DOI:10.25080/majora-342d178e-012
   slug: 10.25080/majora-342d178e-012
   publication_type: conference
   category: software
@@ -6484,7 +6484,7 @@ publications:
   - ncbi
   - openalex
   - site-yaml-v1
-- id: doi:10.1101/2020.09.04.283820
+- id: DOI:10.1101/2020.09.04.283820
   slug: 10.1101/2020.09.04.283820
   publication_type: preprint
   category: original-research
@@ -6544,7 +6544,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.1109/isbi45749.2020.9098466
+- id: DOI:10.1109/isbi45749.2020.9098466
   slug: 10.1109/isbi45749.2020.9098466
   publication_type: journal
   category: software
@@ -6596,7 +6596,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/s41592-018-0235-4
+- id: DOI:10.1038/s41592-018-0235-4
   slug: 10.1038/s41592-018-0235-4
   publication_type: journal
   category: original-research
@@ -6687,7 +6687,7 @@ publications:
     - <a href="//fmriprep.readthedocs.io/en/stable/index.html" target="_blank">fMRIPrep Documentation</a>
   figures:
   - sid:image/external/fmriprep-workflow-all-be05fd09
-- id: doi:10.3389/fninf.2019.00001
+- id: DOI:10.3389/fninf.2019.00001
   slug: 10.3389/fninf.2019.00001
   publication_type: journal
   category: perspective
@@ -6783,7 +6783,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.7554/elife.48932
+- id: DOI:10.7554/elife.48932
   slug: 10.7554/elife.48932
   publication_type: journal
   category: original-research
@@ -6860,7 +6860,7 @@ publications:
       <a href="//elifesciences.org/articles/48932/figures#data" target="_blank">Data and code availability</a>
   figures:
   - sid:image/external/default-9fc0dc25
-- id: doi:10.1371/journal.pone.0210028
+- id: DOI:10.1371/journal.pone.0210028
   slug: 10.1371/journal.pone.0210028
   publication_type: journal
   category: software
@@ -6927,7 +6927,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.dcn.2019.100707
+- id: DOI:10.1016/j.dcn.2019.100707
   slug: 10.1016/j.dcn.2019.100707
   publication_type: journal
   category: original-research
@@ -7003,7 +7003,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1044/2019_jslhr-19-00154
+- id: DOI:10.1044/2019_jslhr-19-00154
   slug: 10.1044/2019_jslhr-19-00154
   publication_type: journal
   category: original-research
@@ -7068,7 +7068,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fninf.2019.00067
+- id: DOI:10.3389/fninf.2019.00067
   slug: 10.3389/fninf.2019.00067
   publication_type: journal
   category: original-research
@@ -7140,7 +7140,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3928/00485713-20190412-01
+- id: DOI:10.3928/00485713-20190412-01
   slug: 10.3928/00485713-20190412-01
   publication_type: journal
   category: perspective
@@ -7183,7 +7183,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.7554/elife.36652
+- id: DOI:10.7554/elife.36652
   slug: 10.7554/elife.36652
   publication_type: journal
   category: original-research
@@ -7253,7 +7253,7 @@ publications:
       target="_blank">Littlebrain</a> paper
   figures:
   - sid:image/external/default-36895d2a
-- id: doi:10.1177/0194599817739838
+- id: DOI:10.1177/0194599817739838
   slug: 10.1177/0194599817739838
   publication_type: journal
   category: review
@@ -7379,7 +7379,7 @@ publications:
   url: https://papers.nips.cc/paper/7664-distributed-weight-consolidation-a-brain-segmentation-case-study
   figures:
   - sid:image/external/screenshot-2019-01-27-18-35-52-b0961a94
-- id: doi:10.1371/journal.pcbi.1005350
+- id: DOI:10.1371/journal.pcbi.1005350
   slug: 10.1371/journal.pcbi.1005350
   publication_type: journal
   category: original-research
@@ -7476,7 +7476,7 @@ publications:
       More details available at the <a href="http://mindboggle.info" target="_blank">Mindboggle website</a>
   figures:
   - sid:image/external/export-847dcdbf
-- id: doi:10.1093/gigascience/giw011
+- id: DOI:10.1093/gigascience/giw011
   slug: 10.1093/gigascience/giw011
   publication_type: journal
   category: original-research
@@ -7563,7 +7563,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1044/2017_jslhr-l-15-0446
+- id: DOI:10.1044/2017_jslhr-l-15-0446
   slug: 10.1044/2017_jslhr-l-15-0446
   publication_type: journal
   category: original-research
@@ -7619,7 +7619,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1371/journal.pcbi.1005209
+- id: DOI:10.1371/journal.pcbi.1005209
   slug: 10.1371/journal.pcbi.1005209
   publication_type: chapter
   category: original-research
@@ -7723,7 +7723,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuroimage.2017.04.028
+- id: DOI:10.1016/j.neuroimage.2017.04.028
   slug: 10.1016/j.neuroimage.2017.04.028
   publication_type: journal
   category: original-research
@@ -7785,7 +7785,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1037/neu0000243
+- id: DOI:10.1037/neu0000243
   slug: 10.1037/neu0000243
   publication_type: journal
   category: original-research
@@ -7871,7 +7871,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.12688/f1000research.10783.2
+- id: DOI:10.12688/f1000research.10783.2
   slug: 10.12688/f1000research.10783.2
   publication_type: journal
   category: methods
@@ -7925,7 +7925,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1073/pnas.1608282113
+- id: DOI:10.1073/pnas.1608282113
   slug: 10.1073/pnas.1608282113
   publication_type: journal
   category: original-research
@@ -8010,7 +8010,7 @@ publications:
       in the Cerebral Cortex</a>.
   figures:
   - sid:image/external/f1-medium-eea1967d
-- id: doi:10.1038/sdata.2016.44
+- id: DOI:10.1038/sdata.2016.44
   slug: 10.1038/sdata.2016.44
   publication_type: journal
   category: original-research
@@ -8112,7 +8112,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/mp.2015.109
+- id: DOI:10.1038/mp.2015.109
   slug: 10.1038/mp.2015.109
   publication_type: journal
   category: commentary
@@ -8179,7 +8179,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuron.2016.11.020
+- id: DOI:10.1016/j.neuron.2016.11.020
   slug: 10.1016/j.neuron.2016.11.020
   publication_type: journal
   category: original-research
@@ -8243,7 +8243,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.jalz.2016.02.006
+- id: DOI:10.1016/j.jalz.2016.02.006
   slug: 10.1016/j.jalz.2016.02.006
   publication_type: journal
   category: original-research
@@ -8485,7 +8485,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuroimage.2015.04.016
+- id: DOI:10.1016/j.neuroimage.2015.04.016
   slug: 10.1016/j.neuroimage.2015.04.016
   publication_type: journal
   category: original-research
@@ -8556,7 +8556,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1038/sdata.2016.102
+- id: DOI:10.1038/sdata.2016.102
   slug: 10.1038/sdata.2016.102
   publication_type: journal
   category: original-research
@@ -8634,7 +8634,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fnhum.2016.00190
+- id: DOI:10.3389/fnhum.2016.00190
   slug: 10.3389/fnhum.2016.00190
   publication_type: journal
   category: original-research
@@ -8698,7 +8698,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1186/s13742-016-0121-x
+- id: DOI:10.1186/s13742-016-0121-x
   slug: 10.1186/s13742-016-0121-x
   publication_type: conference
   category: commentary
@@ -8827,7 +8827,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.21437/interspeech.2016-292
+- id: DOI:10.21437/interspeech.2016-292
   slug: 10.21437/interspeech.2016-292
   publication_type: conference
   category: original-research
@@ -8878,7 +8878,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1101/053934
+- id: DOI:10.1101/053934
   slug: 10.1101/053934
   publication_type: preprint
   category: original-research
@@ -8932,7 +8932,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fninf.2015.00008
+- id: DOI:10.3389/fninf.2015.00008
   slug: 10.3389/fninf.2015.00008
   publication_type: journal
   category: original-research
@@ -8997,7 +8997,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuron.2014.10.047
+- id: DOI:10.1016/j.neuron.2014.10.047
   slug: 10.1016/j.neuron.2014.10.047
   publication_type: journal
   category: original-research
@@ -9044,7 +9044,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1007/978-3-319-24571-3_38
+- id: DOI:10.1007/978-3-319-24571-3_38
   slug: 10.1007/978-3-319-24571-3_38
   publication_type: journal
   category: original-research
@@ -9096,7 +9096,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.21437/interspeech.2015-187
+- id: DOI:10.21437/interspeech.2015-187
   slug: 10.21437/interspeech.2015-187
   publication_type: journal
   category: original-research
@@ -9132,7 +9132,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fnhum.2014.00054
+- id: DOI:10.3389/fnhum.2014.00054
   slug: 10.3389/fnhum.2014.00054
   publication_type: journal
   category: original-research
@@ -9191,7 +9191,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1371/journal.pone.0100552
+- id: DOI:10.1371/journal.pone.0100552
   slug: 10.1371/journal.pone.0100552
   publication_type: journal
   category: original-research
@@ -9257,7 +9257,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.bandl.2014.01.002
+- id: DOI:10.1016/j.bandl.2014.01.002
   slug: 10.1016/j.bandl.2014.01.002
   publication_type: conference
   category: commentary
@@ -9310,7 +9310,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.nicl.2014.07.002
+- id: DOI:10.1016/j.nicl.2014.07.002
   slug: 10.1016/j.nicl.2014.07.002
   publication_type: chapter
   category: original-research
@@ -9403,7 +9403,7 @@ publications:
   - ncbi
   - openalex
   - site-yaml-v1
-- id: doi:10.1001/2013.jamapsychiatry.5
+- id: DOI:10.1001/2013.jamapsychiatry.5
   slug: 10.1001/2013.jamapsychiatry.5
   publication_type: journal
   category: original-research
@@ -9479,7 +9479,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1152/jn.00533.2011
+- id: DOI:10.1152/jn.00533.2011
   slug: 10.1152/jn.00533.2011
   publication_type: journal
   category: original-research
@@ -9540,7 +9540,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fnins.2013.00162
+- id: DOI:10.3389/fnins.2013.00162
   slug: 10.3389/fnins.2013.00162
   publication_type: journal
   category: original-research
@@ -9581,7 +9581,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1109/prni.2013.64
+- id: DOI:10.1109/prni.2013.64
   slug: 10.1109/prni.2013.64
   publication_type: conference
   category: original-research
@@ -9624,7 +9624,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fnins.2013.00055
+- id: DOI:10.3389/fnins.2013.00055
   slug: 10.3389/fnins.2013.00055
   publication_type: journal
   category: original-research
@@ -9678,7 +9678,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fninf.2012.00009
+- id: DOI:10.3389/fninf.2012.00009
   slug: 10.3389/fninf.2012.00009
   publication_type: journal
   category: methods
@@ -9755,7 +9755,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1371/journal.pone.0041830
+- id: DOI:10.1371/journal.pone.0041830
   slug: 10.1371/journal.pone.0041830
   publication_type: journal
   category: original-research
@@ -9820,7 +9820,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fncom.2012.00018
+- id: DOI:10.3389/fncom.2012.00018
   slug: 10.3389/fncom.2012.00018
   publication_type: journal
   category: review
@@ -9877,7 +9877,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.48550/arxiv.1209.5922
+- id: DOI:10.48550/arxiv.1209.5922
   slug: 10.48550/arxiv.1209.5922
   publication_type: preprint
   category: methods
@@ -9944,7 +9944,7 @@ publications:
   derived_from:
   - openalex
   - site-yaml-v1
-- id: doi:10.3389/fninf.2011.00013
+- id: DOI:10.3389/fninf.2011.00013
   slug: 10.3389/fninf.2011.00013
   publication_type: journal
   category: software
@@ -10018,7 +10018,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuroimage.2010.12.065
+- id: DOI:10.1016/j.neuroimage.2010.12.065
   slug: 10.1016/j.neuroimage.2010.12.065
   publication_type: journal
   category: original-research
@@ -10080,7 +10080,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1523/jneurosci.3653-11.2011
+- id: DOI:10.1523/jneurosci.3653-11.2011
   slug: 10.1523/jneurosci.3653-11.2011
   publication_type: journal
   category: original-research
@@ -10140,7 +10140,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuroimage.2010.07.060
+- id: DOI:10.1016/j.neuroimage.2010.07.060
   slug: 10.1016/j.neuroimage.2010.07.060
   publication_type: journal
   category: original-research
@@ -10201,7 +10201,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1001/archoto.2011.11
+- id: DOI:10.1001/archoto.2011.11
   slug: 10.1001/archoto.2011.11
   publication_type: journal
   category: original-research
@@ -10264,7 +10264,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1044/1092-4388(2010/09-0256)
+- id: DOI:10.1044/1092-4388(2010/09-0256)
   slug: 10.1044/1092-4388(2010/09-0256)
   publication_type: journal
   category: original-research
@@ -10349,7 +10349,7 @@ publications:
   derived_from:
   - cv
   - site-yaml-v1
-- id: doi:10.1016/j.neuroimage.2010.05.075
+- id: DOI:10.1016/j.neuroimage.2010.05.075
   slug: 10.1016/j.neuroimage.2010.05.075
   publication_type: journal
   category: original-research
@@ -10420,7 +10420,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.neuroimage.2010.01.091
+- id: DOI:10.1016/j.neuroimage.2010.01.091
   slug: 10.1016/j.neuroimage.2010.01.091
   publication_type: journal
   category: original-research
@@ -10485,7 +10485,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1044/1092-4388(2008/07-0119)
+- id: DOI:10.1044/1092-4388(2008/07-0119)
   slug: 10.1044/1092-4388(2008/07-0119)
   publication_type: journal
   category: original-research
@@ -10609,7 +10609,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1901/jaba.2008.2008-97
+- id: DOI:10.1901/jaba.2008.2008-97
   slug: 10.1901/jaba.2008.2008-97
   publication_type: journal
   category: original-research
@@ -10663,7 +10663,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1080/03008200500344017
+- id: DOI:10.1080/03008200500344017
   slug: 10.1080/03008200500344017
   publication_type: conference
   category: original-research
@@ -10698,7 +10698,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1016/j.bandl.2005.06.001
+- id: DOI:10.1016/j.bandl.2005.06.001
   slug: 10.1016/j.bandl.2005.06.001
   publication_type: journal
   category: original-research
@@ -10742,7 +10742,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1186/1471-2342-5-7
+- id: DOI:10.1186/1471-2342-5-7
   slug: 10.1186/1471-2342-5-7
   publication_type: journal
   category: software
@@ -10804,7 +10804,7 @@ publications:
   - cv
   - openalex
   - site-yaml-v1
-- id: doi:10.1044/1092-4388(2004/005)
+- id: DOI:10.1044/1092-4388(2004/005)
   slug: 10.1044/1092-4388(2004/005)
   publication_type: journal
   category: original-research
@@ -10887,7 +10887,7 @@ publications:
   derived_from:
   - cv
   - site-yaml-v1
-- id: doi:10.1016/s1053-8119(03)00188-5
+- id: DOI:10.1016/s1053-8119(03)00188-5
   slug: 10.1016/s1053-8119(03)00188-5
   publication_type: journal
   category: original-research
@@ -11005,7 +11005,7 @@ publications:
   derived_from:
   - cv
   - site-yaml-v1
-- id: doi:10.31234/osf.io/9rdux_v4
+- id: DOI:10.31234/osf.io/9rdux_v4
   slug: 10.31234/osf.io/9rdux_v4
   publication_type: preprint
   category: original-research
@@ -11056,7 +11056,7 @@ publications:
   derived_from:
   - preprint-sweep
   - site-yaml-v1
-- id: doi:10.31234/osf.io/vf2bc_v3
+- id: DOI:10.31234/osf.io/vf2bc_v3
   slug: 10.31234/osf.io/vf2bc_v3
   publication_type: preprint
   category: original-research
@@ -11126,7 +11126,7 @@ publications:
   derived_from:
   - preprint-sweep
   - site-yaml-v1
-- id: doi:10.48550/arxiv.2409.09511
+- id: DOI:10.48550/arxiv.2409.09511
   slug: 10.48550/arXiv.2409.09511
   publication_type: preprint
   category: original-research
@@ -11189,7 +11189,7 @@ publications:
   derived_from:
   - preprint-sweep
   - site-yaml-v1
-- id: doi:10.3389/fdgth.2025.1514971
+- id: DOI:10.3389/fdgth.2025.1514971
   slug: 10.3389/fdgth.2025.1514971
   publication_type: journal
   category: original-research
@@ -11260,7 +11260,7 @@ publications:
   derived_from:
   - preprint-sweep
   - site-yaml-v1
-- id: doi:10.48550/arxiv.2508.08276
+- id: DOI:10.48550/arxiv.2508.08276
   slug: 10.48550/arxiv.2508.08276
   publication_type: preprint
   category: original-research
@@ -11310,7 +11310,7 @@ publications:
   derived_from:
   - arxiv
   - site-yaml-v1
-- id: doi:10.48550/arxiv.2401.00077
+- id: DOI:10.48550/arxiv.2401.00077
   slug: 10.48550/arxiv.2401.00077
   publication_type: preprint
   category: perspective
@@ -11394,7 +11394,7 @@ publications:
   derived_from:
   - arxiv
   - site-yaml-v1
-- id: doi:10.48550/arxiv.1207.5827
+- id: DOI:10.48550/arxiv.1207.5827
   slug: 10.48550/arxiv.1207.5827
   publication_type: preprint
   category: methods
@@ -11431,7 +11431,7 @@ publications:
   derived_from:
   - arxiv
   - site-yaml-v1
-- id: doi:10.64898/2026.05.28.26354346
+- id: DOI:10.64898/2026.05.28.26354346
   slug: 10.64898/2026.05.28.26354346
   publication_type: preprint
   category: original-research
@@ -11495,7 +11495,7 @@ publications:
   derived_from:
   - europepmc
   - site-yaml-v1
-- id: doi:10.1016/j.dcn.2026.101755
+- id: DOI:10.1016/j.dcn.2026.101755
   slug: 10.1016/j.dcn.2026.101755
   publication_type: journal
   category: perspective
@@ -11556,7 +11556,7 @@ publications:
   - openalex
   - crossref
   - site-yaml-v1
-- id: doi:10.64898/2026.05.31.729141
+- id: DOI:10.64898/2026.05.31.729141
   slug: 10.64898/2026.05.31.729141
   publication_type: preprint
   category: original-research
@@ -11616,7 +11616,7 @@ publications:
   derived_from:
   - europepmc
   - site-yaml-v1
-- id: doi:10.64898/2026.02.18.705310
+- id: DOI:10.64898/2026.02.18.705310
   slug: 10.64898/2026.02.18.705310
   publication_type: preprint
   category: original-research
@@ -11695,7 +11695,7 @@ publications:
   derived_from:
   - europepmc
   - site-yaml-v1
-- id: doi:10.64898/2026.04.02.716198
+- id: DOI:10.64898/2026.04.02.716198
   slug: 10.64898/2026.04.02.716198
   publication_type: preprint
   category: original-research
@@ -11801,7 +11801,7 @@ publications:
   derived_from:
   - europepmc
   - site-yaml-v1
-- id: doi:10.31222/osf.io/x64tn_v1
+- id: DOI:10.31222/osf.io/x64tn_v1
   slug: 10.31222/osf.io/x64tn_v1
   publication_type: preprint
   category: software
@@ -11915,7 +11915,7 @@ publications:
   derived_from:
   - europepmc
   - site-yaml-v1
-- id: doi:10.64898/2026.03.05.709819
+- id: DOI:10.64898/2026.03.05.709819
   slug: 10.64898/2026.03.05.709819
   publication_type: preprint
   category: original-research
@@ -11977,7 +11977,7 @@ publications:
   derived_from:
   - europepmc
   - site-yaml-v1
-- id: doi:10.7554/elife.111008
+- id: DOI:10.7554/elife.111008
   slug: 10.7554/elife.111008
   publication_type: journal
   category: original-research
@@ -12036,7 +12036,7 @@ publications:
   derived_from:
   - crossref
   - site-yaml-v1
-- id: doi:10.64898/2025.12.23.696301
+- id: DOI:10.64898/2025.12.23.696301
   slug: 10.64898/2025.12.23.696301
   publication_type: preprint
   category: original-research

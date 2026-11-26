@@ -36,8 +36,8 @@ Every record has a stable IRI, written as a CURIE:
 
 - `sid:` expands to `https://sensein.group/id/`, so `sid:person/satrajit-s-ghosh`
   is `https://sensein.group/id/person/satrajit-s-ghosh`.
-- Publications use their DOI where they have one (`doi:10.1162/imag.a.1116`),
-  then arXiv, then PubMed, then `sid:publication/<slug>`.
+- Publications use their DOI where they have one (`DOI:10.1162/imag.a.1116`),
+  then arXiv (`arXiv:`), then PubMed (`PMID:`), then `sid:publication/<slug>`.
 - People carry their ORCID (`orcid: ORCID:0000-…`) when known.
 
 References between records are by id: a membership's `member` is a person id,

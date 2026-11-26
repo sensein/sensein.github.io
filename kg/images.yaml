@@ -728,7 +728,7 @@ images:
   width: 1500
   height: 1397
   depicts:
-  - doi:10.7554/elife.48932
+  - DOI:10.7554/elife.48932
   derived_from:
   - site-yaml-v1
 - id: sid:image/external/default-36895d2a
@@ -738,7 +738,7 @@ images:
   width: 1500
   height: 1314
   depicts:
-  - doi:10.7554/elife.36652
+  - DOI:10.7554/elife.36652
   derived_from:
   - site-yaml-v1
 - id: sid:image/external/fmriprep-workflow-all-be05fd09
@@ -748,7 +748,7 @@ images:
   width: 1376
   height: 980
   depicts:
-  - doi:10.1038/s41592-018-0235-4
+  - DOI:10.1038/s41592-018-0235-4
   derived_from:
   - site-yaml-v1
 - id: sid:image/external/screenshot-2019-01-27-18-35-52-b0961a94
@@ -767,7 +767,7 @@ images:
   width: 894
   height: 308
   depicts:
-  - doi:10.1371/journal.pcbi.1005350
+  - DOI:10.1371/journal.pcbi.1005350
   derived_from:
   - site-yaml-v1
 - id: sid:image/external/f1-medium-eea1967d
@@ -775,7 +775,7 @@ images:
   image_kind: figure
   encoding_format: image/gif
   depicts:
-  - doi:10.1073/pnas.1608282113
+  - DOI:10.1073/pnas.1608282113
   derived_from:
   - site-yaml-v1
 - id: sid:image/external/bbqs-logo

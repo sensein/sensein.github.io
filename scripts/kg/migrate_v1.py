@@ -475,11 +475,11 @@ def topic_ref(tag: str) -> str:
 
 def pub_iri(p: dict) -> str:
     if p.get("doi"):
-        return "doi:" + p["doi"].strip().lower()
+        return "DOI:" + p["doi"].strip().lower()
     if p.get("arxiv"):
-        return "arxiv:" + p["arxiv"].strip()
+        return "arXiv:" + p["arxiv"].strip()
     if p.get("pmid"):
-        return "pmid:" + str(p["pmid"]).strip()
+        return "PMID:" + str(p["pmid"]).strip()
     return "sid:publication/" + slugify(p["id"])
 
 

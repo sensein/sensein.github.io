@@ -354,13 +354,13 @@ news:
   date_published: '2019-02-07'
   headline: >-
     ReproNim perspective article on reproducibility in neuroimaging is that Everything matters. Published
-    in Frontiers in Neuroinformatics. <a href="https://doi.org/10.3389/fninf.2019.00001">doi:10.3389/fninf.2019.00001</a>
+    in Frontiers in Neuroinformatics. <a href="https://doi.org/10.3389/fninf.2019.00001">DOI:10.3389/fninf.2019.00001</a>
   derived_from:
   - site-yaml-v1
 - id: sid:news/2019-01-16
   date_published: '2019-01-16'
   headline: >-
-    Visualizing cerebellar gradients with the LittleBrain toolbox published in PLOS One. <a href="https://doi.org/10.1371/journal.pone.0210028">doi:10.1371/journal.pone.0210028</a>
+    Visualizing cerebellar gradients with the LittleBrain toolbox published in PLOS One. <a href="https://doi.org/10.1371/journal.pone.0210028">DOI:10.1371/journal.pone.0210028</a>
   derived_from:
   - site-yaml-v1
 - id: sid:news/2019-01-15
@@ -385,7 +385,7 @@ news:
 - id: sid:news/2018-12-10
   date_published: '2018-12-10'
   headline: >-
-    Robust preprocessing for task and resting fMRI using fMRIPrep published in Nature Methods. <a href="https://doi.org/10.1038/s41592-018-0235-4">doi:10.1038/s41592-018-0235-4</a>
+    Robust preprocessing for task and resting fMRI using fMRIPrep published in Nature Methods. <a href="https://doi.org/10.1038/s41592-018-0235-4">DOI:10.1038/s41592-018-0235-4</a>
   derived_from:
   - site-yaml-v1
 - id: sid:news/2018-11-13

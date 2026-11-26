@@ -36,8 +36,8 @@ Only `id`, `slug`, `title` and `project_type` are required.
   - sid:person/daniel-m-low
   external_contributors:            # free text for people with no record
   - Rachel Reetzke (Kennedy Krieger)
-  anchor_publications:              # publication ids, usually doi:…
-  - doi:10.1234/example
+  anchor_publications:              # publication ids, usually DOI:…
+  - DOI:10.1234/example
   created: '2026-12-01'
 ```
 
