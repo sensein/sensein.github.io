@@ -301,10 +301,11 @@ grants:
 - id: sid:grant/mgaic-early-literacy-tutors
   title: AI-Driven Tutors and Open Datasets for Early Literacy Education
   funder: sid:org/mit-genai-consortium
+  lab_role: PI
   start_date: '2025'
   end_date: '2026'
   award_status: past
   derived_from:
   - cv
   curation_notes:
-  - The CV gives no role for the lab on this award.
+  - The CV gives no role; Satra confirmed PI on 2026-11-26.
