@@ -146,6 +146,21 @@ The build checks every record against the schema, then writes:
 yourself. CI also runs the full LinkML validator on every pull request that
 touches this folder.
 
+## What the pages take from the graph
+
+- **Grants.** A project page lists each award from `funded_by` with its funder,
+  award number and the lab's role; cards and publication pages show the short
+  form ("NIDA U24 DA064429"). `funding_statement` is shown only for a project
+  with no linked grant.
+- **Images and figures.** Pages set each image's `width` and `height` from its
+  record, so the layout doesn't jump as images load. `alt_text` and `caption`
+  are used wherever they are filled in; until then the page falls back to the
+  project or paper title. A paper's `figures` appear on its own page.
+- **Linked data on every page.** Each project and publication page embeds its
+  record, and the records it points to, as JSON-LD in the page head, using the
+  published context. Every page also links to the full graph as JSON-LD and
+  Turtle.
+
 ## Loading into BrainKB
 
 The site reads only the compiled JSON-LD, through `src/lib/kg.ts` and

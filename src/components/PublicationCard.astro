@@ -49,7 +49,9 @@ const codeLink = pub["code link"];
       {image && (
         <img
           src={image}
-          alt={pub.title}
+          alt={pub.imageMeta?.alt ?? pub.title}
+          width={pub.imageMeta?.width}
+          height={pub.imageMeta?.height}
           loading="lazy"
           class="hidden sm:block w-28 h-28 object-cover rounded-md bg-(--color-surface) shrink-0"
         />

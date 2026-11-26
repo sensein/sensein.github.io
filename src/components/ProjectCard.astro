@@ -1,6 +1,6 @@
 ---
 import type { Project } from "~/lib/data";
-import { personHref, projectPublications } from "~/lib/data";
+import { personHref, projectPublications, fundingLine } from "~/lib/data";
 import { normalizeImage } from "~/lib/images";
 import { withBase } from "~/lib/url";
 
@@ -10,6 +10,7 @@ interface Props {
 const { project } = Astro.props;
 const image = project.image ? normalizeImage(project.image) : null;
 const detailUrl = withBase(`/projects/${project.slug}`);
+const funding = fundingLine(project);
 
 const allContribs = [
   ...(project.contributors?.current ?? []).map((n) => ({ name: n, kind: "current" as const })),
@@ -26,7 +27,9 @@ const linkCount = (project.links ?? []).filter((l) => l.url).length;
     <a href={detailUrl} class="block aspect-[16/9] bg-(--color-surface) overflow-hidden">
       <img
         src={image}
-        alt={project.title}
+        alt={project.imageMeta?.alt ?? project.title}
+        width={project.imageMeta?.width}
+        height={project.imageMeta?.height}
         loading="lazy"
         class="w-full h-full object-contain bg-(--color-surface) group-hover:scale-[1.02] transition-transform duration-500"
       />
@@ -46,9 +49,9 @@ const linkCount = (project.links ?? []).filter((l) => l.url).length;
       )}
     </div>
 
-    {project.funder && (
+    {funding && (
       <p class="mt-1 text-xs text-(--color-ink-faint) font-mono">
-        {project.funder}
+        {funding}
       </p>
     )}
 

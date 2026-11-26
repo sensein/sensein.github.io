@@ -24,6 +24,34 @@ export function graph(): KnowledgeGraph {
   return _kg;
 }
 
+/** Where the published JSON-LD context lives, and the base IRI for the
+ *  site's relative links. These are the production addresses, so a page's
+ *  embedded graph means the same thing wherever the page is served from. */
+const KG_CONTEXT = "https://sensein.group/kg/context.jsonld";
+const KG_BASE = "https://sensein.group/";
+
+/** The slice of the graph about one or more records, for a page to embed
+ *  as <script type="application/ld+json">. */
+export function jsonldFor(...ids: (string | undefined)[]) {
+  const docs = ids.filter((x): x is string => Boolean(x)).map((id) => graph().describe(id, KG_CONTEXT, KG_BASE));
+  const seen = new Set<string>();
+  const nodes = docs.flatMap((d) => d["@graph"]).filter((n) => {
+    if (!n.id || seen.has(n.id)) return false;
+    seen.add(n.id);
+    return true;
+  });
+  return { "@context": [KG_CONTEXT, { "@base": KG_BASE }], "@graph": nodes };
+}
+
+/** A project's funding in one short line, such as "NIDA U24 DA064429",
+ *  built from its grants, or its funding statement when it has none. */
+export function fundingLine(p: Project): string | undefined {
+  if (p.grants?.length) {
+    return p.grants.map((g) => [g.funderShort ?? g.funder, g.award].filter(Boolean).join(" ")).join("; ");
+  }
+  return p.funder;
+}
+
 let _sd: SiteData | null = null;
 function sd(): SiteData {
   if (!_sd) _sd = siteData(graph());

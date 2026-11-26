@@ -9,6 +9,8 @@
 import { KnowledgeGraph, T, many, num, str, type KGNode } from "./kg.ts";
 
 export interface TeamMember {
+  /** IRI of the person in the graph, e.g. "sid:person/satrajit-s-ghosh". */
+  iri?: string;
   name: string;
   photo?: string;
   info?: string;
@@ -62,13 +64,40 @@ export interface ProjectContributors {
   external?: string[];
 }
 
+/** What the graph knows about an image beyond its address: its pixel size
+ *  (so pages can reserve space before it loads), and its alt text and
+ *  caption where a curator has written them. */
+export interface ImageMeta {
+  width?: number;
+  height?: number;
+  alt?: string;
+  caption?: string;
+}
+
+/** An award that funds a project, from the graph's Grant records. */
+export interface ProjectGrant {
+  award?: string;
+  /** Funder's full name, e.g. "National Institute on Drug Abuse". */
+  funder?: string;
+  /** Funder's short name, e.g. "NIDA". */
+  funderShort?: string;
+  /** The lab's role on the award, e.g. "Lead PI". */
+  role?: string;
+  note?: string;
+}
+
 export interface Project {
+  /** IRI of the project in the graph, e.g. "sid:project/bbqs". */
+  id: string;
   slug: string;
   title: string;
   status: "active" | "former";
   description?: string;
   funder?: string;
+  /** Structured awards; pages fall back to `funder` when this is empty. */
+  grants?: ProjectGrant[];
   image?: string;
+  imageMeta?: ImageMeta;
   themes?: string[];
   links?: ProjectLink[];
   contributors?: ProjectContributors;
@@ -102,6 +131,10 @@ export type PublicationCategory =
 /** A publication as the pages use it, extracted from the graph. */
 export interface Publication {
   id: string;
+  /** IRI of the publication in the graph (its DOI, arXiv or PubMed CURIE). */
+  iri: string;
+  /** The paper's figures as the graph lists them, first one first. */
+  figures?: ({ src: string } & ImageMeta)[];
   type: "journal" | "preprint" | "conference" | "chapter" | "workshop" | "software" | "patent" | "dataset";
   category: PublicationCategory;
   year: number;
@@ -136,6 +169,7 @@ export interface Publication {
 export interface FeaturedPublication {
   title: string;
   image?: string;
+  imageMeta?: ImageMeta;
   description?: string;
   authors?: string;
   type?: string;
@@ -183,6 +217,22 @@ export function siteData(kg: KnowledgeGraph): SiteData {
     return str(kg.ref(node, "image")?.content_url);
   }
 
+  function imageMeta(img: KGNode | undefined): ImageMeta | undefined {
+    if (!img) return undefined;
+    const m: ImageMeta = {};
+    const w = num(img.width);
+    const h = num(img.height);
+    if (w && h) {
+      m.width = w;
+      m.height = h;
+    }
+    const alt = str(img.alt_text);
+    if (alt) m.alt = alt;
+    const caption = str(img.caption);
+    if (caption) m.caption = caption;
+    return Object.keys(m).length ? m : undefined;
+  }
+
   function account(person: KGNode, service: string): KGNode | undefined {
     return many<KGNode>(person.accounts).find((a) => a.service === service);
   }
@@ -190,7 +240,7 @@ export function siteData(kg: KnowledgeGraph): SiteData {
   /** v1 roster entry for one membership. */
   function rosterEntry(kg: KnowledgeGraph, ms: KGNode): TeamMember {
     const p = kg.ref(ms, "member")!;
-    const m: TeamMember = { name: str(p.name)! };
+    const m: TeamMember = { iri: str(p.id), name: str(p.name)! };
     const photo = imageUrl(kg, p);
     if (photo) m.photo = photo;
     const info = str(ms.role_title);
@@ -271,6 +321,7 @@ export function siteData(kg: KnowledgeGraph): SiteData {
     if (_projects) return _projects;
     _projects = labProjects().map((p) => {
       const out: Project = {
+        id: str(p.id)!,
         slug: str(p.slug)!,
         title: str(p.title)!,
         status: (str(p.project_status) ?? "active") as Project["status"],
@@ -279,8 +330,27 @@ export function siteData(kg: KnowledgeGraph): SiteData {
       if (desc) out.description = desc;
       const funder = str(p.funding_statement);
       if (funder) out.funder = funder;
+      const grants = kg.refs(p, "funded_by").map((g) => {
+        const grant: ProjectGrant = {};
+        const award = str(g.award_number);
+        if (award) grant.award = award;
+        const org = kg.ref(g, "funder");
+        if (org) {
+          grant.funder = str(org.name);
+          const short = many<unknown>(org.alternate_names).map((x) => str(x)).find(Boolean);
+          if (short) grant.funderShort = short;
+        }
+        const role = str(g.lab_role);
+        if (role) grant.role = role;
+        const note = str(g.note);
+        if (note) grant.note = note;
+        return grant;
+      });
+      if (grants.length) out.grants = grants;
       const img = imageUrl(kg, p);
       if (img) out.image = img;
+      const meta = imageMeta(kg.ref(p, "image"));
+      if (meta) out.imageMeta = meta;
       out.themes = kg.refs(p, "themes").map((t) => str(t.notation)!);
       out.links = many<KGNode>(p.links).map((l) => {
         const link: ProjectLink = {};
@@ -308,6 +378,7 @@ export function siteData(kg: KnowledgeGraph): SiteData {
         .map((a) => str(a.author_name)!);
       const out: Publication = {
         id: pubSlug(n),
+        iri: str(n.id)!,
         type: str(n.publication_type) as Publication["type"],
         category: str(n.category) as PublicationCategory,
         year: num(n.year)!,
@@ -328,6 +399,11 @@ export function siteData(kg: KnowledgeGraph): SiteData {
       const projs = kg.refs(n, "projects").map((p) => str(p.slug)!);
       if (projs.length) out.projects = projs;
       out.lab_authors = kg.refs(n, "lab_authors").map((p) => str(p.name)!);
+      const figs = kg
+        .refs(n, "figures")
+        .filter((f) => str(f.content_url))
+        .map((f) => ({ src: str(f.content_url)!, ...imageMeta(f) }));
+      if (figs.length) out.figures = figs;
       const pre = many<KGNode>(n.preprints).map((q) => {
         const r: PreprintRef = { id: str(q.identifier)! };
         const venue = str(q.venue);
@@ -371,6 +447,8 @@ export function siteData(kg: KnowledgeGraph): SiteData {
         const out: FeaturedPublication = { title: str(n.title)! };
         const img = str(fig?.content_url);
         if (img) out.image = img;
+        const meta = imageMeta(fig);
+        if (meta) out.imageMeta = meta;
         const summary = str(h.summary);
         if (summary) out.description = summary;
         out.authors = many<KGNode>(n.authorships)
