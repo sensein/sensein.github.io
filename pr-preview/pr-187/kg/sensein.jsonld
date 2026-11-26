@@ -584,12 +584,12 @@
    "version": "2.0.0",
    "license": "https://creativecommons.org/licenses/by/4.0/",
    "was_generated_by": {
-    "id": "sid:build/b2d7479284f8-20261126T003636Z",
+    "id": "sid:build/6386f82fe6bd-20261126T005151Z",
     "type": [
      "prov:Activity"
     ],
-    "started_at": "2026-11-26T00:36:36+00:00",
-    "commit": "b2d7479284f89fa6d0ab1afe0735d7a777ded417",
+    "started_at": "2026-11-26T00:51:51+00:00",
+    "commit": "6386f82fe6bd57a8e4542a585985356eb855a85f",
     "used": [
      {
       "id": "sid:source/kg/collaborations.yaml",
@@ -607,9 +607,9 @@
        "prov:Entity"
       ],
       "path": "kg/grants.yaml",
-      "commit": "bf30ce97471a0f6e89e455cdedee1d96ba57d8b6",
-      "last_changed": "2026-11-26T00:35:20Z",
-      "sha256": "829f91ba1b9b27deba3ff0a287b3bd12643e9daa699fe598db59a2904cee4044"
+      "commit": "e57c76e64d3d79394dc50c0b5d0eb11fd3cd3008",
+      "last_changed": "2026-11-26T00:51:19Z",
+      "sha256": "0994e2da3945f611159f6edd462b3244cf33edc229999ae1e78c2a77d58e7491"
      },
      {
       "id": "sid:source/kg/images.yaml",
@@ -677,9 +677,9 @@
        "prov:Entity"
       ],
       "path": "kg/projects.yaml",
-      "commit": "bf30ce97471a0f6e89e455cdedee1d96ba57d8b6",
-      "last_changed": "2026-11-26T00:35:20Z",
-      "sha256": "a64ab72e65f30fb72eabe134578b7980f1e51152008ea952b4afabfaad2053eb"
+      "commit": "e57c76e64d3d79394dc50c0b5d0eb11fd3cd3008",
+      "last_changed": "2026-11-26T00:51:19Z",
+      "sha256": "2be18501baafb727285fd2a546e7fd7264037572b7b33b85757c5341b7f833b0"
      },
      {
       "id": "sid:source/kg/publications.yaml",
@@ -11395,6 +11395,7 @@
    "description": "Into the Wild — automated quantification of autism-relevant behaviors from naturalistic home videos. The study pipeline runs end-to-end: parents are reached through SPARK Research Match, submit questionnaires and home-video uploads, and complete a remote language assessment; videos pass automated metadata checks and human quality review; trained annotators produce ground-truth labels against a shared manual with ICC reliability checks; and VLM-based models score uniform frame samples for video-level behavior predictions. Brings together three theses: Manaal Mohammed's on target-child behavior detection (vocalizations via USC-SAIL / Whisper baseline; locomotion via S3D gated 3D CNN), Lucie Bierent's on socialization-behavior recognition (response to name, non-verbal communication, gesture prediction), and Bruke Wossenseged's thesis work.",
    "funding_statement": "Simons Foundation (Site PI, 2025–2026); Kennedy Krieger Institute partnership",
    "funded_by": [
+    "sid:grant/simons-home-videos-phenotyping",
     "sid:grant/simons-home-videos"
    ],
    "image": "sid:image/projects/sails-pipeline",
@@ -12520,6 +12521,31 @@
    "project_type": "community_effort"
   },
   {
+   "id": "sid:grant/simons-home-videos-phenotyping",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "title": "Advancing the Generalizability and Scalability of Quantitative Behavioral Phenotyping from Naturalistic Home Videos",
+   "funder": "sid:org/simons-foundation",
+   "lab_role": "Co-PI",
+   "start_date": {
+    "@value": "2026",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2027",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "current"
+  },
+  {
    "id": "sid:grant/um1-mh134812",
    "type": [
     "frapo:Grant"
@@ -12542,33 +12568,6 @@
    },
    "end_date": {
     "@value": "2030",
-    "@type": "xsd:gYear"
-   },
-   "award_status": "current"
-  },
-  {
-   "id": "sid:grant/mgaic-early-literacy-tutors",
-   "type": [
-    "frapo:Grant"
-   ],
-   "modified": {
-    "@value": "2026-11-26",
-    "@type": "xsd:date"
-   },
-   "derived_from": [
-    "cv"
-   ],
-   "curation_notes": [
-    "The CV gives no role for the lab on this award."
-   ],
-   "title": "AI-Driven Tutors and Open Datasets for Early Literacy Education",
-   "funder": "sid:org/mit-genai-consortium",
-   "start_date": {
-    "@value": "2025",
-    "@type": "xsd:gYear"
-   },
-   "end_date": {
-    "@value": "2026",
     "@type": "xsd:gYear"
    },
    "award_status": "current"
@@ -12760,7 +12759,7 @@
     "@type": "xsd:gYear"
    },
    "end_date": {
-    "@value": "2026",
+    "@value": "2031",
     "@type": "xsd:gYear"
    },
    "award_status": "current"
@@ -13229,12 +13228,36 @@
    "derived_from": [
     "cv"
    ],
-   "curation_notes": [
-    "The CV lists this award under Past although it runs to 2026; SAILS, which it funds, is an active project."
-   ],
    "title": "A Multi-Modal AI Approach to Measure Language and Social Communication Trajectories from Home Videos",
    "funder": "sid:org/simons-foundation",
    "lab_role": "Site PI",
+   "start_date": {
+    "@value": "2025",
+    "@type": "xsd:gYear"
+   },
+   "end_date": {
+    "@value": "2026",
+    "@type": "xsd:gYear"
+   },
+   "award_status": "past"
+  },
+  {
+   "id": "sid:grant/mgaic-early-literacy-tutors",
+   "type": [
+    "frapo:Grant"
+   ],
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "cv"
+   ],
+   "curation_notes": [
+    "The CV gives no role for the lab on this award."
+   ],
+   "title": "AI-Driven Tutors and Open Datasets for Early Literacy Education",
+   "funder": "sid:org/mit-genai-consortium",
    "start_date": {
     "@value": "2025",
     "@type": "xsd:gYear"
