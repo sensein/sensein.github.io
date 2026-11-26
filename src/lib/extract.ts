@@ -76,6 +76,9 @@ export interface ImageMeta {
 
 /** An award that funds a project, from the graph's Grant records. */
 export interface ProjectGrant {
+  /** IRI of the grant in the graph, e.g. "sid:grant/u24-da064429". */
+  id: string;
+  title?: string;
   award?: string;
   /** Funder's full name, e.g. "National Institute on Drug Abuse". */
   funder?: string;
@@ -84,6 +87,16 @@ export interface ProjectGrant {
   /** The lab's role on the award, e.g. "Lead PI". */
   role?: string;
   note?: string;
+  /** Years the award ran, e.g. "2024–2029". */
+  years?: string;
+  /** Current or past, as the CV lists it. */
+  status?: "current" | "past";
+}
+
+/** A grant as the funding list shows it, with the projects it funds. */
+export interface Grant extends ProjectGrant {
+  /** Projects funded by the award. `slug` is set for lab projects, which have pages. */
+  projects: { title: string; slug?: string }[];
 }
 
 export interface Project {
@@ -204,6 +217,7 @@ export interface SiteData {
   alumniMembers(): TeamMember[];
   collaborators(): Collaborator[];
   projects(): Project[];
+  grants(): Grant[];
   publications(): Publication[];
   publist(): FeaturedPublication[];
   news(): NewsItem[];
@@ -288,6 +302,30 @@ export function siteData(kg: KnowledgeGraph): SiteData {
       .filter((p) => p.project_type === "lab_project");
   }
 
+  function grantRecord(g: KGNode): ProjectGrant {
+    const grant: ProjectGrant = { id: str(g.id)! };
+    const title = str(g.title);
+    if (title) grant.title = title;
+    const award = str(g.award_number);
+    if (award) grant.award = award;
+    const org = kg.ref(g, "funder");
+    if (org) {
+      grant.funder = str(org.name);
+      const short = many<unknown>(org.alternate_names).map((x) => str(x)).find(Boolean);
+      if (short) grant.funderShort = short;
+    }
+    const role = str(g.lab_role);
+    if (role) grant.role = role;
+    const note = str(g.note);
+    if (note) grant.note = note;
+    const start = str(g.start_date)?.slice(0, 4);
+    const end = str(g.end_date)?.slice(0, 4);
+    if (start || end) grant.years = start && end && start !== end ? `${start}–${end}` : (start ?? end);
+    const status = str(g.award_status);
+    if (status === "current" || status === "past") grant.status = status;
+    return grant;
+  }
+
   function pubSlug(n: KGNode): string {
     return str(n.slug)!;
   }
@@ -330,22 +368,7 @@ export function siteData(kg: KnowledgeGraph): SiteData {
       if (desc) out.description = desc;
       const funder = str(p.funding_statement);
       if (funder) out.funder = funder;
-      const grants = kg.refs(p, "funded_by").map((g) => {
-        const grant: ProjectGrant = {};
-        const award = str(g.award_number);
-        if (award) grant.award = award;
-        const org = kg.ref(g, "funder");
-        if (org) {
-          grant.funder = str(org.name);
-          const short = many<unknown>(org.alternate_names).map((x) => str(x)).find(Boolean);
-          if (short) grant.funderShort = short;
-        }
-        const role = str(g.lab_role);
-        if (role) grant.role = role;
-        const note = str(g.note);
-        if (note) grant.note = note;
-        return grant;
-      });
+      const grants = kg.refs(p, "funded_by").map(grantRecord);
       if (grants.length) out.grants = grants;
       const img = imageUrl(kg, p);
       if (img) out.image = img;
@@ -367,6 +390,20 @@ export function siteData(kg: KnowledgeGraph): SiteData {
       return out;
     });
     return _projects;
+  };
+
+  /** Every award in the graph, in the order the CV lists them, with the
+   *  projects each one funds. */
+  const grants = (): Grant[] => {
+    const funded = new Map<string, Grant["projects"]>();
+    for (const p of kg.ofType(T.Project)) {
+      for (const g of kg.refs(p, "funded_by")) {
+        const id = str(g.id)!;
+        const entry = { title: str(p.title)!, ...(p.project_type === "lab_project" ? { slug: str(p.slug)! } : {}) };
+        funded.set(id, [...(funded.get(id) ?? []), entry]);
+      }
+    }
+    return kg.ofType(T.Grant).map((g) => ({ ...grantRecord(g), projects: funded.get(str(g.id)!) ?? [] }));
   };
 
   const publications = (): Publication[] => {
@@ -495,6 +532,7 @@ export function siteData(kg: KnowledgeGraph): SiteData {
     alumniMembers,
     collaborators,
     projects,
+    grants,
     publications,
     publist,
     news,

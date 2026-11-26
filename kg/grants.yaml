@@ -1,74 +1,311 @@
 # Funding awards, linked from projects through funded_by.
+# Taken from the "Research contracts and grants" section of Satrajit Ghosh's CV
+# (CV_260923, the September 2026 version; people.yaml links the latest CV),
+# current and past, in the CV's order. Award amounts are left out on purpose; the site does not show them.
+# award_status follows the CV's Current and Past headings.
 # Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
 
 grants:
-- id: sid:grant/u24-da064429
-  award_number: U24 DA064429
-  funder: sid:org/nida
-  lab_role: Lead PI
-  note: MPI Cabrera, Kennedy
+# ---- Current ---------------------------------------------------------------------
+- id: sid:grant/simons-home-videos-phenotyping
+  title: Advancing the Generalizability and Scalability of Quantitative Behavioral Phenotyping from Naturalistic Home Videos
+  funder: sid:org/simons-foundation
+  lab_role: Co-PI
+  start_date: '2026'
+  end_date: '2027'
+  award_status: current
   derived_from:
-  - site-yaml-v1
-- id: sid:grant/r24-mh117295
-  award_number: R24 MH117295
-  funder: sid:org/nimh
-  lab_role: Lead PI
-  note: MPI Halchenko, Dartmouth
-  derived_from:
-  - site-yaml-v1
-- id: sid:grant/u24-mh130918
-  award_number: U24 MH130918
-  funder: sid:org/nimh
-  lab_role: MPI
-  note: with Mufti, Hawrylycz, Ng — Allen Institute
-  derived_from:
-  - site-yaml-v1
+  - cv
 - id: sid:grant/um1-mh134812
+  title: Center for Multi-Scale Multi-Omic Human Brain Atlas
   award_number: UM1 MH134812
   funder: sid:org/nimh
   lab_role: Co-I
+  start_date: '2025'
+  end_date: '2030'
+  award_status: current
   derived_from:
   - site-yaml-v1
+  - cv
+- id: sid:grant/u24-da064429
+  title: BBQS AI Resource and Data Coordinating Center (BARD.CC)
+  award_number: U24 DA064429
+  funder: sid:org/nida
+  lab_role: Lead PI
+  note: MPI Laura Cabrera, Penn State University; David Kennedy, UMass Medical School
+  start_date: '2024'
+  end_date: '2029'
+  award_status: current
+  derived_from:
+  - site-yaml-v1
+  - cv
 - id: sid:grant/um1-ns132358
+  title: 'BRAIN Connects: The center for Large-scale Imaging of Neural Circuits (LINC)'
   award_number: UM1 NS132358
   funder: sid:org/ninds
   lab_role: Site PI
+  start_date: '2023'
+  end_date: '2028'
+  award_status: current
   derived_from:
   - site-yaml-v1
+  - cv
 - id: sid:grant/ot2-od032720
+  title: 'Voice as a Biomarker of Health: Building an ethically sourced, bioacoustic database to understand disease like never before'
   award_number: OT2 OD032720
   funder: sid:org/nih-od
   lab_role: MPI
+  start_date: '2022'
+  end_date: '2026'
+  award_status: current
   derived_from:
   - site-yaml-v1
+  - cv
+- id: sid:grant/u24-mh130918
+  title: An extensible brain knowledge base and toolset spanning modalities for multi-species data-driven cell types
+  award_number: U24 MH130918
+  funder: sid:org/nimh
+  lab_role: MPI
+  note: with Shoaib Mufti, Michael Hawrylycz, Lydia Ng, Allen Institute for Brain Science
+  start_date: '2022'
+  end_date: '2027'
+  award_status: current
+  derived_from:
+  - site-yaml-v1
+  - cv
+- id: sid:grant/harvard-readnet
+  title: 'ReadNet: Preventing Reading Failure'
+  funder: sid:org/harvard-university
+  lab_role: Site Co-Investigator
+  note: gift from Schmidt Futures and Citadel
+  start_date: '2022'
+  end_date: '2026'
+  award_status: current
+  derived_from:
+  - cv
+- id: sid:grant/r24-mh117295
+  title: 'DANDI: Distributed Archives for Neurophysiology Data Integration'
+  award_number: R24 MH117295
+  funder: sid:org/nimh
+  lab_role: Lead PI
+  note: MPI Yaroslav Halchenko, Dartmouth College
+  start_date: '2019'
+  end_date: '2029'
+  award_status: current
+  derived_from:
+  - site-yaml-v1
+  - cv
 - id: sid:grant/p41-eb019936
+  title: 'ReproNim: Center for Reproducible Neuroimaging Computation'
   award_number: P41 EB019936
   funder: sid:org/nibib
   lab_role: Site PI
-  note: PI Kennedy, UMass Med; Director TR&D Project 2
+  note: PI David Kennedy, UMass Medical School; Director, Technology, Research and Development Project 2
+  start_date: '2016'
+  end_date: '2031'
+  award_status: current
   derived_from:
   - site-yaml-v1
+  - cv
+
+# ---- Past ------------------------------------------------------------------------
+- id: sid:grant/r03-eb008673
+  title: Dissemination of cross-platform software for artifact detection and region of interest analysis of fMRI data
+  award_number: R03 EB008673
+  funder: sid:org/nibib
+  lab_role: PI
+  note: co-PI Susan Whitfield-Gabrieli, McGovern Institute for Brain Research, MIT
+  start_date: '2008'
+  end_date: '2010'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/r21-mh092564
+  title: Learned regulation of the limbic network via combined EEG and fMRI
+  award_number: R21 MH092564
+  funder: sid:org/nimh
+  lab_role: Co-Investigator
+  note: PI John Gabrieli
+  start_date: '2012'
+  end_date: '2014'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/mcgovern-murfi
+  title: 'MURFI: An Optimized Platform for Realtime fMRI Neurofeedback'
+  funder: sid:org/mcgovern-neurotechnology-program
+  lab_role: Co-PI
+  note: with John Gabrieli (MIT), Eden Evins (MGH)
+  start_date: '2012'
+  end_date: '2015'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/dod-pt100120
+  title: Using Real-Time Functional Brain Imaging and Computer Training To Enhance Recovery from Traumatic Brain Injury (TBI)
+  award_number: PT100120
+  funder: sid:org/dod
+  lab_role: Co-Investigator
+  note: Clinical trial award; PI John Gabrieli
+  start_date: '2011'
+  end_date: '2016'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/r01-mh092380-supplement
+  title: Genetic Determinants of Schizophrenia Intermediate Phenotypes
+  award_number: R01 MH092380
+  funder: sid:org/nimh
+  lab_role: Site PI
+  note: Supplement; PI Tracey Petryshen, MGH
+  start_date: '2015'
+  end_date: '2017'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/dod-ar110329
+  title: A randomized controlled trial of intranasal oxytocin as an adjunct to behavioral therapy for autism spectrum disorder
+  award_number: AR110329
+  funder: sid:org/dod
+  lab_role: Site PI
+  note: Clinical trial award; PI John Gabrieli, MGH
+  start_date: '2012'
+  end_date: '2017'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/mcgovern-voice-tracking
+  title: Brain basis for voice-based tracking of neurological disorders
+  funder: sid:org/mcgovern-neurotechnology-program
+  lab_role: PI
+  note: with MIT Lincoln Lab funds; co-PI Tom Quatieri, MIT Lincoln Laboratory
+  start_date: '2014'
+  end_date: '2017'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/dod-isn-blast-tbi
+  title: Blast Induced Traumatic Brain Injury
+  funder: sid:org/dod
+  lab_role: Investigator
+  note: through the Institute for Soldier Nanotechnologies
+  start_date: '2012'
+  end_date: '2018'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/u01-mh108168
+  title: Connectomes related to anxiety and depression in adolescents
+  award_number: U01 MH108168
+  funder: sid:org/nimh
+  lab_role: Informatics Lead
+  note: PI Susan Whitfield-Gabrieli, John Gabrieli, MIT
+  start_date: '2015'
+  end_date: '2020'
+  award_status: past
+  derived_from:
+  - cv
 - id: sid:grant/r01-eb020740
+  title: 'Nipype: Dataflows for Reproducible Biomedical Research'
   award_number: R01 EB020740
   funder: sid:org/nibib
   lab_role: PI
+  note: project ongoing as community software
   start_date: '2016'
   end_date: '2020'
-  note: project ongoing as community software
+  award_status: past
   derived_from:
   - site-yaml-v1
+  - cv
+- id: sid:grant/fore-retinal-oct
+  title: Tracking Alzheimer's Disease from Retinal OCT Images using Deep Learning
+  funder: sid:org/fore
+  lab_role: PI
+  start_date: '2019'
+  end_date: '2020'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/mcgovern-stuttering-apparatus
+  title: Realtime speech modification apparatus for enhancing fluency in people that stutter
+  funder: sid:org/mcgovern-neurotechnology-program
+  lab_role: PI
+  note: co-PI Tod Machover, Media Arts and Sciences
+  start_date: '2020'
+  end_date: '2021'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/rf1-mh120021
+  title: 'The Neuroimaging Data Model: FAIR descriptors of Brain Initiative Imaging Experiments'
+  award_number: RF1 MH120021
+  funder: sid:org/nimh
+  lab_role: Site PI
+  note: PI David Keator, University of California, Irvine
+  start_date: '2019'
+  end_date: '2022'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/r01-mh109682
+  title: 'NeuroScout: A cloud-based platform for rapid re-analysis of naturalistic fMRI datasets'
+  award_number: R01 MH109682
+  funder: sid:org/nimh
+  lab_role: Site PI
+  note: PI Tal Yarkoni, UTexas, Austin
+  start_date: '2016'
+  end_date: '2022'
+  award_status: past
+  derived_from:
+  - site-yaml-v1
+  - cv
+- id: sid:grant/deshpande-mumble-melody
+  title: 'Mumble Melody: A real-time speech modification system to enhance fluency in people who stutter'
+  funder: sid:org/mit-deshpande-center
+  lab_role: PI
+  note: co-PI Tod Machover, Media Arts and Sciences
+  start_date: '2020'
+  end_date: '2023'
+  award_status: past
+  derived_from:
+  - cv
 - id: sid:grant/rf1-mh121885
+  title: 'Nobrainer: A robust and validated neural network tool suite for imagers'
   award_number: RF1 MH121885
   funder: sid:org/nimh
   lab_role: PI
   start_date: '2020'
   end_date: '2024'
+  award_status: past
   derived_from:
   - site-yaml-v1
-- id: sid:grant/r01-mh109682
-  award_number: R01 MH109682
-  funder: sid:org/nimh
+  - cv
+- id: sid:grant/cmi-psychiatric-biometrics
+  title: Biometric assessment and monitoring of psychiatric symptoms
+  funder: sid:org/child-mind-institute
+  lab_role: PI
+  start_date: '2023'
+  end_date: '2025'
+  award_status: past
+  derived_from:
+  - cv
+- id: sid:grant/simons-home-videos
+  title: A Multi-Modal AI Approach to Measure Language and Social Communication Trajectories from Home Videos
+  funder: sid:org/simons-foundation
   lab_role: Site PI
-  note: PI Yarkoni
+  start_date: '2025'
+  end_date: '2026'
+  award_status: past
   derived_from:
-  - site-yaml-v1
+  - cv
+- id: sid:grant/mgaic-early-literacy-tutors
+  title: AI-Driven Tutors and Open Datasets for Early Literacy Education
+  funder: sid:org/mit-genai-consortium
+  lab_role: PI
+  start_date: '2025'
+  end_date: '2026'
+  award_status: past
+  derived_from:
+  - cv
+  curation_notes:
+  - The CV gives no role; Satra confirmed PI on 2026-11-26.

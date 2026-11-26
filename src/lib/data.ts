@@ -52,6 +52,19 @@ export function fundingLine(p: Project): string | undefined {
   return p.funder;
 }
 
+/** A project's funding statement, when it says more than its one grant
+ *  already does (several funders, a partnership, a gift's donors). */
+export function fundingNote(p: Project): string | undefined {
+  if (!p.funder) return undefined;
+  const grants = p.grants ?? [];
+  if (grants.length === 1) {
+    const g = grants[0];
+    const lead = [g.funderShort ?? g.funder, g.award].filter(Boolean).join(" ");
+    if (g.award && p.funder.startsWith(lead)) return undefined;
+  }
+  return grants.length ? p.funder : undefined;
+}
+
 let _sd: SiteData | null = null;
 function sd(): SiteData {
   if (!_sd) _sd = siteData(graph());
@@ -63,6 +76,7 @@ export const students = () => sd().students();
 export const alumniMembers = () => sd().alumniMembers();
 export const collaborators = () => sd().collaborators();
 export const projects = () => sd().projects();
+export const grants = () => sd().grants();
 export const publications = () => sd().publications();
 export const publist = () => sd().publist();
 export const news = () => sd().news();

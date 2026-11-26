@@ -58,6 +58,40 @@ organizations:
   - NIH OD
   organization_type: funder
   parent_organization: sid:org/nih
+- id: sid:org/dod
+  name: U.S. Department of Defense
+  alternate_names:
+  - DOD
+  organization_type: funder
+  url: https://www.defense.gov/
+- id: sid:org/simons-foundation
+  name: Simons Foundation
+  organization_type: funder
+  url: https://www.simonsfoundation.org/
+- id: sid:org/fore
+  name: Foundation for Ophthalmology Research and Education International
+  alternate_names:
+  - FORE
+  organization_type: funder
+- id: sid:org/mit-genai-consortium
+  name: MIT Generative AI Consortium
+  alternate_names:
+  - MIT GenAI Consortium
+  - MGAIC
+  organization_type: consortium
+  parent_organization: sid:org/mit
+- id: sid:org/mcgovern-neurotechnology-program
+  name: McGovern Institute Neurotechnology Program
+  alternate_names:
+  - McGovern NTP
+  organization_type: funder
+  parent_organization: sid:org/mcgovern-institute
+- id: sid:org/mit-deshpande-center
+  name: MIT Deshpande Center for Technological Innovation
+  alternate_names:
+  - Deshpande Center
+  organization_type: funder
+  parent_organization: sid:org/mit
 - id: sid:org/kennedy-krieger-institute-johns-hopkins
   name: Kennedy Krieger Institute (Johns Hopkins)
 - id: sid:org/mclean-hospital-harvard-medical-school

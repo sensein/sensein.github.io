@@ -2,6 +2,7 @@
 import PageLayout from "~/layouts/PageLayout.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
 import ProjectCard from "~/components/ProjectCard.astro";
+import FundingList from "~/components/FundingList.astro";
 import { normalizeImage } from "~/lib/images";
 import { projects, publicationsPage } from "~/lib/data";
 
@@ -134,6 +135,8 @@ const chips = themeMeta.topics
       </p>
     </section>
   )}
+
+  <FundingList />
 
   <script>
     const chips = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-chip]"));

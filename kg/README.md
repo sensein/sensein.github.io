@@ -148,10 +148,14 @@ touches this folder.
 
 ## What the pages take from the graph
 
-- **Grants.** A project page lists each award from `funded_by` with its funder,
-  award number and the lab's role; cards and publication pages show the short
-  form ("NIDA U24 DA064429"). `funding_statement` is shown only for a project
-  with no linked grant.
+- **Grants.** `grants.yaml` follows the grant list in Satra's CV, current and
+  past, with titles, years, funder, the lab's role and co-investigators, but no
+  amounts. `award_status` (current or past) follows the CV's headings. The
+  research page's Funding section lists every grant with the projects it funds.
+  A project page lists each award from `funded_by` with its funder, award
+  number, role and years; cards and publication pages show the short form
+  ("NIDA U24 DA064429"). A project page also shows `funding_statement` when it
+  says more than the project's one grant, or when the project has no grant.
 - **Images and figures.** Pages set each image's `width` and `height` from its
   record, so the layout doesn't jump as images load. `alt_text` and `caption`
   are used wherever they are filled in; until then the page falls back to the
