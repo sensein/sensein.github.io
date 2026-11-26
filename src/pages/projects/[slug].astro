@@ -33,7 +33,7 @@ function linkify(href: string): string {
 }
 ---
 <BaseLayout title={project.title} description={project.description} jsonld={jsonld}>
-  <Container size="default" class="pt-14 pb-6">
+  <Container size="default" class="pt-8 md:pt-10 pb-4">
     <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
       <a href={withBase("/research")} class="hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
         ← Research
@@ -107,7 +107,7 @@ function linkify(href: string): string {
     </div>
 
     {(project.links?.length ?? 0) > 0 && (
-      <section class="mt-14">
+      <section class="mt-10">
         <SectionHeading eyebrow="Resources" title="Links" />
         <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
           {project.links!.map((l) =>
@@ -129,7 +129,7 @@ function linkify(href: string): string {
     )}
 
     {(contribs.current.length > 0 || contribs.former.length > 0 || contribs.external.length > 0) && (
-      <section class="mt-14">
+      <section class="mt-10">
         <SectionHeading eyebrow="People" title="Contributors" />
         <div class="grid sm:grid-cols-3 gap-x-8 gap-y-2 text-sm">
           {contribs.current.length > 0 && (
@@ -189,7 +189,7 @@ function linkify(href: string): string {
     )}
 
     {pubs.length > 0 && (
-      <section class="mt-14">
+      <section class="mt-10">
         <SectionHeading eyebrow="Publications" title={`${pubs.length} ${pubs.length === 1 ? "paper" : "papers"} associated with this project`} />
         <ul>
           {pubs.map((p) => <PublicationItem pub={p} />)}
@@ -197,7 +197,7 @@ function linkify(href: string): string {
       </section>
     )}
 
-    <p class="mt-14 text-xs text-(--color-ink-faint)">
+    <p class="mt-10 text-xs text-(--color-ink-faint)">
       Edit this project in <code>kg/projects.yaml</code>. Add a paper in
       <code>kg/publications.yaml</code> and list the project under its <code>projects</code>.
       See

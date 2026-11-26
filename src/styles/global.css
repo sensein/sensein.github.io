@@ -61,6 +61,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keep anchored headings clear of the sticky header (h-14). */
+[id] {
+  scroll-margin-top: 4.5rem;
+}
+
 body {
   background-color: var(--color-canvas);
   color: var(--color-ink);

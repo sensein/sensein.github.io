@@ -4,12 +4,14 @@ import SectionHeading from "~/components/SectionHeading.astro";
 import PersonCard from "~/components/PersonCard.astro";
 import MemberTile from "~/components/MemberTile.astro";
 import SortToggle from "~/components/SortToggle.astro";
-import { teamMembers, students, alumniMembers } from "~/lib/data";
+import { teamMembers, students, alumniMembers, jsonldFor } from "~/lib/data";
 import type { TeamMember } from "~/lib/data";
 
 const members = teamMembers();
 const studentList = students();
 const alumni = alumniMembers();
+// The people on this page, with their roles and dates, as linked data.
+const jsonld = jsonldFor(...[...members, ...studentList, ...alumni].map((m) => m.iri));
 
 /** Pair each member with its alphabetical rank and its curated (YAML) rank. */
 function orderings(list: TeamMember[]) {
@@ -34,6 +36,7 @@ const countBadge =
   "ml-2 align-middle inline-flex items-center rounded-full bg-(--color-surface) border border-(--color-border) px-2 py-0.5 font-sans text-xs font-medium text-(--color-ink-muted)";
 ---
 <PageLayout
+  jsonld={jsonld}
   eyebrow="People"
   title="The team"
   size="wide"
