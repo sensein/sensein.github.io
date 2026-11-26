@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">Abstract Atlas — UMAP embedding map of conference abstracts</title>
+  <defs>
+    <radialGradient id="g1" cx="30%" cy="40%" r="50%">
+      <stop offset="0%"  stop-color="#5b8def" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#5b8def" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="68%" cy="60%" r="35%">
+      <stop offset="0%"  stop-color="#f08560" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#f08560" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g3" cx="50%" cy="25%" r="22%">
+      <stop offset="0%"  stop-color="#5fbf85" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#5fbf85" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g4" cx="78%" cy="22%" r="18%">
+      <stop offset="0%"  stop-color="#c98ce0" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#c98ce0" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .frame { fill: none; stroke: currentColor; stroke-width: 1.5; opacity: 0.25; }
+      .pt-blue { fill: #5b8def; opacity: 0.75; }
+      .pt-orange { fill: #f08560; opacity: 0.75; }
+      .pt-green { fill: #5fbf85; opacity: 0.75; }
+      .pt-purple { fill: #c98ce0; opacity: 0.75; }
+      .pt-faint { fill: currentColor; opacity: 0.35; }
+      .title { fill: currentColor; font: 700 30px/1.1 ui-serif, Georgia, "Times New Roman", serif; }
+      .sub { fill: currentColor; font: 500 15px/1.3 ui-sans-serif, system-ui, -apple-system; opacity: 0.65; }
+      .chip { fill: currentColor; font: 500 12px/1.0 ui-sans-serif, system-ui; opacity: 0.75; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="none"/>
+
+  <!-- Header -->
+  <text class="title" x="60" y="68">Abstract Atlas</text>
+  <text class="sub"   x="60" y="96">A browseable embedding map of OHBM 2026 abstracts &amp; PubMed neuroimaging</text>
+
+  <!-- Cluster halos -->
+  <g transform="translate(60 140)">
+    <rect class="frame" x="0" y="0" width="1080" height="430" rx="14"/>
+    <rect x="2"  y="2"  width="1076" height="426" rx="12" fill="url(#g1)"/>
+    <rect x="2"  y="2"  width="1076" height="426" rx="12" fill="url(#g2)"/>
+    <rect x="2"  y="2"  width="1076" height="426" rx="12" fill="url(#g3)"/>
+    <rect x="2"  y="2"  width="1076" height="426" rx="12" fill="url(#g4)"/>
+  </g>
+
+  <!-- Point swarm (deterministic pseudo-random scattering) -->
+  <g transform="translate(60 140)">
+    <!-- blue cluster (top-left) -->
+    <circle class="pt-blue" cx="180"  cy="100" r="4"/>
+    <circle class="pt-blue" cx="220"  cy="160" r="3"/>
+    <circle class="pt-blue" cx="260"  cy="120" r="5"/>
+    <circle class="pt-blue" cx="190"  cy="200" r="3"/>
+    <circle class="pt-blue" cx="310"  cy="180" r="4"/>
+    <circle class="pt-blue" cx="150"  cy="150" r="3"/>
+    <circle class="pt-blue" cx="240"  cy="230" r="3"/>
+    <circle class="pt-blue" cx="290"  cy="90"  r="3"/>
+    <circle class="pt-blue" cx="120"  cy="190" r="2.5"/>
+    <circle class="pt-blue" cx="340"  cy="135" r="3"/>
+    <!-- orange cluster (mid-right) -->
+    <circle class="pt-orange" cx="700" cy="300" r="4"/>
+    <circle class="pt-orange" cx="740" cy="260" r="3"/>
+    <circle class="pt-orange" cx="660" cy="340" r="4"/>
+    <circle class="pt-orange" cx="780" cy="300" r="3"/>
+    <circle class="pt-orange" cx="720" cy="220" r="3"/>
+    <circle class="pt-orange" cx="820" cy="270" r="3"/>
+    <circle class="pt-orange" cx="690" cy="270" r="2.5"/>
+    <circle class="pt-orange" cx="760" cy="350" r="3"/>
+    <!-- green cluster (top) -->
+    <circle class="pt-green" cx="540" cy="80"  r="4"/>
+    <circle class="pt-green" cx="580" cy="120" r="3"/>
+    <circle class="pt-green" cx="520" cy="140" r="3"/>
+    <circle class="pt-green" cx="600" cy="80"  r="3"/>
+    <circle class="pt-green" cx="500" cy="100" r="2.5"/>
+    <circle class="pt-green" cx="620" cy="160" r="3"/>
+    <!-- purple cluster (top-right) -->
+    <circle class="pt-purple" cx="860" cy="90"  r="4"/>
+    <circle class="pt-purple" cx="900" cy="130" r="3"/>
+    <circle class="pt-purple" cx="930" cy="100" r="3"/>
+    <circle class="pt-purple" cx="880" cy="150" r="3"/>
+    <circle class="pt-purple" cx="920" cy="180" r="2.5"/>
+    <!-- noise / faint background dots -->
+    <circle class="pt-faint" cx="420" cy="250" r="2"/>
+    <circle class="pt-faint" cx="470" cy="320" r="2"/>
+    <circle class="pt-faint" cx="380" cy="350" r="2"/>
+    <circle class="pt-faint" cx="500" cy="390" r="2"/>
+    <circle class="pt-faint" cx="600" cy="370" r="2"/>
+    <circle class="pt-faint" cx="430" cy="180" r="2"/>
+    <circle class="pt-faint" cx="350" cy="280" r="2"/>
+    <circle class="pt-faint" cx="650" cy="190" r="2"/>
+    <circle class="pt-faint" cx="990" cy="240" r="2"/>
+    <circle class="pt-faint" cx="950" cy="320" r="2"/>
+    <circle class="pt-faint" cx="900" cy="380" r="2"/>
+    <circle class="pt-faint" cx="850" cy="220" r="2"/>
+    <circle class="pt-faint" cx="780" cy="180" r="2"/>
+    <circle class="pt-faint" cx="280" cy="340" r="2"/>
+    <circle class="pt-faint" cx="320" cy="390" r="2"/>
+    <circle class="pt-faint" cx="170" cy="290" r="2"/>
+    <circle class="pt-faint" cx="220" cy="320" r="2"/>
+    <circle class="pt-faint" cx="170" cy="380" r="2"/>
+    <circle class="pt-faint" cx="120" cy="350" r="2"/>
+    <circle class="pt-faint" cx="970" cy="170" r="2"/>
+  </g>
+
+  <!-- Chip row -->
+  <g transform="translate(60 600)">
+    <text class="chip" x="0"   y="0">UMAP</text>
+    <text class="chip" x="68"  y="0">·  MiniLM</text>
+    <text class="chip" x="160" y="0">·  PubMedBERT</text>
+    <text class="chip" x="280" y="0">·  semantic + lexical search</text>
+    <text class="chip" x="475" y="0">·  OpenAlex refs</text>
+    <text class="chip" x="600" y="0">·  SvelteKit static</text>
+  </g>
+</svg>
