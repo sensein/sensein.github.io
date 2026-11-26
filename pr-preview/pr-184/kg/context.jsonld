@@ -24,15 +24,9 @@
   "wikidata": "http://www.wikidata.org/entity/",
   "wdt": "http://www.wikidata.org/prop/direct/",
   "xsd": "http://www.w3.org/2001/XMLSchema#",
-  "doi": {
-   "@id": "prism:doi"
-  },
-  "arxiv": {
-   "@id": "sensein:arxivId"
-  },
-  "pmid": {
-   "@id": "fabio:hasPubMedId"
-  },
+  "DOI": "https://doi.org/",
+  "arXiv": "https://arxiv.org/abs/",
+  "PMID": "https://pubmed.ncbi.nlm.nih.gov/",
   "ORCID": "https://orcid.org/",
   "ROR": "https://ror.org/",
   "id": "@id",
@@ -381,8 +375,17 @@
   "venue": {
    "@id": "prism:publicationName"
   },
+  "doi": {
+   "@id": "prism:doi"
+  },
+  "pmid": {
+   "@id": "fabio:hasPubMedId"
+  },
   "pmcid": {
    "@id": "fabio:hasPubMedCentralId"
+  },
+  "arxiv": {
+   "@id": "sensein:arxivId"
   },
   "pdf_url": {
    "@id": "sensein:pdfUrl",

@@ -24,15 +24,9 @@
   "wikidata": "http://www.wikidata.org/entity/",
   "wdt": "http://www.wikidata.org/prop/direct/",
   "xsd": "http://www.w3.org/2001/XMLSchema#",
-  "doi": {
-   "@id": "prism:doi"
-  },
-  "arxiv": {
-   "@id": "sensein:arxivId"
-  },
-  "pmid": {
-   "@id": "fabio:hasPubMedId"
-  },
+  "DOI": "https://doi.org/",
+  "arXiv": "https://arxiv.org/abs/",
+  "PMID": "https://pubmed.ncbi.nlm.nih.gov/",
   "ORCID": "https://orcid.org/",
   "ROR": "https://ror.org/",
   "id": "@id",
@@ -381,8 +375,17 @@
   "venue": {
    "@id": "prism:publicationName"
   },
+  "doi": {
+   "@id": "prism:doi"
+  },
+  "pmid": {
+   "@id": "fabio:hasPubMedId"
+  },
   "pmcid": {
    "@id": "fabio:hasPubMedCentralId"
+  },
+  "arxiv": {
+   "@id": "sensein:arxivId"
   },
   "pdf_url": {
    "@id": "sensein:pdfUrl",
@@ -573,12 +576,12 @@
    "version": "2.0.0",
    "license": "https://creativecommons.org/licenses/by/4.0/",
    "was_generated_by": {
-    "id": "sid:build/261b64cfa10f-20261125T235154Z",
+    "id": "sid:build/424617f353e4-20261126T000105Z",
     "type": [
      "prov:Activity"
     ],
-    "started_at": "2026-11-25T23:51:54+00:00",
-    "commit": "261b64cfa10f3135f749d2ff9efe622bf1e140eb",
+    "started_at": "2026-11-26T00:01:05+00:00",
+    "commit": "424617f353e43af2db075145794e503c1462ef1e",
     "used": [
      {
       "id": "sid:source/kg/collaborations.yaml",
@@ -606,9 +609,9 @@
        "prov:Entity"
       ],
       "path": "kg/images.yaml",
-      "commit": "7bfbca343226b9ef711746539784d9803f91a4f1",
-      "last_changed": "2026-11-25T23:50:30Z",
-      "sha256": "e651859b9a1d7c59f9bff013a5a54f8c1cee6cd16c7db02c12596e85e00889df"
+      "commit": "24704badcb1c31bf30f37d9b5cadb85cb74c26fe",
+      "last_changed": "2026-11-26T00:00:33Z",
+      "sha256": "b0b84062c8918fa531a06708d173ee65e33e964c44055b044286de66722f2952"
      },
      {
       "id": "sid:source/kg/memberships.yaml",
@@ -626,9 +629,9 @@
        "prov:Entity"
       ],
       "path": "kg/news.yaml",
-      "commit": "7bfbca343226b9ef711746539784d9803f91a4f1",
-      "last_changed": "2026-11-25T23:50:30Z",
-      "sha256": "6c3f55542bc0a742d091ce717cc3b2660f1378aa5437c70f1f0617d52a4322c0"
+      "commit": "24704badcb1c31bf30f37d9b5cadb85cb74c26fe",
+      "last_changed": "2026-11-26T00:00:33Z",
+      "sha256": "79109a3e7db62a0312d79c5b056ead7bda5f3247371c05d87ffa8de378942ab4"
      },
      {
       "id": "sid:source/kg/organizations.yaml",
@@ -666,9 +669,9 @@
        "prov:Entity"
       ],
       "path": "kg/projects.yaml",
-      "commit": "7bfbca343226b9ef711746539784d9803f91a4f1",
-      "last_changed": "2026-11-25T23:50:30Z",
-      "sha256": "a8757cb993390682952a1a8965d3d3bd2ae0a8782215453e8627778ad4d1e93c"
+      "commit": "24704badcb1c31bf30f37d9b5cadb85cb74c26fe",
+      "last_changed": "2026-11-26T00:00:33Z",
+      "sha256": "db61635e25c2c9da3b27bc504fa7a6f62d9357f5a3c45095728dc3b8fd9c1125"
      },
      {
       "id": "sid:source/kg/publications.yaml",
@@ -676,9 +679,9 @@
        "prov:Entity"
       ],
       "path": "kg/publications.yaml",
-      "commit": "7bfbca343226b9ef711746539784d9803f91a4f1",
-      "last_changed": "2026-11-25T23:50:30Z",
-      "sha256": "d6e82a7039f954e36d45d5eceed98ce0e7e1d1adb8c5542c5c08117699b5689b"
+      "commit": "24704badcb1c31bf30f37d9b5cadb85cb74c26fe",
+      "last_changed": "2026-11-26T00:00:33Z",
+      "sha256": "1f8fdb78d1a9617d72997c243df01a7505c8529317b469dde944bfd4509c44ca"
      },
      {
       "id": "sid:source/kg/topics.yaml",
@@ -10464,7 +10467,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -10537,11 +10540,11 @@
     "sid:person/christopher-j-markiewicz"
    ],
    "anchor_publications": [
-    "doi:10.7554/elife.78362",
-    "doi:10.1038/s41597-023-02614-0",
-    "doi:10.1523/eneuro.0486-24.2025",
-    "doi:10.1007/s12021-021-09557-0",
-    "doi:10.64898/2026.03.05.709819"
+    "DOI:10.7554/elife.78362",
+    "DOI:10.1038/s41597-023-02614-0",
+    "DOI:10.1523/eneuro.0486-24.2025",
+    "DOI:10.1007/s12021-021-09557-0",
+    "DOI:10.64898/2026.03.05.709819"
    ]
   },
   {
@@ -10554,7 +10557,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -10660,8 +10663,8 @@
     "sid:person/jai-amin"
    ],
    "anchor_publications": [
-    "doi:10.1145/3701716.3715483",
-    "doi:10.1371/journal.pbio.3002133"
+    "DOI:10.1145/3701716.3715483",
+    "DOI:10.1371/journal.pbio.3002133"
    ]
   },
   {
@@ -10674,7 +10677,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -10715,7 +10718,7 @@
     "sid:person/satrajit-s-ghosh"
    ],
    "anchor_publications": [
-    "doi:10.1126/science.adh9979"
+    "DOI:10.1126/science.adh9979"
    ]
   },
   {
@@ -10728,7 +10731,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -10798,9 +10801,9 @@
     "sid:person/satrajit-s-ghosh"
    ],
    "anchor_publications": [
-    "doi:10.64898/2026.03.31.715699",
-    "doi:10.64898/2026.02.18.705310",
-    "doi:10.64898/2026.04.02.716198"
+    "DOI:10.64898/2026.03.31.715699",
+    "DOI:10.64898/2026.02.18.705310",
+    "DOI:10.64898/2026.04.02.716198"
    ]
   },
   {
@@ -10813,7 +10816,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -10914,8 +10917,8 @@
     "sid:person/fabio-catania"
    ],
    "anchor_publications": [
-    "doi:10.3389/fdgth.2025.1484521",
-    "doi:10.3389/fdgth.2025.1514971"
+    "DOI:10.3389/fdgth.2025.1484521",
+    "DOI:10.3389/fdgth.2025.1514971"
    ]
   },
   {
@@ -10986,7 +10989,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11049,7 +11052,7 @@
     "sid:person/fabio-catania"
    ],
    "anchor_publications": [
-    "doi:10.31234/osf.io/stek7_v1"
+    "DOI:10.31234/osf.io/stek7_v1"
    ]
   },
   {
@@ -11062,7 +11065,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11170,13 +11173,13 @@
     "sid:person/smruti-padhy"
    ],
    "anchor_publications": [
-    "doi:10.12688/f1000research.10783.2",
-    "doi:10.3389/fninf.2019.00001",
-    "doi:10.3389/fninf.2023.1174156",
-    "doi:10.1162/imag_a_00074",
-    "doi:10.2196/63343",
-    "doi:10.21105/joss.05839",
-    "doi:10.31222/osf.io/x64tn_v1"
+    "DOI:10.12688/f1000research.10783.2",
+    "DOI:10.3389/fninf.2019.00001",
+    "DOI:10.3389/fninf.2023.1174156",
+    "DOI:10.1162/imag_a_00074",
+    "DOI:10.2196/63343",
+    "DOI:10.21105/joss.05839",
+    "DOI:10.31222/osf.io/x64tn_v1"
    ]
   },
   {
@@ -11189,7 +11192,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11256,7 +11259,7 @@
     "sid:person/mathias-goncalves"
    ],
    "anchor_publications": [
-    "doi:10.3389/fninf.2011.00013"
+    "DOI:10.3389/fninf.2011.00013"
    ]
   },
   {
@@ -11334,7 +11337,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11371,8 +11374,8 @@
     "sid:person/yibei-chen"
    ],
    "anchor_publications": [
-    "doi:10.1162/imag.a.1116",
-    "doi:10.64898/2026.05.31.729141"
+    "DOI:10.1162/imag.a.1116",
+    "DOI:10.64898/2026.05.31.729141"
    ]
   },
   {
@@ -11385,7 +11388,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11422,7 +11425,7 @@
     "sid:person/alisha-kodibagkar"
    ],
    "anchor_publications": [
-    "doi:10.1001/jamanetworkopen.2024.34354"
+    "DOI:10.1001/jamanetworkopen.2024.34354"
    ]
   },
   {
@@ -11435,7 +11438,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11486,10 +11489,10 @@
     "Viviana Siless (MGH Martinos)"
    ],
    "anchor_publications": [
-    "doi:10.1038/s41597-024-03629-x",
-    "doi:10.1016/j.nicl.2020.102242",
-    "doi:10.1162/imag.a.145",
-    "doi:10.1177/21677026251351850"
+    "DOI:10.1038/s41597-024-03629-x",
+    "DOI:10.1016/j.nicl.2020.102242",
+    "DOI:10.1162/imag.a.145",
+    "DOI:10.1177/21677026251351850"
    ]
   },
   {
@@ -11502,7 +11505,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11572,8 +11575,8 @@
     "sid:person/fabio-catania"
    ],
    "anchor_publications": [
-    "doi:10.1007/s11881-025-00342-1",
-    "doi:10.31234/osf.io/stek7_v1"
+    "DOI:10.1007/s11881-025-00342-1",
+    "DOI:10.31234/osf.io/stek7_v1"
    ]
   },
   {
@@ -11624,7 +11627,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11665,7 +11668,7 @@
     "sid:person/yibei-chen"
    ],
    "anchor_publications": [
-    "doi:10.48550/arxiv.2507.03674"
+    "DOI:10.48550/arxiv.2507.03674"
    ]
   },
   {
@@ -11726,7 +11729,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11786,7 +11789,7 @@
     "sid:person/satrajit-s-ghosh"
    ],
    "anchor_publications": [
-    "doi:10.3389/fninf.2019.00067"
+    "DOI:10.3389/fninf.2019.00067"
    ]
   },
   {
@@ -11888,7 +11891,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11930,7 +11933,7 @@
     "sid:person/satrajit-s-ghosh"
    ],
    "anchor_publications": [
-    "doi:10.7554/elife.79277"
+    "DOI:10.7554/elife.79277"
    ]
   },
   {
@@ -11943,7 +11946,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -11980,7 +11983,7 @@
     "sid:person/satrajit-s-ghosh"
    ],
    "anchor_publications": [
-    "doi:10.1371/journal.pdig.0000516"
+    "DOI:10.1371/journal.pdig.0000516"
    ]
   },
   {
@@ -11993,7 +11996,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -12031,7 +12034,7 @@
     "sid:person/satrajit-s-ghosh"
    ],
    "anchor_publications": [
-    "doi:10.1002/lio2.354"
+    "DOI:10.1002/lio2.354"
    ]
   },
   {
@@ -12044,7 +12047,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -12109,7 +12112,7 @@
     "sid:person/satrajit-s-ghosh"
    ],
    "anchor_publications": [
-    "doi:10.2196/22635"
+    "DOI:10.2196/22635"
    ]
   },
   {
@@ -12122,7 +12125,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -12159,8 +12162,8 @@
     "sid:person/satrajit-s-ghosh"
    ],
    "anchor_publications": [
-    "doi:10.1017/s0033291724001557",
-    "doi:10.18653/v1/2021.cinlp-1.8"
+    "DOI:10.1017/s0033291724001557",
+    "DOI:10.18653/v1/2021.cinlp-1.8"
    ]
   },
   {
@@ -12570,7 +12573,7 @@
    "note": "PI Yarkoni"
   },
   {
-   "id": "doi:10.1162/imag.a.1116",
+   "id": "DOI:10.1162/imag.a.1116",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -12579,7 +12582,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -12654,7 +12657,7 @@
    "key_findings": "Hidden Markov modelling of fMRI during an ambiguous spoken story showed that brief contextual priming modulated occupancy of default-mode and multiple-demand brain states in feature-dependent ways, with parallel context-sensitive shifts in moment-to-moment interpretive judgments."
   },
   {
-   "id": "doi:10.64898/2026.03.31.715699",
+   "id": "DOI:10.64898/2026.03.31.715699",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -12663,7 +12666,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -12781,7 +12784,7 @@
    "key_findings": "Using ultra-high-resolution ex vivo diffusion MRI on the Connectome 2.0 scanner, the authors produced the first single-subject reconstruction and atlas of human subcortical fibre pathways at 400 µm, and aligned it with DBS hotspots to flag tracts linked to therapeutic and side effects."
   },
   {
-   "id": "doi:10.64898/2026.04.30.722039",
+   "id": "DOI:10.64898/2026.04.30.722039",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -12790,7 +12793,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -13135,7 +13138,7 @@
    "key_findings": "The BRAIN Initiative Cell Atlas Network introduces a three-layer standards framework — assay-agnostic modelling, harmonised metadata, and an extensible cell-type taxonomy — that turns heterogeneous single-cell and spatial omics datasets into interoperable, reusable brain-cell-atlas products."
   },
   {
-   "id": "doi:10.31234/osf.io/stek7_v1",
+   "id": "DOI:10.31234/osf.io/stek7_v1",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -13144,7 +13147,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -13204,7 +13207,7 @@
    "key_findings": "In a factorial experiment with adults and K–12 educators, identical tutoring responses were rated as more effective when blindly attributed to a human than to AI, even though LLM-authored responses actually outscored human-authored ones, revealing a robust source-based bias against AI in tutoring."
   },
   {
-   "id": "doi:10.1162/imag.a.145",
+   "id": "DOI:10.1162/imag.a.145",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -13213,7 +13216,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -13348,7 +13351,7 @@
    "key_findings": "Connectome-based predictive modelling using baseline resting-state functional connectivity predicted one-year increases in depression and anxiety severity in both ABCD children and BANDA adolescents, adding value beyond clinical and demographic measures despite small effect sizes and heterogeneity."
   },
   {
-   "id": "doi:10.1371/journal.pone.0313351",
+   "id": "DOI:10.1371/journal.pone.0313351",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -13357,7 +13360,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -13428,7 +13431,7 @@
    "key_findings": "Machine learning on pre-treatment demographics, history, and self-reported scales from 157 social anxiety patients explained about 26% of the variance in CBT outcome, with Liebowitz Social Anxiety Scale total, subscale and item-level scores carrying essentially all of the predictive signal."
   },
   {
-   "id": "doi:10.1007/s11881-025-00342-1",
+   "id": "DOI:10.1007/s11881-025-00342-1",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -13437,7 +13440,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -13535,7 +13538,7 @@
    "key_findings": "A survey of 251 K–3 educators across 39 U.S. states found substantial variability in universal literacy-screening implementation — screener choice, training, scoring, and follow-up intervention — with higher burdens in lower-SES schools, suggesting many at-risk students do not receive appropriate support despite legislative mandates."
   },
   {
-   "id": "doi:10.2196/63343",
+   "id": "DOI:10.2196/63343",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -13544,7 +13547,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -13736,7 +13739,7 @@
    "key_findings": "ReproSchema is a schema-centric ecosystem for survey-based data collection that met all 14 FAIR criteria and supported six of eight key survey functionalities across a 12-platform comparison, with three use cases — NIMH-Minimal, ABCD/HBCD longitudinal tracking, and a neuroimaging best-practices checklist — illustrating its reproducibility benefits."
   },
   {
-   "id": "doi:10.1145/3701716.3715483",
+   "id": "DOI:10.1145/3701716.3715483",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -13745,7 +13748,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -13835,7 +13838,7 @@
    "key_findings": "A survey of 23 ontologies — 13 for assertions and evidence and 10 for provenance — maps the current landscape of structured knowledge representation for scientific reproducibility and highlights gaps and opportunities for better-supported, machine-actionable scientific claims."
   },
   {
-   "id": "doi:10.1002/hipo.70028",
+   "id": "DOI:10.1002/hipo.70028",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -13844,7 +13847,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -13956,7 +13959,7 @@
    "key_findings": "Structural and diffusion MRI from 197 adolescents showed that anxiety, but not anxiety-with-depression, was associated with undersized hippocampal grey matter localised to CA1, while both anxiety groups had lower fractional anisotropy in the cingulum-temporal branch — effects independent of reported early-life stress."
   },
   {
-   "id": "doi:10.1523/eneuro.0486-24.2025",
+   "id": "DOI:10.1523/eneuro.0486-24.2025",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -13965,7 +13968,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -14057,7 +14060,7 @@
    "key_findings": "The inaugural Open Data In Neurophysiology symposium synthesises community insights and proposes a path toward open, FAIR neurophysiology data sharing — drawing analogies to structural biology and genomics, and laying out plans to grow social infrastructure for transformative open neuroscience."
   },
   {
-   "id": "doi:10.1177/21677026251351850",
+   "id": "DOI:10.1177/21677026251351850",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -14066,7 +14069,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -14170,7 +14173,7 @@
    "key_findings": "In 203 adolescents from the BANDA study, lower baseline cortical thickness in bilateral temporal pole and left insula predicted one-year increases in internalising symptoms, with the relationship moderated by chronic stress — pointing to stress-sensitive structural markers of worsening depression and anxiety."
   },
   {
-   "id": "doi:10.1093/pnasnexus/pgaf304",
+   "id": "DOI:10.1093/pnasnexus/pgaf304",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -14179,7 +14182,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -14254,7 +14257,7 @@
    "key_findings": "Support-vector machine modelling in 295 UK Biobank older adults found that a combined multimodal model (behaviour, context, and resting-state connectivity) best predicted four-year physical-activity trajectories after a cardiovascular diagnosis, with greenspace, social support, executive function, and default-mode/frontoparietal connectivity as key features."
   },
   {
-   "id": "doi:10.3389/fdgth.2025.1484521",
+   "id": "DOI:10.3389/fdgth.2025.1484521",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -14263,7 +14266,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -14537,7 +14540,7 @@
    "key_findings": "Four interactive panel sessions at the 2024 Bridge2AI Voice AI Symposium combined expert discussion with audience polls to surface diverse stakeholder perspectives on voice-AI research; the paper summarises these panels, with transcripts assembled using Whisper and ChatGPT and reviewed by the authors."
   },
   {
-   "id": "doi:10.1159/000553327",
+   "id": "DOI:10.1159/000553327",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -14546,7 +14549,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -14767,7 +14770,7 @@
    "key_findings": "Through five rounds of review and an in-person workshop, 24 international experts in the VOCAL initiative produced consensus, hierarchical definitions for vocal biomarkers — from broad biomarker concepts down to cardio-respiratory, voice, articulatory, and cognitive/language levels — to standardise terminology for clinical voice-AI development."
   },
   {
-   "id": "doi:10.1101/2025.07.17.665306",
+   "id": "DOI:10.1101/2025.07.17.665306",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -14776,7 +14779,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -14851,7 +14854,7 @@
    "key_findings": "In a naturalistic photograph-taking reinforcement-learning task, representational similarity analysis of fMRI showed that recent-feedback history was robustly encoded in the middle orbital gyrus and inferior frontal gyrus across two independent participant groups, with each region embedded in a distinct functional network."
   },
   {
-   "id": "doi:10.48550/arxiv.2508.10051",
+   "id": "DOI:10.48550/arxiv.2508.10051",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -14860,7 +14863,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -14902,7 +14905,7 @@
    "key_findings": "This perspective argues that scientific infrastructure — using neuroscience as a stress test — must evolve from static, fragmented systems into a dynamic, AI-aligned ecosystem that learns and coordinates, and lays out operational guidelines, funding, and recognition changes needed to enable human-AI scientific collaboration."
   },
   {
-   "id": "doi:10.48550/arxiv.2509.10432",
+   "id": "DOI:10.48550/arxiv.2509.10432",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -14911,7 +14914,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -15010,7 +15013,7 @@
    "key_findings": "This Bridge2AI report defines AI-readiness for biomedical datasets in terms of FAIRness, provenance, characterisation, explainability, sustainability, and computability, and assesses metadata practices across the four Bridge2AI Grand Challenges to provide guidelines and identify gaps applicable to biomedical AI projects more broadly."
   },
   {
-   "id": "doi:10.48550/arxiv.2507.03674",
+   "id": "DOI:10.48550/arxiv.2507.03674",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -15019,7 +15022,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -15117,7 +15120,7 @@
    "key_findings": "StructSense is a modular, task-agnostic open-source framework for LLM-based structured information extraction that uses ontology-encoded domain knowledge, self-evaluative agentic judges, and human-in-the-loop validation, and is demonstrated to generalise across diverse neuroscience extraction tasks."
   },
   {
-   "id": "doi:10.1126/science.adh9979",
+   "id": "DOI:10.1126/science.adh9979",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -15126,7 +15129,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -15376,7 +15379,7 @@
    "key_findings": "A new integrated platform combines an ultraprecision vibrating microtome (MEGAtome), a hydrogel-based multiplexed imaging method (mELAST), and a 3-D reconstruction pipeline (UNSLICE) to extract spatial, molecular, morphological, and connectivity information from the same human brain, applied to multiscale analysis of Alzheimer's disease pathology."
   },
   {
-   "id": "doi:10.1038/s41597-024-03629-x",
+   "id": "DOI:10.1038/s41597-024-03629-x",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -15385,7 +15388,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -15555,7 +15558,7 @@
    "key_findings": "The BANDA dataset, part of the Human Connectome Project, releases multimodal MRI (structural, functional, and diffusion), clinical interviews, neuropsychological measures, and 6/12-month longitudinal data from 215 adolescents — including 152 with anxiety and/or depressive disorders — via the NIMH Data Archive."
   },
   {
-   "id": "doi:10.1162/imag_a_00074",
+   "id": "DOI:10.1162/imag_a_00074",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -15564,7 +15567,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -15744,7 +15747,7 @@
    "key_findings": "BABS is an open-source Python package that wraps BIDS Apps and DataLad to automate scripts, job submission, and full provenance tracking on SGE and Slurm clusters; the authors demonstrate reproducible image processing at scale on 2,565 Healthy Brain Network subjects."
   },
   {
-   "id": "doi:10.1017/s0033291724001557",
+   "id": "DOI:10.1017/s0033291724001557",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -15753,7 +15756,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -15878,7 +15881,7 @@
    "key_findings": "A RoBERTa deep-learning model combining post text and metadata detected suicide-related posts on a military-specific social media platform with 0.85 sensitivity and 0.96 specificity, demonstrating the feasibility of social-media-based suicide-risk screening for servicemembers and veterans."
   },
   {
-   "id": "doi:10.1371/journal.pdig.0000516",
+   "id": "DOI:10.1371/journal.pdig.0000516",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -15887,7 +15890,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -15975,7 +15978,7 @@
    "key_findings": "Machine-learning models classified unilateral vocal-fold paralysis from voice recordings (median AUC 0.87, exceeding clinicians) but largely exploited dataset-specific biases in recording duration and intensity; once those biases were mitigated, models still performed well, and the authors give recommendations for unbiased laryngology screening."
   },
   {
-   "id": "doi:10.1176/appi.ajp.20230249",
+   "id": "DOI:10.1176/appi.ajp.20230249",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -15984,7 +15987,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -16070,7 +16073,7 @@
    "key_findings": "A preregistered Bayesian analysis of 488 ABIDE participants found no consistent evidence for atypical magnitude or increased variability of amygdala resting-state functional connectivity in autism and strong evidence that multivariate patterns were typical — results that were highly sensitive to analytic choices."
   },
   {
-   "id": "doi:10.52294/001c.123059",
+   "id": "DOI:10.52294/001c.123059",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -16079,7 +16082,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -16171,7 +16174,7 @@
    "key_findings": "Brainchop is a JavaScript web application that runs Python-trained deep-learning models entirely in the user's browser using the GPU, performing brain extraction, tissue segmentation, and parcellation of local neuroimaging data in seconds without uploading data to a server."
   },
   {
-   "id": "doi:10.1162/imag_a_00103",
+   "id": "DOI:10.1162/imag_a_00103",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -16180,7 +16183,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -17022,7 +17025,7 @@
    "key_findings": "This paper traces the history, growth principles, and extension mechanisms of the Brain Imaging Data Structure standard, drawing lessons from its community-driven success that may guide standards efforts in other neuroscience modalities and data domains."
   },
   {
-   "id": "doi:10.1038/s41592-023-02145-x",
+   "id": "DOI:10.1038/s41592-023-02145-x",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -17031,7 +17034,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -17435,7 +17438,7 @@
    "key_findings": "Neurodesk is an open-source platform that bundles a growing suite of containerised neuroimaging tools with a browser-accessible virtual desktop, CLI, and notebook compatibility, enabling portable, reproducible analysis on personal computers, HPC, and the cloud."
   },
   {
-   "id": "doi:10.21105/joss.05839",
+   "id": "DOI:10.21105/joss.05839",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -17444,7 +17447,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -17668,7 +17671,7 @@
    "cited_by_count": 33
   },
   {
-   "id": "doi:10.21437/interspeech.2024-1926",
+   "id": "DOI:10.21437/interspeech.2024-1926",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -17677,7 +17680,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -17831,7 +17834,7 @@
    "cited_by_count": 1
   },
   {
-   "id": "doi:10.1001/jamanetworkopen.2024.34354",
+   "id": "DOI:10.1001/jamanetworkopen.2024.34354",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -17840,7 +17843,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -17936,7 +17939,7 @@
    "key_findings": "In 57 adults receiving medical-cannabis cards for anxiety, depression, pain, or insomnia, one year of cannabis use was not associated with significant changes in fMRI activation during working memory, reward, or inhibitory-control tasks — though the authors note the need for higher-dose, younger, and larger cohorts."
   },
   {
-   "id": "doi:10.1101/2024.10.23.619844",
+   "id": "DOI:10.1101/2024.10.23.619844",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -17945,7 +17948,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -18201,7 +18204,7 @@
    "key_findings": "The NIH Bridge2AI Standards Working Group articulates AI-readiness criteria for biomedical data — spanning FAIRness, provenance, characterisation, explainability, ELSI considerations, and computability — as a foundation for rigorous and ethical biomedical AI/ML development."
   },
   {
-   "id": "doi:10.52294/001c.92760",
+   "id": "DOI:10.52294/001c.92760",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -18210,7 +18213,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -18845,7 +18848,7 @@
    "key_findings": "These proceedings document OHBM Brainhack 2022 — the first hybrid OHBM hackathon, held in Glasgow with three regional hubs — covering 14 of the 23 hackathon projects developed at the event along with notes on the organisation."
   },
   {
-   "id": "doi:10.1007/s00418-023-02209-1",
+   "id": "DOI:10.1007/s00418-023-02209-1",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -18854,7 +18857,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -19373,7 +19376,7 @@
    "key_findings": "OME-Zarr is presented as a community-built, cloud-optimised next-generation file format for bioimaging that unifies storage across modalities and is supported by an existing tool and data ecosystem to increase FAIR access and remove scalability and heterogeneity barriers."
   },
   {
-   "id": "doi:10.1371/journal.pbio.3002133",
+   "id": "DOI:10.1371/journal.pbio.3002133",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -19382,7 +19385,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -20152,7 +20155,7 @@
    "key_findings": "This paper guides readers through the BRAIN Initiative Cell Census Network's data ecosystem — its cellular and spatial assays, the BRAIN Cell Data Center, analysis vignettes, and emerging FAIR standards — that together support exploration of brain cell types across mouse, human, and non-human primate."
   },
   {
-   "id": "doi:10.1148/radiol.230096",
+   "id": "DOI:10.1148/radiol.230096",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -20161,7 +20164,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -20397,7 +20400,7 @@
    "key_findings": "Brain growth charts derived from 532 curated clinical pediatric MRI scans with limited imaging pathology were highly correlated (median r = 0.979) with charts from 8,346 research controls, indicating that clinical-control MRI can supplement research datasets without significant bias from clinical indication."
   },
   {
-   "id": "doi:10.1038/s41597-023-02614-0",
+   "id": "DOI:10.1038/s41597-023-02614-0",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -20406,7 +20409,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -20617,7 +20620,7 @@
    "key_findings": "This review compares four intracranial neuroelectrophysiology repositories — DABI, DANDI, OpenNeuro, and Brain-CODE — describing how each supports BIDS and NWB standards and what analytical and customisation tools they offer to advance neuroinformatics."
   },
   {
-   "id": "doi:10.1186/s12888-023-05223-8",
+   "id": "DOI:10.1186/s12888-023-05223-8",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -20626,7 +20629,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -20842,7 +20845,7 @@
    "key_findings": "This RCT protocol will randomise 90 depressed adolescents to either 15 or 30 minutes of mindfulness-based real-time fMRI neurofeedback targeting the default-mode network, testing both target engagement (reduced mPFC-PCC connectivity) and an optimal dose for symptom and rumination reduction."
   },
   {
-   "id": "doi:10.1038/s41562-023-01647-0",
+   "id": "DOI:10.1038/s41562-023-01647-0",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -20851,7 +20854,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -20994,7 +20997,7 @@
    "cited_by_count": 11
   },
   {
-   "id": "doi:10.3389/fninf.2023.1174156",
+   "id": "DOI:10.3389/fninf.2023.1174156",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -21003,7 +21006,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -21125,7 +21128,7 @@
    "key_findings": "NIDM-Terms provides terminology-management tools and a Neuroimaging Data Model semantic representation for annotating BIDS datasets with lab-specific vocabularies, enabling integrated cross-dataset queries that combine neuroimaging and clinical/behavioural criteria."
   },
   {
-   "id": "doi:10.1038/s41598-023-27934-4",
+   "id": "DOI:10.1038/s41598-023-27934-4",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -21134,7 +21137,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -21213,7 +21216,7 @@
    "key_findings": "Acoustic time-series, coordination, and phoneme features extracted from speech recordings of 12 COVID-19 and 15 other-viral-infection patients distinguished the two groups with an AUC of 0.94 using harmonic-to-noise-ratio coordination features from read speech, suggesting nonintrusive speech-based monitoring for COVID-19."
   },
   {
-   "id": "doi:10.1145/3577190.3617133",
+   "id": "DOI:10.1145/3577190.3617133",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -21222,7 +21225,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -21298,7 +21301,7 @@
    "key_findings": "This workshop convenes researchers and practitioners to discuss the design, evaluation, and ethical considerations of multimodal conversational agents as therapeutic interventions for people with neurodevelopmental disorders, aiming to identify challenges, share advances, and chart future directions."
   },
   {
-   "id": "doi:10.7554/elife.78362",
+   "id": "DOI:10.7554/elife.78362",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -21307,7 +21310,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -21427,7 +21430,7 @@
    "key_findings": "The Neurodata Without Borders (NWB) ecosystem defines an open, modular data language for neurophysiology across species and modalities, supported by data-management, analysis, visualisation, and archive tooling that together enable FAIR sharing, reproduction, and reuse of diverse neurophysiology data."
   },
   {
-   "id": "doi:10.1038/s41592-022-01681-2",
+   "id": "DOI:10.1038/s41592-022-01681-2",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -21436,7 +21439,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -21553,7 +21556,7 @@
    "key_findings": "TemplateFlow is an open database and software framework that catalogues and distributes human and non-human brain templates and atlases under FAIR principles, enabling multiverse analyses across references, scales, and species."
   },
   {
-   "id": "doi:10.1007/s12021-020-09509-0",
+   "id": "DOI:10.1007/s12021-020-09509-0",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -21562,7 +21565,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -21759,7 +21762,7 @@
    "key_findings": "The International Neuroinformatics Coordinating Facility has implemented a formal procedure to evaluate and endorse community standards and best practices for FAIR neuroscience, and the paper argues that a dedicated standards body is needed to coordinate the field's currently fragmented standards landscape."
   },
   {
-   "id": "doi:10.1007/s12021-021-09557-0",
+   "id": "DOI:10.1007/s12021-021-09557-0",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -21768,7 +21771,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -21916,7 +21919,7 @@
    "key_findings": "This perspective calls for stronger international coordination — through bodies like INCF — to make neuroscience data FAIR, framing the current lack of standards as the chief barrier to interoperable and reusable multimodal, multiscale research outputs."
   },
   {
-   "id": "doi:10.1038/s41598-022-19356-5",
+   "id": "DOI:10.1038/s41598-022-19356-5",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -21925,7 +21928,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22068,7 +22071,7 @@
    "key_findings": "A 3D convolutional neural network pretrained on 10,099 healthy MRIs and fine-tuned with transfer learning on 806 meningioma scans achieved 88.2% median Dice — within inter-expert variability — demonstrating the clinical feasibility of expert-level automated meningioma segmentation."
   },
   {
-   "id": "doi:10.1016/j.jpsychires.2022.09.051",
+   "id": "DOI:10.1016/j.jpsychires.2022.09.051",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22077,7 +22080,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22184,7 +22187,7 @@
    "key_findings": "A Balanced Random Forest trained on baseline clinical and behavioural data from 492 children predicted full or subsyndromal bipolar disorder 10 years later with 75% sensitivity and 76% specificity, with Child Behaviour Checklist externalising, internalising, and school-competence scores as the strongest predictors."
   },
   {
-   "id": "doi:10.7554/elife.79277",
+   "id": "DOI:10.7554/elife.79277",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22193,7 +22196,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22306,7 +22309,7 @@
    "key_findings": "Neuroscout automatically annotates naturalistic fMRI stimuli using machine-learning models across dozens of datasets and combines this with a fully reproducible analysis builder and execution engine, enabling researchers to easily test hypotheses across multiple ecologically valid studies."
   },
   {
-   "id": "doi:10.1016/j.neuroimage.2022.119737",
+   "id": "DOI:10.1016/j.neuroimage.2022.119737",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22315,7 +22318,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22385,7 +22388,7 @@
    "key_findings": "A directed-graph deep-learning architecture for resting fMRI learns interpretable dynamic directed connectivity that outperformed prior models in classifying schizophrenia, autism, dementia, age, and sex; revealed disorder-specific within- and between-network patterns; and is more robust to confounds than standard dynamic connectivity."
   },
   {
-   "id": "doi:10.3389/fnins.2022.751595",
+   "id": "DOI:10.3389/fnins.2022.751595",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22394,7 +22397,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22467,7 +22470,7 @@
    "key_findings": "Combining anatomical seeds and k-means clustering of dMRI tractography in vivo and post mortem, the authors mapped distinct structural-connectivity profiles for the central, external, and dorsal subdivisions of the human inferior colliculus, with lateral-lemniscal connections strongest to central and external subdivisions."
   },
   {
-   "id": "doi:10.3389/fnins.2022.871228",
+   "id": "DOI:10.3389/fnins.2022.871228",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22476,7 +22479,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22630,7 +22633,7 @@
    "key_findings": "Microscopy-BIDS extends the Brain Imaging Data Structure to 2D/3D, ex/in vivo, micro-CT, optical, and electron microscopy data, providing comprehensible hardware, acquisition, and sample metadata definitions to support multi-modal, multi-scale imaging harmonisation."
   },
   {
-   "id": "doi:10.1109/ojemb.2022.3143688",
+   "id": "DOI:10.1109/ojemb.2022.3143688",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22639,7 +22642,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22737,7 +22740,7 @@
    "key_findings": "A scoping review of 24 studies and 8 apps found that convolutional and recurrent neural networks trained on cough, breathing, and speech recordings can detect COVID-19 with AUC above 0.90 in most cases — including one report of 100% sensitivity for asymptomatic detection from cough — supporting acoustic screening as a complementary tool."
   },
   {
-   "id": "doi:10.1177/21677026221079628",
+   "id": "DOI:10.1177/21677026221079628",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22746,7 +22749,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22904,7 +22907,7 @@
    "key_findings": "Functional connectivity analyses during an emotional-interference task showed that a shared anxiety/depression dimension in adolescents was specifically associated with reduced flexibility of fusiform-gyrus connectivity between attending to and ignoring fearful faces, suggesting a common neurobiological mechanism for negative-information bias."
   },
   {
-   "id": "doi:10.1038/s41586-021-03950-0",
+   "id": "DOI:10.1038/s41586-021-03950-0",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22913,7 +22916,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -22952,7 +22955,7 @@
    "key_findings": "The BRAIN Initiative Cell Census Network's multimodal atlas of mammalian primary motor cortex integrates transcriptomic, epigenomic, spatial, morphological, electrophysiological, and connectivity data; establishes a cross-species consensus taxonomy from mouse to marmoset and human; and provides genetic tools for targeting glutamatergic neuron types."
   },
   {
-   "id": "doi:10.21105/joss.03262",
+   "id": "DOI:10.21105/joss.03262",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -22961,7 +22964,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -23218,7 +23221,7 @@
    "key_findings": "DataLad is an open-source Python tool that builds on git-annex and Git to jointly version-manage code, data, and their relationships at any scale, providing decentralised, FAIR research-data management with full provenance and platform-independent command-line and Python interfaces."
   },
   {
-   "id": "doi:10.1016/j.neuron.2021.04.001",
+   "id": "DOI:10.1016/j.neuron.2021.04.001",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -23227,7 +23230,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -23662,7 +23665,7 @@
    "key_findings": "This NeuroView introduces Brainhack — a hackathon-style meeting format with participant-generated content — and argues it complements traditional conferences by fostering open, inclusive collaboration and education in neuroscience."
   },
   {
-   "id": "doi:10.2196/22369",
+   "id": "DOI:10.2196/22369",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -23671,7 +23674,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -23860,7 +23863,7 @@
    "key_findings": "MindLogger is an open-source, end-to-end-encrypted mobile mental-health platform with web-based applet authoring and admin tools; of hundreds of candidate platforms surveyed, none combined all three of its core features (open source, restricted access, end-to-end encryption), and applets are now deployed in a large longitudinal mental-health study."
   },
   {
-   "id": "doi:10.1007/s12311-020-01213-8",
+   "id": "DOI:10.1007/s12311-020-01213-8",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -23869,7 +23872,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -24020,7 +24023,7 @@
    "key_findings": "Resting-state fMRI in 41 anxious adolescents and 55 controls showed hyperconnectivity between the cerebellar dentate-nucleus salience-motor territory and cortical salience-motor regions in anxiety, with dentate-cortical connectivity also correlating with trait-anxiety scores in controls — highlighting the dentate as a candidate anxiety marker."
   },
   {
-   "id": "doi:10.18653/v1/2021.cinlp-1.8",
+   "id": "DOI:10.18653/v1/2021.cinlp-1.8",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -24029,7 +24032,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -24111,7 +24114,7 @@
    "key_findings": "Using propensity-score stratification on 21,274 first r/SuicideWatch posts and 1.6M follow-up posts, the authors find that receiving more comments increased — not decreased — the likelihood of users posting again; receiving only one comment lowered re-posting by ~14%, motivating systems that encourage more comment volume."
   },
   {
-   "id": "doi:10.1002/hbm.25351",
+   "id": "DOI:10.1002/hbm.25351",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -24120,7 +24123,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -24405,7 +24408,7 @@
    "key_findings": "The Open Brain Consent initiative provides researchers with consent forms — including a GDPR-compliant template — and an associated data user agreement to help share brain-imaging data while respecting participant privacy under national and supranational regulations."
   },
   {
-   "id": "doi:10.1109/ijcnn52387.2021.9534161",
+   "id": "DOI:10.1109/ijcnn52387.2021.9534161",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -24414,7 +24417,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -24482,7 +24485,7 @@
    "key_findings": "An uncertainty-aware boosted ensemble that re-weights training points by predictive uncertainty (rather than loss) improved multimodal speech-and-text classification of Dementia and Parkinson's disease, reduced system entropy, and produced better-calibrated, more robust predictions."
   },
   {
-   "id": "doi:10.1002/lio2.354",
+   "id": "DOI:10.1002/lio2.354",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -24491,7 +24494,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -24555,7 +24558,7 @@
    "key_findings": "This PRISMA systematic review of 127 studies extends prior speech-based mental-health work beyond depression and schizophrenia to cover the DSM-5 spectrum, finding that 63% built ML models, that data heterogeneity hampers comparison, and providing guidelines for transdiagnostic, longitudinal, reproducible speech research."
   },
   {
-   "id": "doi:10.2196/22635",
+   "id": "DOI:10.2196/22635",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -24564,7 +24567,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -24666,7 +24669,7 @@
    "key_findings": "NLP analyses of 826,961 Reddit users' posts before and during COVID-19 showed that r/HealthAnxiety spiked roughly two months ahead of other groups, ADHD/eating-disorder/anxiety groups had the most negative semantic shifts, and mental-health groups grew more linguistically similar to r/HealthAnxiety as pandemic discussion intensified."
   },
   {
-   "id": "doi:10.1038/s41596-020-0327-3",
+   "id": "DOI:10.1038/s41596-020-0327-3",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -24675,7 +24678,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -24904,7 +24907,7 @@
    "key_findings": "This protocol shows how to integrate fMRIPrep — a BIDS-driven, robust, analysis-agnostic fMRI preprocessing pipeline — into a complete task-based fMRI investigation, addressing reproducibility concerns associated with ad-hoc custom preprocessing."
   },
   {
-   "id": "doi:10.1016/j.psychres.2020.112770",
+   "id": "DOI:10.1016/j.psychres.2020.112770",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -24913,7 +24916,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -25025,7 +25028,7 @@
    "key_findings": "Real-time fMRI neurofeedback combined with meditation reduced default-mode-network hyperconnectivity and increased DMN-central-executive anticorrelation in schizophrenia patients, with individual changes in DMN connectivity correlated with reductions in auditory-hallucination severity."
   },
   {
-   "id": "doi:10.1016/j.psychres.2020.112862",
+   "id": "DOI:10.1016/j.psychres.2020.112862",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -25034,7 +25037,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -25146,7 +25149,7 @@
    "key_findings": "A single 21-minute session of real-time fMRI neurofeedback training 10 schizophrenia patients with drug-resistant auditory hallucinations to downregulate superior-temporal-gyrus activity while ignoring a stranger's voice produced significant STG decreases and post-session reductions in hallucination scores."
   },
   {
-   "id": "doi:10.1016/j.nicl.2020.102240",
+   "id": "DOI:10.1016/j.nicl.2020.102240",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -25155,7 +25158,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -25360,7 +25363,7 @@
    "key_findings": "This paper introduces the Boston Adolescent Neuroimaging of Depression and Anxiety study, a Human Connectome Project arm collecting structural, functional, diffusion MRI, clinical, and neuropsychological data from up to 225 adolescents (150 with anxiety or depression), and presents preliminary task-fMRI findings in the first 140 participants."
   },
   {
-   "id": "doi:10.1016/j.nicl.2020.102266",
+   "id": "DOI:10.1016/j.nicl.2020.102266",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -25369,7 +25372,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -25511,7 +25514,7 @@
    "key_findings": "Whole-brain voxel-wise diffusion-tensor regression in 32 children found that greater emotional-dysregulation severity (Child Behaviour Checklist profile) was associated with higher radial diffusivity and lower fractional anisotropy in cingulum-callosal white-matter pathways — a candidate early neural marker of pediatric mood-disorder risk."
   },
   {
-   "id": "doi:10.1016/j.nicl.2020.102242",
+   "id": "DOI:10.1016/j.nicl.2020.102242",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -25520,7 +25523,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -25733,7 +25736,7 @@
    "key_findings": "This paper describes BANDA imaging-acquisition protocols, hardware, and quality-assurance metrics — harmonised where possible with other HCP studies — and shows in 140 adolescents that clinical factors had minimal influence on image quality, supporting public release through the NIMH Data Archive."
   },
   {
-   "id": "doi:10.1146/annurev-neuro-100119-110036",
+   "id": "DOI:10.1146/annurev-neuro-100119-110036",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -25742,7 +25745,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -25861,7 +25864,7 @@
    "key_findings": "This perspective argues that fully exploiting growing big-brain-science data requires explicit, concerted investment in community-driven analysis tools that span modalities, scales, and previously siloed communities — democratising brain science across structure, function, and genetics."
   },
   {
-   "id": "doi:10.1007/s12311-019-01050-4",
+   "id": "DOI:10.1007/s12311-019-01050-4",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -25870,7 +25873,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -25941,7 +25944,7 @@
    "key_findings": "A case study of a patient with developmental delay, autistic and obsessive-compulsive features, and a posterior-fossa arachnoid cyst combines a literature review, resting-state fMRI showing cerebellar dysfunction, and exome sequencing to raise the possibility that cerebellar compression contributes to neuropsychiatric symptoms in some patients."
   },
   {
-   "id": "doi:10.25080/majora-342d178e-012",
+   "id": "DOI:10.25080/majora-342d178e-012",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -25950,7 +25953,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -26040,7 +26043,7 @@
    "key_findings": "Pydra is a new lightweight, open-source Python dataflow engine — originating in neuroimaging but designed as general-purpose — with a flexible, customisable architecture demonstrated through two illustrative examples."
   },
   {
-   "id": "doi:10.1101/2020.09.04.283820",
+   "id": "DOI:10.1101/2020.09.04.283820",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -26049,7 +26052,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -26116,7 +26119,7 @@
    "key_findings": "Functional-gradient analyses on Human Connectome Project resting fMRI (n=1003) showed that interhemispheric functional symmetry in thalamus, lenticular nucleus, cerebellum, and caudate tracks the strength of cerebral-cortical afferent connectivity — generating testable hypotheses about the anatomical basis of subcortical symmetry."
   },
   {
-   "id": "doi:10.1109/isbi45749.2020.9098466",
+   "id": "DOI:10.1109/isbi45749.2020.9098466",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -26125,7 +26128,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -26194,7 +26197,7 @@
    "key_findings": "NiTransforms is an open-source tool, with continuous-integration tests, that reads, manipulates, and applies spatial transforms across AFNI, FSL, FreeSurfer, ITK, and SPM, bridging incompatible transform formats to support reproducible neuroimaging pipelines."
   },
   {
-   "id": "doi:10.1038/s41592-018-0235-4",
+   "id": "DOI:10.1038/s41592-018-0235-4",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -26203,7 +26206,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -26369,7 +26372,7 @@
    }
   },
   {
-   "id": "doi:10.3389/fninf.2019.00001",
+   "id": "DOI:10.3389/fninf.2019.00001",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -26378,7 +26381,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -26580,7 +26583,7 @@
    "key_findings": "This report summarises the ReproNim Center's tools and approach for closing the 'last mile' of neuroimaging reproducibility — re-executability of published findings — by lowering barriers and accelerating uptake of standards at the laboratory level."
   },
   {
-   "id": "doi:10.7554/elife.48932",
+   "id": "DOI:10.7554/elife.48932",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -26589,7 +26592,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -26696,7 +26699,7 @@
    }
   },
   {
-   "id": "doi:10.1371/journal.pone.0210028",
+   "id": "DOI:10.1371/journal.pone.0210028",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -26705,7 +26708,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -26787,7 +26790,7 @@
    "key_findings": "LittleBrain is a freely available tool that projects cerebellar neuroimaging data onto the cerebellum's two principal functional gradients — sensorimotor-to-default-mode and task-focused-to-task-unfocused — to provide gradient-based topographical interpretation that complements discrete parcellation maps."
   },
   {
-   "id": "doi:10.1016/j.dcn.2019.100707",
+   "id": "DOI:10.1016/j.dcn.2019.100707",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -26796,7 +26799,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -26909,7 +26912,7 @@
    "key_findings": "In a neurofeedback task using the participant's own happy face as a cue, 34 depressed and 19 healthy adolescents up-regulated amygdala/hippocampus activity and showed reduced saliency-network engagement to self-face after training, with controls recruiting limbic regions faster than depressed adolescents."
   },
   {
-   "id": "doi:10.1044/2019_jslhr-19-00154",
+   "id": "DOI:10.1044/2019_jslhr-19-00154",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -26918,7 +26921,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -27016,7 +27019,7 @@
    "key_findings": "Adults (N=25) were slower and less accurate at judging sentences containing 'optional infinitive' developmental errors than non-developmental errors and showed greater bilateral inferior-frontal-gyrus activity for developmental errors in both auditory and visual modalities, suggesting persistent neural costs of finite-form processing into adulthood."
   },
   {
-   "id": "doi:10.3389/fninf.2019.00067",
+   "id": "DOI:10.3389/fninf.2019.00067",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -27025,7 +27028,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -27145,7 +27148,7 @@
    "key_findings": "A Bayesian deep neural network using spike-and-slab dropout-based variational inference predicted FreeSurfer segmentations on 11,480 training MRIs (and 418 held-out scans) faster and more accurately than prior methods, with per-voxel predictive uncertainty indicating errors and predicting manual quality-control ratings."
   },
   {
-   "id": "doi:10.3928/00485713-20190412-01",
+   "id": "DOI:10.3928/00485713-20190412-01",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -27154,7 +27157,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -27199,7 +27202,7 @@
    "key_findings": "This article reviews how 20 years of neuroimaging — combined with computational advances and population imaging projects — have prepared the field for a first clinical neuroimaging tool in psychiatry, while detailing social, technical, educational, and policy changes still needed for translation."
   },
   {
-   "id": "doi:10.7554/elife.36652",
+   "id": "DOI:10.7554/elife.36652",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -27208,7 +27211,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -27297,7 +27300,7 @@
    }
   },
   {
-   "id": "doi:10.1177/0194599817739838",
+   "id": "DOI:10.1177/0194599817739838",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -27306,7 +27309,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -27531,7 +27534,7 @@
    }
   },
   {
-   "id": "doi:10.1371/journal.pcbi.1005350",
+   "id": "DOI:10.1371/journal.pcbi.1005350",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -27540,7 +27543,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -27696,7 +27699,7 @@
    }
   },
   {
-   "id": "doi:10.1093/gigascience/giw011",
+   "id": "DOI:10.1093/gigascience/giw011",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -27705,7 +27708,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -27853,7 +27856,7 @@
    "key_findings": "Twelve sessions across four scan conditions (rest, abstract animations, movies, flanker task) in 13 participants showed that between-session functional-connectivity variation exceeded between-condition variation, with high between-condition reliability — providing a benchmark resource for naturalistic-fMRI reliability studies."
   },
   {
-   "id": "doi:10.1044/2017_jslhr-l-15-0446",
+   "id": "DOI:10.1044/2017_jslhr-l-15-0446",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -27862,7 +27865,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -27931,7 +27934,7 @@
    "key_findings": "fMRI during a nonword-discrimination task showed that phonological-working-memory load drove increased activity in bilateral superior temporal gyrus, inferior frontal gyrus, and supplementary motor area, with left STG activation correlated with clinical nonword-repetition performance — linking working memory to speech-perception/production cortex."
   },
   {
-   "id": "doi:10.1371/journal.pcbi.1005209",
+   "id": "DOI:10.1371/journal.pcbi.1005209",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -27940,7 +27943,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -28179,7 +28182,7 @@
    "key_findings": "BIDS Apps wrap neuroimaging analysis tools in Singularity-compatible containers with BIDS-aware interfaces, enabling portable, reproducible, multi-user execution on personal machines and HPC, and the paper releases 22 ready-to-use BIDS Apps spanning common neuroimaging algorithms."
   },
   {
-   "id": "doi:10.1016/j.neuroimage.2017.04.028",
+   "id": "DOI:10.1016/j.neuroimage.2017.04.028",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -28188,7 +28191,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -28265,7 +28268,7 @@
    "key_findings": "A diffeomorphic functional-demons alignment driven by resting-state connectivity-similarity in a joint embedding space identified functionally homologous cortical regions across subjects more accurately than anatomy-based alignment, revealing greater anatomo-functional dissociation in higher-order than primary cortex."
   },
   {
-   "id": "doi:10.1037/neu0000243",
+   "id": "DOI:10.1037/neu0000243",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -28274,7 +28277,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -28378,7 +28381,7 @@
    "key_findings": "Diffusion imaging of 26 children with reading disability and 26 typical readers showed that lower fractional anisotropy of the left arcuate fasciculus distinguished groups but, paradoxically, also tracked better phonological awareness in typical readers — suggesting distinct white-matter maturational trajectories in the two groups."
   },
   {
-   "id": "doi:10.12688/f1000research.10783.2",
+   "id": "DOI:10.12688/f1000research.10783.2",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -28387,7 +28390,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -28474,7 +28477,7 @@
    "key_findings": "The paper describes a set of supplementary procedures — defining data, workflow, execution environment, and results — that turn a neuroimaging manuscript into a verifiable, re-executable publication and thereby a starting point for assessing finding generalisability."
   },
   {
-   "id": "doi:10.1073/pnas.1608282113",
+   "id": "DOI:10.1073/pnas.1608282113",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -28483,7 +28486,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -28617,7 +28620,7 @@
    }
   },
   {
-   "id": "doi:10.1038/sdata.2016.44",
+   "id": "DOI:10.1038/sdata.2016.44",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -28626,7 +28629,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -28862,7 +28865,7 @@
    "key_findings": "The Brain Imaging Data Structure (BIDS) is introduced as a community standard for organising MRI data and metadata using existing file formats, unifying widespread practices and capturing the metadata needed for common processing operations to enable sharing and reuse across labs."
   },
   {
-   "id": "doi:10.1038/mp.2015.109",
+   "id": "DOI:10.1038/mp.2015.109",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -28871,7 +28874,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -28975,7 +28978,7 @@
    "key_findings": "In 38 social-anxiety patients, pre-treatment whole-brain multivoxel resting connectivity and right-inferior-longitudinal-fasciculus tractography each improved prediction of CBT outcome over baseline severity, and combined connectomic measures yielded 81% accuracy in distinguishing better from worse responders."
   },
   {
-   "id": "doi:10.1016/j.neuron.2016.11.020",
+   "id": "DOI:10.1016/j.neuron.2016.11.020",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -28984,7 +28987,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -29089,7 +29092,7 @@
    "key_findings": "Neurophysiological recordings showed that adults and children with dyslexia have significantly diminished stimulus-specific neural adaptation for spoken words, written words, visual objects, and faces relative to controls, with greater adaptation correlated with better reading — implicating rapid-adaptation deficits as a core dyslexia signature."
   },
   {
-   "id": "doi:10.1016/j.jalz.2016.02.006",
+   "id": "DOI:10.1016/j.jalz.2016.02.006",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -29098,7 +29101,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -29848,7 +29851,7 @@
    "key_findings": "The Alzheimer's Disease DREAM Challenge benchmarked crowd-sourced cognitive-decline prediction from publicly available genetic and structural-imaging data and failed to identify a meaningful predictor from either modality, indicating that alternative approaches are needed."
   },
   {
-   "id": "doi:10.1016/j.neuroimage.2015.04.016",
+   "id": "DOI:10.1016/j.neuroimage.2015.04.016",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -29857,7 +29860,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -29976,7 +29979,7 @@
    "key_findings": "NeuroVault.org is an open repository for unthresholded statistical maps, parcellations, and atlases with permanent URLs, a REST API, NIDM-Results support, and built-in tools for visualisation, cognitive decoding, and comparison — filling a gap left by repositories that store only raw data or coordinates."
   },
   {
-   "id": "doi:10.1038/sdata.2016.102",
+   "id": "DOI:10.1038/sdata.2016.102",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -29985,7 +29988,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -30147,7 +30150,7 @@
    "key_findings": "NIDM-Results is a machine-readable specification that captures fMRI mass-univariate analyses and key summary images at a level consistent with best practices, with SPM and FSL exporters and NeuroVault import support — enabling platform-independent sharing of neuroimaging statistical results."
   },
   {
-   "id": "doi:10.3389/fnhum.2016.00190",
+   "id": "DOI:10.3389/fnhum.2016.00190",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -30156,7 +30159,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -30236,7 +30239,7 @@
    "key_findings": "Whole-brain functional and white-matter connectivity in persistent developmental stuttering showed increased cerebellum-thalamus and basal-ganglia-temporal connectivity but reduced perisylvian structural and functional connectivity; greater cerebellum-orbitofrontal connectivity was associated with milder stuttering, suggesting a compensatory role."
   },
   {
-   "id": "doi:10.1186/s13742-016-0121-x",
+   "id": "DOI:10.1186/s13742-016-0121-x",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -30245,7 +30248,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -30599,7 +30602,7 @@
    "key_findings": "Brainhack is described as a participant-driven workshop format that combines hackathon, unconference, and educational elements to foster collaboration in the open-neuroscience community, with details on past events, regional spinoffs, and example projects."
   },
   {
-   "id": "doi:10.21437/interspeech.2016-292",
+   "id": "DOI:10.21437/interspeech.2016-292",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -30608,7 +30611,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -30663,7 +30666,7 @@
    "key_findings": "Vocal features derived from a neurocomputational model of vocal-source control — based on fundamental-frequency contours and biophysical vocal-source representations — produced biomarkers for depression and Parkinson's disease that, even on a single held vowel, matched or outperformed alternative acoustic feature sets."
   },
   {
-   "id": "doi:10.1101/053934",
+   "id": "DOI:10.1101/053934",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -30672,7 +30675,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -30767,7 +30770,7 @@
    "key_findings": "This review surveys the history, practical impact, potential, and remaining challenges of applying Linked Data principles to neuroscience to interconnect data, information, and knowledge for credibility, visibility, and efficient reuse."
   },
   {
-   "id": "doi:10.3389/fninf.2015.00008",
+   "id": "DOI:10.3389/fninf.2015.00008",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -30776,7 +30779,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -30896,7 +30899,7 @@
    "key_findings": "NeuroVault.org is presented as a web-based repository for storing, visualising, and decoding unthresholded human-brain statistical maps, with Neurosynth-based cognitive decoding and a public REST API supporting meta- and coactivation analyses."
   },
   {
-   "id": "doi:10.1016/j.neuron.2014.10.047",
+   "id": "DOI:10.1016/j.neuron.2014.10.047",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -30905,7 +30908,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -30962,7 +30965,7 @@
    "key_findings": "This review surveys neuroimaging studies in which 'neuromarkers' predict future education, learning, criminality, health behaviours, and treatment responses — often better than behavioural measures — arguing that neuroprognosis can support personalised educational and clinical practice."
   },
   {
-   "id": "doi:10.1007/978-3-319-24571-3_38",
+   "id": "DOI:10.1007/978-3-319-24571-3_38",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -30971,7 +30974,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31027,7 +31030,7 @@
    "key_findings": "A multi-atlas label-fusion algorithm aligned subjects' resting-state-fMRI manifolds in a shared embedding space and predicted task activations across individuals more accurately than morphology-based alignment, with gain distributed heterogeneously across cortex and tasks."
   },
   {
-   "id": "doi:10.21437/interspeech.2015-187",
+   "id": "DOI:10.21437/interspeech.2015-187",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31036,7 +31039,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31114,7 +31117,7 @@
    "cited_by_count": 35
   },
   {
-   "id": "doi:10.3389/fnhum.2014.00054",
+   "id": "DOI:10.3389/fnhum.2014.00054",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31123,7 +31126,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31201,7 +31204,7 @@
    "key_findings": "Probabilistic tractography across 28 bilateral speech-cortex ROIs showed that persons who stutter had weaker network-level cortico-cortical connectivity than fluent speakers, with components — particularly left ventral premotor and middle primary motor cortex — negatively correlated with stuttering severity."
   },
   {
-   "id": "doi:10.1371/journal.pone.0100552",
+   "id": "DOI:10.1371/journal.pone.0100552",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31210,7 +31213,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31301,7 +31304,7 @@
    "key_findings": "In a rate-varying word-by-word sentence-comprehension fMRI task, dyslexic adults' accuracy dropped disproportionately at fast rates, and typical readers showed larger rate-driven activation gains in left prefrontal and superior-temporal regions — implicating semantic/phonological hubs in the fluency deficit of dyslexia."
   },
   {
-   "id": "doi:10.1016/j.bandl.2014.01.002",
+   "id": "DOI:10.1016/j.bandl.2014.01.002",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31310,7 +31313,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31379,7 +31382,7 @@
    "key_findings": "Time-varying auditory-feedback perturbation during multisyllabic speech in persons who stutter produced only subtle anomalies in spatial control but substantially weaker fine-tuning of articulatory timing — especially early in responses — pointing to slow auditory-motor integration for temporal control."
   },
   {
-   "id": "doi:10.1016/j.nicl.2014.07.002",
+   "id": "DOI:10.1016/j.nicl.2014.07.002",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31388,7 +31391,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31597,7 +31600,7 @@
    "key_findings": "This review outlines the state and clinical potential of real-time fMRI neurofeedback for driving plasticity in brain function, cognition, and behaviour, and proposes research strategies to develop rtfMRI into a personalised neurotherapeutic tool for brain disorders."
   },
   {
-   "id": "doi:10.1001/2013.jamapsychiatry.5",
+   "id": "DOI:10.1001/2013.jamapsychiatry.5",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31606,7 +31609,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31724,7 +31727,7 @@
    "key_findings": "Pretreatment fMRI responses to angry-vs-neutral faces in 39 medication-free social-anxiety patients selectively predicted subsequent CBT outcome, with brain measures plus baseline severity explaining over 40% of outcome variance — substantially exceeding clinical predictors alone and supporting neuroimaging-based personalised treatment selection."
   },
   {
-   "id": "doi:10.1152/jn.00533.2011",
+   "id": "DOI:10.1152/jn.00533.2011",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31733,7 +31736,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31815,7 +31818,7 @@
    "key_findings": "Real-time fMRI was used both to predict and to actively trigger trials based on pre-stimulus brain states: greater pre-stimulus DMN activity preceded slower reaction times and greater supplementary-motor-area activity preceded faster reaction times, and triggering trials in these states significantly modulated measured vigilance performance."
   },
   {
-   "id": "doi:10.3389/fnins.2013.00162",
+   "id": "DOI:10.3389/fnins.2013.00162",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31824,7 +31827,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31905,7 +31908,7 @@
    "cited_by_count": 43
   },
   {
-   "id": "doi:10.1109/prni.2013.64",
+   "id": "DOI:10.1109/prni.2013.64",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31914,7 +31917,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -31968,7 +31971,7 @@
    "key_findings": "This study compares parcellation strategies — population-wide clustering, subject-specific parcellation, transferred anatomical labels, and mapped large-scale networks — for predicting CBT outcome in social-anxiety patients from resting-state fMRI, showing that prediction depends on the labelling approach used."
   },
   {
-   "id": "doi:10.3389/fnins.2013.00055",
+   "id": "DOI:10.3389/fnins.2013.00055",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -31977,7 +31980,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32024,7 +32027,7 @@
    "key_findings": "Simulations and validation fMRI experiments show that sparse-sampling acquisitions benefit from (1) physiologically informed hemodynamic-convolved models, (2) high stimulus-presentation rates to maximise effect size, and (3) short-to-intermediate TR delays to increase samples and statistical power."
   },
   {
-   "id": "doi:10.3389/fninf.2012.00009",
+   "id": "DOI:10.3389/fninf.2012.00009",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32033,7 +32036,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32167,7 +32170,7 @@
    "key_findings": "This review summarises motivations, the current landscape, and ongoing technical and sociological barriers to neuroimaging data sharing, and describes INCF Task Force tools — including electronic-data-capture-based approaches — designed to ease and automate sharing of raw, processed, and derived data with appropriate metadata."
   },
   {
-   "id": "doi:10.1371/journal.pone.0041830",
+   "id": "DOI:10.1371/journal.pone.0041830",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32176,7 +32179,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32253,7 +32256,7 @@
    "key_findings": "In 21 persons who stutter and 18 controls, real-time first-formant perturbation during the vowel [ε] elicited compensatory responses of normal latency but with 47% smaller magnitude in stutterers; low-level auditory acuity was unaffected, supporting defective inverse models that map auditory error to motor commands."
   },
   {
-   "id": "doi:10.3389/fncom.2012.00018",
+   "id": "DOI:10.3389/fncom.2012.00018",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32262,7 +32265,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32325,7 +32328,7 @@
    "key_findings": "This perspective draws on open-source software practices and social networking to propose an interactive scientific-review model that distributes reviews, exposes methods and materials, credits and quantifies reviewers, and supports evolving post-publication dialogue."
   },
   {
-   "id": "doi:10.48550/arxiv.1209.5922",
+   "id": "DOI:10.48550/arxiv.1209.5922",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32334,7 +32337,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32437,7 +32440,7 @@
    "key_findings": "The BIRN/INCF Derived Data Working Group lays out four components needed for integrated cross-repository neuroimaging data access — a structured terminology, a formal data model with provenance, a consistent web-service API, and a provenance library — and reports on its progress toward unified tools."
   },
   {
-   "id": "doi:10.3389/fninf.2011.00013",
+   "id": "DOI:10.3389/fninf.2011.00013",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32446,7 +32449,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32544,7 +32547,7 @@
    "key_findings": "Nipype is presented as an open-source Python framework that wraps existing neuroimaging packages (AFNI, FSL, FreeSurfer, SPM, and others) with uniform interfaces and workflow primitives, supports local and cluster execution without scripting, and accelerates comparative algorithm development and reproducible research."
   },
   {
-   "id": "doi:10.1016/j.neuroimage.2010.12.065",
+   "id": "DOI:10.1016/j.neuroimage.2010.12.065",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32553,7 +32556,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32630,7 +32633,7 @@
    "key_findings": "Event-related sparse-sampling fMRI with a pneumatic jaw-blocking device showed that unexpected somatosensory perturbation during speech increased activity in bilateral ventral motor cortex, right supramarginal gyrus, ventral premotor and inferior frontal regions, and posterior cerebellum, with structural-equation modelling indicating altered effective connectivity among these areas."
   },
   {
-   "id": "doi:10.1523/jneurosci.3653-11.2011",
+   "id": "DOI:10.1523/jneurosci.3653-11.2011",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32639,7 +32642,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32702,7 +32705,7 @@
    "key_findings": "A novel time-varying formant-trajectory perturbation applied during 'I owe you a yo-yo' showed that auditory feedback drives bidirectional compensation of spatial articulatory targets and adjustments of syllable timing under slow-down or speed-up perturbations — revealing fine-grained auditory-motor control of multisyllabic speech."
   },
   {
-   "id": "doi:10.1016/j.neuroimage.2010.07.060",
+   "id": "DOI:10.1016/j.neuroimage.2010.07.060",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32711,7 +32714,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32795,7 +32798,7 @@
    "key_findings": "A new incremental general-linear-model approach computes single-acquisition BOLD activation by separating neural signal from noise and scaling the residual by its estimator variance, yielding a more accurate moment-to-moment feedback signal for real-time fMRI than the only previously published method."
   },
   {
-   "id": "doi:10.1001/archoto.2011.11",
+   "id": "DOI:10.1001/archoto.2011.11",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32804,7 +32807,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -32887,7 +32890,7 @@
    "key_findings": "A novel cine-MRI protocol with simultaneous audio recording produced diagnostic-quality dynamic images of velopharyngeal closure during validated phonatory tasks in three adult volunteers and five children with velopharyngeal insufficiency, suggesting a quick, safe alternative to current VPI evaluations."
   },
   {
-   "id": "doi:10.1044/1092-4388(2010/09-0256)",
+   "id": "DOI:10.1044/1092-4388(2010/09-0256)",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -32896,7 +32899,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33032,7 +33035,7 @@
    ]
   },
   {
-   "id": "doi:10.1016/j.neuroimage.2010.05.075",
+   "id": "DOI:10.1016/j.neuroimage.2010.05.075",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33041,7 +33044,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33146,7 +33149,7 @@
    "key_findings": "Manually labelled landmarks in 31 children aged 4-11 showed that surface-based registration outperformed volume-based methods for cortical alignment without producing age-related bias, supporting valid cross-age structural and functional comparisons within this developmental window."
   },
   {
-   "id": "doi:10.1016/j.neuroimage.2010.01.091",
+   "id": "DOI:10.1016/j.neuroimage.2010.01.091",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33155,7 +33158,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33252,7 +33255,7 @@
    "key_findings": "Permutation tests across >16,000 registrations of 80 manually labeled brains showed that de-skulling helps volume registration, custom optimal-average templates improve registration over pairwise approaches, and current resampling methods prevent a fair head-to-head comparison of the top volume- and surface-based algorithms."
   },
   {
-   "id": "doi:10.1044/1092-4388(2008/07-0119)",
+   "id": "DOI:10.1044/1092-4388(2008/07-0119)",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33261,7 +33264,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33475,7 +33478,7 @@
    "cited_by_count": 15
   },
   {
-   "id": "doi:10.1901/jaba.2008.2008-97",
+   "id": "DOI:10.1901/jaba.2008.2008-97",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33484,7 +33487,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33568,7 +33571,7 @@
    "key_findings": "A linear support-vector-machine classifier with general-linear-model feature extraction and t-test feature selection predicted memory-encoding success from fMRI patterns better than chance and close to subjects' own predictions, and exceeded 90% accuracy on a simple motor task."
   },
   {
-   "id": "doi:10.1080/03008200500344017",
+   "id": "DOI:10.1080/03008200500344017",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33577,7 +33580,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33654,7 +33657,7 @@
    "cited_by_count": 5
   },
   {
-   "id": "doi:10.1016/j.bandl.2005.06.001",
+   "id": "DOI:10.1016/j.bandl.2005.06.001",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33663,7 +33666,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33719,7 +33722,7 @@
    "key_findings": "A neural-network model whose components correspond to premotor, motor, auditory, somatosensory cortex, and cerebellum reproduces lip- and jaw-perturbation compensation during speech, and anatomically grounded simulations of fMRI experiments match observed activations for simple syllable production."
   },
   {
-   "id": "doi:10.1186/1471-2342-5-7",
+   "id": "DOI:10.1186/1471-2342-5-7",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33728,7 +33731,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33799,7 +33802,7 @@
    "key_findings": "When at least four of the 20 manually labelled atlases were used, the Mindboggle multi-atlas labelling approach produced significantly higher label-agreement with manual labels than single-atlas labelling, and yielded confidence measures based on cross-atlas vote consistency."
   },
   {
-   "id": "doi:10.1044/1092-4388(2004/005)",
+   "id": "DOI:10.1044/1092-4388(2004/005)",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33808,7 +33811,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -33938,7 +33941,7 @@
    ]
   },
   {
-   "id": "doi:10.1016/s1053-8119(03)00188-5",
+   "id": "DOI:10.1016/s1053-8119(03)00188-5",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -33947,7 +33950,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34172,7 +34175,7 @@
    ]
   },
   {
-   "id": "doi:10.31234/osf.io/9rdux_v4",
+   "id": "DOI:10.31234/osf.io/9rdux_v4",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34181,7 +34184,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34242,7 +34245,7 @@
    "key_findings": "This work proposes 'Text Psychometrics' — applying questionnaire-style validity and reliability evaluation to NLP-based construct measurement — and demonstrates it by assessing content validity in crisis-counseling and Reddit corpora and by predicting imminent suicide risk from 49 known risk factors."
   },
   {
-   "id": "doi:10.31234/osf.io/vf2bc_v3",
+   "id": "DOI:10.31234/osf.io/vf2bc_v3",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34251,7 +34254,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34331,7 +34334,7 @@
    "key_findings": "GPT-4-turbo automatically generated a Suicide Risk Lexicon covering 49 risk factors that, after clinical validation, outperformed LIWC and matched some deep-learning models in predicting imminent risk; the released construct-tracker Python package supports building similar interpretable lexicons across domains."
   },
   {
-   "id": "doi:10.48550/arxiv.2409.09511",
+   "id": "DOI:10.48550/arxiv.2409.09511",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34340,7 +34343,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34415,7 +34418,7 @@
    "key_findings": "A modified probing approach predicts interpretable eGeMAPS acoustic features from WavLM embeddings to identify which features each emotion most depends on; on RAVDESS and SAVEE, Energy, Frequency, Spectral, and Temporal acoustic categories provided diminishing information to speech-emotion recognition in that order."
   },
   {
-   "id": "doi:10.3389/fdgth.2025.1514971",
+   "id": "DOI:10.3389/fdgth.2025.1514971",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34424,7 +34427,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34529,7 +34532,7 @@
    "key_findings": "In 47 voice-clinic participants, the Bridge2AI-Voice smartphone app achieved a 68% overall task-completion rate but only 41% successful acoustic-task recording, with 41% of completed tasks requiring assistance — indicating the app is a promising but currently UI/UX-limited tool for clinical voice-data collection."
   },
   {
-   "id": "doi:10.48550/arxiv.2508.08276",
+   "id": "DOI:10.48550/arxiv.2508.08276",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34538,7 +34541,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34599,7 +34602,7 @@
    "key_findings": "Adapting a neuroscientific contrast localizer to 11 LLMs and 5 VLMs (3B-90B params), targeted ablation of functionally-selected units sometimes hurt task accuracy less than ablating low-activation units, and math-localizer units impaired Theory-of-Mind performance more than ToM-localizer units - questioning the causal relevance of contrast-based localizers in language models."
   },
   {
-   "id": "doi:10.48550/arxiv.2401.00077",
+   "id": "DOI:10.48550/arxiv.2401.00077",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34608,7 +34611,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34775,7 +34778,7 @@
    "key_findings": "Proposes SciOps - a DevOps-inspired five-level Capability Maturity Model for data-intensive research - describing technology-enabled digital research environments that integrate computation, automation, and AI across the research cycle to improve reproducibility, scalability, and closed-loop discovery in multidisciplinary teams."
   },
   {
-   "id": "doi:10.48550/arxiv.1207.5827",
+   "id": "DOI:10.48550/arxiv.1207.5827",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34784,7 +34787,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34823,7 +34826,7 @@
    "key_findings": "Presents a single-channel adaptive filter combining time- and frequency-domain elements to suppress repetitive fMRI scanner noise in recorded speech, achieving significant SNR gains suitable for both real-time patient-operator communication and offline speech analysis during image acquisition."
   },
   {
-   "id": "doi:10.64898/2026.05.28.26354346",
+   "id": "DOI:10.64898/2026.05.28.26354346",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34832,7 +34835,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -34921,7 +34924,7 @@
    "key_findings": "Introduces VoiceFM, a contrastive clinical-voice foundation model that aligns a fine-tuned Whisper encoder with 44 clinical features on the Bridge2AI-Voice dataset (984 participants, 40,056 recordings, 5 medical centers). Frozen-embedding linear probes reach mean AUROC 0.952 across five screening tasks - outperforming frozen Whisper/HuBERT - generalize to held-out patients (0.99 for Alzheimer's/dementia/MCI), and transfer without fine-tuning to Spanish-language Parkinson's detection and the mPower smartphone study."
   },
   {
-   "id": "doi:10.1016/j.dcn.2026.101755",
+   "id": "DOI:10.1016/j.dcn.2026.101755",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34930,7 +34933,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -35007,7 +35010,7 @@
    "key_findings": "Describes ABCD-ReproNim, a NIBIB-P41/ReproNim partnered training program for responsible and reproducible analyses of ABCD Study data. Combines a semester-long online course (lectures, readings, exercises) using active-learning and hack-week pedagogy with an in-person team hackathon at Florida International University, and has reached 1.1K registered students and 18K+ YouTube views since 2020."
   },
   {
-   "id": "doi:10.64898/2026.05.31.729141",
+   "id": "DOI:10.64898/2026.05.31.729141",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -35016,7 +35019,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -35086,7 +35089,7 @@
    "key_findings": "Fitting sticky hierarchical Dirichlet-process HMMs to fMRI from six individuals who each watched up to ~146 episodes (~54 h) of Friends, the brain's repertoire of recurring states is largely a stable, individual-specific property that recurs across diverse narrative contexts rather than being reshaped by each new story."
   },
   {
-   "id": "doi:10.64898/2026.02.18.705310",
+   "id": "DOI:10.64898/2026.02.18.705310",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -35095,7 +35098,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -35256,7 +35259,7 @@
    "key_findings": "Using ultra-high-gradient systems (including the Connectome 2.0 scanner) from the BRAIN CONNECTS / LINC center, the most comprehensive post-mortem diffusion-MRI sampling of macaque and human brain to date (~250 h/sample, resolutions to 0.25 mm, ~50 shells, b-values to 64,000 s/mm2) maps axonal architecture and microstructure across species."
   },
   {
-   "id": "doi:10.64898/2026.04.02.716198",
+   "id": "DOI:10.64898/2026.04.02.716198",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -35265,7 +35268,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -35512,7 +35515,7 @@
    "key_findings": "A multimodal pipeline images cerebral white matter in one ex vivo human hemisphere across scales - mesoscopic diffusion MRI, Hierarchical Phase-Contrast Tomography (HiP-CT, 20 -> 0.857 um/voxel), osmium micro-CT (0.364 um), and electron microscopy (4 nm) - with intrinsic cross-scale alignment, resolving from whole-brain axonal projections down to single myelinated axons."
   },
   {
-   "id": "doi:10.31222/osf.io/x64tn_v1",
+   "id": "DOI:10.31222/osf.io/x64tn_v1",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -35521,7 +35524,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -35823,7 +35826,7 @@
    "key_findings": "Introduces Neurobagel, a federated network for cohort discovery across locally governed, access-controlled datasets: graphical tools plus a decentralized query infrastructure let researchers harmonize and discover data under local privacy regulations, now deployed by consortia and platforms across four continents."
   },
   {
-   "id": "doi:10.64898/2026.03.05.709819",
+   "id": "DOI:10.64898/2026.03.05.709819",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -35832,7 +35835,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -35920,7 +35923,7 @@
    "key_findings": "Quantifying electrophysiological and morphological properties of GABAergic inhibitory neurons across the full depth of a rat barrel-cortex column shows the properties shift gradually with cortical depth regardless of cell type; once depth-related shifts are isolated, consistent morphoelectric relationships distinguish the four main molecular interneuron types at any depth."
   },
   {
-   "id": "doi:10.7554/elife.111008",
+   "id": "DOI:10.7554/elife.111008",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -35929,7 +35932,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -36004,7 +36007,7 @@
    "key_findings": "Preregistered stacked-encoding analyses of naturalistic movie-fMRI (Healthy Brain Network) show autism is not linked to enhanced low-level sensory encoding; instead, autistic children/adolescents show reduced high-level visual representations and a shift toward low-level encoding in integrative/social regions (notably pSTS), where the high-low weighting tracks Social Responsiveness Scale scores - favoring weak-central-coherence over early-sensory-enhancement accounts."
   },
   {
-   "id": "doi:10.64898/2025.12.23.696301",
+   "id": "DOI:10.64898/2025.12.23.696301",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -36013,7 +36016,7 @@
     "@type": "xsd:date"
    },
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -37636,7 +37639,7 @@
     "schema:ImageObject"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -37648,7 +37651,7 @@
    "width": 1500,
    "height": 1397,
    "depicts": [
-    "doi:10.7554/elife.48932"
+    "DOI:10.7554/elife.48932"
    ]
   },
   {
@@ -37657,7 +37660,7 @@
     "schema:ImageObject"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -37669,7 +37672,7 @@
    "width": 1500,
    "height": 1314,
    "depicts": [
-    "doi:10.7554/elife.36652"
+    "DOI:10.7554/elife.36652"
    ]
   },
   {
@@ -37678,7 +37681,7 @@
     "schema:ImageObject"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -37690,7 +37693,7 @@
    "width": 1376,
    "height": 980,
    "depicts": [
-    "doi:10.1038/s41592-018-0235-4"
+    "DOI:10.1038/s41592-018-0235-4"
    ]
   },
   {
@@ -37720,7 +37723,7 @@
     "schema:ImageObject"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -37731,7 +37734,7 @@
    "width": 894,
    "height": 308,
    "depicts": [
-    "doi:10.1371/journal.pcbi.1005350"
+    "DOI:10.1371/journal.pcbi.1005350"
    ]
   },
   {
@@ -37740,7 +37743,7 @@
     "schema:ImageObject"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -37750,7 +37753,7 @@
    "image_kind": "figure",
    "encoding_format": "image/gif",
    "depicts": [
-    "doi:10.1073/pnas.1608282113"
+    "DOI:10.1073/pnas.1608282113"
    ]
   },
   {
@@ -39506,7 +39509,7 @@
     "schema:NewsArticle"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -39516,7 +39519,7 @@
     "@value": "2019-02-07",
     "@type": "xsd:date"
    },
-   "headline": "ReproNim perspective article on reproducibility in neuroimaging is that Everything matters. Published in Frontiers in Neuroinformatics. <a href=\"https://doi.org/10.3389/fninf.2019.00001\">doi:10.3389/fninf.2019.00001</a>"
+   "headline": "ReproNim perspective article on reproducibility in neuroimaging is that Everything matters. Published in Frontiers in Neuroinformatics. <a href=\"https://doi.org/10.3389/fninf.2019.00001\">DOI:10.3389/fninf.2019.00001</a>"
   },
   {
    "id": "sid:news/2019-01-16",
@@ -39524,7 +39527,7 @@
     "schema:NewsArticle"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -39534,7 +39537,7 @@
     "@value": "2019-01-16",
     "@type": "xsd:date"
    },
-   "headline": "Visualizing cerebellar gradients with the LittleBrain toolbox published in PLOS One. <a href=\"https://doi.org/10.1371/journal.pone.0210028\">doi:10.1371/journal.pone.0210028</a>"
+   "headline": "Visualizing cerebellar gradients with the LittleBrain toolbox published in PLOS One. <a href=\"https://doi.org/10.1371/journal.pone.0210028\">DOI:10.1371/journal.pone.0210028</a>"
   },
   {
    "id": "sid:news/2019-01-15",
@@ -39597,7 +39600,7 @@
     "schema:NewsArticle"
    ],
    "modified": {
-    "@value": "2026-11-25",
+    "@value": "2026-11-26",
     "@type": "xsd:date"
    },
    "derived_from": [
@@ -39607,7 +39610,7 @@
     "@value": "2018-12-10",
     "@type": "xsd:date"
    },
-   "headline": "Robust preprocessing for task and resting fMRI using fMRIPrep published in Nature Methods. <a href=\"https://doi.org/10.1038/s41592-018-0235-4\">doi:10.1038/s41592-018-0235-4</a>"
+   "headline": "Robust preprocessing for task and resting fMRI using fMRIPrep published in Nature Methods. <a href=\"https://doi.org/10.1038/s41592-018-0235-4\">DOI:10.1038/s41592-018-0235-4</a>"
   },
   {
    "id": "sid:news/2018-11-13",
