@@ -23,7 +23,7 @@ const { post, date } = Astro.props;
 const { Content } = await render(post);
 ---
 <BaseLayout title={post.data.title} description={post.data.excerpt}>
-  <Container size="narrow" class="pt-14 pb-6">
+  <Container size="narrow" class="pt-8 md:pt-10 pb-4">
     <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
       <a href={withBase("/blog")} class="hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
         ← Blog
@@ -48,7 +48,7 @@ const { Content } = await render(post);
       {post.data.author && <span>· {post.data.author}</span>}
     </div>
   </Container>
-  <Container size="narrow" class="py-10">
+  <Container size="narrow" class="py-6">
     <article class="prose">
       <Content />
     </article>

@@ -43,13 +43,16 @@ export function jsonldFor(...ids: (string | undefined)[]) {
   return { "@context": [KG_CONTEXT, { "@base": KG_BASE }], "@graph": nodes };
 }
 
-/** A project's funding in one short line, such as "NIDA U24 DA064429",
- *  built from its grants, or its funding statement when it has none. */
+/** A project's funding in one short line for its card: its funding
+ *  statement, or a summary of its grants ("NIDA U24 DA064429") when it has none. */
 export function fundingLine(p: Project): string | undefined {
+  // The curated statement says more (roles, co-PIs, several funders, a gift's
+  // donors), so cards keep it; the grant summary is only the fallback.
+  if (p.funder) return p.funder;
   if (p.grants?.length) {
     return p.grants.map((g) => [g.funderShort ?? g.funder, g.award].filter(Boolean).join(" ")).join("; ");
   }
-  return p.funder;
+  return undefined;
 }
 
 /** A project's funding statement, when it says more than its one grant

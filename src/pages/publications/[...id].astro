@@ -35,7 +35,7 @@ const jsonld = jsonldFor(pub.iri);
 
 ---
 <BaseLayout title={pub.title} description={`${pub.year} · ${pub.venue ?? pub.type}`} jsonld={jsonld}>
-  <Container size="default" class="pt-14 pb-6">
+  <Container size="default" class="pt-8 md:pt-10 pb-4">
     <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
       <a href={withBase("/publications")} class="hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
         ← Publications
@@ -269,7 +269,7 @@ const jsonld = jsonldFor(pub.iri);
       </section>
     )}
 
-    <p class="mt-12 text-xs text-(--color-ink-faint)">
+    <p class="mt-10 text-xs text-(--color-ink-faint)">
       This record was curated from the lab's CV, NCBI MyBibliography, and OpenAlex. See
       <a href="https://github.com/sensein/sensein.github.io/blob/main/PROJECTS.md" class="underline underline-offset-3 hover:text-(--color-accent)">PROJECTS.md</a>
       for how to add or correct an entry via a pull request.

@@ -8,11 +8,13 @@ interface Props {
   description?: string;
   lede?: string;
   size?: "narrow" | "default" | "wide";
+  /** JSON-LD for the records this page shows, passed through to BaseLayout. */
+  jsonld?: unknown;
 }
 
-const { title, eyebrow, description, lede, size = "default" } = Astro.props;
+const { title, eyebrow, description, lede, size = "default", jsonld } = Astro.props;
 ---
-<BaseLayout title={title} description={description ?? lede}>
+<BaseLayout title={title} description={description ?? lede} jsonld={jsonld}>
   <Container size={size} class="pt-8 md:pt-10 pb-2">
     {eyebrow && (
       <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium mb-2">
