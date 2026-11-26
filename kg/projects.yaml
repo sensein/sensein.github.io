@@ -457,6 +457,7 @@ projects:
     thesis work.
   funding_statement: Simons Foundation (Site PI, 2025–2026); Kennedy Krieger Institute partnership
   funded_by:
+  - sid:grant/simons-home-videos-phenotyping
   - sid:grant/simons-home-videos
   image: sid:image/projects/sails-pipeline
   themes:

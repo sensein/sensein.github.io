@@ -1,12 +1,21 @@
 # Funding awards, linked from projects through funded_by.
 # Taken from the "Research contracts and grants" section of Satrajit Ghosh's CV
-# (CV_260511, linked from his profile in people.yaml), current and past, in the
-# CV's order. Award amounts are left out on purpose; the site does not show them.
+# (CV_260923, the September 2026 version; people.yaml links the latest CV),
+# current and past, in the CV's order. Award amounts are left out on purpose; the site does not show them.
 # award_status follows the CV's Current and Past headings.
 # Schema: schema/sensein.yaml. Build: python3 scripts/kg/build.py
 
 grants:
 # ---- Current ---------------------------------------------------------------------
+- id: sid:grant/simons-home-videos-phenotyping
+  title: Advancing the Generalizability and Scalability of Quantitative Behavioral Phenotyping from Naturalistic Home Videos
+  funder: sid:org/simons-foundation
+  lab_role: Co-PI
+  start_date: '2026'
+  end_date: '2027'
+  award_status: current
+  derived_from:
+  - cv
 - id: sid:grant/um1-mh134812
   title: Center for Multi-Scale Multi-Omic Human Brain Atlas
   award_number: UM1 MH134812
@@ -18,16 +27,6 @@ grants:
   derived_from:
   - site-yaml-v1
   - cv
-- id: sid:grant/mgaic-early-literacy-tutors
-  title: AI-Driven Tutors and Open Datasets for Early Literacy Education
-  funder: sid:org/mit-genai-consortium
-  start_date: '2025'
-  end_date: '2026'
-  award_status: current
-  derived_from:
-  - cv
-  curation_notes:
-  - The CV gives no role for the lab on this award.
 - id: sid:grant/u24-da064429
   title: BBQS AI Resource and Data Coordinating Center (BARD.CC)
   award_number: U24 DA064429
@@ -103,7 +102,7 @@ grants:
   lab_role: Site PI
   note: PI David Kennedy, UMass Medical School; Director, Technology, Research and Development Project 2
   start_date: '2016'
-  end_date: '2026'
+  end_date: '2031'
   award_status: current
   derived_from:
   - site-yaml-v1
@@ -299,5 +298,13 @@ grants:
   award_status: past
   derived_from:
   - cv
+- id: sid:grant/mgaic-early-literacy-tutors
+  title: AI-Driven Tutors and Open Datasets for Early Literacy Education
+  funder: sid:org/mit-genai-consortium
+  start_date: '2025'
+  end_date: '2026'
+  award_status: past
+  derived_from:
+  - cv
   curation_notes:
-  - The CV lists this award under Past although it runs to 2026; SAILS, which it funds, is an active project.
+  - The CV gives no role for the lab on this award.
