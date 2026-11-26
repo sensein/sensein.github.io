@@ -25,7 +25,7 @@ const chips = themeMeta.topics
   size="wide"
   lede="There are no biological markers for diagnosing mental illness or for indicating how best to treat it. Our group hopes to change that — building robust, predictive models of human health from neuroimaging, speech, and machine learning."
 >
-  <section class="grid lg:grid-cols-[1.6fr_1fr] gap-10 items-start">
+  <section class="grid lg:grid-cols-[1.6fr_1fr] gap-8 items-start">
     <div class="prose">
       <p>
         A fundamental problem in psychiatry is that there are no biological markers for
@@ -60,7 +60,7 @@ const chips = themeMeta.topics
     </figure>
   </section>
 
-  <section class="mt-16" data-project-filters aria-label="Filter projects by theme">
+  <section class="mt-10" data-project-filters aria-label="Filter projects by theme">
     <p class="text-xs uppercase tracking-wider text-(--color-ink-faint) mb-3">
       Filter by theme <span class="normal-case tracking-normal text-(--color-ink-muted)">— click one or more; multiple selections combine with OR.</span>
     </p>
@@ -87,7 +87,7 @@ const chips = themeMeta.topics
     </div>
   </section>
 
-  <section class="mt-12">
+  <section class="mt-8">
     <div class="flex items-baseline justify-between gap-4 mb-3">
       <SectionHeading
         id="active"
@@ -99,9 +99,9 @@ const chips = themeMeta.topics
     {active.length === 0 ? (
       <p class="text-(--color-ink-muted)">No active projects listed.</p>
     ) : (
-      <div class="grid md:grid-cols-2 gap-5" data-project-grid="active">
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4" data-project-grid="active">
         {active.map((p) => (
-          <div data-project data-themes={(p.themes ?? []).join(",")}>
+          <div class="h-full" data-project data-themes={(p.themes ?? []).join(",")}>
             <ProjectCard project={p} />
           </div>
         ))}
@@ -113,7 +113,7 @@ const chips = themeMeta.topics
   </section>
 
   {former.length > 0 && (
-    <section class="mt-20">
+    <section class="mt-12">
       <div class="flex items-baseline justify-between gap-4 mb-3">
         <SectionHeading
           id="former"
@@ -122,9 +122,9 @@ const chips = themeMeta.topics
         />
         <span class="shrink-0 text-xs text-(--color-ink-faint) font-mono" data-former-count>{former.length}</span>
       </div>
-      <div class="grid md:grid-cols-2 gap-5" data-project-grid="former">
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4" data-project-grid="former">
         {former.map((p) => (
-          <div data-project data-themes={(p.themes ?? []).join(",")}>
+          <div class="h-full" data-project data-themes={(p.themes ?? []).join(",")}>
             <ProjectCard project={p} />
           </div>
         ))}
