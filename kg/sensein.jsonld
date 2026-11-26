@@ -584,12 +584,12 @@
    "version": "2.0.0",
    "license": "https://creativecommons.org/licenses/by/4.0/",
    "was_generated_by": {
-    "id": "sid:build/58e88ee1e5e5-20261126T013047Z",
+    "id": "sid:build/5d705836dc5c-20261126T173804Z",
     "type": [
      "prov:Activity"
     ],
-    "started_at": "2026-11-26T01:30:47+00:00",
-    "commit": "58e88ee1e5e50db828aa44f77cf07fbaaf0df8e6",
+    "started_at": "2026-11-26T17:38:04+00:00",
+    "commit": "5d705836dc5cc3314af8eb07f9491f441b9f4446",
     "used": [
      {
       "id": "sid:source/kg/collaborations.yaml",
@@ -677,9 +677,9 @@
        "prov:Entity"
       ],
       "path": "kg/projects.yaml",
-      "commit": "4086e1bd8fe371ac23611f51f950402adbe84e5d",
-      "last_changed": "2026-11-26T01:27:30Z",
-      "sha256": "9fa9c8edb9fdd27ae592a00ae0be9f13f3ddde92a5f54a5f83e598d216ddc928"
+      "commit": "f5db0fcc0b565abf21e653258f24f0ea75c1720b",
+      "last_changed": "2026-11-26T16:54:15Z",
+      "sha256": "b1638e178ecef0ea13948950d63e91a1e2b47c48db5bf2eb368f8ed277db940c"
      },
      {
       "id": "sid:source/kg/publications.yaml",
@@ -687,9 +687,9 @@
        "prov:Entity"
       ],
       "path": "kg/publications.yaml",
-      "commit": "24704badcb1c31bf30f37d9b5cadb85cb74c26fe",
-      "last_changed": "2026-11-26T00:00:33Z",
-      "sha256": "1f8fdb78d1a9617d72997c243df01a7505c8529317b469dde944bfd4509c44ca"
+      "commit": "f5db0fcc0b565abf21e653258f24f0ea75c1720b",
+      "last_changed": "2026-11-26T16:54:15Z",
+      "sha256": "c90dd16cf57491430737849b2e31451d7e9be291bc244d9bd9a7d3e6f302e5b6"
      },
      {
       "id": "sid:source/kg/topics.yaml",
@@ -10771,7 +10771,9 @@
    ],
    "anchor_publications": [
     "DOI:10.1145/3701716.3715483",
-    "DOI:10.1371/journal.pbio.3002133"
+    "DOI:10.1371/journal.pbio.3002133",
+    "DOI:10.1016/j.cell.2026.10.031",
+    "DOI:10.1016/j.cell.2026.10.034"
    ]
   },
   {
@@ -13271,6 +13273,236 @@
     "@type": "xsd:gYear"
    },
    "award_status": "past"
+  },
+  {
+   "id": "DOI:10.1016/j.cell.2026.10.034",
+   "type": [
+    "schema:ScholarlyArticle"
+   ],
+   "created": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "pubmed",
+    "crossref"
+   ],
+   "curation_notes": [
+    "Added on 2026-11-26 from a publications update that had been left on an unmerged branch."
+   ],
+   "slug": "10.1016/j.cell.2026.10.034",
+   "publication_type": "journal",
+   "category": "perspective",
+   "year": 2026,
+   "title": "From the human genome to the human brain cell atlas",
+   "authorships": [
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 1,
+     "author_name": "Joseph Ecker"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 2,
+     "author_name": "Satrajit S Ghosh",
+     "agent": "sid:person/satrajit-s-ghosh"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 3,
+     "author_name": "Michael Hawrylycz"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 4,
+     "author_name": "Kiku Ichihara"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 5,
+     "author_name": "Arnold Kriegstein"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 6,
+     "author_name": "Ed Lein"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 7,
+     "author_name": "Chongyuan Luo"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 8,
+     "author_name": "Evan Macosko"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 9,
+     "author_name": "Shoaib Mufti"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 10,
+     "author_name": "Bing Ren"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 11,
+     "author_name": "Carol Thompson"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 12,
+     "author_name": "Tim Tickle"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 13,
+     "author_name": "Andreas Tolias"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 14,
+     "author_name": "David Van Essen"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 15,
+     "author_name": "Owen White"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 16,
+     "author_name": "Xiangmin Xu"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 17,
+     "author_name": "Hongkui Zeng"
+    },
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 18,
+     "author_name": "Guo-Qiang Zhang"
+    }
+   ],
+   "venue": "Cell",
+   "doi": "10.1016/j.cell.2026.10.034",
+   "pmid": "43020015",
+   "url": "https://doi.org/10.1016/j.cell.2026.10.034",
+   "projects": [
+    "sid:project/bican-knowledgebase"
+   ],
+   "lab_authors": [
+    "sid:person/satrajit-s-ghosh"
+   ],
+   "topics": [
+    "sid:topic/open-data-standards",
+    "sid:topic/connectomics-circuits"
+   ],
+   "abstract": "The BRAIN Initiative Cell Atlas Network (BICAN) is establishing an evolving reference for neuroscience by integrating cell identities, anatomy, and multimodal evidence across species. In analogy with the Human Genome Project, the BICAN basal ganglia atlas is a model for a federated reference to advance understanding of brain organization, function, variation, and disease.",
+   "abstract_source": "pubmed",
+   "key_findings": "Frames the BICAN basal ganglia atlas, by analogy with the Human Genome Project, as a model for an evolving, federated reference that integrates cell identities, anatomy and multimodal evidence across species to advance understanding of brain organization, function, variation and disease."
+  },
+  {
+   "id": "DOI:10.1016/j.cell.2026.10.031",
+   "type": [
+    "schema:ScholarlyArticle"
+   ],
+   "created": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "modified": {
+    "@value": "2026-11-26",
+    "@type": "xsd:date"
+   },
+   "derived_from": [
+    "pubmed",
+    "crossref"
+   ],
+   "curation_notes": [
+    "Added on 2026-11-26 from a publications update that had been left on an unmerged branch.",
+    "Consortium-authored (BICAN). The lab authors listed here appear in its investigator list, not in the byline."
+   ],
+   "slug": "10.1016/j.cell.2026.10.031",
+   "publication_type": "journal",
+   "category": "original-research",
+   "year": 2026,
+   "title": "Toward an integrated framework for a human and mammalian brain cell atlas",
+   "authorships": [
+    {
+     "type": [
+      "sensein:Authorship"
+     ],
+     "position": 1,
+     "author_name": "BRAIN Initiative Cell Atlas Network (BICAN)"
+    }
+   ],
+   "venue": "Cell",
+   "doi": "10.1016/j.cell.2026.10.031",
+   "pmid": "43020018",
+   "url": "https://doi.org/10.1016/j.cell.2026.10.031",
+   "projects": [
+    "sid:project/bican-knowledgebase"
+   ],
+   "lab_authors": [
+    "sid:person/dorota-jarecka",
+    "sid:person/kabilar-gunalan",
+    "sid:person/nima-dehghani",
+    "sid:person/puja-trivedi",
+    "sid:person/satrajit-s-ghosh",
+    "sid:person/tek-raj-chhetri"
+   ],
+   "topics": [
+    "sid:topic/open-data-standards",
+    "sid:topic/connectomics-circuits"
+   ],
+   "abstract": "The NIH BRAIN Initiative Cell Atlas Network (BICAN) is developing a standardized, integrated reference framework for classifying and studying brain cell types across human, macaque, marmoset, and mouse. We present a cross-species, multimodal atlas of the basal ganglia, a group of subcortical nuclei central to motor control, adaptive behavior, and neurological disease. Built from large-scale single-cell transcriptomic classification and integrated with epigenomic, spatial genomic, multiomic, and developmental datasets, the atlas provides a curated, data-driven taxonomy with standardized nomenclature, extensive phenotypic characterization, and community-informed annotation. Cell types are mapped into species-specific anatomical reference frameworks and linked across species through structural ontologies. Realizing this resource required coordinated standards for tissue acquisition and processing, harmonized donor metadata, anatomical registration, sequencing pipelines, data infrastructure, visualization, mapping tools, and interoperable metadata. The BICAN basal ganglia atlas demonstrates how pipelines and standards can be implemented, validated, and scaled toward a whole-brain human and mammalian cell-type reference.",
+   "abstract_source": "pubmed",
+   "key_findings": "Presents the BICAN cross-species, multimodal basal ganglia atlas (human, macaque, marmoset, mouse): a curated, data-driven cell-type taxonomy with standardized nomenclature, mapped into species-specific anatomical frameworks and linked across species through structural ontologies, together with the coordinated standards and pipelines that made it possible and can scale toward a whole-brain reference."
   },
   {
    "id": "DOI:10.1162/imag.a.1116",
@@ -34875,7 +35107,7 @@
    ]
   },
   {
-   "id": "DOI:10.31234/osf.io/9rdux_v4",
+   "id": "DOI:10.1371/journal.pdig.0001757",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34888,21 +35120,24 @@
     "@type": "xsd:date"
    },
    "derived_from": [
-    "preprint-sweep",
-    "site-yaml-v1"
+    "pubmed",
+    "crossref"
    ],
-   "slug": "10.31234/osf.io/9rdux_v4",
-   "publication_type": "preprint",
+   "curation_notes": [
+    "Published version of the preprint 10.31234/osf.io/9rdux_v4, which was listed on its own until 2026-11-26."
+   ],
+   "slug": "10.1371/journal.pdig.0001757",
+   "publication_type": "journal",
    "category": "original-research",
-   "year": 2025,
-   "title": "Text Psychometrics: Assessing Psychological Constructs in Text Using Natural Language Processing",
+   "year": 2026,
+   "title": "Text Psychometrics: Assessing psychological constructs in text using natural language processing",
    "authorships": [
     {
      "type": [
       "sensein:Authorship"
      ],
      "position": 1,
-     "author_name": "Low DM",
+     "author_name": "Daniel M. Low",
      "agent": "sid:person/daniel-m-low"
     },
     {
@@ -34910,27 +35145,29 @@
       "sensein:Authorship"
      ],
      "position": 2,
-     "author_name": "Mair P"
+     "author_name": "Patrick Mair"
     },
     {
      "type": [
       "sensein:Authorship"
      ],
      "position": 3,
-     "author_name": "Nock MK"
+     "author_name": "Matthew K. Nock"
     },
     {
      "type": [
       "sensein:Authorship"
      ],
      "position": 4,
-     "author_name": "Ghosh SS",
+     "author_name": "Satrajit S Ghosh",
      "agent": "sid:person/satrajit-s-ghosh"
     }
    ],
-   "venue": "PsyArXiv",
-   "doi": "10.31234/osf.io/9rdux_v4",
-   "url": "https://doi.org/10.31234/osf.io/9rdux_v4",
+   "venue": "PLOS Digital Health",
+   "doi": "10.1371/journal.pdig.0001757",
+   "pmid": "43019512",
+   "pmcid": "PMC13759208",
+   "url": "https://doi.org/10.1371/journal.pdig.0001757",
    "code_repository": "https://github.com/danielmlow/text_psychometrics",
    "lab_authors": [
     "sid:person/daniel-m-low",
@@ -34940,12 +35177,24 @@
     "sid:topic/ml-nlp-knowledge",
     "sid:topic/mental-health-psychiatry"
    ],
-   "abstract": "Large language models (LLMs) have revolutionized natural language processing (NLP). Yet when used to assess psychological constructs in text, they are generally not evaluated for the types of validity, reliability, and standardization typically expected from traditional questionnaires with rating scales. This study bridges that gap by demonstrating how to evaluate the psychometric properties of text-based models, which we call Text Psychometrics.We first review different NLP methods, compare their ability to address key challenges in psychological research such as explainability, and outline methods for evaluating them on many desirable psychometric properties. We then demonstrate this through two empirical studies. Study 1 classifies thousands of crisis counseling conversations and Reddit posts into different types of mental health issues and introduces a novel method to evaluate text models for content validity —the extent to which a test captures the full range of expressions of a construct. Study 2 examines prospective criterion validity by estimating how 49 known suicide risk factors predict imminent risk in crisis counseling conversations.In sum, NLP studies in psychology often rely on only a few validation metrics; here, we demonstrate the need for broader psychometric evaluation and provide a practical blueprint and future directions for achieving it.",
-   "abstract_source": "openalex",
+   "preprints": [
+    {
+     "type": [
+      "fabio:Preprint"
+     ],
+     "identifier": "10.31234/osf.io/9rdux_v4",
+     "venue": "PsyArXiv",
+     "url": "https://doi.org/10.31234/osf.io/9rdux_v4",
+     "year": 2025,
+     "doi": "10.31234/osf.io/9rdux_v4"
+    }
+   ],
+   "abstract": "Large language models (LLMs) have revolutionized natural language processing (NLP). Yet when used to assess psychological constructs in text, they are generally not evaluated for the types of validity, reliability, and standardization typically expected from traditional questionnaires with rating scales. This study bridges that gap by proposing a framework for evaluating the psychometric properties of NLP-based psychological assessments (including LLMs-based ones), an area of research we refer to as Text Psychometrics. We first review different NLP methods, compare their ability to address key challenges in psychological research such as explainability, and outline ways of evaluating them on many desirable psychometric properties. Our goal is to describe most psychometric properties that may be of interest, especially for psychology and NLP researchers who are less familiar with psychometrics or psychometricians who are less familiar with NLP. We then illustrate the tradeoffs of different NLP methods through two empirical studies. Study 1 classifies thousands of crisis counseling conversations and Reddit posts into different types of mental health issues and introduces a novel method to evaluate text models for content validity-the extent to which a test captures the full range of expressions of a single construct. Study 2 examines prospective criterion validity by estimating how 49 known suicide risk factors predict imminent risk in crisis counseling conversations. We find that mentioning lethal means for suicide, the police, depressed mood, and anxiety in text as well as the texter writing more than the counselor characterize the conversations that end up needing an emergency service intervention for imminent suicide risk, which showcases the interpretability of the method that was used. In sum, NLP studies in psychology often rely on only a few validation metrics; here, we demonstrate the need for broader psychometric evaluation and, as a step towards Text Psychometrics, provide practical examples and future directions that can help researchers evaluate these models.",
+   "abstract_source": "pubmed",
    "key_findings": "This work proposes 'Text Psychometrics' — applying questionnaire-style validity and reliability evaluation to NLP-based construct measurement — and demonstrates it by assessing content validity in crisis-counseling and Reddit corpora and by predicting imminent suicide risk from 49 known risk factors."
   },
   {
-   "id": "DOI:10.31234/osf.io/vf2bc_v3",
+   "id": "DOI:10.1037/abn0001152",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -34958,21 +35207,24 @@
     "@type": "xsd:date"
    },
    "derived_from": [
-    "preprint-sweep",
-    "site-yaml-v1"
+    "pubmed",
+    "crossref"
    ],
-   "slug": "10.31234/osf.io/vf2bc_v3",
-   "publication_type": "preprint",
+   "curation_notes": [
+    "Published version of the preprint 10.31234/osf.io/vf2bc_v3, which was listed on its own until 2026-11-26."
+   ],
+   "slug": "10.1037/abn0001152",
+   "publication_type": "journal",
    "category": "original-research",
-   "year": 2025,
-   "title": "Using large language models to create lexicons for interpretable text models with high content validity: the Suicide Risk Lexicon",
+   "year": 2026,
+   "title": "Using large language models to create lexicons for interpretable text models with high content validity: The suicide risk lexicon",
    "authorships": [
     {
      "type": [
       "sensein:Authorship"
      ],
      "position": 1,
-     "author_name": "Low DM",
+     "author_name": "Daniel M. Low",
      "agent": "sid:person/daniel-m-low"
     },
     {
@@ -34980,21 +35232,21 @@
       "sensein:Authorship"
      ],
      "position": 2,
-     "author_name": "Rankin O"
+     "author_name": "Osiris Rankin"
     },
     {
      "type": [
       "sensein:Authorship"
      ],
      "position": 3,
-     "author_name": "Coppersmith DDL"
+     "author_name": "Daniel D. L. Coppersmith"
     },
     {
      "type": [
       "sensein:Authorship"
      ],
      "position": 4,
-     "author_name": "Bentley K",
+     "author_name": "Kate H. Bentley",
      "agent": "sid:person/kate-bentley"
     },
     {
@@ -35002,20 +35254,22 @@
       "sensein:Authorship"
      ],
      "position": 5,
-     "author_name": "Nock MK"
+     "author_name": "Matthew K. Nock"
     },
     {
      "type": [
       "sensein:Authorship"
      ],
      "position": 6,
-     "author_name": "Ghosh SS",
+     "author_name": "Satrajit S Ghosh",
      "agent": "sid:person/satrajit-s-ghosh"
     }
    ],
-   "venue": "PsyArXiv",
-   "doi": "10.31234/osf.io/vf2bc_v3",
-   "url": "https://doi.org/10.31234/osf.io/vf2bc_v3",
+   "venue": "Journal of Psychopathology and Clinical Science",
+   "doi": "10.1037/abn0001152",
+   "pmid": "42782714",
+   "pmcid": "PMC13614521",
+   "url": "https://doi.org/10.1037/abn0001152",
    "code_repository": "https://github.com/danielmlow/construct-tracker",
    "projects": [
     "sid:project/veteran-peer-response"
@@ -35029,9 +35283,21 @@
     "sid:topic/mental-health-psychiatry",
     "sid:topic/ml-nlp-knowledge"
    ],
-   "abstract": "Researchers often want to measure a variety of constructs such as anxiety, discrimination, or loneliness in text data from surveys, interviews, social media, and electronic health records. Using large language models (LLMs) --while optimal for text classification-- remain infeasible for many researchers due to concerns around computational expertise, cost, privacy, and compute requirements. Therefore, some researchers prefer to use lightweight models for large datasets or interpretable models to avoid mistakes in high-stakes scenarios such as suicide risk detection. Lexicons offer simple baselines to LLMs by searching for relevant phrases --and can be used together with LLMs to guarantee capturing specific keywords in a deterministic way. However, building new lexicons is resource intensive. In this study, we found that GPT-4 turbo was able to automatically create a lexicon for 49 known risk factors for suicidal thoughts and behaviors, which we release as the Suicide Risk Lexicon. This approach quickly measures most constructs relevant for this application, resulting in high content validity. This lexicon was able to accurately predict risk in crisis counseling conversations. After validating the lexicon with clinical experts, the lexicon outperformed the LIWC lexicon --which has low content validity for mental illness-- and performed similarly to some black-box deep learning models. Due to using an interpretable approach with high content validity, we discovered that active suicidal ideation and direct self-injury were stronger indicators of imminent risk than passive suicidal ideation and depressed mood in this ecological setting. To simplify creating new lexicons for other research domains, we introduce a Python package, construct-tracker, that works with a variety of LLMs. In sum, while we recommend using LLMs for text classification, they remain out of reach for many researchers. Our work demonstrates that LLMs --despite being black-boxes that might be challenging to use-- can counterintuitively create interpretable models by generating lexicons, when this is preferred. Furthermore, we highlight the broader application of lexicons beyond measurement, including their use in benchmarking LLM performance.",
-   "abstract_source": "openalex",
-   "key_findings": "GPT-4-turbo automatically generated a Suicide Risk Lexicon covering 49 risk factors that, after clinical validation, outperformed LIWC and matched some deep-learning models in predicting imminent risk; the released construct-tracker Python package supports building similar interpretable lexicons across domains."
+   "preprints": [
+    {
+     "type": [
+      "fabio:Preprint"
+     ],
+     "identifier": "10.31234/osf.io/vf2bc_v3",
+     "venue": "PsyArXiv",
+     "url": "https://doi.org/10.31234/osf.io/vf2bc_v3",
+     "year": 2025,
+     "doi": "10.31234/osf.io/vf2bc_v3"
+    }
+   ],
+   "abstract": "Researchers often want to measure a variety of constructs such as anxiety, discrimination, or loneliness in text data from surveys, interviews, social media, and electronic health records. Using large language models (LLMs)-although optimal for text classification-remain infeasible for some researchers due to concerns around computational expertise, cost, privacy, and compute requirements. Therefore, some researchers prefer to use lightweight models for large data sets or interpretable models to avoid mistakes in high-stakes scenarios. Lexicons offer simple baselines to LLMs by searching for relevant phrases and can be used together with LLMs to guarantee capturing specific keywords. However, building new lexicons is resource intensive. In this study, we found that GPT-4 Turbo was able to automatically create a lexicon for 49 known risk factors for suicidal thoughts and behaviors, which we release as the Suicide Risk Lexicon. Generating a lexicon with LLMs quickly measures most constructs relevant for suicide risk detection, resulting in high content validity. This lexicon was able to accurately predict risk in crisis counseling conversations. After validating the lexicon with clinician ratings, the lexicon modestly outperformed the linguistic inquiry and word count lexicon, which has low content validity for mental illness, and performed similarly to some black-box deep learning models. We discovered that active suicidal ideation and direct self-injury were stronger indicators of imminent risk than passive suicidal ideation and depressed mood in this ecological setting of crisis counseling conversations. To simplify creating new lexicons for other research domains, we introduce a Python package, construct-tracker.",
+   "abstract_source": "pubmed",
+   "key_findings": "GPT-4 Turbo automatically generated a Suicide Risk Lexicon covering 49 known risk factors for suicidal thoughts and behaviors that, after clinician validation, modestly outperformed LIWC and performed similarly to some black-box deep-learning models in predicting risk in crisis-counseling conversations; the released construct-tracker Python package supports building similar interpretable lexicons for other domains."
   },
   {
    "id": "DOI:10.48550/arxiv.2409.09511",
@@ -36707,7 +36973,7 @@
    "key_findings": "Preregistered stacked-encoding analyses of naturalistic movie-fMRI (Healthy Brain Network) show autism is not linked to enhanced low-level sensory encoding; instead, autistic children/adolescents show reduced high-level visual representations and a shift toward low-level encoding in integrative/social regions (notably pSTS), where the high-low weighting tracks Social Responsiveness Scale scores - favoring weak-central-coherence over early-sensory-enhancement accounts."
   },
   {
-   "id": "DOI:10.64898/2025.12.23.696301",
+   "id": "DOI:10.1073/pnas.2608875123",
    "type": [
     "schema:ScholarlyArticle"
    ],
@@ -36720,13 +36986,16 @@
     "@type": "xsd:date"
    },
    "derived_from": [
-    "europepmc",
-    "site-yaml-v1"
+    "pubmed",
+    "crossref"
    ],
-   "slug": "10.64898/2025.12.23.696301",
-   "publication_type": "preprint",
+   "curation_notes": [
+    "Published version of the preprint 10.64898/2025.12.23.696301, which was listed on its own until 2026-11-26."
+   ],
+   "slug": "10.1073/pnas.2608875123",
+   "publication_type": "journal",
    "category": "original-research",
-   "year": 2025,
+   "year": 2026,
    "title": "Functional fractionation of large-scale brain networks in the human subcortex",
    "authorships": [
     {
@@ -36808,9 +37077,11 @@
      "author_name": "Brian L. Edlow"
     }
    ],
-   "venue": "bioRxiv",
-   "doi": "10.64898/2025.12.23.696301",
-   "url": "https://doi.org/10.64898/2025.12.23.696301",
+   "venue": "Proceedings of the National Academy of Sciences",
+   "doi": "10.1073/pnas.2608875123",
+   "pmid": "42673458",
+   "pmcid": "PMC13552871",
+   "url": "https://doi.org/10.1073/pnas.2608875123",
    "lab_authors": [
     "sid:person/satrajit-s-ghosh"
    ],
@@ -36818,8 +37089,20 @@
     "sid:topic/connectomics-circuits",
     "sid:topic/neuroimaging-methods"
    ],
+   "preprints": [
+    {
+     "type": [
+      "fabio:Preprint"
+     ],
+     "identifier": "10.64898/2025.12.23.696301",
+     "venue": "bioRxiv",
+     "url": "https://doi.org/10.64898/2025.12.23.696301",
+     "year": 2025,
+     "doi": "10.64898/2025.12.23.696301"
+    }
+   ],
    "abstract": "Brain network mapping plays a crucial role in advancing our understanding of human brain organization and the neuroanatomic foundations of cognition. Historically, the identification of large-scale brain networks has focused on the cerebral cortex. In contrast, functional mapping of large-scale brain networks within subcortical regions remains an emerging and challenging field, hindered by a low signal-to-noise ratio in subcortical functional MRI data and an inability to distinguish networks with substantial spatiotemporal overlap. In this study, we fractionated and identified fifteen spatially overlapped and temporally correlated subnetworks, which can be categorized into four large-scale brain networks, with widely connected hub nodes in the caudate, putamen, hippocampus, and thalamus. These subnetworks are highly reproducible across healthy human brains and provide normative functional atlases, released as a community resource. As a proof of principle, the spatial patterns of the subnetworks predict the level of consciousness in patients with severe traumatic brain injury.",
-   "abstract_source": "publisher",
+   "abstract_source": "pubmed",
    "key_findings": "Fractionates subcortical fMRI into fifteen spatially overlapping, temporally correlated subnetworks grouping into four large-scale networks, with hubs in caudate, putamen, hippocampus, and thalamus; the reproducible normative atlases are released as a resource, and their spatial patterns predict level of consciousness in severe traumatic brain injury."
   },
   {
