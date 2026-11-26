@@ -1,0 +1,20 @@
+---
+/**
+ * Two-way sort control for a roster section. The page script reorders the
+ * section's tiles with CSS `order`, so no markup moves and anchors keep
+ * working. The pressed state is carried by aria-pressed and styled from it.
+ */
+interface Props {
+  /** Label for the second mode, which uses the curated YAML order. */
+  altLabel: string;
+  altMode: string;
+}
+const { altLabel, altMode } = Astro.props;
+const btn =
+  "px-2 py-0.5 rounded-md border border-(--color-border) text-(--color-ink-muted) hover:border-(--color-border-strong) aria-pressed:border-(--color-accent) aria-pressed:bg-(--color-accent-soft) aria-pressed:text-(--color-accent-strong) aria-pressed:font-medium";
+---
+<div class="flex items-center gap-1 text-xs" role="group" aria-label="Sort order" data-sort-toggle>
+  <span class="text-(--color-ink-muted) mr-0.5">Sort</span>
+  <button type="button" data-sort="name" aria-pressed="true" class={btn}>Name</button>
+  <button type="button" data-sort={altMode} aria-pressed="false" class={btn}>{altLabel}</button>
+</div>

@@ -1,0 +1,57 @@
+---
+/**
+ * Always-open card for a current member: photo, name, role, contact and
+ * profile links, and education. Nothing is hidden behind a click, so the
+ * roster reads at a glance; the layout stays compact enough for three or
+ * four cards per row on wide screens.
+ */
+import type { TeamMember } from "~/lib/data";
+import { memberEducations, personSlug } from "~/lib/data";
+import { normalizeImage } from "~/lib/images";
+import SocialLinks from "./SocialLinks.astro";
+
+interface Props {
+  member: TeamMember;
+}
+const { member } = Astro.props;
+const educations = memberEducations(member);
+const photo = normalizeImage(member.photo);
+const slug = personSlug(member.name);
+---
+<article
+  id={slug}
+  data-person
+  data-search={`${member.name} ${member.info ?? ""}`.toLowerCase()}
+  class="h-full scroll-mt-20 flex gap-3 p-3 rounded-lg border border-(--color-border) bg-(--color-canvas) hover:border-(--color-border-strong) transition-colors target:ring-2 target:ring-(--color-accent)"
+>
+  <img
+    src={photo}
+    alt=""
+    loading="lazy"
+    width="64"
+    height="64"
+    class="shrink-0 w-16 h-16 object-cover rounded-md bg-(--color-surface)"
+  />
+  <div class="min-w-0 flex-1">
+    <h3 class="font-semibold text-[15px] text-(--color-ink) leading-snug">{member.name}</h3>
+    {member.info && (
+      <p class="mt-0.5 text-sm text-(--color-ink-muted) leading-snug" set:html={member.info} />
+    )}
+    {member.email && (
+      <p class="mt-1 text-xs">
+        <a
+          href={`mailto:${member.email}`}
+          class="text-(--color-accent) hover:text-(--color-accent-strong) underline-offset-2 hover:underline break-all"
+        >
+          {member.email}
+        </a>
+      </p>
+    )}
+    <SocialLinks member={member} class="mt-1.5" />
+    {educations.length > 0 && (
+      <ul class="mt-2 pt-2 border-t border-(--color-border) space-y-0.5 text-xs text-(--color-ink-muted) leading-snug">
+        {educations.map((e) => <li set:html={e} />)}
+      </ul>
+    )}
+  </div>
+</article>

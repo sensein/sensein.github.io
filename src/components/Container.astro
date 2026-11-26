@@ -6,8 +6,8 @@ interface Props {
 }
 const { size = "default", as: Tag = "div", class: className = "" } = Astro.props;
 const max =
-  size === "narrow" ? "max-w-3xl" : size === "wide" ? "max-w-6xl" : "max-w-5xl";
+  size === "narrow" ? "max-w-3xl" : size === "wide" ? "max-w-7xl" : "max-w-5xl";
 ---
-<Tag class={`mx-auto w-full px-6 sm:px-8 ${max} ${className}`}>
+<Tag class={`mx-auto w-full px-4 sm:px-6 lg:px-8 ${max} ${className}`}>
   <slot />
 </Tag>
