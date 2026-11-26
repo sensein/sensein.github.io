@@ -549,7 +549,7 @@ projects:
   slug: banda
   title: BANDA — Boston Adolescent Neuroimaging of Depression and Anxiety
   project_type: lab_project
-  project_status: active
+  project_status: former
   description: >-
     A Human Connectome Project arm (Connectomes Related to Human Diseases) collecting multimodal MRI,
     clinical, and neuropsychological data from 215 adolescents aged 14–17, 152 of whom had current anxiety
@@ -593,6 +593,8 @@ projects:
   created: '2026-05-26'
   derived_from:
   - site-yaml-v1
+  curation_notes:
+  - Moved to past projects at Satra's request on 2026-11-26.
 - id: sid:project/readnet
   slug: readnet
   title: ReadNet — ML for verbal literacy screening
