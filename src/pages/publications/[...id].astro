@@ -2,8 +2,9 @@
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import Container from "~/components/Container.astro";
 import SectionHeading from "~/components/SectionHeading.astro";
-import { publications, projects, personSlug, peopleIndex } from "~/lib/data";
+import { publications, projects, personSlug, peopleIndex, jsonldFor, fundingLine } from "~/lib/data";
 import { withBase } from "~/lib/url";
+import { normalizeImage } from "~/lib/images";
 
 export async function getStaticPaths() {
   return publications().map((pub) => ({
@@ -30,8 +31,10 @@ const primaryUrl =
   (pub.pmid ? `https://pubmed.ncbi.nlm.nih.gov/${pub.pmid}/` : undefined);
 
 const labAuthorSet = new Set(pub.lab_authors ?? []);
+const jsonld = jsonldFor(pub.iri);
+
 ---
-<BaseLayout title={pub.title} description={`${pub.year} · ${pub.venue ?? pub.type}`}>
+<BaseLayout title={pub.title} description={`${pub.year} · ${pub.venue ?? pub.type}`} jsonld={jsonld}>
   <Container size="default" class="pt-14 pb-6">
     <p class="text-xs uppercase tracking-[0.18em] text-(--color-accent) font-medium">
       <a href={withBase("/publications")} class="hover:text-(--color-accent-strong) underline-offset-3 hover:underline">
@@ -153,6 +156,24 @@ const labAuthorSet = new Set(pub.lab_authors ?? []);
       </dl>
     </section>
 
+    {pub.figures && pub.figures.length > 0 && (
+      <section class="mt-8">
+        {pub.figures.map((f) => (
+          <figure class="mt-4 first:mt-0">
+            <img
+              src={normalizeImage(f.src)}
+              alt={f.alt ?? `Figure from “${pub.title}”`}
+              width={f.width}
+              height={f.height}
+              loading="lazy"
+              class="w-full h-auto max-h-[28rem] object-contain rounded-lg border border-(--color-border) bg-(--color-surface)"
+            />
+            {f.caption && <figcaption class="mt-2 text-xs text-(--color-ink-faint) leading-relaxed">{f.caption}</figcaption>}
+          </figure>
+        ))}
+      </section>
+    )}
+
     {pub.key_findings && (
       <section class="mt-8">
         <SectionHeading title="Key findings" />
@@ -195,7 +216,7 @@ const labAuthorSet = new Set(pub.lab_authors ?? []);
             <li>
               <a href={withBase(`/projects/${proj!.slug}`)} class="block rounded-md border border-(--color-border) hover:border-(--color-accent) p-3 text-sm transition-colors">
                 <p class="font-medium text-(--color-ink)">{proj!.title}</p>
-                {proj!.funder && <p class="text-[11px] font-mono text-(--color-ink-faint) mt-0.5">{proj!.funder}</p>}
+                {fundingLine(proj!) && <p class="text-[11px] font-mono text-(--color-ink-faint) mt-0.5">{fundingLine(proj!)}</p>}
               </a>
             </li>
           ))}

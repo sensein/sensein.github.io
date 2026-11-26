@@ -9,13 +9,19 @@ interface Props {
   title?: string;
   description?: string;
   ogImage?: string;
+  /** JSON-LD about the page's subject, usually from jsonldFor() in lib/data. */
+  jsonld?: unknown;
 }
 
 const {
   title,
   description = "Senseable Intelligence Group — neuroimaging, speech, and machine learning for mental and neurological health.",
   ogImage,
+  jsonld,
 } = Astro.props;
+
+// Escape "<" so no string in the graph can close the script element early.
+const jsonldText = jsonld ? JSON.stringify(jsonld).replace(/</g, "\\u003c") : null;
 
 const SITE_NAME = "Senseable Intelligence Group";
 const fullTitle = title ? `${title} — ${SITE_NAME}` : SITE_NAME;
@@ -36,6 +42,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString(
     <meta property="og:url" content={canonical} />
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" type="application/ld+json" href={withBase("/kg/sensein.jsonld")} title="Lab knowledge graph (JSON-LD)" />
+    <link rel="alternate" type="text/turtle" href={withBase("/kg/sensein.ttl")} title="Lab knowledge graph (Turtle)" />
+    {jsonldText && <script type="application/ld+json" set:html={jsonldText} />}
     <script is:inline>
       // Set theme as early as possible to avoid FOIT.
       (function () {

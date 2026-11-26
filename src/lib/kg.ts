@@ -92,6 +92,40 @@ export class KnowledgeGraph {
     return this.refs(node, slot)[0];
   }
 
+  /**
+   * A small JSON-LD document about one record: the node itself plus every
+   * node it references directly (its grants, funders, images, topics and so
+   * on), compacted with the published context. Pages embed this so that each
+   * one carries its own slice of the graph as linked data.
+   */
+  describe(id: string, contextUrl: string, base: string): JsonLdDocument {
+    const root = this.byId.get(id);
+    if (!root) return { "@context": contextUrl, "@graph": [] };
+    const seen = new Set<string>([id]);
+    const out: KGNode[] = [root];
+    const visit = (v: unknown) => {
+      for (const x of many<unknown>(v)) {
+        if (typeof x === "string") {
+          const n = this.byId.get(x);
+          if (n && n.id && !seen.has(n.id)) {
+            seen.add(n.id);
+            out.push(n);
+          }
+        } else if (x && typeof x === "object" && !("@value" in (x as object))) {
+          for (const [k, w] of Object.entries(x as Record<string, unknown>)) {
+            if (k !== "id" && k !== "type") visit(w);
+          }
+        }
+      }
+    };
+    for (const [k, v] of Object.entries(root)) {
+      if (k !== "id" && k !== "type") visit(v);
+    }
+    // A remote context's @base is ignored by JSON-LD processors, so the base
+    // goes in an inline context next to it.
+    return { "@context": [contextUrl, { "@base": base }], "@graph": out };
+  }
+
   /** The graph's own description (id sid:graph/sensein). */
   dataset(): KGNode | undefined {
     return this.ofType("dcat:Dataset")[0];
