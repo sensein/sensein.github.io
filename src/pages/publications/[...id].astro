@@ -7,13 +7,24 @@ import { withBase } from "~/lib/url";
 import { normalizeImage } from "~/lib/images";
 
 export async function getStaticPaths() {
-  return publications().map((pub) => ({
-    params: { id: pub.id },
-    props: { pub },
-  }));
+  const pubs = publications();
+  const ids = new Set(pubs.map((pub) => pub.id));
+  // A preprint that has been published keeps its old address, which now
+  // forwards to the published record.
+  const forwards = pubs.flatMap((pub) =>
+    (pub.preprints ?? [])
+      .map((pre) => pre.id)
+      .filter((id): id is string => Boolean(id) && !ids.has(id))
+      .map((id) => ({ params: { id }, props: { pub, forwardTo: pub.id } })),
+  ).filter((f, i, all) => all.findIndex((g) => g.params.id === f.params.id) === i);
+  return [
+    ...pubs.map((pub) => ({ params: { id: pub.id }, props: { pub, forwardTo: undefined } })),
+    ...forwards,
+  ];
 }
 
-const { pub } = Astro.props;
+const { pub, forwardTo } = Astro.props;
+if (forwardTo) return Astro.redirect(withBase(`/publications/${forwardTo}/`), 301);
 
 const projectMap = new Map(projects().map((p) => [p.slug, p]));
 const linkedProjects = (pub.projects ?? []).map((slug) => projectMap.get(slug)).filter(Boolean);
